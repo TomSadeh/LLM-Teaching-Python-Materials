@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-VERSION = "1.3.0"
+VERSION = "2.0.0"
 
 # Map module folders to topic IDs
 MODULE_TO_TOPIC = {
@@ -56,6 +56,20 @@ MODULE_NAMES_HE = {
     "module_7_dictionaries": "מילונים",
     "module_8_modules": "מודולים",
     "module_9_oop": "תכנות מונחה עצמים",
+}
+
+# English module names
+MODULE_NAMES_EN = {
+    "module_0_basics": "Basics",
+    "module_1_turtle_loops": "Turtle and Loops",
+    "module_2_decisions": "Conditions and Decisions",
+    "module_3_lists": "Lists",
+    "module_4_games": "Games",
+    "module_5_functions": "Functions",
+    "module_6_final_project": "Final Project",
+    "module_7_dictionaries": "Dictionaries",
+    "module_8_modules": "Modules",
+    "module_9_oop": "Object-Oriented Programming",
 }
 
 # Hebrew title mapping
@@ -157,9 +171,108 @@ TITLE_HE_MAP = {
     "rpg battle": "קרב RPG",
 }
 
+# English title mapping (keys match TITLE_HE_MAP)
+TITLE_EN_MAP = {
+    "hello": "Hello World",
+    "variables": "Variables",
+    "math": "Math Operations",
+    "input": "Input",
+    "calculator": "Calculator",
+    "madlib simple": "Mad Lib Story",
+    "counting": "Counting",
+    "patterns": "Patterns",
+    "sum": "Sum",
+    "functions basic": "Basic Functions",
+    "functions params": "Functions with Parameters",
+    "functions return": "Functions with Return",
+    "fizzbuzz": "FizzBuzz",
+    "multiplication table": "Multiplication Table",
+    "mini project": "Mini Project",
+    "turtle intro": "Turtle Introduction",
+    "turtle shapes": "Turtle Shapes",
+    "turtle colors": "Turtle Colors",
+    "square": "Square",
+    "triangle": "Triangle",
+    "star": "Star",
+    "creative": "Creative",
+    "hexagon": "Hexagon",
+    "circle": "Circle",
+    "rainbow": "Rainbow",
+    "nested squares": "Nested Squares",
+    "flower": "Flower",
+    "password": "Password",
+    "grades": "Grades",
+    "number game": "Number Game",
+    "quiz": "Quiz",
+    "age checker": "Age Checker",
+    "time greeter": "Time Greeter",
+    "even odd": "Even or Odd",
+    "leap year": "Leap Year",
+    "favorites": "Favorites",
+    "loop list": "Loop Through List",
+    "magic 8ball": "Magic 8 Ball",
+    "madlibs": "Mad Libs",
+    "todo list": "Todo List",
+    "name picker": "Name Picker",
+    "shopping total": "Shopping Total",
+    "playlist shuffler": "Playlist Shuffler",
+    "word collector": "Word Collector",
+    "guess number": "Guess the Number",
+    "rock paper scissors": "Rock Paper Scissors",
+    "dice game": "Dice Game",
+    "your game": "Your Own Game",
+    "coin flip streak": "Coin Flip Streak",
+    "higher lower": "Higher or Lower",
+    "trivia": "Trivia",
+    "word scramble": "Word Scramble",
+    "adventure": "Adventure",
+    "shapes": "Shapes",
+    "helper functions": "Helper Functions",
+    "turtle art": "Turtle Art",
+    "temperature": "Temperature",
+    "tip calculator": "Tip Calculator",
+    "password generator": "Password Generator",
+    "greeting card": "Greeting Card",
+    "turtle scene": "Turtle Scene",
+    "template game": "Game Template",
+    "template art": "Art Generator",
+    "template app": "App Template",
+    "bonus example spiral": "Bonus: Spiral",
+    # Module 7: Dictionaries
+    "spellbook": "Spellbook",
+    "character stats": "Character Stats",
+    "loop dictionaries": "Looping Dictionaries",
+    "nested data": "Nested Data",
+    "dict methods": "Dictionary Methods",
+    "quiz game": "Quiz Game",
+    "secret codes": "Secret Codes",
+    "rpg inventory": "RPG Inventory",
+    "contact book": "Contact Book",
+    # Module 8: Modules
+    "datetime basics": "Date and Time Basics",
+    "random advanced": "Advanced Random",
+    "json basics": "JSON Basics",
+    "time module": "Time Module",
+    "math module": "Math Module",
+    "string module": "String Module",
+    "os path": "OS and Paths",
+    "collections": "Collections",
+    "create module": "Create Your Module",
+    # Module 9: OOP
+    "first class": "First Class",
+    "init method": "Init Method",
+    "methods": "Methods",
+    "str repr": "String Representation",
+    "interaction": "Object Interaction",
+    "inheritance": "Inheritance",
+    "composition": "Composition",
+    "text adventure": "Text Adventure",
+    "rpg battle": "RPG Battle",
+}
 
-def extract_title_from_filename(filename: str) -> tuple[str, str]:
-    """Extract English and Hebrew title from filename."""
+
+def extract_title_from_filename(filename: str) -> tuple[str, str, str]:
+    """Extract base title, English title, and Hebrew title from filename."""
     name = filename.replace(".py", "")
 
     # Remove exercise_XX_ or template_ prefix
@@ -169,9 +282,11 @@ def extract_title_from_filename(filename: str) -> tuple[str, str]:
 
     # Convert underscore to space and title case
     title = name.replace("_", " ").title()
-    title_he = TITLE_HE_MAP.get(title.lower(), title)
+    key = title.lower()
+    title_en = TITLE_EN_MAP.get(key, title)
+    title_he = TITLE_HE_MAP.get(key, title)
 
-    return title, title_he
+    return title, title_en, title_he
 
 
 def extract_description_from_content(content: str) -> str:
@@ -197,7 +312,7 @@ def parse_exercise_file(filepath: Path) -> dict:
     module_name = filepath.parent.name
     filename = filepath.name
 
-    title, title_he = extract_title_from_filename(filename)
+    title, title_en, title_he = extract_title_from_filename(filename)
     description = extract_description_from_content(content)
 
     # Build Hebrew description
@@ -206,6 +321,13 @@ def parse_exercise_file(filepath: Path) -> dict:
         description_he = f"{module_he}: {title_he}\n\n{description}"
     else:
         description_he = f"{module_he}: {title_he}\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass"
+
+    # Build English description
+    module_en = MODULE_NAMES_EN.get(module_name, module_name)
+    if description:
+        description_en = f"{module_en}: {title_en}\n\n{description}"
+    else:
+        description_en = f"{module_en}: {title_en}\n\nComplete the code in the functions marked with pass"
 
     # Generate a stable ID from module and filename
     exercise_id = f"{module_name}.{filename.replace('.py', '')}"
@@ -218,7 +340,9 @@ def parse_exercise_file(filepath: Path) -> dict:
         "topic_id": MODULE_TO_TOPIC.get(module_name, "basics.print"),
         "title": full_title,
         "title_he": title_he,
+        "title_en": title_en,
         "description_he": description_he,
+        "description_en": description_en,
         "difficulty": MODULE_TO_DIFFICULTY.get(module_name, 1),
         "starter_code": content,
         "solution_code": None,
@@ -298,11 +422,13 @@ def main():
         json.dump(manifest_data, f, indent=2, ensure_ascii=False)
     print(f"\nWrote {manifest_path}")
 
-    # Write version.json
+    # Write version.json with i18n metadata
     version_data = {
         "exercises": VERSION,
         "prompts": "1.0.0",
         "updated_at": datetime.now().isoformat(),
+        "i18n_supported": True,
+        "languages": ["he", "en"],
     }
     version_path = root / "version.json"
     with open(version_path, "w", encoding="utf-8") as f:
