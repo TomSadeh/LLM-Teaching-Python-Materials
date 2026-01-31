@@ -5,6 +5,10 @@ Build lessons.json from markdown lesson files.
 Reads lesson markdown files from en/lessons/ and he/lessons/,
 parses their metadata and content, and outputs a combined lessons.json.
 
+Supports both single-file lessons and multi-part lessons:
+- Single: lesson_module_0_basics.md
+- Multi-part: lesson_module_0_basics_part_1.md, lesson_module_0_basics_part_2.md, etc.
+
 Usage:
     python scripts/build_lessons_json.py
 
@@ -17,7 +21,7 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-VERSION = "1.0.0"
+VERSION = "2.0.0"
 
 
 def parse_lesson_metadata(content: str, lang: str = "en") -> dict:
@@ -26,37 +30,47 @@ def parse_lesson_metadata(content: str, lang: str = "en") -> dict:
 
     Extracts metadata from blockquote format:
     > **Module**: module_X_name
+    > **Part**: 1 of 5
     > **Difficulty**: 1
     > **Duration**: 15-20 minutes
 
     Also handles Hebrew format:
     > **מודול**: module_X_name
+    > **חלק**: 1 מתוך 5
     > **רמת קושי**: 1
     > **משך**: 15-20 דקות
     """
     metadata = {
         "module": None,
+        "part": None,
+        "total_parts": None,
         "difficulty": 1,
         "duration": None,
     }
 
     # Pattern for English
     module_pattern_en = r'>\s*\*\*Module\*\*:\s*(\S+)'
+    part_pattern_en = r'>\s*\*\*Part\*\*:\s*(\d+)\s*of\s*(\d+)'
     difficulty_pattern_en = r'>\s*\*\*Difficulty\*\*:\s*(\d+)'
     duration_pattern_en = r'>\s*\*\*Duration\*\*:\s*(.+)'
 
     # Pattern for Hebrew
     module_pattern_he = r'>\s*\*\*מודול\*\*:\s*(\S+)'
+    part_pattern_he = r'>\s*\*\*חלק\*\*:\s*(\d+)\s*מתוך\s*(\d+)'
     difficulty_pattern_he = r'>\s*\*\*רמת קושי\*\*:\s*(\d+)'
     duration_pattern_he = r'>\s*\*\*משך\*\*:\s*(.+)'
 
     # Try English patterns first, then Hebrew
     module_match = re.search(module_pattern_en, content) or re.search(module_pattern_he, content)
+    part_match = re.search(part_pattern_en, content) or re.search(part_pattern_he, content)
     difficulty_match = re.search(difficulty_pattern_en, content) or re.search(difficulty_pattern_he, content)
     duration_match = re.search(duration_pattern_en, content) or re.search(duration_pattern_he, content)
 
     if module_match:
         metadata["module"] = module_match.group(1)
+    if part_match:
+        metadata["part"] = int(part_match.group(1))
+        metadata["total_parts"] = int(part_match.group(2))
     if difficulty_match:
         metadata["difficulty"] = int(difficulty_match.group(1))
     if duration_match:
@@ -90,6 +104,14 @@ def load_module_config(root: Path) -> dict:
     return {"modules": {}}
 
 
+def get_part_from_filename(filename: str) -> tuple[int | None, int | None]:
+    """Extract part number from filename like 'lesson_module_0_basics_part_1'."""
+    match = re.search(r'_part_(\d+)$', filename)
+    if match:
+        return int(match.group(1)), None  # total_parts comes from metadata
+    return None, None
+
+
 def parse_lesson_file(filepath: Path, config: dict, lang: str) -> dict | None:
     """Parse a single lesson markdown file."""
     try:
@@ -110,7 +132,15 @@ def parse_lesson_file(filepath: Path, config: dict, lang: str) -> dict | None:
     module_config = config.get("modules", {}).get(module_name, {})
 
     # Build source_id from filename
-    source_id = filepath.stem  # e.g., "lesson_module_0_basics"
+    source_id = filepath.stem  # e.g., "lesson_module_0_basics_part_1"
+
+    # Get part info from metadata or filename
+    part = metadata.get("part")
+    total_parts = metadata.get("total_parts")
+
+    # Fallback to filename parsing if not in metadata
+    if part is None:
+        part, _ = get_part_from_filename(filepath.stem)
 
     # Get titles and descriptions from config or derive from content
     if lang == "en":
@@ -124,7 +154,7 @@ def parse_lesson_file(filepath: Path, config: dict, lang: str) -> dict | None:
         description = module_config.get("description_en", "")
         description_he = module_config.get("description_he", "")
 
-    return {
+    result = {
         "source_id": source_id,
         "title": lesson_title,
         "title_he": title_he,
@@ -137,6 +167,14 @@ def parse_lesson_file(filepath: Path, config: dict, lang: str) -> dict | None:
         "content_md": content,
         "lang": lang,
     }
+
+    # Add part info if this is a multi-part lesson
+    if part is not None:
+        result["part"] = part
+        if total_parts is not None:
+            result["total_parts"] = total_parts
+
+    return result
 
 
 def main():
@@ -194,8 +232,8 @@ def main():
             lessons.append(he_lesson)
             print(f"  + {source_id} (Hebrew only)")
 
-    # Sort by order_index
-    lessons.sort(key=lambda x: x["order_index"])
+    # Sort by order_index, then by part number
+    lessons.sort(key=lambda x: (x["order_index"], x.get("part", 0)))
 
     # Remove internal fields before output
     for lesson in lessons:

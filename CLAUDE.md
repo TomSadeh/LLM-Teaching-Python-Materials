@@ -199,15 +199,17 @@ The output format for maya-chat's `remote_sync_service.sync_lessons()`:
   "version": "1.0.0",
   "lessons": [
     {
-      "source_id": "lesson_module_0_basics",
-      "title": "Python Basics",
-      "title_he": "יסודות פייתון",
+      "source_id": "lesson_module_0_basics_part_1",
+      "title": "Python Basics - Part 1: Hello World with print()",
+      "title_he": "יסודות פייתון - חלק 1: שלום עולם עם print()",
       "description": "...",
       "description_he": "...",
       "module": "module_0_basics",
+      "part": 1,
+      "total_parts": 5,
       "order_index": 0,
       "difficulty": 1,
-      "duration": "15-20 minutes",
+      "duration": "3-5 minutes",
       "content_md": "# Full English lesson content...",
       "content_md_he": "# Full Hebrew lesson content..."
     }
@@ -266,6 +268,84 @@ Hebrew lessons use the same structure with Hebrew headers:
 
 See `en/lessons/TEMPLATE.md` for the complete lesson structure.
 
+### Multi-Part Lesson Format
+
+Lessons are split into focused parts, each covering a single teaching phase. This keeps context manageable and allows students to take breaks between parts.
+
+**File naming pattern:**
+```
+lesson_module_0_basics_part_1.md
+lesson_module_0_basics_part_2.md
+...
+lesson_module_0_basics_part_5.md
+```
+
+**Part 1 structure** (full context):
+```markdown
+# Lesson: Topic Name - Part 1: Phase Title
+
+> **Module**: module_X_name
+> **Part**: 1 of N
+> **Difficulty**: [1-3]
+> **Duration**: [3-8] minutes
+
+---
+
+## Prerequisites
+...
+
+## Learning Objective
+(Single objective for this phase)
+
+## Key Concepts
+(Only concepts for this phase)
+
+## Lesson Content
+...
+
+## Practice Exercises
+...
+
+## Checkpoint
+...
+
+## If the Student Struggles
+...
+
+## Real-World Connection
+...
+
+## Notes for the LLM Teacher
+...
+```
+
+**Parts 2+ structure** (minimal):
+```markdown
+# Lesson: Topic Name - Part N: Phase Title
+
+> **Module**: module_X_name
+> **Part**: N of M
+> **Difficulty**: [1-3]
+> **Duration**: [3-8] minutes
+
+---
+
+## Learning Objective
+
+## Key Concepts
+
+## Lesson Content
+(Includes "Building on Part N-1" section)
+
+## Practice Exercises
+
+## Checkpoint
+
+## If the Student Struggles
+```
+
+See `en/lessons/TEMPLATE_PART1.md` and `en/lessons/TEMPLATE_PART.md` for complete templates.
+
 ## Manifest File
 
 The `manifest.json` file lists all available modules for remote sync:
@@ -308,10 +388,12 @@ Before committing exercises:
 
 Before committing lessons:
 
-- [ ] Both English and Hebrew versions exist
-- [ ] Metadata blockquotes are correctly formatted (Module, Difficulty, Duration)
-- [ ] All required sections are present (see TEMPLATE.md)
-- [ ] Exercises Mapping table references valid exercise files
+- [ ] Both English and Hebrew versions exist for all parts
+- [ ] Part metadata is correct (`**Part**: N of M`)
+- [ ] Metadata blockquotes are correctly formatted (Module, Part, Difficulty, Duration)
+- [ ] Part 1 has Prerequisites and Real-World Connection sections
+- [ ] Each part has a single, focused Learning Objective
+- [ ] Exercise Mapping references valid exercise files
 - [ ] Run `python scripts/build_lessons_json.py` to regenerate lessons.json
 
 ## Anti-Patterns to Avoid
