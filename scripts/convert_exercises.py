@@ -170,10 +170,13 @@ def parse_exercise_file(filepath: Path) -> dict:
     # Generate a stable ID from module and filename
     exercise_id = f"{module_name}.{filename.replace('.py', '')}"
 
+    # Use full path as title to match local migration format
+    full_title = f"{module_name}/{filename}"
+
     return {
         "id": exercise_id,
         "topic_id": MODULE_TO_TOPIC.get(module_name, "basics.print"),
-        "title": title,
+        "title": full_title,
         "title_he": title_he,
         "description_he": description_he,
         "difficulty": MODULE_TO_DIFFICULTY.get(module_name, 1),

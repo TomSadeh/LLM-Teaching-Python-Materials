@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-01-31T08:49:53.454150",
+  "generated_at": "2026-01-31T09:07:21.690828",
   "total_count": 67,
   "by_module": {
     "module_0_basics": 18,
@@ -15,7 +15,7 @@
     {
       "id": "module_0_basics.exercise_01_hello",
       "topic_id": "basics.print",
-      "title": "Hello",
+      "title": "module_0_basics/exercise_01_hello.py",
       "title_he": "שלום עולם",
       "description_he": "יסודות: שלום עולם\n\nExercise 1: Hello World and Print",
       "difficulty": 1,
@@ -28,7 +28,7 @@
     {
       "id": "module_0_basics.exercise_02_variables",
       "topic_id": "basics.print",
-      "title": "Variables",
+      "title": "module_0_basics/exercise_02_variables.py",
       "title_he": "משתנים",
       "description_he": "יסודות: משתנים\n\nExercise 2: Variables",
       "difficulty": 1,
@@ -41,7 +41,7 @@
     {
       "id": "module_0_basics.exercise_03_math",
       "topic_id": "basics.print",
-      "title": "Math",
+      "title": "module_0_basics/exercise_03_math.py",
       "title_he": "חישובים",
       "description_he": "יסודות: חישובים\n\nExercise 3: Math Operations",
       "difficulty": 1,
@@ -54,7 +54,7 @@
     {
       "id": "module_0_basics.exercise_04_input",
       "topic_id": "basics.print",
-      "title": "Input",
+      "title": "module_0_basics/exercise_04_input.py",
       "title_he": "קלט",
       "description_he": "יסודות: קלט\n\nExercise 4: Getting Input",
       "difficulty": 1,
@@ -67,7 +67,7 @@
     {
       "id": "module_0_basics.exercise_05_calculator",
       "topic_id": "basics.print",
-      "title": "Calculator",
+      "title": "module_0_basics/exercise_05_calculator.py",
       "title_he": "מחשבון",
       "description_he": "יסודות: מחשבון\n\nExercise 5: Input with Math",
       "difficulty": 1,
@@ -80,7 +80,7 @@
     {
       "id": "module_0_basics.exercise_06_madlib_simple",
       "topic_id": "basics.print",
-      "title": "Madlib Simple",
+      "title": "module_0_basics/exercise_06_madlib_simple.py",
       "title_he": "סיפור משוגע",
       "description_he": "יסודות: סיפור משוגע\n\nExercise 6: String Concatenation (Joining Strings)",
       "difficulty": 1,
@@ -93,7 +93,7 @@
     {
       "id": "module_0_basics.exercise_07_counting",
       "topic_id": "basics.print",
-      "title": "Counting",
+      "title": "module_0_basics/exercise_07_counting.py",
       "title_he": "ספירה",
       "description_he": "יסודות: ספירה\n\nExercise 7: Counting with For Loops",
       "difficulty": 1,
@@ -106,7 +106,7 @@
     {
       "id": "module_0_basics.exercise_08_patterns",
       "topic_id": "basics.print",
-      "title": "Patterns",
+      "title": "module_0_basics/exercise_08_patterns.py",
       "title_he": "דפוסים",
       "description_he": "יסודות: דפוסים\n\nExercise 8: Print Patterns with Loops",
       "difficulty": 1,
@@ -119,7 +119,7 @@
     {
       "id": "module_0_basics.exercise_09_sum",
       "topic_id": "basics.print",
-      "title": "Sum",
+      "title": "module_0_basics/exercise_09_sum.py",
       "title_he": "סכום",
       "description_he": "יסודות: סכום\n\nExercise 9: Accumulating Values in Loops",
       "difficulty": 1,
@@ -132,7 +132,7 @@
     {
       "id": "module_0_basics.exercise_10_functions_basic",
       "topic_id": "basics.print",
-      "title": "Functions Basic",
+      "title": "module_0_basics/exercise_10_functions_basic.py",
       "title_he": "פונקציות בסיסיות",
       "description_he": "יסודות: פונקציות בסיסיות\n\nExercise 10: Basic Functions\n✏️ Exercise A\nWrite a function called say_hello that prints \"Hello!\"\nThen call it",
       "difficulty": 1,
@@ -145,7 +145,7 @@
     {
       "id": "module_0_basics.exercise_11_functions_params",
       "topic_id": "basics.print",
-      "title": "Functions Params",
+      "title": "module_0_basics/exercise_11_functions_params.py",
       "title_he": "פונקציות עם פרמטרים",
       "description_he": "יסודות: פונקציות עם פרמטרים\n\nExercise 11: Functions with Parameters\n✏️ Exercise A\nWrite a function greet(name) that prints \"Hello, [name]!\"",
       "difficulty": 1,
@@ -158,7 +158,7 @@
     {
       "id": "module_0_basics.exercise_12_functions_return",
       "topic_id": "basics.print",
-      "title": "Functions Return",
+      "title": "module_0_basics/exercise_12_functions_return.py",
       "title_he": "פונקציות עם החזרה",
       "description_he": "יסודות: פונקציות עם החזרה\n\nExercise 12: Functions that Return Values\n✏️ Exercise A\nWrite a function double(n) that returns n * 2",
       "difficulty": 1,
@@ -171,7 +171,7 @@
     {
       "id": "module_0_basics.exercise_13_fizzbuzz",
       "topic_id": "basics.print",
-      "title": "Fizzbuzz",
+      "title": "module_0_basics/exercise_13_fizzbuzz.py",
       "title_he": "פיזבאז",
       "description_he": "יסודות: פיזבאז\n\nExercise 13: FizzBuzz Challenge!\nThis is a famous programming challenge!\nPrint numbers from 1 to 30, BUT:\n- If the number is divisible by 3, print \"Fizz\" instead\n- If the number is divisible by 5, print \"Buzz\" instead\n- If the number is divisible by BOTH 3 and 5, print \"FizzBuzz\"\nExpected output starts like:\n1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n...",
       "difficulty": 1,
@@ -184,7 +184,7 @@
     {
       "id": "module_0_basics.exercise_14_multiplication_table",
       "topic_id": "basics.print",
-      "title": "Multiplication Table",
+      "title": "module_0_basics/exercise_14_multiplication_table.py",
       "title_he": "לוח הכפל",
       "description_he": "יסודות: לוח הכפל\n\nExercise 14: Multiplication Table",
       "difficulty": 1,
@@ -197,7 +197,7 @@
     {
       "id": "module_0_basics.exercise_15_mini_project",
       "topic_id": "basics.print",
-      "title": "Mini Project",
+      "title": "module_0_basics/exercise_15_mini_project.py",
       "title_he": "פרויקט מיני",
       "description_he": "יסודות: פרויקט מיני\n\nExercise 15: Mini Project - Combine Everything!\nCreate a simple \"Number Analyzer\" program that:\n1. Asks the user for a number\n2. Tells them interesting facts about that number!\nUse functions for each analysis!",
       "difficulty": 1,
@@ -210,7 +210,7 @@
     {
       "id": "module_0_basics.exercise_16_turtle_intro",
       "topic_id": "basics.print",
-      "title": "Turtle Intro",
+      "title": "module_0_basics/exercise_16_turtle_intro.py",
       "title_he": "הכרות עם צב",
       "description_he": "יסודות: הכרות עם צב\n\nExercise 16: Turtle Introduction - First Steps!",
       "difficulty": 1,
@@ -223,7 +223,7 @@
     {
       "id": "module_0_basics.exercise_17_turtle_shapes",
       "topic_id": "basics.print",
-      "title": "Turtle Shapes",
+      "title": "module_0_basics/exercise_17_turtle_shapes.py",
       "title_he": "צורות עם צב",
       "description_he": "יסודות: צורות עם צב\n\nExercise 17: Turtle Shapes - Drawing Without Loops",
       "difficulty": 1,
@@ -236,7 +236,7 @@
     {
       "id": "module_0_basics.exercise_18_turtle_colors",
       "topic_id": "basics.print",
-      "title": "Turtle Colors",
+      "title": "module_0_basics/exercise_18_turtle_colors.py",
       "title_he": "צבעים עם צב",
       "description_he": "יסודות: צבעים עם צב\n\nExercise 18: Turtle Colors and Pen Control",
       "difficulty": 1,
@@ -249,7 +249,7 @@
     {
       "id": "module_1_turtle_loops.bonus_example_spiral",
       "topic_id": "loops.for",
-      "title": "Bonus Example Spiral",
+      "title": "module_1_turtle_loops/bonus_example_spiral.py",
       "title_he": "בונוס: ספירלה",
       "description_he": "צב ולולאות: בונוס: ספירלה\n\nBonus Example: Rainbow Spiral",
       "difficulty": 1,
@@ -262,7 +262,7 @@
     {
       "id": "module_1_turtle_loops.exercise_1_square",
       "topic_id": "loops.for",
-      "title": "Square",
+      "title": "module_1_turtle_loops/exercise_1_square.py",
       "title_he": "ריבוע",
       "description_he": "צב ולולאות: ריבוע\n\nExercise 1: Draw a Square",
       "difficulty": 1,
@@ -275,7 +275,7 @@
     {
       "id": "module_1_turtle_loops.exercise_2_triangle",
       "topic_id": "loops.for",
-      "title": "Triangle",
+      "title": "module_1_turtle_loops/exercise_2_triangle.py",
       "title_he": "משולש",
       "description_he": "צב ולולאות: משולש\n\nExercise 2: Draw a Triangle",
       "difficulty": 1,
@@ -288,7 +288,7 @@
     {
       "id": "module_1_turtle_loops.exercise_3_star",
       "topic_id": "loops.for",
-      "title": "Star",
+      "title": "module_1_turtle_loops/exercise_3_star.py",
       "title_he": "כוכב",
       "description_he": "צב ולולאות: כוכב\n\nExercise 3: Draw a Star",
       "difficulty": 1,
@@ -301,7 +301,7 @@
     {
       "id": "module_1_turtle_loops.exercise_4_creative",
       "topic_id": "loops.for",
-      "title": "Creative",
+      "title": "module_1_turtle_loops/exercise_4_creative.py",
       "title_he": "יצירתי",
       "description_he": "צב ולולאות: יצירתי\n\nExercise 4: Creative Magic Art!",
       "difficulty": 1,
@@ -314,7 +314,7 @@
     {
       "id": "module_1_turtle_loops.exercise_5_hexagon",
       "topic_id": "loops.for",
-      "title": "Hexagon",
+      "title": "module_1_turtle_loops/exercise_5_hexagon.py",
       "title_he": "משושה",
       "description_he": "צב ולולאות: משושה\n\nExercise 5: Draw a Hexagon",
       "difficulty": 1,
@@ -327,7 +327,7 @@
     {
       "id": "module_1_turtle_loops.exercise_6_circle",
       "topic_id": "loops.for",
-      "title": "Circle",
+      "title": "module_1_turtle_loops/exercise_6_circle.py",
       "title_he": "עיגול",
       "description_he": "צב ולולאות: עיגול\n\nExercise 6: Draw a Circle (from straight lines!)",
       "difficulty": 1,
@@ -340,7 +340,7 @@
     {
       "id": "module_1_turtle_loops.exercise_7_rainbow",
       "topic_id": "loops.for",
-      "title": "Rainbow",
+      "title": "module_1_turtle_loops/exercise_7_rainbow.py",
       "title_he": "קשת",
       "description_he": "צב ולולאות: קשת\n\nExercise 7: Rainbow Lines",
       "difficulty": 1,
@@ -353,7 +353,7 @@
     {
       "id": "module_1_turtle_loops.exercise_8_nested_squares",
       "topic_id": "loops.for",
-      "title": "Nested Squares",
+      "title": "module_1_turtle_loops/exercise_8_nested_squares.py",
       "title_he": "ריבועים מקוננים",
       "description_he": "צב ולולאות: ריבועים מקוננים\n\nExercise 8: Nested Squares",
       "difficulty": 1,
@@ -366,7 +366,7 @@
     {
       "id": "module_1_turtle_loops.exercise_9_flower",
       "topic_id": "loops.for",
-      "title": "Flower",
+      "title": "module_1_turtle_loops/exercise_9_flower.py",
       "title_he": "פרח",
       "description_he": "צב ולולאות: פרח\n\nExercise 9: Draw a Flower",
       "difficulty": 1,
@@ -379,7 +379,7 @@
     {
       "id": "module_2_decisions.exercise_1_password",
       "topic_id": "control.if",
-      "title": "Password",
+      "title": "module_2_decisions/exercise_1_password.py",
       "title_he": "סיסמה",
       "description_he": "תנאים והחלטות: סיסמה\n\nExercise 1: Password Checker - Gryffindor Common Room",
       "difficulty": 2,
@@ -392,7 +392,7 @@
     {
       "id": "module_2_decisions.exercise_2_grades",
       "topic_id": "control.if",
-      "title": "Grades",
+      "title": "module_2_decisions/exercise_2_grades.py",
       "title_he": "ציונים",
       "description_he": "תנאים והחלטות: ציונים\n\nExercise 2: O.W.L. Exam Grading (Harry Potter Style!)",
       "difficulty": 2,
@@ -405,7 +405,7 @@
     {
       "id": "module_2_decisions.exercise_3_number_game",
       "topic_id": "control.if",
-      "title": "Number Game",
+      "title": "module_2_decisions/exercise_3_number_game.py",
       "title_he": "משחק מספרים",
       "description_he": "תנאים והחלטות: משחק מספרים\n\nExercise 3: Number Guessing Game",
       "difficulty": 2,
@@ -418,7 +418,7 @@
     {
       "id": "module_2_decisions.exercise_4_quiz",
       "topic_id": "control.if",
-      "title": "Quiz",
+      "title": "module_2_decisions/exercise_4_quiz.py",
       "title_he": "חידון",
       "description_he": "תנאים והחלטות: חידון\n\nExercise 4: Book Trivia Quiz!",
       "difficulty": 2,
@@ -431,7 +431,7 @@
     {
       "id": "module_2_decisions.exercise_5_age_checker",
       "topic_id": "control.if",
-      "title": "Age Checker",
+      "title": "module_2_decisions/exercise_5_age_checker.py",
       "title_he": "בודק גיל",
       "description_he": "תנאים והחלטות: בודק גיל\n\nExercise 5: Age Checker",
       "difficulty": 2,
@@ -444,7 +444,7 @@
     {
       "id": "module_2_decisions.exercise_6_calculator",
       "topic_id": "control.if",
-      "title": "Calculator",
+      "title": "module_2_decisions/exercise_6_calculator.py",
       "title_he": "מחשבון",
       "description_he": "תנאים והחלטות: מחשבון\n\nExercise 6: Simple Calculator",
       "difficulty": 2,
@@ -457,7 +457,7 @@
     {
       "id": "module_2_decisions.exercise_7_time_greeter",
       "topic_id": "control.if",
-      "title": "Time Greeter",
+      "title": "module_2_decisions/exercise_7_time_greeter.py",
       "title_he": "ברכת שעה",
       "description_he": "תנאים והחלטות: ברכת שעה\n\nExercise 7: Time of Day Greeter",
       "difficulty": 2,
@@ -470,7 +470,7 @@
     {
       "id": "module_2_decisions.exercise_8_even_odd",
       "topic_id": "control.if",
-      "title": "Even Odd",
+      "title": "module_2_decisions/exercise_8_even_odd.py",
       "title_he": "זוגי אי-זוגי",
       "description_he": "תנאים והחלטות: זוגי אי-זוגי\n\nExercise 8: Even or Odd?",
       "difficulty": 2,
@@ -483,7 +483,7 @@
     {
       "id": "module_2_decisions.exercise_9_leap_year",
       "topic_id": "control.if",
-      "title": "Leap Year",
+      "title": "module_2_decisions/exercise_9_leap_year.py",
       "title_he": "שנה מעוברת",
       "description_he": "תנאים והחלטות: שנה מעוברת\n\nExercise 9: Leap Year Checker",
       "difficulty": 2,
@@ -496,7 +496,7 @@
     {
       "id": "module_3_lists.exercise_1_favorites",
       "topic_id": "collections.lists",
-      "title": "Favorites",
+      "title": "module_3_lists/exercise_1_favorites.py",
       "title_he": "מועדפים",
       "description_he": "רשימות: מועדפים\n\nExercise 1: Favorite Book Characters!",
       "difficulty": 2,
@@ -509,7 +509,7 @@
     {
       "id": "module_3_lists.exercise_2_loop_list",
       "topic_id": "collections.lists",
-      "title": "Loop List",
+      "title": "module_3_lists/exercise_2_loop_list.py",
       "title_he": "לולאה על רשימה",
       "description_he": "רשימות: לולאה על רשימה\n\nExercise 2: Loop Through a List",
       "difficulty": 2,
@@ -522,7 +522,7 @@
     {
       "id": "module_3_lists.exercise_3_magic_8ball",
       "topic_id": "collections.lists",
-      "title": "Magic 8Ball",
+      "title": "module_3_lists/exercise_3_magic_8ball.py",
       "title_he": "כדור קסם",
       "description_he": "רשימות: כדור קסם\n\nExercise 3: The Sorting Hat!",
       "difficulty": 2,
@@ -535,7 +535,7 @@
     {
       "id": "module_3_lists.exercise_4_madlibs",
       "topic_id": "collections.lists",
-      "title": "Madlibs",
+      "title": "module_3_lists/exercise_4_madlibs.py",
       "title_he": "סיפור משוגע",
       "description_he": "רשימות: סיפור משוגע\n\nExercise 4: Fantasy Story Generator!",
       "difficulty": 2,
@@ -548,7 +548,7 @@
     {
       "id": "module_3_lists.exercise_5_todo_list",
       "topic_id": "collections.lists",
-      "title": "Todo List",
+      "title": "module_3_lists/exercise_5_todo_list.py",
       "title_he": "רשימת מטלות",
       "description_he": "רשימות: רשימת מטלות\n\nExercise 5: Todo List Manager",
       "difficulty": 2,
@@ -561,7 +561,7 @@
     {
       "id": "module_3_lists.exercise_6_name_picker",
       "topic_id": "collections.lists",
-      "title": "Name Picker",
+      "title": "module_3_lists/exercise_6_name_picker.py",
       "title_he": "בוחר שמות",
       "description_he": "רשימות: בוחר שמות\n\nExercise 6: Tribute Reaping! (Hunger Games Style)",
       "difficulty": 2,
@@ -574,7 +574,7 @@
     {
       "id": "module_3_lists.exercise_7_shopping_total",
       "topic_id": "collections.lists",
-      "title": "Shopping Total",
+      "title": "module_3_lists/exercise_7_shopping_total.py",
       "title_he": "סכום קניות",
       "description_he": "רשימות: סכום קניות\n\nExercise 7: Shopping List Total",
       "difficulty": 2,
@@ -587,7 +587,7 @@
     {
       "id": "module_3_lists.exercise_8_playlist_shuffler",
       "topic_id": "collections.lists",
-      "title": "Playlist Shuffler",
+      "title": "module_3_lists/exercise_8_playlist_shuffler.py",
       "title_he": "מערבל פלייליסט",
       "description_he": "רשימות: מערבל פלייליסט\n\nExercise 8: Playlist Shuffler",
       "difficulty": 2,
@@ -600,7 +600,7 @@
     {
       "id": "module_3_lists.exercise_9_word_collector",
       "topic_id": "collections.lists",
-      "title": "Word Collector",
+      "title": "module_3_lists/exercise_9_word_collector.py",
       "title_he": "אוסף מילים",
       "description_he": "רשימות: אוסף מילים\n\nExercise 9: Word Collector",
       "difficulty": 2,
@@ -613,7 +613,7 @@
     {
       "id": "module_4_games.exercise_1_guess_number",
       "topic_id": "loops.while",
-      "title": "Guess Number",
+      "title": "module_4_games/exercise_1_guess_number.py",
       "title_he": "נחש את המספר",
       "description_he": "משחקים: נחש את המספר\n\nExercise 1: Guess the Number Game",
       "difficulty": 2,
@@ -626,7 +626,7 @@
     {
       "id": "module_4_games.exercise_2_rock_paper_scissors",
       "topic_id": "loops.while",
-      "title": "Rock Paper Scissors",
+      "title": "module_4_games/exercise_2_rock_paper_scissors.py",
       "title_he": "אבן נייר ומספריים",
       "description_he": "משחקים: אבן נייר ומספריים\n\nExercise 2: Rock, Paper, Scissors",
       "difficulty": 2,
@@ -639,7 +639,7 @@
     {
       "id": "module_4_games.exercise_3_dice_game",
       "topic_id": "loops.while",
-      "title": "Dice Game",
+      "title": "module_4_games/exercise_3_dice_game.py",
       "title_he": "משחק קוביות",
       "description_he": "משחקים: משחק קוביות\n\nExercise 3: Dice Game (Pig)",
       "difficulty": 2,
@@ -652,7 +652,7 @@
     {
       "id": "module_4_games.exercise_4_your_game",
       "topic_id": "loops.while",
-      "title": "Your Game",
+      "title": "module_4_games/exercise_4_your_game.py",
       "title_he": "המשחק שלך",
       "description_he": "משחקים: המשחק שלך\n\nExercise 4: Create Your Own Game!",
       "difficulty": 2,
@@ -665,7 +665,7 @@
     {
       "id": "module_4_games.exercise_5_coin_flip_streak",
       "topic_id": "loops.while",
-      "title": "Coin Flip Streak",
+      "title": "module_4_games/exercise_5_coin_flip_streak.py",
       "title_he": "רצף מטבע",
       "description_he": "משחקים: רצף מטבע\n\nExercise 5: Coin Flip Streak",
       "difficulty": 2,
@@ -678,7 +678,7 @@
     {
       "id": "module_4_games.exercise_6_higher_lower",
       "topic_id": "loops.while",
-      "title": "Higher Lower",
+      "title": "module_4_games/exercise_6_higher_lower.py",
       "title_he": "גבוה נמוך",
       "description_he": "משחקים: גבוה נמוך\n\nExercise 6: Higher or Lower",
       "difficulty": 2,
@@ -691,7 +691,7 @@
     {
       "id": "module_4_games.exercise_7_trivia",
       "topic_id": "loops.while",
-      "title": "Trivia",
+      "title": "module_4_games/exercise_7_trivia.py",
       "title_he": "טריוויה",
       "description_he": "משחקים: טריוויה\n\nExercise 7: Book Trivia Quiz Game!",
       "difficulty": 2,
@@ -704,7 +704,7 @@
     {
       "id": "module_4_games.exercise_8_word_scramble",
       "topic_id": "loops.while",
-      "title": "Word Scramble",
+      "title": "module_4_games/exercise_8_word_scramble.py",
       "title_he": "מילים מבולבלות",
       "description_he": "משחקים: מילים מבולבלות\n\nExercise 8: Word Scramble Game",
       "difficulty": 2,
@@ -717,7 +717,7 @@
     {
       "id": "module_4_games.exercise_9_adventure",
       "topic_id": "loops.while",
-      "title": "Adventure",
+      "title": "module_4_games/exercise_9_adventure.py",
       "title_he": "הרפתקה",
       "description_he": "משחקים: הרפתקה\n\nExercise 9: Fantasy Book Adventure!",
       "difficulty": 2,
@@ -730,7 +730,7 @@
     {
       "id": "module_5_functions.exercise_1_shapes",
       "topic_id": "functions.basic",
-      "title": "Shapes",
+      "title": "module_5_functions/exercise_1_shapes.py",
       "title_he": "צורות",
       "description_he": "פונקציות: צורות\n\nExercise 1: Shape Drawing Functions",
       "difficulty": 3,
@@ -743,7 +743,7 @@
     {
       "id": "module_5_functions.exercise_2_calculator",
       "topic_id": "functions.basic",
-      "title": "Calculator",
+      "title": "module_5_functions/exercise_2_calculator.py",
       "title_he": "מחשבון",
       "description_he": "פונקציות: מחשבון\n\nExercise 2: Calculator with Functions",
       "difficulty": 3,
@@ -756,7 +756,7 @@
     {
       "id": "module_5_functions.exercise_3_helper_functions",
       "topic_id": "functions.basic",
-      "title": "Helper Functions",
+      "title": "module_5_functions/exercise_3_helper_functions.py",
       "title_he": "פונקציות עזר",
       "description_he": "פונקציות: פונקציות עזר\n\nExercise 3: Useful Helper Functions",
       "difficulty": 3,
@@ -769,7 +769,7 @@
     {
       "id": "module_5_functions.exercise_4_turtle_art",
       "topic_id": "functions.basic",
-      "title": "Turtle Art",
+      "title": "module_5_functions/exercise_4_turtle_art.py",
       "title_he": "אומנות צב",
       "description_he": "פונקציות: אומנות צב\n\nExercise 4: Turtle Art with Custom Functions",
       "difficulty": 3,
@@ -782,7 +782,7 @@
     {
       "id": "module_5_functions.exercise_5_temperature",
       "topic_id": "functions.basic",
-      "title": "Temperature",
+      "title": "module_5_functions/exercise_5_temperature.py",
       "title_he": "טמפרטורה",
       "description_he": "פונקציות: טמפרטורה\n\nExercise 5: Temperature Converter",
       "difficulty": 3,
@@ -795,7 +795,7 @@
     {
       "id": "module_5_functions.exercise_6_tip_calculator",
       "topic_id": "functions.basic",
-      "title": "Tip Calculator",
+      "title": "module_5_functions/exercise_6_tip_calculator.py",
       "title_he": "מחשבון טיפ",
       "description_he": "פונקציות: מחשבון טיפ\n\nExercise 6: Tip Calculator",
       "difficulty": 3,
@@ -808,7 +808,7 @@
     {
       "id": "module_5_functions.exercise_7_password_generator",
       "topic_id": "functions.basic",
-      "title": "Password Generator",
+      "title": "module_5_functions/exercise_7_password_generator.py",
       "title_he": "מחולל סיסמאות",
       "description_he": "פונקציות: מחולל סיסמאות\n\nExercise 7: Magical Spell Generator!",
       "difficulty": 3,
@@ -821,7 +821,7 @@
     {
       "id": "module_5_functions.exercise_8_greeting_card",
       "topic_id": "functions.basic",
-      "title": "Greeting Card",
+      "title": "module_5_functions/exercise_8_greeting_card.py",
       "title_he": "כרטיס ברכה",
       "description_he": "פונקציות: כרטיס ברכה\n\nExercise 8: Greeting Card Maker",
       "difficulty": 3,
@@ -834,7 +834,7 @@
     {
       "id": "module_5_functions.exercise_9_turtle_scene",
       "topic_id": "functions.basic",
-      "title": "Turtle Scene",
+      "title": "module_5_functions/exercise_9_turtle_scene.py",
       "title_he": "סצנת צב",
       "description_he": "פונקציות: סצנת צב\n\nExercise 9: Magical Scene with Functions!",
       "difficulty": 3,
@@ -847,7 +847,7 @@
     {
       "id": "module_6_final_project.template_app",
       "topic_id": "project.final",
-      "title": "App",
+      "title": "module_6_final_project/template_app.py",
       "title_he": "App",
       "description_he": "פרויקט מסכם: App\n\nFinal Project Template: Useful App\n==================\nDATA STORAGE\n==================",
       "difficulty": 3,
@@ -860,7 +860,7 @@
     {
       "id": "module_6_final_project.template_art",
       "topic_id": "project.final",
-      "title": "Art",
+      "title": "module_6_final_project/template_art.py",
       "title_he": "Art",
       "description_he": "פרויקט מסכם: Art\n\nFinal Project Template: Art Generator",
       "difficulty": 3,
@@ -873,7 +873,7 @@
     {
       "id": "module_6_final_project.template_game",
       "topic_id": "project.final",
-      "title": "Game",
+      "title": "module_6_final_project/template_game.py",
       "title_he": "Game",
       "description_he": "פרויקט מסכם: Game\n\nFinal Project Template: Game",
       "difficulty": 3,
