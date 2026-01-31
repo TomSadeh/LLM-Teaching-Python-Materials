@@ -10,16 +10,19 @@ This repository serves as a remote content source for the Maya Chat teaching app
 
 ```
 ├── version.json        # Version tracking for sync
-├── exercises.json      # All exercises in JSON format (for remote sync)
+├── manifest.json       # Lists all modules for remote discovery
 ├── prompts.json        # LLM prompt fragments (for remote sync)
-├── raw_exercises/      # Original Python exercise files (for audit/reference)
+├── raw_exercises/      # Per-module exercises with their own exercises.json
 │   ├── module_0_basics/
 │   ├── module_1_turtle_loops/
 │   ├── module_2_decisions/
 │   ├── module_3_lists/
 │   ├── module_4_games/
 │   ├── module_5_functions/
-│   └── module_6_final_project/
+│   ├── module_6_final_project/
+│   ├── module_7_dictionaries/
+│   ├── module_8_modules/
+│   └── module_9_oop/
 └── scripts/
     └── convert_exercises.py    # Script to regenerate exercises.json
 ```
@@ -35,8 +38,11 @@ This repository serves as a remote content source for the Maya Chat teaching app
 | module_4_games | While loops, game logic | 2 | 9 |
 | module_5_functions | Functions | 3 | 9 |
 | module_6_final_project | Final projects | 3 | 3 |
+| module_7_dictionaries | Dictionaries | 2 | 9 |
+| module_8_modules | Standard library modules | 3 | 9 |
+| module_9_oop | Object-oriented programming | 3 | 9 |
 
-**Total: 67 exercises**
+**Total: 94 exercises**
 
 ## Syncing to Maya Chat
 

@@ -1,0 +1,15 @@
+{
+  "version": "1.3.0",
+  "modules": [
+    "module_0_basics",
+    "module_1_turtle_loops",
+    "module_2_decisions",
+    "module_3_lists",
+    "module_4_games",
+    "module_5_functions",
+    "module_6_final_project",
+    "module_7_dictionaries",
+    "module_8_modules",
+    "module_9_oop"
+  ]
+}

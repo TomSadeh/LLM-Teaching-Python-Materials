@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 """
-Convert exercise Python files to JSON format for remote sync.
+Convert exercise Python files to per-module JSON format.
 
 Usage:
-    python scripts/convert_exercises.py <source_dir>
+    python scripts/convert_exercises.py [source_dir]
 
-Example:
-    python scripts/convert_exercises.py ../maya-chat/data/exercises
+If source_dir is not provided, defaults to raw_exercises in the repo root.
 """
 
 import json
@@ -14,6 +13,8 @@ import re
 import sys
 from pathlib import Path
 from datetime import datetime
+
+VERSION = "1.3.0"
 
 # Map module folders to topic IDs
 MODULE_TO_TOPIC = {
@@ -24,6 +25,9 @@ MODULE_TO_TOPIC = {
     "module_4_games": "loops.while",
     "module_5_functions": "functions.basic",
     "module_6_final_project": "project.final",
+    "module_7_dictionaries": "collections.dict",
+    "module_8_modules": "modules.stdlib",
+    "module_9_oop": "oop.classes",
 }
 
 # Module to difficulty mapping
@@ -35,6 +39,9 @@ MODULE_TO_DIFFICULTY = {
     "module_4_games": 2,
     "module_5_functions": 3,
     "module_6_final_project": 3,
+    "module_7_dictionaries": 2,
+    "module_8_modules": 3,
+    "module_9_oop": 3,
 }
 
 # Hebrew module names
@@ -46,6 +53,9 @@ MODULE_NAMES_HE = {
     "module_4_games": "משחקים",
     "module_5_functions": "פונקציות",
     "module_6_final_project": "פרויקט מסכם",
+    "module_7_dictionaries": "מילונים",
+    "module_8_modules": "מודולים",
+    "module_9_oop": "תכנות מונחה עצמים",
 }
 
 # Hebrew title mapping
@@ -115,6 +125,36 @@ TITLE_HE_MAP = {
     "template art": "תבנית אומנות",
     "template app": "תבנית אפליקציה",
     "bonus example spiral": "בונוס: ספירלה",
+    # Module 7: Dictionaries
+    "spellbook": "ספר כישופים",
+    "character stats": "נתוני דמות",
+    "loop dictionaries": "לולאות על מילונים",
+    "nested data": "מידע מקונן",
+    "dict methods": "מתודות מילון",
+    "quiz game": "משחק חידון",
+    "secret codes": "קודים סודיים",
+    "rpg inventory": "מלאי RPG",
+    "contact book": "ספר אנשי קשר",
+    # Module 8: Modules
+    "datetime basics": "יסודות תאריך ושעה",
+    "random advanced": "אקראיות מתקדם",
+    "json basics": "יסודות JSON",
+    "time module": "מודול זמן",
+    "math module": "מודול מתמטיקה",
+    "string module": "מודול מחרוזות",
+    "os path": "נתיבי מערכת",
+    "collections": "אוספים",
+    "create module": "יצירת מודול",
+    # Module 9: OOP
+    "first class": "מחלקה ראשונה",
+    "init method": "מתודת אתחול",
+    "methods": "מתודות",
+    "str repr": "ייצוג טקסטואלי",
+    "interaction": "אינטראקציה",
+    "inheritance": "הורשה",
+    "composition": "הרכבה",
+    "text adventure": "הרפתקת טקסט",
+    "rpg battle": "קרב RPG",
 }
 
 
@@ -188,92 +228,88 @@ def parse_exercise_file(filepath: Path) -> dict:
     }
 
 
-def get_exercise_files(exercises_dir: Path) -> list[Path]:
-    """Get all exercise Python files from the exercises directory."""
-    files = []
-    for module_dir in sorted(exercises_dir.iterdir()):
-        if module_dir.is_dir() and module_dir.name.startswith("module_"):
-            for py_file in sorted(module_dir.glob("*.py")):
-                files.append(py_file)
-    return files
-
-
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python scripts/convert_exercises.py <source_exercises_dir>")
-        print("Example: python scripts/convert_exercises.py ../maya-chat/data/exercises")
-        sys.exit(1)
+    # Determine source directory
+    root = Path(__file__).parent.parent
 
-    source_dir = Path(sys.argv[1])
+    if len(sys.argv) >= 2:
+        source_dir = Path(sys.argv[1])
+    else:
+        source_dir = root / "raw_exercises"
+
     if not source_dir.exists():
         print(f"Error: Source directory not found: {source_dir}")
         sys.exit(1)
 
-    # Output directory (repo root)
-    output_dir = Path(__file__).parent.parent
+    # Get all module directories
+    modules = sorted([
+        d for d in source_dir.iterdir()
+        if d.is_dir() and d.name.startswith("module_")
+    ])
 
-    # Get all exercise files
-    files = get_exercise_files(source_dir)
-    print(f"Found {len(files)} exercise files")
+    print(f"Found {len(modules)} modules")
 
-    # Convert to JSON
-    exercises = []
-    for filepath in files:
-        try:
-            exercise = parse_exercise_file(filepath)
-            exercises.append(exercise)
-            print(f"  [OK] {exercise['id']}")
-        except Exception as e:
-            print(f"  [ERROR] {filepath}: {e}")
+    total_exercises = 0
+    module_names = []
 
-    # Group by module for summary
-    by_module = {}
-    for ex in exercises:
-        module = ex["tags"]
-        by_module.setdefault(module, []).append(ex)
+    for module_dir in modules:
+        module_name = module_dir.name
+        module_names.append(module_name)
 
-    # Write exercises.json
-    exercises_data = {
-        "version": "1.0.0",
-        "generated_at": datetime.now().isoformat(),
-        "total_count": len(exercises),
-        "by_module": {k: len(v) for k, v in by_module.items()},
-        "exercises": exercises,
+        # Get all exercise files in this module
+        py_files = sorted(module_dir.glob("*.py"))
+        exercises = []
+
+        for filepath in py_files:
+            try:
+                exercise = parse_exercise_file(filepath)
+                exercises.append(exercise)
+            except Exception as e:
+                print(f"  [ERROR] {filepath}: {e}")
+
+        if not exercises:
+            print(f"  {module_name}: no exercises found")
+            continue
+
+        # Write module's exercises.json
+        module_data = {
+            "version": VERSION,
+            "theme_support": True,
+            "generated_at": datetime.now().isoformat(),
+            "module": module_name,
+            "count": len(exercises),
+            "exercises": exercises,
+        }
+
+        output_path = module_dir / "exercises.json"
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(module_data, f, indent=2, ensure_ascii=False)
+
+        print(f"  {module_name}: {len(exercises)} exercises")
+        total_exercises += len(exercises)
+
+    # Write manifest.json
+    manifest_data = {
+        "version": VERSION,
+        "modules": module_names,
     }
-
-    exercises_path = output_dir / "exercises.json"
-    with open(exercises_path, "w", encoding="utf-8") as f:
-        json.dump(exercises_data, f, ensure_ascii=False, indent=2)
-    print(f"\nWrote {exercises_path}")
+    manifest_path = root / "manifest.json"
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest_data, f, indent=2, ensure_ascii=False)
+    print(f"\nWrote {manifest_path}")
 
     # Write version.json
     version_data = {
-        "exercises": "1.0.0",
+        "exercises": VERSION,
         "prompts": "1.0.0",
         "updated_at": datetime.now().isoformat(),
     }
-
-    version_path = output_dir / "version.json"
+    version_path = root / "version.json"
     with open(version_path, "w", encoding="utf-8") as f:
         json.dump(version_data, f, ensure_ascii=False, indent=2)
     print(f"Wrote {version_path}")
 
-    # Write empty prompts.json
-    prompts_data = {
-        "version": "1.0.0",
-        "prompts": [],
-    }
-
-    prompts_path = output_dir / "prompts.json"
-    with open(prompts_path, "w", encoding="utf-8") as f:
-        json.dump(prompts_data, f, ensure_ascii=False, indent=2)
-    print(f"Wrote {prompts_path}")
-
-    # Summary
-    print("\nSummary:")
-    print(f"  Total exercises: {len(exercises)}")
-    for module, exs in sorted(by_module.items()):
-        print(f"  {module}: {len(exs)}")
+    print(f"\nTotal: {total_exercises} exercises in {len(module_names)} modules")
 
 
 if __name__ == "__main__":
