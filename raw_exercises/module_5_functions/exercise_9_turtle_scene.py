@@ -87,9 +87,9 @@ def main():
     #
     # Ideas:
     # - {{place}} at night with a moon and stars
-    # - {{place}} with cabins and torches
-    # - {{place}} glowing in the distance
-    # - The Hunger Games arena (trees, Cornucopia)
+    # - {{school}} with towers and torches
+    # - {{location}} glowing in the distance
+    # - A forest scene with trees and a campfire
     #
     # Use the functions above to create your scene!
 

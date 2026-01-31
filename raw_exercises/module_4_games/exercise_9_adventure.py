@@ -6,9 +6,9 @@ def start_adventure():
     #
     # Pick a setting:
     # - {{school}} (find a magical object, escape a creature)
-    # - {{school}} (go on a quest, meet a god)
-    # - The Hunger Games arena (survive, find allies)
-    # - {{location}} (discover a secret, use your abilities)
+    # - {{location}} (go on a quest, discover secrets)
+    # - {{place}} (survive, find allies)
+    # - {{house}} (discover a secret, use your abilities)
     #
     # The structure:
     # 1. Print a story introduction (set the scene!)

@@ -16,7 +16,7 @@ def main():
     print("📚 Ultimate Book Trivia Quiz! 📚\n")
 
     # Questions: (question, choices, correct_index)
-    # Mix of {{hero}}, {{hero}}, Hunger Games, and {{school}} series!
+    # Questions about your favorite {{school}} series!
     questions = [
         # {{hero}}
         ("What house is {{hero}} sorted into?",

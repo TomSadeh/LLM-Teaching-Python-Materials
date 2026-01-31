@@ -1,9 +1,9 @@
-# Exercise 1: Password Checker - {{house}} Common Room
+# Exercise 1: Password Checker - {{house}} Entrance
 
 
 def check_password():
     # ✏️ YOUR CODE HERE ✏️
-    # The guardian guards the entrance to {{house}} Tower!
+    # The guardian guards the entrance to {{house}}!
     # 1. Ask the user for the password using input()
     # 2. Check if it equals "{{password}}" (the first password in the books!)
     # 3. If yes - print "The entrance opens. Welcome to {{house}}!"

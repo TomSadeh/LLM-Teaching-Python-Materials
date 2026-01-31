@@ -81,7 +81,7 @@ class Game:
         # Create rooms and connect them
         # Example:
         # entrance = Room("{{school}} Entrance", "You stand before the great doors...")
-        # hall = Room("{{location}}", "Floating candles light the enormous room...")
+        # hall = Room("{{location}}", "Magical lights illuminate the enormous room...")
         # entrance.add_exit("north", hall)
         # hall.add_exit("south", entrance)
         #
@@ -104,7 +104,7 @@ class Game:
         print("   WELCOME TO THE {{school}} ADVENTURE!")
         print("=" * 50)
 
-        name = input("\nWhat is your name, young wizard? ")
+        name = input("\nWhat is your name, adventurer? ")
         self.player = Player(name)
         self.setup()
 
@@ -144,7 +144,7 @@ def main():
     start = SimpleRoom("{{school}} Gates",
                        "The magnificent gates of {{school}} tower before you.")
     hall = SimpleRoom("{{location}}",
-                      "Torches line the stone walls. A grand staircase leads up.")
+                      "Magical lights line the walls. A grand staircase leads up.")
 
     start.exits["north"] = hall
     hall.exits["south"] = start

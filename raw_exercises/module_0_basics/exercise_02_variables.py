@@ -11,9 +11,8 @@ def exercise_a():
 
 def exercise_b():
     # ✏️ Create two variables:
-    # character = a character from {{hero}}, {{hero}},
-    #             Hunger Games, or {{school}} series
-    # book = which book/series they're from
+    # character = a character (like "{{hero}}" or "{{heroine}}")
+    # book = which book/series they're from (like "{{school}}")
     # Print both using print()
 
     pass

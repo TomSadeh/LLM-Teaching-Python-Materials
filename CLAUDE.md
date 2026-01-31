@@ -164,6 +164,8 @@ When providing example values, use placeholders:
 
 ## Regenerating JSON Files
 
+### Exercises
+
 After adding or modifying exercises:
 
 ```bash
@@ -176,6 +178,43 @@ This single command:
 - Updates `manifest.json` with the module list
 - Updates `version.json`
 
+### Lessons
+
+After adding or modifying lesson markdown files:
+
+```bash
+python scripts/build_lessons_json.py
+```
+
+This command:
+- Reads all `lesson_*.md` files from `en/lessons/` and `he/lessons/`
+- Parses metadata from blockquote format (Module, Difficulty, Duration)
+- Merges English and Hebrew content into a single entry per lesson
+- Writes `lessons.json` to the repository root
+
+The output format for maya-chat's `remote_sync_service.sync_lessons()`:
+
+```json
+{
+  "version": "1.0.0",
+  "lessons": [
+    {
+      "source_id": "lesson_module_0_basics",
+      "title": "Python Basics",
+      "title_he": "יסודות פייתון",
+      "description": "...",
+      "description_he": "...",
+      "module": "module_0_basics",
+      "order_index": 0,
+      "difficulty": 1,
+      "duration": "15-20 minutes",
+      "content_md": "# Full English lesson content...",
+      "content_md_he": "# Full Hebrew lesson content..."
+    }
+  ]
+}
+```
+
 ### Adding a New Module
 
 1. Create the directory: `raw_exercises/module_N_topic/`
@@ -184,7 +223,48 @@ This single command:
    - Add to `MODULE_TO_DIFFICULTY`
    - Add to `MODULE_NAMES_HE`
    - Add Hebrew titles for exercises to `TITLE_HE_MAP`
-3. Run `python scripts/convert_exercises.py`
+3. Update `exercises_config.json`:
+   - Add module entry under `modules`
+4. Create lesson files:
+   - `en/lessons/lesson_module_N_topic.md`
+   - `he/lessons/lesson_module_N_topic.md`
+5. Run both scripts:
+   ```bash
+   python scripts/convert_exercises.py
+   python scripts/build_lessons_json.py
+   ```
+
+### Lesson File Format
+
+Lessons use markdown with metadata in blockquote format:
+
+```markdown
+# Lesson: Topic Name
+
+> **Module**: module_N_topic
+> **Difficulty**: 1
+> **Duration**: 15-20 minutes
+
+---
+
+## Prerequisites
+...
+
+## Learning Objectives
+...
+```
+
+Hebrew lessons use the same structure with Hebrew headers:
+
+```markdown
+# שיעור: שם הנושא
+
+> **מודול**: module_N_topic
+> **רמת קושי**: 1
+> **משך**: 15-20 דקות
+```
+
+See `en/lessons/TEMPLATE.md` for the complete lesson structure.
 
 ## Manifest File
 
@@ -225,6 +305,14 @@ Before committing exercises:
 - [ ] Exercises progress in difficulty within module
 - [ ] Code follows PEP 8 conventions
 - [ ] Comments explain "why", not just "what"
+
+Before committing lessons:
+
+- [ ] Both English and Hebrew versions exist
+- [ ] Metadata blockquotes are correctly formatted (Module, Difficulty, Duration)
+- [ ] All required sections are present (see TEMPLATE.md)
+- [ ] Exercises Mapping table references valid exercise files
+- [ ] Run `python scripts/build_lessons_json.py` to regenerate lessons.json
 
 ## Anti-Patterns to Avoid
 

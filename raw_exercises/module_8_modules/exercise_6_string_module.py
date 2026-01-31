@@ -15,7 +15,7 @@ def exercise_a():
 def exercise_b():
     # ✏️ YOUR CODE HERE ✏️
     # Title case converter!
-    # Ask for a book title (like "{{hero}} and the chamber of secrets")
+    # Ask for a book title (like "the adventures of {{hero}}")
     # Convert to title case using .title()
     # Print the formatted title
     pass

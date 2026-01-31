@@ -16,10 +16,10 @@ def draw_art(t):
     # Create magical art inspired by your favorite themes!
     #
     # Ideas:
-    # - Themed: A wand with sparkles, the {{item}}, stars
-    # - Themed: Waves ({{mentor}}), a trident, lightning bolts
-    # - Themed: The {{creature}} pin (circle + bird shape), flames
-    # - Themed: An {{creature}}, glowing eyes, light beams
+    # - A {{item}} with sparkles, stars, moon
+    # - A {{creature}} flying through the sky
+    # - {{location}} with magical lights
+    # - A {{pet}} surrounded by glowing effects
     #
     # Useful commands:
     # - t.circle(50) - draw a circle

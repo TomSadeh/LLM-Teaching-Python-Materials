@@ -24,15 +24,15 @@ def exercise_c():
 
 def exercise_d():
     # ✏️ Mini Mad Lib - Adventure style!
-    # Ask for: a name, a location (1-12), a weapon
-    # Print: "[name] from District [number] picked up a [weapon]!"
+    # Ask for: a name, a place, an item
+    # Print: "[name] from [place] picked up a [item]!"
     pass
 
 
 def exercise_e():
     # ✏️ Adventure Mad Lib!
-    # Ask for: a powerful being, a magical power, a monster
-    # Create a sentence like: "The child of [god] used their [power] to defeat the [monster]!"
+    # Ask for: a hero name, a magical ability, a creature
+    # Create a sentence like: "[hero] used their [ability] to defeat the [creature]!"
     pass
 
 
