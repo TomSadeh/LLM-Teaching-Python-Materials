@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="utf-8">
+    <title>README_HE</title>
+    <style>
+
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.8;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-top: 1.5em;
+}
+
+h1 { font-size: 2em; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+h2 { font-size: 1.5em; border-bottom: 1px solid #bdc3c7; padding-bottom: 5px; }
+h3 { font-size: 1.2em; }
+
+code {
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    direction: ltr;
+    display: inline-block;
+}
+
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    direction: ltr;
+    text-align: left;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+ul, ol {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #bdc3c7;
+    margin: 30px 0;
+}
+
+strong {
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+}
+
+    </style>
+</head>
+<body>
+    <h1 id="2-ifelse">מודול 2: קבלת החלטות (if/else)</h1>
+<h2 id="_1">מה תלמדי</h2>
+<ul>
+<li>לגרום לתוכנית לבחור מה לעשות</li>
+<li>להשוות ערכים (שווה, גדול, קטן)</li>
+<li>להשתמש ב-<code>if</code>, <code>elif</code> ו-<code>else</code></li>
+<li>ליצור תוכניות אינטראקטיביות</li>
+</ul>
+<h2 id="_2">שיעורים</h2>
+<h3 id="1-if">שיעור 1: משפט if</h3>
+<p>תוכניות יכולות לקבל החלטות! כמו כובע המיון שבוחר את הבית!</p>
+<pre><code class="language-python">house = &quot;Gryffindor&quot;
+if house == &quot;Gryffindor&quot;:
+    print(&quot;Where dwell the brave at heart!&quot;)
+</code></pre>
+<h3 id="2">שיעור 2: אופרטורי השוואה</h3>
+<p>השתמשי באלה כדי להשוות ערכים:
+- <code>==</code> שווה (שני סימני שווה!)
+- <code>!=</code> לא שווה
+- <code>&gt;</code> גדול מ
+- <code>&lt;</code> קטן מ
+- <code>&gt;=</code> גדול או שווה
+- <code>&lt;=</code> קטן או שווה</p>
+<pre><code class="language-python">district = 12
+if district == 12:
+    print(&quot;You're from the coal mining district, like Katniss!&quot;)
+</code></pre>
+<h3 id="3-ifelse">שיעור 3: if/else</h3>
+<p>מה אם התנאי לא נכון? השתמשי ב-<code>else</code>:</p>
+<pre><code class="language-python"># הגברת השמנה בודקת את הסיסמה!
+password = input(&quot;Password? &quot;)
+if password == &quot;Caput Draconis&quot;:
+    print(&quot;The portrait swings open. Welcome to Gryffindor!&quot;)
+else:
+    print(&quot;The Fat Lady shakes her head.&quot;)
+</code></pre>
+<h3 id="4-elif-else-if">שיעור 4: elif (else if)</h3>
+<p>להרבה אפשרויות, השתמשי ב-<code>elif</code>:</p>
+<pre><code class="language-python"># ציוני O.W.L. מהוגוורטס!
+score = 85
+if score &gt;= 95:
+    print(&quot;O - Outstanding!&quot;)
+elif score &gt;= 85:
+    print(&quot;E - Exceeds Expectations!&quot;)
+elif score &gt;= 70:
+    print(&quot;A - Acceptable&quot;)
+else:
+    print(&quot;T - Troll!&quot;)
+</code></pre>
+<hr />
+<h2 id="_3">תרגילים</h2>
+<ol>
+<li><code>exercise_1_password.py</code> - הכניסה למגדל גריפינדור 🦁</li>
+<li><code>exercise_2_grades.py</code> - מחשבון ציוני O.W.L. 🦉</li>
+<li><code>exercise_3_number_game.py</code> - נחשי את המספר</li>
+<li><code>exercise_4_quiz.py</code> - חידון ספרים! 📚</li>
+</ol>
+<h2 id="_4">דמויות לדוגמה</h2>
+<ul>
+<li><strong>הארי פוטר:</strong> בדקי אם המשתמש בבית הנכון</li>
+<li><strong>פרסי ג'קסון:</strong> בדקי מי האל ההורה</li>
+<li><strong>משחקי הרעב:</strong> בדקי מאיזה מחוז הדמות</li>
+<li><strong>שומרת הערים האבודות:</strong> בדקי איזו כישרון יש לאלף</li>
+</ul>
+<h2 id="_5">טיפים</h2>
+<ul>
+<li>זכרי: <code>=</code> מכניס ערך, <code>==</code> משווה ערכים</li>
+<li>הזחה חשובה! קוד בתוך <code>if</code> חייב להיות מוזח</li>
+<li>אפשר לשלב תנאים עם <code>and</code> / <code>or</code></li>
+</ul>
+</body>
+</html>
