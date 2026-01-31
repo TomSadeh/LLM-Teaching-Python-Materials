@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="utf-8">
+    <title>README_HE</title>
+    <style>
+
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.8;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-top: 1.5em;
+}
+
+h1 { font-size: 2em; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+h2 { font-size: 1.5em; border-bottom: 1px solid #bdc3c7; padding-bottom: 5px; }
+h3 { font-size: 1.2em; }
+
+code {
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    direction: ltr;
+    display: inline-block;
+}
+
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    direction: ltr;
+    text-align: left;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+ul, ol {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #bdc3c7;
+    margin: 30px 0;
+}
+
+strong {
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+}
+
+    </style>
+</head>
+<body>
+    <h1 id="4">מודול 4: משחקים פשוטים</h1>
+<h2 id="_1">מה תלמדי</h2>
+<ul>
+<li>לולאת המשחק - להמשיך לשחק עד שנגמר</li>
+<li>לולאות <code>while</code> לחזרה עד שתנאי מתקיים</li>
+<li>לשלב הכל: לולאות, if/else, רשימות, אקראי</li>
+<li>לבנות משחקים שלמים!</li>
+</ul>
+<h2 id="_2">שיעורים</h2>
+<h3 id="1-while">שיעור 1: לולאת while</h3>
+<p>לולאת <code>while</code> ממשיכה כל עוד משהו נכון:</p>
+<pre><code class="language-python">lives = 3
+while lives &gt; 0:
+    print(&quot;You have&quot;, lives, &quot;lives left&quot;)
+    lives = lives - 1
+print(&quot;Game over!&quot;)
+</code></pre>
+<h3 id="2">שיעור 2: תבנית לולאת משחק</h3>
+<p>רוב המשחקים עוקבים אחרי התבנית הזו:</p>
+<pre><code class="language-python">playing = True
+while playing:
+    # 1. להראות משהו לשחקן
+    # 2. לקבל קלט מהשחקן
+    # 3. לבדוק מה קרה
+    # 4. אולי לשים playing = False כדי לסיים
+</code></pre>
+<h3 id="3">שיעור 3: לצאת מלולאה</h3>
+<p>השתמשי ב-<code>break</code> כדי לצאת מלולאה מיד:</p>
+<pre><code class="language-python">while True:
+    answer = input(&quot;Continue? (y/n): &quot;)
+    if answer == &quot;n&quot;:
+        break
+    print(&quot;Let's keep going!&quot;)
+</code></pre>
+<h3 id="4_1">שיעור 4: לספור נקודות</h3>
+<p>עקבי אחרי נקודות עם משתנה:</p>
+<pre><code class="language-python">score = 0
+# השחקן עשה משהו טוב
+score = score + 10
+print(&quot;Score:&quot;, score)
+</code></pre>
+<hr />
+<h2 id="_3">תרגילים</h2>
+<ol>
+<li><code>exercise_1_guess_number.py</code> - נחשי את המספר (עם רמזים!)</li>
+<li><code>exercise_2_rock_paper_scissors.py</code> - משחק קלאסי נגד המחשב</li>
+<li><code>exercise_3_dice_game.py</code> - הטילי קוביות ונסי את המזל</li>
+<li><code>exercise_4_your_game.py</code> - צרי משחק משלך!</li>
+</ol>
+<h2 id="_4">טיפים</h2>
+<ul>
+<li>בדקי את המשחק על ידי שאת משחקת בו בעצמך</li>
+<li>חשבי מה יכול להשתבש (קלט לא טוב, וכו')</li>
+<li>הוסיפי הודעות כיפיות כדי לעשות את זה יותר מרגש!</li>
+</ul>
+</body>
+</html>

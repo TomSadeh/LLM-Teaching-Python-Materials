@@ -1,0 +1,114 @@
+# LLM Teaching Python Materials
+
+Teaching materials for Maya's Magic Coding Chat - Python exercises and LLM prompt fragments.
+
+## Purpose
+
+This repository serves as a remote content source for the Maya Chat teaching app. The app can sync exercises and prompt updates from this repo using its remote sync API.
+
+## Structure
+
+```
+├── version.json        # Version tracking for sync
+├── exercises.json      # All exercises in JSON format (for remote sync)
+├── prompts.json        # LLM prompt fragments (for remote sync)
+├── raw_exercises/      # Original Python exercise files (for audit/reference)
+│   ├── module_0_basics/
+│   ├── module_1_turtle_loops/
+│   ├── module_2_decisions/
+│   ├── module_3_lists/
+│   ├── module_4_games/
+│   ├── module_5_functions/
+│   └── module_6_final_project/
+└── scripts/
+    └── convert_exercises.py    # Script to regenerate exercises.json
+```
+
+## Modules
+
+| Module | Topic | Difficulty | Exercises |
+|--------|-------|------------|-----------|
+| module_0_basics | Print, variables, input | 1 | 18 |
+| module_1_turtle_loops | Turtle graphics, for loops | 1 | 10 |
+| module_2_decisions | If/else conditions | 2 | 9 |
+| module_3_lists | Lists and iteration | 2 | 9 |
+| module_4_games | While loops, game logic | 2 | 9 |
+| module_5_functions | Functions | 3 | 9 |
+| module_6_final_project | Final projects | 3 | 3 |
+
+**Total: 67 exercises**
+
+## Syncing to Maya Chat
+
+Configure the app to sync from this repo:
+
+```bash
+# Set the remote source (use raw GitHub URL)
+curl -X PUT http://localhost:8765/api/sync/remote/config \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_type": "github",
+    "source_url": "https://raw.githubusercontent.com/TomSadeh/LLM-Teaching-Python-Materials/main"
+  }'
+
+# Check for updates
+curl -X POST http://localhost:8765/api/sync/remote/check
+
+# Pull updates
+curl -X POST http://localhost:8765/api/sync/remote/pull
+```
+
+## Exercise JSON Format
+
+Each exercise in `exercises.json` has this structure:
+
+```json
+{
+  "id": "module_0_basics.exercise_01_hello",
+  "topic_id": "basics.print",
+  "title": "Hello",
+  "title_he": "שלום עולם",
+  "description_he": "יסודות: שלום עולם\n\nExercise 1: Hello World and Print",
+  "difficulty": 1,
+  "starter_code": "# Exercise 1: Hello World...",
+  "solution_code": null,
+  "hints": [],
+  "tags": "module_0_basics",
+  "source_file": "module_0_basics/exercise_01_hello.py"
+}
+```
+
+## Prompt Fragments
+
+Add prompt fragments to `prompts.json` to inject additional teaching instructions:
+
+```json
+{
+  "version": "1.0.0",
+  "prompts": [
+    {
+      "id": "custom-rule",
+      "name": "Custom Teaching Rule",
+      "content": "# Additional instruction for the LLM...",
+      "priority": 50,
+      "is_active": true
+    }
+  ]
+}
+```
+
+## Regenerating exercises.json
+
+If you modify the raw exercise files:
+
+```bash
+python scripts/convert_exercises.py raw_exercises
+```
+
+Then update the version in `version.json` and commit.
+
+## Language
+
+- Exercise comments and descriptions: Hebrew
+- Code and variable names: English
+- Target audience: Hebrew-speaking students learning Python
