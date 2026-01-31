@@ -1,10 +1,10 @@
-# Exercise 2: O.W.L. Exam Grading (Harry Potter Style!)
+# Exercise 2: O.W.L. Exam Grading ({{hero}} Style!)
 
 
 def get_owl_grade(score):
     # ✏️ YOUR CODE HERE ✏️
     # Return the O.W.L. grade based on score!
-    # (These are the Hogwarts exam grades)
+    # (These are the {{school}} exam grades)
     #
     # 95 and above = "O" (Outstanding)
     # 85-94 = "E" (Exceeds Expectations)
@@ -25,7 +25,7 @@ def main():
     print("Your O.W.L. grade is:", grade)
 
     # Bonus: Can you add what each grade means?
-    # Example: if grade == "O": print("Outstanding! Hermione would be proud!")
+    # Example: if grade == "O": print("Outstanding! {{heroine}} would be proud!")
 
 
 main()

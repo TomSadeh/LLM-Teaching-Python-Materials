@@ -47,7 +47,7 @@ def draw_circle_shape(t, x, y, radius, color):
 def draw_star(t, x, y, size, color):
     # ✏️ BONUS FUNCTION ✏️
     # Draw a star at position (x, y)
-    # Use a 5-pointed star (like on the Hogwarts sky!)
+    # Use a 5-pointed star (like in the {{location}}!)
     # Hint: for a 5-pointed star, turn 144 degrees
     pass
 
@@ -55,7 +55,7 @@ def draw_star(t, x, y, size, color):
 def draw_castle(t, x, y):
     # ✏️ YOUR CODE HERE ✏️
     # Draw a magical castle using the shape functions!
-    # Think of Hogwarts! It could have:
+    # Think of {{place}}! It could have:
     # - A main square building
     # - Tall triangle towers
     # - Small windows (yellow for lit-up!)
@@ -86,9 +86,9 @@ def main():
     # Create a scene from your favorite book!
     #
     # Ideas:
-    # - Hogwarts at night with a moon and stars
-    # - Camp Half-Blood with cabins and torches
-    # - Foxfire Academy glowing in the distance
+    # - {{place}} at night with a moon and stars
+    # - {{place}} with cabins and torches
+    # - {{place}} glowing in the distance
     # - The Hunger Games arena (trees, Cornucopia)
     #
     # Use the functions above to create your scene!

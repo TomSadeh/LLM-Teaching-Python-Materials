@@ -9,11 +9,11 @@ def get_random_word(word_list):
 
 def create_story():
     # Word lists - add more words from your favorite books!
-    heroes = ["Sophie Foster", "Percy Jackson", "Katniss", "Harry Potter", "Keefe", "Annabeth"]
-    creatures = ["alicorn", "hippogriff", "hellhound", "Mockingjay", "phoenix", "dragon"]
-    abilities = ["telepathy", "water control", "archery", "magic", "vanishing", "fire"]
-    places = ["Foxfire Academy", "Camp Half-Blood", "the Capitol", "Hogwarts", "the Forbidden Forest"]
-    villains = ["the Neverseen", "Kronos", "President Snow", "Voldemort"]
+    heroes = ["{{heroine}}", "{{hero}}", "{{heroine}}", "{{hero}}", "{{hero}}", "{{heroine}}"]
+    creatures = ["{{creature}}", "{{creature}}", "{{creature}}", "{{creature}}", "{{creature}}", "{{creature}}"]
+    abilities = ["{{spell1}}", "water control", "archery", "magic", "{{spell2}}", "fire"]
+    places = ["{{school}}", "{{school}}", "{{place}}", "{{school}}", "{{location}}"]
+    villains = ["{{villain}}", "{{villain}}", "{{villain}}", "{{villain}}"]
 
     # ✏️ YOUR CODE HERE ✏️
     # 1. Use get_random_word() to pick words from each list

@@ -13,13 +13,13 @@ def setup():
 
 def draw_art(t):
     # ✏️ YOUR CODE HERE ✏️
-    # Create magical art inspired by your favorite books!
+    # Create magical art inspired by your favorite themes!
     #
     # Ideas:
-    # - Harry Potter: A wand with sparkles, the Golden Snitch, stars
-    # - Percy Jackson: Waves (Poseidon), a trident, lightning bolts
-    # - Hunger Games: The Mockingjay pin (circle + bird shape), flames
-    # - Keeper of the Lost Cities: An alicorn, glowing eyes, light beams
+    # - Themed: A wand with sparkles, the {{item}}, stars
+    # - Themed: Waves ({{mentor}}), a trident, lightning bolts
+    # - Themed: The {{creature}} pin (circle + bird shape), flames
+    # - Themed: An {{creature}}, glowing eyes, light beams
     #
     # Useful commands:
     # - t.circle(50) - draw a circle

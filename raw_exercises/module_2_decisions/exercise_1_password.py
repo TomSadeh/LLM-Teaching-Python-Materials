@@ -1,18 +1,18 @@
-# Exercise 1: Password Checker - Gryffindor Common Room
+# Exercise 1: Password Checker - {{house}} Common Room
 
 
 def check_password():
     # ✏️ YOUR CODE HERE ✏️
-    # The Fat Lady guards the entrance to Gryffindor Tower!
+    # The guardian guards the entrance to {{house}} Tower!
     # 1. Ask the user for the password using input()
-    # 2. Check if it equals "Caput Draconis" (the first password in the books!)
-    # 3. If yes - print "The portrait swings open. Welcome to Gryffindor!"
-    # 4. If no - print "The Fat Lady shakes her head. Wrong password!"
+    # 2. Check if it equals "{{password}}" (the first password in the books!)
+    # 3. If yes - print "The entrance opens. Welcome to {{house}}!"
+    # 4. If no - print "The guardian shakes their head. Wrong password!"
     pass
 
 
 def main():
-    print("You approach the portrait of the Fat Lady...")
+    print("You approach the entrance guardian...")
     print("She asks: 'Password?'")
     check_password()
 

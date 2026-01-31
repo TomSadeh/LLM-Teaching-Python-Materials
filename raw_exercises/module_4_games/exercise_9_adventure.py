@@ -5,10 +5,10 @@ def start_adventure():
     # Create a text adventure set in one of your favorite book worlds!
     #
     # Pick a setting:
-    # - Hogwarts (find a magical object, escape a creature)
-    # - Camp Half-Blood (go on a quest, meet a god)
+    # - {{school}} (find a magical object, escape a creature)
+    # - {{school}} (go on a quest, meet a god)
     # - The Hunger Games arena (survive, find allies)
-    # - The Lost Cities (discover a secret, use your abilities)
+    # - {{location}} (discover a secret, use your abilities)
     #
     # The structure:
     # 1. Print a story introduction (set the scene!)
@@ -17,18 +17,18 @@ def start_adventure():
     # 4. Each choice leads to a new situation with more choices
     # 5. End with different outcomes based on their path
     #
-    # Example start (Hogwarts):
-    # "You're wandering the halls of Hogwarts at night..."
+    # Example start ({{school}}):
+    # "You're wandering the halls of {{school}} at night..."
     # "You hear footsteps! What do you do?"
     # "1. Hide behind a statue"
-    # "2. Use the Invisibility Cloak"
+    # "2. Use the {{item}}"
     # "3. Run for it!"
     #
-    # Example start (Keeper of the Lost Cities):
-    # "You're at Foxfire Academy when the Neverseen attacks!"
-    # "1. Use your telepathy to warn everyone"
-    # "2. Find Keefe and the others"
-    # "3. Light leap to safety"
+    # Example start ({{school}} series):
+    # "You're at {{school}} when {{villain}} attacks!"
+    # "1. Use your {{spell1}} to warn everyone"
+    # "2. Find {{hero}} and the others"
+    # "3. Use {{spell2}} to {{exclamation}} to safety"
     #
     # Make it at least 2 choices deep!
     pass

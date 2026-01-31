@@ -3,7 +3,7 @@
 
 def exercise_a():
     # ✏️ Create a variable called 'hero' with your favorite book character
-    # (like "Sophie Foster", "Katniss", "Percy", or "Hermione")
+    # (like "{{heroine}}" or "{{hero}}")
     # Then print: "My favorite hero is [hero]!"
 
     pass
@@ -11,8 +11,8 @@ def exercise_a():
 
 def exercise_b():
     # ✏️ Create two variables:
-    # character = a character from Harry Potter, Percy Jackson,
-    #             Hunger Games, or Keeper of the Lost Cities
+    # character = a character from {{hero}}, {{hero}},
+    #             Hunger Games, or {{school}} series
     # book = which book/series they're from
     # Print both using print()
 
@@ -21,9 +21,9 @@ def exercise_b():
 
 def exercise_c():
     # ✏️ Create these variables and print them all:
-    # school = a magical school (like "Hogwarts" or "Foxfire Academy")
-    # house = a house or group (like "Gryffindor" or "Team Valiant")
-    # spell = an ability or spell (like "Expecto Patronum" or "Teleporting")
+    # school = a magical school (like "{{school}}" or "{{school}}")
+    # house = a house or group (like "{{house}}" or "{{group}}")
+    # spell = an ability or spell (like "{{spell3}}" or "Teleporting")
 
     pass
 
@@ -31,14 +31,14 @@ def exercise_c():
 def exercise_d():
     # ✏️ Create a variable 'quote' with a quote from your favorite book
     # Print it 3 times (use the variable 3 times!)
-    # Example: "May the odds be ever in your favor"
+    # Example: "{{exclamation}}"
 
     pass
 
 
 def exercise_e():
     # ✏️ Fix this code! It has errors:
-    # heroName = Sophie Foster
+    # heroName = {{heroine}}
     # print(heroname)
 
     pass

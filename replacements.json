@@ -1,0 +1,405 @@
+{
+  "description": "Patterns to replace hardcoded theme references with {{placeholders}}",
+  "version": "1.1.0",
+
+  "characters": {
+    "Sophie Foster": "{{heroine}}",
+    "Keefe Sencen": "{{hero}}",
+    "Keefe": "{{hero}}",
+    "Fitz Vacker": "{{friend}}",
+    "Fitz": "{{friend}}",
+    "Biana Vacker": "{{heroine}}",
+    "Biana": "{{heroine}}",
+    "Dex Dizznee": "{{friend}}",
+    "Dex": "{{friend}}",
+    "Tam Song": "{{friend}}",
+    "Tam": "{{friend}}",
+    "Linh Song": "{{heroine}}",
+    "Linh": "{{heroine}}",
+    "Mr. Forkle": "{{mentor}}",
+    "Harry Potter": "{{hero}}",
+    "Harry": "{{hero}}",
+    "Hermione Granger": "{{heroine}}",
+    "Hermione": "{{heroine}}",
+    "Ron Weasley": "{{friend}}",
+    "Ron": "{{friend}}",
+    "Neville Longbottom": "{{friend}}",
+    "Neville": "{{friend}}",
+    "Luna Lovegood": "{{heroine}}",
+    "Luna": "{{heroine}}",
+    "Dumbledore": "{{mentor}}",
+    "Albus Dumbledore": "{{mentor}}",
+    "Hagrid": "{{mentor}}",
+    "Rubeus Hagrid": "{{mentor}}",
+    "McGonagall": "{{mentor}}",
+    "Severus Snape": "{{mentor}}",
+    "Snape": "{{mentor}}",
+    "Sirius Black": "{{friend}}",
+    "Sirius": "{{friend}}",
+    "Remus Lupin": "{{mentor}}",
+    "Voldemort": "{{villain}}",
+    "Draco Malfoy": "{{villain}}",
+    "Draco": "{{villain}}",
+    "Percy Jackson": "{{hero}}",
+    "Percy": "{{hero}}",
+    "Annabeth Chase": "{{heroine}}",
+    "Annabeth": "{{heroine}}",
+    "Grover Underwood": "{{friend}}",
+    "Grover": "{{friend}}",
+    "Nico di Angelo": "{{hero}}",
+    "Nico": "{{hero}}",
+    "Thalia Grace": "{{heroine}}",
+    "Thalia": "{{heroine}}",
+    "Chiron": "{{mentor}}",
+    "Kronos": "{{villain}}",
+    "Luke Castellan": "{{villain}}",
+    "Luke": "{{villain}}",
+    "Clarisse La Rue": "{{friend}}",
+    "Clarisse": "{{friend}}",
+    "Katniss Everdeen": "{{heroine}}",
+    "Katniss": "{{heroine}}",
+    "Peeta Mellark": "{{hero}}",
+    "Peeta": "{{hero}}",
+    "Gale Hawthorne": "{{friend}}",
+    "Gale": "{{friend}}",
+    "Primrose Everdeen": "{{friend}}",
+    "Prim": "{{friend}}",
+    "Rue": "{{friend}}",
+    "Finnick Odair": "{{hero}}",
+    "Finnick": "{{hero}}",
+    "Haymitch Abernathy": "{{mentor}}",
+    "Haymitch": "{{mentor}}",
+    "Effie Trinket": "{{mentor}}",
+    "Effie": "{{mentor}}",
+    "Cinna": "{{mentor}}",
+    "President Snow": "{{villain}}",
+    "President Coin": "{{villain}}",
+    "the Neverseen": "{{villain}}"
+  },
+
+  "locations": {
+    "Hogwarts": "{{school}}",
+    "Foxfire Academy": "{{school}}",
+    "Foxfire": "{{school}}",
+    "Exillium": "{{school}}",
+    "Camp Half-Blood": "{{school}}",
+    "District 12": "{{school}}",
+    "Gryffindor": "{{house}}",
+    "Hufflepuff": "{{house}}",
+    "Ravenclaw": "{{house}}",
+    "Slytherin": "{{house}}",
+    "Team Valiant": "{{group}}",
+    "Black Swan": "{{group}}",
+    "Poseidon Cabin": "{{house}}",
+    "Athena Cabin": "{{house}}",
+    "Zeus Cabin": "{{house}}",
+    "the Forbidden Forest": "{{location}}",
+    "Forbidden Forest": "{{location}}",
+    "the Great Hall": "{{location}}",
+    "the Lost Cities": "{{location}}",
+    "Mount Olympus": "{{location}}",
+    "the Underworld": "{{location}}",
+    "Underworld": "{{location}}",
+    "the Arena": "{{location}}",
+    "the Capitol": "{{place}}",
+    "Diagon Alley": "{{place}}",
+    "Havenfield": "{{place}}",
+    "Everglen": "{{place}}",
+    "Camp Jupiter": "{{school}}",
+    "Camp Olympus": "{{school}}",
+    "Camp Demigod": "{{school}}",
+    "District 1": "{{school}}",
+    "District 4": "{{school}}",
+    "District 11": "{{school}}"
+  },
+
+  "spells_and_abilities": {
+    "Lumos": "{{spell1}}",
+    "Expelliarmus": "{{spell2}}",
+    "Expecto Patronum": "{{spell3}}",
+    "Wingardium Leviosa": "{{spell4}}",
+    "Accio": "{{spell4}}",
+    "Alohomora": "{{spell4}}",
+    "Telepath": "{{spell1}}",
+    "Vanisher": "{{spell2}}",
+    "telepathy": "{{spell1}}",
+    "vanishing": "{{spell2}}",
+    "Empath": "{{spell1}}",
+    "Shade": "{{spell2}}",
+    "Hydrokinetic": "{{spell2}}",
+    "Technopath": "{{spell2}}",
+    "Inflictor": "{{spell1}}",
+    "Polyglot": "{{spell2}}",
+    "Teleporter": "{{spell3}}",
+    "Enhancer": "{{spell1}}",
+    "Patronum": "{{spell3}}"
+  },
+
+  "creatures_and_items": {
+    "hippogriff": "{{creature}}",
+    "phoenix": "{{creature}}",
+    "dragon": "{{creature}}",
+    "alicorn": "{{creature}}",
+    "hellhound": "{{creature}}",
+    "Pegasus": "{{creature}}",
+    "Cyclops": "{{creature}}",
+    "Mockingjay": "{{creature}}",
+    "tracker jacker": "{{creature}}",
+    "Minotaur": "{{creature}}",
+    "Medusa": "{{creature}}",
+    "Fawkes": "{{pet}}",
+    "Buckbeak": "{{creature}}",
+    "Dobby": "{{creature}}",
+    "Hedwig": "{{pet}}",
+    "Crookshanks": "{{pet}}",
+    "Blackjack": "{{pet}}",
+    "Buttercup": "{{pet}}",
+    "Riptide": "{{item}}",
+    "bow and arrow": "{{item}}",
+    "Bow and arrow": "{{item}}",
+    "wand": "{{item}}",
+    "Imparter": "{{item}}",
+    "Sorting Hat": "{{item}}",
+    "Invisibility Cloak": "{{item}}",
+    "Golden Snitch": "{{item}}",
+    "Firebolt": "{{item}}",
+    "Nimbus 2000": "{{item}}",
+    "Celestial bronze": "{{item}}"
+  },
+
+  "passwords_and_phrases": {
+    "Caput Draconis": "{{password}}",
+    "Pig Snout": "{{password}}",
+    "May the odds be ever in your favor": "{{exclamation}}",
+    "I volunteer as tribute": "{{exclamation}}",
+    "By Merlin's beard": "{{exclamation}}",
+    "Welcome to Hogwarts": "{{greeting}}",
+    "Welcome to Foxfire": "{{greeting}}",
+    "Welcome to Camp Half-Blood": "{{greeting}}"
+  },
+
+  "gods_and_mentors": {
+    "Poseidon": "{{mentor}}",
+    "Zeus": "{{mentor}}",
+    "Hades": "{{mentor}}",
+    "Apollo": "{{mentor}}",
+    "Athena": "{{mentor}}",
+    "Hermes": "{{mentor}}",
+    "Hephaestus": "{{mentor}}",
+    "Aphrodite": "{{mentor}}",
+    "Demeter": "{{mentor}}"
+  },
+
+  "comment_patterns": [
+    {
+      "pattern": "Gryffindor Common Room",
+      "replacement": "{{house}} Common Room"
+    },
+    {
+      "pattern": "Gryffindor Tower",
+      "replacement": "{{house}} Tower"
+    },
+    {
+      "pattern": "The Fat Lady guards",
+      "replacement": "The guardian guards"
+    },
+    {
+      "pattern": "The Fat Lady shakes her head",
+      "replacement": "The guardian shakes their head"
+    },
+    {
+      "pattern": "the portrait of the Fat Lady",
+      "replacement": "the entrance guardian"
+    },
+    {
+      "pattern": "The portrait swings open",
+      "replacement": "The entrance opens"
+    },
+    {
+      "pattern": "portrait of the Fat Lady",
+      "replacement": "entrance guardian"
+    },
+    {
+      "pattern": "Password Checker - Gryffindor Common Room",
+      "replacement": "Password Checker - {{house}} Common Room"
+    },
+    {
+      "pattern": "- Harry Potter:",
+      "replacement": "- Themed:"
+    },
+    {
+      "pattern": "- Percy Jackson:",
+      "replacement": "- Themed:"
+    },
+    {
+      "pattern": "- Hunger Games:",
+      "replacement": "- Themed:"
+    },
+    {
+      "pattern": "- Keeper of the Lost Cities:",
+      "replacement": "- Themed:"
+    },
+    {
+      "pattern": "Harry Potter ideas:",
+      "replacement": "Example questions:"
+    },
+    {
+      "pattern": "Percy Jackson ideas:",
+      "replacement": "Example questions:"
+    },
+    {
+      "pattern": "Hunger Games ideas:",
+      "replacement": "Example questions:"
+    },
+    {
+      "pattern": "Keeper of the Lost Cities ideas:",
+      "replacement": "Example questions:"
+    },
+    {
+      "pattern": "the spell to create light in Harry Potter",
+      "replacement": "a magic spell in {{school}} series"
+    },
+    {
+      "pattern": "Keeper of the Lost Cities",
+      "replacement": "{{school}} series"
+    },
+    {
+      "pattern": "Harry Potter, Percy Jackson, Hunger Games, or Keeper of the Lost Cities",
+      "replacement": "{{school}} series"
+    },
+    {
+      "pattern": "Harry Potter series",
+      "replacement": "{{school}} series"
+    },
+    {
+      "pattern": "Percy Jackson Mad Lib",
+      "replacement": "Adventure Mad Lib"
+    },
+    {
+      "pattern": "Hunger Games style",
+      "replacement": "Adventure style"
+    },
+    {
+      "pattern": "elf ability",
+      "replacement": "special ability"
+    },
+    {
+      "pattern": "elves attend",
+      "replacement": "students attend"
+    },
+    {
+      "pattern": "Greek god",
+      "replacement": "powerful being"
+    },
+    {
+      "pattern": "godly parent",
+      "replacement": "mentor"
+    },
+    {
+      "pattern": "demigods",
+      "replacement": "heroes"
+    },
+    {
+      "pattern": "tribute",
+      "replacement": "challenger"
+    },
+    {
+      "pattern": "tributes",
+      "replacement": "challengers"
+    },
+    {
+      "pattern": "Reaping",
+      "replacement": "Selection"
+    },
+    {
+      "pattern": "reaping",
+      "replacement": "selection"
+    },
+    {
+      "pattern": "young wizard",
+      "replacement": "young student"
+    },
+    {
+      "pattern": "district number",
+      "replacement": "location"
+    },
+    {
+      "pattern": "Find Keefe and the others",
+      "replacement": "Find {{hero}} and the others"
+    },
+    {
+      "pattern": "\"Lumos!\"",
+      "replacement": "\"{{spell1}}!\""
+    },
+    {
+      "pattern": "Lumos!",
+      "replacement": "{{spell1}}!"
+    },
+    {
+      "pattern": "first = \"Expecto\", second = \"Patronum\"",
+      "replacement": "first = \"Magic\", second = \"Spell\""
+    },
+    {
+      "pattern": "Print them together with a space: \"Expecto Patronum\"",
+      "replacement": "Print them together with a space: \"Magic Spell\""
+    }
+  ],
+
+  "trivia_replacements": [
+    {
+      "pattern": "\"What house is Harry Potter in?\" -> \"Gryffindor\"",
+      "replacement": "\"What {{house}} is {{hero}} in?\" -> \"{{house}}\""
+    },
+    {
+      "pattern": "\"What is Hermione's pet cat's name?\" -> \"Crookshanks\"",
+      "replacement": "\"What is {{heroine}}'s pet's name?\" -> \"{{pet}}\""
+    },
+    {
+      "pattern": "\"Who is Percy Jackson's father?\" -> \"Poseidon\"",
+      "replacement": "\"Who is {{hero}}'s mentor?\" -> \"{{mentor}}\""
+    },
+    {
+      "pattern": "\"What is the name of Percy's sword?\" -> \"Riptide\"",
+      "replacement": "\"What is {{hero}}'s special item?\" -> \"{{item}}\""
+    },
+    {
+      "pattern": "\"What district is Katniss from?\" -> \"12\"",
+      "replacement": "\"Where is {{heroine}} from?\" -> \"{{school}}\""
+    },
+    {
+      "pattern": "\"What is Katniss's sister's name?\" -> \"Prim\"",
+      "replacement": "\"Who is {{heroine}}'s friend?\" -> \"{{friend}}\""
+    },
+    {
+      "pattern": "\"What is Sophie Foster's main ability?\" -> \"Telepath\"",
+      "replacement": "\"What is {{heroine}}'s main ability?\" -> \"{{spell1}}\""
+    },
+    {
+      "pattern": "\"What school do elves attend?\" -> \"Foxfire\"",
+      "replacement": "\"What school do students attend?\" -> \"{{school}}\""
+    }
+  ],
+
+  "character_suggestions": [
+    {
+      "pattern": "like \"Sophie Foster\", \"Katniss\", \"Percy\", or \"Hermione\"",
+      "replacement": "like \"{{heroine}}\" or \"{{hero}}\""
+    },
+    {
+      "pattern": "(like \"Sophie Foster\" or \"Keefe\")",
+      "replacement": "(like \"{{heroine}}\" or \"{{hero}}\")"
+    },
+    {
+      "pattern": "inspired by your favorite books",
+      "replacement": "inspired by your favorite themes"
+    },
+    {
+      "pattern": "about your favorite books",
+      "replacement": "from your favorite themes"
+    },
+    {
+      "pattern": "\"I am a Telepath\"",
+      "replacement": "\"I have {{spell1}}!\""
+    }
+  ]
+}

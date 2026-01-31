@@ -7,7 +7,7 @@ def ask_question(question, choices, correct_index):
     # 3. Get the player's answer
     # 4. Return True if correct, False if wrong
     #
-    # Hint: choices is a list like ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"]
+    # Hint: choices is a list like ["{{house}}", "{{house}}", "{{house}}", "{{house}}"]
     # Hint: correct_index tells you which one is right (0 = A, 1 = B, etc.)
     pass
 
@@ -16,39 +16,39 @@ def main():
     print("📚 Ultimate Book Trivia Quiz! 📚\n")
 
     # Questions: (question, choices, correct_index)
-    # Mix of Harry Potter, Percy Jackson, Hunger Games, and Keeper of the Lost Cities!
+    # Mix of {{hero}}, {{hero}}, Hunger Games, and {{school}} series!
     questions = [
-        # Harry Potter
-        ("What house is Harry Potter sorted into?",
-         ["Slytherin", "Gryffindor", "Hufflepuff", "Ravenclaw"], 1),
+        # {{hero}}
+        ("What house is {{hero}} sorted into?",
+         ["{{house}}", "{{house}}", "{{house}}", "{{house}}"], 1),
 
-        # Keeper of the Lost Cities
-        ("What is Sophie Foster's main ability?",
-         ["Vanisher", "Telepath", "Empath", "Shade"], 1),
+        # {{school}} series
+        ("What is {{heroine}}'s main ability?",
+         ["{{spell2}}", "{{spell1}}", "{{spell1}}", "{{spell2}}"], 1),
 
-        # Percy Jackson
-        ("Who is Percy Jackson's godly parent?",
-         ["Zeus", "Hades", "Poseidon", "Apollo"], 2),
+        # {{hero}}
+        ("Who is {{hero}}'s mentor?",
+         ["{{mentor}}", "{{mentor}}", "{{mentor}}", "{{mentor}}"], 2),
 
         # Hunger Games
-        ("What district is Katniss Everdeen from?",
-         ["District 1", "District 4", "District 11", "District 12"], 3),
+        ("What district is {{heroine}} from?",
+         ["{{school}}", "{{school}}", "{{school}}", "{{school}}"], 3),
 
-        # Harry Potter
+        # {{hero}}
         ("What is the name of the spell that produces light?",
-         ["Expelliarmus", "Lumos", "Accio", "Patronum"], 1),
+         ["{{spell2}}", "{{spell1}}", "{{spell4}}", "{{spell3}}"], 1),
 
-        # Keeper of the Lost Cities
-        ("What school do elves attend in Keeper of the Lost Cities?",
-         ["Hogwarts", "Exillium", "Foxfire", "Camp Half-Blood"], 2),
+        # {{school}} series
+        ("What school do students attend in {{school}} series?",
+         ["{{school}}", "{{school}}", "{{school}}", "{{school}}"], 2),
 
-        # Percy Jackson
-        ("What is the name of the camp for demigods?",
-         ["Camp Jupiter", "Camp Half-Blood", "Camp Olympus", "Camp Demigod"], 1),
+        # {{hero}}
+        ("What is the name of the camp for heroes?",
+         ["{{school}}", "{{school}}", "{{school}}", "{{school}}"], 1),
 
         # Hunger Games
-        ("What is Katniss's weapon of choice?",
-         ["Sword", "Spear", "Bow and arrow", "Knife"], 2),
+        ("What is {{heroine}}'s weapon of choice?",
+         ["{{item}}", "{{item}}", "{{item}}", "{{item}}"], 2),
     ]
 
     score = 0

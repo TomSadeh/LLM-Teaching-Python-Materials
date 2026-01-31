@@ -36,15 +36,15 @@ def exercise_f():
 
 
 def exercise_g():
-    # ✏️ Print "Lumos!" exactly 7 times
-    # (That's the spell to create light in Harry Potter!)
+    # ✏️ Print "{{spell1}}!" exactly 7 times
+    # (That's a magic spell in {{school}} series!)
     pass
 
 
 def exercise_h():
     # ✏️ Ask the user for a spell name and a number
     # Print the spell that many times
-    # Try it with "Expecto Patronum" or "I am a Telepath"!
+    # Try it with "{{spell3}}" or "I have {{spell1}}!"!
     pass
 
 

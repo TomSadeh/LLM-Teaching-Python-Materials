@@ -14,23 +14,23 @@ def run_quiz():
     score = 0
 
     # ✏️ ADD YOUR QUESTIONS HERE ✏️
-    # Create a quiz about your favorite books!
+    # Create a quiz from your favorite themes!
     #
-    # Harry Potter ideas:
-    # - "What house is Harry Potter in?" -> "Gryffindor"
-    # - "What is Hermione's pet cat's name?" -> "Crookshanks"
+    # Example questions:
+    # - "What {{house}} is {{hero}} in?" -> "{{house}}"
+    # - "What is {{heroine}}'s pet's name?" -> "{{pet}}"
     #
-    # Percy Jackson ideas:
-    # - "Who is Percy Jackson's father?" -> "Poseidon"
-    # - "What is the name of Percy's sword?" -> "Riptide"
+    # Example questions:
+    # - "Who is {{hero}}'s mentor?" -> "{{mentor}}"
+    # - "What is {{hero}}'s special item?" -> "{{item}}"
     #
-    # Hunger Games ideas:
-    # - "What district is Katniss from?" -> "12"
-    # - "What is Katniss's sister's name?" -> "Prim"
+    # Example questions:
+    # - "Where is {{heroine}} from?" -> "{{school}}"
+    # - "Who is {{heroine}}'s friend?" -> "{{friend}}"
     #
-    # Keeper of the Lost Cities ideas:
-    # - "What is Sophie Foster's main ability?" -> "Telepath"
-    # - "What school do elves attend?" -> "Foxfire"
+    # Example questions:
+    # - "What is {{heroine}}'s main ability?" -> "{{spell1}}"
+    # - "What school do students attend?" -> "{{school}}"
     #
     # Add at least 5 questions!
 
