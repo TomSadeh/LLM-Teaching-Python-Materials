@@ -9,10 +9,11 @@ This repository serves as a remote content source for the Maya Chat teaching app
 ## Structure
 
 ```
-├── version.json        # Version tracking for sync
-├── manifest.json       # Lists all modules for remote discovery
-├── prompts.json        # LLM prompt fragments (for remote sync)
-├── raw_exercises/      # Per-module exercises with their own exercises.json
+├── version.json           # Version tracking for sync
+├── manifest.json          # Lists all modules for remote discovery
+├── exercises_config.json  # Module metadata and i18n translations
+├── prompts.json           # LLM prompt fragments (for remote sync)
+├── raw_exercises/         # Per-module exercises with their own exercises.json
 │   ├── module_0_basics/
 │   ├── module_1_turtle_loops/
 │   ├── module_2_decisions/

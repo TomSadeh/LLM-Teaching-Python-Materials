@@ -1,0 +1,574 @@
+{
+  "modules": {
+    "module_0_basics": {
+      "topic_id": "basics.print",
+      "difficulty": 1,
+      "name_he": "יסודות",
+      "name_en": "Basics",
+      "description_he": "יסודות התכנות: הדפסה, משתנים, חישובים, קלט ופלט",
+      "description_en": "Programming fundamentals: print, variables, math, input and output"
+    },
+    "module_1_turtle_loops": {
+      "topic_id": "loops.for",
+      "difficulty": 1,
+      "name_he": "צב ולולאות",
+      "name_en": "Turtle and Loops",
+      "description_he": "ציור עם צב ולולאות for",
+      "description_en": "Drawing with turtle graphics and for loops"
+    },
+    "module_2_decisions": {
+      "topic_id": "control.if",
+      "difficulty": 2,
+      "name_he": "תנאים והחלטות",
+      "name_en": "Conditions and Decisions",
+      "description_he": "תנאים, if/elif/else והשוואות",
+      "description_en": "Conditionals, if/elif/else statements and comparisons"
+    },
+    "module_3_lists": {
+      "topic_id": "collections.lists",
+      "difficulty": 2,
+      "name_he": "רשימות",
+      "name_en": "Lists",
+      "description_he": "עבודה עם רשימות, לולאות על רשימות ושיטות רשימה",
+      "description_en": "Working with lists, iterating over lists and list methods"
+    },
+    "module_4_games": {
+      "topic_id": "loops.while",
+      "difficulty": 2,
+      "name_he": "משחקים",
+      "name_en": "Games",
+      "description_he": "בניית משחקים עם לולאות while ומשתנים אקראיים",
+      "description_en": "Building games with while loops and random"
+    },
+    "module_5_functions": {
+      "topic_id": "functions.basic",
+      "difficulty": 3,
+      "name_he": "פונקציות",
+      "name_en": "Functions",
+      "description_he": "פונקציות, פרמטרים, ערכי החזרה ושימוש חוזר בקוד",
+      "description_en": "Functions, parameters, return values and code reuse"
+    },
+    "module_6_final_project": {
+      "topic_id": "project.final",
+      "difficulty": 3,
+      "name_he": "פרויקט מסכם",
+      "name_en": "Final Project",
+      "description_he": "פרויקט מסכם המשלב את כל מה שנלמד",
+      "description_en": "Final project combining everything learned"
+    },
+    "module_7_dictionaries": {
+      "topic_id": "collections.dict",
+      "difficulty": 2,
+      "name_he": "מילונים",
+      "name_en": "Dictionaries",
+      "description_he": "מילונים, מפתחות וערכים, מילונים מקוננים",
+      "description_en": "Dictionaries, keys and values, nested dictionaries"
+    },
+    "module_8_modules": {
+      "topic_id": "modules.stdlib",
+      "difficulty": 3,
+      "name_he": "מודולים",
+      "name_en": "Modules",
+      "description_he": "שימוש במודולים מובנים ויצירת מודולים משלך",
+      "description_en": "Using built-in modules and creating your own"
+    },
+    "module_9_oop": {
+      "topic_id": "oop.classes",
+      "difficulty": 3,
+      "name_he": "תכנות מונחה עצמים",
+      "name_en": "Object-Oriented Programming",
+      "description_he": "מחלקות, אובייקטים, הורשה והרכבה",
+      "description_en": "Classes, objects, inheritance and composition"
+    }
+  },
+  "title_translations": {
+    "hello": {
+      "he": "שלום עולם",
+      "en": "Hello World"
+    },
+    "variables": {
+      "he": "משתנים",
+      "en": "Variables"
+    },
+    "math": {
+      "he": "חישובים",
+      "en": "Math Operations"
+    },
+    "input": {
+      "he": "קלט",
+      "en": "Input"
+    },
+    "calculator": {
+      "he": "מחשבון",
+      "en": "Calculator"
+    },
+    "madlib": {
+      "he": "סיפור משוגע",
+      "en": "Mad Lib Story"
+    },
+    "counting": {
+      "he": "ספירה",
+      "en": "Counting"
+    },
+    "patterns": {
+      "he": "דפוסים",
+      "en": "Patterns"
+    },
+    "sum": {
+      "he": "סכום",
+      "en": "Sum"
+    },
+    "functions_basic": {
+      "he": "פונקציות בסיסיות",
+      "en": "Basic Functions"
+    },
+    "functions_params": {
+      "he": "פונקציות עם פרמטרים",
+      "en": "Functions with Parameters"
+    },
+    "functions_return": {
+      "he": "פונקציות עם החזרה",
+      "en": "Functions with Return"
+    },
+    "fizzbuzz": {
+      "he": "פיזבאז",
+      "en": "FizzBuzz"
+    },
+    "multiplication_table": {
+      "he": "לוח הכפל",
+      "en": "Multiplication Table"
+    },
+    "mini_project": {
+      "he": "פרויקט מיני",
+      "en": "Mini Project"
+    },
+    "turtle_intro": {
+      "he": "הכרות עם צב",
+      "en": "Turtle Introduction"
+    },
+    "turtle_shapes": {
+      "he": "צורות עם צב",
+      "en": "Turtle Shapes"
+    },
+    "turtle_colors": {
+      "he": "צבעים עם צב",
+      "en": "Turtle Colors"
+    },
+    "square": {
+      "he": "ריבוע",
+      "en": "Square"
+    },
+    "triangle": {
+      "he": "משולש",
+      "en": "Triangle"
+    },
+    "star": {
+      "he": "כוכב",
+      "en": "Star"
+    },
+    "creative": {
+      "he": "יצירתי",
+      "en": "Creative"
+    },
+    "hexagon": {
+      "he": "משושה",
+      "en": "Hexagon"
+    },
+    "circle": {
+      "he": "עיגול",
+      "en": "Circle"
+    },
+    "rainbow": {
+      "he": "קשת",
+      "en": "Rainbow"
+    },
+    "nested_squares": {
+      "he": "ריבועים מקוננים",
+      "en": "Nested Squares"
+    },
+    "flower": {
+      "he": "פרח",
+      "en": "Flower"
+    },
+    "spiral": {
+      "he": "ספירלה",
+      "en": "Spiral"
+    },
+    "password": {
+      "he": "סיסמה",
+      "en": "Password"
+    },
+    "grades": {
+      "he": "ציונים",
+      "en": "Grades"
+    },
+    "number_game": {
+      "he": "משחק מספרים",
+      "en": "Number Game"
+    },
+    "quiz": {
+      "he": "חידון",
+      "en": "Quiz"
+    },
+    "age_checker": {
+      "he": "בודק גיל",
+      "en": "Age Checker"
+    },
+    "time_greeter": {
+      "he": "ברכת שעה",
+      "en": "Time Greeter"
+    },
+    "even_odd": {
+      "he": "זוגי אי-זוגי",
+      "en": "Even or Odd"
+    },
+    "leap_year": {
+      "he": "שנה מעוברת",
+      "en": "Leap Year"
+    },
+    "favorites": {
+      "he": "מועדפים",
+      "en": "Favorites"
+    },
+    "loop_list": {
+      "he": "לולאה על רשימה",
+      "en": "Loop Through List"
+    },
+    "magic_8ball": {
+      "he": "כדור קסם",
+      "en": "Magic 8 Ball"
+    },
+    "madlibs": {
+      "he": "סיפור משוגע",
+      "en": "Mad Libs"
+    },
+    "todo_list": {
+      "he": "רשימת מטלות",
+      "en": "Todo List"
+    },
+    "name_picker": {
+      "he": "בוחר שמות",
+      "en": "Name Picker"
+    },
+    "shopping_total": {
+      "he": "סכום קניות",
+      "en": "Shopping Total"
+    },
+    "playlist_shuffler": {
+      "he": "מערבל פלייליסט",
+      "en": "Playlist Shuffler"
+    },
+    "word_collector": {
+      "he": "אוסף מילים",
+      "en": "Word Collector"
+    },
+    "guess_number": {
+      "he": "נחש את המספר",
+      "en": "Guess the Number"
+    },
+    "rock_paper_scissors": {
+      "he": "אבן נייר ומספריים",
+      "en": "Rock Paper Scissors"
+    },
+    "dice_game": {
+      "he": "משחק קוביות",
+      "en": "Dice Game"
+    },
+    "your_game": {
+      "he": "המשחק שלך",
+      "en": "Your Own Game"
+    },
+    "coin_flip_streak": {
+      "he": "רצף מטבע",
+      "en": "Coin Flip Streak"
+    },
+    "higher_lower": {
+      "he": "גבוה נמוך",
+      "en": "Higher or Lower"
+    },
+    "trivia": {
+      "he": "טריוויה",
+      "en": "Trivia"
+    },
+    "word_scramble": {
+      "he": "מילים מבולבלות",
+      "en": "Word Scramble"
+    },
+    "adventure": {
+      "he": "הרפתקה",
+      "en": "Adventure"
+    },
+    "shapes": {
+      "he": "צורות",
+      "en": "Shapes"
+    },
+    "helper_functions": {
+      "he": "פונקציות עזר",
+      "en": "Helper Functions"
+    },
+    "turtle_art": {
+      "he": "אומנות צב",
+      "en": "Turtle Art"
+    },
+    "temperature": {
+      "he": "טמפרטורה",
+      "en": "Temperature"
+    },
+    "tip_calculator": {
+      "he": "מחשבון טיפ",
+      "en": "Tip Calculator"
+    },
+    "password_generator": {
+      "he": "מחולל סיסמאות",
+      "en": "Password Generator"
+    },
+    "greeting_card": {
+      "he": "כרטיס ברכה",
+      "en": "Greeting Card"
+    },
+    "turtle_scene": {
+      "he": "סצנת צב",
+      "en": "Turtle Scene"
+    },
+    "template_app": {
+      "he": "אפליקציה",
+      "en": "App Template"
+    },
+    "template_art": {
+      "he": "גנרטור אומנות",
+      "en": "Art Generator"
+    },
+    "template_game": {
+      "he": "משחק",
+      "en": "Game Template"
+    },
+    "spellbook": {
+      "he": "ספר כישופים",
+      "en": "Spellbook"
+    },
+    "character_stats": {
+      "he": "נתוני דמות",
+      "en": "Character Stats"
+    },
+    "loop_dictionaries": {
+      "he": "לולאות על מילונים",
+      "en": "Looping Dictionaries"
+    },
+    "nested_data": {
+      "he": "מידע מקונן",
+      "en": "Nested Data"
+    },
+    "dict_methods": {
+      "he": "מתודות מילון",
+      "en": "Dictionary Methods"
+    },
+    "quiz_game": {
+      "he": "משחק חידון",
+      "en": "Quiz Game"
+    },
+    "secret_codes": {
+      "he": "קודים סודיים",
+      "en": "Secret Codes"
+    },
+    "rpg_inventory": {
+      "he": "מלאי RPG",
+      "en": "RPG Inventory"
+    },
+    "contact_book": {
+      "he": "ספר אנשי קשר",
+      "en": "Contact Book"
+    },
+    "datetime_basics": {
+      "he": "יסודות תאריך ושעה",
+      "en": "Date and Time Basics"
+    },
+    "random_advanced": {
+      "he": "אקראיות מתקדם",
+      "en": "Advanced Random"
+    },
+    "json_basics": {
+      "he": "יסודות JSON",
+      "en": "JSON Basics"
+    },
+    "time_module": {
+      "he": "מודול זמן",
+      "en": "Time Module"
+    },
+    "math_module": {
+      "he": "מודול מתמטיקה",
+      "en": "Math Module"
+    },
+    "string_module": {
+      "he": "מודול מחרוזות",
+      "en": "String Module"
+    },
+    "os_path": {
+      "he": "נתיבי מערכת",
+      "en": "OS and Paths"
+    },
+    "collections": {
+      "he": "אוספים",
+      "en": "Collections"
+    },
+    "create_module": {
+      "he": "יצירת מודול",
+      "en": "Create Your Module"
+    },
+    "first_class": {
+      "he": "מחלקה ראשונה",
+      "en": "First Class"
+    },
+    "init_method": {
+      "he": "מתודת אתחול",
+      "en": "Init Method"
+    },
+    "methods": {
+      "he": "מתודות",
+      "en": "Methods"
+    },
+    "str_repr": {
+      "he": "ייצוג טקסטואלי",
+      "en": "String Representation"
+    },
+    "interaction": {
+      "he": "אינטראקציה",
+      "en": "Object Interaction"
+    },
+    "inheritance": {
+      "he": "הורשה",
+      "en": "Inheritance"
+    },
+    "composition": {
+      "he": "הרכבה",
+      "en": "Composition"
+    },
+    "text_adventure": {
+      "he": "הרפתקת טקסט",
+      "en": "Text Adventure"
+    },
+    "rpg_battle": {
+      "he": "קרב RPG",
+      "en": "RPG Battle"
+    }
+  },
+  "defaults": {
+    "topic_id": "basics.general",
+    "difficulty": 1,
+    "description_suffix_he": "השלימי את הקוד בפונקציות המסומנות ב-pass",
+    "description_suffix_en": "Complete the code in the functions marked with pass"
+  },
+  "i18n": {
+    "supported_languages": ["he", "en"],
+    "default_language": "he",
+    "labels": {
+      "exercise": {
+        "he": "תרגיל",
+        "en": "Exercise"
+      },
+      "module": {
+        "he": "מודול",
+        "en": "Module"
+      },
+      "difficulty": {
+        "he": "רמת קושי",
+        "en": "Difficulty"
+      },
+      "hints": {
+        "he": "רמזים",
+        "en": "Hints"
+      },
+      "solution": {
+        "he": "פתרון",
+        "en": "Solution"
+      },
+      "starter_code": {
+        "he": "קוד התחלתי",
+        "en": "Starter Code"
+      }
+    },
+    "difficulty_levels": {
+      "1": {
+        "he": "קל",
+        "en": "Easy"
+      },
+      "2": {
+        "he": "בינוני",
+        "en": "Medium"
+      },
+      "3": {
+        "he": "מאתגר",
+        "en": "Challenging"
+      }
+    }
+  },
+  "topic_translations": {
+    "basics.print": {
+      "he": "הדפסה",
+      "en": "Print"
+    },
+    "basics.variables": {
+      "he": "משתנים",
+      "en": "Variables"
+    },
+    "basics.math": {
+      "he": "חישובים",
+      "en": "Math"
+    },
+    "basics.input": {
+      "he": "קלט",
+      "en": "Input"
+    },
+    "basics.general": {
+      "he": "כללי",
+      "en": "General"
+    },
+    "loops.for": {
+      "he": "לולאות for",
+      "en": "For Loops"
+    },
+    "loops.while": {
+      "he": "לולאות while",
+      "en": "While Loops"
+    },
+    "control.if": {
+      "he": "תנאים",
+      "en": "Conditionals"
+    },
+    "collections.lists": {
+      "he": "רשימות",
+      "en": "Lists"
+    },
+    "collections.dict": {
+      "he": "מילונים",
+      "en": "Dictionaries"
+    },
+    "functions.basic": {
+      "he": "פונקציות",
+      "en": "Functions"
+    },
+    "functions.advanced": {
+      "he": "פונקציות מתקדמות",
+      "en": "Advanced Functions"
+    },
+    "modules.stdlib": {
+      "he": "מודולים מובנים",
+      "en": "Standard Library"
+    },
+    "modules.custom": {
+      "he": "מודולים מותאמים",
+      "en": "Custom Modules"
+    },
+    "oop.classes": {
+      "he": "מחלקות",
+      "en": "Classes"
+    },
+    "oop.inheritance": {
+      "he": "הורשה",
+      "en": "Inheritance"
+    },
+    "project.final": {
+      "he": "פרויקט מסכם",
+      "en": "Final Project"
+    }
+  }
+}

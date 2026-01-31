@@ -203,6 +203,16 @@ The `manifest.json` file lists all available modules for remote sync:
 
 The sync system uses this to discover which modules to fetch. Each module listed must have a corresponding `raw_exercises/<module>/exercises.json` file.
 
+## Exercises Config File
+
+The `exercises_config.json` file contains:
+- **modules**: Metadata for each module (topic_id, difficulty, names, descriptions)
+- **title_translations**: Hebrew and English titles for each exercise type
+- **i18n**: UI labels and difficulty level translations
+- **topic_translations**: Topic ID to human-readable translations
+
+When adding a new module or exercise type, update this file with the appropriate translations.
+
 ## Quality Checklist
 
 Before committing exercises:
