@@ -1,14 +1,19 @@
 {
   "version": "2.1.0",
   "theme_support": true,
-  "generated_at": "2026-02-01T09:43:07.427457",
+  "generated_at": "2026-02-01T10:50:24.292947",
   "module": "module_0_basics",
-  "count": 23,
+  "count": 28,
   "exercise_types": [
     "bug_hunt",
+    "code_ordering",
     "complete_function",
     "decode_error",
+    "fill_blanks",
+    "fix_style",
+    "match_output",
     "output_prediction",
+    "spot_difference",
     "write_code"
   ],
   "exercises": [
@@ -42,6 +47,33 @@
         "bug_hunt"
       ],
       "source_file": "module_0_basics/bug_hunt/exercise_1_variable_bugs.py"
+    },
+    {
+      "id": "module_0_basics.code_ordering.exercise_1_order_program_structure",
+      "topic_id": "basics.structure",
+      "exercise_type": "code_ordering",
+      "category": "scaffolded_writing",
+      "title": "Order Program Structure",
+      "title_he": "סידור מבנה תוכנית",
+      "title_en": "Order Program Structure",
+      "description_he": "יסודות: סידור מבנה תוכנית\n\nExercise 1: Code Ordering - Program Structure\nThe lines of code are scrambled! Put them in the correct order\nto make the program work properly.\nTheme: Organizing magical spells and hero greetings\n============================================================\nORDERING CHALLENGE A: Simple Greeting\n============================================================\nCreate a program that greets a hero by name.\nThe program should:\n1. Store the hero's name\n2. Create a greeting message\n3. Print the greeting\nSCRAMBLED LINES:\nprint(greeting)\ngreeting = f\"Welcome, {hero_name}!\"\nhero_name = \"{{hero}}\"",
+      "description_en": "Basics: Order Program Structure\n\nExercise 1: Code Ordering - Program Structure\nThe lines of code are scrambled! Put them in the correct order\nto make the program work properly.\nTheme: Organizing magical spells and hero greetings\n============================================================\nORDERING CHALLENGE A: Simple Greeting\n============================================================\nCreate a program that greets a hero by name.\nThe program should:\n1. Store the hero's name\n2. Create a greeting message\n3. Print the greeting\nSCRAMBLED LINES:\nprint(greeting)\ngreeting = f\"Welcome, {hero_name}!\"\nhero_name = \"{{hero}}\"",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "program_flow",
+        "dependencies",
+        "structure"
+      ],
+      "starter_code": "# Exercise 1: Code Ordering - Program Structure\n#\n# The lines of code are scrambled! Put them in the correct order\n# to make the program work properly.\n#\n# Theme: Organizing magical spells and hero greetings\n\n\n# ============================================================\n# ORDERING CHALLENGE A: Simple Greeting\n# ============================================================\n#\n# Create a program that greets a hero by name.\n# The program should:\n# 1. Store the hero's name\n# 2. Create a greeting message\n# 3. Print the greeting\n#\n# SCRAMBLED LINES:\n#   print(greeting)\n#   greeting = f\"Welcome, {hero_name}!\"\n#   hero_name = \"{{hero}}\"\n\ndef challenge_a():\n    # ✏️ REORDER THE LINES ✏️\n    # Copy the lines above in the CORRECT order:\n    # Remember: You must define a variable BEFORE using it!\n\n    pass  # Delete this and add the correctly ordered lines\n\n\n# ============================================================\n# ORDERING CHALLENGE B: Calculate and Display\n# ============================================================\n#\n# Calculate how many spells a student learns per year.\n# The program should work correctly when lines are in order.\n#\n# SCRAMBLED LINES:\n#   spells_per_year = total_spells // years\n#   years = 7\n#   print(f\"That's {spells_per_year} spells per year!\")\n#   total_spells = 49\n\ndef challenge_b():\n    # ✏️ REORDER THE LINES ✏️\n    # Copy the lines above in the CORRECT order:\n    # Remember: Both values must exist before division!\n\n    pass  # Delete this and add the correctly ordered lines\n\n\n# ============================================================\n# ORDERING CHALLENGE C: Input and Process\n# ============================================================\n#\n# Get a spell name from the user and cast it.\n# The program needs to: get input, format it, display it.\n#\n# SCRAMBLED LINES:\n#   print(f\"Casting {spell_upper}!\")\n#   spell_name = input(\"Enter a spell: \")\n#   spell_upper = spell_name.upper()\n\ndef challenge_c():\n    # ✏️ REORDER THE LINES ✏️\n    # Copy the lines above in the CORRECT order:\n    # Remember: input → process → output\n\n    pass  # Delete this and add the correctly ordered lines\n\n\n# ============================================================\n# ORDERING CHALLENGE D: Full Program Structure\n# ============================================================\n#\n# This is a complete mini-program with multiple steps.\n# Put ALL lines in the correct order.\n#\n# SCRAMBLED LINES:\n#   print(f\"{hero} from {house} says: {exclamation}\")\n#   house = \"{{house}}\"\n#   message = f\"{hero} from {house} says: {exclamation}\"\n#   hero = \"{{hero}}\"\n#   exclamation = \"{{exclamation}}\"\n\ndef challenge_d():\n    # ✏️ REORDER THE LINES ✏️\n    # Copy the lines above in the CORRECT order:\n    # Hint: Variables hero, house, and exclamation must all exist\n    # before creating the message. The print line uses 'message'.\n\n    pass  # Delete this and add the correctly ordered lines\n\n\ndef main():\n    print(\"=== Challenge A: Simple Greeting ===\")\n    challenge_a()\n\n    print(\"\\n=== Challenge B: Calculate and Display ===\")\n    challenge_b()\n\n    print(\"\\n=== Challenge C: Input and Process ===\")\n    challenge_c()\n\n    print(\"\\n=== Challenge D: Full Program Structure ===\")\n    challenge_d()\n\n    print(\"\\nReorder each challenge, then run to test!\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "code_ordering"
+      ],
+      "source_file": "module_0_basics/code_ordering/exercise_1_order_program_structure.py"
     },
     {
       "id": "module_0_basics.complete_function.exercise_10_functions_basic",
@@ -222,6 +254,88 @@
       "source_file": "module_0_basics/decode_error/exercise_3_type_errors.py"
     },
     {
+      "id": "module_0_basics.fill_blanks.exercise_1_fill_string_formatting",
+      "topic_id": "basics.strings",
+      "exercise_type": "fill_blanks",
+      "category": "scaffolded_writing",
+      "title": "Fill String Formatting",
+      "title_he": "השלמת עיצוב מחרוזות",
+      "title_en": "Fill String Formatting",
+      "description_he": "יסודות: השלמת עיצוב מחרוזות\n\nExercise 1: Fill in the Blanks - String Formatting\nComplete the code by filling in the blanks (marked with ___).\nEach blank needs a specific piece of code to make the program work.\nTheme: Creating messages for {{school}}\n--- FILL THE BLANKS A: F-Strings ---\nComplete the f-string to include variable values in the message.",
+      "description_en": "Basics: Fill String Formatting\n\nExercise 1: Fill in the Blanks - String Formatting\nComplete the code by filling in the blanks (marked with ___).\nEach blank needs a specific piece of code to make the program work.\nTheme: Creating messages for {{school}}\n--- FILL THE BLANKS A: F-Strings ---\nComplete the f-string to include variable values in the message.",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "syntax_recall",
+        "code_structure",
+        "vocabulary"
+      ],
+      "starter_code": "# Exercise 1: Fill in the Blanks - String Formatting\n#\n# Complete the code by filling in the blanks (marked with ___).\n# Each blank needs a specific piece of code to make the program work.\n#\n# Theme: Creating messages for {{school}}\n\n\n# --- FILL THE BLANKS A: F-Strings ---\n#\n# Complete the f-string to include variable values in the message.\n\ndef exercise_a():\n    # ✏️ FILL IN THE BLANKS ✏️\n\n    hero_name = \"{{hero}}\"\n    house_name = \"{{house}}\"\n\n    # Fill in the blanks to create an f-string\n    # The output should be: \"Welcome, {{hero}} of {{house}}!\"\n    message = ___\"{hero_name} of {house_name}!\"  # Hint: What letter goes before the quote?\n    print(message)\n\n    # Now make this one work too\n    age = 11\n    # Output should be: \"{{hero}} is 11 years old\"\n    message2 = ___\"{hero_name} is {___} years old\"  # Hint: Put the variable name in braces\n    print(message2)\n\n\n# --- FILL THE BLANKS B: String Concatenation ---\n#\n# Build strings by joining them with +\n\ndef exercise_b():\n    # ✏️ FILL IN THE BLANKS ✏️\n\n    greeting = \"{{greeting}}\"\n    name = \"{{friend}}\"\n\n    # Join these strings together\n    # Output should be: \"{{greeting}}, {{friend}}!\"\n    full_greeting = greeting ___ \", \" ___ name ___ \"!\"  # Hint: Use + to join strings\n    print(full_greeting)\n\n\n# --- FILL THE BLANKS C: Print with Multiple Items ---\n#\n# Use print() with commas to display multiple values\n\ndef exercise_c():\n    # ✏️ FILL IN THE BLANKS ✏️\n\n    spell = \"{{spell1}}\"\n    power = 100\n\n    # Print multiple items (commas add spaces automatically)\n    # Output should be: \"Casting {{spell1}} with power 100\"\n    print(\"Casting\"___ spell___ \"with power\"___ power)  # Hint: Use commas between items\n\n\n# --- FILL THE BLANKS D: String Methods ---\n#\n# Use string methods to transform text\n\ndef exercise_d():\n    # ✏️ FILL IN THE BLANKS ✏️\n\n    whisper = \"{{password}}\"\n\n    # Make it uppercase\n    # Output should be: \"{{PASSWORD}}\" (in uppercase)\n    loud = whisper.___()  # Hint: The method name is similar to \"uppercase\"\n    print(loud)\n\n    # Make it lowercase\n    # Output should be: \"{{password}}\" (in lowercase)\n    quiet = whisper.___()  # Hint: The method name is similar to \"lowercase\"\n    print(quiet)\n\n\n# --- FILL THE BLANKS E: Input and Variables ---\n#\n# Get input from user and store in variables\n\ndef exercise_e():\n    # ✏️ FILL IN THE BLANKS ✏️\n\n    # Ask for user's name and store it\n    # Hint: input() returns what the user types\n    user_name = ___(\"What is your name? \")  # Hint: Function to get user input\n    print(f\"Welcome, {user_name}!\")\n\n    # Ask for a number and convert it\n    # Hint: input() always returns a string, need to convert to int\n    age_text = input(\"How old are you? \")\n    age = ___(age_text)  # Hint: Convert string to integer\n    next_year = age + 1\n    print(f\"Next year you will be {next_year}\")\n\n\ndef main():\n    print(\"=== Fill in the Blanks: String Formatting ===\")\n    print()\n    print(\"Fill in the blanks in each exercise, then uncomment to test!\")\n    print()\n    print(\"=\"*50)\n\n    # Uncomment each exercise after filling in the blanks:\n\n    # print(\"\\n--- Exercise A: F-Strings ---\")\n    # exercise_a()\n\n    # print(\"\\n--- Exercise B: String Concatenation ---\")\n    # exercise_b()\n\n    # print(\"\\n--- Exercise C: Print with Multiple Items ---\")\n    # exercise_c()\n\n    # print(\"\\n--- Exercise D: String Methods ---\")\n    # exercise_d()\n\n    # print(\"\\n--- Exercise E: Input and Variables ---\")\n    # exercise_e()\n\n    print(\"\\nFill in all the blanks, then uncomment to test!\")\n\n\nmain()\n\n\n# =============================================================================\n# ANSWER KEY (for reference):\n# =============================================================================\n#\n# Exercise A: f, age\n# Exercise B: +, +, +\n# Exercise C: ,  ,  ,  (commas)\n# Exercise D: upper, lower\n# Exercise E: input, int\n#\n# =============================================================================\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "fill_blanks"
+      ],
+      "source_file": "module_0_basics/fill_blanks/exercise_1_fill_string_formatting.py"
+    },
+    {
+      "id": "module_0_basics.fix_style.exercise_1_fix_naming_conventions",
+      "topic_id": "basics.style",
+      "exercise_type": "fix_style",
+      "category": "improvement",
+      "title": "Fix Naming Conventions",
+      "title_he": "תיקון מוסכמות שמות",
+      "title_en": "Fix Naming Conventions",
+      "description_he": "יסודות: תיקון מוסכמות שמות\n\nExercise 1: Fix the Style - Naming Conventions\nThis code WORKS but has terrible style! Fix the issues:\n- Variable names that don't describe what they hold\n- Inconsistent naming style (camelCase vs snake_case)\n- Single-letter variable names\n- Cryptic abbreviations\nTheme: Managing {{hero}}'s magical inventory\n============================================================\nSTYLE FIX A: Single-Letter Variables\n============================================================",
+      "description_en": "Basics: Fix Naming Conventions\n\nExercise 1: Fix the Style - Naming Conventions\nThis code WORKS but has terrible style! Fix the issues:\n- Variable names that don't describe what they hold\n- Inconsistent naming style (camelCase vs snake_case)\n- Single-letter variable names\n- Cryptic abbreviations\nTheme: Managing {{hero}}'s magical inventory\n============================================================\nSTYLE FIX A: Single-Letter Variables\n============================================================",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 8,
+      "skills": [
+        "pep8",
+        "readability",
+        "conventions",
+        "code_quality"
+      ],
+      "starter_code": "# Exercise 1: Fix the Style - Naming Conventions\n#\n# This code WORKS but has terrible style! Fix the issues:\n# - Variable names that don't describe what they hold\n# - Inconsistent naming style (camelCase vs snake_case)\n# - Single-letter variable names\n# - Cryptic abbreviations\n#\n# Theme: Managing {{hero}}'s magical inventory\n\n\n# ============================================================\n# STYLE FIX A: Single-Letter Variables\n# ============================================================\n\ndef original_a():\n    \"\"\"ORIGINAL - Uses meaningless single-letter names\"\"\"\n    x = \"{{hero}}\"\n    y = \"{{house}}\"\n    z = 11\n    print(f\"{x} from {y}, age {z}\")\n\n\ndef fixed_a():\n    # ✏️ FIX THE STYLE ✏️\n    # Rewrite the code above with proper variable names.\n    # Changes to make:\n    # - Replace x with a name that describes what it holds\n    # - Replace y with a name that describes what it holds\n    # - Replace z with a name that describes what it holds\n\n    pass  # Delete this and write your fixed code\n\n\n# ============================================================\n# STYLE FIX B: Cryptic Abbreviations\n# ============================================================\n\ndef original_b():\n    \"\"\"ORIGINAL - Uses abbreviations nobody understands\"\"\"\n    nm = \"{{spell1}}\"\n    pwr = 50\n    dur = 10\n    msg = f\"{nm}: power {pwr}, lasts {dur} seconds\"\n    print(msg)\n\n\ndef fixed_b():\n    # ✏️ FIX THE STYLE ✏️\n    # Rewrite with full, descriptive names.\n    # What do nm, pwr, dur really represent?\n\n    pass\n\n\n# ============================================================\n# STYLE FIX C: Inconsistent Naming Style\n# ============================================================\n\ndef original_c():\n    \"\"\"ORIGINAL - Mixes camelCase and snake_case\"\"\"\n    heroName = \"{{hero}}\"\n    spell_power = 100\n    maxHealth = 200\n    current_health = 150\n    print(f\"{heroName}: {current_health}/{maxHealth} HP, {spell_power} power\")\n\n\ndef fixed_c():\n    # ✏️ FIX THE STYLE ✏️\n    # Python uses snake_case for variables (PEP 8).\n    # Convert all variable names to snake_case.\n\n    pass\n\n\n# ============================================================\n# STYLE FIX D: Misleading Names\n# ============================================================\n\ndef original_d():\n    \"\"\"ORIGINAL - Names don't match what they hold\"\"\"\n    name = 42  # This is not a name!\n    count = \"{{spell2}}\"  # This is not a count!\n    total = [\"{{hero}}\", \"{{friend}}\"]  # This is not a total!\n\n    print(f\"Age: {name}\")\n    print(f\"Spell: {count}\")\n    print(f\"Team: {total}\")\n\n\ndef fixed_d():\n    # ✏️ FIX THE STYLE ✏️\n    # Rename variables to match what they actually contain:\n    # - The number 42 is probably an age\n    # - The string is a spell name\n    # - The list contains team members\n\n    pass\n\n\n# ============================================================\n# STYLE FIX E: Magic Numbers\n# ============================================================\n\ndef original_e():\n    \"\"\"ORIGINAL - Uses unexplained numbers\"\"\"\n    hero = \"{{hero}}\"\n    if 11 <= 17:  # What are these numbers?\n        print(f\"{hero} can attend {{school}}\")\n    health = 100 - 25  # What do 100 and 25 mean?\n    print(f\"Health: {health}\")\n\n\ndef fixed_e():\n    # ✏️ FIX THE STYLE ✏️\n    # Replace magic numbers with named constants.\n    # Use UPPERCASE_WITH_UNDERSCORES for constants.\n    # Example: MIN_AGE = 11, MAX_AGE = 17\n\n    pass\n\n\n# ============================================================\n# STYLE FIX F: Complete Cleanup\n# ============================================================\n\ndef original_f():\n    \"\"\"ORIGINAL - Multiple style issues combined\"\"\"\n    x = \"{{hero}}\"\n    y = \"{{heroine}}\"\n    z = \"{{friend}}\"\n    lst = [x, y, z]\n    cnt = 0\n    for i in lst:\n        cnt = cnt + 1\n        msg = f\"{cnt}. {i}\"\n        print(msg)\n\n\ndef fixed_f():\n    # ✏️ FIX THE STYLE ✏️\n    # Multiple fixes needed:\n    # - Better names for x, y, z\n    # - Better name for lst (what kind of list?)\n    # - Better name for cnt (count of what?)\n    # - Better loop variable name than i\n    # - Consider if msg variable is even needed\n\n    pass\n\n\ndef main():\n    print(\"=== Original A (single-letter names) ===\")\n    original_a()\n    print(\"\\n=== Fixed A (your version) ===\")\n    fixed_a()\n\n    print(\"\\n=== Original B (cryptic abbreviations) ===\")\n    original_b()\n    print(\"\\n=== Fixed B (your version) ===\")\n    fixed_b()\n\n    print(\"\\n=== Original C (inconsistent style) ===\")\n    original_c()\n    print(\"\\n=== Fixed C (your version) ===\")\n    fixed_c()\n\n    print(\"\\n=== Original D (misleading names) ===\")\n    original_d()\n    print(\"\\n=== Fixed D (your version) ===\")\n    fixed_d()\n\n    print(\"\\n=== Original E (magic numbers) ===\")\n    original_e()\n    print(\"\\n=== Fixed E (your version) ===\")\n    fixed_e()\n\n    print(\"\\n=== Original F (complete cleanup) ===\")\n    original_f()\n    print(\"\\n=== Fixed F (your version) ===\")\n    fixed_f()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "fix_style"
+      ],
+      "source_file": "module_0_basics/fix_style/exercise_1_fix_naming_conventions.py"
+    },
+    {
+      "id": "module_0_basics.match_output.exercise_1_match_print_statements",
+      "topic_id": "basics.print",
+      "exercise_type": "match_output",
+      "category": "reading",
+      "title": "Match Print Statements",
+      "title_he": "התאמת פקודות הדפסה",
+      "title_en": "Match Print Statements",
+      "description_he": "יסודות: התאמת פקודות הדפסה\n\nExercise 1: Match the Output - Print Statements\nMatch each code snippet with its correct output.\nDon't run the code - use your mental execution skills!\nTheme: Messages from {{school}}\n============================================================\nCODE SNIPPETS - Study these carefully\n============================================================",
+      "description_en": "Basics: Match Print Statements\n\nExercise 1: Match the Output - Print Statements\nMatch each code snippet with its correct output.\nDon't run the code - use your mental execution skills!\nTheme: Messages from {{school}}\n============================================================\nCODE SNIPPETS - Study these carefully\n============================================================",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "pattern_recognition",
+        "quick_reading",
+        "comparison"
+      ],
+      "starter_code": "# Exercise 1: Match the Output - Print Statements\n#\n# Match each code snippet with its correct output.\n# Don't run the code - use your mental execution skills!\n#\n# Theme: Messages from {{school}}\n\n\n# ============================================================\n# CODE SNIPPETS - Study these carefully\n# ============================================================\n\ndef snippet_1():\n    name = \"{{hero}}\"\n    print(\"Hello, \" + name)\n\n\ndef snippet_2():\n    name = \"{{hero}}\"\n    print(\"Hello,\", name)\n\n\ndef snippet_3():\n    name = \"{{hero}}\"\n    print(f\"Hello, {name}!\")\n\n\ndef snippet_4():\n    name = \"{{hero}}\"\n    print(\"Hello, name\")\n\n\n# ============================================================\n# POSSIBLE OUTPUTS - Which goes with which snippet?\n# ============================================================\n\n\"\"\"\nOUTPUT A:\n---------\nHello, {{hero}}!\n\nOUTPUT B:\n---------\nHello, {{hero}}\n\nOUTPUT C:\n---------\nHello, name\n\nOUTPUT D:\n---------\nHello,{{hero}}\n\"\"\"\n\n\n# ============================================================\n# YOUR ANSWERS\n# ============================================================\n\ndef your_matches():\n    # ✏️ MATCH SNIPPETS TO OUTPUTS ✏️\n    #\n    # Write the letter (A, B, C, or D) that matches each snippet.\n    # Think about:\n    # - What does + do with strings?\n    # - What does print() with commas do?\n    # - What do f-strings do?\n    # - What happens with quotes around a variable name?\n\n    matches = {\n        \"snippet_1\": \"?\",  # Hint: + joins strings directly\n        \"snippet_2\": \"?\",  # Hint: commas add spaces between items\n        \"snippet_3\": \"?\",  # Hint: f-strings with {} include the variable value\n        \"snippet_4\": \"?\",  # Hint: quotes around name mean...?\n    }\n\n    return matches\n\n\ndef explain_matches():\n    # ✏️ OPTIONAL: EXPLAIN YOUR REASONING ✏️\n\n    explanations = {\n        \"snippet_1\": \"Because...\",\n        \"snippet_2\": \"Because...\",\n        \"snippet_3\": \"Because...\",\n        \"snippet_4\": \"Because...\",\n    }\n\n    return explanations\n\n\ndef main():\n    print(\"=== Match the Output: Print Statements ===\")\n    print()\n    print(\"Match each snippet to its output (A, B, C, or D)\")\n    print(\"Fill in your answers in your_matches()\")\n    print()\n    print(\"=\"*45)\n\n    print(\"\\n--- Verification (run after making predictions) ---\")\n    print(\"\\nSnippet 1 output:\")\n    snippet_1()\n    print(\"\\nSnippet 2 output:\")\n    snippet_2()\n    print(\"\\nSnippet 3 output:\")\n    snippet_3()\n    print(\"\\nSnippet 4 output:\")\n    snippet_4()\n\n    print(\"\\n\" + \"=\"*45)\n    print(\"Your matches:\", your_matches())\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "match_output"
+      ],
+      "source_file": "module_0_basics/match_output/exercise_1_match_print_statements.py"
+    },
+    {
       "id": "module_0_basics.output_prediction.exercise_1_print_basics",
       "topic_id": "basics.print",
       "exercise_type": "output_prediction",
@@ -251,6 +365,33 @@
         "output_prediction"
       ],
       "source_file": "module_0_basics/output_prediction/exercise_1_print_basics.py"
+    },
+    {
+      "id": "module_0_basics.spot_difference.exercise_1_spot_variable_typos",
+      "topic_id": "basics.variables",
+      "exercise_type": "spot_difference",
+      "category": "analysis",
+      "title": "Spot Variable Typos",
+      "title_he": "איתור שגיאות הקלדה",
+      "title_en": "Spot Variable Typos",
+      "description_he": "יסודות: איתור שגיאות הקלדה\n\nExercise 1: Spot the Difference - Variable Typos\nEach pair of code snippets looks almost identical but behaves differently.\nYour task: Identify the difference and explain how it changes the behavior.\nTheme: Magical mix-ups with {{hero}} and {{heroine}}\n============================================================\nSPOT DIFFERENCE A: Case Sensitivity\n============================================================",
+      "description_en": "Basics: Spot Variable Typos\n\nExercise 1: Spot the Difference - Variable Typos\nEach pair of code snippets looks almost identical but behaves differently.\nYour task: Identify the difference and explain how it changes the behavior.\nTheme: Magical mix-ups with {{hero}} and {{heroine}}\n============================================================\nSPOT DIFFERENCE A: Case Sensitivity\n============================================================",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "attention_to_detail",
+        "subtle_bugs",
+        "language_nuances"
+      ],
+      "starter_code": "# Exercise 1: Spot the Difference - Variable Typos\n#\n# Each pair of code snippets looks almost identical but behaves differently.\n# Your task: Identify the difference and explain how it changes the behavior.\n#\n# Theme: Magical mix-ups with {{hero}} and {{heroine}}\n\n\n# ============================================================\n# SPOT DIFFERENCE A: Case Sensitivity\n# ============================================================\n\ndef snippet_a1():\n    \"\"\"Version 1\"\"\"\n    hero = \"{{hero}}\"\n    print(f\"Welcome, {hero}!\")\n\n\ndef snippet_a2():\n    \"\"\"Version 2 - spot the difference!\"\"\"\n    Hero = \"{{hero}}\"\n    print(f\"Welcome, {hero}!\")\n\n\ndef explain_difference_a():\n    # ✏️ EXPLAIN THE DIFFERENCE ✏️\n\n    explanation = \"\"\"\n    The difference is:\n    -\n\n    Version 1 behavior:\n    -\n\n    Version 2 behavior:\n    -\n\n    Why this matters:\n    -\n    \"\"\"\n    return explanation\n\n\n# ============================================================\n# SPOT DIFFERENCE B: Assignment vs Comparison\n# ============================================================\n\ndef snippet_b1():\n    \"\"\"Version 1\"\"\"\n    spell_count = 5\n    spell_count = spell_count + 1\n    print(f\"Spells learned: {spell_count}\")\n\n\ndef snippet_b2():\n    \"\"\"Version 2 - spot the difference!\"\"\"\n    spell_count = 5\n    spell_count == spell_count + 1\n    print(f\"Spells learned: {spell_count}\")\n\n\ndef explain_difference_b():\n    # ✏️ EXPLAIN THE DIFFERENCE ✏️\n\n    explanation = \"\"\"\n    The difference is:\n    -\n\n    Version 1 behavior:\n    -\n\n    Version 2 behavior:\n    -\n\n    Why this matters:\n    -\n    \"\"\"\n    return explanation\n\n\n# ============================================================\n# SPOT DIFFERENCE C: String Quote Types\n# ============================================================\n\ndef snippet_c1():\n    \"\"\"Version 1\"\"\"\n    message = \"{{hero}} said: 'Hello!'\"\n    print(message)\n\n\ndef snippet_c2():\n    \"\"\"Version 2 - spot the difference!\"\"\"\n    message = '{{hero}} said: 'Hello!''\n    print(message)\n\n\ndef explain_difference_c():\n    # ✏️ EXPLAIN THE DIFFERENCE ✏️\n    # Hint: This one causes a syntax error in Version 2!\n\n    explanation = \"\"\"\n    The difference is:\n    -\n\n    Version 1 behavior:\n    -\n\n    Version 2 behavior:\n    -\n\n    Why this matters:\n    -\n    \"\"\"\n    return explanation\n\n\n# ============================================================\n# SPOT DIFFERENCE D: Plus vs Comma in Print\n# ============================================================\n\ndef snippet_d1():\n    \"\"\"Version 1\"\"\"\n    name = \"{{hero}}\"\n    age = 11\n    print(\"Name: \" + name + \", Age: \" + str(age))\n\n\ndef snippet_d2():\n    \"\"\"Version 2 - spot the difference!\"\"\"\n    name = \"{{hero}}\"\n    age = 11\n    print(\"Name:\", name, \", Age:\", age)\n\n\ndef explain_difference_d():\n    # ✏️ EXPLAIN THE DIFFERENCE ✏️\n    # Both work, but the output looks different!\n\n    explanation = \"\"\"\n    The difference is:\n    -\n\n    Version 1 behavior:\n    -\n\n    Version 2 behavior:\n    -\n\n    Why this matters:\n    -\n    \"\"\"\n    return explanation\n\n\n# ============================================================\n# SPOT DIFFERENCE E: Integer vs String\n# ============================================================\n\ndef snippet_e1():\n    \"\"\"Version 1\"\"\"\n    year = 2023\n    next_year = year + 1\n    print(f\"Next year: {next_year}\")\n\n\ndef snippet_e2():\n    \"\"\"Version 2 - spot the difference!\"\"\"\n    year = \"2023\"\n    next_year = year + 1\n    print(f\"Next year: {next_year}\")\n\n\ndef explain_difference_e():\n    # ✏️ EXPLAIN THE DIFFERENCE ✏️\n    # Hint: One of these will crash!\n\n    explanation = \"\"\"\n    The difference is:\n    -\n\n    Version 1 behavior:\n    -\n\n    Version 2 behavior:\n    -\n\n    Why this matters:\n    -\n    \"\"\"\n    return explanation\n\n\ndef main():\n    print(\"=== Difference A: Case Sensitivity ===\")\n    print(\"Version 1:\")\n    snippet_a1()\n    print(\"\\nVersion 2:\")\n    # snippet_a2()  # This will cause an error - that's the point!\n    print(\"(Uncomment to see the error)\")\n    print(f\"\\nExplanation:{explain_difference_a()}\")\n\n    print(\"\\n=== Difference B: Assignment vs Comparison ===\")\n    print(\"Version 1:\")\n    snippet_b1()\n    print(\"\\nVersion 2:\")\n    snippet_b2()\n    print(f\"\\nExplanation:{explain_difference_b()}\")\n\n    print(\"\\n=== Difference D: Plus vs Comma in Print ===\")\n    print(\"Version 1:\")\n    snippet_d1()\n    print(\"\\nVersion 2:\")\n    snippet_d2()\n    print(f\"\\nExplanation:{explain_difference_d()}\")\n\n    print(\"\\n=== Difference E: Integer vs String ===\")\n    print(\"Version 1:\")\n    snippet_e1()\n    print(\"\\nVersion 2:\")\n    # snippet_e2()  # This will cause an error!\n    print(\"(Uncomment to see the error)\")\n    print(f\"\\nExplanation:{explain_difference_e()}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "spot_difference"
+      ],
+      "source_file": "module_0_basics/spot_difference/exercise_1_spot_variable_typos.py"
     },
     {
       "id": "module_0_basics.write_code.exercise_01_hello",

@@ -449,6 +449,178 @@
     "rpg_battle": {
       "he": "קרב RPG",
       "en": "RPG Battle"
+    },
+    "match_print_statements": {
+      "he": "התאמת פקודות הדפסה",
+      "en": "Match Print Statements"
+    },
+    "match_turtle_paths": {
+      "he": "התאמת מסלולי צב",
+      "en": "Match Turtle Paths"
+    },
+    "match_list_operations": {
+      "he": "התאמת פעולות רשימה",
+      "en": "Match List Operations"
+    },
+    "fill_string_formatting": {
+      "he": "השלמת עיצוב מחרוזות",
+      "en": "Fill String Formatting"
+    },
+    "fill_loop_syntax": {
+      "he": "השלמת תחביר לולאות",
+      "en": "Fill Loop Syntax"
+    },
+    "fill_function_syntax": {
+      "he": "השלמת תחביר פונקציות",
+      "en": "Fill Function Syntax"
+    },
+    "trace_if_else_flow": {
+      "he": "מעקב זרימת תנאים",
+      "en": "Trace If/Else Flow"
+    },
+    "trace_list_mutations": {
+      "he": "מעקב שינויי רשימה",
+      "en": "Trace List Mutations"
+    },
+    "bug_broken_shapes": {
+      "he": "באגים בצורות",
+      "en": "Bug Hunt: Broken Shapes"
+    },
+    "bug_wrong_comparisons": {
+      "he": "באגים בהשוואות",
+      "en": "Bug Hunt: Wrong Comparisons"
+    },
+    "bug_list_manipulation": {
+      "he": "באגים ברשימות",
+      "en": "Bug Hunt: List Manipulation"
+    },
+    "bug_game_logic": {
+      "he": "באגים בלוגיקת משחק",
+      "en": "Bug Hunt: Game Logic"
+    },
+    "complete_list_functions": {
+      "he": "השלמת פונקציות רשימה",
+      "en": "Complete List Functions"
+    },
+    "complete_helper_functions": {
+      "he": "השלמת פונקציות עזר",
+      "en": "Complete Helper Functions"
+    },
+    "complete_dict_functions": {
+      "he": "השלמת פונקציות מילון",
+      "en": "Complete Dict Functions"
+    },
+    "decode_function_errors": {
+      "he": "פענוח שגיאות פונקציות",
+      "en": "Decode Function Errors"
+    },
+    "decode_dict_errors": {
+      "he": "פענוח שגיאות מילונים",
+      "en": "Decode Dict Errors"
+    },
+    "order_program_structure": {
+      "he": "סידור מבנה תוכנית",
+      "en": "Order Program Structure"
+    },
+    "order_drawing_steps": {
+      "he": "סידור שלבי ציור",
+      "en": "Order Drawing Steps"
+    },
+    "order_function_calls": {
+      "he": "סידור קריאות לפונקציות",
+      "en": "Order Function Calls"
+    },
+    "spot_variable_typos": {
+      "he": "איתור שגיאות הקלדה",
+      "en": "Spot Variable Typos"
+    },
+    "spot_index_errors": {
+      "he": "איתור שגיאות אינדקס",
+      "en": "Spot Index Errors"
+    },
+    "spot_return_vs_print": {
+      "he": "איתור הבדלי return מול print",
+      "en": "Spot Return vs Print"
+    },
+    "compare_loop_vs_comprehension": {
+      "he": "השוואת לולאה מול comprehension",
+      "en": "Compare Loop vs Comprehension"
+    },
+    "compare_many_params_vs_dict": {
+      "he": "השוואת פרמטרים מול מילון",
+      "en": "Compare Many Params vs Dict"
+    },
+    "compare_nested_vs_flat": {
+      "he": "השוואת מקונן מול שטוח",
+      "en": "Compare Nested vs Flat"
+    },
+    "compare_inheritance_vs_composition": {
+      "he": "השוואת הורשה מול הרכבה",
+      "en": "Compare Inheritance vs Composition"
+    },
+    "fix_naming_conventions": {
+      "he": "תיקון מוסכמות שמות",
+      "en": "Fix Naming Conventions"
+    },
+    "fix_function_style": {
+      "he": "תיקון סגנון פונקציות",
+      "en": "Fix Function Style"
+    },
+    "fix_class_style": {
+      "he": "תיקון סגנון מחלקות",
+      "en": "Fix Class Style"
+    },
+    "simplify_to_comprehension": {
+      "he": "פישוט ל-comprehension",
+      "en": "Simplify to Comprehension"
+    },
+    "simplify_repeated_code": {
+      "he": "פישוט קוד חוזר",
+      "en": "Simplify Repeated Code"
+    },
+    "simplify_with_get_setdefault": {
+      "he": "פישוט עם get ו-setdefault",
+      "en": "Simplify with get/setdefault"
+    },
+    "trace_turtle_position": {
+      "he": "מעקב מיקום צב",
+      "en": "Trace Turtle Position"
+    },
+    "trace_dict_updates": {
+      "he": "מעקב עדכוני מילון",
+      "en": "Trace Dict Updates"
+    },
+    "handle_game_input": {
+      "he": "טיפול בקלט משחק",
+      "en": "Handle Game Input"
+    },
+    "handle_function_input": {
+      "he": "טיפול בקלט פונקציות",
+      "en": "Handle Function Input"
+    },
+    "handle_file_io": {
+      "he": "טיפול בקבצים",
+      "en": "Handle File I/O"
+    },
+    "blank_utility_functions": {
+      "he": "פונקציות שירות",
+      "en": "Blank Utility Functions"
+    },
+    "blank_mini_app": {
+      "he": "אפליקציה מאפס",
+      "en": "Blank Mini App"
+    },
+    "blank_data_processor": {
+      "he": "מעבד נתונים",
+      "en": "Blank Data Processor"
+    },
+    "blank_class_design": {
+      "he": "עיצוב מחלקות",
+      "en": "Blank Class Design"
+    },
+    "project_calculator_app": {
+      "he": "פרויקט מחשבון",
+      "en": "Calculator App Project"
     }
   },
   "defaults": {

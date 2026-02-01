@@ -183,6 +183,64 @@ TITLE_HE_MAP = {
     "print basics": "יסודות הדפסה",
     "loops": "לולאות",
     "conditionals": "תנאים",
+    # Match output exercises
+    "match print statements": "התאמת פקודות הדפסה",
+    "match turtle paths": "התאמת מסלולי צב",
+    "match list operations": "התאמת פעולות רשימה",
+    # Fill blanks exercises
+    "fill string formatting": "השלמת עיצוב מחרוזות",
+    "fill loop syntax": "השלמת תחביר לולאות",
+    "fill function syntax": "השלמת תחביר פונקציות",
+    # Code tracing exercises
+    "trace if else flow": "מעקב זרימת תנאים",
+    "trace list mutations": "מעקב שינויי רשימה",
+    # Bug hunt exercises (Phase 2)
+    "bug broken shapes": "באגים בצורות",
+    "bug wrong comparisons": "באגים בהשוואות",
+    "bug list manipulation": "באגים ברשימות",
+    "bug game logic": "באגים בלוגיקת משחק",
+    # Complete function exercises (Phase 2)
+    "complete list functions": "השלמת פונקציות רשימה",
+    "complete helper functions": "השלמת פונקציות עזר",
+    "complete dict functions": "השלמת פונקציות מילון",
+    # Decode error exercises (Phase 2)
+    "decode function errors": "פענוח שגיאות פונקציות",
+    "decode dict errors": "פענוח שגיאות מילונים",
+    # Code ordering exercises (Phase 3)
+    "order program structure": "סידור מבנה תוכנית",
+    "order drawing steps": "סידור שלבי ציור",
+    "order function calls": "סידור קריאות לפונקציות",
+    # Spot difference exercises (Phase 3)
+    "spot variable typos": "איתור שגיאות הקלדה",
+    "spot index errors": "איתור שגיאות אינדקס",
+    "spot return vs print": "איתור הבדלי return מול print",
+    # Which is better exercises (Phase 3)
+    "compare loop vs comprehension": "השוואת לולאה מול comprehension",
+    "compare many params vs dict": "השוואת פרמטרים מול מילון",
+    "compare nested vs flat": "השוואת מקונן מול שטוח",
+    "compare inheritance vs composition": "השוואת הורשה מול הרכבה",
+    # Fix style exercises (Phase 4)
+    "fix naming conventions": "תיקון מוסכמות שמות",
+    "fix function style": "תיקון סגנון פונקציות",
+    "fix class style": "תיקון סגנון מחלקות",
+    # Simplify code exercises (Phase 4)
+    "simplify to comprehension": "פישוט ל-comprehension",
+    "simplify repeated code": "פישוט קוד חוזר",
+    "simplify with get setdefault": "פישוט עם get ו-setdefault",
+    # Code tracing exercises (Phase 4)
+    "trace turtle position": "מעקב מיקום צב",
+    "trace dict updates": "מעקב עדכוני מילון",
+    # Add error handling exercises (Phase 5)
+    "handle game input": "טיפול בקלט משחק",
+    "handle function input": "טיפול בקלט פונקציות",
+    "handle file io": "טיפול בקבצים",
+    # Blank page exercises (Phase 5)
+    "blank utility functions": "פונקציות שירות",
+    "blank mini app": "אפליקציה מאפס",
+    "blank data processor": "מעבד נתונים",
+    "blank class design": "עיצוב מחלקות",
+    # Mini project exercises (Phase 5)
+    "project calculator app": "פרויקט מחשבון",
 }
 
 # English title mapping (keys match TITLE_HE_MAP)
@@ -293,6 +351,64 @@ TITLE_EN_MAP = {
     "print basics": "Print Basics",
     "loops": "Loops",
     "conditionals": "Conditionals",
+    # Match output exercises
+    "match print statements": "Match Print Statements",
+    "match turtle paths": "Match Turtle Paths",
+    "match list operations": "Match List Operations",
+    # Fill blanks exercises
+    "fill string formatting": "Fill String Formatting",
+    "fill loop syntax": "Fill Loop Syntax",
+    "fill function syntax": "Fill Function Syntax",
+    # Code tracing exercises
+    "trace if else flow": "Trace If/Else Flow",
+    "trace list mutations": "Trace List Mutations",
+    # Bug hunt exercises (Phase 2)
+    "bug broken shapes": "Bug Hunt: Broken Shapes",
+    "bug wrong comparisons": "Bug Hunt: Wrong Comparisons",
+    "bug list manipulation": "Bug Hunt: List Manipulation",
+    "bug game logic": "Bug Hunt: Game Logic",
+    # Complete function exercises (Phase 2)
+    "complete list functions": "Complete List Functions",
+    "complete helper functions": "Complete Helper Functions",
+    "complete dict functions": "Complete Dict Functions",
+    # Decode error exercises (Phase 2)
+    "decode function errors": "Decode Function Errors",
+    "decode dict errors": "Decode Dict Errors",
+    # Code ordering exercises (Phase 3)
+    "order program structure": "Order Program Structure",
+    "order drawing steps": "Order Drawing Steps",
+    "order function calls": "Order Function Calls",
+    # Spot difference exercises (Phase 3)
+    "spot variable typos": "Spot Variable Typos",
+    "spot index errors": "Spot Index Errors",
+    "spot return vs print": "Spot Return vs Print",
+    # Which is better exercises (Phase 3)
+    "compare loop vs comprehension": "Compare Loop vs Comprehension",
+    "compare many params vs dict": "Compare Many Params vs Dict",
+    "compare nested vs flat": "Compare Nested vs Flat",
+    "compare inheritance vs composition": "Compare Inheritance vs Composition",
+    # Fix style exercises (Phase 4)
+    "fix naming conventions": "Fix Naming Conventions",
+    "fix function style": "Fix Function Style",
+    "fix class style": "Fix Class Style",
+    # Simplify code exercises (Phase 4)
+    "simplify to comprehension": "Simplify to Comprehension",
+    "simplify repeated code": "Simplify Repeated Code",
+    "simplify with get setdefault": "Simplify with get/setdefault",
+    # Code tracing exercises (Phase 4)
+    "trace turtle position": "Trace Turtle Position",
+    "trace dict updates": "Trace Dict Updates",
+    # Add error handling exercises (Phase 5)
+    "handle game input": "Handle Game Input",
+    "handle function input": "Handle Function Input",
+    "handle file io": "Handle File I/O",
+    # Blank page exercises (Phase 5)
+    "blank utility functions": "Blank Utility Functions",
+    "blank mini app": "Blank Mini App",
+    "blank data processor": "Blank Data Processor",
+    "blank class design": "Blank Class Design",
+    # Mini project exercises (Phase 5)
+    "project calculator app": "Calculator App Project",
 }
 
 # Topic ID mapping per exercise (more specific than module-level)
@@ -322,6 +438,8 @@ EXERCISE_TOPIC_MAP = {
     "name errors": "basics.errors",
     "type errors": "basics.errors",
     "print basics": "basics.print",
+    "match print statements": "basics.print",
+    "fill string formatting": "basics.strings",
     # module_1_turtle_loops
     "loops": "loops.for",
     "square": "loops.for",
@@ -333,6 +451,9 @@ EXERCISE_TOPIC_MAP = {
     "rainbow": "loops.for",
     "nested squares": "loops.nested",
     "flower": "loops.for",
+    "match turtle paths": "loops.for",
+    "fill loop syntax": "loops.for",
+    "bug broken shapes": "loops.for",
     # module_2_decisions
     "password": "control.if",
     "grades": "control.if",
@@ -343,6 +464,8 @@ EXERCISE_TOPIC_MAP = {
     "even odd": "control.if",
     "leap year": "control.if",
     "conditionals": "control.if",
+    "trace if else flow": "control.if",
+    "bug wrong comparisons": "control.if",
     # module_3_lists
     "favorites": "collections.lists",
     "loop list": "collections.lists",
@@ -354,6 +477,10 @@ EXERCISE_TOPIC_MAP = {
     "playlist shuffler": "collections.lists",
     "word collector": "collections.lists",
     "index errors": "collections.lists",
+    "match list operations": "collections.lists",
+    "trace list mutations": "collections.lists",
+    "bug list manipulation": "collections.lists",
+    "complete list functions": "collections.lists",
     # module_4_games
     "guess number": "loops.while",
     "rock paper scissors": "loops.while",
@@ -364,6 +491,7 @@ EXERCISE_TOPIC_MAP = {
     "trivia": "loops.while",
     "word scramble": "loops.while",
     "adventure": "loops.while",
+    "bug game logic": "loops.while",
     # module_5_functions
     "shapes": "functions.basic",
     "helper functions": "functions.basic",
@@ -373,6 +501,9 @@ EXERCISE_TOPIC_MAP = {
     "password generator": "functions.basic",
     "greeting card": "functions.basic",
     "turtle scene": "functions.basic",
+    "fill function syntax": "functions.basic",
+    "complete helper functions": "functions.basic",
+    "decode function errors": "functions.basic",
     # module_7_dictionaries
     "spellbook": "collections.dict",
     "character stats": "collections.dict",
@@ -383,6 +514,8 @@ EXERCISE_TOPIC_MAP = {
     "secret codes": "collections.dict",
     "rpg inventory": "collections.dict",
     "contact book": "collections.dict",
+    "complete dict functions": "collections.dict",
+    "decode dict errors": "collections.dict",
     # module_8_modules
     "datetime basics": "modules.datetime",
     "random advanced": "modules.random",
@@ -403,6 +536,41 @@ EXERCISE_TOPIC_MAP = {
     "composition": "oop.composition",
     "text adventure": "oop.project",
     "rpg battle": "oop.project",
+    # Code ordering exercises (Phase 3)
+    "order program structure": "basics.structure",
+    "order drawing steps": "loops.for",
+    "order function calls": "functions.basic",
+    # Spot difference exercises (Phase 3)
+    "spot variable typos": "basics.variables",
+    "spot index errors": "collections.lists",
+    "spot return vs print": "functions.return",
+    # Which is better exercises (Phase 3)
+    "compare loop vs comprehension": "collections.lists",
+    "compare many params vs dict": "functions.params",
+    "compare nested vs flat": "collections.dict",
+    "compare inheritance vs composition": "oop.composition",
+    # Fix style exercises (Phase 4)
+    "fix naming conventions": "basics.style",
+    "fix function style": "functions.style",
+    "fix class style": "oop.style",
+    # Simplify code exercises (Phase 4)
+    "simplify to comprehension": "collections.lists",
+    "simplify repeated code": "functions.refactor",
+    "simplify with get setdefault": "collections.dict",
+    # Code tracing exercises (Phase 4)
+    "trace turtle position": "loops.for",
+    "trace dict updates": "collections.dict",
+    # Add error handling exercises (Phase 5)
+    "handle game input": "loops.while",
+    "handle function input": "functions.errors",
+    "handle file io": "modules.files",
+    # Blank page exercises (Phase 5)
+    "blank utility functions": "functions.basic",
+    "blank mini app": "project.final",
+    "blank data processor": "collections.dict",
+    "blank class design": "oop.classes",
+    # Mini project exercises (Phase 5)
+    "project calculator app": "functions.project",
 }
 
 
