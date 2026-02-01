@@ -1,0 +1,29 @@
+{
+  "theme_id": "professional_coding",
+  "theme_name": "Professional Software Development",
+  "description": "Plain, professional coding theme with no metaphors - just straightforward development",
+  "narrative_variables": {
+    "ROLE_TITLE": "Developer",
+    "ROLE_TITLE_PLURAL": "Developers",
+    "MENTOR_TITLE": "Tech Lead",
+    "WORKSPACE": "codebase",
+
+    "PROJECT_TYPE": "software system",
+    "PROJECT_SCALE": "production-ready",
+    "GOAL": "deployment",
+
+    "COMPONENT_SINGULAR": "feature",
+    "COMPONENT_PLURAL": "features",
+    "TASK_VERB": "implement",
+    "TASK_NOUN": "function",
+
+    "SECTION_ICON": "💻",
+    "SUCCESS_WORD": "Success",
+    "CELEBRATION": "Code deployed successfully!",
+    "PROGRESS_UNIT": "version",
+
+    "OPENING_FLAVOR": "Let's build this step by step.",
+    "TRANSITION_WORD": "Next",
+    "CLOSING_FLAVOR": "Your code is clean, tested, and ready for production."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "theme_id": "fantasy_magic",
+  "theme_name": "Fantasy Magic Academy",
+  "description": "Harry Potter-style magical theme with wizards, spells, and enchanted realms",
+  "narrative_variables": {
+    "ROLE_TITLE": "Wizard",
+    "ROLE_TITLE_PLURAL": "Wizards",
+    "MENTOR_TITLE": "Headmaster",
+    "WORKSPACE": "magical realm",
+
+    "PROJECT_TYPE": "enchanted kingdom",
+    "PROJECT_SCALE": "grand",
+    "GOAL": "magical mastery",
+
+    "COMPONENT_SINGULAR": "spell",
+    "COMPONENT_PLURAL": "spells",
+    "TASK_VERB": "cast",
+    "TASK_NOUN": "incantation",
+
+    "SECTION_ICON": "✨",
+    "SUCCESS_WORD": "Excellent",
+    "CELEBRATION": "Well done, wizard! Your magic grows stronger!",
+    "PROGRESS_UNIT": "level",
+
+    "OPENING_FLAVOR": "Your wand is ready, and the magical world awaits your command!",
+    "TRANSITION_WORD": "Next",
+    "CLOSING_FLAVOR": "You've mastered these enchantments! The magical realm is safer for your achievements."
+  }
+}

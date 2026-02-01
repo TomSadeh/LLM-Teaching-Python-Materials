@@ -1,0 +1,38 @@
+{
+  "theme_id": "military_ops",
+  "theme_name": "Military Operations",
+  "description": "Tactical operations theme - command units, complete missions, achieve objectives",
+  "narrative_variables": {
+    "ROLE_TITLE": "Commander",
+    "ROLE_TITLE_PLURAL": "Commanders",
+    "MENTOR_TITLE": "General",
+    "WORKSPACE": "operations center",
+
+    "PROJECT_TYPE": "tactical operation",
+    "PROJECT_SCALE": "strategic",
+    "GOAL": "mission completion",
+
+    "COMPONENT_SINGULAR": "objective",
+    "COMPONENT_PLURAL": "objectives",
+    "TASK_VERB": "execute",
+    "TASK_NOUN": "directive",
+
+    "SECTION_ICON": "🎯",
+    "SUCCESS_WORD": "Outstanding",
+    "CELEBRATION": "Mission accomplished! Objectives secured!",
+    "PROGRESS_UNIT": "operation phase",
+
+    "OPENING_FLAVOR": "Command briefing initiated. Your tactical orders are ready for execution!",
+    "TRANSITION_WORD": "Proceeding to",
+    "CLOSING_FLAVOR": "All objectives achieved. Operation successful. Stand down!",
+
+    "EVIDENCE_NOUN": "intel",
+    "SOLVE_VERB": "neutralize",
+    "ENTITY_NOUN": "unit",
+    "ENTITY_NOUN_PLURAL": "units",
+    "SYSTEM_NOUN": "command structure",
+    "CLIENT": "High Command",
+    "DELIVERABLE": "mission plan",
+    "DELIVERABLE_TITLE": "Mission Complete"
+  }
+}

@@ -116,11 +116,34 @@ Lessons are split into multi-part files for manageable context:
 | module_2_decisions | 5 | en |
 | module_3_lists | 5 | en |
 | module_4_games | 4 | en |
-| module_5_functions | - | en, he |
-| module_7_dictionaries | - | en, he |
-| module_8_modules | - | en, he |
-| module_9_oop | - | en, he |
+| module_5_functions | 5 | en, he |
+| module_7_dictionaries | 5 | en, he |
+| module_8_modules | 6 | en, he |
+| module_9_oop | 5 | en, he |
 | free_practice | 1 | en, he |
+
+---
+
+## Narrative Archetypes
+
+See [NARRATIVE_ARCHETYPES.md](NARRATIVE_ARCHETYPES.md) for reusable narrative patterns for exercise design.
+
+Quick access:
+- [Full archetype documentation](NARRATIVE_ARCHETYPES.md) - 10 core patterns with examples
+- [Quick reference](../templates/ARCHETYPE_QUICK_REFERENCE.md) - Templates and selection guide
+- [Exercise mapping](ARCHETYPE_EXERCISE_MAPPING.md) - Current usage and opportunities
+
+The 10 archetypes:
+1. Random Assignment (Sorting Hat)
+2. Inventory Management (RPG Inventory)
+3. Character Creation (Profile Builder)
+4. Challenge/Attempt (Quest)
+5. Knowledge Check (Quiz)
+6. Progression Tracking (Level Up)
+7. Relationship Mapping (Social Network)
+8. Decision Tree (Choose Your Path)
+9. Collection Building (Favorites List)
+10. Resource Exchange (Shop/Trade)
 
 ---
 
@@ -144,11 +167,17 @@ Summary:
 See [TEMPLATE.md](../TEMPLATE.md) for the complete list of `{{placeholder}}` variables for dynamic theming.
 
 Available themes:
+
+**Open License (production use):**
+- `dnd-srd` - D&D Fantasy (CC-BY-4.0)
+- `cepheus` - Space Opera (OGL)
+- `pymentor` - Plain/generic
+
+**Test-Only (proprietary IP):**
 - `dumblecode` - Harry Potter
 - `chirthon` - Percy Jackson
 - `compile-games` - Hunger Games
 - `pyfire` - Keeper of the Lost Cities
-- `pymentor` - Plain/generic
 
 ---
 

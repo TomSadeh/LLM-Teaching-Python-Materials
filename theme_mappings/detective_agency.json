@@ -1,0 +1,38 @@
+{
+  "theme_id": "detective_agency",
+  "theme_name": "Detective Agency",
+  "description": "Mystery and investigation theme - solve cases, gather clues, crack the code",
+  "narrative_variables": {
+    "ROLE_TITLE": "Detective",
+    "ROLE_TITLE_PLURAL": "Detectives",
+    "MENTOR_TITLE": "Chief Inspector",
+    "WORKSPACE": "precinct",
+
+    "PROJECT_TYPE": "case investigation",
+    "PROJECT_SCALE": "complex",
+    "GOAL": "solving the case",
+
+    "COMPONENT_SINGULAR": "clue",
+    "COMPONENT_PLURAL": "clues",
+    "TASK_VERB": "investigate",
+    "TASK_NOUN": "lead",
+
+    "SECTION_ICON": "🔍",
+    "SUCCESS_WORD": "Excellent",
+    "CELEBRATION": "Case closed! Another mystery solved!",
+    "PROGRESS_UNIT": "evidence level",
+
+    "OPENING_FLAVOR": "Your detective badge is ready. The case files await your investigation!",
+    "TRANSITION_WORD": "Meanwhile",
+    "CLOSING_FLAVOR": "Your deductive skills have cracked the case. Justice is served!",
+
+    "EVIDENCE_NOUN": "evidence",
+    "SOLVE_VERB": "solve",
+    "ENTITY_NOUN": "suspect",
+    "ENTITY_NOUN_PLURAL": "suspects",
+    "SYSTEM_NOUN": "case file",
+    "CLIENT": "District Attorney",
+    "DELIVERABLE": "case report",
+    "DELIVERABLE_TITLE": "Case Closed"
+  }
+}

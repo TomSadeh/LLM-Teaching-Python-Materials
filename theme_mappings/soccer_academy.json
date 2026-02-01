@@ -1,0 +1,29 @@
+{
+  "theme_id": "soccer_academy",
+  "theme_name": "Soccer Training Academy",
+  "description": "Sports coaching theme focused on team building and tactical training",
+  "narrative_variables": {
+    "ROLE_TITLE": "Coach",
+    "ROLE_TITLE_PLURAL": "Coaches",
+    "MENTOR_TITLE": "Manager",
+    "WORKSPACE": "training pitch",
+
+    "PROJECT_TYPE": "championship squad",
+    "PROJECT_SCALE": "competitive",
+    "GOAL": "tournament victory",
+
+    "COMPONENT_SINGULAR": "drill",
+    "COMPONENT_PLURAL": "training drills",
+    "TASK_VERB": "execute",
+    "TASK_NOUN": "play",
+
+    "SECTION_ICON": "⚽",
+    "SUCCESS_WORD": "Great work",
+    "CELEBRATION": "Goal! Your team is ready for the match!",
+    "PROGRESS_UNIT": "training session",
+
+    "OPENING_FLAVOR": "The pitch is ready and your team awaits your coaching!",
+    "TRANSITION_WORD": "Now",
+    "CLOSING_FLAVOR": "Your squad has mastered these drills. They're ready for the championship!"
+  }
+}

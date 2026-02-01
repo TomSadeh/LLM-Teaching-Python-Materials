@@ -64,8 +64,16 @@ Use `{{variable_name}}` in exercise content. These placeholders are replaced at 
 See `theme_variables.json` for the complete mapping of all variables to all themes.
 
 The themes are:
-- `dumblecode` - Harry Potter
-- `chirthon` - Percy Jackson
-- `compile-games` - Hunger Games
-- `pyfire` - Keeper of the Lost Cities
-- `pymentor` - Plain/generic (no fantasy)
+
+### Fantasy Themes
+- `dumblecode` - Harry Potter (Hogwarts magic school)
+- `chirthon` - Percy Jackson (Greek mythology demigods)
+- `compile-games` - Hunger Games (dystopian survival)
+- `pyfire` - Keeper of the Lost Cities (elven telepaths)
+- `dnd-srd` - D&D SRD (classic fantasy adventuring) ✨ **Open license**
+
+### Sci-Fi Themes
+- `cepheus` - Cepheus Engine (space exploration, Traveller-like) ✨ **Open license**
+
+### Plain Theme
+- `pymentor` - Plain/generic (no fantasy, no sci-fi)

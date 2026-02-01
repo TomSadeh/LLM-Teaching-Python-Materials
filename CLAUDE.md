@@ -61,6 +61,10 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 |------|----------|
 | Content inventory | [docs/CATALOG.md](docs/CATALOG.md) |
 | Writing exercises/lessons | [docs/WRITING_GUIDE.md](docs/WRITING_GUIDE.md) |
+| Narrative patterns | [docs/NARRATIVE_ARCHETYPES.md](docs/NARRATIVE_ARCHETYPES.md) |
+| Archetype quick templates | [templates/ARCHETYPE_QUICK_REFERENCE.md](templates/ARCHETYPE_QUICK_REFERENCE.md) |
+| Archetype visual guide | [docs/ARCHETYPE_VISUAL_GUIDE.md](docs/ARCHETYPE_VISUAL_GUIDE.md) |
+| Exercise archetype mapping | [docs/ARCHETYPE_EXERCISE_MAPPING.md](docs/ARCHETYPE_EXERCISE_MAPPING.md) |
 | Curriculum & pedagogy | [docs/REFERENCES.md](docs/REFERENCES.md) |
 | Theme placeholders | [TEMPLATE.md](TEMPLATE.md) |
 | Exercise type templates | [templates/](templates/) |
@@ -68,6 +72,10 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 | Gap analysis | [templates/EXERCISE_ADDITION_PLAN.md](templates/EXERCISE_ADDITION_PLAN.md) |
 | Raw reference files | [references/](references/) |
 | Lesson templates | [en/lessons/TEMPLATE_PART1.md](en/lessons/TEMPLATE_PART1.md) |
+| Conversion guide | [docs/CONVERSION_QUICKSTART.md](docs/CONVERSION_QUICKSTART.md) |
+| Theme system | [docs/THEME_SYSTEM.md](docs/THEME_SYSTEM.md) |
+| Create a theme | [docs/QUICK_START_THEMES.md](docs/QUICK_START_THEMES.md) |
+| Narrative templates | [docs/NARRATIVE_SYSTEM.md](docs/NARRATIVE_SYSTEM.md) |
 
 ---
 
@@ -106,6 +114,7 @@ LLM-Teaching-Python-Materials/
 ├── references/                 # Curriculum analysis
 ├── docs/                       # Documentation
 ├── scripts/                    # Build scripts
+├── theme_mappings/             # Universal narrative theme configs
 ├── exercises_config.json       # Module/exercise translations
 ├── theme_variables.json        # Placeholder values by theme
 ├── manifest.json               # Module list for sync
@@ -137,8 +146,30 @@ LLM-Teaching-Python-Materials/
 ### Verify no hardcoded themes
 
 ```bash
-python scripts/apply_theme_placeholders.py --raw --check
+python scripts/audit_all_themes.py
 ```
+
+### Convert exercises to universal templates
+
+See [docs/CONVERSION_QUICKSTART.md](docs/CONVERSION_QUICKSTART.md) for complete guide.
+
+```bash
+# Analyze single exercise
+python scripts/convert_to_templates.py --input "raw_exercises/module_7/.../exercise_1.py" --dry-run
+
+# Analyze entire module
+python scripts/convert_to_templates.py --module 7 --dry-run --report-dir conversion_reports
+
+# Analyze all 145 exercises
+python scripts/convert_to_templates.py --all --dry-run --report-dir conversion_reports_full
+```
+
+The script:
+- Matches exercises to narrative templates
+- Detects hardcoded theme references
+- Extracts narrative for templatization
+- Generates JSON analysis reports
+- Flags exercises needing manual review
 
 ---
 

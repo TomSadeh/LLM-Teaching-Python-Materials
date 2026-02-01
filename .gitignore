@@ -18,3 +18,18 @@ Thumbs.db
 
 # Local settings
 .claude/settings.local.json
+
+# Conversion script outputs
+conversion_reports/
+conversion_reports_v2/
+conversion_reports_v3/
+conversion_reports_full/
+conversion_reports_with_narratives/
+conversion_full_output.txt
+
+# Validation outputs
+validation_test/
+validation_report_*.json
+
+# Audit outputs (regenerable)
+narrative_structure_audit.json

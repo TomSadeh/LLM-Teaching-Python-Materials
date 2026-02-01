@@ -1,0 +1,38 @@
+{
+  "theme_id": "scifi_engineering",
+  "theme_name": "Sci-Fi Engineering",
+  "description": "Space and technology theme - build starships, program systems, explore the galaxy",
+  "narrative_variables": {
+    "ROLE_TITLE": "Engineer",
+    "ROLE_TITLE_PLURAL": "Engineers",
+    "MENTOR_TITLE": "Chief Engineer",
+    "WORKSPACE": "engineering bay",
+
+    "PROJECT_TYPE": "starship system",
+    "PROJECT_SCALE": "critical",
+    "GOAL": "mission success",
+
+    "COMPONENT_SINGULAR": "module",
+    "COMPONENT_PLURAL": "modules",
+    "TASK_VERB": "construct",
+    "TASK_NOUN": "protocol",
+
+    "SECTION_ICON": "🚀",
+    "SUCCESS_WORD": "Affirmative",
+    "CELEBRATION": "Systems online! Mission parameters achieved!",
+    "PROGRESS_UNIT": "subsystem",
+
+    "OPENING_FLAVOR": "Your engineering station is calibrated. Starship systems await your expertise!",
+    "TRANSITION_WORD": "Next",
+    "CLOSING_FLAVOR": "All systems operational. The starship is ready for launch!",
+
+    "EVIDENCE_NOUN": "diagnostic",
+    "SOLVE_VERB": "repair",
+    "ENTITY_NOUN": "module",
+    "ENTITY_NOUN_PLURAL": "modules",
+    "SYSTEM_NOUN": "integration protocol",
+    "CLIENT": "Captain",
+    "DELIVERABLE": "system build",
+    "DELIVERABLE_TITLE": "System Operational"
+  }
+}

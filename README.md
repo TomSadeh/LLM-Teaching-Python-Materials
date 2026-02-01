@@ -25,7 +25,9 @@ This repository serves as a remote content source for the Maya Chat teaching app
 │   ├── module_8_modules/
 │   └── module_9_oop/
 └── scripts/
-    └── convert_exercises.py    # Script to regenerate exercises.json
+    ├── convert_exercises.py        # Regenerate exercises.json from raw files
+    ├── convert_to_templates.py     # Convert exercises to universal template system
+    └── build_lessons_json.py       # Build lessons.json from lesson files
 ```
 
 ## Modules
@@ -113,6 +115,30 @@ python scripts/convert_exercises.py raw_exercises
 ```
 
 Then update the version in `version.json` and commit.
+
+## Converting to Universal Templates
+
+To convert exercises from hardcoded themes to universal template system:
+
+```bash
+# Analyze a single exercise
+python scripts/convert_to_templates.py --input raw_exercises/module_7_dictionaries/complete_function/exercise_1.py --dry-run
+
+# Convert an entire module
+python scripts/convert_to_templates.py --module 7 --dry-run --report-dir conversion_reports
+
+# Analyze all exercises
+python scripts/convert_to_templates.py --all --dry-run --report-dir conversion_reports
+```
+
+The conversion script:
+- Matches exercises to appropriate narrative templates
+- Detects hardcoded theme references (Harry Potter, etc.)
+- Extracts narrative context for templatization
+- Generates JSON reports with conversion analysis
+- Supports batch processing across all 145 exercises
+
+See `docs/CONVERSION_SCRIPT_FINAL.md` for complete documentation.
 
 ## Language
 
