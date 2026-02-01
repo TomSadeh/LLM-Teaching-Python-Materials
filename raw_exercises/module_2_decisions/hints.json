@@ -1,0 +1,65 @@
+{
+  "exercise_1_password": {
+    "hints": [
+      "Use input() to get the password from the user",
+      "Compare with == inside an if statement",
+      "if password == \"secret\": print(\"Welcome!\") else: print(\"Wrong!\")"
+    ]
+  },
+  "exercise_2_grades": {
+    "hints": [
+      "Start checking from the highest score and work down",
+      "Use if/elif/else to check each grade boundary",
+      "if score >= 95: return \"O\" elif score >= 85: return \"E\" ..."
+    ]
+  },
+  "exercise_3_number_game": {
+    "hints": [
+      "Compare guess to secret using ==, >, and <",
+      "Use if/elif/else to handle all three cases",
+      "if guess == secret: ... elif guess > secret: ... else: ..."
+    ]
+  },
+  "exercise_4_quiz": {
+    "hints": [
+      "Use input() to get the answer, then compare with ==",
+      "Use .lower() on both strings to ignore capitalization",
+      "Return True for correct, False for wrong, then add to score"
+    ]
+  },
+  "exercise_5_age_checker": {
+    "hints": [
+      "Use if/elif/else to check age ranges",
+      "Check ranges with: if age < 13 or if age >= 13 and age <= 15",
+      "Start with the youngest age and work up, or oldest and work down"
+    ]
+  },
+  "exercise_6_calculator": {
+    "hints": [
+      "Check the operation with if/elif: if operation == \"+\":",
+      "Return the result of the math operation",
+      "For division, check if num2 is 0 before dividing"
+    ]
+  },
+  "exercise_7_time_greeter": {
+    "hints": [
+      "Use if/elif/else to check hour ranges",
+      "Morning is 5-11, afternoon 12-16, evening 17-20, night 21-4",
+      "For night, check: if hour >= 21 or hour <= 4"
+    ]
+  },
+  "exercise_8_even_odd": {
+    "hints": [
+      "Use the modulo operator % to check for remainder",
+      "number % 2 gives 0 for even numbers, 1 for odd",
+      "return number % 2 == 0"
+    ]
+  },
+  "exercise_9_leap_year": {
+    "hints": [
+      "A year divisible by 4 is usually a leap year",
+      "Exception: divisible by 100 is NOT a leap year",
+      "Exception to exception: divisible by 400 IS a leap year"
+    ]
+  }
+}

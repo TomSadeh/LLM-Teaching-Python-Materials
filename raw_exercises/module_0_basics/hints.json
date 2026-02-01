@@ -1,0 +1,86 @@
+{
+  "exercise_01_hello": {
+    "hints": [
+      "Use print() with quotes around your text",
+      "Each print() statement creates a new line",
+      "Example: print(\"Hello!\")"
+    ]
+  },
+  "exercise_02_variables": {
+    "hints": [
+      "Create a variable with: name = \"value\"",
+      "Use the variable name (without quotes) in print()",
+      "Variable names are case-sensitive: hero is different from Hero"
+    ]
+  },
+  "exercise_03_math": {
+    "hints": [
+      "Use + for addition, - for subtraction",
+      "Use * for multiplication, / for division",
+      "You can store results in variables: result = 5 + 3"
+    ]
+  },
+  "exercise_04_input": {
+    "hints": [
+      "input() waits for the user to type something",
+      "Store the result: name = input(\"What's your name? \")",
+      "input() always returns a string (text)"
+    ]
+  },
+  "exercise_05_calculator": {
+    "hints": [
+      "Convert input to a number with int(): num = int(input())",
+      "You can do math with the converted number",
+      "For decimals, use float() instead of int()"
+    ]
+  },
+  "exercise_07_counting": {
+    "hints": [
+      "range(5) gives you: 0, 1, 2, 3, 4",
+      "range(1, 6) gives you: 1, 2, 3, 4, 5",
+      "The loop variable (i) changes each time through the loop"
+    ]
+  },
+  "exercise_10_functions_basic": {
+    "hints": [
+      "A function is defined with: def function_name():",
+      "The code inside the function must be indented",
+      "Call the function with: function_name()"
+    ]
+  },
+  "exercise_11_functions_params": {
+    "hints": [
+      "Parameters go inside the parentheses: def greet(name):",
+      "Use the parameter like a variable inside the function",
+      "When calling, pass a value: greet(\"Maya\")"
+    ]
+  },
+  "exercise_12_functions_return": {
+    "hints": [
+      "Use return to send a value back: return result",
+      "Store the returned value: answer = my_function()",
+      "return is different from print - return gives back a value"
+    ]
+  },
+  "exercise_1_variable_bugs": {
+    "hints": [
+      "Check if strings are wrapped in quotes",
+      "Variable names are case-sensitive",
+      "Make sure the variable name matches when you use it"
+    ]
+  },
+  "exercise_1_syntax_errors": {
+    "hints": [
+      "Read the error message - it often points to the problem",
+      "Check for missing colons after for, if, def",
+      "Count your parentheses and quotes - they should match"
+    ]
+  },
+  "exercise_1_print_basics": {
+    "hints": [
+      "print() with commas adds spaces between items",
+      "print() with + concatenates without adding spaces",
+      "Quotes make something a string, without quotes it's a variable"
+    ]
+  }
+}

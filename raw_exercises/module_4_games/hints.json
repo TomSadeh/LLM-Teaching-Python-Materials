@@ -1,0 +1,65 @@
+{
+  "exercise_1_guess_number": {
+    "hints": [
+      "Use while True: to create a game loop, break to exit",
+      "Get guess with int(input()), compare with if/elif/else",
+      "Track attempts and break when correct or attempts reach limit"
+    ]
+  },
+  "exercise_2_rock_paper_scissors": {
+    "hints": [
+      "Check for tie first: if player == computer: return \"tie\"",
+      "Rock beats scissors, scissors beats paper, paper beats rock",
+      "Check player wins, else computer wins"
+    ]
+  },
+  "exercise_3_dice_game": {
+    "hints": [
+      "Use while True: with break to exit the loop",
+      "If roll is 1, return 0 immediately (lose turn points)",
+      "Add roll to turn_total, print running total each time"
+    ]
+  },
+  "exercise_4_your_game": {
+    "hints": [
+      "Pick a simple game idea: higher/lower, trivia, coin flip",
+      "Use while True: for the game loop with a way to exit",
+      "Track score or lives, have clear win/lose conditions"
+    ]
+  },
+  "exercise_5_coin_flip_streak": {
+    "hints": [
+      "random.choice([\"heads\", \"tails\"]) flips a coin",
+      "Use a while loop that continues while flip is \"heads\"",
+      "Count streak, break when \"tails\" appears"
+    ]
+  },
+  "exercise_6_higher_lower": {
+    "hints": [
+      "Generate new number, ask for \"higher\" or \"lower\" guess",
+      "Compare: if new > current and guess == \"higher\": correct",
+      "Return True for correct guess, False for wrong"
+    ]
+  },
+  "exercise_7_trivia": {
+    "hints": [
+      "Print question, then loop through choices with letters A, B, C, D",
+      "Get answer with input(), compare to correct letter",
+      "Use chr(65 + i) to get A, B, C, D from index 0, 1, 2, 3"
+    ]
+  },
+  "exercise_8_word_scramble": {
+    "hints": [
+      "Convert word to list: letters = list(word)",
+      "Shuffle with random.shuffle(letters), join back: \"\".join(letters)",
+      "Use a for loop for 3 tries, compare guess.lower() to word.lower()"
+    ]
+  },
+  "exercise_9_adventure": {
+    "hints": [
+      "Use print() to describe the scene and options",
+      "Get choice with input(), use if/elif/else for each path",
+      "Nest choices inside each other for deeper adventures"
+    ]
+  }
+}

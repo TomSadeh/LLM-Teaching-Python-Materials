@@ -1,144 +1,291 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "theme_support": true,
-  "generated_at": "2026-01-31T13:57:56.125162",
+  "generated_at": "2026-02-01T09:43:07.437763",
   "module": "module_5_functions",
   "count": 9,
+  "exercise_types": [
+    "write_code"
+  ],
   "exercises": [
     {
-      "id": "module_5_functions.exercise_1_shapes",
+      "id": "module_5_functions.write_code.exercise_1_shapes",
       "topic_id": "functions.basic",
-      "title": "module_5_functions/exercise_1_shapes.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Shapes",
       "title_he": "צורות",
       "title_en": "Shapes",
       "description_he": "פונקציות: צורות\n\nExercise 1: Shape Drawing Functions",
       "description_en": "Functions: Shapes\n\nExercise 1: Shape Drawing Functions",
       "difficulty": 3,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 1: Shape Drawing Functions\n\nimport turtle\n\n\ndef setup():\n    t = turtle.Turtle()\n    t.speed(5)\n    return t\n\n\ndef draw_square(t, size):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a square with the given size\n    pass\n\n\ndef draw_triangle(t, size):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a triangle with the given size\n    pass\n\n\ndef draw_polygon(t, sides, size):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw any polygon!\n    # Hint: the angle to turn is 360 / sides\n    pass\n\n\ndef main():\n    t = setup()\n\n    # Test your functions!\n    draw_square(t, 50)\n\n    t.penup()\n    t.forward(100)\n    t.pendown()\n\n    draw_triangle(t, 50)\n\n    t.penup()\n    t.forward(100)\n    t.pendown()\n\n    # Draw a hexagon (6 sides)\n    draw_polygon(t, 6, 50)\n\n    turtle.done()\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_5_functions",
-      "source_file": "module_5_functions/exercise_1_shapes.py"
+      "hints": [
+        "Use for loops inside each function to draw sides",
+        "For polygon: angle = 360 / sides",
+        "Pass the turtle t and size as parameters"
+      ],
+      "tags": [
+        "module_5_functions",
+        "write_code"
+      ],
+      "source_file": "module_5_functions/write_code/exercise_1_shapes.py"
     },
     {
-      "id": "module_5_functions.exercise_2_calculator",
-      "topic_id": "functions.basic",
-      "title": "module_5_functions/exercise_2_calculator.py",
+      "id": "module_5_functions.write_code.exercise_2_calculator",
+      "topic_id": "basics.input",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Calculator",
       "title_he": "מחשבון",
       "title_en": "Calculator",
       "description_he": "פונקציות: מחשבון\n\nExercise 2: Calculator with Functions",
       "description_en": "Functions: Calculator\n\nExercise 2: Calculator with Functions",
       "difficulty": 3,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 2: Calculator with Functions\n\n\ndef add(a, b):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return a + b\n    pass\n\n\ndef subtract(a, b):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return a - b\n    pass\n\n\ndef multiply(a, b):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return a * b\n    pass\n\n\ndef divide(a, b):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return a / b\n    # Bonus: what if b is 0? Handle that case!\n    pass\n\n\ndef calculate(num1, num2, operation):\n    # ✏️ YOUR CODE HERE ✏️\n    # Based on operation (+, -, *, /), call the right function\n    # and return the result\n    #\n    # Example: calculate(5, 3, \"+\") should return 8\n    pass\n\n\ndef main():\n    print(\"🔢 Calculator 🔢\")\n    print(\"================\")\n\n    num1 = float(input(\"First number: \"))\n    operation = input(\"Operation (+, -, *, /): \")\n    num2 = float(input(\"Second number: \"))\n\n    result = calculate(num1, num2, operation)\n    print(\"Result:\", result)\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_5_functions",
-      "source_file": "module_5_functions/exercise_2_calculator.py"
+      "hints": [
+        "Each operation function should return the result",
+        "In calculate(), use if/elif to check operation and call the right function",
+        "return add(num1, num2) when operation is \"+\""
+      ],
+      "tags": [
+        "module_5_functions",
+        "write_code"
+      ],
+      "source_file": "module_5_functions/write_code/exercise_2_calculator.py"
     },
     {
-      "id": "module_5_functions.exercise_3_helper_functions",
+      "id": "module_5_functions.write_code.exercise_3_helper_functions",
       "topic_id": "functions.basic",
-      "title": "module_5_functions/exercise_3_helper_functions.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Helper Functions",
       "title_he": "פונקציות עזר",
       "title_en": "Helper Functions",
       "description_he": "פונקציות: פונקציות עזר\n\nExercise 3: Useful Helper Functions",
       "description_en": "Functions: Helper Functions\n\nExercise 3: Useful Helper Functions",
       "difficulty": 3,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 3: Useful Helper Functions\n\nimport random\n\n\ndef is_even(number):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return True if number is even, False if odd\n    # Hint: use % (modulo) - if number % 2 == 0, it's even\n    pass\n\n\ndef get_max(a, b):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return the bigger number\n    pass\n\n\ndef get_random_item(items):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return a random item from the list\n    pass\n\n\ndef count_letter(text, letter):\n    # ✏️ YOUR CODE HERE ✏️\n    # Count how many times 'letter' appears in 'text'\n    # Hint: loop through each character in text\n    pass\n\n\ndef reverse_string(text):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return the text backwards\n    # Hint: text[::-1] reverses a string!\n    pass\n\n\ndef main():\n    # Test your functions!\n    print(\"Testing is_even:\")\n    print(\"4 is even:\", is_even(4))   # Should be True\n    print(\"7 is even:\", is_even(7))   # Should be False\n\n    print(\"\\nTesting get_max:\")\n    print(\"Max of 5 and 9:\", get_max(5, 9))  # Should be 9\n\n    print(\"\\nTesting get_random_item:\")\n    fruits = [\"apple\", \"banana\", \"orange\"]\n    print(\"Random fruit:\", get_random_item(fruits))\n\n    print(\"\\nTesting count_letter:\")\n    print(\"'l' in 'hello':\", count_letter(\"hello\", \"l\"))  # Should be 2\n\n    print(\"\\nTesting reverse_string:\")\n    print(\"Reverse 'hello':\", reverse_string(\"hello\"))  # Should be 'olleh'\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_5_functions",
-      "source_file": "module_5_functions/exercise_3_helper_functions.py"
+      "hints": [
+        "is_even: return number % 2 == 0",
+        "For counting letters, loop through text and count matches",
+        "Reverse string with slicing: return text[::-1]"
+      ],
+      "tags": [
+        "module_5_functions",
+        "write_code"
+      ],
+      "source_file": "module_5_functions/write_code/exercise_3_helper_functions.py"
     },
     {
-      "id": "module_5_functions.exercise_4_turtle_art",
+      "id": "module_5_functions.write_code.exercise_4_turtle_art",
       "topic_id": "functions.basic",
-      "title": "module_5_functions/exercise_4_turtle_art.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Turtle Art",
       "title_he": "אומנות צב",
       "title_en": "Turtle Art",
       "description_he": "פונקציות: אומנות צב\n\nExercise 4: Turtle Art with Custom Functions",
       "description_en": "Functions: Turtle Art\n\nExercise 4: Turtle Art with Custom Functions",
       "difficulty": 3,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 4: Turtle Art with Custom Functions\n\nimport turtle\n\n\ndef setup():\n    t = turtle.Turtle()\n    t.speed(0)\n    return t\n\n\ndef draw_square(t, size, color=\"black\"):\n    # ✏️ COMPLETE THIS FUNCTION ✏️\n    # Draw a filled square with the given color\n    # Use: t.fillcolor(color), t.begin_fill(), t.end_fill()\n    pass\n\n\ndef draw_flower(t, petal_size, num_petals):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a flower by drawing circles in a pattern\n    # Hint: for each petal, draw a circle and turn (360 / num_petals)\n    # t.circle(size) draws a circle\n    pass\n\n\ndef draw_row_of_shapes(t, shape_func, count, spacing):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw 'count' shapes in a row with 'spacing' between them\n    # shape_func is a function that draws a shape\n    # After each shape, move right by 'spacing'\n    pass\n\n\ndef create_art(t):\n    # ✏️ CREATE YOUR ART! ✏️\n    # Use your functions to create something cool!\n    #\n    # Ideas:\n    # - A garden of flowers\n    # - A pattern of squares in different colors\n    # - A row of shapes that get bigger\n    # - Combine everything into a scene!\n    pass\n\n\ndef main():\n    t = setup()\n    turtle.Screen().bgcolor(\"lightblue\")\n\n    create_art(t)\n\n    turtle.done()\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_5_functions",
-      "source_file": "module_5_functions/exercise_4_turtle_art.py"
+      "hints": [
+        "Use t.fillcolor(), t.begin_fill(), t.end_fill() for filled shapes",
+        "For flower: draw circles and turn between each",
+        "Call functions multiple times with different positions/colors"
+      ],
+      "tags": [
+        "module_5_functions",
+        "write_code"
+      ],
+      "source_file": "module_5_functions/write_code/exercise_4_turtle_art.py"
     },
     {
-      "id": "module_5_functions.exercise_5_temperature",
+      "id": "module_5_functions.write_code.exercise_5_temperature",
       "topic_id": "functions.basic",
-      "title": "module_5_functions/exercise_5_temperature.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Temperature",
       "title_he": "טמפרטורה",
       "title_en": "Temperature",
       "description_he": "פונקציות: טמפרטורה\n\nExercise 5: Temperature Converter",
       "description_en": "Functions: Temperature\n\nExercise 5: Temperature Converter",
       "difficulty": 3,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 5: Temperature Converter\n\ndef celsius_to_fahrenheit(celsius):\n    # ✏️ YOUR CODE HERE ✏️\n    # Convert Celsius to Fahrenheit and return the result\n    # Formula: F = (C × 9/5) + 32\n    pass\n\n\ndef fahrenheit_to_celsius(fahrenheit):\n    # ✏️ YOUR CODE HERE ✏️\n    # Convert Fahrenheit to Celsius and return the result\n    # Formula: C = (F - 32) × 5/9\n    pass\n\n\ndef main():\n    print(\"=== Temperature Converter ===\\n\")\n\n    print(\"Choose conversion:\")\n    print(\"1. Celsius to Fahrenheit\")\n    print(\"2. Fahrenheit to Celsius\")\n\n    choice = input(\"\\nYour choice (1 or 2): \")\n\n    if choice == \"1\":\n        temp = float(input(\"Enter temperature in Celsius: \"))\n        result = celsius_to_fahrenheit(temp)\n        print(temp, \"°C =\", result, \"°F\")\n    elif choice == \"2\":\n        temp = float(input(\"Enter temperature in Fahrenheit: \"))\n        result = fahrenheit_to_celsius(temp)\n        print(temp, \"°F =\", result, \"°C\")\n    else:\n        print(\"Invalid choice!\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_5_functions",
-      "source_file": "module_5_functions/exercise_5_temperature.py"
+      "hints": [
+        "Fahrenheit = (Celsius * 9/5) + 32",
+        "Celsius = (Fahrenheit - 32) * 5/9",
+        "Return the calculated value, don't just print it"
+      ],
+      "tags": [
+        "module_5_functions",
+        "write_code"
+      ],
+      "source_file": "module_5_functions/write_code/exercise_5_temperature.py"
     },
     {
-      "id": "module_5_functions.exercise_6_tip_calculator",
+      "id": "module_5_functions.write_code.exercise_6_tip_calculator",
       "topic_id": "functions.basic",
-      "title": "module_5_functions/exercise_6_tip_calculator.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Tip Calculator",
       "title_he": "מחשבון טיפ",
       "title_en": "Tip Calculator",
       "description_he": "פונקציות: מחשבון טיפ\n\nExercise 6: Tip Calculator",
       "description_en": "Functions: Tip Calculator\n\nExercise 6: Tip Calculator",
       "difficulty": 3,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 6: Tip Calculator\n\ndef calculate_tip(bill_amount, tip_percent):\n    # ✏️ YOUR CODE HERE ✏️\n    # Calculate the tip amount and return it\n    # Example: bill is $50, tip is 20% -> return 10.0\n    #\n    # Hint: tip_percent is a whole number like 15 or 20\n    # You need to divide by 100 to get the decimal\n    pass\n\n\ndef calculate_total(bill_amount, tip_amount):\n    # ✏️ YOUR CODE HERE ✏️\n    # Add the bill and tip together and return the total\n    pass\n\n\ndef split_bill(total, num_people):\n    # ✏️ YOUR CODE HERE ✏️\n    # Divide the total by the number of people and return it\n    # This tells each person how much they owe\n    pass\n\n\ndef main():\n    print(\"=== Tip Calculator ===\\n\")\n\n    bill = float(input(\"Enter the bill amount: $\"))\n    tip_percent = int(input(\"Tip percentage (e.g., 15, 18, 20): \"))\n\n    tip = calculate_tip(bill, tip_percent)\n    total = calculate_total(bill, tip)\n\n    print(\"\\n--- Receipt ---\")\n    print(\"Bill:  $\" + str(bill))\n    print(\"Tip:   $\" + str(tip))\n    print(\"Total: $\" + str(total))\n\n    split = input(\"\\nSplit the bill? (y/n): \")\n    if split.lower() == \"y\":\n        people = int(input(\"How many people? \"))\n        each = split_bill(total, people)\n        print(\"Each person pays: $\" + str(round(each, 2)))\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_5_functions",
-      "source_file": "module_5_functions/exercise_6_tip_calculator.py"
+      "hints": [
+        "Tip = bill_amount * (tip_percent / 100)",
+        "Total = bill_amount + tip_amount",
+        "Split = total / num_people"
+      ],
+      "tags": [
+        "module_5_functions",
+        "write_code"
+      ],
+      "source_file": "module_5_functions/write_code/exercise_6_tip_calculator.py"
     },
     {
-      "id": "module_5_functions.exercise_7_password_generator",
+      "id": "module_5_functions.write_code.exercise_7_password_generator",
       "topic_id": "functions.basic",
-      "title": "module_5_functions/exercise_7_password_generator.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Password Generator",
       "title_he": "מחולל סיסמאות",
       "title_en": "Password Generator",
       "description_he": "פונקציות: מחולל סיסמאות\n\nExercise 7: Magical Spell Generator!",
       "description_en": "Functions: Password Generator\n\nExercise 7: Magical Spell Generator!",
       "difficulty": 3,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 7: Magical Spell Generator!\n\nimport random\n\n\ndef generate_spell(length):\n    # ✏️ YOUR CODE HERE ✏️\n    # Generate a random magical spell name of the given length\n    #\n    # Steps:\n    # 1. Create a string of magical-sounding letters to choose from\n    #    Example: characters = \"aeioulmnrstvxz\"\n    #    (Using more vowels makes it easier to pronounce!)\n    # 2. Start with an empty spell string\n    # 3. Loop 'length' times, each time picking a random character\n    #    Hint: use random.choice(characters)\n    # 4. Return the spell\n    #\n    # Bonus: Capitalize the first letter!\n    # Bonus: Add a magical suffix like \"us\", \"ium\", or \"ara\"!\n    pass\n\n\ndef generate_spells(count, length):\n    # ✏️ YOUR CODE HERE ✏️\n    # Generate multiple spells and return them in a list\n    #\n    # Hint: Create an empty list\n    # Hint: Loop 'count' times\n    # Hint: Each time, generate a spell and append it to the list\n    pass\n\n\ndef main():\n    print(\"🪄 Magical Spell Generator 🪄\")\n    print(\"Create new spells like a true wizard!\\n\")\n\n    length = int(input(\"How long should the spell be? \"))\n    count = int(input(\"How many spells to generate? \"))\n\n    spells = generate_spells(count, length)\n\n    print(\"\\n✨ Your new spells: ✨\")\n    print(\"-\" * 20)\n    for spell in spells:\n        print(spell)\n\n    print(\"\\nTry saying them out loud!\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_5_functions",
-      "source_file": "module_5_functions/exercise_7_password_generator.py"
+      "hints": [
+        "Use random.choice(characters) to pick random letters",
+        "Loop 'length' times, adding each character to the spell string",
+        "For multiple spells, loop 'count' times and append each to a list"
+      ],
+      "tags": [
+        "module_5_functions",
+        "write_code"
+      ],
+      "source_file": "module_5_functions/write_code/exercise_7_password_generator.py"
     },
     {
-      "id": "module_5_functions.exercise_8_greeting_card",
+      "id": "module_5_functions.write_code.exercise_8_greeting_card",
       "topic_id": "functions.basic",
-      "title": "module_5_functions/exercise_8_greeting_card.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Greeting Card",
       "title_he": "כרטיס ברכה",
       "title_en": "Greeting Card",
       "description_he": "פונקציות: כרטיס ברכה\n\nExercise 8: Greeting Card Maker",
       "description_en": "Functions: Greeting Card\n\nExercise 8: Greeting Card Maker",
       "difficulty": 3,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 8: Greeting Card Maker\n\ndef make_border(width, char=\"*\"):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return a string of 'char' repeated 'width' times\n    # Example: make_border(5, \"*\") returns \"*****\"\n    #\n    # Hint: You can multiply strings! \"*\" * 3 = \"***\"\n    pass\n\n\ndef center_text(text, width):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return the text centered in a line of the given width\n    #\n    # Example: center_text(\"Hi\", 10) returns \"    Hi    \"\n    #\n    # Hint: Use the .center() string method\n    # Or calculate spaces needed on each side\n    pass\n\n\ndef make_card(recipient, message, width=30):\n    # ✏️ YOUR CODE HERE ✏️\n    # Create and print a greeting card!\n    #\n    # It should look something like this:\n    # ******************************\n    # *                            *\n    # *        Happy Birthday      *\n    # *           Sarah!           *\n    # *                            *\n    # *   Wishing you a great day  *\n    # *                            *\n    # ******************************\n    #\n    # Use make_border() and center_text() to help!\n    #\n    # Hint: For middle lines, you need a * at start and end\n    # with the centered text in between\n    pass\n\n\ndef main():\n    print(\"=== Greeting Card Maker ===\\n\")\n\n    recipient = input(\"Who is this card for? \")\n    print(\"\\nChoose a greeting:\")\n    print(\"1. Happy Birthday\")\n    print(\"2. Congratulations\")\n    print(\"3. Thank You\")\n    print(\"4. Custom message\")\n\n    choice = input(\"Your choice: \")\n\n    if choice == \"1\":\n        greeting = \"Happy Birthday\"\n    elif choice == \"2\":\n        greeting = \"Congratulations\"\n    elif choice == \"3\":\n        greeting = \"Thank You\"\n    else:\n        greeting = input(\"Enter your greeting: \")\n\n    message = input(\"Add a short message: \")\n\n    print(\"\\n\")\n    make_card(recipient, greeting + \" \" + recipient + \"!\\n\" + message)\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_5_functions",
-      "source_file": "module_5_functions/exercise_8_greeting_card.py"
+      "hints": [
+        "Multiply a character to make border: \"*\" * width",
+        "Use text.center(width) to center text in a line",
+        "Build the card line by line with borders on each side"
+      ],
+      "tags": [
+        "module_5_functions",
+        "write_code"
+      ],
+      "source_file": "module_5_functions/write_code/exercise_8_greeting_card.py"
     },
     {
-      "id": "module_5_functions.exercise_9_turtle_scene",
+      "id": "module_5_functions.write_code.exercise_9_turtle_scene",
       "topic_id": "functions.basic",
-      "title": "module_5_functions/exercise_9_turtle_scene.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Turtle Scene",
       "title_he": "סצנת צב",
       "title_en": "Turtle Scene",
       "description_he": "פונקציות: סצנת צב\n\nExercise 9: Magical Scene with Functions!",
       "description_en": "Functions: Turtle Scene\n\nExercise 9: Magical Scene with Functions!",
       "difficulty": 3,
-      "starter_code": "# Exercise 9: Magical Scene with Functions!\n\nimport turtle\n\n\ndef setup():\n    \"\"\"Set up the screen and turtle\"\"\"\n    screen = turtle.Screen()\n    screen.bgcolor(\"navy\")  # Night sky for magic!\n    t = turtle.Turtle()\n    t.speed(0)\n    return t\n\n\ndef draw_square(t, x, y, size, color):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a filled square at position (x, y)\n    #\n    # Steps:\n    # 1. Pick up pen, go to (x, y), put pen down\n    # 2. Set the fill color\n    # 3. Begin fill\n    # 4. Draw 4 sides of the square\n    # 5. End fill\n    #\n    # Hint: t.penup(), t.goto(x, y), t.pendown()\n    # Hint: t.fillcolor(color), t.begin_fill(), t.end_fill()\n    pass\n\n\ndef draw_triangle(t, x, y, size, color):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a filled triangle at position (x, y)\n    # Similar to square but with 3 sides and 120 degree turns\n    pass\n\n\ndef draw_circle_shape(t, x, y, radius, color):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a filled circle at position (x, y)\n    #\n    # Hint: t.circle(radius) draws a circle\n    # The turtle draws from the bottom of the circle\n    pass\n\n\ndef draw_star(t, x, y, size, color):\n    # ✏️ BONUS FUNCTION ✏️\n    # Draw a star at position (x, y)\n    # Use a 5-pointed star (like in the {{location}}!)\n    # Hint: for a 5-pointed star, turn 144 degrees\n    pass\n\n\ndef draw_castle(t, x, y):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a magical castle using the shape functions!\n    # Think of {{place}}! It could have:\n    # - A main square building\n    # - Tall triangle towers\n    # - Small windows (yellow for lit-up!)\n    # - Multiple towers at different heights\n    #\n    # Colors: \"gray\", \"darkgray\", \"yellow\" (for windows)\n    pass\n\n\ndef draw_moon(t):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a glowing moon in the night sky\n    # Use draw_circle_shape with a light color\n    pass\n\n\ndef draw_wand(t, x, y):\n    # ✏️ BONUS ✏️\n    # Draw a magic wand!\n    # Could be a thin rectangle with sparkles (small stars)\n    pass\n\n\ndef main():\n    t = setup()\n\n    # ✏️ DRAW YOUR MAGICAL SCENE HERE ✏️\n    # Create a scene from your favorite book!\n    #\n    # Ideas:\n    # - {{place}} at night with a moon and stars\n    # - {{place}} with cabins and torches\n    # - {{place}} glowing in the distance\n    # - The Hunger Games arena (trees, Cornucopia)\n    #\n    # Use the functions above to create your scene!\n\n    # Example calls (uncomment and modify):\n    # draw_castle(t, -100, -100)\n    # draw_moon(t)\n    # draw_star(t, 50, 150, 20, \"white\")\n    # draw_star(t, -80, 180, 15, \"yellow\")\n\n    t.hideturtle()\n    turtle.done()\n\n\nmain()\n",
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 9: Magical Scene with Functions!\n\nimport turtle\n\n\ndef setup():\n    \"\"\"Set up the screen and turtle\"\"\"\n    screen = turtle.Screen()\n    screen.bgcolor(\"navy\")  # Night sky for magic!\n    t = turtle.Turtle()\n    t.speed(0)\n    return t\n\n\ndef draw_square(t, x, y, size, color):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a filled square at position (x, y)\n    #\n    # Steps:\n    # 1. Pick up pen, go to (x, y), put pen down\n    # 2. Set the fill color\n    # 3. Begin fill\n    # 4. Draw 4 sides of the square\n    # 5. End fill\n    #\n    # Hint: t.penup(), t.goto(x, y), t.pendown()\n    # Hint: t.fillcolor(color), t.begin_fill(), t.end_fill()\n    pass\n\n\ndef draw_triangle(t, x, y, size, color):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a filled triangle at position (x, y)\n    # Similar to square but with 3 sides and 120 degree turns\n    pass\n\n\ndef draw_circle_shape(t, x, y, radius, color):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a filled circle at position (x, y)\n    #\n    # Hint: t.circle(radius) draws a circle\n    # The turtle draws from the bottom of the circle\n    pass\n\n\ndef draw_star(t, x, y, size, color):\n    # ✏️ BONUS FUNCTION ✏️\n    # Draw a star at position (x, y)\n    # Use a 5-pointed star (like in the {{location}}!)\n    # Hint: for a 5-pointed star, turn 144 degrees\n    pass\n\n\ndef draw_castle(t, x, y):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a magical castle using the shape functions!\n    # Think of {{place}}! It could have:\n    # - A main square building\n    # - Tall triangle towers\n    # - Small windows (yellow for lit-up!)\n    # - Multiple towers at different heights\n    #\n    # Colors: \"gray\", \"darkgray\", \"yellow\" (for windows)\n    pass\n\n\ndef draw_moon(t):\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a glowing moon in the night sky\n    # Use draw_circle_shape with a light color\n    pass\n\n\ndef draw_wand(t, x, y):\n    # ✏️ BONUS ✏️\n    # Draw a magic wand!\n    # Could be a thin rectangle with sparkles (small stars)\n    pass\n\n\ndef main():\n    t = setup()\n\n    # ✏️ DRAW YOUR MAGICAL SCENE HERE ✏️\n    # Create a scene from your favorite book!\n    #\n    # Ideas:\n    # - {{place}} at night with a moon and stars\n    # - {{school}} with towers and torches\n    # - {{location}} glowing in the distance\n    # - A forest scene with trees and a campfire\n    #\n    # Use the functions above to create your scene!\n\n    # Example calls (uncomment and modify):\n    # draw_castle(t, -100, -100)\n    # draw_moon(t)\n    # draw_star(t, 50, 150, 20, \"white\")\n    # draw_star(t, -80, 180, 15, \"yellow\")\n\n    t.hideturtle()\n    turtle.done()\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_5_functions",
-      "source_file": "module_5_functions/exercise_9_turtle_scene.py"
+      "hints": [
+        "Use t.penup(), t.goto(x, y), t.pendown() to position shapes",
+        "Create helper functions for each element (star, moon, building)",
+        "Call functions multiple times at different positions for a scene"
+      ],
+      "tags": [
+        "module_5_functions",
+        "write_code"
+      ],
+      "source_file": "module_5_functions/write_code/exercise_9_turtle_scene.py"
     }
   ]
 }

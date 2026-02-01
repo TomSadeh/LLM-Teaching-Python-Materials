@@ -35,14 +35,6 @@ def exercise_d():
     pass
 
 
-def exercise_e():
-    # ✏️ Fix this code! It has errors:
-    # heroName = {{heroine}}
-    # print(heroname)
-
-    pass
-
-
 def main():
     print("=== Exercise A ===")
     exercise_a()
@@ -55,9 +47,6 @@ def main():
 
     print("\n=== Exercise D ===")
     exercise_d()
-
-    print("\n=== Exercise E ===")
-    exercise_e()
 
 
 main()

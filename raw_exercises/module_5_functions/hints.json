@@ -1,0 +1,65 @@
+{
+  "exercise_1_shapes": {
+    "hints": [
+      "Use for loops inside each function to draw sides",
+      "For polygon: angle = 360 / sides",
+      "Pass the turtle t and size as parameters"
+    ]
+  },
+  "exercise_2_calculator": {
+    "hints": [
+      "Each operation function should return the result",
+      "In calculate(), use if/elif to check operation and call the right function",
+      "return add(num1, num2) when operation is \"+\""
+    ]
+  },
+  "exercise_3_helper_functions": {
+    "hints": [
+      "is_even: return number % 2 == 0",
+      "For counting letters, loop through text and count matches",
+      "Reverse string with slicing: return text[::-1]"
+    ]
+  },
+  "exercise_4_turtle_art": {
+    "hints": [
+      "Use t.fillcolor(), t.begin_fill(), t.end_fill() for filled shapes",
+      "For flower: draw circles and turn between each",
+      "Call functions multiple times with different positions/colors"
+    ]
+  },
+  "exercise_5_temperature": {
+    "hints": [
+      "Fahrenheit = (Celsius * 9/5) + 32",
+      "Celsius = (Fahrenheit - 32) * 5/9",
+      "Return the calculated value, don't just print it"
+    ]
+  },
+  "exercise_6_tip_calculator": {
+    "hints": [
+      "Tip = bill_amount * (tip_percent / 100)",
+      "Total = bill_amount + tip_amount",
+      "Split = total / num_people"
+    ]
+  },
+  "exercise_7_password_generator": {
+    "hints": [
+      "Use random.choice(characters) to pick random letters",
+      "Loop 'length' times, adding each character to the spell string",
+      "For multiple spells, loop 'count' times and append each to a list"
+    ]
+  },
+  "exercise_8_greeting_card": {
+    "hints": [
+      "Multiply a character to make border: \"*\" * width",
+      "Use text.center(width) to center text in a line",
+      "Build the card line by line with borders on each side"
+    ]
+  },
+  "exercise_9_turtle_scene": {
+    "hints": [
+      "Use t.penup(), t.goto(x, y), t.pendown() to position shapes",
+      "Create helper functions for each element (star, moon, building)",
+      "Call functions multiple times at different positions for a scene"
+    ]
+  }
+}

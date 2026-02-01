@@ -1,144 +1,291 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "theme_support": true,
-  "generated_at": "2026-01-31T13:57:56.124035",
+  "generated_at": "2026-02-01T09:43:07.435685",
   "module": "module_4_games",
   "count": 9,
+  "exercise_types": [
+    "write_code"
+  ],
   "exercises": [
     {
-      "id": "module_4_games.exercise_1_guess_number",
+      "id": "module_4_games.write_code.exercise_1_guess_number",
       "topic_id": "loops.while",
-      "title": "module_4_games/exercise_1_guess_number.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Guess the Number",
       "title_he": "נחש את המספר",
       "title_en": "Guess the Number",
       "description_he": "משחקים: נחש את המספר\n\nExercise 1: Guess the Number Game",
       "description_en": "Games: Guess the Number\n\nExercise 1: Guess the Number Game",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 1: Guess the Number Game\n\nimport random\n\n\ndef play_game():\n    secret = random.randint(1, 20)\n    attempts = 0\n\n    print(\"I'm thinking of a number between 1 and 20...\")\n    print(\"You have 5 tries to guess it!\")\n    print()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Create a game loop that:\n    # 1. Asks the player for a guess (use int(input(...)))\n    # 2. Add 1 to attempts\n    # 3. Check if guess equals secret - if yes, print \"You won!\" and break\n    # 4. If guess is too high, print \"Too high!\"\n    # 5. If guess is too low, print \"Too low!\"\n    # 6. If attempts reaches 5, print \"Game over!\" and break\n    #\n    # Hint: use while True: and break to exit\n    pass\n\n\ndef main():\n    print(\"🎯 Guess the Number 🎯\")\n    print(\"======================\")\n    play_game()\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_4_games",
-      "source_file": "module_4_games/exercise_1_guess_number.py"
+      "hints": [
+        "Use while True: to create a game loop, break to exit",
+        "Get guess with int(input()), compare with if/elif/else",
+        "Track attempts and break when correct or attempts reach limit"
+      ],
+      "tags": [
+        "module_4_games",
+        "write_code"
+      ],
+      "source_file": "module_4_games/write_code/exercise_1_guess_number.py"
     },
     {
-      "id": "module_4_games.exercise_2_rock_paper_scissors",
+      "id": "module_4_games.write_code.exercise_2_rock_paper_scissors",
       "topic_id": "loops.while",
-      "title": "module_4_games/exercise_2_rock_paper_scissors.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Rock Paper Scissors",
       "title_he": "אבן נייר ומספריים",
       "title_en": "Rock Paper Scissors",
       "description_he": "משחקים: אבן נייר ומספריים\n\nExercise 2: Rock, Paper, Scissors",
       "description_en": "Games: Rock Paper Scissors\n\nExercise 2: Rock, Paper, Scissors",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 2: Rock, Paper, Scissors\n\nimport random\n\n\ndef get_computer_choice():\n    choices = [\"rock\", \"paper\", \"scissors\"]\n    return random.choice(choices)\n\n\ndef get_winner(player, computer):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return who wins:\n    # - \"tie\" if player and computer are the same\n    # - \"player\" if player wins\n    # - \"computer\" if computer wins\n    #\n    # Remember:\n    # - rock beats scissors\n    # - scissors beats paper\n    # - paper beats rock\n    #\n    # Hint: check for tie first, then check player wins\n    pass\n\n\ndef play_round():\n    player = input(\"Choose rock, paper, or scissors: \")\n    computer = get_computer_choice()\n\n    print(\"You chose:\", player)\n    print(\"Computer chose:\", computer)\n\n    winner = get_winner(player, computer)\n\n    if winner == \"tie\":\n        print(\"It's a tie!\")\n    elif winner == \"player\":\n        print(\"You win!\")\n    else:\n        print(\"Computer wins!\")\n\n\ndef main():\n    print(\"✊ Rock, Paper, Scissors ✋\")\n    print(\"==========================\")\n    play_round()\n\n    # BONUS: Add a loop to play multiple rounds and keep score!\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_4_games",
-      "source_file": "module_4_games/exercise_2_rock_paper_scissors.py"
+      "hints": [
+        "Check for tie first: if player == computer: return \"tie\"",
+        "Rock beats scissors, scissors beats paper, paper beats rock",
+        "Check player wins, else computer wins"
+      ],
+      "tags": [
+        "module_4_games",
+        "write_code"
+      ],
+      "source_file": "module_4_games/write_code/exercise_2_rock_paper_scissors.py"
     },
     {
-      "id": "module_4_games.exercise_3_dice_game",
+      "id": "module_4_games.write_code.exercise_3_dice_game",
       "topic_id": "loops.while",
-      "title": "module_4_games/exercise_3_dice_game.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Dice Game",
       "title_he": "משחק קוביות",
       "title_en": "Dice Game",
       "description_he": "משחקים: משחק קוביות\n\nExercise 3: Dice Game (Pig)",
       "description_en": "Games: Dice Game\n\nExercise 3: Dice Game (Pig)",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 3: Dice Game (Pig)\n\nimport random\n\n\ndef roll_dice():\n    return random.randint(1, 6)\n\n\ndef play_turn():\n    turn_total = 0\n\n    # ✏️ YOUR CODE HERE ✏️\n    # One turn of the dice game:\n    #\n    # Loop until player chooses to stop:\n    # 1. Ask \"Roll or hold? (r/h): \"\n    # 2. If \"h\" (hold): break and return turn_total\n    # 3. If \"r\" (roll):\n    #    - Roll the dice using roll_dice()\n    #    - Print what was rolled\n    #    - If rolled 1: print \"Oops! You lose this turn's points!\"\n    #                   return 0\n    #    - Otherwise: add the roll to turn_total\n    #    - Print current turn total\n    #\n    # Hint: while True with break works well here\n\n    return turn_total\n\n\ndef main():\n    print(\"🎲 Dice Game 🎲\")\n    print(\"===============\")\n    print(\"Roll dice to get points.\")\n    print(\"Roll a 1 and you lose all points from this turn!\")\n    print(\"Choose 'hold' to keep your points safely.\")\n    print()\n\n    score = 0\n    points = play_turn()\n    score = score + points\n    print(\"You scored:\", points, \"points this turn!\")\n    print(\"Total score:\", score)\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_4_games",
-      "source_file": "module_4_games/exercise_3_dice_game.py"
+      "hints": [
+        "Use while True: with break to exit the loop",
+        "If roll is 1, return 0 immediately (lose turn points)",
+        "Add roll to turn_total, print running total each time"
+      ],
+      "tags": [
+        "module_4_games",
+        "write_code"
+      ],
+      "source_file": "module_4_games/write_code/exercise_3_dice_game.py"
     },
     {
-      "id": "module_4_games.exercise_4_your_game",
+      "id": "module_4_games.write_code.exercise_4_your_game",
       "topic_id": "loops.while",
-      "title": "module_4_games/exercise_4_your_game.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Your Own Game",
       "title_he": "המשחק שלך",
       "title_en": "Your Own Game",
       "description_he": "משחקים: המשחק שלך\n\nExercise 4: Create Your Own Game!",
       "description_en": "Games: Your Own Game\n\nExercise 4: Create Your Own Game!",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 4: Create Your Own Game!\n\nimport random\n\n\n# ✏️ CREATE YOUR OWN GAME! ✏️\n#\n# Ideas:\n# - Higher/Lower: guess if next number is higher or lower\n# - Word Scramble: unscramble random letters to make a word\n# - Trivia: quiz game with score tracking\n# - Adventure: text-based choices (\"go left\" or \"go right\")\n# - Coin Flip: bet on heads or tails\n# - Math Quiz: random math problems to solve\n#\n# Your game should have:\n# 1. A clear goal for the player\n# 2. Some kind of loop (multiple rounds or attempts)\n# 3. A way to win or lose\n# 4. Score tracking or lives\n# 5. Fun messages!\n#\n# Start with these functions and modify as needed:\n\n\ndef setup_game():\n    # Set up any starting values\n    pass\n\n\ndef play_round():\n    # One round of your game\n    pass\n\n\ndef show_result(score):\n    # Show final results\n    print(\"Final score:\", score)\n\n\ndef main():\n    print(\"🎮 My Awesome Game 🎮\")\n    print(\"=====================\")\n\n    # Your game loop here!\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_4_games",
-      "source_file": "module_4_games/exercise_4_your_game.py"
+      "hints": [
+        "Pick a simple game idea: higher/lower, trivia, coin flip",
+        "Use while True: for the game loop with a way to exit",
+        "Track score or lives, have clear win/lose conditions"
+      ],
+      "tags": [
+        "module_4_games",
+        "write_code"
+      ],
+      "source_file": "module_4_games/write_code/exercise_4_your_game.py"
     },
     {
-      "id": "module_4_games.exercise_5_coin_flip_streak",
+      "id": "module_4_games.write_code.exercise_5_coin_flip_streak",
       "topic_id": "loops.while",
-      "title": "module_4_games/exercise_5_coin_flip_streak.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Coin Flip Streak",
       "title_he": "רצף מטבע",
       "title_en": "Coin Flip Streak",
       "description_he": "משחקים: רצף מטבע\n\nExercise 5: Coin Flip Streak",
       "description_en": "Games: Coin Flip Streak\n\nExercise 5: Coin Flip Streak",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 5: Coin Flip Streak\n\nimport random\n\n\ndef flip_coin():\n    # ✏️ YOUR CODE HERE ✏️\n    # Return either \"heads\" or \"tails\" randomly\n    # Hint: use random.choice([\"heads\", \"tails\"])\n    pass\n\n\ndef play_game():\n    # ✏️ YOUR CODE HERE ✏️\n    # The game: How many heads can you flip in a row?\n    #\n    # 1. Flip a coin\n    # 2. If it's heads, add to the streak and ask to flip again\n    # 3. If it's tails, the game is over!\n    #\n    # Return the final streak count\n    #\n    # Hint: Use a while loop\n    # Hint: Use input() to ask \"Flip again? (y/n)\"\n    pass\n\n\ndef main():\n    print(\"=== Coin Flip Streak ===\")\n    print(\"How many HEADS can you flip in a row?\")\n    print(\"The streak ends when you get TAILS!\\n\")\n\n    streak = play_game()\n\n    print(\"\\n🪙 Your streak:\", streak, \"heads in a row!\")\n\n    if streak >= 5:\n        print(\"🎉 Amazing luck!\")\n    elif streak >= 3:\n        print(\"👍 Nice streak!\")\n    else:\n        print(\"Better luck next time!\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_4_games",
-      "source_file": "module_4_games/exercise_5_coin_flip_streak.py"
+      "hints": [
+        "random.choice([\"heads\", \"tails\"]) flips a coin",
+        "Use a while loop that continues while flip is \"heads\"",
+        "Count streak, break when \"tails\" appears"
+      ],
+      "tags": [
+        "module_4_games",
+        "write_code"
+      ],
+      "source_file": "module_4_games/write_code/exercise_5_coin_flip_streak.py"
     },
     {
-      "id": "module_4_games.exercise_6_higher_lower",
+      "id": "module_4_games.write_code.exercise_6_higher_lower",
       "topic_id": "loops.while",
-      "title": "module_4_games/exercise_6_higher_lower.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Higher or Lower",
       "title_he": "גבוה נמוך",
       "title_en": "Higher or Lower",
       "description_he": "משחקים: גבוה נמוך\n\nExercise 6: Higher or Lower",
       "description_en": "Games: Higher or Lower\n\nExercise 6: Higher or Lower",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 6: Higher or Lower\n\nimport random\n\n\ndef get_random_number():\n    \"\"\"Returns a random number between 1 and 10\"\"\"\n    return random.randint(1, 10)\n\n\ndef play_round(current_number):\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Generate a new random number\n    # 2. Ask the player to guess if it will be \"higher\" or \"lower\"\n    # 3. Compare the new number to current_number\n    # 4. Return True if they guessed right, False if wrong\n    #\n    # Hint: Use input() to get their guess\n    # Hint: Compare the new number to current_number\n    #\n    # Don't forget to show them what the new number was!\n    pass\n\n\ndef main():\n    print(\"=== Higher or Lower ===\")\n    print(\"Guess if the next number will be higher or lower!\")\n    print(\"Numbers are between 1 and 10\\n\")\n\n    score = 0\n    current = get_random_number()\n\n    while True:\n        print(\"Current number:\", current)\n        won_round = play_round(current)\n\n        if won_round:\n            score += 1\n            print(\"✓ Correct! Score:\", score)\n            current = get_random_number()\n            play_again = input(\"Keep playing? (y/n): \")\n            if play_again.lower() != \"y\":\n                break\n        else:\n            print(\"✗ Wrong! Game over!\")\n            break\n\n    print(\"\\nFinal score:\", score)\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_4_games",
-      "source_file": "module_4_games/exercise_6_higher_lower.py"
+      "hints": [
+        "Generate new number, ask for \"higher\" or \"lower\" guess",
+        "Compare: if new > current and guess == \"higher\": correct",
+        "Return True for correct guess, False for wrong"
+      ],
+      "tags": [
+        "module_4_games",
+        "write_code"
+      ],
+      "source_file": "module_4_games/write_code/exercise_6_higher_lower.py"
     },
     {
-      "id": "module_4_games.exercise_7_trivia",
+      "id": "module_4_games.write_code.exercise_7_trivia",
       "topic_id": "loops.while",
-      "title": "module_4_games/exercise_7_trivia.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Trivia",
       "title_he": "טריוויה",
       "title_en": "Trivia",
       "description_he": "משחקים: טריוויה\n\nExercise 7: Book Trivia Quiz Game!",
       "description_en": "Games: Trivia\n\nExercise 7: Book Trivia Quiz Game!",
       "difficulty": 2,
-      "starter_code": "# Exercise 7: Book Trivia Quiz Game!\n\ndef ask_question(question, choices, correct_index):\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Print the question\n    # 2. Print all the choices with letters (A, B, C, D)\n    # 3. Get the player's answer\n    # 4. Return True if correct, False if wrong\n    #\n    # Hint: choices is a list like [\"{{house}}\", \"{{house}}\", \"{{house}}\", \"{{house}}\"]\n    # Hint: correct_index tells you which one is right (0 = A, 1 = B, etc.)\n    pass\n\n\ndef main():\n    print(\"📚 Ultimate Book Trivia Quiz! 📚\\n\")\n\n    # Questions: (question, choices, correct_index)\n    # Mix of {{hero}}, {{hero}}, Hunger Games, and {{school}} series!\n    questions = [\n        # {{hero}}\n        (\"What house is {{hero}} sorted into?\",\n         [\"{{house}}\", \"{{house}}\", \"{{house}}\", \"{{house}}\"], 1),\n\n        # {{school}} series\n        (\"What is {{heroine}}'s main ability?\",\n         [\"{{spell2}}\", \"{{spell1}}\", \"{{spell1}}\", \"{{spell2}}\"], 1),\n\n        # {{hero}}\n        (\"Who is {{hero}}'s mentor?\",\n         [\"{{mentor}}\", \"{{mentor}}\", \"{{mentor}}\", \"{{mentor}}\"], 2),\n\n        # Hunger Games\n        (\"What district is {{heroine}} from?\",\n         [\"{{school}}\", \"{{school}}\", \"{{school}}\", \"{{school}}\"], 3),\n\n        # {{hero}}\n        (\"What is the name of the spell that produces light?\",\n         [\"{{spell2}}\", \"{{spell1}}\", \"{{spell4}}\", \"{{spell3}}\"], 1),\n\n        # {{school}} series\n        (\"What school do students attend in {{school}} series?\",\n         [\"{{school}}\", \"{{school}}\", \"{{school}}\", \"{{school}}\"], 2),\n\n        # {{hero}}\n        (\"What is the name of the camp for heroes?\",\n         [\"{{school}}\", \"{{school}}\", \"{{school}}\", \"{{school}}\"], 1),\n\n        # Hunger Games\n        (\"What is {{heroine}}'s weapon of choice?\",\n         [\"{{item}}\", \"{{item}}\", \"{{item}}\", \"{{item}}\"], 2),\n    ]\n\n    score = 0\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Loop through the questions list\n    # For each question, call ask_question() with the right arguments\n    # If they got it right, add 1 to score\n\n    print(\"\\n=== Results ===\")\n    print(\"You got\", score, \"out of\", len(questions), \"correct!\")\n\n    if score == len(questions):\n        print(\"🏆 You're a true book expert!\")\n    elif score >= len(questions) // 2:\n        print(\"📖 Great job, fellow reader!\")\n    else:\n        print(\"📚 Time to re-read some books!\")\n\n\nmain()\n",
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 7: Book Trivia Quiz Game!\n\ndef ask_question(question, choices, correct_index):\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Print the question\n    # 2. Print all the choices with letters (A, B, C, D)\n    # 3. Get the player's answer\n    # 4. Return True if correct, False if wrong\n    #\n    # Hint: choices is a list like [\"{{house}}\", \"{{house}}\", \"{{house}}\", \"{{house}}\"]\n    # Hint: correct_index tells you which one is right (0 = A, 1 = B, etc.)\n    pass\n\n\ndef main():\n    print(\"📚 Ultimate Book Trivia Quiz! 📚\\n\")\n\n    # Questions: (question, choices, correct_index)\n    # Questions about your favorite {{school}} series!\n    questions = [\n        # {{hero}}\n        (\"What house is {{hero}} sorted into?\",\n         [\"{{house}}\", \"{{house}}\", \"{{house}}\", \"{{house}}\"], 1),\n\n        # {{school}} series\n        (\"What is {{heroine}}'s main ability?\",\n         [\"{{spell2}}\", \"{{spell1}}\", \"{{spell1}}\", \"{{spell2}}\"], 1),\n\n        # {{hero}}\n        (\"Who is {{hero}}'s mentor?\",\n         [\"{{mentor}}\", \"{{mentor}}\", \"{{mentor}}\", \"{{mentor}}\"], 2),\n\n        # Hunger Games\n        (\"What district is {{heroine}} from?\",\n         [\"{{school}}\", \"{{school}}\", \"{{school}}\", \"{{school}}\"], 3),\n\n        # {{hero}}\n        (\"What is the name of the spell that produces light?\",\n         [\"{{spell2}}\", \"{{spell1}}\", \"{{spell4}}\", \"{{spell3}}\"], 1),\n\n        # {{school}} series\n        (\"What school do students attend in {{school}} series?\",\n         [\"{{school}}\", \"{{school}}\", \"{{school}}\", \"{{school}}\"], 2),\n\n        # {{hero}}\n        (\"What is the name of the camp for heroes?\",\n         [\"{{school}}\", \"{{school}}\", \"{{school}}\", \"{{school}}\"], 1),\n\n        # Hunger Games\n        (\"What is {{heroine}}'s weapon of choice?\",\n         [\"{{item}}\", \"{{item}}\", \"{{item}}\", \"{{item}}\"], 2),\n    ]\n\n    score = 0\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Loop through the questions list\n    # For each question, call ask_question() with the right arguments\n    # If they got it right, add 1 to score\n\n    print(\"\\n=== Results ===\")\n    print(\"You got\", score, \"out of\", len(questions), \"correct!\")\n\n    if score == len(questions):\n        print(\"🏆 You're a true book expert!\")\n    elif score >= len(questions) // 2:\n        print(\"📖 Great job, fellow reader!\")\n    else:\n        print(\"📚 Time to re-read some books!\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_4_games",
-      "source_file": "module_4_games/exercise_7_trivia.py"
+      "hints": [
+        "Print question, then loop through choices with letters A, B, C, D",
+        "Get answer with input(), compare to correct letter",
+        "Use chr(65 + i) to get A, B, C, D from index 0, 1, 2, 3"
+      ],
+      "tags": [
+        "module_4_games",
+        "write_code"
+      ],
+      "source_file": "module_4_games/write_code/exercise_7_trivia.py"
     },
     {
-      "id": "module_4_games.exercise_8_word_scramble",
+      "id": "module_4_games.write_code.exercise_8_word_scramble",
       "topic_id": "loops.while",
-      "title": "module_4_games/exercise_8_word_scramble.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Word Scramble",
       "title_he": "מילים מבולבלות",
       "title_en": "Word Scramble",
       "description_he": "משחקים: מילים מבולבלות\n\nExercise 8: Word Scramble Game",
       "description_en": "Games: Word Scramble\n\nExercise 8: Word Scramble Game",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 8: Word Scramble Game\n\nimport random\n\n\ndef scramble_word(word):\n    # ✏️ YOUR CODE HERE ✏️\n    # Scramble the letters in the word and return the scrambled version\n    #\n    # Hint: Convert word to a list of letters: letters = list(word)\n    # Hint: Use random.shuffle(letters) to mix them up\n    # Hint: Join them back: \"\".join(letters)\n    pass\n\n\ndef play_round(word):\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Scramble the word\n    # 2. Show the scrambled word to the player\n    # 3. Let them guess (give them 3 tries!)\n    # 4. Return True if they got it, False if they used all tries\n    #\n    # Hint: Use a for loop for the 3 tries\n    # Hint: Compare their guess (lowercase) to word (lowercase)\n    pass\n\n\ndef main():\n    print(\"=== Word Scramble ===\")\n    print(\"Unscramble the letters to find the word!\\n\")\n\n    # Words to scramble\n    words = [\"python\", \"turtle\", \"coding\", \"games\", \"learn\"]\n\n    score = 0\n\n    for word in words:\n        if play_round(word):\n            score += 1\n            print(\"✓ Correct!\\n\")\n        else:\n            print(\"✗ The word was:\", word, \"\\n\")\n\n    print(\"=== Game Over ===\")\n    print(\"Score:\", score, \"/\", len(words))\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_4_games",
-      "source_file": "module_4_games/exercise_8_word_scramble.py"
+      "hints": [
+        "Convert word to list: letters = list(word)",
+        "Shuffle with random.shuffle(letters), join back: \"\".join(letters)",
+        "Use a for loop for 3 tries, compare guess.lower() to word.lower()"
+      ],
+      "tags": [
+        "module_4_games",
+        "write_code"
+      ],
+      "source_file": "module_4_games/write_code/exercise_8_word_scramble.py"
     },
     {
-      "id": "module_4_games.exercise_9_adventure",
+      "id": "module_4_games.write_code.exercise_9_adventure",
       "topic_id": "loops.while",
-      "title": "module_4_games/exercise_9_adventure.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Adventure",
       "title_he": "הרפתקה",
       "title_en": "Adventure",
       "description_he": "משחקים: הרפתקה\n\nExercise 9: Fantasy Book Adventure!",
       "description_en": "Games: Adventure\n\nExercise 9: Fantasy Book Adventure!",
       "difficulty": 2,
-      "starter_code": "# Exercise 9: Fantasy Book Adventure!\n\ndef start_adventure():\n    # ✏️ YOUR CODE HERE ✏️\n    # Create a text adventure set in one of your favorite book worlds!\n    #\n    # Pick a setting:\n    # - {{school}} (find a magical object, escape a creature)\n    # - {{school}} (go on a quest, meet a god)\n    # - The Hunger Games arena (survive, find allies)\n    # - {{location}} (discover a secret, use your abilities)\n    #\n    # The structure:\n    # 1. Print a story introduction (set the scene!)\n    # 2. Give the player choices (1, 2, etc.)\n    # 3. Use if/elif/else to handle their choice\n    # 4. Each choice leads to a new situation with more choices\n    # 5. End with different outcomes based on their path\n    #\n    # Example start ({{school}}):\n    # \"You're wandering the halls of {{school}} at night...\"\n    # \"You hear footsteps! What do you do?\"\n    # \"1. Hide behind a statue\"\n    # \"2. Use the {{item}}\"\n    # \"3. Run for it!\"\n    #\n    # Example start ({{school}} series):\n    # \"You're at {{school}} when {{villain}} attacks!\"\n    # \"1. Use your {{spell1}} to warn everyone\"\n    # \"2. Find {{hero}} and the others\"\n    # \"3. Use {{spell2}} to {{exclamation}} to safety\"\n    #\n    # Make it at least 2 choices deep!\n    pass\n\n\ndef main():\n    print(\"=\" * 45)\n    print(\"   WELCOME TO THE FANTASY ADVENTURE GAME\")\n    print(\"=\" * 45)\n    print()\n    print(\"You are about to enter a world of magic...\")\n    print()\n\n    start_adventure()\n\n    print()\n    print(\"Thanks for playing!\")\n\n\nmain()\n",
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 9: Fantasy Book Adventure!\n\ndef start_adventure():\n    # ✏️ YOUR CODE HERE ✏️\n    # Create a text adventure set in one of your favorite book worlds!\n    #\n    # Pick a setting:\n    # - {{school}} (find a magical object, escape a creature)\n    # - {{location}} (go on a quest, discover secrets)\n    # - {{place}} (survive, find allies)\n    # - {{house}} (discover a secret, use your abilities)\n    #\n    # The structure:\n    # 1. Print a story introduction (set the scene!)\n    # 2. Give the player choices (1, 2, etc.)\n    # 3. Use if/elif/else to handle their choice\n    # 4. Each choice leads to a new situation with more choices\n    # 5. End with different outcomes based on their path\n    #\n    # Example start ({{school}}):\n    # \"You're wandering the halls of {{school}} at night...\"\n    # \"You hear footsteps! What do you do?\"\n    # \"1. Hide behind a statue\"\n    # \"2. Use the {{item}}\"\n    # \"3. Run for it!\"\n    #\n    # Example start ({{school}} series):\n    # \"You're at {{school}} when {{villain}} attacks!\"\n    # \"1. Use your {{spell1}} to warn everyone\"\n    # \"2. Find {{hero}} and the others\"\n    # \"3. Use {{spell2}} to {{exclamation}} to safety\"\n    #\n    # Make it at least 2 choices deep!\n    pass\n\n\ndef main():\n    print(\"=\" * 45)\n    print(\"   WELCOME TO THE FANTASY ADVENTURE GAME\")\n    print(\"=\" * 45)\n    print()\n    print(\"You are about to enter a world of magic...\")\n    print()\n\n    start_adventure()\n\n    print()\n    print(\"Thanks for playing!\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_4_games",
-      "source_file": "module_4_games/exercise_9_adventure.py"
+      "hints": [
+        "Use print() to describe the scene and options",
+        "Get choice with input(), use if/elif/else for each path",
+        "Nest choices inside each other for deeper adventures"
+      ],
+      "tags": [
+        "module_4_games",
+        "write_code"
+      ],
+      "source_file": "module_4_games/write_code/exercise_9_adventure.py"
     }
   ]
 }

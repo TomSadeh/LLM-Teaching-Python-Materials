@@ -14,7 +14,10 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-VERSION = "2.0.0"
+VERSION = "2.1.0"
+
+# Will be loaded from exercise_types_metadata.json
+EXERCISE_TYPE_METADATA = {}
 
 # Map module folders to topic IDs
 MODULE_TO_TOPIC = {
@@ -169,6 +172,17 @@ TITLE_HE_MAP = {
     "composition": "הרכבה",
     "text adventure": "הרפתקת טקסט",
     "rpg battle": "קרב RPG",
+    # Bug hunt exercises
+    "variable bugs": "באגים במשתנים",
+    # Decode error exercises
+    "syntax errors": "שגיאות תחביר",
+    "name errors": "שגיאות שם",
+    "type errors": "שגיאות סוג",
+    "index errors": "שגיאות אינדקס",
+    # Output prediction exercises
+    "print basics": "יסודות הדפסה",
+    "loops": "לולאות",
+    "conditionals": "תנאים",
 }
 
 # English title mapping (keys match TITLE_HE_MAP)
@@ -268,7 +282,147 @@ TITLE_EN_MAP = {
     "composition": "Composition",
     "text adventure": "Text Adventure",
     "rpg battle": "RPG Battle",
+    # Bug hunt exercises
+    "variable bugs": "Variable Bugs",
+    # Decode error exercises
+    "syntax errors": "Syntax Errors",
+    "name errors": "Name Errors",
+    "type errors": "Type Errors",
+    "index errors": "Index Errors",
+    # Output prediction exercises
+    "print basics": "Print Basics",
+    "loops": "Loops",
+    "conditionals": "Conditionals",
 }
+
+# Topic ID mapping per exercise (more specific than module-level)
+# Format: "exercise_key": "topic_id"
+EXERCISE_TOPIC_MAP = {
+    # module_0_basics
+    "hello": "basics.print",
+    "variables": "basics.variables",
+    "math": "basics.math",
+    "input": "basics.input",
+    "calculator": "basics.input",
+    "madlib simple": "basics.strings",
+    "counting": "basics.loops",
+    "patterns": "basics.loops",
+    "sum": "basics.loops",
+    "functions basic": "basics.functions",
+    "functions params": "basics.functions",
+    "functions return": "basics.functions",
+    "fizzbuzz": "basics.loops",
+    "multiplication table": "basics.loops",
+    "mini project": "basics.project",
+    "turtle intro": "basics.turtle",
+    "turtle shapes": "basics.turtle",
+    "turtle colors": "basics.turtle",
+    "variable bugs": "basics.variables",
+    "syntax errors": "basics.syntax",
+    "name errors": "basics.errors",
+    "type errors": "basics.errors",
+    "print basics": "basics.print",
+    # module_1_turtle_loops
+    "loops": "loops.for",
+    "square": "loops.for",
+    "triangle": "loops.for",
+    "star": "loops.for",
+    "creative": "loops.for",
+    "hexagon": "loops.for",
+    "circle": "loops.for",
+    "rainbow": "loops.for",
+    "nested squares": "loops.nested",
+    "flower": "loops.for",
+    # module_2_decisions
+    "password": "control.if",
+    "grades": "control.if",
+    "number game": "control.if",
+    "quiz": "control.if",
+    "age checker": "control.if",
+    "time greeter": "control.if",
+    "even odd": "control.if",
+    "leap year": "control.if",
+    "conditionals": "control.if",
+    # module_3_lists
+    "favorites": "collections.lists",
+    "loop list": "collections.lists",
+    "magic 8ball": "collections.lists",
+    "madlibs": "collections.lists",
+    "todo list": "collections.lists",
+    "name picker": "collections.lists",
+    "shopping total": "collections.lists",
+    "playlist shuffler": "collections.lists",
+    "word collector": "collections.lists",
+    "index errors": "collections.lists",
+    # module_4_games
+    "guess number": "loops.while",
+    "rock paper scissors": "loops.while",
+    "dice game": "loops.while",
+    "your game": "loops.while",
+    "coin flip streak": "loops.while",
+    "higher lower": "loops.while",
+    "trivia": "loops.while",
+    "word scramble": "loops.while",
+    "adventure": "loops.while",
+    # module_5_functions
+    "shapes": "functions.basic",
+    "helper functions": "functions.basic",
+    "turtle art": "functions.basic",
+    "temperature": "functions.basic",
+    "tip calculator": "functions.basic",
+    "password generator": "functions.basic",
+    "greeting card": "functions.basic",
+    "turtle scene": "functions.basic",
+    # module_7_dictionaries
+    "spellbook": "collections.dict",
+    "character stats": "collections.dict",
+    "loop dictionaries": "collections.dict",
+    "nested data": "collections.dict",
+    "dict methods": "collections.dict",
+    "quiz game": "collections.dict",
+    "secret codes": "collections.dict",
+    "rpg inventory": "collections.dict",
+    "contact book": "collections.dict",
+    # module_8_modules
+    "datetime basics": "modules.datetime",
+    "random advanced": "modules.random",
+    "json basics": "modules.json",
+    "time module": "modules.time",
+    "math module": "modules.math",
+    "string module": "modules.string",
+    "os path": "modules.os",
+    "collections": "modules.collections",
+    "create module": "modules.custom",
+    # module_9_oop
+    "first class": "oop.classes",
+    "init method": "oop.init",
+    "methods": "oop.methods",
+    "str repr": "oop.dunder",
+    "interaction": "oop.methods",
+    "inheritance": "oop.inheritance",
+    "composition": "oop.composition",
+    "text adventure": "oop.project",
+    "rpg battle": "oop.project",
+}
+
+
+def load_exercise_type_metadata(root: Path) -> dict:
+    """Load exercise types metadata from templates directory."""
+    metadata_path = root / "templates" / "exercise_types_metadata.json"
+    if metadata_path.exists():
+        with open(metadata_path, encoding="utf-8") as f:
+            data = json.load(f)
+            return data.get("exercise_types", {})
+    return {}
+
+
+def load_hints_for_module(module_dir: Path) -> dict:
+    """Load hints.json for a module if it exists."""
+    hints_path = module_dir / "hints.json"
+    if hints_path.exists():
+        with open(hints_path, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
 
 
 def extract_title_from_filename(filename: str) -> tuple[str, str, str]:
@@ -306,10 +460,21 @@ def extract_description_from_content(content: str) -> str:
     return "\n".join(description_lines) if description_lines else ""
 
 
-def parse_exercise_file(filepath: Path) -> dict:
-    """Parse a single exercise file into JSON format."""
+def parse_exercise_file(
+    filepath: Path,
+    module_name: str,
+    exercise_type: str,
+    module_hints: dict = None,
+) -> dict:
+    """Parse a single exercise file into JSON format.
+
+    Args:
+        filepath: Path to the exercise file
+        module_name: Name of the module (e.g., "module_0_basics")
+        exercise_type: Type directory name (e.g., "write_code", "bug_hunt")
+        module_hints: Optional dict of hints loaded from hints.json
+    """
     content = filepath.read_text(encoding="utf-8")
-    module_name = filepath.parent.name
     filename = filepath.name
 
     title, title_en, title_he = extract_title_from_filename(filename)
@@ -329,30 +494,61 @@ def parse_exercise_file(filepath: Path) -> dict:
     else:
         description_en = f"{module_en}: {title_en}\n\nComplete the code in the functions marked with pass"
 
-    # Generate a stable ID from module and filename
-    exercise_id = f"{module_name}.{filename.replace('.py', '')}"
+    # Generate a stable ID from module, type, and filename
+    exercise_id = f"{module_name}.{exercise_type}.{filename.replace('.py', '')}"
 
-    # Use full path as title to match local migration format
-    full_title = f"{module_name}/{filename}"
+    # Get more specific topic_id from exercise map, fallback to module default
+    title_key = title.lower()
+    topic_id = EXERCISE_TOPIC_MAP.get(title_key, MODULE_TO_TOPIC.get(module_name, "basics.print"))
+
+    # Get exercise type metadata
+    type_meta = EXERCISE_TYPE_METADATA.get(exercise_type, {})
+    category = type_meta.get("category", "free_writing")
+    requires_running = type_meta.get("requires_running", True)
+    estimated_time = type_meta.get("estimated_time_minutes", 10)
+    skills = type_meta.get("skills", [])
+
+    # Get hints for this exercise if available
+    exercise_key = filename.replace(".py", "")
+    hints = []
+    if module_hints and exercise_key in module_hints:
+        hint_data = module_hints[exercise_key]
+        if isinstance(hint_data, dict):
+            hints = hint_data.get("hints", [])
+        elif isinstance(hint_data, list):
+            hints = hint_data
+
+    # Check for solution file
+    solution_path = filepath.parent / f"{exercise_key}_solution.py"
+    solution_code = None
+    if solution_path.exists():
+        solution_code = solution_path.read_text(encoding="utf-8")
 
     return {
         "id": exercise_id,
-        "topic_id": MODULE_TO_TOPIC.get(module_name, "basics.print"),
-        "title": full_title,
+        "topic_id": topic_id,
+        "exercise_type": exercise_type,
+        "category": category,
+        "title": title_en,
         "title_he": title_he,
         "title_en": title_en,
         "description_he": description_he,
         "description_en": description_en,
         "difficulty": MODULE_TO_DIFFICULTY.get(module_name, 1),
+        "requires_running": requires_running,
+        "estimated_time_minutes": estimated_time,
+        "skills": skills,
         "starter_code": content,
-        "solution_code": None,
-        "hints": [],
-        "tags": module_name,
-        "source_file": f"{module_name}/{filename}",
+        "solution_code": solution_code,
+        "hints": hints,
+        "tags": [module_name, exercise_type],
+        "source_file": f"{module_name}/{exercise_type}/{filename}",
     }
 
 
 def main():
+    global EXERCISE_TYPE_METADATA
+
     # Determine source directory
     root = Path(__file__).parent.parent
 
@@ -364,6 +560,13 @@ def main():
     if not source_dir.exists():
         print(f"Error: Source directory not found: {source_dir}")
         sys.exit(1)
+
+    # Load exercise type metadata
+    EXERCISE_TYPE_METADATA = load_exercise_type_metadata(root)
+    if EXERCISE_TYPE_METADATA:
+        print(f"Loaded metadata for {len(EXERCISE_TYPE_METADATA)} exercise types")
+    else:
+        print("Warning: exercise_types_metadata.json not found, using defaults")
 
     # Get all module directories
     modules = sorted([
@@ -380,16 +583,42 @@ def main():
         module_name = module_dir.name
         module_names.append(module_name)
 
-        # Get all exercise files in this module
-        py_files = sorted(module_dir.glob("*.py"))
         exercises = []
+        type_counts = {}
 
-        for filepath in py_files:
-            try:
-                exercise = parse_exercise_file(filepath)
-                exercises.append(exercise)
-            except Exception as e:
-                print(f"  [ERROR] {filepath}: {e}")
+        # Load hints for this module
+        module_hints = load_hints_for_module(module_dir)
+        if module_hints:
+            print(f"  {module_name}: loaded hints for {len(module_hints)} exercises")
+
+        # Get all type subdirectories in this module
+        type_dirs = sorted([
+            d for d in module_dir.iterdir()
+            if d.is_dir() and not d.name.startswith(".")
+        ])
+
+        # Also check for legacy .py files directly in module (shouldn't exist after migration)
+        legacy_files = sorted(module_dir.glob("*.py"))
+        if legacy_files:
+            print(f"  [WARNING] {module_name}: Found {len(legacy_files)} .py files not in subdirectory")
+            print(f"            Run: python scripts/migrate_to_type_dirs.py --run")
+
+        for type_dir in type_dirs:
+            exercise_type = type_dir.name
+            py_files = sorted(type_dir.glob("*.py"))
+
+            # Skip solution files
+            py_files = [f for f in py_files if not f.name.endswith("_solution.py")]
+
+            for filepath in py_files:
+                try:
+                    exercise = parse_exercise_file(
+                        filepath, module_name, exercise_type, module_hints
+                    )
+                    exercises.append(exercise)
+                    type_counts[exercise_type] = type_counts.get(exercise_type, 0) + 1
+                except Exception as e:
+                    print(f"  [ERROR] {filepath}: {e}")
 
         if not exercises:
             print(f"  {module_name}: no exercises found")
@@ -402,6 +631,7 @@ def main():
             "generated_at": datetime.now().isoformat(),
             "module": module_name,
             "count": len(exercises),
+            "exercise_types": list(type_counts.keys()),
             "exercises": exercises,
         }
 
@@ -409,7 +639,9 @@ def main():
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(module_data, f, indent=2, ensure_ascii=False)
 
-        print(f"  {module_name}: {len(exercises)} exercises")
+        # Format type counts for display
+        type_summary = ", ".join(f"{t}:{c}" for t, c in sorted(type_counts.items()))
+        print(f"  {module_name}: {len(exercises)} exercises ({type_summary})")
         total_exercises += len(exercises)
 
     # Write manifest.json

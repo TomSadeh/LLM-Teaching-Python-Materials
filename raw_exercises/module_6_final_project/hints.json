@@ -1,0 +1,23 @@
+{
+  "template_app": {
+    "hints": [
+      "Modify show_menu() to describe your app's features",
+      "Use the items list to store your app's data",
+      "Add more options in handle_choice() using elif"
+    ]
+  },
+  "template_art": {
+    "hints": [
+      "Create shape functions that take t, size, and color parameters",
+      "Use screen.bgcolor() to set background color",
+      "Combine multiple shapes and colors for interesting patterns"
+    ]
+  },
+  "template_game": {
+    "hints": [
+      "Define clear win/lose conditions in check_result()",
+      "Use the score variable to track player progress",
+      "Add multiple rounds with the while playing loop"
+    ]
+  }
+}

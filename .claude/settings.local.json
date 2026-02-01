@@ -7,7 +7,12 @@
       "Bash(git push)",
       "Grep",
       "Write",
-      "Read"
+      "Read",
+      "Bash(ls:*)",
+      "Bash(dir:*)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\User\\Documents\\GitHub\\LLM-Teaching-Python-Materials\\raw_exercises\\module_1_turtle_loops"
     ]
   }
 }

@@ -1,0 +1,65 @@
+{
+  "exercise_1_favorites": {
+    "hints": [
+      "Create a list with square brackets: heroes = [\"name1\", \"name2\"]",
+      "Access first item with [0], last item with [-1]",
+      "print(heroes) shows the whole list, print(heroes[0]) shows first"
+    ]
+  },
+  "exercise_2_loop_list": {
+    "hints": [
+      "Use a counter variable: counter = 1",
+      "Inside the loop: print counter, then add 1 to it",
+      "for item in items: print(str(counter) + \". \" + item); counter += 1"
+    ]
+  },
+  "exercise_3_magic_8ball": {
+    "hints": [
+      "Create a list of houses, then use random.choice()",
+      "random.choice(houses) picks one item randomly",
+      "Return the chosen item from the function"
+    ]
+  },
+  "exercise_4_madlibs": {
+    "hints": [
+      "Call get_random_word(list_name) to pick random words",
+      "Store each random word in a variable: hero = get_random_word(heroes)",
+      "Use f-strings or + to combine words into sentences"
+    ]
+  },
+  "exercise_5_todo_list": {
+    "hints": [
+      "Use len(todos) to check if list is empty",
+      "Use .append(item) to add, .pop(index) to remove",
+      "Remember: user enters 1 for first item, but list index is 0"
+    ]
+  },
+  "exercise_6_name_picker": {
+    "hints": [
+      "Use random.choice(names) to pick one name randomly",
+      "Return the chosen name from the function",
+      "Make sure the list has names before picking!"
+    ]
+  },
+  "exercise_7_shopping_total": {
+    "hints": [
+      "Start with total = 0",
+      "Loop through prices: for price in prices: total += price",
+      "Return total at the end"
+    ]
+  },
+  "exercise_8_playlist_shuffler": {
+    "hints": [
+      "random.shuffle(list) shuffles the list in place",
+      "It changes the original list, doesn't return a new one",
+      "Just call random.shuffle(songs) - no need to assign result"
+    ]
+  },
+  "exercise_9_word_collector": {
+    "hints": [
+      "Use len(words) to count items in a list",
+      "For longest: compare len(word) for each word, keep the longest",
+      "Start with longest = words[0], then loop and update if longer found"
+    ]
+  }
+}

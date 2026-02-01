@@ -1,0 +1,65 @@
+{
+  "exercise_1_spellbook": {
+    "hints": [
+      "Create a dictionary with curly braces: spell = {\"name\": \"value\"}",
+      "Access values with square brackets: spell[\"name\"]",
+      "Add new keys: dictionary[\"new_key\"] = value"
+    ]
+  },
+  "exercise_2_character_stats": {
+    "hints": [
+      "Modify values: hero[\"health\"] -= 20",
+      "Compare values in if statements: if hero[\"health\"] > 75:",
+      "Access nested values: hero[\"stats\"][\"health\"]"
+    ]
+  },
+  "exercise_3_loop_dictionaries": {
+    "hints": [
+      "Loop through keys: for key in dictionary:",
+      "Get value inside loop: dictionary[key]",
+      "Or use .items(): for key, value in dictionary.items():"
+    ]
+  },
+  "exercise_4_nested_data": {
+    "hints": [
+      "Access nested data: character[\"stats\"][\"health\"]",
+      "Modify nested data: school[\"house\"][\"points\"] += 10",
+      "Loop through nested dictionaries with nested for loops"
+    ]
+  },
+  "exercise_5_dict_methods": {
+    "hints": [
+      ".keys() returns all keys, .values() returns all values",
+      "Use 'in' to check: if key in dictionary:",
+      ".get(key, default) returns default if key doesn't exist"
+    ]
+  },
+  "exercise_6_quiz_game": {
+    "hints": [
+      "Store questions as list of dictionaries with question/answer keys",
+      "Loop through questions: for q in questions:",
+      "Compare user answer (lowercase) to correct answer (lowercase)"
+    ]
+  },
+  "exercise_7_secret_codes": {
+    "hints": [
+      "Create cipher dictionary: {\"a\": \"z\", \"b\": \"y\", ...}",
+      "Loop through each letter and look it up in cipher",
+      "Build encoded message by adding each encoded letter"
+    ]
+  },
+  "exercise_8_rpg_inventory": {
+    "hints": [
+      "Check if item exists: if item in inventory:",
+      "Add to quantity: inventory[item] += quantity",
+      "Use .pop(key) to remove an item from dictionary"
+    ]
+  },
+  "exercise_9_contact_book": {
+    "hints": [
+      "Use name as key, nested dictionary as value for details",
+      "Add contact: contacts[name] = {\"house\": ..., \"year\": ...}",
+      "Loop through contacts.items() to display all"
+    ]
+  }
+}

@@ -1,144 +1,319 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "theme_support": true,
-  "generated_at": "2026-01-31T13:57:56.122898",
+  "generated_at": "2026-02-01T09:43:07.433990",
   "module": "module_3_lists",
-  "count": 9,
+  "count": 10,
+  "exercise_types": [
+    "decode_error",
+    "write_code"
+  ],
   "exercises": [
     {
-      "id": "module_3_lists.exercise_1_favorites",
+      "id": "module_3_lists.decode_error.exercise_4_index_errors",
       "topic_id": "collections.lists",
-      "title": "module_3_lists/exercise_1_favorites.py",
+      "exercise_type": "decode_error",
+      "category": "debugging",
+      "title": "Index Errors",
+      "title_he": "שגיאות אינדקס",
+      "title_en": "Index Errors",
+      "description_he": "רשימות: שגיאות אינדקס\n\nExercise 4: Decode the Error - Index Errors\nEach exercise shows an error message and the code that caused it.\nYour job: Understand the error and fix the code WITHOUT running it first.\nTheme: {{hero}}'s collection of magical items at {{school}}\n============================================================\nERROR DECODE A: Index Out of Range\n============================================================",
+      "description_en": "Lists: Index Errors\n\nExercise 4: Decode the Error - Index Errors\nEach exercise shows an error message and the code that caused it.\nYour job: Understand the error and fix the code WITHOUT running it first.\nTheme: {{hero}}'s collection of magical items at {{school}}\n============================================================\nERROR DECODE A: Index Out of Range\n============================================================",
+      "difficulty": 2,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "error_literacy",
+        "debugging",
+        "python_errors"
+      ],
+      "starter_code": "# Exercise 4: Decode the Error - Index Errors\n#\n# Each exercise shows an error message and the code that caused it.\n# Your job: Understand the error and fix the code WITHOUT running it first.\n#\n# Theme: {{hero}}'s collection of magical items at {{school}}\n\n\n# ============================================================\n# ERROR DECODE A: Index Out of Range\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"inventory.py\", line 2, in <module>\n    print(items[3])\nIndexError: list index out of range\n\"\"\"\n\n\ndef buggy_code_a():\n    \"\"\"The code that caused the error\"\"\"\n    items = [\"wand\", \"potion\", \"cloak\"]\n    print(items[3])\n\n\ndef fix_code_a():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: List indexes start at 0! A 3-item list has indexes 0, 1, 2)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE B: Negative Index Too Far\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"spells.py\", line 2, in <module>\n    print(spells[-4])\nIndexError: list index out of range\n\"\"\"\n\n\ndef buggy_code_b():\n    \"\"\"The code that caused the error\"\"\"\n    spells = [\"{{spell1}}\", \"{{spell2}}\", \"{{spell3}}\"]\n    print(spells[-4])\n\n\ndef fix_code_b():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: Negative indexes go from -1 (last) to -len(list))\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE C: Empty List Access\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"collection.py\", line 2, in <module>\n    print(treasures[0])\nIndexError: list index out of range\n\"\"\"\n\n\ndef buggy_code_c():\n    \"\"\"The code that caused the error\"\"\"\n    treasures = []\n    print(treasures[0])\n\n\ndef fix_code_c():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: An empty list has no items to access!)\n    #\n    # Write the fixed code below (add an item first, or check if list is empty):\n    pass\n\n\n# ============================================================\n# ERROR DECODE D: Off-by-One in Loop\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"roster.py\", line 3, in <module>\n    print(students[i])\nIndexError: list index out of range\n\"\"\"\n\n\ndef buggy_code_d():\n    \"\"\"The code that caused the error\"\"\"\n    students = [\"{{hero}}\", \"{{heroine}}\", \"{{friend}}\"]\n    for i in range(4):\n        print(students[i])\n\n\ndef fix_code_d():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: range(4) gives 0,1,2,3 but the list only has indexes 0,1,2)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE E: String Index Error\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"name.py\", line 2, in <module>\n    print(name[10])\nIndexError: string index out of range\n\"\"\"\n\n\ndef buggy_code_e():\n    \"\"\"The code that caused the error\"\"\"\n    name = \"{{hero}}\"\n    print(name[10])\n\n\ndef fix_code_e():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: Strings work like lists - indexes start at 0!)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# BONUS: Multiple Index Errors\n# ============================================================\n\"\"\"\nThis code has 2 different index errors. Find and fix them all!\n\nmembers = [\"{{hero}}\", \"{{heroine}}\"]\nprint(\"First member:\", members[1])\nprint(\"Third member:\", members[2])\nprint(\"All members:\", members[0], members[1], members[2])\n\"\"\"\n\n\ndef fix_all_index_errors():\n    # ✏️ FIND AND FIX ALL 2 ERRORS ✏️\n    #\n    # Error 1: _______________\n    # Error 2: _______________\n    #\n    # Write the fully fixed code below:\n    pass\n\n\ndef main():\n    print(\"=== Decode the Error: Index Errors ===\")\n    print()\n    print(\"For each exercise:\")\n    print(\"1. Read the error message carefully\")\n    print(\"2. Identify what caused the error\")\n    print(\"3. Fix the code in the fix_code_X function\")\n    print()\n    print(\"Tip: IndexError means you're trying to access a position\")\n    print(\"     that doesn't exist! Remember: indexes start at 0.\")\n    print()\n\n    # Uncomment each to test after fixing:\n    # print(\"Testing A:\"); fix_code_a()\n    # print(\"Testing B:\"); fix_code_b()\n    # print(\"Testing C:\"); fix_code_c()\n    # print(\"Testing D:\"); fix_code_d()\n    # print(\"Testing E:\"); fix_code_e()\n    # print(\"Testing Bonus:\"); fix_all_index_errors()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_3_lists",
+        "decode_error"
+      ],
+      "source_file": "module_3_lists/decode_error/exercise_4_index_errors.py"
+    },
+    {
+      "id": "module_3_lists.write_code.exercise_1_favorites",
+      "topic_id": "collections.lists",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Favorites",
       "title_he": "מועדפים",
       "title_en": "Favorites",
       "description_he": "רשימות: מועדפים\n\nExercise 1: Favorite Book Characters!",
       "description_en": "Lists: Favorites\n\nExercise 1: Favorite Book Characters!",
       "difficulty": 2,
-      "starter_code": "# Exercise 1: Favorite Book Characters!\n\n\ndef create_favorites():\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Create a list called 'heroes' with at least 5 of your favorite characters\n    #    from {{hero}}, {{hero}}, Hunger Games, or {{school}} series!\n    #    Ideas: \"{{heroine}}\", \"{{hero}}\", \"{{hero}}\", \"{{heroine}}\", \"{{heroine}}\",\n    #           \"{{heroine}}\", \"{{heroine}}\", \"{{hero}}\", \"{{friend}}\", \"{{hero}}\"\n    # 2. Print the whole list\n    # 3. Print the first hero using [0]\n    # 4. Print the last hero using [-1]\n    pass\n\n\ndef main():\n    print(\"My Favorite Book Heroes:\")\n    print(\"=\" * 25)\n    create_favorites()\n\n\nmain()\n",
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 1: Favorite Book Characters!\n\n\ndef create_favorites():\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Create a list called 'heroes' with at least 5 of your favorite characters\n    #    Ideas: \"{{heroine}}\", \"{{hero}}\", \"{{friend}}\", \"{{mentor}}\", \"{{villain}}\"\n    # 2. Print the whole list\n    # 3. Print the first hero using [0]\n    # 4. Print the last hero using [-1]\n    pass\n\n\ndef main():\n    print(\"My Favorite Book Heroes:\")\n    print(\"=\" * 25)\n    create_favorites()\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_3_lists",
-      "source_file": "module_3_lists/exercise_1_favorites.py"
+      "hints": [
+        "Create a list with square brackets: heroes = [\"name1\", \"name2\"]",
+        "Access first item with [0], last item with [-1]",
+        "print(heroes) shows the whole list, print(heroes[0]) shows first"
+      ],
+      "tags": [
+        "module_3_lists",
+        "write_code"
+      ],
+      "source_file": "module_3_lists/write_code/exercise_1_favorites.py"
     },
     {
-      "id": "module_3_lists.exercise_2_loop_list",
+      "id": "module_3_lists.write_code.exercise_2_loop_list",
       "topic_id": "collections.lists",
-      "title": "module_3_lists/exercise_2_loop_list.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Loop Through List",
       "title_he": "לולאה על רשימה",
       "title_en": "Loop Through List",
       "description_he": "רשימות: לולאה על רשימה\n\nExercise 2: Loop Through a List",
       "description_en": "Lists: Loop Through List\n\nExercise 2: Loop Through a List",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 2: Loop Through a List\n\n\ndef print_with_numbers(items):\n    # ✏️ YOUR CODE HERE ✏️\n    # Print each item with a number, like this:\n    # 1. First item\n    # 2. Second item\n    # 3. Third item\n    #\n    # Hint: you'll need a counter variable!\n    # Start it at 1, and add 1 each time through the loop\n    pass\n\n\ndef main():\n    shopping_list = [\"milk\", \"bread\", \"eggs\", \"cheese\", \"apples\"]\n    print(\"Shopping List:\")\n    print(\"--------------\")\n    print_with_numbers(shopping_list)\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_3_lists",
-      "source_file": "module_3_lists/exercise_2_loop_list.py"
+      "hints": [
+        "Use a counter variable: counter = 1",
+        "Inside the loop: print counter, then add 1 to it",
+        "for item in items: print(str(counter) + \". \" + item); counter += 1"
+      ],
+      "tags": [
+        "module_3_lists",
+        "write_code"
+      ],
+      "source_file": "module_3_lists/write_code/exercise_2_loop_list.py"
     },
     {
-      "id": "module_3_lists.exercise_3_magic_8ball",
+      "id": "module_3_lists.write_code.exercise_3_magic_8ball",
       "topic_id": "collections.lists",
-      "title": "module_3_lists/exercise_3_magic_8ball.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Magic 8 Ball",
       "title_he": "כדור קסם",
       "title_en": "Magic 8 Ball",
       "description_he": "רשימות: כדור קסם\n\nExercise 3: The {{item}}!",
       "description_en": "Lists: Magic 8 Ball\n\nExercise 3: The {{item}}!",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 3: The {{item}}!\n\nimport random\n\n\ndef get_house():\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Create a list with the 4 {{school}} houses:\n    #    \"{{house}}\", \"{{house}}\", \"{{house}}\", \"{{house}}\"\n    # 2. Use random.choice() to pick one\n    # 3. Return the chosen house\n    pass\n\n\ndef get_house_message(house):\n    # ✏️ BONUS: Add this function! ✏️\n    # Return a message based on the house:\n    # {{house}} -> \"Where dwell the brave at heart!\"\n    # {{house}} -> \"Where they are just and loyal!\"\n    # {{house}} -> \"Where those of wit and learning will always find their kind!\"\n    # {{house}} -> \"Where you'll make your real friends!\"\n    pass\n\n\ndef main():\n    print(\"🎩 The {{item}} 🎩\")\n    print(\"=\" * 25)\n\n    name = input(\"What is your name, young student? \")\n    print(f\"\\nHmm, let me see, {name}...\")\n    print(\"Difficult... very difficult...\")\n\n    house = get_house()\n    print(f\"\\nBetter be... {house}!\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_3_lists",
-      "source_file": "module_3_lists/exercise_3_magic_8ball.py"
+      "hints": [
+        "Create a list of houses, then use random.choice()",
+        "random.choice(houses) picks one item randomly",
+        "Return the chosen item from the function"
+      ],
+      "tags": [
+        "module_3_lists",
+        "write_code"
+      ],
+      "source_file": "module_3_lists/write_code/exercise_3_magic_8ball.py"
     },
     {
-      "id": "module_3_lists.exercise_4_madlibs",
+      "id": "module_3_lists.write_code.exercise_4_madlibs",
       "topic_id": "collections.lists",
-      "title": "module_3_lists/exercise_4_madlibs.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Mad Libs",
       "title_he": "סיפור משוגע",
       "title_en": "Mad Libs",
       "description_he": "רשימות: סיפור משוגע\n\nExercise 4: Fantasy Story Generator!",
       "description_en": "Lists: Mad Libs\n\nExercise 4: Fantasy Story Generator!",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 4: Fantasy Story Generator!\n\nimport random\n\n\ndef get_random_word(word_list):\n    return random.choice(word_list)\n\n\ndef create_story():\n    # Word lists - add more words from your favorite books!\n    heroes = [\"{{heroine}}\", \"{{hero}}\", \"{{heroine}}\", \"{{hero}}\", \"{{hero}}\", \"{{heroine}}\"]\n    creatures = [\"{{creature}}\", \"{{creature}}\", \"{{creature}}\", \"{{creature}}\", \"{{creature}}\", \"{{creature}}\"]\n    abilities = [\"{{spell1}}\", \"water control\", \"archery\", \"magic\", \"{{spell2}}\", \"fire\"]\n    places = [\"{{school}}\", \"{{school}}\", \"{{place}}\", \"{{school}}\", \"{{location}}\"]\n    villains = [\"{{villain}}\", \"{{villain}}\", \"{{villain}}\", \"{{villain}}\"]\n\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Use get_random_word() to pick words from each list\n    # 2. Put them together into an epic story!\n    # 3. Print the story!\n    #\n    # Example:\n    # hero = get_random_word(heroes)\n    # Then use the variable in your story:\n    # print(hero + \" discovered a secret...\")\n    #\n    # Make your story at least 3 sentences!\n    # Include a hero, a place, an ability, and maybe a villain!\n    pass\n\n\ndef main():\n    print(\"📚 Fantasy Story Generator 📚\")\n    print(\"=\" * 30)\n    create_story()\n    print()\n    print(\"Run again for a different story!\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_3_lists",
-      "source_file": "module_3_lists/exercise_4_madlibs.py"
+      "hints": [
+        "Call get_random_word(list_name) to pick random words",
+        "Store each random word in a variable: hero = get_random_word(heroes)",
+        "Use f-strings or + to combine words into sentences"
+      ],
+      "tags": [
+        "module_3_lists",
+        "write_code"
+      ],
+      "source_file": "module_3_lists/write_code/exercise_4_madlibs.py"
     },
     {
-      "id": "module_3_lists.exercise_5_todo_list",
+      "id": "module_3_lists.write_code.exercise_5_todo_list",
       "topic_id": "collections.lists",
-      "title": "module_3_lists/exercise_5_todo_list.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Todo List",
       "title_he": "רשימת מטלות",
       "title_en": "Todo List",
       "description_he": "רשימות: רשימת מטלות\n\nExercise 5: Todo List Manager",
       "description_en": "Lists: Todo List\n\nExercise 5: Todo List Manager",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 5: Todo List Manager\n\ndef show_todos(todos):\n    # ✏️ YOUR CODE HERE ✏️\n    # Print all todos with numbers\n    # If the list is empty, print \"No todos yet!\"\n    #\n    # Example output:\n    # 1. Buy milk\n    # 2. Do homework\n    # 3. Walk the dog\n    pass\n\n\ndef add_todo(todos, item):\n    # ✏️ YOUR CODE HERE ✏️\n    # Add the item to the todos list\n    # Hint: use the .append() method\n    pass\n\n\ndef remove_todo(todos, number):\n    # ✏️ YOUR CODE HERE ✏️\n    # Remove the todo at position 'number' (1-based, not 0-based!)\n    # Hint: lists are 0-indexed, so item 1 is at index 0\n    # Hint: use the .pop() method with an index\n    pass\n\n\ndef main():\n    todos = []\n\n    while True:\n        print(\"\\n--- Todo List ---\")\n        show_todos(todos)\n        print(\"\\nCommands: add, remove, quit\")\n        command = input(\"What do you want to do? \").lower()\n\n        if command == \"add\":\n            item = input(\"What do you need to do? \")\n            add_todo(todos, item)\n            print(\"Added!\")\n        elif command == \"remove\":\n            number = int(input(\"Which number to remove? \"))\n            remove_todo(todos, number)\n            print(\"Removed!\")\n        elif command == \"quit\":\n            print(\"Goodbye!\")\n            break\n        else:\n            print(\"I don't understand that command.\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_3_lists",
-      "source_file": "module_3_lists/exercise_5_todo_list.py"
+      "hints": [
+        "Use len(todos) to check if list is empty",
+        "Use .append(item) to add, .pop(index) to remove",
+        "Remember: user enters 1 for first item, but list index is 0"
+      ],
+      "tags": [
+        "module_3_lists",
+        "write_code"
+      ],
+      "source_file": "module_3_lists/write_code/exercise_5_todo_list.py"
     },
     {
-      "id": "module_3_lists.exercise_6_name_picker",
+      "id": "module_3_lists.write_code.exercise_6_name_picker",
       "topic_id": "collections.lists",
-      "title": "module_3_lists/exercise_6_name_picker.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Name Picker",
       "title_he": "בוחר שמות",
       "title_en": "Name Picker",
-      "description_he": "רשימות: בוחר שמות\n\nExercise 6: challenger Selection! (Adventure style)",
-      "description_en": "Lists: Name Picker\n\nExercise 6: challenger Selection! (Adventure style)",
+      "description_he": "רשימות: בוחר שמות\n\nExercise 6: Random Name Picker! (Adventure style)",
+      "description_en": "Lists: Name Picker\n\nExercise 6: Random Name Picker! (Adventure style)",
       "difficulty": 2,
-      "starter_code": "# Exercise 6: challenger Selection! (Adventure style)\n\nimport random\n\n\ndef pick_challenger(names):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return a random challenger from the list\n    # Hint: use random.choice(list)\n    pass\n\n\ndef main():\n    print(\"=\" * 45)\n    print(\"   THE Selection - {{school}}\")\n    print(\"=\" * 45)\n    print(\"{{exclamation}}!\\n\")\n\n    # You can pre-fill this with Hunger Games characters:\n    # names = [\"{{heroine}}\", \"{{hero}}\", \"{{friend}}\", \"{{friend}}\", \"Madge\"]\n    # Or let the user enter names:\n    names = []\n\n    # Collect names\n    while True:\n        name = input(\"Enter a name for the Selection (or 'done' to draw): \")\n        if name.lower() == \"done\":\n            break\n        names.append(name)\n\n    # Make sure we have names\n    if len(names) == 0:\n        print(\"No names in the Selection ball!\")\n    else:\n        # Pick a random challenger\n        challenger = pick_challenger(names)\n        print(\"\\n✨ The challenger selected is:\", challenger, \"✨\")\n        print(\"I volunteer as challenger!...?\")\n\n\nmain()\n",
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 6: Random Name Picker! (Adventure style)\n\nimport random\n\n\ndef pick_name(names):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return a random name from the list\n    # Hint: use random.choice(list)\n    pass\n\n\ndef main():\n    print(\"=\" * 45)\n    print(\"   THE MAGICAL SELECTION - {{school}}\")\n    print(\"=\" * 45)\n    print(\"{{exclamation}}!\\n\")\n\n    # You can pre-fill this with characters:\n    # names = [\"{{heroine}}\", \"{{hero}}\", \"{{friend}}\", \"{{mentor}}\"]\n    # Or let the user enter names:\n    names = []\n\n    # Collect names\n    while True:\n        name = input(\"Enter a name (or 'done' to draw): \")\n        if name.lower() == \"done\":\n            break\n        names.append(name)\n\n    # Make sure we have names\n    if len(names) == 0:\n        print(\"No names entered!\")\n    else:\n        # Pick a random name\n        chosen = pick_name(names)\n        print(\"\\n✨ The chosen one is:\", chosen, \"✨\")\n        print(\"{{exclamation}}\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_3_lists",
-      "source_file": "module_3_lists/exercise_6_name_picker.py"
+      "hints": [
+        "Use random.choice(names) to pick one name randomly",
+        "Return the chosen name from the function",
+        "Make sure the list has names before picking!"
+      ],
+      "tags": [
+        "module_3_lists",
+        "write_code"
+      ],
+      "source_file": "module_3_lists/write_code/exercise_6_name_picker.py"
     },
     {
-      "id": "module_3_lists.exercise_7_shopping_total",
+      "id": "module_3_lists.write_code.exercise_7_shopping_total",
       "topic_id": "collections.lists",
-      "title": "module_3_lists/exercise_7_shopping_total.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Shopping Total",
       "title_he": "סכום קניות",
       "title_en": "Shopping Total",
       "description_he": "רשימות: סכום קניות\n\nExercise 7: Shopping List Total",
       "description_en": "Lists: Shopping Total\n\nExercise 7: Shopping List Total",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 7: Shopping List Total\n\ndef calculate_total(prices):\n    # ✏️ YOUR CODE HERE ✏️\n    # Add up all the prices and return the total\n    #\n    # Hint: Start with total = 0\n    # Hint: Loop through the prices and add each one to total\n    pass\n\n\ndef main():\n    print(\"=== Shopping Calculator ===\\n\")\n\n    prices = []\n    items = []\n\n    # Collect items and prices\n    while True:\n        item = input(\"Enter item name (or 'done' to finish): \")\n        if item.lower() == \"done\":\n            break\n        price = float(input(\"Enter price for \" + item + \": $\"))\n        items.append(item)\n        prices.append(price)\n\n    # Show the receipt\n    print(\"\\n--- Your Receipt ---\")\n    for i in range(len(items)):\n        print(items[i] + \": $\" + str(prices[i]))\n\n    print(\"-------------------\")\n    total = calculate_total(prices)\n    print(\"Total: $\" + str(total))\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_3_lists",
-      "source_file": "module_3_lists/exercise_7_shopping_total.py"
+      "hints": [
+        "Start with total = 0",
+        "Loop through prices: for price in prices: total += price",
+        "Return total at the end"
+      ],
+      "tags": [
+        "module_3_lists",
+        "write_code"
+      ],
+      "source_file": "module_3_lists/write_code/exercise_7_shopping_total.py"
     },
     {
-      "id": "module_3_lists.exercise_8_playlist_shuffler",
+      "id": "module_3_lists.write_code.exercise_8_playlist_shuffler",
       "topic_id": "collections.lists",
-      "title": "module_3_lists/exercise_8_playlist_shuffler.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Playlist Shuffler",
       "title_he": "מערבל פלייליסט",
       "title_en": "Playlist Shuffler",
       "description_he": "רשימות: מערבל פלייליסט\n\nExercise 8: Playlist Shuffler",
       "description_en": "Lists: Playlist Shuffler\n\nExercise 8: Playlist Shuffler",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 8: Playlist Shuffler\n\nimport random\n\n\ndef shuffle_playlist(songs):\n    # ✏️ YOUR CODE HERE ✏️\n    # Shuffle the songs list to put them in random order\n    # Hint: use random.shuffle(list) - this changes the list directly\n    pass\n\n\ndef show_playlist(songs, title):\n    \"\"\"Display the playlist with a title\"\"\"\n    print(\"\\n\" + title)\n    print(\"-\" * len(title))\n    for i in range(len(songs)):\n        print(str(i + 1) + \". \" + songs[i])\n\n\ndef main():\n    # Start with a sample playlist\n    playlist = [\n        \"Happy - Pharrell\",\n        \"Shake It Off - Taylor Swift\",\n        \"Uptown Funk - Bruno Mars\",\n        \"Can't Stop the Feeling - Justin Timberlake\",\n        \"Old Town Road - Lil Nas X\"\n    ]\n\n    show_playlist(playlist, \"Original Playlist\")\n\n    input(\"\\nPress Enter to shuffle...\")\n\n    shuffle_playlist(playlist)\n\n    show_playlist(playlist, \"Shuffled Playlist\")\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_3_lists",
-      "source_file": "module_3_lists/exercise_8_playlist_shuffler.py"
+      "hints": [
+        "random.shuffle(list) shuffles the list in place",
+        "It changes the original list, doesn't return a new one",
+        "Just call random.shuffle(songs) - no need to assign result"
+      ],
+      "tags": [
+        "module_3_lists",
+        "write_code"
+      ],
+      "source_file": "module_3_lists/write_code/exercise_8_playlist_shuffler.py"
     },
     {
-      "id": "module_3_lists.exercise_9_word_collector",
+      "id": "module_3_lists.write_code.exercise_9_word_collector",
       "topic_id": "collections.lists",
-      "title": "module_3_lists/exercise_9_word_collector.py",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Word Collector",
       "title_he": "אוסף מילים",
       "title_en": "Word Collector",
       "description_he": "רשימות: אוסף מילים\n\nExercise 9: Word Collector",
       "description_en": "Lists: Word Collector\n\nExercise 9: Word Collector",
       "difficulty": 2,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 9: Word Collector\n\ndef count_words(words):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return how many words are in the list\n    # Hint: use len()\n    pass\n\n\ndef find_longest(words):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return the longest word in the list\n    #\n    # Hint: Start by assuming the first word is longest\n    # Hint: Loop through and compare lengths using len()\n    # Hint: If you find a longer word, update your answer\n    pass\n\n\ndef find_shortest(words):\n    # ✏️ YOUR CODE HERE ✏️\n    # Return the shortest word in the list\n    # Same idea as find_longest, but opposite!\n    pass\n\n\ndef main():\n    print(\"=== Word Collector ===\")\n    print(\"Enter words one at a time. Type 'done' when finished.\\n\")\n\n    words = []\n\n    # Collect words\n    while True:\n        word = input(\"Enter a word: \")\n        if word.lower() == \"done\":\n            break\n        words.append(word)\n\n    # Show results\n    if len(words) == 0:\n        print(\"You didn't enter any words!\")\n    else:\n        print(\"\\n--- Results ---\")\n        print(\"You entered\", count_words(words), \"words\")\n        print(\"All your words:\", words)\n        print(\"Longest word:\", find_longest(words))\n        print(\"Shortest word:\", find_shortest(words))\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_3_lists",
-      "source_file": "module_3_lists/exercise_9_word_collector.py"
+      "hints": [
+        "Use len(words) to count items in a list",
+        "For longest: compare len(word) for each word, keep the longest",
+        "Start with longest = words[0], then loop and update if longer found"
+      ],
+      "tags": [
+        "module_3_lists",
+        "write_code"
+      ],
+      "source_file": "module_3_lists/write_code/exercise_9_word_collector.py"
     }
   ]
 }

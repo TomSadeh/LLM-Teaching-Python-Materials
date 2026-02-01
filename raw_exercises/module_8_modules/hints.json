@@ -1,0 +1,65 @@
+{
+  "exercise_1_datetime_basics": {
+    "hints": [
+      "datetime.date.today() gets today's date",
+      "datetime.datetime.now() gets current date and time",
+      "Subtract dates to get difference: (date1 - date2).days"
+    ]
+  },
+  "exercise_2_random_advanced": {
+    "hints": [
+      "random.choice(list) picks one item randomly",
+      "random.shuffle(list) shuffles list in place",
+      "random.sample(list, n) picks n items without repeats"
+    ]
+  },
+  "exercise_3_json_basics": {
+    "hints": [
+      "json.dumps(dict) converts dictionary to JSON string",
+      "json.loads(string) converts JSON string to dictionary",
+      "Use json.dump(data, file) to save, json.load(file) to read"
+    ]
+  },
+  "exercise_4_time_module": {
+    "hints": [
+      "time.sleep(seconds) pauses the program",
+      "time.time() returns current time as a number",
+      "Measure duration: end_time - start_time gives seconds elapsed"
+    ]
+  },
+  "exercise_5_math_module": {
+    "hints": [
+      "math.sqrt(n) returns square root of n",
+      "math.floor() rounds down, math.ceil() rounds up",
+      "math.pi is the constant pi, math.pow(x, y) is x to power y"
+    ]
+  },
+  "exercise_6_string_module": {
+    "hints": [
+      "string.ascii_lowercase has all lowercase letters",
+      "Use .isalpha() to check if all characters are letters",
+      "Use .replace(old, new) to substitute text"
+    ]
+  },
+  "exercise_7_os_path": {
+    "hints": [
+      "os.getcwd() returns current working directory",
+      "os.path.exists(path) checks if file/folder exists",
+      "os.makedirs(path, exist_ok=True) creates folders safely"
+    ]
+  },
+  "exercise_8_collections": {
+    "hints": [
+      "Counter(list) counts occurrences of each item",
+      ".most_common(n) returns the n most frequent items",
+      "Counters can be added together: counter1 + counter2"
+    ]
+  },
+  "exercise_9_create_module": {
+    "hints": [
+      "Create a .py file with functions, then import it",
+      "import module_name, then use module_name.function()",
+      "Define constants in your module as regular variables"
+    ]
+  }
+}

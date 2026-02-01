@@ -1,0 +1,65 @@
+{
+  "exercise_1_first_class": {
+    "hints": [
+      "Define a class with: class ClassName:",
+      "Add attributes inside the class: school = \"value\"",
+      "Create instance: obj = ClassName(), access: obj.school"
+    ]
+  },
+  "exercise_2_init_method": {
+    "hints": [
+      "__init__ runs automatically when you create an object",
+      "First parameter is always 'self': def __init__(self, name):",
+      "Store values with self.name = name"
+    ]
+  },
+  "exercise_3_methods": {
+    "hints": [
+      "Methods are functions inside a class that take self first",
+      "Use self.attribute to access the object's data",
+      "Call methods with: object.method_name()"
+    ]
+  },
+  "exercise_4_str_repr": {
+    "hints": [
+      "__str__ controls what print(object) displays",
+      "Return a string from __str__, don't print inside it",
+      "Use f-strings to build the output: return f\"{self.name}\""
+    ]
+  },
+  "exercise_5_interaction": {
+    "hints": [
+      "Pass one object to another's method: hero.attack(enemy)",
+      "Inside attack, 'self' is the attacker, 'target' is parameter",
+      "Modify target's attributes: target.health -= self.power"
+    ]
+  },
+  "exercise_6_inheritance": {
+    "hints": [
+      "Inherit with class Child(Parent):",
+      "Call parent's __init__: super().__init__(name)",
+      "Override methods by defining them again in the child class"
+    ]
+  },
+  "exercise_7_composition": {
+    "hints": [
+      "Composition: store objects as attributes of other objects",
+      "Create: self.inventory = Inventory()",
+      "Use: self.inventory.add_item(item)"
+    ]
+  },
+  "exercise_8_text_adventure": {
+    "hints": [
+      "Room class stores description, items list, and exits dict",
+      "Player class tracks current_room and inventory",
+      "Game class manages the loop and processes commands"
+    ]
+  },
+  "exercise_9_rpg_battle": {
+    "hints": [
+      "Base Character class has attack, defend, is_alive methods",
+      "Subclasses add special abilities: Wizard has cast_spell",
+      "Battle class alternates turns between player and enemy"
+    ]
+  }
+}

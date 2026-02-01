@@ -1,279 +1,685 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "theme_support": true,
-  "generated_at": "2026-01-31T13:57:56.119165",
+  "generated_at": "2026-02-01T09:43:07.427457",
   "module": "module_0_basics",
-  "count": 18,
+  "count": 23,
+  "exercise_types": [
+    "bug_hunt",
+    "complete_function",
+    "decode_error",
+    "output_prediction",
+    "write_code"
+  ],
   "exercises": [
     {
-      "id": "module_0_basics.exercise_01_hello",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_01_hello.py",
-      "title_he": "שלום עולם",
-      "title_en": "Hello World",
-      "description_he": "יסודות: שלום עולם\n\nExercise 1: Hello World and Print",
-      "description_en": "Basics: Hello World\n\nExercise 1: Hello World and Print",
+      "id": "module_0_basics.bug_hunt.exercise_1_variable_bugs",
+      "topic_id": "basics.variables",
+      "exercise_type": "bug_hunt",
+      "category": "debugging",
+      "title": "Variable Bugs",
+      "title_he": "באגים במשתנים",
+      "title_en": "Variable Bugs",
+      "description_he": "יסודות: באגים במשתנים\n\nExercise 1: Bug Hunt - Variable Bugs\nFind and fix the bugs in this code!",
+      "description_en": "Basics: Variable Bugs\n\nExercise 1: Bug Hunt - Variable Bugs\nFind and fix the bugs in this code!",
       "difficulty": 1,
-      "starter_code": "# Exercise 1: Hello World and Print\n\n\ndef exercise_a():\n    # ✏️ Print \"Hello, World!\"\n    pass\n\n\ndef exercise_b():\n    # ✏️ Print your name\n    pass\n\n\ndef exercise_c():\n    # ✏️ Print three lines:\n    # Line 1: Your favorite color\n    # Line 2: Your favorite food\n    # Line 3: Your favorite animal\n    pass\n\n\ndef exercise_d():\n    # ✏️ Print this exact pattern:\n    # ***\n    # ***\n    # ***\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D ===\")\n    exercise_d()\n\n\nmain()\n",
+      "requires_running": false,
+      "estimated_time_minutes": 8,
+      "skills": [
+        "debugging",
+        "critical_reading",
+        "common_mistakes"
+      ],
+      "starter_code": "# Exercise 1: Bug Hunt - Variable Bugs\n#\n# Find and fix the bugs in this code!\n\n\ndef challenge_a():\n    # 🐛 BUG HUNT! 🐛\n    # This code has TWO bugs. Find and fix them both!\n    #\n    # Bug 1: The variable name isn't in quotes (missing string)\n    # Bug 2: The variable name in print() doesn't match the one we created\n\n    heroName = {{heroine}}\n    print(heroname)\n\n\ndef main():\n    print(\"=== Challenge A: Fix the Variable Bugs ===\")\n    challenge_a()\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_01_hello.py"
+      "hints": [
+        "Check if strings are wrapped in quotes",
+        "Variable names are case-sensitive",
+        "Make sure the variable name matches when you use it"
+      ],
+      "tags": [
+        "module_0_basics",
+        "bug_hunt"
+      ],
+      "source_file": "module_0_basics/bug_hunt/exercise_1_variable_bugs.py"
     },
     {
-      "id": "module_0_basics.exercise_02_variables",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_02_variables.py",
-      "title_he": "משתנים",
-      "title_en": "Variables",
-      "description_he": "יסודות: משתנים\n\nExercise 2: Variables",
-      "description_en": "Basics: Variables\n\nExercise 2: Variables",
-      "difficulty": 1,
-      "starter_code": "# Exercise 2: Variables\n\n\ndef exercise_a():\n    # ✏️ Create a variable called 'hero' with your favorite book character\n    # (like \"{{heroine}}\" or \"{{hero}}\")\n    # Then print: \"My favorite hero is [hero]!\"\n\n    pass\n\n\ndef exercise_b():\n    # ✏️ Create two variables:\n    # character = a character from {{hero}}, {{hero}},\n    #             Hunger Games, or {{school}} series\n    # book = which book/series they're from\n    # Print both using print()\n\n    pass\n\n\ndef exercise_c():\n    # ✏️ Create these variables and print them all:\n    # school = a magical school (like \"{{school}}\" or \"{{school}}\")\n    # house = a house or group (like \"{{house}}\" or \"{{group}}\")\n    # spell = an ability or spell (like \"{{spell3}}\" or \"Teleporting\")\n\n    pass\n\n\ndef exercise_d():\n    # ✏️ Create a variable 'quote' with a quote from your favorite book\n    # Print it 3 times (use the variable 3 times!)\n    # Example: \"{{exclamation}}\"\n\n    pass\n\n\ndef exercise_e():\n    # ✏️ Fix this code! It has errors:\n    # heroName = {{heroine}}\n    # print(heroname)\n\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E ===\")\n    exercise_e()\n\n\nmain()\n",
-      "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_02_variables.py"
-    },
-    {
-      "id": "module_0_basics.exercise_03_math",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_03_math.py",
-      "title_he": "חישובים",
-      "title_en": "Math Operations",
-      "description_he": "יסודות: חישובים\n\nExercise 3: Math Operations",
-      "description_en": "Basics: Math Operations\n\nExercise 3: Math Operations",
-      "difficulty": 1,
-      "starter_code": "# Exercise 3: Math Operations\n\n\ndef exercise_a():\n    # ✏️ Print the result of: 15 + 27\n    pass\n\n\ndef exercise_b():\n    # ✏️ Print the result of: 100 - 37\n    pass\n\n\ndef exercise_c():\n    # ✏️ Print the result of: 8 * 7\n    pass\n\n\ndef exercise_d():\n    # ✏️ Print the result of: 144 / 12\n    pass\n\n\ndef exercise_e():\n    # ✏️ Create two variables: a = 25, b = 4\n    # Print: a + b, a - b, a * b, a / b\n    pass\n\n\ndef exercise_f():\n    # ✏️ Calculate and print the average of: 85, 90, 78, 92\n    # Hint: add them all, then divide by 4\n    pass\n\n\ndef exercise_g():\n    # ✏️ A rectangle has width=12 and height=5\n    # Calculate and print its area (width * height)\n    # Calculate and print its perimeter (2*width + 2*height)\n    pass\n\n\ndef exercise_h():\n    # ✏️ Use ** for power: print 2 to the power of 10\n    # (that's 2 ** 10)\n    pass\n\n\ndef exercise_i():\n    # ✏️ Use % (modulo) to find the remainder of 17 / 5\n    # (that's 17 % 5)\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: Addition ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: Subtraction ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: Multiplication ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Division ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: All Operations ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Average ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Rectangle ===\")\n    exercise_g()\n\n    print(\"\\n=== Exercise H: Power ===\")\n    exercise_h()\n\n    print(\"\\n=== Exercise I: Modulo ===\")\n    exercise_i()\n\n\nmain()\n",
-      "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_03_math.py"
-    },
-    {
-      "id": "module_0_basics.exercise_04_input",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_04_input.py",
-      "title_he": "קלט",
-      "title_en": "Input",
-      "description_he": "יסודות: קלט\n\nExercise 4: Getting Input",
-      "description_en": "Basics: Input\n\nExercise 4: Getting Input",
-      "difficulty": 1,
-      "starter_code": "# Exercise 4: Getting Input\n\n\ndef exercise_a():\n    # ✏️ Ask the user for their name, then print \"Hello, [name]!\"\n    pass\n\n\ndef exercise_b():\n    # ✏️ Ask the user for their favorite color\n    # Print: \"Wow, [color] is a great color!\"\n    pass\n\n\ndef exercise_c():\n    # ✏️ Ask for the user's name and age\n    # Print: \"[name] is [age] years old\"\n    pass\n\n\ndef exercise_d():\n    # ✏️ Ask the user for a word\n    # Print the word 5 times on separate lines\n    pass\n\n\ndef exercise_e():\n    # ✏️ Ask for the user's first name and last name (two inputs)\n    # Print their full name\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E ===\")\n    exercise_e()\n\n\nmain()\n",
-      "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_04_input.py"
-    },
-    {
-      "id": "module_0_basics.exercise_05_calculator",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_05_calculator.py",
-      "title_he": "מחשבון",
-      "title_en": "Calculator",
-      "description_he": "יסודות: מחשבון\n\nExercise 5: Input with Math",
-      "description_en": "Basics: Calculator\n\nExercise 5: Input with Math",
-      "difficulty": 1,
-      "starter_code": "# Exercise 5: Input with Math\n\n\ndef exercise_a():\n    # ✏️ Ask for a number, then print the number times 2\n    # Remember: input() gives a string, use int() to convert!\n    pass\n\n\ndef exercise_b():\n    # ✏️ Ask for two numbers, print their sum\n    pass\n\n\ndef exercise_c():\n    # ✏️ Ask for two numbers, print:\n    # - their sum\n    # - their difference\n    # - their product\n    pass\n\n\ndef exercise_d():\n    # ✏️ Ask for a number, print its square (number * number)\n    pass\n\n\ndef exercise_e():\n    # ✏️ Ask for the price of an item\n    # Ask for quantity\n    # Print the total cost\n    pass\n\n\ndef exercise_f():\n    # ✏️ Ask for a temperature in Celsius\n    # Convert to Fahrenheit: (celsius * 9/5) + 32\n    # Print the result\n    pass\n\n\ndef exercise_g():\n    # ✏️ Ask for someone's birth year\n    # Calculate and print their age (use 2025 as current year)\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: Double ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: Sum ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: All Operations ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Square ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: Shopping ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Temperature ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Age ===\")\n    exercise_g()\n\n\nmain()\n",
-      "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_05_calculator.py"
-    },
-    {
-      "id": "module_0_basics.exercise_06_madlib_simple",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_06_madlib_simple.py",
-      "title_he": "סיפור משוגע",
-      "title_en": "Mad Lib Story",
-      "description_he": "יסודות: סיפור משוגע\n\nExercise 6: String Concatenation (Joining Strings)",
-      "description_en": "Basics: Mad Lib Story\n\nExercise 6: String Concatenation (Joining Strings)",
-      "difficulty": 1,
-      "starter_code": "# Exercise 6: String Concatenation (Joining Strings)\n\n\ndef exercise_a():\n    # ✏️ Create two variables: first = \"Magic\", second = \"Spell\"\n    # Print them together with a space: \"Magic Spell\"\n    # Hint: use + to join strings\n    pass\n\n\ndef exercise_b():\n    # ✏️ Ask for a character name\n    # Print: \"Welcome to {{school}}, [name]! The {{item}} awaits you, [name]!\"\n    # (use the name variable twice)\n    pass\n\n\ndef exercise_c():\n    # ✏️ Ask for an adjective (like \"brave\" or \"cunning\")\n    # Ask for a magical creature (like \"{{creature}}\" or \"{{creature}}\")\n    # Print: \"The [adjective] [creature] flew over {{location}}!\"\n    pass\n\n\ndef exercise_d():\n    # ✏️ Mini Mad Lib - Adventure style!\n    # Ask for: a name, a location (1-12), a weapon\n    # Print: \"[name] from District [number] picked up a [weapon]!\"\n    pass\n\n\ndef exercise_e():\n    # ✏️ Adventure Mad Lib!\n    # Ask for: a powerful being, a magical power, a monster\n    # Create a sentence like: \"The child of [god] used their [power] to defeat the [monster]!\"\n    pass\n\n\ndef exercise_f():\n    # ✏️ {{school}} series banner!\n    # Ask for an special ability (like \"{{spell1}}\" or \"{{spell2}}\")\n    # Print a banner like this:\n    # ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐\n    # ⭐ [ability] ⭐\n    # ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐\n    # Hint: you can use ⭐ or * and spaces\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F ===\")\n    exercise_f()\n\n\nmain()\n",
-      "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_06_madlib_simple.py"
-    },
-    {
-      "id": "module_0_basics.exercise_07_counting",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_07_counting.py",
-      "title_he": "ספירה",
-      "title_en": "Counting",
-      "description_he": "יסודות: ספירה\n\nExercise 7: Counting with For Loops",
-      "description_en": "Basics: Counting\n\nExercise 7: Counting with For Loops",
-      "difficulty": 1,
-      "starter_code": "# Exercise 7: Counting with For Loops\n\n\ndef exercise_a():\n    # ✏️ Print numbers 1 to 5, each on a new line\n    # Use: for i in range(...)\n    pass\n\n\ndef exercise_b():\n    # ✏️ Print numbers 1 to 10\n    pass\n\n\ndef exercise_c():\n    # ✏️ Print numbers 0 to 9 (that's range(10)!)\n    pass\n\n\ndef exercise_d():\n    # ✏️ Print even numbers from 2 to 10: 2, 4, 6, 8, 10\n    # Hint: range(start, stop, step) - range(2, 11, 2)\n    pass\n\n\ndef exercise_e():\n    # ✏️ Print numbers counting down: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1\n    # Hint: range(10, 0, -1)\n    pass\n\n\ndef exercise_f():\n    # ✏️ Ask the user for a number\n    # Print from 1 to that number\n    pass\n\n\ndef exercise_g():\n    # ✏️ Print \"{{spell1}}!\" exactly 7 times\n    # (That's a magic spell in {{school}} series!)\n    pass\n\n\ndef exercise_h():\n    # ✏️ Ask the user for a spell name and a number\n    # Print the spell that many times\n    # Try it with \"{{spell3}}\" or \"I have {{spell1}}!\"!\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: 1 to 5 ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: 1 to 10 ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: 0 to 9 ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Even numbers ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: Countdown ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Count to user's number ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Hello 7 times ===\")\n    exercise_g()\n\n    print(\"\\n=== Exercise H: Word repeater ===\")\n    exercise_h()\n\n\nmain()\n",
-      "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_07_counting.py"
-    },
-    {
-      "id": "module_0_basics.exercise_08_patterns",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_08_patterns.py",
-      "title_he": "דפוסים",
-      "title_en": "Patterns",
-      "description_he": "יסודות: דפוסים\n\nExercise 8: Print Patterns with Loops",
-      "description_en": "Basics: Patterns\n\nExercise 8: Print Patterns with Loops",
-      "difficulty": 1,
-      "starter_code": "# Exercise 8: Print Patterns with Loops\n\n\ndef exercise_a():\n    # ✏️ Print a line of 10 stars: **********\n    # Hint: print(\"*\" * 10) or use a loop\n    pass\n\n\ndef exercise_b():\n    # ✏️ Print 5 lines of stars:\n    # *****\n    # *****\n    # *****\n    # *****\n    # *****\n    pass\n\n\ndef exercise_c():\n    # ✏️ Print a triangle:\n    # *\n    # **\n    # ***\n    # ****\n    # *****\n    # Hint: in each row i, print i stars\n    pass\n\n\ndef exercise_d():\n    # ✏️ Print an upside-down triangle:\n    # *****\n    # ****\n    # ***\n    # **\n    # *\n    pass\n\n\ndef exercise_e():\n    # ✏️ Print numbers in a row: 1 2 3 4 5\n    # Hint: print(..., end=\" \") prints without newline\n    pass\n\n\ndef exercise_f():\n    # ✏️ Print this pattern:\n    # 1\n    # 12\n    # 123\n    # 1234\n    # 12345\n    pass\n\n\ndef exercise_g():\n    # ✏️ Ask user for a size, print a square of that size\n    # Example for size 4:\n    # ****\n    # ****\n    # ****\n    # ****\n    pass\n\n\ndef exercise_h():\n    # ✏️ Ask user for a size, print a triangle of that size\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: Line of stars ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: Square of stars ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: Triangle ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Upside-down triangle ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: Numbers in a row ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Number triangle ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Custom square ===\")\n    exercise_g()\n\n    print(\"\\n=== Exercise H: Custom triangle ===\")\n    exercise_h()\n\n\nmain()\n",
-      "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_08_patterns.py"
-    },
-    {
-      "id": "module_0_basics.exercise_09_sum",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_09_sum.py",
-      "title_he": "סכום",
-      "title_en": "Sum",
-      "description_he": "יסודות: סכום\n\nExercise 9: Accumulating Values in Loops",
-      "description_en": "Basics: Sum\n\nExercise 9: Accumulating Values in Loops",
-      "difficulty": 1,
-      "starter_code": "# Exercise 9: Accumulating Values in Loops\n\n\ndef exercise_a():\n    # ✏️ Calculate the sum of numbers 1 to 5 (should be 15)\n    # Use a loop and a variable to keep track of the sum\n    # total = 0\n    # for i in range(...):\n    #     total = total + i\n    pass\n\n\ndef exercise_b():\n    # ✏️ Calculate the sum of numbers 1 to 100\n    # Print the result (should be 5050)\n    pass\n\n\ndef exercise_c():\n    # ✏️ Calculate the sum of even numbers from 2 to 20\n    pass\n\n\ndef exercise_d():\n    # ✏️ Ask the user for a number n\n    # Calculate and print the sum of 1 to n\n    pass\n\n\ndef exercise_e():\n    # ✏️ Calculate the factorial of 5 (5! = 5*4*3*2*1 = 120)\n    # Use a loop!\n    # Start with result = 1, then multiply by each number\n    pass\n\n\ndef exercise_f():\n    # ✏️ Ask user for a number n\n    # Calculate factorial of n (n!)\n    pass\n\n\ndef exercise_g():\n    # ✏️ Count how many numbers from 1 to 100 are divisible by 7\n    # Hint: if number % 7 == 0, it's divisible by 7\n    pass\n\n\ndef exercise_h():\n    # ✏️ Ask the user to enter 5 numbers (one at a time)\n    # Calculate and print:\n    # - The sum of all numbers\n    # - The average\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: Sum 1-5 ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: Sum 1-100 ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: Sum even 2-20 ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Sum 1 to n ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: Factorial of 5 ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Factorial of n ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Divisible by 7 ===\")\n    exercise_g()\n\n    print(\"\\n=== Exercise H: Average of 5 numbers ===\")\n    exercise_h()\n\n\nmain()\n",
-      "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_09_sum.py"
-    },
-    {
-      "id": "module_0_basics.exercise_10_functions_basic",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_10_functions_basic.py",
+      "id": "module_0_basics.complete_function.exercise_10_functions_basic",
+      "topic_id": "basics.functions",
+      "exercise_type": "complete_function",
+      "category": "scaffolded_writing",
+      "title": "Basic Functions",
       "title_he": "פונקציות בסיסיות",
       "title_en": "Basic Functions",
       "description_he": "יסודות: פונקציות בסיסיות\n\nExercise 10: Basic Functions\n✏️ Exercise A\nWrite a function called say_hello that prints \"Hello!\"\nThen call it",
       "description_en": "Basics: Basic Functions\n\nExercise 10: Basic Functions\n✏️ Exercise A\nWrite a function called say_hello that prints \"Hello!\"\nThen call it",
       "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "pattern_recognition",
+        "working_with_constraints"
+      ],
       "starter_code": "# Exercise 10: Basic Functions\n\n\n# ✏️ Exercise A\n# Write a function called say_hello that prints \"Hello!\"\n# Then call it\n\ndef say_hello():\n    pass\n\n\n# ✏️ Exercise B\n# Write a function called say_goodbye that prints \"Goodbye!\"\n# Then call it\n\ndef say_goodbye():\n    pass\n\n\n# ✏️ Exercise C\n# Write a function called print_line that prints \"----------\"\n# Call it 3 times\n\ndef print_line():\n    pass\n\n\n# ✏️ Exercise D\n# Write a function called introduce_yourself that prints:\n# - Your name\n# - Your age\n# - Your favorite hobby\n\ndef introduce_yourself():\n    pass\n\n\n# ✏️ Exercise E\n# Write a function called print_menu that prints:\n# 1. Play game\n# 2. See score\n# 3. Quit\n\ndef print_menu():\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    say_hello()\n\n    print(\"\\n=== Exercise B ===\")\n    say_goodbye()\n\n    print(\"\\n=== Exercise C ===\")\n    print_line()\n    print_line()\n    print_line()\n\n    print(\"\\n=== Exercise D ===\")\n    introduce_yourself()\n\n    print(\"\\n=== Exercise E ===\")\n    print_menu()\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_10_functions_basic.py"
+      "hints": [
+        "A function is defined with: def function_name():",
+        "The code inside the function must be indented",
+        "Call the function with: function_name()"
+      ],
+      "tags": [
+        "module_0_basics",
+        "complete_function"
+      ],
+      "source_file": "module_0_basics/complete_function/exercise_10_functions_basic.py"
     },
     {
-      "id": "module_0_basics.exercise_11_functions_params",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_11_functions_params.py",
+      "id": "module_0_basics.complete_function.exercise_11_functions_params",
+      "topic_id": "basics.functions",
+      "exercise_type": "complete_function",
+      "category": "scaffolded_writing",
+      "title": "Functions with Parameters",
       "title_he": "פונקציות עם פרמטרים",
       "title_en": "Functions with Parameters",
       "description_he": "יסודות: פונקציות עם פרמטרים\n\nExercise 11: Functions with Parameters\n✏️ Exercise A\nWrite a function greet(name) that prints \"Hello, [name]!\"",
       "description_en": "Basics: Functions with Parameters\n\nExercise 11: Functions with Parameters\n✏️ Exercise A\nWrite a function greet(name) that prints \"Hello, [name]!\"",
       "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "pattern_recognition",
+        "working_with_constraints"
+      ],
       "starter_code": "# Exercise 11: Functions with Parameters\n\n\n# ✏️ Exercise A\n# Write a function greet(name) that prints \"Hello, [name]!\"\n\ndef greet(name):\n    pass\n\n\n# ✏️ Exercise B\n# Write a function print_times(message, times) that prints\n# the message the given number of times\n\ndef print_times(message, times):\n    pass\n\n\n# ✏️ Exercise C\n# Write a function print_box(word) that prints the word in a box:\n# *******\n# * cat *\n# *******\n# (adjust the stars to fit the word)\n\ndef print_box(word):\n    pass\n\n\n# ✏️ Exercise D\n# Write a function count_to(n) that prints numbers from 1 to n\n\ndef count_to(n):\n    pass\n\n\n# ✏️ Exercise E\n# Write a function print_triangle(height) that prints a triangle\n# of the given height\n\ndef print_triangle(height):\n    pass\n\n\n# ✏️ Exercise F\n# Write a function birthday_message(name, age) that prints:\n# \"Happy birthday [name]! You are [age] years old!\"\n\ndef birthday_message(name, age):\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    greet(\"Maya\")\n    greet(\"Python\")\n\n    print(\"\\n=== Exercise B ===\")\n    print_times(\"Wow!\", 3)\n\n    print(\"\\n=== Exercise C ===\")\n    print_box(\"cat\")\n    print()\n    print_box(\"hello\")\n\n    print(\"\\n=== Exercise D ===\")\n    count_to(5)\n\n    print(\"\\n=== Exercise E ===\")\n    print_triangle(4)\n\n    print(\"\\n=== Exercise F ===\")\n    birthday_message(\"Maya\", 12)\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_11_functions_params.py"
+      "hints": [
+        "Parameters go inside the parentheses: def greet(name):",
+        "Use the parameter like a variable inside the function",
+        "When calling, pass a value: greet(\"Maya\")"
+      ],
+      "tags": [
+        "module_0_basics",
+        "complete_function"
+      ],
+      "source_file": "module_0_basics/complete_function/exercise_11_functions_params.py"
     },
     {
-      "id": "module_0_basics.exercise_12_functions_return",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_12_functions_return.py",
+      "id": "module_0_basics.complete_function.exercise_12_functions_return",
+      "topic_id": "basics.functions",
+      "exercise_type": "complete_function",
+      "category": "scaffolded_writing",
+      "title": "Functions with Return",
       "title_he": "פונקציות עם החזרה",
       "title_en": "Functions with Return",
       "description_he": "יסודות: פונקציות עם החזרה\n\nExercise 12: Functions that Return Values\n✏️ Exercise A\nWrite a function double(n) that returns n * 2",
       "description_en": "Basics: Functions with Return\n\nExercise 12: Functions that Return Values\n✏️ Exercise A\nWrite a function double(n) that returns n * 2",
       "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "pattern_recognition",
+        "working_with_constraints"
+      ],
       "starter_code": "# Exercise 12: Functions that Return Values\n\n\n# ✏️ Exercise A\n# Write a function double(n) that returns n * 2\n\ndef double(n):\n    pass\n\n\n# ✏️ Exercise B\n# Write a function add(a, b) that returns a + b\n\ndef add(a, b):\n    pass\n\n\n# ✏️ Exercise C\n# Write a function square(n) that returns n * n\n\ndef square(n):\n    pass\n\n\n# ✏️ Exercise D\n# Write a function is_even(n) that returns True if n is even, False otherwise\n\ndef is_even(n):\n    pass\n\n\n# ✏️ Exercise E\n# Write a function max_of_two(a, b) that returns the bigger number\n\ndef max_of_two(a, b):\n    pass\n\n\n# ✏️ Exercise F\n# Write a function sum_to(n) that returns the sum of 1 to n\n\ndef sum_to(n):\n    pass\n\n\n# ✏️ Exercise G\n# Write a function make_greeting(name) that returns \"Hello, [name]!\"\n# (returns it, doesn't print it!)\n\ndef make_greeting(name):\n    pass\n\n\n# ✏️ Exercise H\n# Write a function calculate_area(width, height) that returns width * height\n\ndef calculate_area(width, height):\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: double ===\")\n    print(\"double(5) =\", double(5))  # Should be 10\n    print(\"double(12) =\", double(12))  # Should be 24\n\n    print(\"\\n=== Exercise B: add ===\")\n    print(\"add(3, 4) =\", add(3, 4))  # Should be 7\n\n    print(\"\\n=== Exercise C: square ===\")\n    print(\"square(5) =\", square(5))  # Should be 25\n    print(\"square(9) =\", square(9))  # Should be 81\n\n    print(\"\\n=== Exercise D: is_even ===\")\n    print(\"is_even(4) =\", is_even(4))  # Should be True\n    print(\"is_even(7) =\", is_even(7))  # Should be False\n\n    print(\"\\n=== Exercise E: max_of_two ===\")\n    print(\"max_of_two(5, 9) =\", max_of_two(5, 9))  # Should be 9\n    print(\"max_of_two(12, 3) =\", max_of_two(12, 3))  # Should be 12\n\n    print(\"\\n=== Exercise F: sum_to ===\")\n    print(\"sum_to(5) =\", sum_to(5))  # Should be 15\n    print(\"sum_to(10) =\", sum_to(10))  # Should be 55\n\n    print(\"\\n=== Exercise G: make_greeting ===\")\n    message = make_greeting(\"Maya\")\n    print(message)  # Should be \"Hello, Maya!\"\n\n    print(\"\\n=== Exercise H: calculate_area ===\")\n    print(\"Area of 5x3 =\", calculate_area(5, 3))  # Should be 15\n\n\nmain()\n",
       "solution_code": null,
-      "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_12_functions_return.py"
+      "hints": [
+        "Use return to send a value back: return result",
+        "Store the returned value: answer = my_function()",
+        "return is different from print - return gives back a value"
+      ],
+      "tags": [
+        "module_0_basics",
+        "complete_function"
+      ],
+      "source_file": "module_0_basics/complete_function/exercise_12_functions_return.py"
     },
     {
-      "id": "module_0_basics.exercise_13_fizzbuzz",
+      "id": "module_0_basics.decode_error.exercise_1_syntax_errors",
+      "topic_id": "basics.syntax",
+      "exercise_type": "decode_error",
+      "category": "debugging",
+      "title": "Syntax Errors",
+      "title_he": "שגיאות תחביר",
+      "title_en": "Syntax Errors",
+      "description_he": "יסודות: שגיאות תחביר\n\nExercise 1: Decode the Error - Syntax Errors\nEach exercise shows an error message and the code that caused it.\nYour job: Understand the error and fix the code WITHOUT running it first.\nTheme: {{hero}}'s first day learning magic at {{school}}\n============================================================\nERROR DECODE A: Missing Quotes\n============================================================",
+      "description_en": "Basics: Syntax Errors\n\nExercise 1: Decode the Error - Syntax Errors\nEach exercise shows an error message and the code that caused it.\nYour job: Understand the error and fix the code WITHOUT running it first.\nTheme: {{hero}}'s first day learning magic at {{school}}\n============================================================\nERROR DECODE A: Missing Quotes\n============================================================",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "error_literacy",
+        "debugging",
+        "python_errors"
+      ],
+      "starter_code": "# Exercise 1: Decode the Error - Syntax Errors\n#\n# Each exercise shows an error message and the code that caused it.\n# Your job: Understand the error and fix the code WITHOUT running it first.\n#\n# Theme: {{hero}}'s first day learning magic at {{school}}\n\n\n# ============================================================\n# ERROR DECODE A: Missing Quotes\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\n  File \"spell_practice.py\", line 2\n    spell_name = {{spell1}}\n                 ^\nSyntaxError: invalid syntax\n\"\"\"\n\n\ndef buggy_code_a():\n    \"\"\"The code that caused the error\"\"\"\n    spell_name = {{spell1}}\n    print(spell_name)\n\n\ndef fix_code_a():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: Text needs to be wrapped in something special)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE B: Missing Colon\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\n  File \"counting.py\", line 1\n    for i in range(5)\n                    ^\nSyntaxError: expected ':'\n\"\"\"\n\n\ndef buggy_code_b():\n    \"\"\"The code that caused the error\"\"\"\n    for i in range(5)\n        print(i)\n\n\ndef fix_code_b():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: What's missing at the end of the for line?)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE C: Unmatched Parenthesis\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\n  File \"greeting.py\", line 1\n    print(\"{{greeting}}, {{hero}}!\"\n         ^\nSyntaxError: '(' was never closed\n\"\"\"\n\n\ndef buggy_code_c():\n    \"\"\"The code that caused the error\"\"\"\n    print(\"{{greeting}}, {{hero}}!\"\n\n\ndef fix_code_c():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: Count the parentheses)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE D: Indentation Error\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\n  File \"loop.py\", line 2\n    print(i)\n    ^\nIndentationError: expected an indented block after 'for' statement on line 1\n\"\"\"\n\n\ndef buggy_code_d():\n    \"\"\"The code that caused the error\"\"\"\n    for i in range(3):\n    print(i)\n\n\ndef fix_code_d():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: What should happen after a colon?)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# BONUS: Multiple Syntax Errors\n# ============================================================\n\"\"\"\nThis code has 3 different syntax errors. Find and fix them all!\n\ndef introduce_wizard()\n    name = {{hero}}\n    print(\"I am \" + name\n\"\"\"\n\n\ndef fix_all_syntax_errors():\n    # ✏️ FIND AND FIX ALL 3 ERRORS ✏️\n    #\n    # Error 1: _______________\n    # Error 2: _______________\n    # Error 3: _______________\n    #\n    # Write the fully fixed code below:\n    pass\n\n\ndef main():\n    print(\"=== Decode the Error: Syntax Errors ===\")\n    print()\n    print(\"For each exercise:\")\n    print(\"1. Read the error message carefully\")\n    print(\"2. Identify what caused the error\")\n    print(\"3. Fix the code in the fix_code_X function\")\n    print()\n\n    # Uncomment each to test after fixing:\n    # print(\"Testing A:\"); fix_code_a()\n    # print(\"Testing B:\"); fix_code_b()\n    # print(\"Testing C:\"); fix_code_c()\n    # print(\"Testing D:\"); fix_code_d()\n    # print(\"Testing Bonus:\"); fix_all_syntax_errors()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [
+        "Read the error message - it often points to the problem",
+        "Check for missing colons after for, if, def",
+        "Count your parentheses and quotes - they should match"
+      ],
+      "tags": [
+        "module_0_basics",
+        "decode_error"
+      ],
+      "source_file": "module_0_basics/decode_error/exercise_1_syntax_errors.py"
+    },
+    {
+      "id": "module_0_basics.decode_error.exercise_2_name_errors",
+      "topic_id": "basics.errors",
+      "exercise_type": "decode_error",
+      "category": "debugging",
+      "title": "Name Errors",
+      "title_he": "שגיאות שם",
+      "title_en": "Name Errors",
+      "description_he": "יסודות: שגיאות שם\n\nExercise 2: Decode the Error - Name Errors\nEach exercise shows an error message and the code that caused it.\nYour job: Understand the error and fix the code WITHOUT running it first.\nTheme: {{hero}}'s spell casting practice at {{school}}\n============================================================\nERROR DECODE A: Undefined Variable\n============================================================",
+      "description_en": "Basics: Name Errors\n\nExercise 2: Decode the Error - Name Errors\nEach exercise shows an error message and the code that caused it.\nYour job: Understand the error and fix the code WITHOUT running it first.\nTheme: {{hero}}'s spell casting practice at {{school}}\n============================================================\nERROR DECODE A: Undefined Variable\n============================================================",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "error_literacy",
+        "debugging",
+        "python_errors"
+      ],
+      "starter_code": "# Exercise 2: Decode the Error - Name Errors\n#\n# Each exercise shows an error message and the code that caused it.\n# Your job: Understand the error and fix the code WITHOUT running it first.\n#\n# Theme: {{hero}}'s spell casting practice at {{school}}\n\n\n# ============================================================\n# ERROR DECODE A: Undefined Variable\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"spells.py\", line 2, in <module>\n    print(spell_name)\nNameError: name 'spell_name' is not defined\n\"\"\"\n\n\ndef buggy_code_a():\n    \"\"\"The code that caused the error\"\"\"\n    print(spell_name)\n\n\ndef fix_code_a():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: You can't use a variable before creating it!)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE B: Typo in Variable Name\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"greeting.py\", line 2, in <module>\n    print(heros_name)\nNameError: name 'heros_name' is not defined. Did you mean: 'hero_name'?\n\"\"\"\n\n\ndef buggy_code_b():\n    \"\"\"The code that caused the error\"\"\"\n    hero_name = \"{{hero}}\"\n    print(heros_name)\n\n\ndef fix_code_b():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: Python is helpful - look at the suggestion!)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE C: Case Sensitivity\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"magic.py\", line 2, in <module>\n    print(School)\nNameError: name 'School' is not defined. Did you mean: 'school'?\n\"\"\"\n\n\ndef buggy_code_c():\n    \"\"\"The code that caused the error\"\"\"\n    school = \"{{school}}\"\n    print(School)\n\n\ndef fix_code_c():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: Python cares about UPPERCASE and lowercase!)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE D: Using Variable Before Assignment\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"counter.py\", line 3, in <module>\n    total = total + 10\nNameError: name 'total' is not defined\n\"\"\"\n\n\ndef buggy_code_d():\n    \"\"\"The code that caused the error\"\"\"\n    total = total + 10\n    print(total)\n\n\ndef fix_code_d():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: You need to have a value BEFORE you can add to it)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# BONUS: Multiple Name Errors\n# ============================================================\n\"\"\"\nThis code has 3 different name errors. Find and fix them all!\n\nwizard_name = \"{{hero}}\"\nspell = \"{{spell1}}\"\nprint(wizardname + \" casts \" + Spell)\nprint(\"The spell was: \" + magicword)\n\"\"\"\n\n\ndef fix_all_name_errors():\n    # ✏️ FIND AND FIX ALL 3 ERRORS ✏️\n    #\n    # Error 1: _______________\n    # Error 2: _______________\n    # Error 3: _______________\n    #\n    # Write the fully fixed code below:\n    pass\n\n\ndef main():\n    print(\"=== Decode the Error: Name Errors ===\")\n    print()\n    print(\"For each exercise:\")\n    print(\"1. Read the error message carefully\")\n    print(\"2. Identify what caused the error\")\n    print(\"3. Fix the code in the fix_code_X function\")\n    print()\n    print(\"Tip: NameError means Python doesn't recognize a name!\")\n    print()\n\n    # Uncomment each to test after fixing:\n    # print(\"Testing A:\"); fix_code_a()\n    # print(\"Testing B:\"); fix_code_b()\n    # print(\"Testing C:\"); fix_code_c()\n    # print(\"Testing D:\"); fix_code_d()\n    # print(\"Testing Bonus:\"); fix_all_name_errors()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "decode_error"
+      ],
+      "source_file": "module_0_basics/decode_error/exercise_2_name_errors.py"
+    },
+    {
+      "id": "module_0_basics.decode_error.exercise_3_type_errors",
+      "topic_id": "basics.errors",
+      "exercise_type": "decode_error",
+      "category": "debugging",
+      "title": "Type Errors",
+      "title_he": "שגיאות סוג",
+      "title_en": "Type Errors",
+      "description_he": "יסודות: שגיאות סוג\n\nExercise 3: Decode the Error - Type Errors\nEach exercise shows an error message and the code that caused it.\nYour job: Understand the error and fix the code WITHOUT running it first.\nTheme: {{hero}}'s magical calculations at {{school}}\n============================================================\nERROR DECODE A: Concatenating String and Number\n============================================================",
+      "description_en": "Basics: Type Errors\n\nExercise 3: Decode the Error - Type Errors\nEach exercise shows an error message and the code that caused it.\nYour job: Understand the error and fix the code WITHOUT running it first.\nTheme: {{hero}}'s magical calculations at {{school}}\n============================================================\nERROR DECODE A: Concatenating String and Number\n============================================================",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "error_literacy",
+        "debugging",
+        "python_errors"
+      ],
+      "starter_code": "# Exercise 3: Decode the Error - Type Errors\n#\n# Each exercise shows an error message and the code that caused it.\n# Your job: Understand the error and fix the code WITHOUT running it first.\n#\n# Theme: {{hero}}'s magical calculations at {{school}}\n\n\n# ============================================================\n# ERROR DECODE A: Concatenating String and Number\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"points.py\", line 2, in <module>\n    print(\"You earned \" + 100 + \" points!\")\nTypeError: can only concatenate str (not \"int\") to str\n\"\"\"\n\n\ndef buggy_code_a():\n    \"\"\"The code that caused the error\"\"\"\n    print(\"You earned \" + 100 + \" points!\")\n\n\ndef fix_code_a():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: You can't use + to combine text and numbers directly)\n    #\n    # Write the fixed code below:\n    # Method 1: Convert number to string with str()\n    # Method 2: Use commas in print() instead of +\n    pass\n\n\n# ============================================================\n# ERROR DECODE B: Math on a String\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"potion.py\", line 3, in <module>\n    total = ingredients + 5\nTypeError: can only concatenate str (not \"int\") to str\n\"\"\"\n\n\ndef buggy_code_b():\n    \"\"\"The code that caused the error\"\"\"\n    ingredients = input(\"How many ingredients? \")\n    total = ingredients + 5\n    print(total)\n\n\ndef fix_code_b():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: input() always returns a string, even if you type a number!)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE C: Multiplying Incompatible Types\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"spellpower.py\", line 3, in <module>\n    power = strength * boost\nTypeError: can't multiply sequence by non-int of type 'str'\n\"\"\"\n\n\ndef buggy_code_c():\n    \"\"\"The code that caused the error\"\"\"\n    strength = \"50\"\n    boost = \"2\"\n    power = strength * boost\n    print(power)\n\n\ndef fix_code_c():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: \"50\" is text, not a number. 50 is a number!)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE D: Wrong Type for len()\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"count.py\", line 2, in <module>\n    length = len(count)\nTypeError: object of type 'int' has no len()\n\"\"\"\n\n\ndef buggy_code_d():\n    \"\"\"The code that caused the error\"\"\"\n    count = 12345\n    length = len(count)\n    print(f\"Number has {length} digits\")\n\n\ndef fix_code_d():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: len() works on strings and lists, not numbers!)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# ERROR DECODE E: Calling a Non-Callable\n# ============================================================\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"spell.py\", line 2, in <module>\n    print(spell())\nTypeError: 'str' object is not callable\n\"\"\"\n\n\ndef buggy_code_e():\n    \"\"\"The code that caused the error\"\"\"\n    spell = \"{{spell1}}\"\n    print(spell())\n\n\ndef fix_code_e():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    # (Hint: () after a name tries to call it like a function!)\n    #\n    # Write the fixed code below:\n    pass\n\n\n# ============================================================\n# BONUS: Multiple Type Errors\n# ============================================================\n\"\"\"\nThis code has 2 different type errors. Find and fix them all!\n\nage = input(\"Enter your age: \")\nnext_year = age + 1\nprint(\"Next year you'll be \" + next_year)\n\"\"\"\n\n\ndef fix_all_type_errors():\n    # ✏️ FIND AND FIX ALL 2 ERRORS ✏️\n    #\n    # Error 1: _______________\n    # Error 2: _______________\n    #\n    # Write the fully fixed code below:\n    pass\n\n\ndef main():\n    print(\"=== Decode the Error: Type Errors ===\")\n    print()\n    print(\"For each exercise:\")\n    print(\"1. Read the error message carefully\")\n    print(\"2. Identify what caused the error\")\n    print(\"3. Fix the code in the fix_code_X function\")\n    print()\n    print(\"Tip: TypeError means you're mixing incompatible types!\")\n    print(\"     Common fixes: str(), int(), float()\")\n    print()\n\n    # Uncomment each to test after fixing:\n    # print(\"Testing A:\"); fix_code_a()\n    # print(\"Testing B:\"); fix_code_b()\n    # print(\"Testing C:\"); fix_code_c()\n    # print(\"Testing D:\"); fix_code_d()\n    # print(\"Testing E:\"); fix_code_e()\n    # print(\"Testing Bonus:\"); fix_all_type_errors()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "decode_error"
+      ],
+      "source_file": "module_0_basics/decode_error/exercise_3_type_errors.py"
+    },
+    {
+      "id": "module_0_basics.output_prediction.exercise_1_print_basics",
       "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_13_fizzbuzz.py",
+      "exercise_type": "output_prediction",
+      "category": "reading",
+      "title": "Print Basics",
+      "title_he": "יסודות הדפסה",
+      "title_en": "Print Basics",
+      "description_he": "יסודות: יסודות הדפסה\n\nExercise 1: Output Prediction - Print Basics\nRead the code carefully and predict what it will print.\nDo NOT run the code - practice mental execution!\nTheme: Messages from {{school}}\n--- PREDICTION CHALLENGE A ---\nWhat happens when you print multiple things?",
+      "description_en": "Basics: Print Basics\n\nExercise 1: Output Prediction - Print Basics\nRead the code carefully and predict what it will print.\nDo NOT run the code - practice mental execution!\nTheme: Messages from {{school}}\n--- PREDICTION CHALLENGE A ---\nWhat happens when you print multiple things?",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "mental_execution",
+        "program_flow",
+        "tracing"
+      ],
+      "starter_code": "# Exercise 1: Output Prediction - Print Basics\n#\n# Read the code carefully and predict what it will print.\n# Do NOT run the code - practice mental execution!\n#\n# Theme: Messages from {{school}}\n\n\n# --- PREDICTION CHALLENGE A ---\n# What happens when you print multiple things?\n\ndef challenge_a_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    print(\"{{greeting}}\")\n    print(\"Welcome to\", \"{{school}}\")\n    print(\"Your\" + \" \" + \"adventure\" + \" \" + \"begins!\")\n\n\ndef challenge_a_prediction():\n    # ✏️ YOUR PREDICTION ✏️\n    # Write EXACTLY what you think will be printed above.\n    # How many lines? What's on each line?\n    #\n    # Hint: print() with commas adds spaces between items\n    pass\n\n\n# --- PREDICTION CHALLENGE B ---\n# What happens with numbers in print?\n\ndef challenge_b_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    print(5 + 3)\n    print(\"5 + 3\")\n    print(\"5\" + \"3\")\n\n\ndef challenge_b_prediction():\n    # ✏️ YOUR PREDICTION ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Hint: Think about what quotes do\n    pass\n\n\n# --- PREDICTION CHALLENGE C ---\n# Variables and printing\n\ndef challenge_c_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    hero = \"{{hero}}\"\n    house = \"{{house}}\"\n    print(hero)\n    print(\"hero\")\n    print(hero, \"is in\", house)\n\n\ndef challenge_c_prediction():\n    # ✏️ YOUR PREDICTION ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Hint: What's the difference between hero and \"hero\"?\n    pass\n\n\n# --- PREDICTION CHALLENGE D ---\n# String multiplication\n\ndef challenge_d_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    print(\"*\" * 5)\n    print(\"{{spell1}} \" * 3)\n    spell = \"{{spell2}}\"\n    print(spell * 2)\n\n\ndef challenge_d_prediction():\n    # ✏️ YOUR PREDICTION ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Hint: What does * do with strings?\n    pass\n\n\n# --- PREDICTION CHALLENGE E ---\n# Counting with range\n\ndef challenge_e_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    for i in range(3):\n        print(i)\n\n\ndef challenge_e_prediction():\n    # ✏️ YOUR PREDICTION ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Hint: What number does range(3) start at? End at?\n    pass\n\n\n# --- PREDICTION CHALLENGE F ---\n# Loop with a message\n\ndef challenge_f_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    for i in range(1, 4):\n        print(\"{{exclamation}}!\")\n    print(\"Done!\")\n\n\ndef challenge_f_prediction():\n    # ✏️ YOUR PREDICTION ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Hint: How many times does the loop run? Is \"Done!\" inside the loop?\n    pass\n\n\ndef main():\n    print(\"=== Output Prediction: Print Basics ===\")\n    print()\n    print(\"For each challenge:\")\n    print(\"1. Read the code in challenge_X_code()\")\n    print(\"2. Write your prediction in challenge_X_prediction()\")\n    print(\"3. Then run to check your answers!\")\n    print()\n    print(\"=\"*40)\n\n    print(\"\\n--- Challenge A: Actual Output ---\")\n    challenge_a_code()\n    print(\"--- Your Prediction ---\")\n    challenge_a_prediction()\n\n    print(\"\\n--- Challenge B: Actual Output ---\")\n    challenge_b_code()\n    print(\"--- Your Prediction ---\")\n    challenge_b_prediction()\n\n    print(\"\\n--- Challenge C: Actual Output ---\")\n    challenge_c_code()\n    print(\"--- Your Prediction ---\")\n    challenge_c_prediction()\n\n    print(\"\\n--- Challenge D: Actual Output ---\")\n    challenge_d_code()\n    print(\"--- Your Prediction ---\")\n    challenge_d_prediction()\n\n    print(\"\\n--- Challenge E: Actual Output ---\")\n    challenge_e_code()\n    print(\"--- Your Prediction ---\")\n    challenge_e_prediction()\n\n    print(\"\\n--- Challenge F: Actual Output ---\")\n    challenge_f_code()\n    print(\"--- Your Prediction ---\")\n    challenge_f_prediction()\n\n    print(\"\\n\" + \"=\"*40)\n    print(\"Compare your predictions with the actual output!\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [
+        "print() with commas adds spaces between items",
+        "print() with + concatenates without adding spaces",
+        "Quotes make something a string, without quotes it's a variable"
+      ],
+      "tags": [
+        "module_0_basics",
+        "output_prediction"
+      ],
+      "source_file": "module_0_basics/output_prediction/exercise_1_print_basics.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_01_hello",
+      "topic_id": "basics.print",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Hello World",
+      "title_he": "שלום עולם",
+      "title_en": "Hello World",
+      "description_he": "יסודות: שלום עולם\n\nExercise 1: Hello World and Print",
+      "description_en": "Basics: Hello World\n\nExercise 1: Hello World and Print",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 1: Hello World and Print\n\n\ndef exercise_a():\n    # ✏️ Print \"Hello, World!\"\n    pass\n\n\ndef exercise_b():\n    # ✏️ Print your name\n    pass\n\n\ndef exercise_c():\n    # ✏️ Print three lines:\n    # Line 1: Your favorite color\n    # Line 2: Your favorite food\n    # Line 3: Your favorite animal\n    pass\n\n\ndef exercise_d():\n    # ✏️ Print this exact pattern:\n    # ***\n    # ***\n    # ***\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D ===\")\n    exercise_d()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [
+        "Use print() with quotes around your text",
+        "Each print() statement creates a new line",
+        "Example: print(\"Hello!\")"
+      ],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_01_hello.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_02_variables",
+      "topic_id": "basics.variables",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Variables",
+      "title_he": "משתנים",
+      "title_en": "Variables",
+      "description_he": "יסודות: משתנים\n\nExercise 2: Variables",
+      "description_en": "Basics: Variables\n\nExercise 2: Variables",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 2: Variables\n\n\ndef exercise_a():\n    # ✏️ Create a variable called 'hero' with your favorite book character\n    # (like \"{{heroine}}\" or \"{{hero}}\")\n    # Then print: \"My favorite hero is [hero]!\"\n\n    pass\n\n\ndef exercise_b():\n    # ✏️ Create two variables:\n    # character = a character (like \"{{hero}}\" or \"{{heroine}}\")\n    # book = which book/series they're from (like \"{{school}}\")\n    # Print both using print()\n\n    pass\n\n\ndef exercise_c():\n    # ✏️ Create these variables and print them all:\n    # school = a magical school (like \"{{school}}\" or \"{{school}}\")\n    # house = a house or group (like \"{{house}}\" or \"{{group}}\")\n    # spell = an ability or spell (like \"{{spell3}}\" or \"Teleporting\")\n\n    pass\n\n\ndef exercise_d():\n    # ✏️ Create a variable 'quote' with a quote from your favorite book\n    # Print it 3 times (use the variable 3 times!)\n    # Example: \"{{exclamation}}\"\n\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D ===\")\n    exercise_d()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [
+        "Create a variable with: name = \"value\"",
+        "Use the variable name (without quotes) in print()",
+        "Variable names are case-sensitive: hero is different from Hero"
+      ],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_02_variables.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_03_math",
+      "topic_id": "basics.math",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Math Operations",
+      "title_he": "חישובים",
+      "title_en": "Math Operations",
+      "description_he": "יסודות: חישובים\n\nExercise 3: Math Operations",
+      "description_en": "Basics: Math Operations\n\nExercise 3: Math Operations",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 3: Math Operations\n\n\ndef exercise_a():\n    # ✏️ Print the result of: 15 + 27\n    pass\n\n\ndef exercise_b():\n    # ✏️ Print the result of: 100 - 37\n    pass\n\n\ndef exercise_c():\n    # ✏️ Print the result of: 8 * 7\n    pass\n\n\ndef exercise_d():\n    # ✏️ Print the result of: 144 / 12\n    pass\n\n\ndef exercise_e():\n    # ✏️ Create two variables: a = 25, b = 4\n    # Print: a + b, a - b, a * b, a / b\n    pass\n\n\ndef exercise_f():\n    # ✏️ Calculate and print the average of: 85, 90, 78, 92\n    # Hint: add them all, then divide by 4\n    pass\n\n\ndef exercise_g():\n    # ✏️ A rectangle has width=12 and height=5\n    # Calculate and print its area (width * height)\n    # Calculate and print its perimeter (2*width + 2*height)\n    pass\n\n\ndef exercise_h():\n    # ✏️ Use ** for power: print 2 to the power of 10\n    # (that's 2 ** 10)\n    pass\n\n\ndef exercise_i():\n    # ✏️ Use % (modulo) to find the remainder of 17 / 5\n    # (that's 17 % 5)\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: Addition ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: Subtraction ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: Multiplication ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Division ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: All Operations ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Average ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Rectangle ===\")\n    exercise_g()\n\n    print(\"\\n=== Exercise H: Power ===\")\n    exercise_h()\n\n    print(\"\\n=== Exercise I: Modulo ===\")\n    exercise_i()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [
+        "Use + for addition, - for subtraction",
+        "Use * for multiplication, / for division",
+        "You can store results in variables: result = 5 + 3"
+      ],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_03_math.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_04_input",
+      "topic_id": "basics.input",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Input",
+      "title_he": "קלט",
+      "title_en": "Input",
+      "description_he": "יסודות: קלט\n\nExercise 4: Getting Input",
+      "description_en": "Basics: Input\n\nExercise 4: Getting Input",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 4: Getting Input\n\n\ndef exercise_a():\n    # ✏️ Ask the user for their name, then print \"Hello, [name]!\"\n    pass\n\n\ndef exercise_b():\n    # ✏️ Ask the user for their favorite color\n    # Print: \"Wow, [color] is a great color!\"\n    pass\n\n\ndef exercise_c():\n    # ✏️ Ask for the user's name and age\n    # Print: \"[name] is [age] years old\"\n    pass\n\n\ndef exercise_d():\n    # ✏️ Ask the user for a word\n    # Print the word 5 times on separate lines\n    pass\n\n\ndef exercise_e():\n    # ✏️ Ask for the user's first name and last name (two inputs)\n    # Print their full name\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E ===\")\n    exercise_e()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [
+        "input() waits for the user to type something",
+        "Store the result: name = input(\"What's your name? \")",
+        "input() always returns a string (text)"
+      ],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_04_input.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_05_calculator",
+      "topic_id": "basics.input",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Calculator",
+      "title_he": "מחשבון",
+      "title_en": "Calculator",
+      "description_he": "יסודות: מחשבון\n\nExercise 5: Input with Math",
+      "description_en": "Basics: Calculator\n\nExercise 5: Input with Math",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 5: Input with Math\n\n\ndef exercise_a():\n    # ✏️ Ask for a number, then print the number times 2\n    # Remember: input() gives a string, use int() to convert!\n    pass\n\n\ndef exercise_b():\n    # ✏️ Ask for two numbers, print their sum\n    pass\n\n\ndef exercise_c():\n    # ✏️ Ask for two numbers, print:\n    # - their sum\n    # - their difference\n    # - their product\n    pass\n\n\ndef exercise_d():\n    # ✏️ Ask for a number, print its square (number * number)\n    pass\n\n\ndef exercise_e():\n    # ✏️ Ask for the price of an item\n    # Ask for quantity\n    # Print the total cost\n    pass\n\n\ndef exercise_f():\n    # ✏️ Ask for a temperature in Celsius\n    # Convert to Fahrenheit: (celsius * 9/5) + 32\n    # Print the result\n    pass\n\n\ndef exercise_g():\n    # ✏️ Ask for someone's birth year\n    # Calculate and print their age (use 2025 as current year)\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: Double ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: Sum ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: All Operations ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Square ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: Shopping ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Temperature ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Age ===\")\n    exercise_g()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [
+        "Convert input to a number with int(): num = int(input())",
+        "You can do math with the converted number",
+        "For decimals, use float() instead of int()"
+      ],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_05_calculator.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_06_madlib_simple",
+      "topic_id": "basics.strings",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Mad Lib Story",
+      "title_he": "סיפור משוגע",
+      "title_en": "Mad Lib Story",
+      "description_he": "יסודות: סיפור משוגע\n\nExercise 6: String Concatenation (Joining Strings)",
+      "description_en": "Basics: Mad Lib Story\n\nExercise 6: String Concatenation (Joining Strings)",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 6: String Concatenation (Joining Strings)\n\n\ndef exercise_a():\n    # ✏️ Create two variables: first = \"Magic\", second = \"Spell\"\n    # Print them together with a space: \"Magic Spell\"\n    # Hint: use + to join strings\n    pass\n\n\ndef exercise_b():\n    # ✏️ Ask for a character name\n    # Print: \"Welcome to {{school}}, [name]! The {{item}} awaits you, [name]!\"\n    # (use the name variable twice)\n    pass\n\n\ndef exercise_c():\n    # ✏️ Ask for an adjective (like \"brave\" or \"cunning\")\n    # Ask for a magical creature (like \"{{creature}}\" or \"{{creature}}\")\n    # Print: \"The [adjective] [creature] flew over {{location}}!\"\n    pass\n\n\ndef exercise_d():\n    # ✏️ Mini Mad Lib - Adventure style!\n    # Ask for: a name, a place, an item\n    # Print: \"[name] from [place] picked up a [item]!\"\n    pass\n\n\ndef exercise_e():\n    # ✏️ Adventure Mad Lib!\n    # Ask for: a hero name, a magical ability, a creature\n    # Create a sentence like: \"[hero] used their [ability] to defeat the [creature]!\"\n    pass\n\n\ndef exercise_f():\n    # ✏️ {{school}} series banner!\n    # Ask for an special ability (like \"{{spell1}}\" or \"{{spell2}}\")\n    # Print a banner like this:\n    # ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐\n    # ⭐ [ability] ⭐\n    # ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐\n    # Hint: you can use ⭐ or * and spaces\n    pass\n\n\ndef main():\n    print(\"=== Exercise A ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F ===\")\n    exercise_f()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_06_madlib_simple.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_07_counting",
+      "topic_id": "basics.loops",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Counting",
+      "title_he": "ספירה",
+      "title_en": "Counting",
+      "description_he": "יסודות: ספירה\n\nExercise 7: Counting with For Loops",
+      "description_en": "Basics: Counting\n\nExercise 7: Counting with For Loops",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 7: Counting with For Loops\n\n\ndef exercise_a():\n    # ✏️ Print numbers 1 to 5, each on a new line\n    # Use: for i in range(...)\n    pass\n\n\ndef exercise_b():\n    # ✏️ Print numbers 1 to 10\n    pass\n\n\ndef exercise_c():\n    # ✏️ Print numbers 0 to 9 (that's range(10)!)\n    pass\n\n\ndef exercise_d():\n    # ✏️ Print even numbers from 2 to 10: 2, 4, 6, 8, 10\n    # Hint: range(start, stop, step) - range(2, 11, 2)\n    pass\n\n\ndef exercise_e():\n    # ✏️ Print numbers counting down: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1\n    # Hint: range(10, 0, -1)\n    pass\n\n\ndef exercise_f():\n    # ✏️ Ask the user for a number\n    # Print from 1 to that number\n    pass\n\n\ndef exercise_g():\n    # ✏️ Print \"{{spell1}}!\" exactly 7 times\n    # (That's a magic spell in {{school}} series!)\n    pass\n\n\ndef exercise_h():\n    # ✏️ Ask the user for a spell name and a number\n    # Print the spell that many times\n    # Try it with \"{{spell3}}\" or \"I have {{spell1}}!\"!\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: 1 to 5 ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: 1 to 10 ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: 0 to 9 ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Even numbers ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: Countdown ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Count to user's number ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Hello 7 times ===\")\n    exercise_g()\n\n    print(\"\\n=== Exercise H: Word repeater ===\")\n    exercise_h()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [
+        "range(5) gives you: 0, 1, 2, 3, 4",
+        "range(1, 6) gives you: 1, 2, 3, 4, 5",
+        "The loop variable (i) changes each time through the loop"
+      ],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_07_counting.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_08_patterns",
+      "topic_id": "basics.loops",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Patterns",
+      "title_he": "דפוסים",
+      "title_en": "Patterns",
+      "description_he": "יסודות: דפוסים\n\nExercise 8: Print Patterns with Loops",
+      "description_en": "Basics: Patterns\n\nExercise 8: Print Patterns with Loops",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 8: Print Patterns with Loops\n\n\ndef exercise_a():\n    # ✏️ Print a line of 10 stars: **********\n    # Hint: print(\"*\" * 10) or use a loop\n    pass\n\n\ndef exercise_b():\n    # ✏️ Print 5 lines of stars:\n    # *****\n    # *****\n    # *****\n    # *****\n    # *****\n    pass\n\n\ndef exercise_c():\n    # ✏️ Print a triangle:\n    # *\n    # **\n    # ***\n    # ****\n    # *****\n    # Hint: in each row i, print i stars\n    pass\n\n\ndef exercise_d():\n    # ✏️ Print an upside-down triangle:\n    # *****\n    # ****\n    # ***\n    # **\n    # *\n    pass\n\n\ndef exercise_e():\n    # ✏️ Print numbers in a row: 1 2 3 4 5\n    # Hint: print(..., end=\" \") prints without newline\n    pass\n\n\ndef exercise_f():\n    # ✏️ Print this pattern:\n    # 1\n    # 12\n    # 123\n    # 1234\n    # 12345\n    pass\n\n\ndef exercise_g():\n    # ✏️ Ask user for a size, print a square of that size\n    # Example for size 4:\n    # ****\n    # ****\n    # ****\n    # ****\n    pass\n\n\ndef exercise_h():\n    # ✏️ Ask user for a size, print a triangle of that size\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: Line of stars ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: Square of stars ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: Triangle ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Upside-down triangle ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: Numbers in a row ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Number triangle ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Custom square ===\")\n    exercise_g()\n\n    print(\"\\n=== Exercise H: Custom triangle ===\")\n    exercise_h()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_08_patterns.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_09_sum",
+      "topic_id": "basics.loops",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Sum",
+      "title_he": "סכום",
+      "title_en": "Sum",
+      "description_he": "יסודות: סכום\n\nExercise 9: Accumulating Values in Loops",
+      "description_en": "Basics: Sum\n\nExercise 9: Accumulating Values in Loops",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# Exercise 9: Accumulating Values in Loops\n\n\ndef exercise_a():\n    # ✏️ Calculate the sum of numbers 1 to 5 (should be 15)\n    # Use a loop and a variable to keep track of the sum\n    # total = 0\n    # for i in range(...):\n    #     total = total + i\n    pass\n\n\ndef exercise_b():\n    # ✏️ Calculate the sum of numbers 1 to 100\n    # Print the result (should be 5050)\n    pass\n\n\ndef exercise_c():\n    # ✏️ Calculate the sum of even numbers from 2 to 20\n    pass\n\n\ndef exercise_d():\n    # ✏️ Ask the user for a number n\n    # Calculate and print the sum of 1 to n\n    pass\n\n\ndef exercise_e():\n    # ✏️ Calculate the factorial of 5 (5! = 5*4*3*2*1 = 120)\n    # Use a loop!\n    # Start with result = 1, then multiply by each number\n    pass\n\n\ndef exercise_f():\n    # ✏️ Ask user for a number n\n    # Calculate factorial of n (n!)\n    pass\n\n\ndef exercise_g():\n    # ✏️ Count how many numbers from 1 to 100 are divisible by 7\n    # Hint: if number % 7 == 0, it's divisible by 7\n    pass\n\n\ndef exercise_h():\n    # ✏️ Ask the user to enter 5 numbers (one at a time)\n    # Calculate and print:\n    # - The sum of all numbers\n    # - The average\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: Sum 1-5 ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: Sum 1-100 ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: Sum even 2-20 ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Sum 1 to n ===\")\n    exercise_d()\n\n    print(\"\\n=== Exercise E: Factorial of 5 ===\")\n    exercise_e()\n\n    print(\"\\n=== Exercise F: Factorial of n ===\")\n    exercise_f()\n\n    print(\"\\n=== Exercise G: Divisible by 7 ===\")\n    exercise_g()\n\n    print(\"\\n=== Exercise H: Average of 5 numbers ===\")\n    exercise_h()\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_09_sum.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_13_fizzbuzz",
+      "topic_id": "basics.loops",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "FizzBuzz",
       "title_he": "פיזבאז",
       "title_en": "FizzBuzz",
       "description_he": "יסודות: פיזבאז\n\nExercise 13: FizzBuzz Challenge!\nThis is a famous programming challenge!\nPrint numbers from 1 to 30, BUT:\n- If the number is divisible by 3, print \"Fizz\" instead\n- If the number is divisible by 5, print \"Buzz\" instead\n- If the number is divisible by BOTH 3 and 5, print \"FizzBuzz\"\nExpected output starts like:\n1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n...",
       "description_en": "Basics: FizzBuzz\n\nExercise 13: FizzBuzz Challenge!\nThis is a famous programming challenge!\nPrint numbers from 1 to 30, BUT:\n- If the number is divisible by 3, print \"Fizz\" instead\n- If the number is divisible by 5, print \"Buzz\" instead\n- If the number is divisible by BOTH 3 and 5, print \"FizzBuzz\"\nExpected output starts like:\n1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n...",
       "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 13: FizzBuzz Challenge!\n#\n# This is a famous programming challenge!\n#\n# Print numbers from 1 to 30, BUT:\n# - If the number is divisible by 3, print \"Fizz\" instead\n# - If the number is divisible by 5, print \"Buzz\" instead\n# - If the number is divisible by BOTH 3 and 5, print \"FizzBuzz\"\n#\n# Expected output starts like:\n# 1\n# 2\n# Fizz\n# 4\n# Buzz\n# Fizz\n# 7\n# 8\n# Fizz\n# Buzz\n# 11\n# Fizz\n# 13\n# 14\n# FizzBuzz\n# 16\n# ...\n\n\ndef fizzbuzz():\n    # ✏️ YOUR CODE HERE\n    # Hint: check divisible by both first!\n    # Use: if number % 3 == 0 (divisible by 3)\n    pass\n\n\ndef main():\n    print(\"=== FizzBuzz 1-30 ===\")\n    fizzbuzz()\n\n\nmain()\n",
       "solution_code": null,
       "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_13_fizzbuzz.py"
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_13_fizzbuzz.py"
     },
     {
-      "id": "module_0_basics.exercise_14_multiplication_table",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_14_multiplication_table.py",
+      "id": "module_0_basics.write_code.exercise_14_multiplication_table",
+      "topic_id": "basics.loops",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Multiplication Table",
       "title_he": "לוח הכפל",
       "title_en": "Multiplication Table",
       "description_he": "יסודות: לוח הכפל\n\nExercise 14: Multiplication Table",
       "description_en": "Basics: Multiplication Table\n\nExercise 14: Multiplication Table",
       "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 14: Multiplication Table\n\n\ndef exercise_a():\n    # ✏️ Print the 5 times table:\n    # 5 x 1 = 5\n    # 5 x 2 = 10\n    # ... up to 5 x 10\n    pass\n\n\ndef exercise_b():\n    # ✏️ Ask the user for a number\n    # Print that number's times table (1 to 10)\n    pass\n\n\ndef exercise_c():\n    # ✏️ Print a full multiplication table from 1 to 5\n    # Output should look something like:\n    #\n    # 1  2  3  4  5\n    # 2  4  6  8  10\n    # 3  6  9  12 15\n    # 4  8  12 16 20\n    # 5  10 15 20 25\n    #\n    # Hint: use nested loops!\n    # Hint: print(number, end=\"\\t\") prints with a tab instead of newline\n    pass\n\n\ndef exercise_d():\n    # ✏️ Ask the user for a size (n)\n    # Print an n x n multiplication table\n    pass\n\n\ndef main():\n    print(\"=== Exercise A: 5 times table ===\")\n    exercise_a()\n\n    print(\"\\n=== Exercise B: Custom times table ===\")\n    exercise_b()\n\n    print(\"\\n=== Exercise C: Full 5x5 table ===\")\n    exercise_c()\n\n    print(\"\\n=== Exercise D: Custom size table ===\")\n    exercise_d()\n\n\nmain()\n",
       "solution_code": null,
       "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_14_multiplication_table.py"
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_14_multiplication_table.py"
     },
     {
-      "id": "module_0_basics.exercise_15_mini_project",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_15_mini_project.py",
+      "id": "module_0_basics.write_code.exercise_15_mini_project",
+      "topic_id": "basics.project",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Mini Project",
       "title_he": "פרויקט מיני",
       "title_en": "Mini Project",
       "description_he": "יסודות: פרויקט מיני\n\nExercise 15: Mini Project - Combine Everything!\nCreate a simple \"Number Analyzer\" program that:\n1. Asks the user for a number\n2. Tells them interesting facts about that number!\nUse functions for each analysis!",
       "description_en": "Basics: Mini Project\n\nExercise 15: Mini Project - Combine Everything!\nCreate a simple \"Number Analyzer\" program that:\n1. Asks the user for a number\n2. Tells them interesting facts about that number!\nUse functions for each analysis!",
       "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 15: Mini Project - Combine Everything!\n#\n# Create a simple \"Number Analyzer\" program that:\n# 1. Asks the user for a number\n# 2. Tells them interesting facts about that number!\n#\n# Use functions for each analysis!\n\n\ndef is_even(n):\n    # ✏️ Return True if even, False if odd\n    pass\n\n\ndef is_positive(n):\n    # ✏️ Return True if positive, False if zero or negative\n    pass\n\n\ndef get_factors(n):\n    # ✏️ Print all factors of n (numbers that divide evenly into n)\n    # Example: factors of 12 are 1, 2, 3, 4, 6, 12\n    pass\n\n\ndef sum_of_digits(n):\n    # ✏️ Return the sum of all digits in n\n    # Example: sum_of_digits(123) = 1 + 2 + 3 = 6\n    # Hint: convert to string, loop through characters, convert back to int\n    pass\n\n\ndef is_prime(n):\n    # ✏️ Return True if n is prime (only divisible by 1 and itself)\n    # Hint: check if any number from 2 to n-1 divides evenly\n    pass\n\n\ndef analyze_number(n):\n    print(\"Analyzing:\", n)\n    print(\"-\" * 20)\n\n    # ✏️ Call your functions and print results!\n    # - Is it even or odd?\n    # - Is it positive, negative, or zero?\n    # - What are its factors?\n    # - What's the sum of its digits?\n    # - Is it prime?\n\n    pass\n\n\ndef main():\n    print(\"=== Number Analyzer ===\")\n    print()\n\n    number = int(input(\"Enter a number to analyze: \"))\n    print()\n\n    analyze_number(number)\n\n\nmain()\n",
       "solution_code": null,
       "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_15_mini_project.py"
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_15_mini_project.py"
     },
     {
-      "id": "module_0_basics.exercise_16_turtle_intro",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_16_turtle_intro.py",
+      "id": "module_0_basics.write_code.exercise_16_turtle_intro",
+      "topic_id": "basics.turtle",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Turtle Introduction",
       "title_he": "הכרות עם צב",
       "title_en": "Turtle Introduction",
       "description_he": "יסודות: הכרות עם צב\n\nExercise 16: Turtle Introduction - First Steps!",
       "description_en": "Basics: Turtle Introduction\n\nExercise 16: Turtle Introduction - First Steps!",
       "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 16: Turtle Introduction - First Steps!\n\nimport turtle\n\n\ndef exercise_a():\n    \"\"\"Make the turtle move forward 100 pixels\"\"\"\n    t = turtle.Turtle()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Use t.forward(100) to move the turtle forward\n    pass\n\n    turtle.done()\n\n\ndef exercise_b():\n    \"\"\"Make the turtle move forward, then turn right, then move forward again\"\"\"\n    t = turtle.Turtle()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Move forward 100\n    # 2. Turn right 90 degrees (use t.right(90))\n    # 3. Move forward 100 again\n    pass\n\n    turtle.done()\n\n\ndef exercise_c():\n    \"\"\"Draw the letter L\"\"\"\n    t = turtle.Turtle()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw an L shape:\n    # 1. Go forward (down)\n    # 2. Turn right\n    # 3. Go forward (to the right)\n    pass\n\n    turtle.done()\n\n\n# Choose which exercise to run:\n# exercise_a()\n# exercise_b()\nexercise_c()\n",
       "solution_code": null,
       "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_16_turtle_intro.py"
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_16_turtle_intro.py"
     },
     {
-      "id": "module_0_basics.exercise_17_turtle_shapes",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_17_turtle_shapes.py",
+      "id": "module_0_basics.write_code.exercise_17_turtle_shapes",
+      "topic_id": "basics.turtle",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Turtle Shapes",
       "title_he": "צורות עם צב",
       "title_en": "Turtle Shapes",
       "description_he": "יסודות: צורות עם צב\n\nExercise 17: Turtle Shapes - Drawing Without Loops",
       "description_en": "Basics: Turtle Shapes\n\nExercise 17: Turtle Shapes - Drawing Without Loops",
       "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 17: Turtle Shapes - Drawing Without Loops\n\nimport turtle\n\n\ndef exercise_a():\n    \"\"\"Draw a square by writing each step manually (no loops yet!)\"\"\"\n    t = turtle.Turtle()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a square step by step:\n    # Side 1: forward 100, right 90\n    # Side 2: forward 100, right 90\n    # Side 3: forward 100, right 90\n    # Side 4: forward 100, right 90\n    pass\n\n    turtle.done()\n\n\ndef exercise_b():\n    \"\"\"Draw a triangle step by step\"\"\"\n    t = turtle.Turtle()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw a triangle:\n    # Each turn needs to be 120 degrees (not 90!)\n    # Hint: 360 / 3 = 120\n    pass\n\n    turtle.done()\n\n\ndef exercise_c():\n    \"\"\"Draw a simple house (square + triangle roof)\"\"\"\n    t = turtle.Turtle()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Draw a square for the house\n    # 2. Move to the top-left corner\n    # 3. Draw a triangle for the roof\n    #\n    # Hint: After the square, the turtle is back at start.\n    # You need to move it up to draw the roof!\n    pass\n\n    turtle.done()\n\n\n# Choose which exercise to run:\n# exercise_a()\n# exercise_b()\nexercise_c()\n",
       "solution_code": null,
       "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_17_turtle_shapes.py"
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_17_turtle_shapes.py"
     },
     {
-      "id": "module_0_basics.exercise_18_turtle_colors",
-      "topic_id": "basics.print",
-      "title": "module_0_basics/exercise_18_turtle_colors.py",
+      "id": "module_0_basics.write_code.exercise_18_turtle_colors",
+      "topic_id": "basics.turtle",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Turtle Colors",
       "title_he": "צבעים עם צב",
       "title_en": "Turtle Colors",
       "description_he": "יסודות: צבעים עם צב\n\nExercise 18: Turtle Colors and Pen Control",
       "description_en": "Basics: Turtle Colors\n\nExercise 18: Turtle Colors and Pen Control",
       "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
       "starter_code": "# Exercise 18: Turtle Colors and Pen Control\n\nimport turtle\n\n\ndef exercise_a():\n    \"\"\"Draw a red line, then a blue line\"\"\"\n    t = turtle.Turtle()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Set color to red: t.color(\"red\")\n    # 2. Move forward 100\n    # 3. Turn right 90\n    # 4. Set color to blue: t.color(\"blue\")\n    # 5. Move forward 100\n    pass\n\n    turtle.done()\n\n\ndef exercise_b():\n    \"\"\"Draw two separate lines using pen up/down\"\"\"\n    t = turtle.Turtle()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # 1. Draw a line forward 50\n    # 2. Lift the pen: t.penup()\n    # 3. Move forward 30 (this won't draw!)\n    # 4. Put pen down: t.pendown()\n    # 5. Draw another line forward 50\n    pass\n\n    turtle.done()\n\n\ndef exercise_c():\n    \"\"\"Draw a colorful pattern - 4 lines in different colors\"\"\"\n    t = turtle.Turtle()\n    t.speed(3)  # Slow down to see the colors\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Draw 4 lines in a fan pattern:\n    # 1. Red line forward 100, turn right 90\n    # 2. Blue line forward 100, turn right 90\n    # 3. Green line forward 100, turn right 90\n    # 4. Purple line forward 100, turn right 90\n    #\n    # Colors you can use: \"red\", \"blue\", \"green\", \"purple\",\n    #                     \"orange\", \"pink\", \"yellow\", \"brown\"\n    pass\n\n    turtle.done()\n\n\n# Choose which exercise to run:\n# exercise_a()\n# exercise_b()\nexercise_c()\n",
       "solution_code": null,
       "hints": [],
-      "tags": "module_0_basics",
-      "source_file": "module_0_basics/exercise_18_turtle_colors.py"
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_18_turtle_colors.py"
     }
   ]
 }
