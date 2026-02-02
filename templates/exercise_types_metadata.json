@@ -246,6 +246,21 @@
       "student_action": "build",
       "requires_running": true,
       "estimated_time_minutes": 20
+    },
+    "hybrid": {
+      "id": "hybrid",
+      "name": "Hybrid",
+      "name_he": "משולב",
+      "description": "Multi-phase exercises combining different activity types in a progressive arc",
+      "description_he": "תרגילים רב-שלביים המשלבים סוגי פעילויות שונים במסלול מתקדם",
+      "category": "hybrid",
+      "skills": ["mental_execution", "syntax_recall", "implementation", "pattern_recognition", "independence"],
+      "difficulty_range": [1, 3],
+      "recommended_modules": ["all"],
+      "template_file": "template_hybrid.py",
+      "student_action": "learn",
+      "requires_running": true,
+      "estimated_time_minutes": 15
     }
   },
   "categories": {
@@ -284,6 +299,12 @@
       "name_he": "כתיבה חופשית",
       "description": "Exercises with minimal guidance, full implementation",
       "order": 6
+    },
+    "hybrid": {
+      "name": "Hybrid Learning Arc",
+      "name_he": "מסלול למידה משולב",
+      "description": "Multi-phase exercises combining reading, scaffolded writing, and free writing in a progressive arc",
+      "order": 7
     }
   },
   "skills": {
