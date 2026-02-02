@@ -1,0 +1,222 @@
+{
+  "_NOTE": "This is a COMPLETE example theme showing all fields filled in. Use as reference when creating your own.",
+
+  "theme_id": "fantasy_magic",
+  "theme_name": "Fantasy Magic Academy",
+  "description": "Learn Python while mastering magical arts at an enchanted academy",
+  "genre": "fantasy",
+
+  "layer_1_entities": {
+    "hero": ["Harry Potter", "Ron Weasley", "Neville Longbottom", "Cedric Diggory"],
+    "heroine": ["Hermione Granger", "Luna Lovegood", "Ginny Weasley", "Cho Chang"],
+    "friend": ["Ron Weasley", "Neville Longbottom", "Luna Lovegood", "Hagrid", "Dobby"],
+    "mentor": ["Dumbledore", "Professor McGonagall", "Hagrid", "Professor Lupin"],
+    "villain": ["Voldemort", "Draco Malfoy", "Professor Snape", "Bellatrix"],
+
+    "school": ["Hogwarts School of Witchcraft and Wizardry"],
+    "house": ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
+    "location": ["the Great Hall", "the Forbidden Forest", "the Room of Requirement", "the Astronomy Tower"],
+    "place": ["Diagon Alley", "Hogsmeade", "Platform 9 3/4", "The Leaky Cauldron"],
+
+    "spell1": ["Lumos", "Alohomora", "Nox", "Reparo"],
+    "spell2": ["Expelliarmus", "Stupefy", "Protego", "Petrificus Totalus"],
+    "spell3": ["Expecto Patronum", "Riddikulus", "Obliviate"],
+    "spell4": ["Wingardium Leviosa", "Accio", "Aparecium"],
+
+    "creature": ["hippogriff", "phoenix", "thestral", "dragon", "basilisk"],
+    "pet": ["Hedwig the owl", "Crookshanks the cat", "Scabbers the rat", "Trevor the toad"],
+    "item": ["wand", "broomstick", "invisibility cloak", "Marauder's Map", "Time-Turner"],
+    "transport": ["Nimbus 2000", "Firebolt", "Hogwarts Express", "flying car"],
+
+    "group": ["Dumbledore's Army", "the Order of the Phoenix", "the Quidditch team"],
+    "exclamation": ["By Merlin's beard!", "Brilliant!", "Wicked!", "Blimey!"],
+    "greeting": ["Welcome to Hogwarts, young wizard!"],
+    "password": ["Caput Draconis", "Pig Snout", "Fortuna Major", "Balderdash"]
+  },
+
+  "layer_2_universal": {
+    "ROLE_TITLE": "Wizard",
+    "ROLE_TITLE_PLURAL": "Wizards",
+    "MENTOR_TITLE": "Professor",
+    "WORKSPACE": "magical realm",
+
+    "PROJECT_TYPE": "enchanted system",
+    "PROJECT_SCALE": "grand",
+    "GOAL": "magical mastery",
+
+    "COMPONENT_SINGULAR": "spell",
+    "COMPONENT_PLURAL": "spells",
+    "TASK_VERB": "cast",
+    "TASK_NOUN": "incantation",
+
+    "SECTION_ICON": "✨",
+    "SUCCESS_WORD": "Excellent",
+    "CELEBRATION": "Well done, wizard! Your magic grows stronger with each spell mastered!",
+    "PROGRESS_UNIT": "year",
+
+    "OPENING_FLAVOR": "Your wand is ready, and the magical world awaits your command!",
+    "TRANSITION_WORD": "Next",
+    "CLOSING_FLAVOR": "You've mastered these enchantments! The magical realm is safer for your achievements."
+  },
+
+  "layer_2_context_blocks": {
+    "introduction": {
+      "CONTEXT_INTRO": "Welcome to {{school}}! Your magical education continues with today's lesson.",
+      "CONTEXT_PROJECT_INTRO": "Your first assignment: create a personal spellbook using Python dictionaries.",
+      "CONTEXT_ROLE_INTRO": "You are the newly appointed Inventory Keeper at {{school}}.",
+      "CONTEXT_WORLD_INTRO": "Welcome to Advanced Magical Systems class! Today you'll build an ecosystem where wizards and magical creatures interact.",
+      "CONTEXT_SPEC_INTRO": "Professional spellcrafters never start coding without a proper spell specification.",
+      "CONTEXT_AUDIT_INTRO": "Even if a spell works, it may not be worthy of publication in the Grand Grimoire.",
+      "CONTEXT_PREDICTION_INTRO": "Advanced students learn to predict spell effects without casting them first.",
+      "CONTEXT_COMPARISON_INTRO": "{{mentor}} has challenged your class to compare two approaches to spell organization.",
+      "CONTEXT_INVESTIGATION_INTRO": "Oh no! Several spells at {{school}} have been sabotaged!",
+      "CONTEXT_UNLOCKING_INTRO": "At {{school}}, advanced magic is taught in stages. You must master each level before unlocking the next."
+    },
+
+    "learning": {
+      "CONTEXT_LEARNING_OBJECTIVE": "You'll learn how to structure spell formulas using Python data structures.",
+      "CONTEXT_PREDICTION_PURPOSE": "This crucial skill prevents dangerous magical accidents.",
+      "CONTEXT_WORLD_VISION": "Your code will simulate real magical dynamics between wizards and creatures."
+    },
+
+    "narrative": {
+      "CONTEXT_EXAMPLE_NARRATIVE": "Here's how {{mentor}} teaches the {{spell1}} enchantment to first-years:",
+      "CONTEXT_INCREMENTAL_NARRATIVE": "Like all great wizards, you'll start simple and expand your grimoire over time.",
+      "CONTEXT_SPEC_NARRATIVE": "{{mentor}} has written the requirements for a new defensive spell. Your job is to implement it.",
+      "CONTEXT_CODE_SAMPLE_NARRATIVE": "A first-year student submitted this working spell, but {{mentor}} rejected it for poor style.",
+      "CONTEXT_INTERACTION_NARRATIVE": "When a wizard encounters a creature, the outcome depends on both entities' properties.",
+      "CONTEXT_VERIFICATION_NARRATIVE": "Compare your predictions with the actual spell outputs."
+    },
+
+    "tasks": {
+      "CONTEXT_STUDENT_TASK": "Now craft your own spell using the same pattern you've studied.",
+      "CONTEXT_ROLE_RESPONSIBILITIES": "Your job is to track all magical items, supplies, and equipment used by students and staff.",
+      "CONTEXT_ROLE_CHALLENGE": "The previous keeper's records are in chaos! You must organize everything using proper data structures.",
+      "CONTEXT_SITUATION_SETUP": "It's the morning of September 1st. Hundreds of students are arriving, and they're all asking for their supplies!",
+      "CONTEXT_INVESTIGATION_MISSION": "As a member of the Spell Debugging Squad, you must identify what went wrong and restore each spell.",
+      "CONTEXT_COMPARISON_DECISION": "Two senior students have proposed different spellbook structures. Which is better for our needs?",
+      "CONTEXT_SPEC_CONSTRAINTS": "Note: Shield spells cannot block more than 5 threat types at once (magical limit)."
+    },
+
+    "guidance": {
+      "CONTEXT_SUCCESS_CRITERIA": "Your spell should have name, power, and effect properties - just like the example.",
+      "CONTEXT_IMPLEMENTATION_GUIDANCE": "Start by creating the basic structure, then add each property one at a time.",
+      "CONTEXT_ANALYSIS_PROMPT": "As an apprentice spellcrafter, evaluate both approaches and defend your choice.",
+      "CONTEXT_DECISION_GUIDANCE": "Consider: simplicity vs. organization, current needs vs. future growth.",
+      "CONTEXT_IMPROVEMENT_GUIDANCE": "Rewrite the spell with clear variable names and proper documentation. Functionality should remain identical.",
+      "CONTEXT_UNLOCK_REMINDER": "Uncomment the next stage when you've mastered the current one!"
+    },
+
+    "completion": {
+      "CONTEXT_INTEGRATION": "The Complete Grimoire",
+      "CONTEXT_FINAL_ASSEMBLY": "Run all exercises to see your spellbook come to life!",
+      "CONTEXT_ROLE_START": "=== {{hero}}'s INVENTORY MANAGEMENT SYSTEM ===",
+      "CONTEXT_ROLE_COMPLETE": "Excellent work, Inventory Keeper! The supplies are organized and ready for distribution.",
+      "CONTEXT_VERIFICATION_START": "=== ACTUAL SPELL EFFECTS ===",
+      "CONTEXT_VERIFICATION_COMPLETE": "=== VERIFICATION COMPLETE ===",
+      "CONTEXT_WORLD_BUILDING_START": "=== BUILDING YOUR MAGICAL ECOSYSTEM ===",
+      "CONTEXT_WORLD_BUILDING_COMPLETE": "=== WORLD SIMULATION COMPLETE ===",
+      "CONTEXT_PROGRESSION_START": "=== {{school}} SPELL PROGRESSION SYSTEM ===",
+      "CONTEXT_PROGRESSION_STATUS": "Check which stages you've completed. Unlock the next when ready!"
+    },
+
+    "quality": {
+      "CONTEXT_AUDIT_STANDARDS": "All spells submitted to the library must follow the {{school}} Code Style Guide.",
+      "CONTEXT_ISSUES_FOUND": "The spell functions correctly but violates several style principles:",
+      "CONTEXT_SPEC_SOURCE": "{{mentor}} has written the requirements. Your job is to implement them exactly."
+    }
+  },
+
+  "layer_2_indexed_blocks": {
+    "phases": {
+      "PHASE_1_TITLE": "Step 1: The Foundation Spell",
+      "CONTEXT_PHASE_1": "Every spellbook begins with a basic spell. Create a dictionary to store your first spell's properties.",
+      "PHASE_2_TITLE": "Step 2: Reading Your Spells",
+      "CONTEXT_PHASE_2": "Now that your spell exists, practice accessing its power level and effects.",
+      "PHASE_3_TITLE": "Step 3: Expanding the Grimoire",
+      "CONTEXT_PHASE_3": "Add more spells to your collection using the same structure.",
+      "PHASE_4_TITLE": "Step 4: Spell Modifications",
+      "CONTEXT_PHASE_4": "Learn to update and modify existing spells in your grimoire.",
+      "PHASE_5_TITLE": "Step 5: Advanced Enchantments",
+      "CONTEXT_PHASE_5": "Combine everything you've learned into a complete spell management system."
+    },
+
+    "cases": {
+      "CASE_1_TITLE": "Case #1: The Missing Ingredient",
+      "CONTEXT_CASE_1_NARRATIVE": "{{friend}} tried to cast a potion spell, but it crashed with a KeyError.",
+      "CONTEXT_INVESTIGATION_PROMPT_1": "Examine the potion dictionary. What key is the code trying to access? Does it exist?",
+      "CASE_2_TITLE": "Case #2: The Wrong Type",
+      "CONTEXT_CASE_2_NARRATIVE": "A levitation charm is producing strange errors when calculating lift power.",
+      "CONTEXT_INVESTIGATION_PROMPT_2": "Check the data types. Is the code trying to do math with a string?",
+      "CASE_3_TITLE": "Case #3: The Infinite Loop",
+      "CONTEXT_CASE_3_NARRATIVE": "The automated brewing cauldron won't stop! It's been stirring for hours.",
+      "CONTEXT_INVESTIGATION_PROMPT_3": "Look at the loop condition. Will it ever become False?"
+    },
+
+    "stages": {
+      "STAGE_1_TITLE": "Level 1: Apprentice Spell",
+      "CONTEXT_STAGE_1_NARRATIVE": "Every wizard begins here. This simple spell is safe for beginners.",
+      "CONTEXT_UNLOCK_INSTRUCTION_1": "Complete this stage before moving on.",
+      "STAGE_2_TITLE": "Level 2: Journeyman Spell [LOCKED]",
+      "CONTEXT_STAGE_2_NARRATIVE": "This intermediate spell builds on Level 1 concepts.",
+      "CONTEXT_UNLOCK_INSTRUCTION_2": "Uncomment stage_2() after completing Level 1.",
+      "STAGE_3_TITLE": "Level 3: Master Spell [LOCKED]",
+      "CONTEXT_STAGE_3_NARRATIVE": "Only those who've mastered the basics may attempt this advanced magic.",
+      "CONTEXT_UNLOCK_INSTRUCTION_3": "Uncomment stage_3() after completing Level 2."
+    },
+
+    "challenges": {
+      "CHALLENGE_1_TITLE": "Challenge 1: The Levitation Sequence",
+      "CONTEXT_CHALLENGE_1_NARRATIVE": "{{friend}} has written a spell that levitates three objects. What will it announce?",
+      "CONTEXT_PREDICTION_GUIDANCE_1": "Read line by line. What does each print statement output?",
+      "CHALLENGE_2_TITLE": "Challenge 2: The Sorting Ceremony",
+      "CONTEXT_CHALLENGE_2_NARRATIVE": "This spell sorts students into houses. Predict the house assignments.",
+      "CONTEXT_PREDICTION_GUIDANCE_2": "Follow the if/elif/else branches carefully."
+    },
+
+    "approaches": {
+      "APPROACH_1_NAME": "Approach A: The Flat Grimoire",
+      "CONTEXT_APPROACH_1_NARRATIVE": "{{friend}} prefers keeping all spell data in a single-level dictionary.",
+      "APPROACH_2_NAME": "Approach B: The Nested Tome",
+      "CONTEXT_APPROACH_2_NARRATIVE": "{{heroine}} argues that grouping related properties in nested dictionaries is clearer."
+    },
+
+    "entities": {
+      "ENTITY_TYPE_1": "WIZARD",
+      "ENTITY_TYPE_1_DESCRIPTION": "Spell Casters",
+      "CONTEXT_ENTITY_1_NARRATIVE": "Wizards are the primary magic users. Each has a name, power level, and list of known spells.",
+      "ENTITY_TYPE_2": "MAGICAL CREATURE",
+      "ENTITY_TYPE_2_DESCRIPTION": "Companions and Challenges",
+      "CONTEXT_ENTITY_2_NARRATIVE": "Magical creatures can be befriended or battled. Each has a name, type, and disposition."
+    }
+  },
+
+  "layer_3_framework": {
+    "INSTITUTION_TYPE": "magical academy",
+    "CATEGORY_SYSTEM": "houses",
+    "ABILITY_TYPE": "magic",
+    "PRACTITIONER_SINGULAR": "wizard",
+    "PRACTITIONER_PLURAL": "wizards",
+    "RANKING_SYSTEM": "year levels",
+    "CHALLENGE_TYPE": "dark magic and magical mishaps"
+  },
+
+  "hybrid_exercise_blocks": {
+    "CONTEXT_HYBRID_INTRO": "The entrance to {{school}} has been sabotaged!",
+    "CONTEXT_HYBRID_OVERVIEW": "You'll decode the error, fix the bug, then implement a complete solution.",
+    "CONTEXT_HYBRID_START": "=== MAGICAL SECURITY RESTORATION ===",
+    "CONTEXT_HYBRID_COMPLETE": "The gates are secure once more!",
+
+    "PART_A_TITLE": "The Frozen Gate",
+    "CONTEXT_PART_A_NARRATIVE": "{{mentor}} shows you the broken spell. What went wrong?",
+    "CONTEXT_PART_A_TASK": "Read the error message and explain what's causing it.",
+
+    "PART_B_TITLE": "Emergency Repairs",
+    "CONTEXT_PART_B_NARRATIVE": "Now that you understand the problem, fix the immediate bug.",
+    "CONTEXT_PART_B_TASK": "Correct the syntax error in the authentication spell.",
+
+    "PART_C_TITLE": "Grand Reopening",
+    "CONTEXT_PART_C_NARRATIVE": "With the bug fixed, implement a complete access control system.",
+    "PART_C_SPEC": "Grant access if: password matches OR (has_key AND is_member)"
+  }
+}

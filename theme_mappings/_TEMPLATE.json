@@ -1,0 +1,219 @@
+{
+  "_README": "Copy this file, rename it to your_theme_id.json, and fill in the values. Delete this _README field when done.",
+
+  "theme_id": "your_theme_id",
+  "theme_name": "Your Theme Display Name",
+  "description": "A brief description of your theme for the theme selector",
+  "genre": "fantasy | scifi | sports | mystery | professional | historical | other",
+
+  "layer_1_entities": {
+    "_description": "Character and world nouns. Arrays allow random selection for variety.",
+
+    "hero": ["REQUIRED: Male protagonist name(s)"],
+    "heroine": ["REQUIRED: Female protagonist name(s)"],
+    "friend": ["Supporting character(s) who help the hero"],
+    "mentor": ["Teacher/guide figure(s)"],
+    "villain": ["Antagonist(s) or obstacle(s)"],
+
+    "school": ["REQUIRED: Main institution/location name"],
+    "house": ["Sub-groups, teams, or divisions within school"],
+    "location": ["Specific places within the world (e.g., 'the training ground')"],
+    "place": ["Named locations students might visit (e.g., 'Downtown', 'The Lab')"],
+
+    "spell1": ["Basic ability/action (beginner level)"],
+    "spell2": ["Intermediate ability/action"],
+    "spell3": ["Advanced ability/action"],
+    "spell4": ["Utility ability/action"],
+
+    "creature": ["Entities students interact with (animals, robots, etc.)"],
+    "pet": ["Companion creature with name (e.g., 'Rover the robot dog')"],
+    "item": ["Tools or objects used in exercises"],
+    "transport": ["Vehicles or movement methods"],
+
+    "group": ["Organizations or teams"],
+    "exclamation": ["Theme-appropriate exclamations (e.g., 'Great job!', 'By the stars!')"],
+    "greeting": ["Welcome message for exercises"],
+    "password": ["Secret codes or access phrases"]
+  },
+
+  "layer_2_universal": {
+    "_description": "Narrative building blocks used across all exercise types. These provide consistent voice and framing.",
+
+    "ROLE_TITLE": "What students are called (e.g., 'Wizard', 'Engineer', 'Athlete')",
+    "ROLE_TITLE_PLURAL": "Plural form (e.g., 'Wizards', 'Engineers', 'Athletes')",
+    "MENTOR_TITLE": "What mentors are called (e.g., 'Professor', 'Coach', 'Captain')",
+    "WORKSPACE": "Where work happens (e.g., 'magical realm', 'engineering bay', 'field')",
+
+    "PROJECT_TYPE": "What students build (e.g., 'enchanted system', 'starship module', 'game strategy')",
+    "PROJECT_SCALE": "Scope descriptor (e.g., 'grand', 'critical', 'championship')",
+    "GOAL": "Ultimate objective (e.g., 'magical mastery', 'mission success', 'victory')",
+
+    "COMPONENT_SINGULAR": "What individual pieces are called (e.g., 'spell', 'module', 'play')",
+    "COMPONENT_PLURAL": "Plural form (e.g., 'spells', 'modules', 'plays')",
+    "TASK_VERB": "Action verb for work (e.g., 'cast', 'construct', 'execute')",
+    "TASK_NOUN": "What a task is called (e.g., 'incantation', 'protocol', 'drill')",
+
+    "SECTION_ICON": "Emoji for section headers (e.g., sparkles, rocket, soccer ball)",
+    "SUCCESS_WORD": "Celebration word (e.g., 'Excellent', 'Affirmative', 'Goal')",
+    "CELEBRATION": "Full celebration message when exercise completes",
+    "PROGRESS_UNIT": "What progress is measured in (e.g., 'level', 'rank', 'season')",
+
+    "OPENING_FLAVOR": "Opening line that sets the mood for exercises",
+    "TRANSITION_WORD": "Word between sections (e.g., 'Next', 'Moving on', 'Now')",
+    "CLOSING_FLAVOR": "Closing line that wraps up exercises"
+  },
+
+  "layer_2_context_blocks": {
+    "_description": "Full sentences/paragraphs that provide narrative context. Used by specific exercise templates.",
+
+    "introduction": {
+      "_description": "Opening context for different exercise types",
+      "CONTEXT_INTRO": "Generic welcome/opening for any exercise",
+      "CONTEXT_PROJECT_INTRO": "Opening for incremental builder exercises",
+      "CONTEXT_ROLE_INTRO": "Opening that assigns student a role",
+      "CONTEXT_WORLD_INTRO": "Opening for world-building exercises",
+      "CONTEXT_SPEC_INTRO": "Opening for specification-based exercises",
+      "CONTEXT_AUDIT_INTRO": "Opening for code quality exercises",
+      "CONTEXT_PREDICTION_INTRO": "Opening for output prediction exercises",
+      "CONTEXT_COMPARISON_INTRO": "Opening for comparison exercises",
+      "CONTEXT_INVESTIGATION_INTRO": "Opening for debugging/forensic exercises",
+      "CONTEXT_UNLOCKING_INTRO": "Opening for progressive unlocking exercises"
+    },
+
+    "learning": {
+      "_description": "What students will learn or achieve",
+      "CONTEXT_LEARNING_OBJECTIVE": "What skill they'll develop",
+      "CONTEXT_PREDICTION_PURPOSE": "Why prediction matters in this context",
+      "CONTEXT_WORLD_VISION": "What their completed world/system will do"
+    },
+
+    "narrative": {
+      "_description": "Story elements that make exercises engaging",
+      "CONTEXT_EXAMPLE_NARRATIVE": "Story explaining the worked example",
+      "CONTEXT_INCREMENTAL_NARRATIVE": "Why building piece by piece",
+      "CONTEXT_SPEC_NARRATIVE": "Story behind the specification",
+      "CONTEXT_CODE_SAMPLE_NARRATIVE": "Where the code came from",
+      "CONTEXT_INTERACTION_NARRATIVE": "How entities relate to each other",
+      "CONTEXT_VERIFICATION_NARRATIVE": "How to verify their work"
+    },
+
+    "tasks": {
+      "_description": "Instructions and responsibilities",
+      "CONTEXT_STUDENT_TASK": "What the student needs to do",
+      "CONTEXT_ROLE_RESPONSIBILITIES": "Job description for role-based exercises",
+      "CONTEXT_ROLE_CHALLENGE": "The problem they need to solve",
+      "CONTEXT_SITUATION_SETUP": "Current situation description",
+      "CONTEXT_INVESTIGATION_MISSION": "What needs to be debugged/fixed",
+      "CONTEXT_COMPARISON_DECISION": "What decision needs to be made",
+      "CONTEXT_SPEC_CONSTRAINTS": "Limitations or special requirements"
+    },
+
+    "guidance": {
+      "_description": "Help and hints for students",
+      "CONTEXT_SUCCESS_CRITERIA": "How to know they succeeded",
+      "CONTEXT_IMPLEMENTATION_GUIDANCE": "Tips for writing the code",
+      "CONTEXT_ANALYSIS_PROMPT": "How to think about tradeoffs",
+      "CONTEXT_DECISION_GUIDANCE": "Criteria for making good decisions",
+      "CONTEXT_IMPROVEMENT_GUIDANCE": "Tips for improving code quality",
+      "CONTEXT_UNLOCK_REMINDER": "Reminder about progression system"
+    },
+
+    "completion": {
+      "_description": "Messages when exercises or sections complete",
+      "CONTEXT_INTEGRATION": "How pieces fit together",
+      "CONTEXT_FINAL_ASSEMBLY": "Description of the completed system",
+      "CONTEXT_ROLE_START": "Message when starting role-based exercise",
+      "CONTEXT_ROLE_COMPLETE": "Message when role-based exercise completes",
+      "CONTEXT_VERIFICATION_START": "Message when verification begins",
+      "CONTEXT_VERIFICATION_COMPLETE": "Message when verification completes",
+      "CONTEXT_WORLD_BUILDING_START": "Message when world-building begins",
+      "CONTEXT_WORLD_BUILDING_COMPLETE": "Message when world-building completes",
+      "CONTEXT_PROGRESSION_START": "Message for progressive exercises start",
+      "CONTEXT_PROGRESSION_STATUS": "Current progress message"
+    },
+
+    "quality": {
+      "_description": "For code review and quality exercises",
+      "CONTEXT_AUDIT_STANDARDS": "What standards to apply",
+      "CONTEXT_ISSUES_FOUND": "Overview of problems to fix",
+      "CONTEXT_SPEC_SOURCE": "Who wrote the specification"
+    }
+  },
+
+  "layer_2_indexed_blocks": {
+    "_description": "Context blocks that repeat for multi-part exercises (phases, cases, stages). Use _N suffix where N is 1-5.",
+
+    "phases": {
+      "_description": "For incremental builder exercises (Template 2)",
+      "PHASE_N_TITLE": "Title for phase N (e.g., 'Phase 1: Foundation')",
+      "CONTEXT_PHASE_N": "Narrative for what phase N accomplishes"
+    },
+
+    "cases": {
+      "_description": "For forensic debugger exercises (Template 4)",
+      "CASE_N_TITLE": "Title for case N (e.g., 'Bug #1: The Missing Key')",
+      "CONTEXT_CASE_N_NARRATIVE": "Story behind bug N",
+      "CONTEXT_INVESTIGATION_PROMPT_N": "Questions to guide debugging case N"
+    },
+
+    "stages": {
+      "_description": "For progressive unlocking exercises (Template 8)",
+      "STAGE_N_TITLE": "Title for stage N",
+      "CONTEXT_STAGE_N_NARRATIVE": "What stage N unlocks",
+      "CONTEXT_UNLOCK_INSTRUCTION_N": "How to activate stage N"
+    },
+
+    "challenges": {
+      "_description": "For prediction exercises (Template 7)",
+      "CHALLENGE_N_TITLE": "Title for challenge N",
+      "CONTEXT_CHALLENGE_N_NARRATIVE": "Story for challenge N",
+      "CONTEXT_PREDICTION_GUIDANCE_N": "Hints for predicting challenge N"
+    },
+
+    "approaches": {
+      "_description": "For comparison exercises (Template 5)",
+      "APPROACH_N_NAME": "Name of approach N",
+      "CONTEXT_APPROACH_N_NARRATIVE": "Story explaining approach N"
+    },
+
+    "entities": {
+      "_description": "For world builder exercises (Template 9)",
+      "ENTITY_TYPE_N": "Name of entity type N",
+      "ENTITY_TYPE_N_DESCRIPTION": "What entity type N represents",
+      "CONTEXT_ENTITY_N_NARRATIVE": "Story behind entity type N"
+    }
+  },
+
+  "layer_3_framework": {
+    "_description": "Structural concepts that define how your universe works. Used in documentation and meta-descriptions.",
+
+    "INSTITUTION_TYPE": "What kind of institution school is (e.g., 'academy', 'starship', 'agency')",
+    "CATEGORY_SYSTEM": "How things are classified (e.g., 'houses', 'departments', 'divisions')",
+    "ABILITY_TYPE": "What abilities are called (e.g., 'magic', 'engineering', 'athletics')",
+    "PRACTITIONER_SINGULAR": "What a practitioner is called (e.g., 'wizard', 'engineer', 'athlete')",
+    "PRACTITIONER_PLURAL": "Plural form (e.g., 'wizards', 'engineers', 'athletes')",
+    "RANKING_SYSTEM": "How progress is measured (e.g., 'year levels', 'ranks', 'seasons')",
+    "CHALLENGE_TYPE": "What obstacles are called (e.g., 'dark magic', 'system failures', 'opponents')"
+  },
+
+  "hybrid_exercise_blocks": {
+    "_description": "For multi-part exercises that combine different exercise types in one narrative.",
+
+    "CONTEXT_HYBRID_INTRO": "Opening for multi-part exercise",
+    "CONTEXT_HYBRID_OVERVIEW": "Overview of all parts",
+    "CONTEXT_HYBRID_START": "Message when hybrid exercise begins",
+    "CONTEXT_HYBRID_COMPLETE": "Message when all parts complete",
+
+    "PART_A_TITLE": "Title for part A",
+    "CONTEXT_PART_A_NARRATIVE": "Narrative for part A",
+    "CONTEXT_PART_A_TASK": "Task instructions for part A",
+
+    "PART_B_TITLE": "Title for part B",
+    "CONTEXT_PART_B_NARRATIVE": "Narrative for part B",
+    "CONTEXT_PART_B_TASK": "Task instructions for part B",
+
+    "PART_C_TITLE": "Title for part C",
+    "CONTEXT_PART_C_NARRATIVE": "Narrative for part C",
+    "PART_C_SPEC": "Specification for part C implementation"
+  }
+}

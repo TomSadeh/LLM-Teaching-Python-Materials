@@ -25,7 +25,6 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 ### Batch of Exercises Checklist
 - [ ] Run `python scripts/convert_exercises.py`
 - [ ] Update [docs/CATALOG.md](docs/CATALOG.md) if new exercise type or module
-- [ ] Update [templates/EXERCISE_ADDITION_PLAN.md](templates/EXERCISE_ADDITION_PLAN.md) counts
 - [ ] Add Hebrew translations to `convert_exercises.py`
 
 ### Single Lesson Checklist
@@ -39,7 +38,7 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 - [ ] Update [docs/CATALOG.md](docs/CATALOG.md) lesson table
 
 ### New Module Checklist
-- [ ] Create `raw_exercises/module_N_topic/` directory
+- [ ] Create `raw_exercises_new/module_N_topic/` directory
 - [ ] Add module to `exercises_config.json`
 - [ ] Add translations to `scripts/convert_exercises.py`
 - [ ] Create lesson files in `en/lessons/` and `he/lessons/`
@@ -48,7 +47,7 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 - [ ] Run both generation scripts
 
 ### New Exercise Type Checklist
-- [ ] Create template in `templates/template_{type}.py`
+- [ ] Create template in `templates/exercise_types/{type}.py`
 - [ ] Update [templates/EXERCISE_TYPE_MODULE_MAPPING.md](templates/EXERCISE_TYPE_MODULE_MAPPING.md)
 - [ ] Update [docs/CATALOG.md](docs/CATALOG.md) exercise types section
 - [ ] Add type translations to `exercises_config.json`
@@ -61,21 +60,22 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 |------|----------|
 | Content inventory | [docs/CATALOG.md](docs/CATALOG.md) |
 | Writing exercises/lessons | [docs/WRITING_GUIDE.md](docs/WRITING_GUIDE.md) |
-| Narrative patterns | [docs/NARRATIVE_ARCHETYPES.md](docs/NARRATIVE_ARCHETYPES.md) |
+| Narrative archetypes | [docs/NARRATIVE_ARCHETYPES.md](docs/NARRATIVE_ARCHETYPES.md) |
 | Archetype quick templates | [templates/ARCHETYPE_QUICK_REFERENCE.md](templates/ARCHETYPE_QUICK_REFERENCE.md) |
 | Archetype visual guide | [docs/ARCHETYPE_VISUAL_GUIDE.md](docs/ARCHETYPE_VISUAL_GUIDE.md) |
-| Exercise archetype mapping | [docs/ARCHETYPE_EXERCISE_MAPPING.md](docs/ARCHETYPE_EXERCISE_MAPPING.md) |
 | Curriculum & pedagogy | [docs/REFERENCES.md](docs/REFERENCES.md) |
 | Theme placeholders | [TEMPLATE.md](TEMPLATE.md) |
-| Exercise type templates | [templates/](templates/) |
+| Exercise type templates | [templates/exercise_types/](templates/exercise_types/) |
+| Activity patterns (task-level) | [templates/activity_patterns/](templates/activity_patterns/) |
+| Structure patterns (exercise-level) | [templates/structure_patterns/](templates/structure_patterns/) |
+| Hybrid arcs | [templates/hybrid_arcs/](templates/hybrid_arcs/) |
 | Exercise type mapping | [templates/EXERCISE_TYPE_MODULE_MAPPING.md](templates/EXERCISE_TYPE_MODULE_MAPPING.md) |
-| Gap analysis | [templates/EXERCISE_ADDITION_PLAN.md](templates/EXERCISE_ADDITION_PLAN.md) |
 | Raw reference files | [references/](references/) |
 | Lesson templates | [en/lessons/TEMPLATE_PART1.md](en/lessons/TEMPLATE_PART1.md) |
-| Conversion guide | [docs/CONVERSION_QUICKSTART.md](docs/CONVERSION_QUICKSTART.md) |
 | Theme system | [docs/THEME_SYSTEM.md](docs/THEME_SYSTEM.md) |
 | Create a theme | [docs/QUICK_START_THEMES.md](docs/QUICK_START_THEMES.md) |
 | Narrative templates | [docs/NARRATIVE_SYSTEM.md](docs/NARRATIVE_SYSTEM.md) |
+| Module recreation plan | [docs/META_PLAN_MODULE_RECREATION.md](docs/META_PLAN_MODULE_RECREATION.md) |
 
 ---
 
@@ -104,7 +104,7 @@ Each exercise within a module should introduce one new element.
 
 ```
 LLM-Teaching-Python-Materials/
-├── raw_exercises/              # Source exercise files
+├── raw_exercises_new/          # Source exercise files (recreated)
 │   └── module_X_topic/
 │       └── {exercise_type}/
 │           └── exercise_N_name.py
@@ -114,9 +114,10 @@ LLM-Teaching-Python-Materials/
 ├── references/                 # Curriculum analysis
 ├── docs/                       # Documentation
 ├── scripts/                    # Build scripts
-├── theme_mappings/             # Universal narrative theme configs
+├── theme_mappings/             # Theme definitions (one JSON per theme)
+│   ├── _TEMPLATE.json          # Complete placeholder reference
+│   └── *.json                  # Individual theme files
 ├── exercises_config.json       # Module/exercise translations
-├── theme_variables.json        # Placeholder values by theme
 ├── manifest.json               # Module list for sync
 └── version.json                # Content version
 ```
@@ -127,7 +128,7 @@ LLM-Teaching-Python-Materials/
 
 ### Add/modify exercises
 
-1. Edit files in `raw_exercises/{module}/{type}/`
+1. Edit files in `raw_exercises_new/{module}/{type}/`
 2. Run: `python scripts/convert_exercises.py`
 
 ### Add/modify lessons
@@ -137,7 +138,7 @@ LLM-Teaching-Python-Materials/
 
 ### Add new module
 
-1. Create `raw_exercises/module_N_topic/`
+1. Create `raw_exercises_new/module_N_topic/`
 2. Update `exercises_config.json`
 3. Update `scripts/convert_exercises.py` with translations
 4. Create lesson files in both languages
@@ -146,30 +147,8 @@ LLM-Teaching-Python-Materials/
 ### Verify no hardcoded themes
 
 ```bash
-python scripts/audit_all_themes.py
+python scripts/audit_all_themes.py raw_exercises_new/
 ```
-
-### Convert exercises to universal templates
-
-See [docs/CONVERSION_QUICKSTART.md](docs/CONVERSION_QUICKSTART.md) for complete guide.
-
-```bash
-# Analyze single exercise
-python scripts/convert_to_templates.py --input "raw_exercises/module_7/.../exercise_1.py" --dry-run
-
-# Analyze entire module
-python scripts/convert_to_templates.py --module 7 --dry-run --report-dir conversion_reports
-
-# Analyze all 145 exercises
-python scripts/convert_to_templates.py --all --dry-run --report-dir conversion_reports_full
-```
-
-The script:
-- Matches exercises to narrative templates
-- Detects hardcoded theme references
-- Extracts narrative for templatization
-- Generates JSON analysis reports
-- Flags exercises needing manual review
 
 ---
 

@@ -1,32 +1,121 @@
 # Writing Guide
 
-Guidelines for creating exercises and lessons in this repository.
+Guidelines for creating theme-agnostic exercises and lessons.
 
-**Before writing:** Consult [REFERENCES.md](REFERENCES.md) for pedagogical context on your topic.
+**Before writing:**
+- Read [REFERENCES.md](REFERENCES.md) for pedagogical context
+- Review [theme_mappings/_TEMPLATE.json](../theme_mappings/_TEMPLATE.json) for available placeholders
+- Check [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md) for narrative template patterns
+
+---
+
+## The Three-Layer Theme System
+
+Exercises use a three-layer placeholder system that makes them work with **any** theme:
+
+### Layer 1: Entity Names
+
+Simple noun replacements. Use for characters, places, and objects.
+
+```python
+name = "{{hero}}"           # → "Harry Potter" / "Captain Nova" / "Alex"
+school = "{{school}}"       # → "Hogwarts" / "Starship Academy" / "Code Academy"
+ability = "{{spell1}}"      # → "Lumos" / "sensor scan" / "debugging"
+```
+
+**Available Layer 1 placeholders:**
+
+| Category | Placeholders |
+|----------|-------------|
+| Characters | `{{hero}}`, `{{heroine}}`, `{{friend}}`, `{{mentor}}`, `{{villain}}` |
+| Places | `{{school}}`, `{{house}}`, `{{location}}`, `{{place}}` |
+| Abilities | `{{spell1}}`, `{{spell2}}`, `{{spell3}}`, `{{spell4}}` |
+| Objects | `{{creature}}`, `{{pet}}`, `{{item}}`, `{{transport}}` |
+| Phrases | `{{group}}`, `{{exclamation}}`, `{{greeting}}`, `{{password}}` |
+
+### Layer 2: Context Blocks
+
+Full sentences that provide narrative framing. Use for introductions, instructions, and feedback.
+
+```python
+# {{CONTEXT_INTRO}}
+# → "Welcome to Hogwarts! Your magical education continues..."
+# → "Welcome aboard, Cadet! All crew must complete training..."
+# → "Let's build this step by step."
+```
+
+**Key Layer 2 placeholders:**
+
+| Category | Placeholders |
+|----------|-------------|
+| Introductions | `{{CONTEXT_INTRO}}`, `{{CONTEXT_PROJECT_INTRO}}`, `{{CONTEXT_ROLE_INTRO}}` |
+| Learning | `{{CONTEXT_LEARNING_OBJECTIVE}}`, `{{CONTEXT_STUDENT_TASK}}` |
+| Guidance | `{{CONTEXT_SUCCESS_CRITERIA}}`, `{{CONTEXT_IMPLEMENTATION_GUIDANCE}}` |
+| Completion | `{{CONTEXT_ROLE_COMPLETE}}`, `{{CONTEXT_FINAL_ASSEMBLY}}` |
+
+See [theme_mappings/_TEMPLATE.json](../theme_mappings/_TEMPLATE.json) for complete list.
+
+### Layer 3: Framework Concepts
+
+Structural terms that define how the universe works. Use sparingly in meta-descriptions.
+
+```python
+# As a {{PRACTITIONER_SINGULAR}}, you'll learn {{ABILITY_TYPE}}
+# → "As a wizard, you'll learn magic"
+# → "As an engineer, you'll learn engineering"
+```
 
 ---
 
 ## Core Principles
 
-### 1. Always Use Theme Placeholders
+### 1. Theme-Agnostic by Default
 
-**Every exercise must contain at least one `{{placeholder}}`** for dynamic theming.
+**Every exercise must work perfectly with ANY theme.**
 
-Available placeholders are documented in [TEMPLATE.md](../TEMPLATE.md):
-- Characters: `{{hero}}`, `{{heroine}}`, `{{friend}}`, `{{mentor}}`, `{{villain}}`
-- Places: `{{school}}`, `{{house}}`, `{{location}}`, `{{place}}`
-- Abilities: `{{spell1}}` through `{{spell4}}`
-- Objects: `{{creature}}`, `{{pet}}`, `{{item}}`, `{{transport}}`
-- Phrases: `{{exclamation}}`, `{{greeting}}`, `{{password}}`
+The Python code is identical. Only the narrative context changes.
 
-### 2. Teach Proper Python
+```python
+# GOOD: Theme-agnostic
+def create_profile():
+    """Create a profile for {{hero}}."""
+    profile = {
+        "name": "{{hero}}",
+        "skill": "{{spell1}}"
+    }
+    return profile
+
+# BAD: Theme-locked
+def create_wizard():
+    """Create a wizard profile."""  # "wizard" locks to fantasy
+    profile = {
+        "name": "Harry",            # Hardcoded name
+        "spell": "Lumos"            # Hardcoded ability
+    }
+    return profile
+```
+
+### 2. Use Context Blocks for Narrative
+
+Don't write narrative directly. Use context block placeholders.
+
+```python
+# GOOD: Context block placeholder
+# {{CONTEXT_INTRO}}
+# {{CONTEXT_STUDENT_TASK}}
+
+# BAD: Hardcoded narrative
+# Welcome to Hogwarts! Today you'll learn to cast spells.
+```
+
+### 3. Teach Proper Python
 
 - Follow PEP 8 conventions
 - Use meaningful variable names (not single letters except `i` in loops)
 - Explain trade-offs when multiple approaches exist
 - Never oversimplify to the point of teaching bad habits
 
-### 3. Progressive Complexity
+### 4. Progressive Complexity
 
 Within each module:
 1. Start with the simplest form of a concept
@@ -43,36 +132,75 @@ Within each module:
 Pattern: `exercise_N_descriptive_name.py`
 
 - Lowercase with underscores
-- Numbered sequentially within a module
-- Located in: `raw_exercises/{module}/{type}/`
+- Numbered sequentially within exercise type
+- Located in: `raw_exercises_new/{module}/{type}/`
 
-### Standard Structure
+### Directory Structure
+
+```
+raw_exercises_new/
+└── module_N_topic/
+    ├── write_code/
+    │   └── exercise_1_name.py
+    ├── bug_hunt/
+    │   └── exercise_1_name.py
+    ├── decode_error/
+    │   └── exercise_1_name.py
+    ├── output_prediction/
+    │   └── exercise_1_name.py
+    ├── complete_function/
+    │   └── exercise_1_name.py
+    └── which_is_better/
+        └── exercise_1_name.py
+```
+
+### Standard Exercise Structure
 
 ```python
-# Exercise N: Title Here
-#
-# Brief description of the concept being taught
+"""
+{{CONTEXT_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
+
+# ============================================================
+# {{PHASE_1_TITLE}}
+# ============================================================
+# {{CONTEXT_PHASE_1}}
 
 
 def exercise_a():
+    """{{PHASE_1_DESCRIPTION}}"""
     # ✏️ YOUR CODE HERE ✏️
-    # Instructions for this task
-    # Hint: helpful guidance
+    # {{CONTEXT_STUDENT_TASK}}
+    #
+    # Hint: {{CONTEXT_IMPLEMENTATION_GUIDANCE}}
     pass
 
 
+# ============================================================
+# {{PHASE_2_TITLE}}
+# ============================================================
+# {{CONTEXT_PHASE_2}}
+
+
 def exercise_b():
+    """{{PHASE_2_DESCRIPTION}}"""
     # ✏️ YOUR CODE HERE ✏️
-    # Next task in progression
     pass
 
 
 def main():
-    print("=== Exercise A: Description ===")
+    print("{{CONTEXT_INTRO}}")
+    print("=" * 50)
+
+    print("\n=== {{PHASE_1_TITLE}} ===")
     exercise_a()
 
-    print("\n=== Exercise B: Description ===")
+    print("\n=== {{PHASE_2_TITLE}} ===")
     exercise_b()
+
+    print("=" * 50)
+    print("{{CONTEXT_ROLE_COMPLETE}}")
 
 
 main()
@@ -80,10 +208,182 @@ main()
 
 ### Key Requirements
 
-1. **✏️ marker** - Use `# ✏️ YOUR CODE HERE ✏️` to mark student code locations
-2. **`pass` placeholder** - All student functions must contain `pass`
-3. **Hints** - Include `# Hint: ...` when helpful
-4. **`main()` function** - Call all exercises with clear output headers
+| Requirement | Description |
+|-------------|-------------|
+| `✏️` marker | Use `# ✏️ YOUR CODE HERE ✏️` to mark student code locations |
+| `pass` placeholder | All student functions must contain `pass` |
+| Context blocks | Use `{{CONTEXT_*}}` for all narrative text |
+| Entity placeholders | Use `{{hero}}`, `{{school}}`, etc. for all theme-specific nouns |
+| `main()` function | Call all exercises with clear output headers |
+| Hints | Include guidance using `{{CONTEXT_IMPLEMENTATION_GUIDANCE}}` |
+
+---
+
+## Exercise Types and Templates
+
+Each exercise type has a corresponding narrative template. Match your exercise to the right template.
+
+| Exercise Type | Narrative Template | Use When |
+|--------------|-------------------|----------|
+| `write_code` | Tutorial Guide, Incremental Builder | Teaching new concepts |
+| `bug_hunt` | Forensic Debugger | Finding and fixing bugs |
+| `decode_error` | Forensic Debugger | Understanding error messages |
+| `output_prediction` | Prediction Challenger | Testing mental execution |
+| `complete_function` | Specification Implementer | Building from specs |
+| `which_is_better` | Comparison Analyst | Comparing approaches |
+| `code_tracing` | Table Tracer | Tracking state changes |
+| `fix_style` | Quality Auditor | Improving code quality |
+
+See [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md) for detailed template structures.
+
+---
+
+## Writing for Specific Exercise Types
+
+### write_code (Incremental Builder)
+
+Build complexity across multiple sub-exercises.
+
+```python
+"""
+{{CONTEXT_PROJECT_INTRO}}
+{{CONTEXT_INCREMENTAL_NARRATIVE}}
+"""
+
+# ============================================================
+# {{PHASE_1_TITLE}}
+# ============================================================
+# {{CONTEXT_PHASE_1}}
+
+def exercise_a():
+    # ✏️ YOUR CODE HERE ✏️
+    # Create a dictionary for {{hero}} with:
+    # - "name": "{{hero}}"
+    # - "skill": "{{spell1}}"
+    pass
+
+# ============================================================
+# {{PHASE_2_TITLE}}
+# ============================================================
+# {{CONTEXT_PHASE_2}}
+
+def exercise_b():
+    # ✏️ YOUR CODE HERE ✏️
+    # Access and print the skill from the dictionary
+    pass
+```
+
+### bug_hunt (Forensic Debugger)
+
+Present broken code for students to fix.
+
+```python
+"""
+{{CONTEXT_INVESTIGATION_INTRO}}
+{{CONTEXT_INVESTIGATION_MISSION}}
+"""
+
+# ============================================================
+# {{CASE_1_TITLE}}
+# ============================================================
+# {{CONTEXT_CASE_1_NARRATIVE}}
+#
+# ERROR MESSAGE:
+# KeyError: 'level'
+#
+# {{CONTEXT_INVESTIGATION_PROMPT_1}}
+
+def case_1_buggy():
+    """This code has a bug. Find it!"""
+    character = {"name": "{{hero}}", "health": 100}
+    print(f"Level: {character['level']}")  # 🐛 BUG!
+
+
+# ✏️ FIX THE CODE ✏️
+def case_1_fixed():
+    """Fixed version."""
+    pass
+```
+
+### output_prediction (Prediction Challenger)
+
+Students predict output before running.
+
+```python
+"""
+{{CONTEXT_PREDICTION_INTRO}}
+{{CONTEXT_PREDICTION_PURPOSE}}
+"""
+
+# ============================================================
+# {{CHALLENGE_1_TITLE}}
+# ============================================================
+# {{CONTEXT_CHALLENGE_1_NARRATIVE}}
+#
+# ✏️ YOUR PREDICTION ✏️
+# What will this code print? Write your answer BEFORE running:
+#
+# Line 1: _______________
+# Line 2: _______________
+#
+# {{CONTEXT_PREDICTION_GUIDANCE_1}}
+
+def challenge_1():
+    items = ["{{item}}", "potion", "key"]
+    print(f"First item: {items[0]}")
+    print(f"Total items: {len(items)}")
+```
+
+### which_is_better (Comparison Analyst)
+
+Compare two approaches and analyze tradeoffs.
+
+```python
+"""
+{{CONTEXT_COMPARISON_INTRO}}
+{{CONTEXT_COMPARISON_DECISION}}
+"""
+
+# ============================================================
+# {{APPROACH_1_NAME}}
+# ============================================================
+# {{CONTEXT_APPROACH_1_NARRATIVE}}
+
+def approach_a():
+    """Flat structure."""
+    data = {
+        "hero_name": "{{hero}}",
+        "hero_health": 100,
+        "hero_skill": "{{spell1}}"
+    }
+    return data
+
+
+# ============================================================
+# {{APPROACH_2_NAME}}
+# ============================================================
+# {{CONTEXT_APPROACH_2_NARRATIVE}}
+
+def approach_b():
+    """Nested structure."""
+    data = {
+        "hero": {
+            "name": "{{hero}}",
+            "health": 100,
+            "skill": "{{spell1}}"
+        }
+    }
+    return data
+
+
+# ============================================================
+# ✏️ YOUR ANALYSIS ✏️
+# ============================================================
+# {{CONTEXT_ANALYSIS_PROMPT}}
+#
+# Which approach do you prefer and why?
+# Consider: {{CONTEXT_DECISION_GUIDANCE}}
+```
 
 ---
 
@@ -138,20 +438,25 @@ Use [en/lessons/TEMPLATE_PART.md](../en/lessons/TEMPLATE_PART.md):
 
 ### What to Avoid
 
-1. **Over-engineering** - Keep solutions simple and focused
-2. **Hiding complexity** - Show the steps, don't abstract them away
-3. **Features before teaching** - Don't use concepts not yet introduced
-4. **Unnecessary error handling** - Only validate at system boundaries
+| Anti-Pattern | Why It's Bad |
+|--------------|--------------|
+| Hardcoded theme references | Locks exercise to one theme |
+| Over-engineering | Confuses beginners |
+| Hiding complexity | Prevents learning |
+| Features before teaching | Uses concepts not yet introduced |
+| Unnecessary error handling | Adds noise without value |
 
 ### Checklist Before Committing
 
 #### Exercises
-- [ ] Contains at least one `{{placeholder}}`
-- [ ] Uses `pass` as placeholder
-- [ ] Instructions use ✏️ marker
+- [ ] All narrative uses `{{CONTEXT_*}}` placeholders
+- [ ] All nouns use Layer 1 placeholders (`{{hero}}`, `{{school}}`, etc.)
+- [ ] No hardcoded theme references (no "wizard", "spell", "Hogwarts", etc.)
+- [ ] Uses `pass` as placeholder in all student functions
+- [ ] Instructions use `✏️` marker
 - [ ] `main()` function calls all exercises
 - [ ] Code follows PEP 8
-- [ ] Hebrew translations in `convert_exercises.py`
+- [ ] Hebrew translations added to `convert_exercises.py`
 - [ ] Progressive difficulty within module
 
 #### Lessons
@@ -163,6 +468,46 @@ Use [en/lessons/TEMPLATE_PART.md](../en/lessons/TEMPLATE_PART.md):
 
 ---
 
+## Adding Context Blocks to Themes
+
+When you create exercises using new context block placeholders, add them to theme files.
+
+### Location
+
+Theme definitions live in `theme_mappings/`:
+
+```
+theme_mappings/
+├── _TEMPLATE.json              # Blank template (don't edit)
+├── _EXAMPLE_fantasy_complete.json  # Reference example
+├── THEME_CREATOR_GUIDE.md      # Documentation
+├── fantasy_magic.json          # Fantasy theme
+├── scifi_engineering.json      # Sci-fi theme
+└── professional_coding.json    # Plain coding theme
+```
+
+### Adding a New Context Block
+
+1. Add the placeholder to your exercise:
+   ```python
+   # {{CONTEXT_NEW_BLOCK}}
+   ```
+
+2. Add values for each theme in `theme_mappings/*.json`:
+   ```json
+   {
+     "layer_2_context_blocks": {
+       "introduction": {
+         "CONTEXT_NEW_BLOCK": "Your theme-specific text here"
+       }
+     }
+   }
+   ```
+
+3. Update `_TEMPLATE.json` to document the new placeholder.
+
+---
+
 ## Generating Output Files
 
 ### After modifying exercises:
@@ -171,7 +516,7 @@ Use [en/lessons/TEMPLATE_PART.md](../en/lessons/TEMPLATE_PART.md):
 python scripts/convert_exercises.py
 ```
 
-This reads `.py` files from `raw_exercises/` and generates:
+This reads `.py` files from `raw_exercises_new/` and generates:
 - `exercises.json` per module
 - `manifest.json` with module list
 - Updated `version.json`
@@ -190,73 +535,30 @@ This reads `.md` files from `{lang}/lessons/` and generates `lessons.json`.
 
 ### New Module
 
-1. Create directory: `raw_exercises/module_N_topic/`
-2. Update `exercises_config.json` with module metadata
-3. Update `scripts/convert_exercises.py` with translations
-4. Create lesson files in `en/lessons/` and `he/lessons/`
-5. Run both generation scripts
+1. Create directory: `raw_exercises_new/module_N_topic/`
+2. Create exercise type subdirectories as needed
+3. Update `exercises_config.json` with module metadata
+4. Update `scripts/convert_exercises.py` with translations
+5. Create lesson files in `en/lessons/` and `he/lessons/`
+6. Run both generation scripts
 
 ### New Exercise Type
 
-1. Create template in `templates/template_{type}.py`
+1. Create template in `templates/exercise_types/{type}.py`
 2. Update `templates/EXERCISE_TYPE_MODULE_MAPPING.md`
 3. Add translations to `exercises_config.json`
-4. Create exercises in appropriate modules
+4. Document in [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md)
+5. Create exercises in appropriate modules
 
 ---
 
-## Anti-Patterns
+## Quick Reference
 
-### Don't Do This
-
-```python
-# Too much abstraction for beginners
-class ExerciseValidator:
-    def __init__(self, validator_func):
-        self.validate = validator_func
-```
-
-```python
-# Magic that hides learning
-from our_helper import do_everything
-do_everything()
-```
-
-```python
-# Skipping error handling when it matters
-number = int(input("Enter a number: "))  # Could crash!
-```
-
-### Do This Instead
-
-```python
-# Direct and clear
-def check_answer(user_answer, correct_answer):
-    return user_answer == correct_answer
-```
-
-```python
-# Show the steps
-user_input = input("Enter text: ")
-words = user_input.split()
-count = len(words)
-print(f"Word count: {count}")
-```
-
-```python
-# Proper error handling at input boundaries
-try:
-    number = int(input("Enter a number: "))
-except ValueError:
-    print("That's not a valid number!")
-```
-
----
-
-## Theme Testing
-
-Verify no hardcoded theme references:
-
-```bash
-python scripts/apply_theme_placeholders.py --raw --check
-```
+| Need | Document |
+|------|----------|
+| All placeholders | [theme_mappings/_TEMPLATE.json](../theme_mappings/_TEMPLATE.json) |
+| Narrative templates | [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md) |
+| Theme creation | [theme_mappings/THEME_CREATOR_GUIDE.md](../theme_mappings/THEME_CREATOR_GUIDE.md) |
+| Complete example | [theme_mappings/_EXAMPLE_fantasy_complete.json](../theme_mappings/_EXAMPLE_fantasy_complete.json) |
+| Exercise type templates | [templates/](../templates/) |
+| Pedagogical context | [REFERENCES.md](REFERENCES.md) |

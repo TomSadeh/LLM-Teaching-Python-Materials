@@ -161,10 +161,10 @@ How to sequence topics effectively.
 |----------|-------|------------|
 | Academic | Variables → Functions → Loops → Recursion | Functions fundamental |
 | Practical | Variables → Loops → Data → Functions → Files | Build useful things |
-| Visual (ours) | Basics → Turtle/Loops → Lists → Games → Functions | Engagement first |
+| Visual (ours) | Basics → Turtle/Loops → Lists → Functions → Games | Engagement + clean code |
 
 **Key decisions:**
-- Functions early vs late (we: late)
+- Functions before games (we: yes, games benefit from functions)
 - For vs while first (we: for)
 - Lists vs dicts first (we: lists)
 
@@ -199,8 +199,8 @@ From all three curricula:
 | module_1 (turtle) | Think Python ch 4 |
 | module_2 (decisions) | PY4E ch 3, ATBS ch 3 |
 | module_3 (lists) | All three - ch 7-9 |
-| module_4 (games/while) | Think Python ch 7, ATBS ch 4 |
-| module_5 (functions) | Think Python ch 3,6, PY4E ch 4 |
+| module_4 (functions) | Think Python ch 3,6, PY4E ch 4 |
+| module_5 (games/while) | Think Python ch 7, ATBS ch 4 |
 | module_7 (dicts) | All three - ch 8-10 |
 | module_9 (OOP) | Think Python ch 14-17 |
 

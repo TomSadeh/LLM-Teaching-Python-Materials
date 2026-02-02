@@ -10,8 +10,8 @@ This document catalogs all exercises, lessons, and reference materials in the re
 | `module_1_turtle_loops` | For Loops | 1 | Turtle graphics with for loops |
 | `module_2_decisions` | Conditionals | 2 | if/elif/else, comparisons |
 | `module_3_lists` | Lists | 2 | Lists, iteration, list methods |
-| `module_4_games` | While Loops | 2 | Games with while loops, random |
-| `module_5_functions` | Functions | 3 | Parameters, return values, reuse |
+| `module_4_functions` | Functions | 2 | Parameters, return values, code reuse |
+| `module_5_games` | Games & While Loops | 2 | Building games with while loops and random |
 | `module_6_final_project` | Integration | 3 | Capstone projects |
 | `module_7_dictionaries` | Dictionaries | 2 | Keys, values, nested dicts |
 | `module_8_modules` | Modules | 3 | Standard library, custom modules |
@@ -61,27 +61,49 @@ See [templates/EXERCISE_ADDITION_PLAN.md](../templates/EXERCISE_ADDITION_PLAN.md
 
 ---
 
-## Exercise Templates
+## Templates
 
-All exercise templates are in the `templates/` directory:
+Templates are organized into four directories:
+
+### Exercise Type Templates (`templates/exercise_types/`)
 
 | Template | Purpose |
 |----------|---------|
-| `template_write_code.py` | Standard write-code exercises |
-| `template_output_prediction.py` | Predict program output |
-| `template_code_tracing.py` | Track variables through execution |
-| `template_match_output.py` | Match code to output |
-| `template_fill_blanks.py` | Complete missing syntax |
-| `template_code_ordering.py` | Arrange scrambled code |
-| `template_complete_function.py` | Implement function bodies |
-| `template_fix_style.py` | Apply style conventions |
-| `template_simplify_code.py` | Refactor for clarity |
-| `template_add_error_handling.py` | Add error handling |
-| `template_which_is_better.py` | Compare solutions |
-| `template_spot_difference.py` | Find subtle differences |
-| `template_decode_error.py` | Interpret error messages |
-| `template_bug_hunt.py` | Narrative debugging |
-| `template_blank_page.py` | Write from scratch |
+| `write_code.py` | Standard write-code exercises |
+| `output_prediction.py` | Predict program output |
+| `code_tracing.py` | Track variables through execution |
+| `match_output.py` | Match code to output |
+| `fill_blanks.py` | Complete missing syntax |
+| `code_ordering.py` | Arrange scrambled code |
+| `complete_function.py` | Implement function bodies |
+| `fix_style.py` | Apply style conventions |
+| `simplify_code.py` | Refactor for clarity |
+| `add_error_handling.py` | Add error handling |
+| `which_is_better.py` | Compare solutions |
+| `spot_difference.py` | Find subtle differences |
+| `decode_error.py` | Interpret error messages |
+| `bug_hunt.py` | Narrative debugging |
+| `blank_page.py` | Write from scratch |
+
+### Activity Patterns (`templates/activity_patterns/`)
+
+15 task-level narrative templates for individual tasks within exercises.
+See [README.md](../templates/activity_patterns/README.md) for full list.
+
+### Structure Patterns (`templates/structure_patterns/`)
+
+6 exercise-level narrative patterns that wrap multiple tasks:
+- Progressive Chapter
+- Tutorial Walkthrough
+- Challenge Quest
+- Mystery Investigation
+- World Builder
+- Spec Implementation
+
+### Hybrid Arcs (`templates/hybrid_arcs/`)
+
+7 narrative arcs for multi-part hybrid exercises:
+- Rivalry, Inheritance, Rescue, Apprentice, Mystery, Upgrade, Competition
 
 ---
 
@@ -131,7 +153,6 @@ See [NARRATIVE_ARCHETYPES.md](NARRATIVE_ARCHETYPES.md) for reusable narrative pa
 Quick access:
 - [Full archetype documentation](NARRATIVE_ARCHETYPES.md) - 10 core patterns with examples
 - [Quick reference](../templates/ARCHETYPE_QUICK_REFERENCE.md) - Templates and selection guide
-- [Exercise mapping](ARCHETYPE_EXERCISE_MAPPING.md) - Current usage and opportunities
 
 The 10 archetypes:
 1. Random Assignment (Sorting Hat)

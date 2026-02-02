@@ -78,11 +78,10 @@ Analysis of all 145 exercises reveals a **predominantly hybrid architecture** wh
 
 **Count:** 104 exercises (72%)
 
-**Top Examples:**
-1. `exercise_1_compare_inheritance_vs_composition.py` - 44 tasks, world exploration
-2. `exercise_1_fix_class_style.py` - 36 tasks, mixed narrative
-3. `exercise_9_rpg_battle.py` - 21 tasks, tutorial guide
-4. `exercise_8_text_adventure.py` - 16 tasks, tutorial guide
+**Pattern:** Large exercises (20+ tasks) typically exhibit:
+- World exploration or system-building arcs
+- Progressive chapter narrative structure
+- Tutorial guide for skill building exercises
 
 ---
 
@@ -297,7 +296,7 @@ Testing: Verify all features work
 For each archetype above, create template file:
 
 ```
-templates/exercise_narratives/
+templates/structure_patterns/
 ├── exercise_narrative_progressive_chapter.md
 ├── exercise_narrative_tutorial_walkthrough.md
 ├── exercise_narrative_challenge_quest.md
@@ -397,13 +396,10 @@ Identify natural breaks:
 
 ---
 
-## Examples from Corpus
+## Structure Examples
 
-### Example 1: `exercise_9_rpg_battle.py` (21 tasks)
+### Example 1: Large Exercise (21 tasks) - Progressive Chapter
 
-**Current structure:** 21 functions without clear narrative sections
-
-**Proposed structure:**
 ```
 Exercise Narrative: Progressive Chapter
 
@@ -433,26 +429,23 @@ Section 4 (Tasks 18-21): Battle Simulation
 Closing: "Complete battle system ready!"
 ```
 
-### Example 2: `exercise_1_spellbook.py` (7 tasks)
+### Example 2: Medium Exercise (7 tasks) - Tutorial Walkthrough
 
-**Current structure:** 7 functions for dictionary operations
-
-**Proposed structure:**
 ```
 Exercise Narrative: Tutorial Walkthrough
 
-Opening: "Learn dictionaries by building a spellbook"
+Opening: "Learn dictionaries by building a {{item}} collection"
 
 Section 1 (Tasks 1-3): Basic Dictionary Operations
-- Example: Create spell dictionary
-- Try it: Add your own spell
-- Try it: Look up spell by name
+- Example: Create item dictionary
+- Try it: Add your own entry
+- Try it: Look up item by name
 
 Section 2 (Tasks 4-7): Advanced Operations
-- Example: Update spell power
-- Try it: Remove a spell
-- Try it: List all spells
-- Practice: Build complete spellbook
+- Example: Update item properties
+- Try it: Remove an item
+- Try it: List all items
+- Practice: Build complete collection
 
 Closing: "You've mastered dictionaries!"
 ```

@@ -9,10 +9,13 @@
       "Write",
       "Read",
       "Bash(ls:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(wc:*)",
+      "Bash(grep:*)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\User\\Documents\\GitHub\\LLM-Teaching-Python-Materials\\raw_exercises\\module_1_turtle_loops"
+      "c:\\Users\\User\\Documents\\GitHub\\LLM-Teaching-Python-Materials\\raw_exercises\\module_1_turtle_loops",
+      "c:\\Users\\User\\Documents\\GitHub\\LLM-Teaching-Python-Materials\\raw_exercises\\module_0_basics"
     ]
   }
 }

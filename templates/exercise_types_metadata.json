@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
   "directory_structure": {
-    "pattern": "raw_exercises/{module}/{type}/exercise_{n}_{topic}.py",
-    "example": "raw_exercises/module_0_basics/bug_hunt/exercise_1_print_bugs.py"
+    "pattern": "raw_exercises_new/{module}/{type}/exercise_{n}_{topic}.py",
+    "example": "raw_exercises_new/module_0_basics/bug_hunt/exercise_1_print_bugs.py"
   },
   "exercise_types": {
     "write_code": {

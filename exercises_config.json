@@ -37,7 +37,7 @@
       "description_he": "עבודה עם רשימות, לולאות על רשימות ושיטות רשימה",
       "description_en": "Working with lists, iterating over lists and list methods"
     },
-    "module_4_games": {
+    "module_4_functions": {
       "topic_id": "loops.while",
       "difficulty": 2,
       "order_index": 4,
@@ -46,7 +46,7 @@
       "description_he": "בניית משחקים עם לולאות while ומשתנים אקראיים",
       "description_en": "Building games with while loops and random"
     },
-    "module_5_functions": {
+    "module_5_games": {
       "topic_id": "functions.basic",
       "difficulty": 3,
       "order_index": 5,

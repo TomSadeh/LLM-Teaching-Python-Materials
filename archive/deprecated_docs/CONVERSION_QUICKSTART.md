@@ -365,7 +365,7 @@ python scripts/convert_to_templates.py --module 7 --output-dir raw_exercises_con
 - **CONVERSION_SCRIPT_FINAL.md** - Complete technical documentation
 - **PILOT_CONVERSION_RESULTS.md** - Detailed pilot test analysis
 - **CONVERSION_PLAN.md** - Original conversion strategy
-- **templates/narrative_templates/** - All 15 universal templates
+- **templates/activity_patterns/** - All 15 task-level narrative patterns
 
 ---
 

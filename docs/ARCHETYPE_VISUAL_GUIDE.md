@@ -449,6 +449,5 @@ Testing
 
 - **Full Documentation:** [NARRATIVE_ARCHETYPES.md](NARRATIVE_ARCHETYPES.md)
 - **Quick Reference:** [ARCHETYPE_QUICK_REFERENCE.md](../templates/ARCHETYPE_QUICK_REFERENCE.md)
-- **Exercise Mapping:** [ARCHETYPE_EXERCISE_MAPPING.md](ARCHETYPE_EXERCISE_MAPPING.md)
 - **Placeholder List:** [TEMPLATE.md](../TEMPLATE.md)
 - **Writing Guide:** [WRITING_GUIDE.md](WRITING_GUIDE.md)

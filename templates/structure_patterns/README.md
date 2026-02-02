@@ -295,7 +295,7 @@ Each template uses placeholders that get filled per theme:
 All templates have been tested with sample task counts:
 
 ```bash
-cd templates/exercise_narratives
+cd templates/structure_patterns
 python exercise_narrative_progressive_chapter.py
 python exercise_narrative_tutorial_walkthrough.py
 python exercise_narrative_challenge_quest.py
@@ -336,7 +336,7 @@ python exercise_narrative_spec_implementation.py
 ## Files
 
 ```
-templates/exercise_narratives/
+templates/structure_patterns/
 ├── README.md (this file)
 ├── exercise_narrative_progressive_chapter.py
 ├── exercise_narrative_progressive_chapter.md
