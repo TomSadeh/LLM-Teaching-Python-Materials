@@ -40,6 +40,17 @@ By the end of this module, students will be able to:
 | math: +, -, *, /, //, %, ** | classes, methods |
 | comments | import statements |
 
+### READ BEFORE STARTING
+
+| Document | Purpose |
+|----------|---------|
+| [META_PLAN_MODULE_RECREATION.md](META_PLAN_MODULE_RECREATION.md) | Overall strategy |
+| [EXERCISE_TYPE_MODULE_MAPPING.md](../../templates/EXERCISE_TYPE_MODULE_MAPPING.md) | Valid types for Module 0 (see "module_0_basics" section) |
+| [TEMPLATE.md](../../TEMPLATE.md) | Placeholder reference |
+| [WRITING_GUIDE.md](WRITING_GUIDE.md) | Format standards |
+
+**Note:** Phase-specific templates are listed in each implementation phase below.
+
 ---
 
 ## 2. Exercise Distribution
@@ -234,7 +245,169 @@ raw_exercises_new/
 
 ---
 
-## 6. Quality Checklist
+## 6. Implementation Phases
+
+Implementation is organized into 7 phases following the concept progression.
+
+**After completing each phase:** Mark it with ✅ COMPLETE below the phase header.
+
+### Phase 1: print() Basics (Cluster A) ✅ COMPLETE
+
+**Exercises:** 1, 2
+**Difficulty:** 1
+**Estimated Files:** 2
+
+| # | Type | File |
+|---|------|------|
+| 1 | output_prediction | `output_prediction/exercise_1_print_basics.py` |
+| 2 | write_code | `write_code/exercise_1_hello.py` |
+
+**Read Before This Phase:**
+| Template | Path |
+|----------|------|
+| output_prediction | [templates/exercise_types/output_prediction.py](../../templates/exercise_types/output_prediction.py) |
+| write_code | [templates/exercise_types/write_code.py](../../templates/exercise_types/write_code.py) |
+
+---
+
+### Phase 2: Variables (Cluster B) ✅ COMPLETE
+
+**Exercises:** 3, 4, 5
+**Difficulty:** 2
+**Estimated Files:** 3
+
+| # | Type | File |
+|---|------|------|
+| 3 | fill_blanks | `fill_blanks/exercise_1_variables.py` |
+| 4 | spot_difference | `spot_difference/exercise_1_variable_errors.py` |
+| 5 | write_code | `write_code/exercise_2_variables.py` |
+
+**Read Before This Phase:**
+| Template | Path |
+|----------|------|
+| fill_blanks | [templates/exercise_types/fill_blanks.py](../../templates/exercise_types/fill_blanks.py) |
+| spot_difference | [templates/exercise_types/spot_difference.py](../../templates/exercise_types/spot_difference.py) |
+
+---
+
+### Phase 3: Numbers and Arithmetic (Cluster C) ✅ COMPLETE
+
+**Exercises:** 6, 7, 8
+**Difficulty:** 2-3
+**Estimated Files:** 3
+
+| # | Type | File |
+|---|------|------|
+| 6 | output_prediction | `output_prediction/exercise_2_arithmetic.py` |
+| 7 | code_ordering | `code_ordering/exercise_1_program_flow.py` |
+| 8 | write_code | `write_code/exercise_3_calculator.py` |
+
+**Read Before This Phase:**
+| Template | Path |
+|----------|------|
+| code_ordering | [templates/exercise_types/code_ordering.py](../../templates/exercise_types/code_ordering.py) |
+
+*(output_prediction and write_code templates already read in Phase 1)*
+
+---
+
+### Phase 4: Strings + Hybrid 1 (Cluster D) ✅ COMPLETE
+
+**Exercises:** 9, 10, 11, Hybrid 1
+**Difficulty:** 3
+**Estimated Files:** 4
+
+| # | Type | File |
+|---|------|------|
+| 9 | match_output | `match_output/exercise_1_string_output.py` |
+| 10 | decode_error | `decode_error/exercise_1_string_errors.py` |
+| 11 | write_code | `write_code/exercise_4_strings.py` |
+| H1 | hybrid (apprentice) | `hybrid/exercise_1_apprentice_variables.py` |
+
+**Read Before This Phase:**
+| Template | Path |
+|----------|------|
+| match_output | [templates/exercise_types/match_output.py](../../templates/exercise_types/match_output.py) |
+| decode_error | [templates/exercise_types/decode_error.py](../../templates/exercise_types/decode_error.py) |
+| hybrid_arcs README | [templates/hybrid_arcs/README.md](../../templates/hybrid_arcs/README.md) |
+| apprentice arc | [templates/hybrid_arcs/apprentice.md](../../templates/hybrid_arcs/apprentice.md) |
+
+---
+
+### Phase 5: Input (Cluster E) ✅ COMPLETE
+
+**Exercises:** 12, 13, 14
+**Difficulty:** 3-4
+**Estimated Files:** 3
+
+| # | Type | File |
+|---|------|------|
+| 12 | fill_blanks | `fill_blanks/exercise_2_input.py` |
+| 13 | decode_error | `decode_error/exercise_2_input_errors.py` |
+| 14 | write_code | `write_code/exercise_5_input.py` |
+
+**Read Before This Phase:**
+
+*(All templates already read in previous phases)*
+
+---
+
+### Phase 6: f-strings (Cluster F) ✅ COMPLETE
+
+**Exercises:** 15, 16
+**Difficulty:** 4
+**Estimated Files:** 2
+
+| # | Type | File |
+|---|------|------|
+| 15 | complete_function | `complete_function/exercise_1_format_output.py` |
+| 16 | write_code | `write_code/exercise_6_fstrings.py` |
+
+**Read Before This Phase:**
+| Template | Path |
+|----------|------|
+| complete_function | [templates/exercise_types/complete_function.py](../../templates/exercise_types/complete_function.py) |
+
+---
+
+### Phase 7: Integration + Hybrid 2 (Cluster G) ✅ COMPLETE
+
+**Exercises:** 17, 18, Hybrid 2 (note: mini_project merged into hybrids)
+**Difficulty:** 5
+**Estimated Files:** 4
+
+| # | Type | File |
+|---|------|------|
+| 17 | bug_hunt | `bug_hunt/exercise_1_basics_bugs.py` |
+| 18 | fix_style | `fix_style/exercise_1_naming.py` |
+| 19 | mini_project | `mini_project/exercise_1_profile_builder.py` |
+| H2 | hybrid (apprentice) | `hybrid/exercise_2_apprentice_program.py` |
+
+**Read Before This Phase:**
+| Template | Path |
+|----------|------|
+| bug_hunt | [templates/exercise_types/bug_hunt.py](../../templates/exercise_types/bug_hunt.py) |
+| fix_style | [templates/exercise_types/fix_style.py](../../templates/exercise_types/fix_style.py) |
+| mini_project | [templates/exercise_types/mini_project.py](../../templates/exercise_types/mini_project.py) |
+
+---
+
+### Phase Summary
+
+| Phase | Cluster | Exercises | Files | New Templates |
+|:-----:|---------|-----------|:-----:|---------------|
+| 1 | print() | 1-2 | 2 | output_prediction, write_code |
+| 2 | Variables | 3-5 | 3 | fill_blanks, spot_difference |
+| 3 | Numbers | 6-8 | 3 | code_ordering |
+| 4 | Strings | 9-11, H1 | 4 | match_output, decode_error, hybrid_arcs |
+| 5 | Input | 12-14 | 3 | *(none)* |
+| 6 | f-strings | 15-16 | 2 | complete_function |
+| 7 | Integration | 17-19, H2 | 4 | bug_hunt, fix_style, mini_project |
+| **Total** | | **20** | **21** | |
+
+---
+
+## 7. Quality Checklist
 
 ### Content Requirements
 
@@ -266,7 +439,7 @@ raw_exercises_new/
 
 ---
 
-## 7. Implementation Notes
+## 8. Implementation Notes
 
 ### Key Constraints
 
@@ -289,13 +462,3 @@ raw_exercises_new/
 - Importing random or other modules
 
 ---
-
-## 8. References
-
-| Document | Purpose |
-|----------|---------|
-| [META_PLAN_MODULE_RECREATION.md](META_PLAN_MODULE_RECREATION.md) | Overall strategy |
-| [EXERCISE_TYPE_MODULE_MAPPING.md](../templates/EXERCISE_TYPE_MODULE_MAPPING.md) | Valid types |
-| [TEMPLATE.md](../TEMPLATE.md) | Placeholder reference |
-| [hybrid_arcs/README.md](../templates/hybrid_arcs/README.md) | Narrative arcs |
-| [WRITING_GUIDE.md](WRITING_GUIDE.md) | Format standards |
