@@ -184,6 +184,17 @@
     "PRACTITIONER_SINGULAR": "prodigy",
     "PRACTITIONER_PLURAL": "prodigies",
     "RANKING_SYSTEM": "academy levels",
-    "CHALLENGE_TYPE": "the Neverseen and ability malfunctions"
+    "CHALLENGE_TYPE": "the Neverseen and ability malfunctions",
+
+    "SYNC_UP_TO_DATE_TITLE": "הקריסטל שקט!",
+    "SYNC_UP_TO_DATE_MESSAGE": "אין הודעות טלפתיות חדשות מפוקספייר. כל הידע כבר במנטור שלך!",
+    "SYNC_UP_TO_DATE_ICON": "✨",
+    "SYNC_NEW_CONTENT_TITLE": "הודעה טלפתית התקבלה!",
+    "SYNC_NEW_CONTENT_MESSAGE_SINGULAR": "שיעור חדש אחד הגיע מהאקדמיה!",
+    "SYNC_NEW_CONTENT_MESSAGE_PLURAL": "{count} שיעורים חדשים הגיעו מהאקדמיה!",
+    "SYNC_NEW_CONTENT_ICON": "✨",
+    "SYNC_ERROR_TITLE": "הקריסטל מעומעם!",
+    "SYNC_ERROR_MESSAGE": "אין חיבור לאקדמיה. ודאי שהאינטרנט עובד.",
+    "SYNC_ERROR_ICON": "🔮"
   }
 }

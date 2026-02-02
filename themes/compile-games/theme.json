@@ -184,6 +184,17 @@
     "PRACTITIONER_SINGULAR": "tribute",
     "PRACTITIONER_PLURAL": "tributes",
     "RANKING_SYSTEM": "training scores",
-    "CHALLENGE_TYPE": "arena dangers and rivals"
+    "CHALLENGE_TYPE": "arena dangers and rivals",
+
+    "SYNC_UP_TO_DATE_TITLE": "אין שידורים חדשים מהקפיטול!",
+    "SYNC_UP_TO_DATE_MESSAGE": "כל התכניות כבר בידייך. שהסיכויים יהיו לטובתך!",
+    "SYNC_UP_TO_DATE_ICON": "🔥",
+    "SYNC_NEW_CONTENT_TITLE": "שידור חדש מהקפיטול!",
+    "SYNC_NEW_CONTENT_MESSAGE_SINGULAR": "תכנית חדשה אחת הוספה למשחקים!",
+    "SYNC_NEW_CONTENT_MESSAGE_PLURAL": "{count} תכניות חדשות הוספו למשחקים!",
+    "SYNC_NEW_CONTENT_ICON": "🔥",
+    "SYNC_ERROR_TITLE": "השידור נקטע!",
+    "SYNC_ERROR_MESSAGE": "הקפיטול לא עונה. בדקי את החיבור ונסי שוב.",
+    "SYNC_ERROR_ICON": "📡"
   }
 }

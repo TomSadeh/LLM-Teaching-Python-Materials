@@ -183,6 +183,17 @@
     "PRACTITIONER_SINGULAR": "student",
     "PRACTITIONER_PLURAL": "students",
     "RANKING_SYSTEM": "learning levels",
-    "CHALLENGE_TYPE": "coding exercises"
+    "CHALLENGE_TYPE": "coding exercises",
+
+    "SYNC_UP_TO_DATE_TITLE": "הכל עדכני!",
+    "SYNC_UP_TO_DATE_MESSAGE": "אין תרגילים או עדכונים חדשים כרגע.",
+    "SYNC_UP_TO_DATE_ICON": "📚",
+    "SYNC_NEW_CONTENT_TITLE": "יש עדכונים!",
+    "SYNC_NEW_CONTENT_MESSAGE_SINGULAR": "הוסף תרגיל חדש אחד.",
+    "SYNC_NEW_CONTENT_MESSAGE_PLURAL": "הוספו {count} תרגילים חדשים.",
+    "SYNC_NEW_CONTENT_ICON": "📚",
+    "SYNC_ERROR_TITLE": "שגיאת חיבור",
+    "SYNC_ERROR_MESSAGE": "לא הצלחנו להתחבר לשרת. בדקי את האינטרנט ונסי שוב.",
+    "SYNC_ERROR_ICON": "⚠️"
   }
 }

@@ -184,6 +184,17 @@
     "PRACTITIONER_SINGULAR": "wizard",
     "PRACTITIONER_PLURAL": "wizards",
     "RANKING_SYSTEM": "year levels",
-    "CHALLENGE_TYPE": "dark magic and magical mishaps"
+    "CHALLENGE_TYPE": "dark magic and magical mishaps",
+
+    "SYNC_UP_TO_DATE_TITLE": "הספרייה של הוגוורטס מלאה!",
+    "SYNC_UP_TO_DATE_MESSAGE": "הינשופים לא הביאו חומרים חדשים היום. כל הספרים והקסמים כבר אצלך!",
+    "SYNC_UP_TO_DATE_ICON": "🦉",
+    "SYNC_NEW_CONTENT_TITLE": "ינשוף הגיע עם חבילה!",
+    "SYNC_NEW_CONTENT_MESSAGE_SINGULAR": "קיבלת תרגיל חדש אחד! זמן לכישוף קוד!",
+    "SYNC_NEW_CONTENT_MESSAGE_PLURAL": "קיבלת {count} תרגילים חדשים! זמן לכישוף קוד!",
+    "SYNC_NEW_CONTENT_ICON": "🦉",
+    "SYNC_ERROR_TITLE": "הינשוף הלך לאיבוד!",
+    "SYNC_ERROR_MESSAGE": "לא הצלחנו להתחבר לשרת. ודאי שהאינטרנט עובד ונסי שוב.",
+    "SYNC_ERROR_ICON": "😿"
   }
 }

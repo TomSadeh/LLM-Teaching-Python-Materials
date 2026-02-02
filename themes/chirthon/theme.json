@@ -184,6 +184,17 @@
     "PRACTITIONER_SINGULAR": "demigod",
     "PRACTITIONER_PLURAL": "demigods",
     "RANKING_SYSTEM": "quest experience",
-    "CHALLENGE_TYPE": "monsters and titans"
+    "CHALLENGE_TYPE": "monsters and titans",
+
+    "SYNC_UP_TO_DATE_TITLE": "פגסוס לא הביא הודעות!",
+    "SYNC_UP_TO_DATE_MESSAGE": "גם האורקל לא רואה שיעורים חדשים באופק. המחנה שלך מצויד לחלוטין!",
+    "SYNC_UP_TO_DATE_ICON": "⚡",
+    "SYNC_NEW_CONTENT_TITLE": "פגסוס הביא הודעה!",
+    "SYNC_NEW_CONTENT_MESSAGE_SINGULAR": "אתגר חדש אחד מחכה לך! האלים מביטים בך!",
+    "SYNC_NEW_CONTENT_MESSAGE_PLURAL": "{count} אתגרים חדשים מחכים לך! האלים מביטים בך!",
+    "SYNC_NEW_CONTENT_ICON": "⚡",
+    "SYNC_ERROR_TITLE": "ההודעה הייריס נכשלה!",
+    "SYNC_ERROR_MESSAGE": "אין חיבור לאולימפוס. בדקי את האינטרנט ונסי שוב.",
+    "SYNC_ERROR_ICON": "🌩️"
   }
 }

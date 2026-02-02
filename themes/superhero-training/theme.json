@@ -167,6 +167,17 @@
     "PRACTITIONER_SINGULAR": "hero",
     "PRACTITIONER_PLURAL": "heroes",
     "RANKING_SYSTEM": "hero ranks",
-    "CHALLENGE_TYPE": "villains and disasters"
+    "CHALLENGE_TYPE": "villains and disasters",
+
+    "SYNC_UP_TO_DATE_TITLE": "אין התראות חדשות!",
+    "SYNC_UP_TO_DATE_MESSAGE": "המחשב המרכזי לא זיהה משימות חדשות. כל האימונים כבר בבסיס!",
+    "SYNC_UP_TO_DATE_ICON": "🦸",
+    "SYNC_NEW_CONTENT_TITLE": "התראת גיבורי-על!",
+    "SYNC_NEW_CONTENT_MESSAGE_SINGULAR": "משימה חדשה אחת התקבלה מהמטה!",
+    "SYNC_NEW_CONTENT_MESSAGE_PLURAL": "{count} משימות חדשות התקבלו מהמטה!",
+    "SYNC_NEW_CONTENT_ICON": "🦸",
+    "SYNC_ERROR_TITLE": "התקשורת נקטעה!",
+    "SYNC_ERROR_MESSAGE": "אין חיבור למטה הראשי. בדקי את האינטרנט ונסי שוב.",
+    "SYNC_ERROR_ICON": "📡"
   }
 }
