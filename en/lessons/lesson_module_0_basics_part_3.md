@@ -7,75 +7,107 @@
 
 ---
 
+## Prerequisites
+
+### Concepts
+- [ ] Variables and assignment
+- [ ] `print()` function
+
+### Exercises Completed
+- [ ] `fill_blanks/exercise_1_variables` (Part 2)
+- [ ] `write_code/exercise_2_variables` (Part 2)
+
+---
+
 ## Learning Objective
 
-By the end of this part, the student will be able to:
-
-- Perform basic math operations (+, -, *, /)
+- **Perform basic math operations and store results in variables**
 
 ---
 
 ## Key Concepts
 
-| Concept | One-sentence explanation |
-|---------|--------------------------|
-| Integer | A whole number without decimals (42) |
-| Operators | Symbols for math: `+` add, `-` subtract, `*` multiply, `/` divide |
+| Concept | Explanation |
+|---------|-------------|
+| Integer | Whole number without quotes: `42` |
+| Operators | `+` add, `-` subtract, `*` multiply, `/` divide |
+| Expressions | Math that Python calculates: `10 + 5` becomes `15` |
 
 ---
 
-## Lesson Content
+## Lesson Flow
 
-### Building on Part 2
+### Phase 1: OBSERVE
+Show math in action.
 
-We can store numbers in variables. Now let's do math with them!
+**Exercise**: `output_prediction/exercise_2_arithmetic`
 
-### New Material
+Key observations:
+- Numbers don't need quotes
+- Python calculates expressions before printing
+- Results can be stored in variables
 
-Show basic math operations:
-```python
-print(2 + 3)   # Addition: 5
-print(10 - 4)  # Subtraction: 6
-print(3 * 5)   # Multiplication: 15
-print(10 / 2)  # Division: 5.0
-```
+### Phase 2: PRACTICE
+Order matters in programs.
 
-Combine with variables:
-```python
-age = 12
-next_year = age + 1
-print(next_year)  # 13
-```
+**Exercise**: `code_ordering/exercise_1_program_flow`
 
-You can do math directly in print:
-```python
-print(5 + 3)  # 8
-```
+Student arranges lines in correct sequence - must assign before use.
 
-### Watch For
+### Phase 3: CREATE
+Build a calculator.
 
-- **Trying to do math on strings**: `"5" + 3` causes an error
-- **Using `x` for multiplication**: Python uses `*`, not `x`
-- **Division always gives decimals**: `10 / 2` gives `5.0`, not `5`
+**Exercise**: `write_code/exercise_3_calculator`
+
+Student creates variables with numbers, performs operations, prints results.
+
+### Phase 4: DEBUG
+Type errors with numbers and strings.
+
+**Exercise**: `decode_error/exercise_1_string_errors` (covers string + number errors)
 
 ---
 
-## Practice Exercises
+## Exercise Sequence
 
-| Exercise | Notes |
-|----------|-------|
-| exercise_03_math | Numeric calculations with operators |
+| Order | Exercise | Type | Phase |
+|-------|----------|------|-------|
+| 1 | `output_prediction/exercise_2_arithmetic` | Predict | OBSERVE |
+| 2 | `code_ordering/exercise_1_program_flow` | Order | PRACTICE |
+| 3 | `write_code/exercise_3_calculator` | Write | CREATE |
+| 4 | `decode_error/exercise_1_string_errors` | Decode | DEBUG |
 
 ---
 
 ## Checkpoint
 
-Ask: "What's the difference between 5 and '5'?"
-Expected: 5 is a number you can do math with, '5' is text
+**Ask**: What's the difference between `"5"` and `5`?
+
+**Expected**: `"5"` is text (string), `5` is a number (integer). You can do math with numbers but not with text.
 
 ---
 
-## If the Student Struggles
+## Common Mistakes
 
-- **If confused about operators**: Write them out: `*` means multiply, `/` means divide
-- **If trying to do math on strings**: Show the error and explain that `"5"` is text, not a number
+| Mistake | Example | Hint Strategy |
+|---------|---------|---------------|
+| Quotes around numbers | `age = "12"` then `age + 1` | Is 12 text or a number here? |
+| Wrong operator | Using `x` instead of `*` | What symbol does Python use for multiply? |
+| Integer division surprise | `5 / 2` gives `2.5` | Division always gives decimal in Python 3 |
+| Order of operations | `2 + 3 * 4` | Does Python follow math rules? (yes - PEMDAS) |
+
+---
+
+## If Student Struggles
+
+| Signal | Response |
+|--------|----------|
+| TypeError with + | Check what types you're adding - both numbers? |
+| Confused by results | Break into steps: what's `3 * 4`? Now add 2 |
+| Float confusion | `/` gives decimals, `//` gives whole numbers (mention briefly) |
+
+---
+
+## References
+
+- [common-struggles.md](../../references/pedagogy/common-struggles.md) - Variable Confusion (types)

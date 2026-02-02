@@ -9,88 +9,106 @@
 
 ## Prerequisites
 
-What the student should already know before this lesson:
+### Concepts
+- [ ] None - first coding lesson
 
-- [ ] None - this is the first module!
+### Exercises Completed
+- [ ] Part 0 conversation completed
 
 ---
 
 ## Learning Objective
 
-By the end of this part, the student will be able to:
-
-- Use `print()` to display text on the screen
+- **Use `print()` to display text on the screen**
 
 ---
 
 ## Key Concepts
 
-| Concept | One-sentence explanation |
-|---------|--------------------------|
-| `print()` | A function that displays text/values on the screen |
-| String | Text data, written in quotes ("hello") |
+| Concept | Explanation |
+|---------|-------------|
+| `print()` | Function that displays text/values on screen |
+| String | Text data, written in quotes (`"hello"` or `'hello'`) |
+| Function call | Using parentheses to run a function: `print("Hi")` |
 
 ---
 
-## Lesson Content
+## Lesson Flow
 
-### Getting Started
+### Phase 1: OBSERVE
+Show simplest working code first.
 
-Show the simplest form: `print("Hello")`
+**Exercise**: `output_prediction/exercise_1_print_basics`
 
-Explain that `print()` is a function - a command that does something. The text inside the quotes is what gets displayed.
+Student predicts output, then runs to verify. Key observations:
+- Text appears exactly as written
+- Quotes define the text boundaries
+- Each `print()` creates a new line
 
-```python
-print("Hello!")
-print("Welcome to Python!")
-```
+### Phase 2: PRACTICE
+Not applicable for Part 1 - `print()` is simple enough to move directly to CREATE.
 
-Let the student run it immediately - instant success is key for the first lesson.
+### Phase 3: CREATE
+First independent code.
 
-### Key Points
+**Exercise**: `write_code/exercise_1_hello`
 
-- `print()` is a function - notice the parentheses
-- Text must be in quotes (either `"double"` or `'single'`)
-- Without quotes, Python thinks you're referring to a variable
+Student writes their own print statements. This is their first success moment.
 
-### Watch For
+### Phase 4: DEBUG (optional)
+Introduce error reading early.
 
-- **Forgetting quotes**: `print(hello)` instead of `print("hello")`
-- **Using wrong quote types**: mixing `"` and `'` incorrectly
-- **Missing parentheses**: `print "Hello"` instead of `print("Hello")`
+**Exercise**: `decode_error/exercise_1_syntax_errors` (if exists) or skip for Part 1
 
 ---
 
-## Practice Exercises
+## Exercise Sequence
 
-| Exercise | Notes |
-|----------|-------|
-| exercise_01_hello | Start here - immediate success with print() |
+| Order | Exercise | Type | Phase |
+|-------|----------|------|-------|
+| 1 | `output_prediction/exercise_1_print_basics` | Predict | OBSERVE |
+| 2 | `write_code/exercise_1_hello` | Write | CREATE |
 
 ---
 
 ## Checkpoint
 
-Ask: "What happens if you write print(hello) without quotes?"
-Expected: Python looks for a variable named hello and gives an error
+**Ask**: What happens if you write `print(hello)` without quotes?
+
+**Expected**: Python looks for a variable named `hello` and gives an error (NameError)
 
 ---
 
-## If the Student Struggles
+## Common Mistakes
 
-- **If forgetting quotes**: Show the error message and explain that quotes tell Python "this is text, not a variable name"
-- **If confused about parentheses**: Explain that parentheses are how we "call" or "use" a function
-
----
-
-## Real-World Connection
-
-> "Every app you use - Instagram, Minecraft, YouTube - uses print-like functions to display text on your screen."
+| Mistake | Example | Hint Strategy |
+|---------|---------|---------------|
+| Missing quotes | `print(hello)` | What's different between text and a name Python should look up? |
+| Mismatched quotes | `print("hello')` | Look at the beginning and end - do they match? |
+| Missing parentheses | `print "hello"` | How do we tell Python to run a function? |
+| Wrong parentheses | `print["hello"]` | What shape of brackets did we use in the example? |
 
 ---
 
-## Notes for the LLM Teacher
+## If Student Struggles
 
-- This is the first lesson - establish that making mistakes is normal and encouraged
-- Run code after every small change to build the "experiment and see" habit
-- Keep it trivial - just `print("Hi")` is enough to start with success
+| Signal | Response |
+|--------|----------|
+| Forgets quotes | Compare `"Maya"` (text) vs `Maya` (variable name) |
+| Confused by parentheses | Parentheses mean "do this action" |
+| Typo in `print` | Check spelling letter by letter |
+
+---
+
+## Notes
+
+- This is the first code - prioritize success over comprehension
+- Run code after every small change to build experimental habit
+- Keep examples trivial: `print("Hi")` is enough
+
+---
+
+## References
+
+- [learning-science.md](../../references/pedagogy/learning-science.md) - Worked Examples Effect
+- [common-struggles.md](../../references/pedagogy/common-struggles.md) - Syntax Errors

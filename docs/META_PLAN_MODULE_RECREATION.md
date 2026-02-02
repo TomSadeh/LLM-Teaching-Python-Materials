@@ -20,8 +20,8 @@ Systematic approach for recreating all exercise modules using the universal temp
 
 | Order | Module | Planned | Implemented | Validated | Status |
 |:-----:|--------|:-------:|:-----------:|:---------:|--------|
-| 1 | module_0_basics | 20 | 0 | No | **Planned** |
-| 2 | module_1_turtle_loops | - | 0 | No | Pending |
+| 1 | module_0_basics | 20 | 20 | Yes | **Planned** |
+| 2 | module_1_turtle_loops | 18 | 0 | No | **Planned** |
 | 3 | module_2_decisions | - | 0 | No | Pending |
 | 4 | module_3_lists | - | 0 | No | Pending |
 | 5 | module_4_functions | - | 0 | No | Pending |
@@ -37,6 +37,7 @@ Systematic approach for recreating all exercise modules using the universal temp
 | Module | Plan Document |
 |--------|---------------|
 | module_0_basics | [PLAN_MODULE_0_BASICS.md](plans/PLAN_MODULE_0_BASICS.md) |
+| module_1_turtle_loops | [PLAN_MODULE_1_TURTLE_LOOPS.md](plans/PLAN_MODULE_1_TURTLE_LOOPS.md) |
 
 ---
 
