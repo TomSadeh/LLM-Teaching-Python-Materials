@@ -32,24 +32,50 @@
 #   - Hard: Subtle operators, less context, chained operations
 #
 # =============================================================================
-
-# Exercise N: Fill in the Blanks - [TOPIC]
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
 #
-# Complete the code by filling in the blanks (marked with ___).
-# Each blank needs a specific piece of code to make the program work.
+# Docstring/Introduction:
+#   {{CONTEXT_FILL_BLANKS_INTRO}}    - Main intro for fill-blanks exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
 #
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
-
-
-# --- FILL THE BLANKS [LETTER]: [CONCEPT NAME] ---
+# Per-Exercise:
+#   {{EXERCISE_N_TITLE}}             - Title for exercise N (1, 2, 3...)
+#   {{CONTEXT_EXERCISE_N_NARRATIVE}} - Story/context for exercise N
+#   {{CONTEXT_FILL_BLANKS_HINT_N}}   - Hint for exercise N
 #
-# [Description of what this code should do when complete]
+# Closing:
+#   {{CONTEXT_ROLE_COMPLETE}}        - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
 
-def exercise_X():
+"""
+{{CONTEXT_FILL_BLANKS_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
+
+
+# --- {{EXERCISE_1_TITLE}} ---
+# {{CONTEXT_EXERCISE_1_NARRATIVE}}
+
+def exercise_a():
     # ✏️ FILL IN THE BLANKS ✏️
 
-    # [LINE OF CODE WITH ___]  # Hint: [what this blank should be]
+    # [LINE OF CODE WITH ___]  # Hint: {{CONTEXT_FILL_BLANKS_HINT_1}}
     # [MORE LINES AS NEEDED]
+    pass
+
+
+# --- {{EXERCISE_2_TITLE}} ---
+# {{CONTEXT_EXERCISE_2_NARRATIVE}}
+
+def exercise_b():
+    # ✏️ FILL IN THE BLANKS ✏️
+
+    # [LINE OF CODE WITH ___]  # Hint: {{CONTEXT_FILL_BLANKS_HINT_2}}
     pass
 
 
@@ -57,12 +83,17 @@ def exercise_X():
 
 
 def main():
-    print("=== Exercise [LETTER]: [DESCRIPTION] ===")
-    # exercise_X()  # Uncomment when you've filled the blanks
+    print("{{CONTEXT_FILL_BLANKS_INTRO}}")
+    print("=" * 50)
 
-    # [REPEAT FOR EACH EXERCISE]
+    print("\n=== {{EXERCISE_1_TITLE}} ===")
+    # exercise_a()  # Uncomment when you've filled the blanks
+
+    print("\n=== {{EXERCISE_2_TITLE}} ===")
+    # exercise_b()
 
     print("\nFill in all the blanks, then uncomment to test!")
+    print("{{CONTEXT_ROLE_COMPLETE}}")
 
 
 main()

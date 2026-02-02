@@ -29,19 +29,36 @@
 #   - Hard: Nested loops, multiple conditions, list mutations
 #
 # =============================================================================
-
-# Exercise N: Code Tracing - [TOPIC]
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
 #
-# Trace through the code step by step, tracking variable values.
-# Fill in the tracing table to show how values change.
+# Docstring/Introduction:
+#   {{CONTEXT_CODE_TRACING_INTRO}}   - Main intro for tracing exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
 #
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+# Per-Challenge:
+#   {{TRACE_N_TITLE}}                - Title for trace N (1, 2, 3...)
+#   {{CONTEXT_TRACE_N_NARRATIVE}}    - Story/context for trace N
+#   {{CONTEXT_TRACE_HINT_N}}         - Hint for trace N
+#
+# Closing:
+#   {{CONTEXT_VERIFICATION_COMPLETE}} - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
+
+"""
+{{CONTEXT_CODE_TRACING_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
-# --- TRACING CHALLENGE [LETTER] ---
-# [Description of what pattern this practices]
+# --- {{TRACE_1_TITLE}} ---
+# {{CONTEXT_TRACE_1_NARRATIVE}}
 
-def code_to_trace_X():
+def code_to_trace_a():
     """Study this code - don't run it yet!"""
     # [CODE TO TRACE]
     # - Should have clear steps that modify state
@@ -49,8 +66,10 @@ def code_to_trace_X():
     pass
 
 
-def trace_table_X():
+def trace_table_a():
     # ✏️ FILL IN THE TRACING TABLE ✏️
+    #
+    # {{CONTEXT_TRACE_HINT_1}}
     #
     # Complete this table showing variable values at each step.
     # Use None or - for variables that don't exist yet.
@@ -69,23 +88,45 @@ def trace_table_X():
     pass
 
 
-# [REPEAT PATTERN FOR CHALLENGES B, C, ETC.]
+# --- {{TRACE_2_TITLE}} ---
+# {{CONTEXT_TRACE_2_NARRATIVE}}
+
+def code_to_trace_b():
+    """Study this code - don't run it yet!"""
+    pass
+
+
+def trace_table_b():
+    # ✏️ FILL IN THE TRACING TABLE ✏️
+    #
+    # {{CONTEXT_TRACE_HINT_2}}
+    pass
+
+
+# [REPEAT PATTERN FOR MORE CHALLENGES]
 
 
 def verify_traces():
     """Run this after completing your traces to check your work"""
-    print("=== Trace [LETTER] - Actual Execution ===")
-    code_to_trace_X()
-    # [REPEAT FOR EACH]
+    print("=== {{TRACE_1_TITLE}} - Actual Execution ===")
+    code_to_trace_a()
+
+    print("\n=== {{TRACE_2_TITLE}} - Actual Execution ===")
+    code_to_trace_b()
 
 
 def main():
+    print("{{CONTEXT_CODE_TRACING_INTRO}}")
+    print("=" * 50)
+    print()
     print("Complete the tracing tables in trace_table_X functions first!")
     print("Then uncomment the line below to verify your answers.")
     print()
 
     # Uncomment this line AFTER completing your traces:
     # verify_traces()
+
+    print("{{CONTEXT_VERIFICATION_COMPLETE}}")
 
 
 main()

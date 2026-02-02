@@ -24,60 +24,95 @@
 #   - Hard: Integration, problem decomposition, minimal guidance
 #
 # =============================================================================
-
-# Exercise N: [Title]
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
 #
-# [Brief description of what this exercise teaches]
-# [Optional: mention the themed context]
+# Docstring/Introduction:
+#   {{CONTEXT_PROJECT_INTRO}}        - Sets up the overall project/task
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
+#
+# Per-Phase/Exercise:
+#   {{PHASE_N_TITLE}}                - Title for phase N (1, 2, 3...)
+#   {{CONTEXT_PHASE_N}}              - Narrative context for phase N
+#   {{CONTEXT_STUDENT_TASK}}         - What the student needs to do
+#   {{CONTEXT_IMPLEMENTATION_GUIDANCE}} - Tips for writing code
+#
+# Closing:
+#   {{CONTEXT_FINAL_ASSEMBLY}}       - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
+
+"""
+{{CONTEXT_PROJECT_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
+
+# ============================================================
+# {{PHASE_1_TITLE}}
+# ============================================================
+# {{CONTEXT_PHASE_1}}
 
 
 def exercise_a():
     # ✏️ YOUR CODE HERE ✏️
     #
-    # [Task description with themed elements]
-    # Example: Create a variable called 'hero' with the value "{{hero}}"
+    # {{CONTEXT_STUDENT_TASK}}
     #
     # Step 1: [First action to take]
     # Step 2: [Second action to take]
     #
-    # Hint: [Helpful guidance if needed]
+    # Hint: {{CONTEXT_IMPLEMENTATION_GUIDANCE}}
     pass
+
+
+# ============================================================
+# {{PHASE_2_TITLE}}
+# ============================================================
+# {{CONTEXT_PHASE_2}}
 
 
 def exercise_b():
     # ✏️ YOUR CODE HERE ✏️
     #
-    # [Next task, building on exercise_a]
+    # {{CONTEXT_STUDENT_TASK}}
     #
     # [Instructions...]
     pass
+
+
+# ============================================================
+# {{PHASE_3_TITLE}}
+# ============================================================
+# {{CONTEXT_PHASE_3}}
 
 
 def exercise_c():
     # ✏️ YOUR CODE HERE ✏️
     #
-    # [Most challenging task in the file]
+    # {{CONTEXT_STUDENT_TASK}}
     #
     # [Instructions...]
     pass
 
 
-# Optional: Include a worked example for reference
-# def example():
-#     """Example to study - shows the complete pattern"""
-#     name = "{{hero}}"
-#     print(f"Welcome, {name}!")
-
-
 def main():
-    print("=== Exercise A: [Short Description] ===")
+    print("{{CONTEXT_PROJECT_INTRO}}")
+    print("=" * 50)
+
+    print("\n=== {{PHASE_1_TITLE}} ===")
     exercise_a()
 
-    print("\n=== Exercise B: [Short Description] ===")
+    print("\n=== {{PHASE_2_TITLE}} ===")
     exercise_b()
 
-    print("\n=== Exercise C: [Short Description] ===")
+    print("\n=== {{PHASE_3_TITLE}} ===")
     exercise_c()
+
+    print("=" * 50)
+    print("{{CONTEXT_FINAL_ASSEMBLY}}")
 
 
 main()

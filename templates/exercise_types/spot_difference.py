@@ -33,33 +33,53 @@
 #   - Hard: Difference only manifests in certain conditions
 #
 # =============================================================================
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
+#
+# Docstring/Introduction:
+#   {{CONTEXT_SPOT_DIFFERENCE_INTRO}} - Main intro for spot-difference exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}    - What student will learn
+#
+# Per-Comparison:
+#   {{COMPARISON_N_TITLE}}            - Title for comparison N (1, 2, 3...)
+#   {{CONTEXT_COMPARISON_N_NARRATIVE}} - Story/context for comparison N
+#   {{CONTEXT_SPOT_DIFFERENCE_HINT_N}} - Hint for comparison N
+#
+# Closing:
+#   {{CONTEXT_ROLE_COMPLETE}}         - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
 
-# Exercise N: Spot the Difference - [TOPIC]
-#
-# Each pair of code snippets looks almost identical but behaves differently.
-# Your task: Identify the difference and explain how it changes the behavior.
-#
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+"""
+{{CONTEXT_SPOT_DIFFERENCE_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
 # ============================================================
-# SPOT DIFFERENCE [LETTER]: [CONCEPT]
+# {{COMPARISON_1_TITLE}}
 # ============================================================
+# {{CONTEXT_COMPARISON_1_NARRATIVE}}
 
-def snippet_X1():
+def snippet_a1():
     """Snippet 1"""
     # [CODE VERSION 1]
     pass
 
 
-def snippet_X2():
+def snippet_a2():
     """Snippet 2 - spot the difference!"""
     # [CODE VERSION 2 - NEARLY IDENTICAL, ONE SUBTLE CHANGE]
     pass
 
 
-def explain_difference_X():
+def explain_difference_a():
     # ✏️ EXPLAIN THE DIFFERENCE ✏️
+    #
+    # {{CONTEXT_SPOT_DIFFERENCE_HINT_1}}
 
     explanation = """
     The difference is:
@@ -77,18 +97,59 @@ def explain_difference_X():
     return explanation
 
 
-# [REPEAT PATTERN FOR MORE EXERCISES]
+# ============================================================
+# {{COMPARISON_2_TITLE}}
+# ============================================================
+# {{CONTEXT_COMPARISON_2_NARRATIVE}}
+
+def snippet_b1():
+    """Snippet 1"""
+    pass
+
+
+def snippet_b2():
+    """Snippet 2 - spot the difference!"""
+    pass
+
+
+def explain_difference_b():
+    # ✏️ EXPLAIN THE DIFFERENCE ✏️
+    #
+    # {{CONTEXT_SPOT_DIFFERENCE_HINT_2}}
+
+    explanation = """
+    The difference is:
+    -
+
+    Why this matters:
+    -
+    """
+    return explanation
+
+
+# [REPEAT PATTERN FOR MORE COMPARISONS]
 
 
 def main():
-    print("=== Difference [LETTER]: [CONCEPT] ===")
-    print("Version 1:")
-    snippet_X1()
-    print("\nVersion 2:")
-    snippet_X2()
-    print(f"\nExplanation:{explain_difference_X()}")
+    print("{{CONTEXT_SPOT_DIFFERENCE_INTRO}}")
+    print("=" * 50)
 
-    # [REPEAT FOR EACH EXERCISE]
+    print("\n=== {{COMPARISON_1_TITLE}} ===")
+    print("Version 1:")
+    snippet_a1()
+    print("\nVersion 2:")
+    snippet_a2()
+    print(f"\nExplanation:{explain_difference_a()}")
+
+    print("\n=== {{COMPARISON_2_TITLE}} ===")
+    print("Version 1:")
+    snippet_b1()
+    print("\nVersion 2:")
+    snippet_b2()
+    print(f"\nExplanation:{explain_difference_b()}")
+
+    print("=" * 50)
+    print("{{CONTEXT_ROLE_COMPLETE}}")
 
 
 main()

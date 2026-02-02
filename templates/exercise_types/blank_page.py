@@ -31,22 +31,40 @@
 #   - Expert: Algorithm knowledge, optimization, complex logic
 #
 # =============================================================================
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
+#
+# Docstring/Introduction:
+#   {{CONTEXT_BLANK_PAGE_INTRO}}     - Main intro for blank page exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
+#
+# Per-Challenge:
+#   {{BLANK_N_TITLE}}                - Title for challenge N (1, 2, 3...)
+#   {{CONTEXT_BLANK_N_NARRATIVE}}    - Story/context for challenge N
+#
+# Closing:
+#   {{CONTEXT_MASTERY_COMPLETE}}     - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# NOTE: Blank page exercises have MINIMAL narrative by design.
+# The docstring IS the specification. Use context blocks sparingly.
+#
+# =============================================================================
 
-# Exercise N: Write From Scratch - [TOPIC]
-#
-# These exercises give you minimal guidance. Read the docstring,
-# understand what's needed, and implement it yourself.
-#
-# This is how real programming works!
-#
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+"""
+{{CONTEXT_BLANK_PAGE_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
 # ============================================================
-# CHALLENGE [LETTER]: [DIFFICULTY LEVEL]
+# {{BLANK_1_TITLE}}
 # ============================================================
+# {{CONTEXT_BLANK_1_NARRATIVE}}
 
-def function_name(parameters):
+def function_a(parameters):
     """
     [Clear, concise description of what to do]
 
@@ -58,12 +76,29 @@ def function_name(parameters):
         [Type]: [Description of return value]
 
     Examples:
-        >>> function_name(example_input_1)
+        >>> function_a(example_input_1)
         expected_output_1
-        >>> function_name(example_input_2)
+        >>> function_a(example_input_2)
         expected_output_2
-        >>> function_name(edge_case_input)
+        >>> function_a(edge_case_input)
         edge_case_output
+    """
+    # ✏️ YOUR CODE HERE ✏️
+    pass
+
+
+# ============================================================
+# {{BLANK_2_TITLE}}
+# ============================================================
+# {{CONTEXT_BLANK_2_NARRATIVE}}
+
+def function_b(parameters):
+    """
+    [Description]
+
+    Examples:
+        >>> function_b(input1)
+        output1
     """
     # ✏️ YOUR CODE HERE ✏️
     pass
@@ -81,19 +116,23 @@ def run_tests():
     """Run tests for all functions."""
     print("Testing your implementations...\n")
 
-    # Test [function_name]
-    print("[LETTER]: [function_name]")
-    assert function_name(test_input) == expected_output, "Description of test"
+    # Test function_a
+    print("{{BLANK_1_TITLE}}")
+    # assert function_a(test_input) == expected_output, "Description of test"
     print("   ✓ Passed!\n")
 
-    # [REPEAT FOR EACH FUNCTION]
+    # Test function_b
+    print("{{BLANK_2_TITLE}}")
+    # assert function_b(test_input) == expected_output, "Description of test"
+    print("   ✓ Passed!\n")
 
     print("=" * 40)
     print("All tests passed!")
 
 
 def main():
-    print("=== Write From Scratch Challenges ===")
+    print("{{CONTEXT_BLANK_PAGE_INTRO}}")
+    print("=" * 50)
     print()
     print("Implement each function based on its docstring.")
     print("When ready, run the tests to check your work.")
@@ -101,6 +140,8 @@ def main():
 
     # Uncomment to run tests after implementing:
     # run_tests()
+
+    print("{{CONTEXT_MASTERY_COMPLETE}}")
 
 
 main()

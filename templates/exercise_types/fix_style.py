@@ -30,27 +30,48 @@
 #   - Hard: Subtle issues, adding documentation, refactoring logic
 #
 # =============================================================================
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
+#
+# Docstring/Introduction:
+#   {{CONTEXT_FIX_STYLE_INTRO}}      - Main intro for style exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
+#
+# Per-Style Issue:
+#   {{STYLE_N_TITLE}}                - Title for style issue N (1, 2, 3...)
+#   {{CONTEXT_STYLE_N_NARRATIVE}}    - Story/context for style issue N
+#   {{CONTEXT_STYLE_FIX_N}}          - What specifically to fix
+#
+# Closing:
+#   {{CONTEXT_IMPROVEMENT_COMPLETE}} - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
 
-# Exercise N: Fix the Style - [TOPIC]
-#
-# This code WORKS but has terrible style! Fix the issues:
-# [LIST SPECIFIC ISSUES TO LOOK FOR]
-#
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+"""
+{{CONTEXT_FIX_STYLE_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
 # ============================================================
-# STYLE FIX [LETTER]: [TYPE OF ISSUE]
+# {{STYLE_1_TITLE}}
 # ============================================================
+# {{CONTEXT_STYLE_1_NARRATIVE}}
 
-def original_X():
-    """ORIGINAL - [Describe what's wrong]"""
+def original_a():
+    """ORIGINAL - This code works but has style issues"""
     # [WORKING CODE WITH POOR STYLE]
     pass
 
 
-def fixed_X():
+def fixed_a():
     # ✏️ FIX THE STYLE ✏️
+    #
+    # {{CONTEXT_STYLE_FIX_1}}
+    #
     # Rewrite the code above with proper style.
     # Changes to make:
     # - [Specific instruction 1]
@@ -61,16 +82,44 @@ def fixed_X():
     pass
 
 
+# ============================================================
+# {{STYLE_2_TITLE}}
+# ============================================================
+# {{CONTEXT_STYLE_2_NARRATIVE}}
+
+def original_b():
+    """ORIGINAL - This code works but has style issues"""
+    pass
+
+
+def fixed_b():
+    # ✏️ FIX THE STYLE ✏️
+    #
+    # {{CONTEXT_STYLE_FIX_2}}
+    pass
+
+
 # [REPEAT PATTERN FOR MORE EXERCISES]
 
 
 def main():
-    print("=== Original [LETTER] ([issue type]) ===")
-    original_X()
-    print("\n=== Fixed [LETTER] (your version) ===")
-    fixed_X()
+    print("{{CONTEXT_FIX_STYLE_INTRO}}")
+    print("=" * 50)
 
-    # [REPEAT FOR EACH EXERCISE]
+    print("\n=== {{STYLE_1_TITLE}} ===")
+    print("Original (poor style):")
+    original_a()
+    print("\nFixed (your version):")
+    fixed_a()
+
+    print("\n=== {{STYLE_2_TITLE}} ===")
+    print("Original (poor style):")
+    original_b()
+    print("\nFixed (your version):")
+    fixed_b()
+
+    print("\n" + "=" * 50)
+    print("{{CONTEXT_IMPROVEMENT_COMPLETE}}")
 
 
 main()

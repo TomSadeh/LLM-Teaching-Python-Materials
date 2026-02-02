@@ -32,26 +32,44 @@
 #   - Hard: Nested operations, cleanup required, multiple failure points
 #
 # =============================================================================
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
+#
+# Docstring/Introduction:
+#   {{CONTEXT_ERROR_HANDLING_INTRO}} - Main intro for error handling exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
+#
+# Per-Challenge:
+#   {{HANDLING_N_TITLE}}             - Title for handling N (1, 2, 3...)
+#   {{CONTEXT_HANDLING_N_NARRATIVE}} - Story/context for handling N
+#   {{CONTEXT_HANDLING_HINT_N}}      - Hint for handling N
+#
+# Closing:
+#   {{CONTEXT_ROBUSTNESS_COMPLETE}}  - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
 
-# Exercise N: Add Error Handling - [TOPIC]
-#
-# Each function works for good input but crashes on bad input.
-# Add try/except blocks to handle errors gracefully.
-#
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+"""
+{{CONTEXT_ERROR_HANDLING_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
 # ============================================================
-# ERROR HANDLING [LETTER]: [ERROR TYPE]
+# {{HANDLING_1_TITLE}}
 # ============================================================
+# {{CONTEXT_HANDLING_1_NARRATIVE}}
 
-def original_X(params):
+def original_a(params):
     """ORIGINAL: Crashes if [DESCRIBE BAD INPUT]"""
     # [CODE THAT CRASHES ON BAD INPUT]
     pass
 
 
-def safe_X(params):
+def safe_a(params):
     """
     [Same description as original]
 
@@ -60,8 +78,27 @@ def safe_X(params):
     - [Error case 2] → [What to return/do]
     """
     # ✏️ ADD ERROR HANDLING ✏️
+    #
+    # {{CONTEXT_HANDLING_HINT_1}}
 
     # [STUDENT WRAPS CODE IN TRY/EXCEPT]
+    pass
+
+
+# ============================================================
+# {{HANDLING_2_TITLE}}
+# ============================================================
+# {{CONTEXT_HANDLING_2_NARRATIVE}}
+
+def original_b(params):
+    """ORIGINAL: Crashes if [DESCRIBE BAD INPUT]"""
+    pass
+
+
+def safe_b(params):
+    # ✏️ ADD ERROR HANDLING ✏️
+    #
+    # {{CONTEXT_HANDLING_HINT_2}}
     pass
 
 
@@ -69,15 +106,20 @@ def safe_X(params):
 
 
 def main():
-    print("=== Test [LETTER]: [ERROR TYPE] ===")
+    print("{{CONTEXT_ERROR_HANDLING_INTRO}}")
+    print("=" * 50)
 
+    print("\n=== {{HANDLING_1_TITLE}} ===")
     # Test happy path
-    print(f"Good input: {safe_X(good_input)}")
-
+    print(f"Good input: {safe_a(good_input)}")
     # Test error cases
-    print(f"Bad input: {safe_X(bad_input)}")
+    print(f"Bad input: {safe_a(bad_input)}")
 
-    # [REPEAT FOR EACH EXERCISE]
+    print("\n=== {{HANDLING_2_TITLE}} ===")
+    # [TEST CALLS]
+
+    print("\n" + "=" * 50)
+    print("{{CONTEXT_ROBUSTNESS_COMPLETE}}")
 
 
 main()

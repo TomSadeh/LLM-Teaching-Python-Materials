@@ -30,20 +30,36 @@
 #   - Hard: 8+ lines, nested structures, subtle ordering requirements
 #
 # =============================================================================
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
+#
+# Docstring/Introduction:
+#   {{CONTEXT_CODE_ORDERING_INTRO}}  - Main intro for ordering exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
+#
+# Per-Challenge:
+#   {{ORDERING_N_TITLE}}             - Title for challenge N (1, 2, 3...)
+#   {{CONTEXT_ORDERING_N_NARRATIVE}} - Story/context for challenge N
+#   {{CONTEXT_ORDERING_HINT_N}}      - Hint for challenge N
+#
+# Closing:
+#   {{CONTEXT_ROLE_COMPLETE}}        - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
 
-# Exercise N: Code Ordering - [TOPIC]
-#
-# The lines of code are scrambled! Put them in the correct order
-# to make the program work properly.
-#
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+"""
+{{CONTEXT_CODE_ORDERING_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
 # ============================================================
-# ORDERING CHALLENGE [LETTER]: [DESCRIPTION]
+# {{ORDERING_1_TITLE}}
 # ============================================================
-#
-# [Explain what the code should do when correctly ordered]
+# {{CONTEXT_ORDERING_1_NARRATIVE}}
 #
 # SCRAMBLED LINES:
 #   [LINE 1 - with proper indentation shown]
@@ -52,24 +68,49 @@
 #   [LINE 4]
 #   [ETC.]
 
-def challenge_X():
+def challenge_a():
     # ✏️ REORDER THE LINES ✏️
-    # Copy the lines above in the CORRECT order:
-    # Remember: [SPECIFIC HINT ABOUT DEPENDENCIES]
+    # Copy the lines above in the CORRECT order.
+    #
+    # {{CONTEXT_ORDERING_HINT_1}}
 
     pass  # Delete this and add the correctly ordered lines
+
+
+# ============================================================
+# {{ORDERING_2_TITLE}}
+# ============================================================
+# {{CONTEXT_ORDERING_2_NARRATIVE}}
+#
+# SCRAMBLED LINES:
+#   [LINE 1]
+#   [LINE 2]
+#   [LINE 3]
+#   [LINE 4]
+
+def challenge_b():
+    # ✏️ REORDER THE LINES ✏️
+    #
+    # {{CONTEXT_ORDERING_HINT_2}}
+
+    pass
 
 
 # [REPEAT PATTERN FOR MORE CHALLENGES]
 
 
 def main():
-    print("=== Challenge [LETTER]: [DESCRIPTION] ===")
-    # challenge_X()  # Uncomment when ordered correctly
+    print("{{CONTEXT_CODE_ORDERING_INTRO}}")
+    print("=" * 50)
 
-    # [REPEAT FOR EACH CHALLENGE]
+    print("\n=== {{ORDERING_1_TITLE}} ===")
+    # challenge_a()  # Uncomment when ordered correctly
+
+    print("\n=== {{ORDERING_2_TITLE}} ===")
+    # challenge_b()
 
     print("\nReorder each challenge, then uncomment to test!")
+    print("{{CONTEXT_ROLE_COMPLETE}}")
 
 
 main()

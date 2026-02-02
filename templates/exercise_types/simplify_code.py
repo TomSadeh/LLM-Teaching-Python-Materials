@@ -32,30 +32,66 @@
 #   - Hard: Requires knowing less-common Python features
 #
 # =============================================================================
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
+#
+# Docstring/Introduction:
+#   {{CONTEXT_SIMPLIFY_CODE_INTRO}}  - Main intro for simplification exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
+#
+# Per-Challenge:
+#   {{SIMPLIFY_N_TITLE}}             - Title for simplification N (1, 2, 3...)
+#   {{CONTEXT_SIMPLIFY_N_NARRATIVE}} - Story/context for simplification N
+#   {{CONTEXT_SIMPLIFY_HINT_N}}      - Hint for simplification N
+#
+# Closing:
+#   {{CONTEXT_IMPROVEMENT_COMPLETE}} - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
 
-# Exercise N: Simplify This - [TOPIC]
-#
-# Each piece of code works but is more complex than needed.
-# Rewrite each one to be simpler while keeping the same behavior.
-#
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+"""
+{{CONTEXT_SIMPLIFY_CODE_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
 # ============================================================
-# SIMPLIFY [LETTER]: [PATTERN NAME]
+# {{SIMPLIFY_1_TITLE}}
 # ============================================================
+# {{CONTEXT_SIMPLIFY_1_NARRATIVE}}
 
-def original_X(params):
+def original_a(params):
     """ORIGINAL: [Describe the verbosity]"""
     # [WORKING BUT OVERLY VERBOSE CODE]
     pass
 
 
-def simplified_X(params):
+def simplified_a(params):
     # ✏️ SIMPLIFY THIS ✏️
-    # Hint: [WHAT PYTHON FEATURE TO USE]
+    #
+    # {{CONTEXT_SIMPLIFY_HINT_1}}
 
     # [STUDENT REWRITES CODE HERE]
+    pass
+
+
+# ============================================================
+# {{SIMPLIFY_2_TITLE}}
+# ============================================================
+# {{CONTEXT_SIMPLIFY_2_NARRATIVE}}
+
+def original_b(params):
+    """ORIGINAL: [Describe the verbosity]"""
+    pass
+
+
+def simplified_b(params):
+    # ✏️ SIMPLIFY THIS ✏️
+    #
+    # {{CONTEXT_SIMPLIFY_HINT_2}}
     pass
 
 
@@ -63,13 +99,19 @@ def simplified_X(params):
 
 
 def main():
-    print("=== Test [LETTER]: [PATTERN NAME] ===")
-    test_input = ...
-    print(f"Original: {original_X(test_input)}")
-    print(f"Simplified: {simplified_X(test_input)}")
-    # Verify outputs match
+    print("{{CONTEXT_SIMPLIFY_CODE_INTRO}}")
+    print("=" * 50)
 
-    # [REPEAT FOR EACH EXERCISE]
+    print("\n=== {{SIMPLIFY_1_TITLE}} ===")
+    test_input = ...
+    print(f"Original: {original_a(test_input)}")
+    print(f"Simplified: {simplified_a(test_input)}")
+
+    print("\n=== {{SIMPLIFY_2_TITLE}} ===")
+    # [TEST CALLS]
+
+    print("\n" + "=" * 50)
+    print("{{CONTEXT_IMPROVEMENT_COMPLETE}}")
 
 
 main()

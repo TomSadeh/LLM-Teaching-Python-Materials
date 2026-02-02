@@ -30,39 +30,63 @@
 #   - Hard: Subtle differences, performance vs readability, edge cases
 #
 # =============================================================================
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
+#
+# Docstring/Introduction:
+#   {{CONTEXT_COMPARISON_INTRO}}     - Main intro for comparison exercises
+#   {{CONTEXT_COMPARISON_DECISION}}  - Framing the decision to make
+#
+# Per-Comparison:
+#   {{APPROACH_N_NAME}}              - Name for approach N (1, 2, 3...)
+#   {{CONTEXT_APPROACH_N_NARRATIVE}} - Story/context for approach N
+#   {{CONTEXT_ANALYSIS_PROMPT}}      - Prompt for analysis
+#   {{CONTEXT_DECISION_GUIDANCE}}    - Criteria for decisions
+#
+# Closing:
+#   {{CONTEXT_EVALUATION_COMPLETE}}  - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
 
-# Exercise N: Which is Better? - [TOPIC]
-#
-# For each pair of solutions, both work correctly.
-# Your job: Analyze and explain which is better AND WHY.
-# Sometimes the answer is "it depends"!
-#
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+"""
+{{CONTEXT_COMPARISON_INTRO}}
+{{CONTEXT_COMPARISON_DECISION}}
+"""
 
 
 # ============================================================
-# COMPARISON [LETTER]: [COMPARISON TYPE]
+# {{APPROACH_1_NAME}}
 # ============================================================
+# {{CONTEXT_APPROACH_1_NARRATIVE}}
 
-def version_X1(params):
+def version_a1(params):
     """Version 1: [Describe approach]"""
     # [FIRST IMPLEMENTATION]
     pass
 
 
-def version_X2(params):
+# ============================================================
+# {{APPROACH_2_NAME}}
+# ============================================================
+# {{CONTEXT_APPROACH_2_NARRATIVE}}
+
+def version_a2(params):
     """Version 2: [Describe approach]"""
     # [SECOND IMPLEMENTATION]
     pass
 
 
-# Optional: version_X3 for three-way comparisons
+# Optional: version_a3 for three-way comparisons
 
 
-def analysis_X():
+def analysis_a():
     # ✏️ YOUR ANALYSIS ✏️
-    # Which is better: X1 or X2?
-    # Consider: [SPECIFIC FACTORS TO CONSIDER]
+    #
+    # {{CONTEXT_ANALYSIS_PROMPT}}
+    # Consider: {{CONTEXT_DECISION_GUIDANCE}}
 
     analysis = """
     Better version: ??? (or "it depends")
@@ -71,10 +95,10 @@ def analysis_X():
     1.
     2.
 
-    When to use [version 1]:
+    When to use version 1:
     -
 
-    When to use [version 2]:
+    When to use version 2:
     -
     """
     return analysis
@@ -84,17 +108,21 @@ def analysis_X():
 
 
 def main():
-    print("=== Comparison [LETTER]: [TYPE] ===")
+    print("{{CONTEXT_COMPARISON_INTRO}}")
+    print("=" * 50)
+
+    print("\n=== {{APPROACH_1_NAME}} vs {{APPROACH_2_NAME}} ===")
 
     # Show both versions work
     test_input = ...
-    print(f"Version 1: {version_X1(test_input)}")
-    print(f"Version 2: {version_X2(test_input)}")
+    print(f"Version 1: {version_a1(test_input)}")
+    print(f"Version 2: {version_a2(test_input)}")
 
     # Show analysis
-    print(f"\nYour analysis:{analysis_X()}")
+    print(f"\nYour analysis:{analysis_a()}")
 
-    # [REPEAT FOR EACH COMPARISON]
+    print("\n" + "=" * 50)
+    print("{{CONTEXT_EVALUATION_COMPLETE}}")
 
 
 main()

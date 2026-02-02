@@ -24,18 +24,38 @@
 #   - Hard: Nearly identical code, requires deep understanding
 #
 # =============================================================================
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
+#
+# Docstring/Introduction:
+#   {{CONTEXT_MATCH_OUTPUT_INTRO}}   - Main intro for matching exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
+#
+# Per-Challenge Set:
+#   {{MATCH_SET_N_TITLE}}            - Title for set N (1, 2, 3...)
+#   {{CONTEXT_MATCH_SET_N_NARRATIVE}} - Story/context for set N
+#   {{CONTEXT_MATCH_HINT_N}}         - Hint for set N
+#
+# Closing:
+#   {{CONTEXT_VERIFICATION_COMPLETE}} - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
 
-# Exercise N: Match the Output - [TOPIC]
-#
-# Match each code snippet with its correct output.
-# Don't run the code - use your mental execution skills!
-#
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+"""
+{{CONTEXT_MATCH_OUTPUT_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
 # ============================================================
-# CODE SNIPPETS - Study these carefully
+# {{MATCH_SET_1_TITLE}}
 # ============================================================
+# {{CONTEXT_MATCH_SET_1_NARRATIVE}}
+
+# --- CODE SNIPPETS ---
 
 def snippet_1():
     # [SHORT CODE THAT PRODUCES OUTPUT]
@@ -52,13 +72,7 @@ def snippet_3():
     pass
 
 
-# [ADD MORE AS NEEDED]
-
-
-# ============================================================
-# POSSIBLE OUTPUTS - Which goes with which snippet?
-# ============================================================
-
+# --- POSSIBLE OUTPUTS ---
 """
 OUTPUT A:
 ---------
@@ -71,25 +85,22 @@ OUTPUT B:
 OUTPUT C:
 ---------
 [What another snippet would print]
-
-[ADD MORE AS NEEDED - should match number of snippets]
 """
 
 
-# ============================================================
-# YOUR ANSWERS
-# ============================================================
+# --- YOUR ANSWERS ---
 
 def your_matches():
     # ✏️ MATCH SNIPPETS TO OUTPUTS ✏️
     #
     # Write the letter (A, B, C, etc.) that matches each snippet.
+    #
+    # {{CONTEXT_MATCH_HINT_1}}
 
     matches = {
         "snippet_1": "?",
         "snippet_2": "?",
         "snippet_3": "?",
-        # [ADD MORE AS NEEDED]
     }
 
     return matches
@@ -101,17 +112,25 @@ def explain_matches():
     explanations = {
         "snippet_1": "Because...",
         "snippet_2": "Because...",
-        # [ETC.]
+        "snippet_3": "Because...",
     }
 
     return explanations
 
 
+# [REPEAT PATTERN FOR MORE MATCH SETS]
+
+
 def main():
-    print("=== Match the Output Challenge ===")
-    # [DISPLAY INSTRUCTIONS]
-    # [SHOW MATCHES]
-    # [OPTIONAL: VERIFICATION SECTION]
+    print("{{CONTEXT_MATCH_OUTPUT_INTRO}}")
+    print("=" * 50)
+
+    print("\n=== {{MATCH_SET_1_TITLE}} ===")
+    print("\nYour matches:", your_matches())
+    print("\nYour explanations:", explain_matches())
+
+    print("\n" + "=" * 50)
+    print("{{CONTEXT_VERIFICATION_COMPLETE}}")
 
 
 main()

@@ -30,16 +30,38 @@
 #   - Hard: Only signature and docstring, student designs approach
 #
 # =============================================================================
-
-# Exercise N: Complete the Function - [TOPIC]
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
 #
-# Each function is partially written. Read the docstring and
-# the started code, then complete the implementation.
+# Docstring/Introduction:
+#   {{CONTEXT_COMPLETE_FUNCTION_INTRO}} - Main intro for completion exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}      - What student will learn
 #
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+# Per-Function:
+#   {{FUNCTION_N_TITLE}}                - Title for function N (1, 2, 3...)
+#   {{CONTEXT_FUNCTION_N_NARRATIVE}}    - Story/context for function N
+#   {{CONTEXT_FUNCTION_HINT_N}}         - Hint for function N
+#
+# Closing:
+#   {{CONTEXT_FINAL_ASSEMBLY}}          - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
+
+"""
+{{CONTEXT_COMPLETE_FUNCTION_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
-def function_name(param1, param2):
+# ============================================================
+# {{FUNCTION_1_TITLE}}
+# ============================================================
+# {{CONTEXT_FUNCTION_1_NARRATIVE}}
+
+def function_a(param1, param2):
     """
     [Clear description of what function does]
 
@@ -51,37 +73,58 @@ def function_name(param1, param2):
         [Description of return value and type]
 
     Examples:
-        >>> function_name(example_input_1)
+        >>> function_a(example_input_1)
         expected_output_1
-        >>> function_name(example_input_2)
+        >>> function_a(example_input_2)
         expected_output_2
     """
     # Started for you:
     # [SETUP CODE - variable initialization, etc.]
 
     # ✏️ COMPLETE THIS FUNCTION ✏️
-    # Hint: [GUIDANCE ON APPROACH]
-
-    # [STRUCTURE HINTS IF APPROPRIATE]
-    # for item in param1:
-    #     [student fills this in]
+    #
+    # {{CONTEXT_FUNCTION_HINT_1}}
 
     pass  # Replace with implementation
 
-    # return [appropriate value]
+
+# ============================================================
+# {{FUNCTION_2_TITLE}}
+# ============================================================
+# {{CONTEXT_FUNCTION_2_NARRATIVE}}
+
+def function_b(param):
+    """
+    [Description]
+
+    Examples:
+        >>> function_b(input1)
+        output1
+    """
+    # ✏️ COMPLETE THIS FUNCTION ✏️
+    #
+    # {{CONTEXT_FUNCTION_HINT_2}}
+
+    pass
 
 
 # [REPEAT PATTERN FOR MORE FUNCTIONS]
 
 
 def main():
-    # Test [function_name]
-    print("=== Test: [function_name] ===")
+    print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
+    print("=" * 50)
+
+    print("\n=== Testing {{FUNCTION_1_TITLE}} ===")
     # [CALL FUNCTION WITH TEST INPUTS]
     # [PRINT RESULTS]
     # [COMPARE TO EXPECTED]
 
-    # [REPEAT FOR EACH FUNCTION]
+    print("\n=== Testing {{FUNCTION_2_TITLE}} ===")
+    # [TEST CALLS]
+
+    print("\n" + "=" * 50)
+    print("{{CONTEXT_FINAL_ASSEMBLY}}")
 
 
 main()

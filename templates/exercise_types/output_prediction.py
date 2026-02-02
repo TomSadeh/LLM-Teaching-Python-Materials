@@ -23,19 +23,36 @@
 #   - Hard: Nested loops, mutable state, recursion
 #
 # =============================================================================
-
-# Exercise N: Output Prediction - [TOPIC]
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
 #
-# Read the code carefully and predict what it will print.
-# Do NOT run the code - practice mental execution!
+# Docstring/Introduction:
+#   {{CONTEXT_PREDICTION_INTRO}}     - Main intro for prediction exercises
+#   {{CONTEXT_PREDICTION_PURPOSE}}   - Why prediction matters
 #
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+# Per-Challenge:
+#   {{CHALLENGE_N_TITLE}}            - Title for challenge N (1, 2, 3...)
+#   {{CONTEXT_CHALLENGE_N_NARRATIVE}} - Story/context for challenge N
+#   {{CONTEXT_PREDICTION_GUIDANCE_N}} - Hint for challenge N
+#
+# Closing:
+#   {{CONTEXT_VERIFICATION_COMPLETE}} - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
+
+"""
+{{CONTEXT_PREDICTION_INTRO}}
+{{CONTEXT_PREDICTION_PURPOSE}}
+"""
 
 
-# --- PREDICTION CHALLENGE [LETTER] ---
-# [Brief description of what concept this tests]
+# --- {{CHALLENGE_1_TITLE}} ---
+# {{CONTEXT_CHALLENGE_1_NARRATIVE}}
 
-def challenge_X_code():
+def challenge_a_code():
     """DO NOT MODIFY - Just read and predict"""
     # [ACTUAL CODE HERE]
     # - Should produce interesting/non-obvious output
@@ -43,29 +60,50 @@ def challenge_X_code():
     pass
 
 
-def challenge_X_prediction():
+def challenge_a_prediction():
     # ✏️ YOUR PREDICTION HERE ✏️
     # Write EXACTLY what you think will be printed above.
-    # Use print() statements or comments to record your prediction.
     #
-    # Hint: [OPTIONAL HINT ABOUT THE CONCEPT]
+    # Line 1: _______________
+    # Line 2: _______________
+    #
+    # {{CONTEXT_PREDICTION_GUIDANCE_1}}
     pass
 
 
-# [REPEAT PATTERN FOR CHALLENGES B, C, ETC.]
+# --- {{CHALLENGE_2_TITLE}} ---
+# {{CONTEXT_CHALLENGE_2_NARRATIVE}}
+
+def challenge_b_code():
+    """DO NOT MODIFY - Just read and predict"""
+    pass
+
+
+def challenge_b_prediction():
+    # ✏️ YOUR PREDICTION HERE ✏️
+    #
+    # {{CONTEXT_PREDICTION_GUIDANCE_2}}
+    pass
+
+
+# [REPEAT PATTERN FOR CHALLENGES C, D, ETC.]
 
 
 def main():
-    print("=== Prediction Challenge [LETTER]: [DESCRIPTION] ===")
+    print("=== {{CHALLENGE_1_TITLE}} ===")
     print("-- Actual Output --")
-    challenge_X_code()
+    challenge_a_code()
     print("\n-- Your Prediction --")
-    challenge_X_prediction()
+    challenge_a_prediction()
 
-    # [REPEAT FOR EACH CHALLENGE]
+    print("\n=== {{CHALLENGE_2_TITLE}} ===")
+    print("-- Actual Output --")
+    challenge_b_code()
+    print("\n-- Your Prediction --")
+    challenge_b_prediction()
 
-    print("\n" + "="*40)
-    print("Compare your predictions with the actual output!")
+    print("\n" + "=" * 50)
+    print("{{CONTEXT_VERIFICATION_COMPLETE}}")
 
 
 main()

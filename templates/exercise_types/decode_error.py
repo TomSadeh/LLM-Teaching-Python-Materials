@@ -35,18 +35,37 @@
 #   - Hard: Error is a symptom of a problem elsewhere
 #
 # =============================================================================
+# CONTEXT BLOCKS TO USE:
+# =============================================================================
+#
+# Docstring/Introduction:
+#   {{CONTEXT_DECODE_ERROR_INTRO}}   - Main intro for error decoding exercises
+#   {{CONTEXT_LEARNING_OBJECTIVE}}   - What student will learn
+#
+# Per-Error:
+#   {{ERROR_N_TITLE}}                - Title for error N (1, 2, 3...)
+#   {{CONTEXT_ERROR_N_NARRATIVE}}    - Story/context for error N
+#   {{CONTEXT_ERROR_HINT_N}}         - Hint for error N
+#
+# Closing:
+#   {{CONTEXT_INVESTIGATION_COMPLETE}} - Completion message
+#
+# Layer 1 entities (use within explanatory text):
+#   {{hero}}, {{school}}, {{spell1}}, {{item}}, etc.
+#
+# =============================================================================
 
-# Exercise N: Decode the Error - [TOPIC]
-#
-# Each exercise shows an error message and the code that caused it.
-# Your job: Understand the error and fix the code WITHOUT running it first.
-#
-# Theme: [THEMED CONTEXT USING {{placeholders}}]
+"""
+{{CONTEXT_DECODE_ERROR_INTRO}}
+{{CONTEXT_LEARNING_OBJECTIVE}}
+"""
 
 
 # ============================================================
-# ERROR DECODE [LETTER]: [ERROR TYPE]
+# {{ERROR_1_TITLE}}
 # ============================================================
+# {{CONTEXT_ERROR_1_NARRATIVE}}
+
 """
 ERROR MESSAGE:
 --------------
@@ -56,17 +75,20 @@ Traceback (most recent call last):
 [ErrorType]: [error description]
 """
 
-def buggy_code_X():
+
+def buggy_code_a():
     """The code that caused the error"""
     # [CODE WITH THE BUG]
     pass
 
 
-def fix_code_X():
+def fix_code_a():
     # ✏️ FIX THE CODE ✏️
     #
     # First, explain what caused the error:
     # The error occurred because: _______________
+    #
+    # {{CONTEXT_ERROR_HINT_1}}
     #
     # Now write the fixed code:
 
@@ -74,31 +96,38 @@ def fix_code_X():
     pass
 
 
-# [REPEAT PATTERN FOR MORE EXERCISES]
-
-
 # ============================================================
-# BONUS: Multiple Errors
+# {{ERROR_2_TITLE}}
 # ============================================================
-"""
-This code has [N] different errors. Find and fix them all.
+# {{CONTEXT_ERROR_2_NARRATIVE}}
 
-[SHOW CODE WITH MULTIPLE BUGS]
+"""
+ERROR MESSAGE:
+--------------
+[Another error message]
 """
 
-def fix_all_errors():
-    # ✏️ FIND AND FIX ALL ERRORS ✏️
-    #
-    # Error 1: _______________
-    # Error 2: _______________
-    # [ETC.]
-    #
-    # Fixed code:
+
+def buggy_code_b():
+    """The code that caused the error"""
     pass
 
 
+def fix_code_b():
+    # ✏️ FIX THE CODE ✏️
+    #
+    # The error occurred because: _______________
+    #
+    # {{CONTEXT_ERROR_HINT_2}}
+    pass
+
+
+# [REPEAT PATTERN FOR MORE ERRORS]
+
+
 def main():
-    print("=== Error Decode Exercises ===")
+    print("{{CONTEXT_DECODE_ERROR_INTRO}}")
+    print("=" * 50)
     print()
     print("For each exercise:")
     print("1. Read the error message carefully")
@@ -106,8 +135,15 @@ def main():
     print("3. Fix the code in the fix_code_X function")
     print()
 
-    # Uncomment each to test after fixing:
-    # print("Testing [LETTER]:"); fix_code_X()
+    print("=== {{ERROR_1_TITLE}} ===")
+    # Uncomment to test after fixing:
+    # fix_code_a()
+
+    print("\n=== {{ERROR_2_TITLE}} ===")
+    # fix_code_b()
+
+    print("\n" + "=" * 50)
+    print("{{CONTEXT_INVESTIGATION_COMPLETE}}")
 
 
 main()
