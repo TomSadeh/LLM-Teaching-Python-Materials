@@ -339,7 +339,7 @@ def analyze_exercise(exercise_path: str) -> NarrativeStructure:
     )
 
 
-def analyze_all_exercises(base_path: str = 'raw_exercises') -> List[NarrativeStructure]:
+def analyze_all_exercises(base_path: str = 'exercises') -> List[NarrativeStructure]:
     """Analyze all exercises in the repository"""
 
     results = []
@@ -446,7 +446,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description='Audit exercise narrative structures')
-    parser.add_argument('--base-path', default='raw_exercises', help='Base path for exercises')
+    parser.add_argument('--base-path', default='exercises', help='Base path for exercises')
     parser.add_argument('--output', default='narrative_structure_audit.json', help='Output JSON file')
     parser.add_argument('--report-dir', default='docs/audits', help='Directory for reports')
 

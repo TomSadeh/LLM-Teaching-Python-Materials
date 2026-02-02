@@ -12,8 +12,8 @@ Before creating new exercises, migrate existing exercises to the new structure.
 
 ```bash
 # For each module:
-mkdir raw_exercises/module_X_topic/write_code/
-mv raw_exercises/module_X_topic/exercise_*.py raw_exercises/module_X_topic/write_code/
+mkdir exercises/module_X_topic/write_code/
+mv exercises/module_X_topic/exercise_*.py exercises/module_X_topic/write_code/
 ```
 
 ### Modules to Migrate
@@ -148,7 +148,7 @@ Create exercises for advanced independent practice.
 Each module contains subdirectories for each exercise type:
 
 ```
-raw_exercises/
+exercises/
 ├── module_0_basics/
 │   ├── write_code/                        # Traditional exercises (existing)
 │   │   ├── exercise_1_hello_world.py
@@ -229,14 +229,14 @@ Not all types apply to all modules. Here's the mapping:
 
 1. **Create the type directory** if it doesn't exist:
    ```bash
-   mkdir -p raw_exercises/module_X_topic/[type]/
+   mkdir -p exercises/module_X_topic/[type]/
    ```
 
 2. **Read the template header** - understand purpose, structure, guidelines
 
 3. **Create the exercise file**:
    ```bash
-   raw_exercises/module_X_topic/[type]/exercise_N_topic.py
+   exercises/module_X_topic/[type]/exercise_N_topic.py
    ```
 
 4. **Choose concepts** from the template's concept lists

@@ -107,9 +107,9 @@ def main():
     """Run validation on all Python exercises."""
     print("🔍 Scanning exercises for hardcoded theme content...\n")
 
-    raw_exercises_dir = Path("raw_exercises")
-    if not raw_exercises_dir.exists():
-        print(f"❌ Error: {raw_exercises_dir} not found!")
+    exercises_dir = Path("exercises")
+    if not exercises_dir.exists():
+        print(f"❌ Error: {exercises_dir} not found!")
         print("   Run this script from the repository root.")
         sys.exit(1)
 
@@ -119,7 +119,7 @@ def main():
     total_violations = 0
 
     # Scan all Python files
-    for py_file in sorted(raw_exercises_dir.rglob("*.py")):
+    for py_file in sorted(exercises_dir.rglob("*.py")):
         total_files_scanned += 1
         violations = check_file(py_file)
 

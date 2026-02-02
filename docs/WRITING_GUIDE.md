@@ -133,12 +133,12 @@ Pattern: `exercise_N_descriptive_name.py`
 
 - Lowercase with underscores
 - Numbered sequentially within exercise type
-- Located in: `raw_exercises_new/{module}/{type}/`
+- Located in: `exercises/{module}/{type}/`
 
 ### Directory Structure
 
 ```
-raw_exercises_new/
+exercises/
 └── module_N_topic/
     ├── write_code/
     │   └── exercise_1_name.py
@@ -516,7 +516,7 @@ theme_mappings/
 python scripts/convert_exercises.py
 ```
 
-This reads `.py` files from `raw_exercises_new/` and generates:
+This reads `.py` files from `exercises/` and generates:
 - `exercises.json` per module
 - `manifest.json` with module list
 - Updated `version.json`
@@ -535,7 +535,7 @@ This reads `.md` files from `{lang}/lessons/` and generates `lessons.json`.
 
 ### New Module
 
-1. Create directory: `raw_exercises_new/module_N_topic/`
+1. Create directory: `exercises/module_N_topic/`
 2. Create exercise type subdirectories as needed
 3. Update `exercises_config.json` with module metadata
 4. Update `scripts/convert_exercises.py` with translations

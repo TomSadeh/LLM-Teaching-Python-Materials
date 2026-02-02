@@ -38,7 +38,7 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 - [ ] Update [docs/CATALOG.md](docs/CATALOG.md) lesson table
 
 ### New Module Checklist
-- [ ] Create `raw_exercises_new/module_N_topic/` directory
+- [ ] Create `exercises/module_N_topic/` directory
 - [ ] Add module to `exercises_config.json`
 - [ ] Add translations to `scripts/convert_exercises.py`
 - [ ] Create lesson files in `en/lessons/` and `he/lessons/`
@@ -104,7 +104,7 @@ Each exercise within a module should introduce one new element.
 
 ```
 LLM-Teaching-Python-Materials/
-├── raw_exercises_new/          # Source exercise files (recreated)
+├── exercises/          # Source exercise files (recreated)
 │   └── module_X_topic/
 │       └── {exercise_type}/
 │           └── exercise_N_name.py
@@ -128,7 +128,7 @@ LLM-Teaching-Python-Materials/
 
 ### Add/modify exercises
 
-1. Edit files in `raw_exercises_new/{module}/{type}/`
+1. Edit files in `exercises/{module}/{type}/`
 2. Run: `python scripts/convert_exercises.py`
 
 ### Add/modify lessons
@@ -138,7 +138,7 @@ LLM-Teaching-Python-Materials/
 
 ### Add new module
 
-1. Create `raw_exercises_new/module_N_topic/`
+1. Create `exercises/module_N_topic/`
 2. Update `exercises_config.json`
 3. Update `scripts/convert_exercises.py` with translations
 4. Create lesson files in both languages
@@ -147,7 +147,7 @@ LLM-Teaching-Python-Materials/
 ### Verify no hardcoded themes
 
 ```bash
-python scripts/audit_all_themes.py raw_exercises_new/
+python scripts/audit_all_themes.py exercises/
 ```
 
 ---

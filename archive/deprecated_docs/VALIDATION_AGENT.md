@@ -137,7 +137,7 @@ Will analyze:
   "approved_exercises": [...],
   "needs_review_exercises": [
     {
-      "exercise": "raw_exercises/.../exercise.py",
+      "exercise": "exercises/.../exercise.py",
       "template": "template_2_incremental_builder",
       "confidence": 0.70,
       "concerns": [
@@ -152,7 +152,7 @@ Will analyze:
   ],
   "alternative_suggested_exercises": [
     {
-      "exercise": "raw_exercises/.../exercise.py",
+      "exercise": "exercises/.../exercise.py",
       "original_template": "template_3_role_assignment",
       "original_confidence": 0.60,
       "recommended_template": "template_2_incremental_builder",

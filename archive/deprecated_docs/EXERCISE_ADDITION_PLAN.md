@@ -1,6 +1,6 @@
 # Exercise Addition Plan
 
-Based on audit of `raw_exercises/` against `EXERCISE_TYPE_MODULE_MAPPING.md`.
+Based on audit of `exercises/` against `EXERCISE_TYPE_MODULE_MAPPING.md`.
 
 ---
 

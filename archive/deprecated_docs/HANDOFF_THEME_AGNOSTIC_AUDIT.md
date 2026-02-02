@@ -240,7 +240,7 @@ main()
 | [theme_variables.json](../theme_variables.json) | Placeholder values by theme | Has nouns only, needs context blocks |
 | [theme_mappings/*.json](../theme_mappings/) | Extended theme variables | Partial, may have some context blocks |
 | [templates/activity_patterns/](../templates/activity_patterns/) | 15 template structures | Reference only, not used by exercises |
-| [raw_exercises/](../raw_exercises/) | 145 exercises | Need conversion to use templates |
+| [exercises/](../exercises/) | 145 exercises | Need conversion to use templates |
 
 ## Success Criteria
 

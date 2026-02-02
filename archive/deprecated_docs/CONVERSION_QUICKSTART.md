@@ -23,7 +23,7 @@ The conversion system transforms 145 existing Python exercises from hardcoded Ha
 
 ```bash
 python scripts/convert_to_templates.py \
-  --input "raw_exercises/module_7_dictionaries/complete_function/exercise_1.py" \
+  --input "exercises/module_7_dictionaries/complete_function/exercise_1.py" \
   --dry-run
 ```
 
@@ -153,7 +153,7 @@ Detects exercise patterns for better template matching:
 ```
 === EXERCISE ANALYSIS ===
 
-File: raw_exercises/module_7_dictionaries/complete_function/exercise_1_complete_dict_functions.py
+File: exercises/module_7_dictionaries/complete_function/exercise_1_complete_dict_functions.py
 Module: module_7_dictionaries
 Exercise Type: complete_function
 
@@ -179,7 +179,7 @@ Reason: >10 hardcoded references require careful review
 
 ```json
 {
-  "exercise_path": "raw_exercises/module_7/.../exercise_1.py",
+  "exercise_path": "exercises/module_7/.../exercise_1.py",
   "template_matched": "template_6_specification_implementer",
   "confidence": 0.95,
   "context_blocks_created": ["CONTEXT_NARRATIVE"],
@@ -282,7 +282,7 @@ python scripts/convert_to_templates.py --module 7 --dry-run
 
 ```bash
 # Rewrite files with templates
-python scripts/convert_to_templates.py --module 7 --output-dir raw_exercises_converted
+python scripts/convert_to_templates.py --module 7 --output-dir exercises_converted
 ```
 
 **Purpose:** Generate converted exercise files

@@ -861,7 +861,7 @@ def main():
 
     parser.add_argument(
         '--output-dir',
-        default='raw_exercises_converted',
+        default='exercises_converted',
         help='Output directory for batch conversions'
     )
 
@@ -898,10 +898,10 @@ def main():
 
     # Module conversion
     elif args.module:
-        raw_exercises = Path('raw_exercises')
+        exercises = Path('exercises')
         module_pattern = f'module_{args.module}_*'
 
-        module_dirs = list(raw_exercises.glob(module_pattern))
+        module_dirs = list(exercises.glob(module_pattern))
         if not module_dirs:
             print(f"Error: No module found matching {module_pattern}")
             return
@@ -929,8 +929,8 @@ def main():
         print("\nConverting all exercises...")
         print("This may take several minutes...")
 
-        raw_exercises = Path('raw_exercises')
-        exercise_files = list(raw_exercises.rglob('*.py'))
+        exercises = Path('exercises')
+        exercise_files = list(exercises.rglob('*.py'))
 
         # Filter out __init__.py and other non-exercise files
         exercise_files = [f for f in exercise_files if not f.name.startswith('__')]

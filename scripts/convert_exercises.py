@@ -5,7 +5,7 @@ Convert exercise Python files to per-module JSON format.
 Usage:
     python scripts/convert_exercises.py [source_dir]
 
-If source_dir is not provided, defaults to raw_exercises in the repo root.
+If source_dir is not provided, defaults to exercises in the repo root.
 """
 
 import json
@@ -723,7 +723,7 @@ def main():
     if len(sys.argv) >= 2:
         source_dir = Path(sys.argv[1])
     else:
-        source_dir = root / "raw_exercises"
+        source_dir = root / "exercises"
 
     if not source_dir.exists():
         print(f"Error: Source directory not found: {source_dir}")

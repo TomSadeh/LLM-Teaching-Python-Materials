@@ -129,13 +129,13 @@ def main():
     total_files_scanned = 0
 
     # Scan all Python files
-    raw_exercises = Path("raw_exercises")
-    if not raw_exercises.exists():
-        print("ERROR: raw_exercises directory not found!")
+    exercises = Path("exercises")
+    if not exercises.exists():
+        print("ERROR: exercises directory not found!")
         print("Run this from repository root.")
         return
 
-    for py_file in sorted(raw_exercises.rglob("*.py")):
+    for py_file in sorted(exercises.rglob("*.py")):
         total_files_scanned += 1
         violations = scan_file(py_file, patterns)
 

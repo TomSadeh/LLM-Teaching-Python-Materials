@@ -344,7 +344,7 @@ Not all arcs work well in all modules. Consider what exercise types are availabl
 Hybrid exercises live in a dedicated directory:
 
 ```
-raw_exercises_new/
+exercises/
 └── module_N_topic/
     └── hybrid/
         └── exercise_1_arc_name.py

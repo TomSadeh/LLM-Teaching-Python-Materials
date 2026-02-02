@@ -206,7 +206,7 @@ H1 = Hybrid 1, H2 = Hybrid 2
 ## 5. File Structure
 
 ```
-raw_exercises_new/
+exercises/
 └── module_0_basics/
     ├── output_prediction/
     │   ├── exercise_1_print_basics.py

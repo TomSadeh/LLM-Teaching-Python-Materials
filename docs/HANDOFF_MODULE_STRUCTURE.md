@@ -7,7 +7,7 @@ This document explains the new exercise organization system.
 ## Directory Structure
 
 ```
-raw_exercises_new/
+exercises/
 └── module_0_basics/
     ├── exercises.json           # Module manifest (NEW)
     ├── hints.json              # Hints per exercise (TODO)
@@ -78,7 +78,7 @@ Global configuration for the entire curriculum.
 
 ### 2. `exercises.json` (Per Module)
 
-Each module has its own manifest at `raw_exercises_new/{module}/exercises.json`.
+Each module has its own manifest at `exercises/{module}/exercises.json`.
 
 ```json
 {
@@ -217,7 +217,7 @@ The app should:
 
 ### From Old Structure
 - Old exercises are in `archive/raw_exercises_old/`
-- New exercises are in `raw_exercises_new/`
+- New exercises are in `exercises/`
 - The old `convert_exercises.py` script is being replaced
 
 ### What's New
