@@ -1,0 +1,127 @@
+/* Superhero Training Academy Theme */
+/* A bold, heroic theme with vibrant colors and dynamic effects */
+
+.theme-superhero-training {
+  /* Primary Colors - Bold superhero palette */
+  --primary-color: #e63946;          /* Hero Red */
+  --secondary-color: #1d3557;        /* Deep Navy */
+  --accent-color: #f4d35e;           /* Golden Yellow */
+
+  /* Background - Dynamic gradient */
+  --background: linear-gradient(135deg, #1d3557 0%, #0d1b2a 50%, #1b263b 100%);
+  --chat-bg: linear-gradient(180deg, #1b263b 0%, #0d1b2a 100%);
+
+  /* Text Colors */
+  --text-color: #f1faee;
+  --text-primary: #f1faee;
+  --text-secondary: #a8dadc;
+  --text-muted: #457b9d;
+
+  /* Borders & UI */
+  --border-color: #457b9d;
+  --bg-secondary: #1b263b;
+
+  /* Header & Sidebar */
+  --header-bg: linear-gradient(90deg, #1d3557 0%, #e63946 100%);
+  --sidebar-bg: #0d1b2a;
+  --sidebar-color: #f1faee;
+
+  /* Messages */
+  --message-bg: #1b263b;
+  --message-user-bg: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+  --message-user-color: #ffffff;
+  --message-assistant-color: #f1faee;
+
+  /* Components */
+  --avatar-bg: #e63946;
+  --input-area-bg: #1b263b;
+  --button-bg: #e63946;
+
+  /* Modal */
+  --modal-bg: #1d3557;
+
+  /* Scrollbar */
+  --scrollbar-track: #0d1b2a;
+  --scrollbar-thumb: #457b9d;
+  --scrollbar-thumb-hover: #e63946;
+}
+
+/* Hero glow effect on messages */
+.theme-superhero-training .message-bubble.assistant .message-body {
+  box-shadow: 0 0 15px rgba(230, 57, 70, 0.3), 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-left: 3px solid var(--primary-color);
+}
+
+/* Power-up animation for user messages */
+.theme-superhero-training .message-bubble.user .message-body {
+  box-shadow: 0 0 20px rgba(244, 211, 94, 0.4);
+}
+
+/* Input focus - energy surge */
+.theme-superhero-training .message-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(244, 211, 94, 0.3), 0 0 20px rgba(230, 57, 70, 0.2);
+}
+
+/* Header styling - heroic banner */
+.theme-superhero-training .chat-header {
+  border-bottom: 2px solid var(--accent-color);
+  background: var(--header-bg);
+}
+
+/* Code blocks - tech terminal style */
+.theme-superhero-training pre,
+.theme-superhero-training code {
+  background: #0d1b2a;
+  border: 1px solid #457b9d;
+  color: #a8dadc;
+}
+
+.theme-superhero-training pre code {
+  border: none;
+}
+
+/* Buttons - power buttons */
+.theme-superhero-training button {
+  transition: all 0.2s ease;
+}
+
+.theme-superhero-training button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+}
+
+/* Scrollbar styling */
+.theme-superhero-training ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.theme-superhero-training ::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+.theme-superhero-training ::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+.theme-superhero-training ::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Badge/status styling */
+.theme-superhero-training .badge,
+.theme-superhero-training .status-indicator {
+  background: var(--accent-color);
+  color: #1d3557;
+  font-weight: bold;
+}
+
+/* Links */
+.theme-superhero-training a {
+  color: var(--accent-color);
+}
+
+.theme-superhero-training a:hover {
+  color: var(--primary-color);
+}

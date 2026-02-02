@@ -1,0 +1,187 @@
+/* Camp Half-Blood Theme - Chirthon (Percy Jackson) */
+.theme-chirthon {
+  --primary-color: #3A8DB5;
+  --secondary-color: #C8956B;
+  --accent-color: #5EADC7;
+  --background: linear-gradient(135deg, #F5F0E1 0%, #E8E0D0 100%);
+  --text-color: #1E3A4C;
+  --text-primary: #1E3A4C;
+  --text-secondary: #3A8DB5;
+  --text-muted: #5A6A7A;
+  --border-color: #C8956B;
+  --bg-secondary: #1E3A4C;
+
+  /* Code editor text - light color for dark bg-secondary background */
+  --text-code: #E8E0D0;
+
+  --header-bg: #1E3A4C;
+  --sidebar-bg: #1E3A4C;
+  --sidebar-color: #C8956B;
+
+  --message-bg: #FFFFFF;
+  --message-user-bg: #3A8DB5;
+  --message-user-color: #FFFFFF;
+  --message-assistant-color: #1E3A4C;
+
+  --avatar-bg: #C8956B;
+  --input-area-bg: #FFFFFF;
+  --button-bg: #F5F0E1;
+
+  --scrollbar-track: #E8E0D0;
+  --scrollbar-thumb: #4DA6A6;
+  --scrollbar-thumb-hover: #3A8DB5;
+
+  /* Soft sandy/ocean-mist background for chat area */
+  --chat-bg: linear-gradient(180deg, #F8F4E8 0%, #E8E4D8 100%);
+
+  /* Modal background - sandy style for readability */
+  --modal-bg: #F8F4E8;
+}
+
+.theme-chirthon .message-bubble.assistant {
+  color: var(--message-assistant-color);
+}
+
+/* Wave effect at bottom of chat - uses box-shadow to not conflict with --chat-bg */
+.theme-chirthon .chat-container {
+  box-shadow: inset 0 -20px 40px -20px rgba(58, 141, 181, 0.15);
+}
+
+/* Ocean wave effect on assistant messages */
+.theme-chirthon .message-bubble.assistant .message-body {
+  box-shadow: 0 2px 8px rgba(58, 141, 181, 0.15);
+}
+
+/* Greek column accent on header */
+.theme-chirthon .chat-header {
+  border-bottom: 2px solid var(--border-color);
+}
+.theme-chirthon .app-header h1 {
+  color: #E8E0D0;
+}
+
+/* Settings dropdown - light text on dark bg-secondary background */
+.theme-chirthon .settings-menu .theme-name,
+.theme-chirthon .settings-menu .font-size-btn,
+.theme-chirthon .settings-menu .font-size-value,
+.theme-chirthon .settings-menu .voice-select {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .settings-menu .settings-section h4 {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .settings-menu .toggle-option {
+  color: #C8D8E8;
+}
+
+.theme-chirthon .settings-menu .toggle-option.active {
+  color: #E8E0D0;
+}
+
+/* Lesson panel - light text on dark bg-secondary background */
+.theme-chirthon .lesson-panel .lesson-label {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .lesson-panel .empty-text {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .lesson-panel .lesson-title-btn {
+  color: #E8E0D0;
+}
+
+/* Exercise panel - light text on dark sidebar-bg background */
+.theme-chirthon .exercise-panel .empty-text {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .exercise-panel .exercise-label {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .exercise-panel .exercise-title {
+  color: #E8E0D0;
+}
+
+/* File editor empty state - light text on dark background */
+.theme-chirthon .file-editor .empty-state {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .file-editor .empty-hint {
+  color: #7A9AAA;
+}
+
+/* Settings trigger button in header */
+.theme-chirthon .settings-dropdown-trigger {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .settings-dropdown-trigger .settings-label {
+  color: #E8E0D0;
+}
+
+/* Language selector in header */
+.theme-chirthon .language-selector .language-label {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .language-selector .language-button {
+  color: #E8E0D0;
+}
+
+/* Model selector (if present) */
+.theme-chirthon .model-selector .model-label {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .model-selector .model-button {
+  color: #E8E0D0;
+}
+
+/* Muted and loading text in settings menu */
+.theme-chirthon .settings-menu .muted-text,
+.theme-chirthon .settings-menu .loading-text {
+  color: #7A9AAA;
+}
+
+/* Voice select dropdown options */
+.theme-chirthon .settings-menu .voice-select option {
+  color: #E8E0D0;
+}
+
+/* User selection dialog - light text on dark bg-secondary background */
+.theme-chirthon .user-dialog h2 {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .user-dialog p {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .user-list-item .user-name {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .user-menu h4 {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .user-menu-item .user-name {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .user-menu-action {
+  color: #C8D8E8;
+}
+
+.theme-chirthon .user-button .user-name {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .gender-option {
+  color: #E8E0D0;
+}

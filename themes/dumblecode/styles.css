@@ -1,0 +1,63 @@
+/* Hogwarts Theme - Dumblecode (Harry Potter) */
+.theme-dumblecode {
+  --primary-color: #4B8BBE;
+  --secondary-color: #F5C542;
+  --accent-color: #D4A535;
+  --background: linear-gradient(135deg, #2A1E36 0%, #1E1528 100%);
+  --text-color: #FFF8DC;
+  --text-primary: #FFF8DC;
+  --text-secondary: #F5C542;
+  --text-muted: #B8A070;
+  --border-color: #D4A535;
+  --bg-secondary: #3A2E46;
+
+  --header-bg: #2A1E36;
+  --sidebar-bg: #2A1E36;
+  --sidebar-color: #F5C542;
+
+  --message-bg: #3A2E46;
+  --message-user-bg: #4A3E5A;
+  --message-user-color: #F5C542;
+  --message-assistant-color: #FFF8DC;
+
+  --avatar-bg: #D4A535;
+  --input-area-bg: #2A1E36;
+  --button-bg: #3A2E46;
+
+  --scrollbar-track: #1E1528;
+  --scrollbar-thumb: #4B8BBE;
+  --scrollbar-thumb-hover: #5A9ACE;
+
+  --welcome-title-color: #2A1E36;
+  --welcome-subtitle-color: #4A3E5A;
+
+  /* Soft parchment background for chat area */
+  --chat-bg: linear-gradient(180deg, #F5E6D3 0%, #EDE0CC 100%);
+
+  /* Modal background - parchment style for readability */
+  --modal-bg: #F5E6D3;
+}
+
+.theme-dumblecode {
+  color: var(--text-color);
+}
+
+.theme-dumblecode .message-bubble.assistant {
+  color: var(--message-assistant-color);
+}
+
+
+/* Magical floating effect on messages */
+.theme-dumblecode .message-bubble.assistant {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Magic glow on assistant messages */
+.theme-dumblecode .message-bubble.assistant .message-body {
+  box-shadow: 0 0 15px rgba(245, 197, 66, 0.15);
+}

@@ -1,0 +1,64 @@
+/* District 12 Theme - Compile Games (Hunger Games) */
+.theme-compile-games {
+  color: var(--text-color);
+  --primary-color: #C84A1A;
+  --secondary-color: #1A1010;
+  --accent-color: #D85520;
+  --background: linear-gradient(135deg, #1A1010 0%, #0A0A0A 100%);
+  --text-color: #E8E0D8;
+  --text-primary: #E8E0D8;
+  --text-secondary: #C84A1A;
+  --text-muted: #8A8078;
+  --border-color: #D44D1A;
+  --bg-secondary: #2A1A1A;
+
+  --header-bg: #0A0A0A;
+  --sidebar-bg: #1A1010;
+  --sidebar-color: #C84A1A;
+
+  --message-bg: #2A1A1A;
+  --message-user-bg: #D44D1A;
+  --message-user-color: #FFFFFF;
+  --message-assistant-color: #E8E0D8;
+
+  --avatar-bg: #C84A1A;
+  --input-area-bg: #1A1010;
+  --button-bg: #2A1A1A;
+
+  --scrollbar-track: #0A0A0A;
+  --scrollbar-thumb: #C84A1A;
+  --scrollbar-thumb-hover: #D85520;
+
+  --welcome-title-color: #1A1010;
+  --welcome-subtitle-color: #8B4513;
+
+  /* Warm sepia/smoke-tinged background for chat area */
+  --chat-bg: linear-gradient(180deg, #F5EDE5 0%, #E8DDD0 100%);
+
+  /* Modal background - smoky sepia for readability */
+  --modal-bg: #F5EDE5;
+}
+
+.theme-compile-games .message-bubble.assistant {
+  color: var(--message-assistant-color);
+}
+
+/* Ember glow effect */
+.theme-compile-games .message-bubble.assistant .message-body {
+  box-shadow: 0 0 15px rgba(200, 74, 26, 0.25);
+}
+
+/* Fire spark accent on user messages */
+.theme-compile-games .message-bubble.user .message-body {
+  box-shadow: 0 0 10px rgba(200, 74, 26, 0.4);
+}
+
+/* Coal circuit pattern feel */
+.theme-compile-games .chat-header {
+  border-bottom: 1px solid rgba(200, 74, 26, 0.3);
+}
+
+/* Brighter header title */
+.theme-compile-games .app-header h1 {
+  color: #F5DED5;
+}

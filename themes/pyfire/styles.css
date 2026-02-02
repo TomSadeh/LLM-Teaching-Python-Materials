@@ -1,0 +1,81 @@
+/* Foxfire Theme - PyFire (Keeper of the Lost Cities) */
+.theme-pyfire {
+  --primary-color: #00FFFF;
+  --secondary-color: #5A8C8C;
+  --accent-color: #7FFFD4;
+  --background: linear-gradient(135deg, #0D2E35 0%, #0A252C 100%);
+  --text-color: #E0F8F8;
+  --text-primary: #E0F8F8;
+  --text-secondary: #00FFFF;
+  --text-muted: #7AACAC;
+  --border-color: #4A7C7C;
+  --bg-secondary: #153A42;
+
+  --header-bg: #0D2E35;
+  --sidebar-bg: #0A252C;
+  --sidebar-color: #00FFFF;
+
+  --message-bg: #153A42;
+  --message-user-bg: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
+  --message-user-color: #0A252C;
+  --message-assistant-color: #E0F8F8;
+
+  --avatar-bg: linear-gradient(135deg, #00FFFF 0%, #7FFFD4 100%);
+  --input-area-bg: #0D2E35;
+  --button-bg: #153A42;
+
+  --scrollbar-track: #0A252C;
+  --scrollbar-thumb: #4A7C7C;
+  --scrollbar-thumb-hover: #00FFFF;
+
+  --welcome-title-color: #0A252C;
+  --welcome-subtitle-color: #1A4A52;
+
+  /* Soft ethereal aqua-tinted background for chat area */
+  --chat-bg: linear-gradient(180deg, #E8F5F5 0%, #D8EDED 100%);
+
+  /* Modal background - ethereal aqua for readability */
+  --modal-bg: #E8F5F5;
+}
+
+.theme-pyfire {
+  color: var(--text-color);
+}
+
+.theme-pyfire .message-bubble.assistant {
+  color: var(--message-assistant-color);
+}
+
+/* Bioluminescent glow effect on assistant messages */
+.theme-pyfire .message-bubble.assistant .message-body {
+  background: #153A42;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.15),
+    0 0 40px rgba(0, 255, 255, 0.05);
+}
+
+/* Glowing border on user messages */
+.theme-pyfire .message-bubble.user .message-body {
+  box-shadow: 0 0 15px rgba(0, 206, 209, 0.3);
+}
+
+/* Crystal sparkle on send button */
+.theme-pyfire .send-button {
+  background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.theme-pyfire .send-button:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Ethereal glow on header */
+.theme-pyfire .chat-header {
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+}
+
+/* Input field glow */
+.theme-pyfire .message-input:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
