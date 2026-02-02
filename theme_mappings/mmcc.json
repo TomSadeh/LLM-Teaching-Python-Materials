@@ -1,0 +1,100 @@
+{
+  "theme_id": "mmcc",
+  "theme_name": "Maya's Magic Coding Chat",
+  "description": "Plain theme with no fantasy elements - straightforward coding education",
+  "genre": "educational",
+
+  "layer_1_entities": {
+    "hero": ["the student", "the learner", "Alex", "Sam"],
+    "heroine": ["the student", "the learner", "Maya", "Dana"],
+    "friend": ["your coding buddy", "your teammate", "your partner"],
+    "mentor": ["Maya", "the teacher", "the instructor"],
+    "villain": ["bugs", "errors", "syntax mistakes"],
+
+    "school": ["Code Academy", "the coding class"],
+    "house": ["the classroom", "the computer lab"],
+    "location": ["the computer", "the IDE", "the terminal"],
+    "place": ["the project folder", "the code editor"],
+
+    "spell1": ["print()", "input()", "basic commands"],
+    "spell2": ["if/else", "for loop", "conditions"],
+    "spell3": ["functions", "while loop", "advanced code"],
+    "spell4": ["lists", "dictionaries", "data structures"],
+
+    "creature": ["bug", "error", "exception"],
+    "pet": ["a helpful assistant"],
+    "item": ["variable", "string", "number", "list"],
+    "transport": ["the internet", "cloud computing"],
+
+    "group": ["the class", "the coding team"],
+    "exclamation": ["Great job!", "Excellent!", "Well done!", "Perfect!"],
+    "greeting": ["Welcome to coding class!"],
+    "password": ["python", "code"]
+  },
+
+  "layer_2_universal": {
+    "ROLE_TITLE": "Student",
+    "ROLE_TITLE_PLURAL": "Students",
+    "MENTOR_TITLE": "Teacher",
+    "WORKSPACE": "project",
+
+    "PROJECT_TYPE": "program",
+    "PROJECT_SCALE": "working",
+    "GOAL": "completion",
+
+    "COMPONENT_SINGULAR": "function",
+    "COMPONENT_PLURAL": "functions",
+    "TASK_VERB": "write",
+    "TASK_NOUN": "code",
+
+    "SECTION_ICON": "📚",
+    "SUCCESS_WORD": "Correct",
+    "CELEBRATION": "Great work! Your code runs perfectly!",
+    "PROGRESS_UNIT": "level",
+
+    "OPENING_FLAVOR": "Let's learn something new today.",
+    "TRANSITION_WORD": "Next",
+    "CLOSING_FLAVOR": "You've completed the exercise successfully!"
+  },
+
+  "layer_2_context_blocks": {
+    "introduction": {
+      "CONTEXT_INTRO": "Welcome to {{school}}! Let's start coding.",
+      "CONTEXT_PROJECT_INTRO": "Today you'll learn an important programming concept.",
+      "CONTEXT_PREDICTION_INTRO": "Look at the code and predict what it will output.",
+      "CONTEXT_FILL_BLANKS_INTRO": "Complete the code by filling in the blanks.",
+      "CONTEXT_SPOT_DIFFERENCE_INTRO": "Compare these code versions and find the differences.",
+      "CONTEXT_CODE_ORDERING_INTRO": "Arrange these code lines in the correct order.",
+      "CONTEXT_MATCH_OUTPUT_INTRO": "Match each code snippet to its output.",
+      "CONTEXT_DECODE_ERROR_INTRO": "Read the error message and understand what went wrong.",
+      "CONTEXT_COMPLETE_FUNCTION_INTRO": "Complete the function to make it work.",
+      "CONTEXT_INVESTIGATION_INTRO": "Find and fix the bugs in this code.",
+      "CONTEXT_FIX_STYLE_INTRO": "Improve this code to follow best practices.",
+      "CONTEXT_DISCOVERY_INTRO": "Let's explore a new concept together."
+    },
+
+    "tasks": {
+      "CONTEXT_STUDENT_TASK": "Now it's your turn to write the code.",
+      "CONTEXT_INVESTIGATION_MISSION": "Debug the code and fix all the errors."
+    },
+
+    "completion": {
+      "CONTEXT_FINAL_ASSEMBLY": "Run your code to see the result!",
+      "CONTEXT_VERIFICATION_COMPLETE": "Check if your answer matches the expected output.",
+      "CONTEXT_ROLE_COMPLETE": "Great job! You've completed this exercise.",
+      "CONTEXT_INVESTIGATION_COMPLETE": "All bugs fixed! The code works correctly now.",
+      "CONTEXT_IMPROVEMENT_COMPLETE": "Your improved code follows best practices.",
+      "CONTEXT_TRIUMPH_COMPLETE": "Excellent work! You've mastered this concept!"
+    }
+  },
+
+  "layer_3_framework": {
+    "INSTITUTION_TYPE": "coding classroom",
+    "CATEGORY_SYSTEM": "skill levels",
+    "ABILITY_TYPE": "programming skills",
+    "PRACTITIONER_SINGULAR": "student",
+    "PRACTITIONER_PLURAL": "students",
+    "RANKING_SYSTEM": "learning levels",
+    "CHALLENGE_TYPE": "coding exercises"
+  }
+}

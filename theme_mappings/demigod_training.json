@@ -1,0 +1,244 @@
+{
+  "theme_id": "demigod_training",
+  "theme_name": "Demigod Training Camp",
+  "description": "Learn Python while training as a demigod at a camp for children of the Greek gods",
+  "genre": "mythology",
+
+  "layer_1_entities": {
+    "hero": ["Percy", "Jason", "Leo", "Frank", "Nico"],
+    "heroine": ["Annabeth", "Piper", "Hazel", "Thalia", "Clarisse"],
+    "friend": ["Grover", "Tyson", "Rachel", "Coach Hedge", "Blackjack"],
+    "mentor": ["Chiron", "Mr. D", "Lupa", "Apollo"],
+    "villain": ["Kronos", "Gaea", "Luke", "Medusa", "the Minotaur"],
+
+    "school": ["Camp Half-Blood"],
+    "house": ["Cabin Zeus", "Cabin Poseidon", "Cabin Athena", "Cabin Ares", "Cabin Hephaestus"],
+    "location": ["the Arena", "the Climbing Wall", "the Forge", "the Big House", "the Canoe Lake"],
+    "place": ["Olympus", "the Underworld", "Camp Jupiter", "the Labyrinth"],
+
+    "spell1": ["Shield Block", "Quick Strike", "Dodge Roll", "Battle Cry"],
+    "spell2": ["Water Control", "Lightning Bolt", "Shadow Travel", "Fire Blast"],
+    "spell3": ["Earthquake", "Storm Call", "Death Trance"],
+    "spell4": ["Mist Manipulation", "Charmspeak", "Blessing of Ares"],
+
+    "creature": ["hellhound", "pegasus", "satyr", "cyclops", "harpy"],
+    "pet": ["Blackjack the pegasus", "Mrs. O'Leary the hellhound", "Peleus the dragon"],
+    "item": ["celestial bronze sword", "shield", "magic backpack", "golden drachma", "camp necklace"],
+    "transport": ["pegasus", "magic chariot", "Argo II", "shadow travel"],
+
+    "group": ["the Seven", "the Hunters of Artemis", "the campers"],
+    "exclamation": ["Gods of Olympus!", "Holy Hephaestus!", "What the Hades!", "By the gods!"],
+    "greeting": ["Welcome to Camp Half-Blood, demigod!"],
+    "password": ["Maia", "Stygian Iron", "Olympus Awaits", "Half-Blood Hill"]
+  },
+
+  "layer_2_universal": {
+    "ROLE_TITLE": "Demigod",
+    "ROLE_TITLE_PLURAL": "Demigods",
+    "MENTOR_TITLE": "Chiron",
+    "WORKSPACE": "training grounds",
+
+    "PROJECT_TYPE": "quest system",
+    "PROJECT_SCALE": "heroic",
+    "GOAL": "hero mastery",
+
+    "COMPONENT_SINGULAR": "skill",
+    "COMPONENT_PLURAL": "skills",
+    "TASK_VERB": "execute",
+    "TASK_NOUN": "quest",
+
+    "SECTION_ICON": "⚔️",
+    "SUCCESS_WORD": "Heroic",
+    "CELEBRATION": "The gods are impressed! Your skills grow stronger with each quest completed!",
+    "PROGRESS_UNIT": "summer",
+
+    "OPENING_FLAVOR": "Your training begins now. The gods are watching!",
+    "TRANSITION_WORD": "Next",
+    "CLOSING_FLAVOR": "You've proven yourself worthy! Olympus is safer thanks to your heroic efforts."
+  },
+
+  "layer_2_context_blocks": {
+    "introduction": {
+      "CONTEXT_INTRO": "Welcome to {{school}}! Your demigod training continues with today's challenge.",
+      "CONTEXT_PROJECT_INTRO": "Time for training, demigod! Today you'll build essential skills that every hero needs.",
+      "CONTEXT_PREDICTION_INTRO": "True heroes anticipate outcomes before acting. Study the code and predict what will happen.",
+      "CONTEXT_FILL_BLANKS_INTRO": "Every demigod must know their fundamentals. Complete these training exercises to prove your worth.",
+      "CONTEXT_SPOT_DIFFERENCE_INTRO": "Attention to detail saves lives on quests! Compare these code versions and spot what's different.",
+      "CONTEXT_CODE_ORDERING_INTRO": "A hero's actions must be in the right sequence. Arrange these code lines in the correct order.",
+      "CONTEXT_MATCH_OUTPUT_INTRO": "Connect each code snippet to its output. A demigod must know exactly what their actions will produce.",
+      "CONTEXT_DECODE_ERROR_INTRO": "Alert! System malfunctions detected! Analyze these error messages and understand what went wrong.",
+      "CONTEXT_COMPLETE_FUNCTION_INTRO": "{{mentor}} has started building new camp utilities. Complete the functions to finish the job.",
+      "CONTEXT_INVESTIGATION_INTRO": "Emergency at {{school}}! Several training systems have been sabotaged by monsters!",
+      "CONTEXT_FIX_STYLE_INTRO": "Even working code can be improved. A true hero writes clean, readable code.",
+      "CONTEXT_DISCOVERY_INTRO": "Welcome, new camper! Today you begin your journey to become a true hero of Olympus."
+    },
+
+    "learning": {
+      "CONTEXT_LEARNING_OBJECTIVE": "Master these fundamental skills to advance your demigod training.",
+      "CONTEXT_PREDICTION_PURPOSE": "This skill helps you anticipate problems before they happen - essential for any quest!"
+    },
+
+    "narrative": {
+      "CONTEXT_EXAMPLE_NARRATIVE": "Watch how {{mentor}} demonstrates proper technique:",
+      "CONTEXT_INCREMENTAL_NARRATIVE": "Like all great heroes, you'll build your powers step by step.",
+      "CONTEXT_CODE_SAMPLE_NARRATIVE": "A new camper submitted this code. It works, but can you spot what needs improvement?"
+    },
+
+    "tasks": {
+      "CONTEXT_STUDENT_TASK": "Now it's your turn, demigod. Apply what you've learned!",
+      "CONTEXT_INVESTIGATION_MISSION": "As a member of the Debug Squad, you must identify each bug and restore the systems."
+    },
+
+    "guidance": {
+      "CONTEXT_SUCCESS_CRITERIA": "Your code should produce exactly the expected output.",
+      "CONTEXT_IMPLEMENTATION_GUIDANCE": "Start simple, then build up your solution step by step."
+    },
+
+    "completion": {
+      "CONTEXT_FINAL_ASSEMBLY": "Quest complete! Run your code to see your system in action!",
+      "CONTEXT_VERIFICATION_COMPLETE": "Verification complete! Check how your predictions matched the actual results.",
+      "CONTEXT_ROLE_COMPLETE": "Excellent work, demigod! You've proven your skills in this training exercise.",
+      "CONTEXT_INVESTIGATION_COMPLETE": "All systems restored! The camp is safe thanks to your debugging skills.",
+      "CONTEXT_IMPROVEMENT_COMPLETE": "Great work! Your refactored code is now worthy of the Camp Archives.",
+      "CONTEXT_TRIUMPH_COMPLETE": "Congratulations, demigod! You've completed this challenge and grown stronger!"
+    }
+  },
+
+  "layer_2_indexed_blocks": {
+    "phases": {
+      "PHASE_1_TITLE": "Training Day 1: The Basics",
+      "CONTEXT_PHASE_1": "Every demigod starts here. Master this fundamental skill before moving on.",
+      "PHASE_2_TITLE": "Training Day 2: Building Power",
+      "CONTEXT_PHASE_2": "Good progress! Now let's expand your abilities.",
+      "PHASE_3_TITLE": "Training Day 3: Advanced Techniques",
+      "CONTEXT_PHASE_3": "You're getting stronger! Time for more challenging moves.",
+      "PHASE_4_TITLE": "Training Day 4: Hero Mastery",
+      "CONTEXT_PHASE_4": "Final challenge! Combine everything you've learned."
+    },
+
+    "challenges": {
+      "CHALLENGE_1_TITLE": "Challenge 1: New Camper Test",
+      "CONTEXT_CHALLENGE_1_NARRATIVE": "{{mentor}} presents your first prediction challenge.",
+      "CONTEXT_PREDICTION_GUIDANCE_1": "Read the code carefully. What will appear on screen?",
+      "CHALLENGE_2_TITLE": "Challenge 2: Oracle Reading",
+      "CONTEXT_CHALLENGE_2_NARRATIVE": "This code demonstrates an important technique. Predict the output.",
+      "CONTEXT_PREDICTION_GUIDANCE_2": "Pay attention to how values are combined.",
+      "CHALLENGE_3_TITLE": "Challenge 3: Prophecy Vision",
+      "CONTEXT_CHALLENGE_3_NARRATIVE": "Heroes must see beyond the obvious. What will this code produce?",
+      "CONTEXT_PREDICTION_GUIDANCE_3": "Watch for the difference between variable names and string values.",
+      "CHALLENGE_4_TITLE": "Challenge 4: Athena's Math",
+      "CONTEXT_CHALLENGE_4_NARRATIVE": "Calculate the result in your head before running the code.",
+      "CONTEXT_PREDICTION_GUIDANCE_4": "Remember how Python handles this operation.",
+      "CHALLENGE_5_TITLE": "Challenge 5: Order of Operations",
+      "CONTEXT_CHALLENGE_5_NARRATIVE": "The final test! Predict this calculation correctly.",
+      "CONTEXT_PREDICTION_GUIDANCE_5": "Think about which operations happen first."
+    },
+
+    "exercises": {
+      "EXERCISE_1_TITLE": "Exercise 1: Claiming Day",
+      "CONTEXT_EXERCISE_1_NARRATIVE": "Start with the basics. Every demigod needs this fundamental skill.",
+      "EXERCISE_2_TITLE": "Exercise 2: Skill Building",
+      "CONTEXT_EXERCISE_2_NARRATIVE": "Build on what you learned. This gets a bit more challenging.",
+      "EXERCISE_3_TITLE": "Exercise 3: Arena Practice",
+      "CONTEXT_EXERCISE_3_NARRATIVE": "Practice makes perfect. Apply your growing skills here.",
+      "EXERCISE_4_TITLE": "Exercise 4: Quest Preparation",
+      "CONTEXT_EXERCISE_4_NARRATIVE": "Combine multiple techniques in this final challenge."
+    },
+
+    "comparisons": {
+      "COMPARISON_1_TITLE": "Comparison 1: Spot the Monster",
+      "CONTEXT_COMPARISON_1_NARRATIVE": "One version works, one doesn't. Can you spot why?",
+      "COMPARISON_2_TITLE": "Comparison 2: Different Outcomes",
+      "CONTEXT_COMPARISON_2_NARRATIVE": "Both run without errors, but they produce different results. Why?",
+      "COMPARISON_3_TITLE": "Comparison 3: Hidden Trap",
+      "CONTEXT_COMPARISON_3_NARRATIVE": "A subtle difference causes a big problem. Find it!"
+    },
+
+    "orderings": {
+      "ORDERING_1_TITLE": "Sequence 1: Prepare First",
+      "CONTEXT_ORDERING_1_NARRATIVE": "Arrange these lines so the program runs correctly.",
+      "ORDERING_2_TITLE": "Sequence 2: Calculate Then Strike",
+      "CONTEXT_ORDERING_2_NARRATIVE": "Put the operations in the right order.",
+      "ORDERING_3_TITLE": "Sequence 3: Quest Order",
+      "CONTEXT_ORDERING_3_NARRATIVE": "Make the output tell a coherent story.",
+      "ORDERING_4_TITLE": "Sequence 4: Chain Reaction",
+      "CONTEXT_ORDERING_4_NARRATIVE": "Each step depends on the previous one. Get the order right!"
+    },
+
+    "match_sets": {
+      "MATCH_SET_1_TITLE": "Match Set 1: Camp Outputs",
+      "CONTEXT_MATCH_SET_1_NARRATIVE": "Connect each code snippet to its output.",
+      "MATCH_SET_2_TITLE": "Match Set 2: Mixed Types",
+      "CONTEXT_MATCH_SET_2_NARRATIVE": "These snippets mix strings and numbers. Match carefully!"
+    },
+
+    "errors": {
+      "ERROR_1_TITLE": "Error Case 1: Type Trouble",
+      "CONTEXT_ERROR_1_NARRATIVE": "This code crashed! Analyze the error message to understand why.",
+      "ERROR_2_TITLE": "Error Case 2: Syntax Problem",
+      "CONTEXT_ERROR_2_NARRATIVE": "Python couldn't even run this code. What's wrong?",
+      "ERROR_3_TITLE": "Error Case 3: Operation Error",
+      "CONTEXT_ERROR_3_NARRATIVE": "An invalid operation caused this crash. Identify and fix it."
+    },
+
+    "functions": {
+      "FUNCTION_1_TITLE": "Function 1: Camp Greeting",
+      "CONTEXT_FUNCTION_1_NARRATIVE": "Complete this function to format a welcome message for new campers.",
+      "FUNCTION_2_TITLE": "Function 2: Hero Stats",
+      "CONTEXT_FUNCTION_2_NARRATIVE": "Build a function that displays a demigod's combat statistics.",
+      "FUNCTION_3_TITLE": "Function 3: Drachma Calculator",
+      "CONTEXT_FUNCTION_3_NARRATIVE": "Create a function that calculates golden drachma and formats the result."
+    },
+
+    "cases": {
+      "CASE_1_TITLE": "Monster Report #1: The Type Mismatch",
+      "CONTEXT_CASE_1_NARRATIVE": "A training simulation is producing wrong results!",
+      "CONTEXT_INVESTIGATION_PROMPT_1": "Look at the variable types. Is something stored incorrectly?",
+      "CASE_2_TITLE": "Monster Report #2: The Quote Confusion",
+      "CONTEXT_CASE_2_NARRATIVE": "The camp display shows the wrong information!",
+      "CONTEXT_INVESTIGATION_PROMPT_2": "Check what's inside the quotes. Is a variable being printed correctly?",
+      "CASE_3_TITLE": "Monster Report #3: The Wrong Variable",
+      "CONTEXT_CASE_3_NARRATIVE": "Calculations look correct, but the output is wrong!",
+      "CONTEXT_INVESTIGATION_PROMPT_3": "Trace which variable is actually being printed.",
+      "CASE_4_TITLE": "Monster Report #4: The Concatenation Curse",
+      "CONTEXT_CASE_4_NARRATIVE": "The message builder is crashing with a type error!",
+      "CONTEXT_INVESTIGATION_PROMPT_4": "Can you combine strings and numbers directly with +?"
+    },
+
+    "styles": {
+      "STYLE_1_TITLE": "Style Issue 1: Ancient Greek Scribbles",
+      "CONTEXT_STYLE_1_NARRATIVE": "This code works but uses terrible variable names.",
+      "CONTEXT_STYLE_FIX_1": "Rename the variables to be clear and descriptive.",
+      "STYLE_2_TITLE": "Style Issue 2: Cramped Scroll",
+      "CONTEXT_STYLE_2_NARRATIVE": "This code is cramped and hard to read.",
+      "CONTEXT_STYLE_FIX_2": "Add proper spacing around operators.",
+      "STYLE_3_TITLE": "Style Issue 3: Messy Armory",
+      "CONTEXT_STYLE_3_NARRATIVE": "This code needs a complete style overhaul.",
+      "CONTEXT_STYLE_FIX_3": "Apply all style improvements: names, spacing, and modern string formatting."
+    }
+  },
+
+  "hybrid_arc_blocks": {
+    "discovery": {
+      "CONTEXT_DISCOVERY_NARRATIVE": "Study how experienced demigods use these techniques. Predict the outcomes before running the code."
+    },
+    "guidance": {
+      "CONTEXT_GUIDANCE_INTRO": "Now practice with support. We'll guide you through each step.",
+      "CONTEXT_GUIDANCE_NARRATIVE": "Complete these guided exercises. The structure is provided - you fill in the details."
+    },
+    "growth": {
+      "CONTEXT_GROWTH_INTRO": "Time to go solo! Create your own solution using what you've learned.",
+      "CONTEXT_GROWTH_NARRATIVE": "No more hand-holding. Show us what you can do, demigod!"
+    }
+  },
+
+  "layer_3_framework": {
+    "INSTITUTION_TYPE": "demigod training camp",
+    "CATEGORY_SYSTEM": "cabins",
+    "ABILITY_TYPE": "divine powers",
+    "PRACTITIONER_SINGULAR": "demigod",
+    "PRACTITIONER_PLURAL": "demigods",
+    "RANKING_SYSTEM": "quest experience",
+    "CHALLENGE_TYPE": "monsters and titans"
+  }
+}

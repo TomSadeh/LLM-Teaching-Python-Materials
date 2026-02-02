@@ -1,0 +1,244 @@
+{
+  "theme_id": "coding_academy",
+  "theme_name": "Maya Chat Coding Course",
+  "description": "Learn Python with a clean, professional coding curriculum",
+  "genre": "professional",
+
+  "layer_1_entities": {
+    "hero": ["Alex", "Jordan", "Sam", "Taylor", "Riley"],
+    "heroine": ["Maya", "Emma", "Zoe", "Ava", "Lily"],
+    "friend": ["your coding buddy", "your partner", "your teammate"],
+    "mentor": ["your instructor", "the teacher", "Coach"],
+    "villain": ["bugs", "errors", "tricky edge cases"],
+
+    "school": ["Coding Academy"],
+    "house": ["Team Alpha", "Team Beta", "Team Gamma", "Team Delta"],
+    "location": ["the computer lab", "the study room", "the project space", "the debug station"],
+    "place": ["the classroom", "the library", "the coding lounge", "online"],
+
+    "spell1": ["print statement", "variable assignment", "input function", "comment"],
+    "spell2": ["if statement", "for loop", "while loop", "function call"],
+    "spell3": ["function definition", "list operation", "dictionary lookup"],
+    "spell4": ["string formatting", "error handling", "file operation"],
+
+    "creature": ["program", "script", "module", "function", "variable"],
+    "pet": ["your first program", "your helper script", "your test file"],
+    "item": ["laptop", "code editor", "terminal", "debugger", "notebook"],
+    "transport": ["keyboard", "mouse", "touchpad"],
+
+    "group": ["the class", "the study group", "the project team"],
+    "exclamation": ["Nice work!", "You got it!", "Great job!", "Well done!"],
+    "greeting": ["Welcome to Coding Academy!"],
+    "password": ["Python123", "HelloWorld", "CodeOn", "KeepLearning"]
+  },
+
+  "layer_2_universal": {
+    "ROLE_TITLE": "Coder",
+    "ROLE_TITLE_PLURAL": "Coders",
+    "MENTOR_TITLE": "Instructor",
+    "WORKSPACE": "development environment",
+
+    "PROJECT_TYPE": "program",
+    "PROJECT_SCALE": "complete",
+    "GOAL": "coding proficiency",
+
+    "COMPONENT_SINGULAR": "function",
+    "COMPONENT_PLURAL": "functions",
+    "TASK_VERB": "write",
+    "TASK_NOUN": "exercise",
+
+    "SECTION_ICON": "💻",
+    "SUCCESS_WORD": "Correct",
+    "CELEBRATION": "Great work! Your coding skills are improving with each exercise!",
+    "PROGRESS_UNIT": "lesson",
+
+    "OPENING_FLAVOR": "Let's write some code!",
+    "TRANSITION_WORD": "Next",
+    "CLOSING_FLAVOR": "You've completed this lesson! Keep practicing to strengthen your skills."
+  },
+
+  "layer_2_context_blocks": {
+    "introduction": {
+      "CONTEXT_INTRO": "Welcome to {{school}}! Let's continue learning Python.",
+      "CONTEXT_PROJECT_INTRO": "Time to code! Today you'll practice essential programming skills.",
+      "CONTEXT_PREDICTION_INTRO": "Good programmers can read code and predict its output. Study the code below and predict what will happen.",
+      "CONTEXT_FILL_BLANKS_INTRO": "Complete these exercises by filling in the missing code.",
+      "CONTEXT_SPOT_DIFFERENCE_INTRO": "Compare these two code versions and identify what's different.",
+      "CONTEXT_CODE_ORDERING_INTRO": "Code must run in the correct order. Arrange these lines properly.",
+      "CONTEXT_MATCH_OUTPUT_INTRO": "Match each code snippet to the output it produces.",
+      "CONTEXT_DECODE_ERROR_INTRO": "Errors happen! Learn to read error messages and understand what went wrong.",
+      "CONTEXT_COMPLETE_FUNCTION_INTRO": "Complete these functions according to their specifications.",
+      "CONTEXT_INVESTIGATION_INTRO": "Debug time! Find and fix the bugs in the code below.",
+      "CONTEXT_FIX_STYLE_INTRO": "Good code is clean and readable. Improve the style of this working code.",
+      "CONTEXT_DISCOVERY_INTRO": "Welcome! Let's start learning Python programming."
+    },
+
+    "learning": {
+      "CONTEXT_LEARNING_OBJECTIVE": "Master these fundamental programming concepts.",
+      "CONTEXT_PREDICTION_PURPOSE": "This skill helps you understand code without running it - essential for debugging!"
+    },
+
+    "narrative": {
+      "CONTEXT_EXAMPLE_NARRATIVE": "Here's an example to study:",
+      "CONTEXT_INCREMENTAL_NARRATIVE": "We'll build this program step by step.",
+      "CONTEXT_CODE_SAMPLE_NARRATIVE": "This code works, but can you spot what could be improved?"
+    },
+
+    "tasks": {
+      "CONTEXT_STUDENT_TASK": "Now it's your turn. Write the code!",
+      "CONTEXT_INVESTIGATION_MISSION": "Find each bug and fix it."
+    },
+
+    "guidance": {
+      "CONTEXT_SUCCESS_CRITERIA": "Your code should produce exactly the expected output.",
+      "CONTEXT_IMPLEMENTATION_GUIDANCE": "Start simple, then build up your solution step by step."
+    },
+
+    "completion": {
+      "CONTEXT_FINAL_ASSEMBLY": "Done! Run your code to see it work.",
+      "CONTEXT_VERIFICATION_COMPLETE": "Check your predictions against the actual output.",
+      "CONTEXT_ROLE_COMPLETE": "Great work! You've completed this exercise.",
+      "CONTEXT_INVESTIGATION_COMPLETE": "All bugs fixed! Nice debugging work.",
+      "CONTEXT_IMPROVEMENT_COMPLETE": "Your refactored code is now clean and readable.",
+      "CONTEXT_TRIUMPH_COMPLETE": "Excellent! You've completed this lesson successfully!"
+    }
+  },
+
+  "layer_2_indexed_blocks": {
+    "phases": {
+      "PHASE_1_TITLE": "Step 1",
+      "CONTEXT_PHASE_1": "Start with the basics.",
+      "PHASE_2_TITLE": "Step 2",
+      "CONTEXT_PHASE_2": "Good progress! Let's continue.",
+      "PHASE_3_TITLE": "Step 3",
+      "CONTEXT_PHASE_3": "You're doing well! Try this next challenge.",
+      "PHASE_4_TITLE": "Step 4",
+      "CONTEXT_PHASE_4": "Final step! Combine everything you've learned."
+    },
+
+    "challenges": {
+      "CHALLENGE_1_TITLE": "Challenge 1",
+      "CONTEXT_CHALLENGE_1_NARRATIVE": "Predict the output of this code.",
+      "CONTEXT_PREDICTION_GUIDANCE_1": "Read the code carefully. What will be printed?",
+      "CHALLENGE_2_TITLE": "Challenge 2",
+      "CONTEXT_CHALLENGE_2_NARRATIVE": "This one is a bit trickier. Predict the output.",
+      "CONTEXT_PREDICTION_GUIDANCE_2": "Pay attention to how values are combined.",
+      "CHALLENGE_3_TITLE": "Challenge 3",
+      "CONTEXT_CHALLENGE_3_NARRATIVE": "What will this code produce?",
+      "CONTEXT_PREDICTION_GUIDANCE_3": "Watch for the difference between variable names and strings.",
+      "CHALLENGE_4_TITLE": "Challenge 4",
+      "CONTEXT_CHALLENGE_4_NARRATIVE": "Calculate the result before running the code.",
+      "CONTEXT_PREDICTION_GUIDANCE_4": "Remember how Python handles this operation.",
+      "CHALLENGE_5_TITLE": "Challenge 5",
+      "CONTEXT_CHALLENGE_5_NARRATIVE": "Final challenge! Predict this calculation.",
+      "CONTEXT_PREDICTION_GUIDANCE_5": "Think about which operations happen first."
+    },
+
+    "exercises": {
+      "EXERCISE_1_TITLE": "Exercise 1",
+      "CONTEXT_EXERCISE_1_NARRATIVE": "Start with the basics.",
+      "EXERCISE_2_TITLE": "Exercise 2",
+      "CONTEXT_EXERCISE_2_NARRATIVE": "Build on what you learned.",
+      "EXERCISE_3_TITLE": "Exercise 3",
+      "CONTEXT_EXERCISE_3_NARRATIVE": "Practice makes perfect.",
+      "EXERCISE_4_TITLE": "Exercise 4",
+      "CONTEXT_EXERCISE_4_NARRATIVE": "Combine multiple techniques."
+    },
+
+    "comparisons": {
+      "COMPARISON_1_TITLE": "Comparison 1",
+      "CONTEXT_COMPARISON_1_NARRATIVE": "One version works, one doesn't. Why?",
+      "COMPARISON_2_TITLE": "Comparison 2",
+      "CONTEXT_COMPARISON_2_NARRATIVE": "Both run, but produce different results. Why?",
+      "COMPARISON_3_TITLE": "Comparison 3",
+      "CONTEXT_COMPARISON_3_NARRATIVE": "A subtle difference causes a problem. Find it!"
+    },
+
+    "orderings": {
+      "ORDERING_1_TITLE": "Ordering 1",
+      "CONTEXT_ORDERING_1_NARRATIVE": "Arrange these lines in the correct order.",
+      "ORDERING_2_TITLE": "Ordering 2",
+      "CONTEXT_ORDERING_2_NARRATIVE": "Put the operations in the right sequence.",
+      "ORDERING_3_TITLE": "Ordering 3",
+      "CONTEXT_ORDERING_3_NARRATIVE": "Order matters! Get the sequence right.",
+      "ORDERING_4_TITLE": "Ordering 4",
+      "CONTEXT_ORDERING_4_NARRATIVE": "Each step depends on the previous one."
+    },
+
+    "match_sets": {
+      "MATCH_SET_1_TITLE": "Match Set 1",
+      "CONTEXT_MATCH_SET_1_NARRATIVE": "Connect each code snippet to its output.",
+      "MATCH_SET_2_TITLE": "Match Set 2",
+      "CONTEXT_MATCH_SET_2_NARRATIVE": "These mix strings and numbers. Match carefully!"
+    },
+
+    "errors": {
+      "ERROR_1_TITLE": "Error 1",
+      "CONTEXT_ERROR_1_NARRATIVE": "This code crashed. Read the error message to understand why.",
+      "ERROR_2_TITLE": "Error 2",
+      "CONTEXT_ERROR_2_NARRATIVE": "Python couldn't run this code. What's wrong?",
+      "ERROR_3_TITLE": "Error 3",
+      "CONTEXT_ERROR_3_NARRATIVE": "An invalid operation caused this error. Fix it."
+    },
+
+    "functions": {
+      "FUNCTION_1_TITLE": "Function 1",
+      "CONTEXT_FUNCTION_1_NARRATIVE": "Complete this function to format a greeting.",
+      "FUNCTION_2_TITLE": "Function 2",
+      "CONTEXT_FUNCTION_2_NARRATIVE": "Build a function that displays statistics.",
+      "FUNCTION_3_TITLE": "Function 3",
+      "CONTEXT_FUNCTION_3_NARRATIVE": "Create a function that performs a calculation."
+    },
+
+    "cases": {
+      "CASE_1_TITLE": "Bug 1: Type Mismatch",
+      "CONTEXT_CASE_1_NARRATIVE": "This code produces wrong results.",
+      "CONTEXT_INVESTIGATION_PROMPT_1": "Check the variable types. Is something stored incorrectly?",
+      "CASE_2_TITLE": "Bug 2: Quote Confusion",
+      "CONTEXT_CASE_2_NARRATIVE": "The output shows the wrong information.",
+      "CONTEXT_INVESTIGATION_PROMPT_2": "Is a variable being printed correctly, or just its name?",
+      "CASE_3_TITLE": "Bug 3: Wrong Variable",
+      "CONTEXT_CASE_3_NARRATIVE": "Calculations look correct, but output is wrong.",
+      "CONTEXT_INVESTIGATION_PROMPT_3": "Which variable is actually being printed?",
+      "CASE_4_TITLE": "Bug 4: Concatenation Error",
+      "CONTEXT_CASE_4_NARRATIVE": "The code crashes with a type error.",
+      "CONTEXT_INVESTIGATION_PROMPT_4": "Can you combine strings and numbers directly with +?"
+    },
+
+    "styles": {
+      "STYLE_1_TITLE": "Style Issue 1: Bad Names",
+      "CONTEXT_STYLE_1_NARRATIVE": "This code uses unclear variable names.",
+      "CONTEXT_STYLE_FIX_1": "Rename the variables to be descriptive.",
+      "STYLE_2_TITLE": "Style Issue 2: Missing Spaces",
+      "CONTEXT_STYLE_2_NARRATIVE": "This code is cramped and hard to read.",
+      "CONTEXT_STYLE_FIX_2": "Add proper spacing around operators.",
+      "STYLE_3_TITLE": "Style Issue 3: Poor Formatting",
+      "CONTEXT_STYLE_3_NARRATIVE": "This code needs a complete cleanup.",
+      "CONTEXT_STYLE_FIX_3": "Fix names, spacing, and use modern string formatting."
+    }
+  },
+
+  "hybrid_arc_blocks": {
+    "discovery": {
+      "CONTEXT_DISCOVERY_NARRATIVE": "Study the example code. Predict what it will do before running it."
+    },
+    "guidance": {
+      "CONTEXT_GUIDANCE_INTRO": "Now practice with guidance. We'll help you through each step.",
+      "CONTEXT_GUIDANCE_NARRATIVE": "Complete these guided exercises. The structure is provided - you fill in the code."
+    },
+    "growth": {
+      "CONTEXT_GROWTH_INTRO": "Now try it on your own! Apply what you've learned.",
+      "CONTEXT_GROWTH_NARRATIVE": "No more hints. Show what you can do!"
+    }
+  },
+
+  "layer_3_framework": {
+    "INSTITUTION_TYPE": "coding academy",
+    "CATEGORY_SYSTEM": "teams",
+    "ABILITY_TYPE": "programming",
+    "PRACTITIONER_SINGULAR": "coder",
+    "PRACTITIONER_PLURAL": "coders",
+    "RANKING_SYSTEM": "lesson progress",
+    "CHALLENGE_TYPE": "bugs and errors"
+  }
+}
