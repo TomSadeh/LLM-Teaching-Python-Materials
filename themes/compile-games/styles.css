@@ -10,7 +10,13 @@
   --text-secondary: #C84A1A;
   --text-muted: #8A8078;
   --border-color: #D44D1A;
+  --bg-primary: #1A1010;
   --bg-secondary: #2A1A1A;
+  --bg-tertiary: #2A1A1A;
+  --bg-hover: #3A2A2A;
+
+  /* Code editor text - light color for dark bg-secondary background */
+  --text-code: #E8E0D8;
 
   --header-bg: #0A0A0A;
   --sidebar-bg: #1A1010;
@@ -61,4 +67,243 @@
 /* Brighter header title */
 .theme-compile-games .app-header h1 {
   color: #F5DED5;
+}
+
+/* Settings dropdown - light text on dark bg-secondary background */
+.theme-compile-games .settings-menu .theme-name,
+.theme-compile-games .settings-menu .font-size-btn,
+.theme-compile-games .settings-menu .font-size-value,
+.theme-compile-games .settings-menu .voice-select {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .settings-menu .settings-section h4 {
+  color: #B0A090;
+}
+
+.theme-compile-games .settings-menu .toggle-option {
+  color: #D8D0C8;
+}
+
+.theme-compile-games .settings-menu .toggle-option.active {
+  color: #E8E0D8;
+}
+
+/* Lesson panel - light text on dark bg-secondary background */
+.theme-compile-games .lesson-panel .lesson-label {
+  color: #B0A090;
+}
+
+.theme-compile-games .lesson-panel .empty-text {
+  color: #B0A090;
+}
+
+.theme-compile-games .lesson-panel .lesson-title-btn {
+  color: #E8E0D8;
+}
+
+/* Exercise panel - light text on dark sidebar-bg background */
+.theme-compile-games .exercise-panel .empty-text {
+  color: #B0A090;
+}
+
+.theme-compile-games .exercise-panel .exercise-label {
+  color: #B0A090;
+}
+
+.theme-compile-games .exercise-panel .exercise-title {
+  color: #E8E0D8;
+}
+
+/* File editor empty state - light text on dark background */
+.theme-compile-games .file-editor .empty-state {
+  color: #B0A090;
+}
+
+.theme-compile-games .file-editor .empty-hint {
+  color: #8A8078;
+}
+
+/* Settings trigger button in header */
+.theme-compile-games .settings-dropdown-trigger {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .settings-dropdown-trigger .settings-label {
+  color: #E8E0D8;
+}
+
+/* Language selector in header */
+.theme-compile-games .language-selector .language-label {
+  color: #B0A090;
+}
+
+.theme-compile-games .language-selector .language-button {
+  color: #E8E0D8;
+}
+
+/* Model selector (if present) */
+.theme-compile-games .model-selector .model-label {
+  color: #B0A090;
+}
+
+.theme-compile-games .model-selector .model-button {
+  color: #E8E0D8;
+}
+
+/* Muted and loading text in settings menu */
+.theme-compile-games .settings-menu .muted-text,
+.theme-compile-games .settings-menu .loading-text {
+  color: #8A8078;
+}
+
+/* Voice select dropdown options */
+.theme-compile-games .settings-menu .voice-select option {
+  color: #E8E0D8;
+}
+
+/* User selection dialog - light text on dark bg-secondary background */
+.theme-compile-games .user-dialog h2 {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .user-dialog p {
+  color: #B0A090;
+}
+
+.theme-compile-games .user-list-item .user-name {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .user-menu h4 {
+  color: #B0A090;
+}
+
+.theme-compile-games .user-menu-item .user-name {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .user-menu-action {
+  color: #D8D0C8;
+}
+
+.theme-compile-games .user-button .user-name {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .gender-option {
+  color: #E8E0D8;
+}
+
+/* Lesson picker - dark coal aesthetic matching sidebar */
+.theme-compile-games .lesson-picker {
+  background: #1A1010;
+  border-color: #D44D1A;
+}
+
+.theme-compile-games .lesson-picker .picker-header h3 {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .lesson-picker .close-btn {
+  color: #8A8078;
+}
+
+.theme-compile-games .lesson-picker .close-btn:hover {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .lesson-picker .module-header {
+  color: #E8E0D8;
+  background: #2A1A1A;
+  border-color: #D44D1A;
+}
+
+.theme-compile-games .lesson-picker .lesson-item {
+  color: #E8E0D8;
+  background: #2A1A1A;
+}
+
+.theme-compile-games .lesson-picker .lesson-item:hover {
+  background: #3A2A2A;
+}
+
+.theme-compile-games .lesson-picker .lesson-item.current {
+  background: #C84A1A;
+  color: #FFFFFF;
+}
+
+/* Exercise picker - dark coal aesthetic matching sidebar */
+.theme-compile-games .exercise-picker {
+  background: #1A1010;
+  border-color: #D44D1A;
+}
+
+.theme-compile-games .exercise-picker .picker-header h3 {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .exercise-picker .close-btn {
+  color: #8A8078;
+}
+
+.theme-compile-games .exercise-picker .close-btn:hover {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .exercise-picker .module-header {
+  color: #E8E0D8;
+  background: #2A1A1A;
+  border-color: #D44D1A;
+}
+
+.theme-compile-games .exercise-picker .module-arrow,
+.theme-compile-games .exercise-picker .module-count {
+  color: #8A8078;
+}
+
+.theme-compile-games .exercise-picker .exercise-types-list {
+  background: #2A1A1A;
+  border-color: #D85520;
+}
+
+.theme-compile-games .exercise-picker .exercise-type-header {
+  color: #E8E0D8;
+}
+
+.theme-compile-games .exercise-picker .exercise-type-header:hover,
+.theme-compile-games .exercise-picker .exercise-type-header.expanded {
+  background: #3A2A2A;
+}
+
+.theme-compile-games .exercise-picker .type-arrow,
+.theme-compile-games .exercise-picker .type-count {
+  color: #8A8078;
+}
+
+.theme-compile-games .exercise-picker .exercise-list {
+  background: #2A1A1A;
+  border-color: #D85520;
+}
+
+.theme-compile-games .exercise-picker .exercise-item {
+  color: #E8E0D8;
+  background: #2A1A1A;
+}
+
+.theme-compile-games .exercise-picker .exercise-item:hover {
+  background: #3A2A2A;
+}
+
+.theme-compile-games .exercise-picker .exercise-item.current {
+  background: #C84A1A;
+  color: #FFFFFF;
+}
+
+.theme-compile-games .exercise-picker .exercise-item-difficulty {
+  color: #D85520;
+}
+
+.theme-compile-games .exercise-picker .exercise-item.current .exercise-item-difficulty {
+  color: #FFD4C0;
 }

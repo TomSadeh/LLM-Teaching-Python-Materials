@@ -9,7 +9,10 @@
   --text-secondary: #3A8DB5;
   --text-muted: #5A6A7A;
   --border-color: #C8956B;
+  --bg-primary: #F8F4E8;
   --bg-secondary: #1E3A4C;
+  --bg-tertiary: #E8E0D0;
+  --bg-hover: #DED6C6;
 
   /* Code editor text - light color for dark bg-secondary background */
   --text-code: #E8E0D0;
@@ -183,5 +186,118 @@
 }
 
 .theme-chirthon .gender-option {
+  color: #E8E0D0;
+}
+
+/* Lesson picker - dark ocean aesthetic matching sidebar */
+.theme-chirthon .lesson-picker {
+  background: #1E3A4C;
+  border-color: #3A8DB5;
+}
+
+.theme-chirthon .lesson-picker .picker-header h3 {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .lesson-picker .close-btn {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .lesson-picker .close-btn:hover {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .lesson-picker .module-header {
+  color: #E8E0D0;
+  background: #2A4A5C;
+  border-color: #3A8DB5;
+}
+
+.theme-chirthon .lesson-picker .lesson-item {
+  color: #E8E0D0;
+  background: #2A4A5C;
+}
+
+.theme-chirthon .lesson-picker .lesson-item:hover {
+  background: #3A5A6C;
+}
+
+.theme-chirthon .lesson-picker .lesson-item.current {
+  background: #5EADC7;
+  color: #FFFFFF;
+}
+
+/* Exercise picker - dark ocean aesthetic matching sidebar */
+.theme-chirthon .exercise-picker {
+  background: #1E3A4C;
+  border-color: #3A8DB5;
+}
+
+.theme-chirthon .exercise-picker .picker-header h3 {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .exercise-picker .close-btn {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .exercise-picker .close-btn:hover {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .exercise-picker .module-header {
+  color: #E8E0D0;
+  background: #2A4A5C;
+  border-color: #3A8DB5;
+}
+
+.theme-chirthon .exercise-picker .module-arrow,
+.theme-chirthon .exercise-picker .module-count {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .exercise-picker .exercise-types-list {
+  background: #2A4A5C;
+  border-color: #5EADC7;
+}
+
+.theme-chirthon .exercise-picker .exercise-type-header {
+  color: #E8E0D0;
+}
+
+.theme-chirthon .exercise-picker .exercise-type-header:hover,
+.theme-chirthon .exercise-picker .exercise-type-header.expanded {
+  background: #3A5A6C;
+}
+
+.theme-chirthon .exercise-picker .type-arrow,
+.theme-chirthon .exercise-picker .type-count {
+  color: #9AB0C0;
+}
+
+.theme-chirthon .exercise-picker .exercise-list {
+  background: #2A4A5C;
+  border-color: #5EADC7;
+}
+
+.theme-chirthon .exercise-picker .exercise-item {
+  color: #E8E0D0;
+  background: #2A4A5C;
+}
+
+.theme-chirthon .exercise-picker .exercise-item:hover {
+  background: #3A5A6C;
+}
+
+.theme-chirthon .exercise-picker .exercise-item.current {
+  background: #5EADC7;
+  color: #FFFFFF;
+}
+
+.theme-chirthon .exercise-picker .exercise-item-difficulty {
+  color: #C8956B;
+}
+
+.theme-chirthon .exercise-picker .exercise-item.current .exercise-item-difficulty {
   color: #E8E0D0;
 }

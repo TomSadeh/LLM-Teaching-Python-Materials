@@ -1,9 +1,9 @@
 /* Plain Theme - MMCC (Clean educational) */
 .theme-mmcc {
-  /* Core colors */
+  /* Core colors - calm teal palette */
   --primary-color: #3A6E6E;
   --secondary-color: #7BA3A3;
-  --accent-color: #FFD93D;
+  --accent-color: #3A6E6E;
   --background: linear-gradient(135deg, #F8F8F0 0%, #F0EFE5 100%);
 
   /* Text colors - dark on light for readability */
@@ -23,9 +23,9 @@
   --bg-hover: #E8E8D8;
   --bg-code: #F0EFE5;
 
-  /* Accent colors */
-  --accent-hover: #FFE066;
-  --accent-text: #2C5F5F;
+  /* Accent colors - teal based */
+  --accent-hover: #4A8080;
+  --accent-text: #FFFFFF;
 
   /* Status colors */
   --error-color: #D32F2F;
@@ -68,10 +68,10 @@
   color: var(--message-assistant-color);
 }
 
-/* Friendly pencil accent on focus */
+/* Clean focus ring */
 .theme-mmcc .message-input:focus {
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 2px rgba(255, 217, 61, 0.2);
+  box-shadow: 0 0 0 2px rgba(58, 110, 110, 0.2);
 }
 
 /* Soft shadow on assistant messages */

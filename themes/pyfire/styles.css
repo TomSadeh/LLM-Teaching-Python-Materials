@@ -9,7 +9,13 @@
   --text-secondary: #00FFFF;
   --text-muted: #7AACAC;
   --border-color: #4A7C7C;
+  --bg-primary: #0D2E35;
   --bg-secondary: #153A42;
+  --bg-tertiary: #153A42;
+  --bg-hover: #1A4A52;
+
+  /* Code editor text - light color for dark bg-secondary background */
+  --text-code: #E0F8F8;
 
   --header-bg: #0D2E35;
   --sidebar-bg: #0A252C;
@@ -78,4 +84,243 @@
 /* Input field glow */
 .theme-pyfire .message-input:focus {
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Settings dropdown - light text on dark bg-secondary background */
+.theme-pyfire .settings-menu .theme-name,
+.theme-pyfire .settings-menu .font-size-btn,
+.theme-pyfire .settings-menu .font-size-value,
+.theme-pyfire .settings-menu .voice-select {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .settings-menu .settings-section h4 {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .settings-menu .toggle-option {
+  color: #C0E8E8;
+}
+
+.theme-pyfire .settings-menu .toggle-option.active {
+  color: #E0F8F8;
+}
+
+/* Lesson panel - light text on dark bg-secondary background */
+.theme-pyfire .lesson-panel .lesson-label {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .lesson-panel .empty-text {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .lesson-panel .lesson-title-btn {
+  color: #E0F8F8;
+}
+
+/* Exercise panel - light text on dark sidebar-bg background */
+.theme-pyfire .exercise-panel .empty-text {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .exercise-panel .exercise-label {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .exercise-panel .exercise-title {
+  color: #E0F8F8;
+}
+
+/* File editor empty state - light text on dark background */
+.theme-pyfire .file-editor .empty-state {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .file-editor .empty-hint {
+  color: #7AACAC;
+}
+
+/* Settings trigger button in header */
+.theme-pyfire .settings-dropdown-trigger {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .settings-dropdown-trigger .settings-label {
+  color: #E0F8F8;
+}
+
+/* Language selector in header */
+.theme-pyfire .language-selector .language-label {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .language-selector .language-button {
+  color: #E0F8F8;
+}
+
+/* Model selector (if present) */
+.theme-pyfire .model-selector .model-label {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .model-selector .model-button {
+  color: #E0F8F8;
+}
+
+/* Muted and loading text in settings menu */
+.theme-pyfire .settings-menu .muted-text,
+.theme-pyfire .settings-menu .loading-text {
+  color: #7AACAC;
+}
+
+/* Voice select dropdown options */
+.theme-pyfire .settings-menu .voice-select option {
+  color: #E0F8F8;
+}
+
+/* User selection dialog - light text on dark bg-secondary background */
+.theme-pyfire .user-dialog h2 {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .user-dialog p {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .user-list-item .user-name {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .user-menu h4 {
+  color: #A0D8D8;
+}
+
+.theme-pyfire .user-menu-item .user-name {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .user-menu-action {
+  color: #C0E8E8;
+}
+
+.theme-pyfire .user-button .user-name {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .gender-option {
+  color: #E0F8F8;
+}
+
+/* Lesson picker - dark ethereal aesthetic matching sidebar */
+.theme-pyfire .lesson-picker {
+  background: #0A252C;
+  border-color: #4A7C7C;
+}
+
+.theme-pyfire .lesson-picker .picker-header h3 {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .lesson-picker .close-btn {
+  color: #7AACAC;
+}
+
+.theme-pyfire .lesson-picker .close-btn:hover {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .lesson-picker .module-header {
+  color: #E0F8F8;
+  background: #153A42;
+  border-color: #4A7C7C;
+}
+
+.theme-pyfire .lesson-picker .lesson-item {
+  color: #E0F8F8;
+  background: #153A42;
+}
+
+.theme-pyfire .lesson-picker .lesson-item:hover {
+  background: #1A4A52;
+}
+
+.theme-pyfire .lesson-picker .lesson-item.current {
+  background: #7FFFD4;
+  color: #0A252C;
+}
+
+/* Exercise picker - dark ethereal aesthetic matching sidebar */
+.theme-pyfire .exercise-picker {
+  background: #0A252C;
+  border-color: #4A7C7C;
+}
+
+.theme-pyfire .exercise-picker .picker-header h3 {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .exercise-picker .close-btn {
+  color: #7AACAC;
+}
+
+.theme-pyfire .exercise-picker .close-btn:hover {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .exercise-picker .module-header {
+  color: #E0F8F8;
+  background: #153A42;
+  border-color: #4A7C7C;
+}
+
+.theme-pyfire .exercise-picker .module-arrow,
+.theme-pyfire .exercise-picker .module-count {
+  color: #7AACAC;
+}
+
+.theme-pyfire .exercise-picker .exercise-types-list {
+  background: #153A42;
+  border-color: #4A7C7C;
+}
+
+.theme-pyfire .exercise-picker .exercise-type-header {
+  color: #E0F8F8;
+}
+
+.theme-pyfire .exercise-picker .exercise-type-header:hover,
+.theme-pyfire .exercise-picker .exercise-type-header.expanded {
+  background: #1A4A52;
+}
+
+.theme-pyfire .exercise-picker .type-arrow,
+.theme-pyfire .exercise-picker .type-count {
+  color: #7AACAC;
+}
+
+.theme-pyfire .exercise-picker .exercise-list {
+  background: #153A42;
+  border-color: #4A7C7C;
+}
+
+.theme-pyfire .exercise-picker .exercise-item {
+  color: #E0F8F8;
+  background: #153A42;
+}
+
+.theme-pyfire .exercise-picker .exercise-item:hover {
+  background: #1A4A52;
+}
+
+.theme-pyfire .exercise-picker .exercise-item.current {
+  background: #7FFFD4;
+  color: #0A252C;
+}
+
+.theme-pyfire .exercise-picker .exercise-item-difficulty {
+  color: #00FFFF;
+}
+
+.theme-pyfire .exercise-picker .exercise-item.current .exercise-item-difficulty {
+  color: #0A252C;
 }

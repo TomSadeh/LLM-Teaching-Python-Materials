@@ -73,7 +73,7 @@
       "description_en": "Mid-curriculum project combining everything learned so far",
       "description_he": "פרויקט אמצע המשלב את כל מה שנלמד עד כה"
     },
-    "module_7_dictionaries": {
+    "module_7_dicts": {
       "order_index": 7,
       "difficulty": 2,
       "topic_id": "collections.dict",
@@ -151,6 +151,16 @@
       "name_en": "Fix the Style",
       "name_he": "תיקון סגנון",
       "category": "improvement"
+    },
+    "simplify_code": {
+      "name_en": "Simplify Code",
+      "name_he": "פשט את הקוד",
+      "category": "improvement"
+    },
+    "which_is_better": {
+      "name_en": "Which is Better?",
+      "name_he": "מה עדיף?",
+      "category": "analysis"
     },
     "write_code": {
       "name_en": "Write Code",

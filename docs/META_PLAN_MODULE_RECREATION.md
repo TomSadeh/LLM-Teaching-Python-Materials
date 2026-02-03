@@ -27,7 +27,7 @@ Systematic approach for recreating all exercise modules using the universal temp
 | 5 | module_4_functions | 22 | 0 | No | **Planned** |
 | 6 | module_5_games | 18 | 0 | No | **Planned** |
 | 7 | module_6_mid_project | 4 | 4 | No | **Implemented** |
-| 8 | module_7_dicts | - | 0 | No | Pending |
+| 8 | module_7_dicts | 20 | 20 | No | **Implemented** |
 | 9 | module_8_modules | - | 0 | No | Pending |
 | 10 | module_9_oop | - | 0 | No | Pending |
 | 11 | module_10_mega_project | - | 0 | No | Pending |
@@ -43,6 +43,7 @@ Systematic approach for recreating all exercise modules using the universal temp
 | module_4_functions | [PLAN_MODULE_4_FUNCTIONS.md](plans/PLAN_MODULE_4_FUNCTIONS.md) |
 | module_5_games | [PLAN_MODULE_5_GAMES.md](plans/PLAN_MODULE_5_GAMES.md) |
 | module_6_mid_project | [PLAN_MODULE_6_MID_PROJECT.md](plans/PLAN_MODULE_6_MID_PROJECT.md) |
+| module_7_dicts | [PLAN_MODULE_7_DICTS.md](plans/PLAN_MODULE_7_DICTS.md) |
 
 ---
 

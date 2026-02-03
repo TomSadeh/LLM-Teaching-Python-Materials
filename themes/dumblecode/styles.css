@@ -9,7 +9,13 @@
   --text-secondary: #F5C542;
   --text-muted: #B8A070;
   --border-color: #D4A535;
+  --bg-primary: #2A1E36;
   --bg-secondary: #3A2E46;
+  --bg-tertiary: #3A2E46;
+  --bg-hover: #4A3E5A;
+
+  /* Code editor text - light color for dark bg-secondary background */
+  --text-code: #FFF8DC;
 
   --header-bg: #2A1E36;
   --sidebar-bg: #2A1E36;
@@ -60,4 +66,243 @@
 /* Magic glow on assistant messages */
 .theme-dumblecode .message-bubble.assistant .message-body {
   box-shadow: 0 0 15px rgba(245, 197, 66, 0.15);
+}
+
+/* Settings dropdown - light text on dark bg-secondary background */
+.theme-dumblecode .settings-menu .theme-name,
+.theme-dumblecode .settings-menu .font-size-btn,
+.theme-dumblecode .settings-menu .font-size-value,
+.theme-dumblecode .settings-menu .voice-select {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .settings-menu .settings-section h4 {
+  color: #C8B898;
+}
+
+.theme-dumblecode .settings-menu .toggle-option {
+  color: #E8D8BC;
+}
+
+.theme-dumblecode .settings-menu .toggle-option.active {
+  color: #FFF8DC;
+}
+
+/* Lesson panel - light text on dark bg-secondary background */
+.theme-dumblecode .lesson-panel .lesson-label {
+  color: #C8B898;
+}
+
+.theme-dumblecode .lesson-panel .empty-text {
+  color: #C8B898;
+}
+
+.theme-dumblecode .lesson-panel .lesson-title-btn {
+  color: #FFF8DC;
+}
+
+/* Exercise panel - light text on dark sidebar-bg background */
+.theme-dumblecode .exercise-panel .empty-text {
+  color: #C8B898;
+}
+
+.theme-dumblecode .exercise-panel .exercise-label {
+  color: #C8B898;
+}
+
+.theme-dumblecode .exercise-panel .exercise-title {
+  color: #FFF8DC;
+}
+
+/* File editor empty state - light text on dark background */
+.theme-dumblecode .file-editor .empty-state {
+  color: #C8B898;
+}
+
+.theme-dumblecode .file-editor .empty-hint {
+  color: #B8A070;
+}
+
+/* Settings trigger button in header */
+.theme-dumblecode .settings-dropdown-trigger {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .settings-dropdown-trigger .settings-label {
+  color: #FFF8DC;
+}
+
+/* Language selector in header */
+.theme-dumblecode .language-selector .language-label {
+  color: #C8B898;
+}
+
+.theme-dumblecode .language-selector .language-button {
+  color: #FFF8DC;
+}
+
+/* Model selector (if present) */
+.theme-dumblecode .model-selector .model-label {
+  color: #C8B898;
+}
+
+.theme-dumblecode .model-selector .model-button {
+  color: #FFF8DC;
+}
+
+/* Muted and loading text in settings menu */
+.theme-dumblecode .settings-menu .muted-text,
+.theme-dumblecode .settings-menu .loading-text {
+  color: #B8A070;
+}
+
+/* Voice select dropdown options */
+.theme-dumblecode .settings-menu .voice-select option {
+  color: #FFF8DC;
+}
+
+/* User selection dialog - light text on dark bg-secondary background */
+.theme-dumblecode .user-dialog h2 {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .user-dialog p {
+  color: #C8B898;
+}
+
+.theme-dumblecode .user-list-item .user-name {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .user-menu h4 {
+  color: #C8B898;
+}
+
+.theme-dumblecode .user-menu-item .user-name {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .user-menu-action {
+  color: #E8D8BC;
+}
+
+.theme-dumblecode .user-button .user-name {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .gender-option {
+  color: #FFF8DC;
+}
+
+/* Lesson picker - dark magical aesthetic matching sidebar */
+.theme-dumblecode .lesson-picker {
+  background: #2A1E36;
+  border-color: #D4A535;
+}
+
+.theme-dumblecode .lesson-picker .picker-header h3 {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .lesson-picker .close-btn {
+  color: #B8A070;
+}
+
+.theme-dumblecode .lesson-picker .close-btn:hover {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .lesson-picker .module-header {
+  color: #FFF8DC;
+  background: #3A2E46;
+  border-color: #D4A535;
+}
+
+.theme-dumblecode .lesson-picker .lesson-item {
+  color: #FFF8DC;
+  background: #3A2E46;
+}
+
+.theme-dumblecode .lesson-picker .lesson-item:hover {
+  background: #4A3E5A;
+}
+
+.theme-dumblecode .lesson-picker .lesson-item.current {
+  background: #D4A535;
+  color: #2A1E36;
+}
+
+/* Exercise picker - dark magical aesthetic matching sidebar */
+.theme-dumblecode .exercise-picker {
+  background: #2A1E36;
+  border-color: #D4A535;
+}
+
+.theme-dumblecode .exercise-picker .picker-header h3 {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .exercise-picker .close-btn {
+  color: #B8A070;
+}
+
+.theme-dumblecode .exercise-picker .close-btn:hover {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .exercise-picker .module-header {
+  color: #FFF8DC;
+  background: #3A2E46;
+  border-color: #D4A535;
+}
+
+.theme-dumblecode .exercise-picker .module-arrow,
+.theme-dumblecode .exercise-picker .module-count {
+  color: #B8A070;
+}
+
+.theme-dumblecode .exercise-picker .exercise-types-list {
+  background: #3A2E46;
+  border-color: #D4A535;
+}
+
+.theme-dumblecode .exercise-picker .exercise-type-header {
+  color: #FFF8DC;
+}
+
+.theme-dumblecode .exercise-picker .exercise-type-header:hover,
+.theme-dumblecode .exercise-picker .exercise-type-header.expanded {
+  background: #4A3E5A;
+}
+
+.theme-dumblecode .exercise-picker .type-arrow,
+.theme-dumblecode .exercise-picker .type-count {
+  color: #B8A070;
+}
+
+.theme-dumblecode .exercise-picker .exercise-list {
+  background: #3A2E46;
+  border-color: #D4A535;
+}
+
+.theme-dumblecode .exercise-picker .exercise-item {
+  color: #FFF8DC;
+  background: #3A2E46;
+}
+
+.theme-dumblecode .exercise-picker .exercise-item:hover {
+  background: #4A3E5A;
+}
+
+.theme-dumblecode .exercise-picker .exercise-item.current {
+  background: #D4A535;
+  color: #2A1E36;
+}
+
+.theme-dumblecode .exercise-picker .exercise-item-difficulty {
+  color: #F5C542;
+}
+
+.theme-dumblecode .exercise-picker .exercise-item.current .exercise-item-difficulty {
+  color: #2A1E36;
 }
