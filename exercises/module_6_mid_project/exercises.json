@@ -1,23 +1,23 @@
 {
   "version": "3.0.0",
   "theme_support": true,
-  "generated_at": "2026-02-02T23:30:23.836354",
-  "module": "module_6_final_project",
+  "generated_at": "2026-02-03T09:21:20.246506",
+  "module": "module_6_mid_project",
   "count": 4,
   "exercise_types": [
     "hybrid"
   ],
   "exercises": [
     {
-      "id": "module_6_final_project.hybrid.exercise_1_character_system",
-      "topic_id": "project.final",
+      "id": "module_6_mid_project.hybrid.exercise_1_character_system",
+      "topic_id": "project.mid",
       "exercise_type": "hybrid",
       "category": "hybrid",
       "title": "Character System",
       "title_en": "Character System",
       "title_he": "Character System",
-      "description_en": "Final Project: Character System\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a complete character profile\nsystem. You'll design data structures, create functions, and build an\ninteractive menu interface.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
-      "description_he": "פרויקט מסכם: Character System\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a complete character profile\nsystem. You'll design data structures, create functions, and build an\ninteractive menu interface.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_en": "Mid Project: Character System\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a complete character profile\nsystem. You'll design data structures, create functions, and build an\ninteractive menu interface.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_he": "פרויקט אמצע: Character System\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a complete character profile\nsystem. You'll design data structures, create functions, and build an\ninteractive menu interface.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
       "difficulty": 3,
       "requires_running": true,
       "estimated_time_minutes": 15,
@@ -32,21 +32,21 @@
       "solution_code": null,
       "hints": [],
       "tags": [
-        "module_6_final_project",
+        "module_6_mid_project",
         "hybrid"
       ],
-      "source_file": "module_6_final_project/hybrid/exercise_1_character_system.py"
+      "source_file": "module_6_mid_project/hybrid/exercise_1_character_system.py"
     },
     {
-      "id": "module_6_final_project.hybrid.exercise_2_quiz_game",
-      "topic_id": "project.final",
+      "id": "module_6_mid_project.hybrid.exercise_2_quiz_game",
+      "topic_id": "project.mid",
       "exercise_type": "hybrid",
       "category": "hybrid",
       "title": "Quiz Game",
       "title_en": "Quiz Game",
       "title_he": "Quiz Game",
-      "description_en": "Final Project: Quiz Game\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build an interactive quiz game.\nYou'll create question banks, implement scoring, and add replay functionality.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
-      "description_he": "פרויקט מסכם: Quiz Game\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build an interactive quiz game.\nYou'll create question banks, implement scoring, and add replay functionality.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_en": "Mid Project: Quiz Game\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build an interactive quiz game.\nYou'll create question banks, implement scoring, and add replay functionality.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_he": "פרויקט אמצע: Quiz Game\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build an interactive quiz game.\nYou'll create question banks, implement scoring, and add replay functionality.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
       "difficulty": 3,
       "requires_running": true,
       "estimated_time_minutes": 15,
@@ -61,21 +61,21 @@
       "solution_code": null,
       "hints": [],
       "tags": [
-        "module_6_final_project",
+        "module_6_mid_project",
         "hybrid"
       ],
-      "source_file": "module_6_final_project/hybrid/exercise_2_quiz_game.py"
+      "source_file": "module_6_mid_project/hybrid/exercise_2_quiz_game.py"
     },
     {
-      "id": "module_6_final_project.hybrid.exercise_3_collection_manager",
-      "topic_id": "project.final",
+      "id": "module_6_mid_project.hybrid.exercise_3_collection_manager",
+      "topic_id": "project.mid",
       "exercise_type": "hybrid",
       "category": "hybrid",
       "title": "Collection Manager",
       "title_en": "Collection Manager",
       "title_he": "Collection Manager",
-      "description_en": "Final Project: Collection Manager\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a collection manager.\nYou'll design functions from specifications, implement CRUD operations,\nand create a complete menu-driven application.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
-      "description_he": "פרויקט מסכם: Collection Manager\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a collection manager.\nYou'll design functions from specifications, implement CRUD operations,\nand create a complete menu-driven application.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_en": "Mid Project: Collection Manager\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a collection manager.\nYou'll design functions from specifications, implement CRUD operations,\nand create a complete menu-driven application.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_he": "פרויקט אמצע: Collection Manager\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a collection manager.\nYou'll design functions from specifications, implement CRUD operations,\nand create a complete menu-driven application.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
       "difficulty": 3,
       "requires_running": true,
       "estimated_time_minutes": 15,
@@ -90,21 +90,21 @@
       "solution_code": null,
       "hints": [],
       "tags": [
-        "module_6_final_project",
+        "module_6_mid_project",
         "hybrid"
       ],
-      "source_file": "module_6_final_project/hybrid/exercise_3_collection_manager.py"
+      "source_file": "module_6_mid_project/hybrid/exercise_3_collection_manager.py"
     },
     {
-      "id": "module_6_final_project.hybrid.exercise_4_text_adventure",
-      "topic_id": "project.final",
+      "id": "module_6_mid_project.hybrid.exercise_4_text_adventure",
+      "topic_id": "project.mid",
       "exercise_type": "hybrid",
       "category": "hybrid",
       "title": "Text Adventure",
       "title_en": "Text Adventure",
       "title_he": "Text Adventure",
-      "description_en": "Final Project: Text Adventure\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a complete text adventure game.\nYou'll design game functions, implement mechanics, add inventory tracking,\nand create an adventure with multiple paths.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
-      "description_he": "פרויקט מסכם: Text Adventure\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a complete text adventure game.\nYou'll design game functions, implement mechanics, add inventory tracking,\nand create an adventure with multiple paths.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_en": "Mid Project: Text Adventure\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a complete text adventure game.\nYou'll design game functions, implement mechanics, add inventory tracking,\nand create an adventure with multiple paths.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_he": "פרויקט אמצע: Text Adventure\n\n{{CONTEXT_PROJECT_INTRO}}\n\nThis is a multi-part project where you'll build a complete text adventure game.\nYou'll design game functions, implement mechanics, add inventory tracking,\nand create an adventure with multiple paths.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
       "difficulty": 3,
       "requires_running": true,
       "estimated_time_minutes": 15,
@@ -119,10 +119,10 @@
       "solution_code": null,
       "hints": [],
       "tags": [
-        "module_6_final_project",
+        "module_6_mid_project",
         "hybrid"
       ],
-      "source_file": "module_6_final_project/hybrid/exercise_4_text_adventure.py"
+      "source_file": "module_6_mid_project/hybrid/exercise_4_text_adventure.py"
     }
   ]
 }

@@ -74,7 +74,7 @@ Based on the audit, these files likely have issues:
 **module_3_lists:**
 - Multiple files use "potion", "key", "map", "coin" as list data - **These are ACCEPTABLE** as generic item examples for teaching list operations
 
-**module_6_final_project:**
+**module_6_mid_project:**
 - `hybrid/exercise_1_character_system.py` - "Simulate battle"
 - `hybrid/exercise_3_collection_manager.py` - "potion" in examples
 - `hybrid/exercise_4_text_adventure.py` - "Finding a potion"

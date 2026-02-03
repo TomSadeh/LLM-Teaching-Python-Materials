@@ -12,7 +12,7 @@ This document catalogs all exercises, lessons, and reference materials in the re
 | `module_3_lists` | Lists | 2 | Lists, iteration, list methods |
 | `module_4_functions` | Functions | 2 | Parameters, return values, code reuse |
 | `module_5_games` | Games & While Loops | 2 | Building games with while loops and random |
-| `module_6_final_project` | Integration | 3 | Capstone projects |
+| `module_6_mid_project` | Integration | 3 | Mid-curriculum integration projects |
 | `module_7_dictionaries` | Dictionaries | 2 | Keys, values, nested dicts |
 | `module_8_modules` | Modules | 3 | Standard library, custom modules |
 | `module_9_oop` | OOP | 3 | Classes, objects, inheritance |

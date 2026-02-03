@@ -115,7 +115,7 @@ This document defines which exercise types are appropriate for each module based
 - **Analysis:** which_is_better, spot_difference
 - **Debugging:** decode_error
 
-### module_6_final_project
+### module_6_mid_project
 - **Core:** write_code, mini_project, blank_page
 
 ### module_7_dictionaries
@@ -146,7 +146,7 @@ This document defines which exercise types are appropriate for each module based
 | module_3_lists | 9 |
 | module_4_games | 3 |
 | module_5_functions | 12 |
-| module_6_final_project | 3 |
+| module_6_mid_project | 3 |
 | module_7_dictionaries | 7 |
 | module_8_modules | 2 |
 | module_9_oop | 5 |

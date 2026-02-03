@@ -55,7 +55,7 @@
 | 3: Lists | Collection manipulation | 11, 14, 2 |
 | 4: Games | Interactive systems | 9, 13, 3 |
 | 5: Functions | Modular code design | 1, 6, 2 |
-| 6: Final Project | Integration projects | 9, 2, 8 |
+| 6: Mid Project | Integration projects | 9, 2, 8 |
 | 7: Dictionaries | Key-value data | 3, 9, 14 |
 | 8: Datetime/Errors | Real-world data handling | 4, 6, 7 |
 | 9: OOP | Object systems | 9, 6, 1 |

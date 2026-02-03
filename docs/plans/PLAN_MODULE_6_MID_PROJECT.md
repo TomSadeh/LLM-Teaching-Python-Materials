@@ -1,6 +1,6 @@
-# Plan: Module 6 - Final Project
+# Plan: Module 6 - Mid Project
 
-Recreation plan for module_6_final_project using the universal template system.
+Recreation plan for module_6_mid_project using the universal template system.
 
 ---
 
@@ -10,7 +10,7 @@ Recreation plan for module_6_final_project using the universal template system.
 
 | Field | Value |
 |-------|-------|
-| **Module ID** | module_6_final_project |
+| **Module ID** | module_6_mid_project |
 | **Topic** | Integration checkpoint - combining all concepts from modules 0-5 |
 | **Prerequisites** | module_0_basics through module_5_games |
 | **Target Hybrid Ratio** | 100% (integration checkpoint) |
@@ -176,7 +176,7 @@ H1-H4 = Hybrid projects
 
 ```
 exercises/
-└── module_6_final_project/
+└── module_6_mid_project/
     └── hybrid/
         ├── exercise_1_character_system.py
         ├── exercise_2_quiz_game.py
@@ -277,7 +277,7 @@ Implementation is organized into 2 phases.
 
 ### Pedagogical Considerations
 
-**Why a final project module:**
+**Why a mid project module:**
 - Students need to see how concepts work together
 - Integration is harder than isolated practice
 - Real programs combine many concepts

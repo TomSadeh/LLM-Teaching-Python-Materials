@@ -1,34 +1,62 @@
 /* Plain Theme - MMCC (Clean educational) */
 .theme-mmcc {
+  /* Core colors */
   --primary-color: #3A6E6E;
   --secondary-color: #7BA3A3;
   --accent-color: #FFD93D;
   --background: linear-gradient(135deg, #F8F8F0 0%, #F0EFE5 100%);
+
+  /* Text colors - dark on light for readability */
   --text-color: #2C5F5F;
   --text-primary: #2C5F5F;
   --text-secondary: #3A6E6E;
   --text-muted: #6A9090;
-  --border-color: #8FBFBF;
-  --bg-secondary: #FFFFFF;
+  --text-code: #2C5F5F;
 
+  /* Borders */
+  --border-color: #8FBFBF;
+
+  /* Background layers - light theme */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F5F5DC;
+  --bg-hover: #E8E8D8;
+  --bg-code: #F0EFE5;
+
+  /* Accent colors */
+  --accent-hover: #FFE066;
+  --accent-text: #2C5F5F;
+
+  /* Status colors */
+  --error-color: #D32F2F;
+  --warning-color: #F57C00;
+  --success-bg: #4CAF50;
+  --success-text: #FFFFFF;
+  --selection-bg: rgba(58, 110, 110, 0.2);
+
+  /* Header and sidebar */
   --header-bg: #FFFFFF;
   --sidebar-bg: #F5F5DC;
   --sidebar-color: #2C5F5F;
 
+  /* Chat messages */
   --message-bg: #FFFFFF;
   --message-user-bg: #3A6E6E;
   --message-user-color: #FFFFFF;
   --message-assistant-color: #2C5F5F;
+  --chat-bg: #F8F8F0;
 
+  /* UI elements */
   --avatar-bg: #7BA3A3;
   --input-area-bg: #FFFFFF;
   --button-bg: #F5F5DC;
 
+  /* Scrollbar */
   --scrollbar-track: #F5F5DC;
   --scrollbar-thumb: #8FBFBF;
   --scrollbar-thumb-hover: #7BA3A3;
 
-  /* Modal background - clean white for readability */
+  /* Modal */
   --modal-bg: #FFFFFF;
 }
 
@@ -49,4 +77,36 @@
 /* Soft shadow on assistant messages */
 .theme-mmcc .message-bubble.assistant .message-body {
   box-shadow: 0 2px 8px rgba(44, 95, 95, 0.1);
+}
+
+/* Lesson/Exercise Picker - Light theme overrides */
+.theme-mmcc .lesson-picker,
+.theme-mmcc .exercise-picker {
+  background: #FFFFFF;
+}
+
+.theme-mmcc .module-header {
+  color: #3A6E6E;
+  background: #F5F5DC;
+  border-bottom-color: #8FBFBF;
+}
+
+.theme-mmcc .lesson-item,
+.theme-mmcc .exercise-item {
+  background: #FFFFFF;
+  color: #2C5F5F;
+  border: 1px solid #E8E8D8;
+}
+
+.theme-mmcc .lesson-item:hover,
+.theme-mmcc .exercise-item:hover {
+  background: #F5F5DC;
+  border-color: #8FBFBF;
+}
+
+.theme-mmcc .lesson-item.current,
+.theme-mmcc .exercise-item.current {
+  background: #3A6E6E;
+  color: #FFFFFF;
+  border-color: #3A6E6E;
 }

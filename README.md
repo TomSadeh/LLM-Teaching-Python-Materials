@@ -20,7 +20,7 @@ This repository serves as a remote content source for the Maya Chat teaching app
 │   ├── module_3_lists/
 │   ├── module_4_games/
 │   ├── module_5_functions/
-│   ├── module_6_final_project/
+│   ├── module_6_mid_project/
 │   ├── module_7_dictionaries/
 │   ├── module_8_modules/
 │   └── module_9_oop/
@@ -40,7 +40,7 @@ This repository serves as a remote content source for the Maya Chat teaching app
 | module_3_lists | Lists and iteration | 2 | 9 |
 | module_4_games | While loops, game logic | 2 | 9 |
 | module_5_functions | Functions | 3 | 9 |
-| module_6_final_project | Final projects | 3 | 3 |
+| module_6_mid_project | Mid projects | 3 | 3 |
 | module_7_dictionaries | Dictionaries | 2 | 9 |
 | module_8_modules | Standard library modules | 3 | 9 |
 | module_9_oop | Object-oriented programming | 3 | 9 |

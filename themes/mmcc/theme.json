@@ -5,8 +5,8 @@
   "icon": "📚",
   "logo": "assets/logo.jpg",
   "app_name": "Maya's Magic Coding Chat",
-  "teacher_name": "Teacher",
-  "teacher_name_he": "המורה",
+  "teacher_name": "MMCC",
+  "teacher_name_he": "MMCC",
   "variables": {
     "hero": ["the student", "the learner", "Alex", "Sam"],
     "heroine": ["the student", "the learner", "Maya", "Dana"],

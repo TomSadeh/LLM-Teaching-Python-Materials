@@ -1,6 +1,15 @@
 {
   "version": "3.0.0",
   "modules": {
+    "free_practice": {
+      "order_index": -1,
+      "difficulty": 1,
+      "topic_id": "general.practice",
+      "name_en": "Free Practice",
+      "name_he": "תרגול חופשי",
+      "description_en": "Free practice guided by the virtual teacher",
+      "description_he": "תרגול חופשי בהנחיית המורה הווירטואלי"
+    },
     "module_0_basics": {
       "order_index": 0,
       "difficulty": 1,
@@ -55,14 +64,14 @@
       "description_en": "Building games with while loops and random",
       "description_he": "בניית משחקים עם לולאות while ומשתנים אקראיים"
     },
-    "module_6_final_project": {
+    "module_6_mid_project": {
       "order_index": 6,
       "difficulty": 3,
-      "topic_id": "project.final",
-      "name_en": "Final Project",
-      "name_he": "פרויקט מסכם",
-      "description_en": "Final project combining everything learned",
-      "description_he": "פרויקט מסכם המשלב את כל מה שנלמד"
+      "topic_id": "project.mid",
+      "name_en": "Mid Project",
+      "name_he": "פרויקט אמצע",
+      "description_en": "Mid-curriculum project combining everything learned so far",
+      "description_he": "פרויקט אמצע המשלב את כל מה שנלמד עד כה"
     },
     "module_7_dictionaries": {
       "order_index": 7,
