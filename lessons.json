@@ -5,9 +5,9 @@
     {
       "source_id": "lesson_free_practice",
       "title": "Free Practice",
-      "title_he": "Free Practice",
+      "title_he": "תרגול חופשי",
       "description": "",
-      "description_he": "",
+      "description_he": "תרגול חופשי בהנחיית המורה הווירטואלי",
       "module": "free_practice",
       "order_index": 0,
       "difficulty": 1,
