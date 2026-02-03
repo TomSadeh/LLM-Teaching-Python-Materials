@@ -86,10 +86,10 @@
       "order_index": 8,
       "difficulty": 3,
       "topic_id": "modules.stdlib",
-      "name_en": "Modules",
-      "name_he": "מודולים",
-      "description_en": "Using built-in modules and creating your own",
-      "description_he": "שימוש במודולים מובנים ויצירת מודולים משלך"
+      "name_en": "Modules and File I/O",
+      "name_he": "מודולים וקבצים",
+      "description_en": "Standard library modules, file I/O with JSON and CSV",
+      "description_he": "מודולים מהספרייה הסטנדרטית, קריאה וכתיבה לקבצי JSON ו-CSV"
     },
     "module_9_oop": {
       "order_index": 9,
@@ -99,6 +99,15 @@
       "name_he": "תכנות מונחה עצמים",
       "description_en": "Classes, objects, inheritance and composition",
       "description_he": "מחלקות, אובייקטים, הורשה והרכבה"
+    },
+    "module_10_mega_project": {
+      "order_index": 10,
+      "difficulty": 4,
+      "topic_id": "project.capstone",
+      "name_en": "Mega Project",
+      "name_he": "פרויקט מסכם",
+      "description_en": "Capstone multi-file projects integrating all concepts",
+      "description_he": "פרויקטים מסכמים רב-קובציים המשלבים את כל הנושאים"
     }
   },
   "exercise_types": {

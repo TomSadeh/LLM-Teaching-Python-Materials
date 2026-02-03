@@ -14,13 +14,13 @@ This document defines which exercise types are appropriate for each module based
 | **match_output** | ✓ | ✓ | | ✓ | | | | | | |
 | **fill_blanks** | ✓ | ✓ | | | | ✓ | | | | |
 | **code_ordering** | ✓ | ✓ | | | | ✓ | | | | |
-| **complete_function** | ✓ | | | ✓ | | ✓ | | ✓ | | ✓ |
+| **complete_function** | ✓ | | | ✓ | | ✓ | | ✓ | ✓ | ✓ |
 | **fix_style** | ✓ | | | | | ✓ | | | | ✓ |
 | **simplify_code** | | | | ✓ | | ✓ | | ✓ | | |
 | **add_error_handling** | | | | | ✓ | ✓ | | | ✓ | |
 | **which_is_better** | | | | ✓ | | ✓ | | ✓ | | ✓ |
 | **spot_difference** | ✓ | | | ✓ | | ✓ | | | | |
-| **decode_error** | ✓ | | | ✓ | | ✓ | | ✓ | | |
+| **decode_error** | ✓ | | | ✓ | | ✓ | | ✓ | ✓ | |
 | **bug_hunt** | ✓ | ✓ | ✓ | ✓ | ✓ | | | | | |
 | **blank_page** | | | | | | ✓ | ✓ | ✓ | | ✓ |
 | **mini_project** | ✓ | | | | | ✓ | ✓ | | | |
@@ -43,7 +43,7 @@ This document defines which exercise types are appropriate for each module based
 |------|---------|-----------|
 | **fill_blanks** | basics, turtle, functions | Syntax reinforcement for key constructs |
 | **code_ordering** | basics, turtle, functions | Understand program flow and structure |
-| **complete_function** | basics, lists, functions, dicts, oop | Requires function concept; body implementation |
+| **complete_function** | basics, lists, functions, dicts, modules, oop | Requires function concept; body implementation |
 
 ### Improvement (make code better)
 
@@ -64,7 +64,7 @@ This document defines which exercise types are appropriate for each module based
 
 | Type | Modules | Rationale |
 |------|---------|-----------|
-| **decode_error** | basics, lists, functions, dicts | Common error types for each concept |
+| **decode_error** | basics, lists, functions, dicts, modules | Common error types for each concept; file errors for modules |
 | **bug_hunt** | basics, turtle, decisions, lists, games | Narrative debugging; visual/interactive feedback |
 
 ### Free Writing (independent creation)
@@ -127,7 +127,9 @@ This document defines which exercise types are appropriate for each module based
 
 ### module_8_modules
 - **Core:** write_code
+- **Scaffolded:** complete_function
 - **Improvement:** add_error_handling
+- **Debugging:** decode_error
 
 ### module_9_oop
 - **Core:** write_code, complete_function, blank_page
@@ -148,7 +150,7 @@ This document defines which exercise types are appropriate for each module based
 | module_5_functions | 12 |
 | module_6_mid_project | 3 |
 | module_7_dictionaries | 7 |
-| module_8_modules | 2 |
+| module_8_modules | 4 |
 | module_9_oop | 5 |
 
 ---

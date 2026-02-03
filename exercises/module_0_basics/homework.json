@@ -1,0 +1,12 @@
+{
+  "description": "Homework assignments for module_0_basics",
+  "required": [
+    "module_0_basics.write_code.exercise_1_hello",
+    "module_0_basics.fill_blanks.exercise_1_variables",
+    "module_0_basics.write_code.exercise_5_input"
+  ],
+  "bonus": [
+    "module_0_basics.bug_hunt.exercise_1_basics_bugs",
+    "module_0_basics.write_code.exercise_6_fstrings"
+  ]
+}

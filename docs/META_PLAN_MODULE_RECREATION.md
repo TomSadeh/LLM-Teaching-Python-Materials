@@ -24,13 +24,13 @@ Systematic approach for recreating all exercise modules using the universal temp
 | 2 | module_1_turtle_loops | 18 | 18 | No | **Implemented** |
 | 3 | module_2_decisions | 19 | 19 | No | **Implemented** |
 | 4 | module_3_lists | 23 | 24 | No | **Implemented** |
-| 5 | module_4_functions | 22 | 0 | No | **Planned** |
-| 6 | module_5_games | 18 | 0 | No | **Planned** |
+| 5 | module_4_functions | 22 | 22 | No | **Implemented** |
+| 6 | module_5_games | 18 | 18 | No | **Implemented** |
 | 7 | module_6_mid_project | 4 | 4 | No | **Implemented** |
 | 8 | module_7_dicts | 20 | 20 | No | **Implemented** |
-| 9 | module_8_modules | - | 0 | No | Pending |
-| 10 | module_9_oop | - | 0 | No | Pending |
-| 11 | module_10_mega_project | - | 0 | No | Pending |
+| 9 | module_8_modules | 27 | 0 | No | **Planned** |
+| 10 | module_9_oop | 20 | 0 | No | **Planned** |
+| 11 | module_10_mega_project | 2 projects | 2 projects | No | **Implemented** |
 
 ### Plan Links
 
@@ -44,6 +44,9 @@ Systematic approach for recreating all exercise modules using the universal temp
 | module_5_games | [PLAN_MODULE_5_GAMES.md](plans/PLAN_MODULE_5_GAMES.md) |
 | module_6_mid_project | [PLAN_MODULE_6_MID_PROJECT.md](plans/PLAN_MODULE_6_MID_PROJECT.md) |
 | module_7_dicts | [PLAN_MODULE_7_DICTS.md](plans/PLAN_MODULE_7_DICTS.md) |
+| module_8_modules | [PLAN_MODULE_8_MODULES.md](plans/PLAN_MODULE_8_MODULES.md) |
+| module_9_oop | [PLAN_MODULE_9_OOP.md](plans/PLAN_MODULE_9_OOP.md) |
+| module_10_mega_project | [PLAN_MODULE_10_MEGA_PROJECT.md](plans/PLAN_MODULE_10_MEGA_PROJECT.md) |
 
 ---
 
@@ -61,7 +64,7 @@ Systematic approach for recreating all exercise modules using the universal temp
 | **5_games** | while loops, random, game loops | + while/random |
 | **6_mid_project** | Integration of modules 0-5 | checkpoint |
 | **7_dicts** | dictionaries, keys/values, .get(), nested | + dicts |
-| **8_modules** | import, standard library | + stdlib |
+| **8_modules** | import, stdlib, file I/O (json, csv) | + stdlib, files |
 | **9_oop** | classes, __init__, methods, inheritance | + OOP |
 | **10_mega_project** | Full integration | capstone |
 

@@ -1,4 +1,4 @@
-# Plan: Module 8 - Modules and Standard Library
+# Plan: Module 8 - Modules, Standard Library, and File I/O
 
 Recreation plan for module_8_modules using the universal template system.
 
@@ -11,7 +11,7 @@ Recreation plan for module_8_modules using the universal template system.
 | Field | Value |
 |-------|-------|
 | **Module ID** | module_8_modules |
-| **Topic** | Python imports, standard library, creating modules |
+| **Topic** | Python imports, standard library, file I/O (JSON/CSV) |
 | **Prerequisites** | module_0_basics through module_7_dicts |
 | **Target Hybrid Ratio** | 60-70% |
 
@@ -28,7 +28,10 @@ By the end of this module, students will be able to:
 7. Handle import-related errors gracefully
 8. Create and import custom modules
 9. Understand the `__name__ == "__main__"` pattern
-10. Read documentation to learn new modules
+10. Read and write text files using context managers (`with open()`)
+11. Save and load structured data with `json` module
+12. Read and write tabular data with `csv` module
+13. Handle file-related errors (FileNotFoundError, JSONDecodeError)
 
 ### Curriculum Constraints
 
@@ -36,12 +39,12 @@ By the end of this module, students will be able to:
 |--------------------|-------------------------------|
 | **From Modules 0-7:** | |
 | print(), variables, strings, numbers | classes, objects, custom methods |
-| input(), type conversion, f-strings | file I/O (open/read/write) |
-| for loops, range(), turtle | third-party packages (pip) |
-| if/elif/else, comparisons, boolean ops | async/await |
-| lists, indexing, slicing, list methods | decorators |
-| functions (def, parameters, return) | generators |
-| while loops, break, continue | context managers (with) |
+| input(), type conversion, f-strings | third-party packages (pip) |
+| for loops, range(), turtle | async/await |
+| if/elif/else, comparisons, boolean ops | decorators |
+| lists, indexing, slicing, list methods | generators |
+| functions (def, parameters, return) | |
+| while loops, break, continue | |
 | import random (basic) | |
 | dictionaries, .get(), nested dicts | |
 | **New in Module 8:** | |
@@ -54,6 +57,22 @@ By the end of this module, students will be able to:
 | Creating .py modules | |
 | `__name__ == "__main__"` | |
 | ModuleNotFoundError, ImportError | |
+| **File I/O (NEW):** | |
+| `with open(file, mode) as f:` | |
+| `f.read()`, `f.write()`, `f.readlines()` | |
+| `json.load()`, `json.dump()`, `json.loads()`, `json.dumps()` | |
+| `csv.reader()`, `csv.writer()`, `csv.DictReader()`, `csv.DictWriter()` | |
+| FileNotFoundError, JSONDecodeError | |
+
+### Why File I/O Belongs Here
+
+| Reason | Explanation |
+|--------|-------------|
+| **json and csv ARE stdlib modules** | Natural extension of "modules and standard library" |
+| **Enables real projects** | Module 10 mega project needs data persistence |
+| **Error handling synergy** | File errors pair well with add_error_handling type |
+| **Dict integration** | JSON works directly with dicts (learned in module 7) |
+| **Practical skill** | Every real program needs to save/load data |
 
 ### READ BEFORE STARTING
 
@@ -68,36 +87,34 @@ By the end of this module, students will be able to:
 
 ## 2. Exercise Distribution
 
-### Available Exercise Types (2 total)
+### Available Exercise Types (4 total)
 
 | Category | Types |
 |----------|-------|
 | **Core** | write_code |
 | **Improvement** | add_error_handling |
+| **Debugging** | decode_error (NEW - file errors enable this) |
+| **Scaffolded** | complete_function |
 
-**Critical constraint:** Module 8 has only 2 available exercise types. This limits hybrid diversity significantly. We compensate by:
-
-1. Creating multi-part write_code exercises with progressive complexity
-2. Using add_error_handling to teach defensive import practices
-3. Designing longer narrative arcs within the write_code type
-4. Including "study and extend" patterns within write_code
+**Why more types now:** File I/O introduces common, predictable errors (FileNotFoundError, JSONDecodeError, csv formatting issues) that make `decode_error` pedagogically valuable. The `complete_function` type helps scaffold file handling patterns.
 
 ### Target Distribution
 
 | Type | Count | Rationale |
 |------|:-----:|-----------|
-| write_code | 6 | Core stdlib exploration and module creation |
-| add_error_handling | 3 | Import safety and defensive programming |
-| **hybrid** | 9 | Multi-part projects (60% of total) |
-| **TOTAL** | **18** | |
+| write_code | 8 | Core stdlib exploration, file operations, module creation |
+| add_error_handling | 4 | Import safety, file error handling |
+| decode_error | 3 | File-related error interpretation |
+| complete_function | 2 | Scaffold file handling patterns |
+| **hybrid** | 10 | Multi-part projects (59% of total) |
+| **TOTAL** | **27** | |
 
 ### Hybrid Ratio Calculation
 
-- Total exercises: 18
-- Hybrid exercises: 9
-- Ratio: **60%** (meets 60-70% target)
-
-**Note:** With only 2 exercise types, hybrids combine write_code and add_error_handling in various sequences, or use multi-part write_code with progressive complexity.
+- Total exercises: 27
+- Hybrid exercises: 10
+- Isolated exercises: 17
+- Ratio: **59%** (meets 60-70% target, rounded)
 
 ---
 
@@ -116,7 +133,10 @@ Exercises are organized into concept clusters, progressing from simple to comple
 | E | string module and utilities | 2-3 |
 | F | Custom modules | 3-4 |
 | G | Import error handling | 3-4 |
-| H | Module integration projects | 4-5 |
+| **H** | **File I/O basics (text files)** | **2-3** |
+| **I** | **JSON for structured data** | **3-4** |
+| **J** | **CSV for tabular data** | **3-4** |
+| K | Full integration projects | 4-5 |
 
 ### Isolated Exercises
 
@@ -157,7 +177,30 @@ Exercises are organized into concept clusters, progressing from simple to comple
 |---|------|---------------|
 | 7 | add_error_handling | Handle ModuleNotFoundError gracefully |
 | 8 | add_error_handling | Handle missing attributes in modules |
-| 9 | add_error_handling | Provide fallback behavior when imports fail |
+
+#### Cluster H: File I/O Basics (Difficulty 2-3)
+
+| # | Type | Concept Focus |
+|---|------|---------------|
+| 9 | write_code | Read and write text files with `with open()` |
+| 10 | complete_function | Complete file reading/writing patterns |
+| 11 | decode_error | Interpret FileNotFoundError and PermissionError |
+
+#### Cluster I: JSON Module (Difficulty 3-4)
+
+| # | Type | Concept Focus |
+|---|------|---------------|
+| 12 | write_code | Save and load dicts/lists with json.dump/load |
+| 13 | decode_error | Interpret JSONDecodeError (malformed JSON) |
+| 14 | add_error_handling | Safe JSON loading with fallback defaults |
+
+#### Cluster J: CSV Module (Difficulty 3-4)
+
+| # | Type | Concept Focus |
+|---|------|---------------|
+| 15 | write_code | Read and write CSV files with csv module |
+| 16 | complete_function | Complete CSV processing functions |
+| 17 | decode_error | Handle CSV formatting issues |
 
 ### Hybrid Exercises
 
@@ -173,7 +216,7 @@ Exercises are organized into concept clusters, progressing from simple to comple
 
 **Placement:** After Cluster A (import basics)
 **Difficulty:** 1-2
-**Arc:** Apprentice (simplified - GUIDANCE → GROWTH → GROWTH)
+**Arc:** Apprentice (simplified - GUIDANCE -> GROWTH -> GROWTH)
 
 #### Hybrid 2: The Math Toolkit
 
@@ -187,7 +230,7 @@ Exercises are organized into concept clusters, progressing from simple to comple
 
 **Placement:** After Cluster B (math module)
 **Difficulty:** 2-3
-**Arc:** Custom (BUILD → EXTEND → HARDEN)
+**Arc:** Custom (BUILD -> EXTEND -> HARDEN)
 
 #### Hybrid 3: The Time Keeper
 
@@ -212,11 +255,10 @@ Exercises are organized into concept clusters, progressing from simple to comple
 | 1 | GROWTH | write_code | Use choice() for random selection |
 | 2 | GROWTH | write_code | Use shuffle() for deck/card mechanics |
 | 3 | GROWTH | write_code | Use sample() for lottery/drawing mechanics |
-| 4 | IMPROVEMENT | add_error_handling | Handle empty lists and invalid ranges |
 
 **Placement:** After Cluster D (extended random)
 **Difficulty:** 2-3
-**Arc:** Custom (BUILD → BUILD → BUILD → HARDEN)
+**Arc:** Custom (BUILD -> BUILD -> BUILD)
 
 #### Hybrid 5: Password and Code Generator
 
@@ -230,7 +272,7 @@ Exercises are organized into concept clusters, progressing from simple to comple
 
 **Placement:** After Cluster E (string module)
 **Difficulty:** 2-3
-**Arc:** Custom (BUILD → COMBINE → HARDEN)
+**Arc:** Custom (BUILD -> COMBINE -> HARDEN)
 
 #### Hybrid 6: Create Your Own Module
 
@@ -245,53 +287,68 @@ Exercises are organized into concept clusters, progressing from simple to comple
 
 **Placement:** Cluster F (custom modules)
 **Difficulty:** 3-4
-**Arc:** Inheritance (adapted - DISCOVERY → OWNERSHIP → GROWTH → OWNERSHIP)
+**Arc:** Inheritance (adapted - DISCOVERY -> OWNERSHIP -> GROWTH -> OWNERSHIP)
 
-#### Hybrid 7: The Resilient Importer
+#### Hybrid 7: The Data Keeper (NEW - File I/O)
 
-**Story:** Make code that survives missing modules.
+**Story:** {{hero}} needs to save and load progress in {{school}}.
 
 | Part | Beat | Type | Focus |
 |------|------|------|-------|
-| 1 | SETBACK | write_code | Code that crashes on missing import |
-| 2 | INVESTIGATION | write_code | Understand the error |
-| 3 | IMPROVEMENT | add_error_handling | Add try/except with fallback |
-| 4 | GROWTH | add_error_handling | Create optional feature detection |
+| 1 | GROWTH | write_code | Save data to a text file |
+| 2 | GROWTH | write_code | Load data from a text file |
+| 3 | INVESTIGATION | decode_error | Understand file errors |
+| 4 | IMPROVEMENT | add_error_handling | Handle missing files gracefully |
 
-**Placement:** Cluster G (error handling)
+**Placement:** Cluster H (file I/O basics)
+**Difficulty:** 2-3
+**Arc:** Custom (BUILD -> BUILD -> UNDERSTAND -> HARDEN)
+
+#### Hybrid 8: The Settings Manager (NEW - JSON)
+
+**Story:** Build a configuration system that persists between sessions.
+
+| Part | Beat | Type | Focus |
+|------|------|------|-------|
+| 1 | GROWTH | write_code | Save settings dict to JSON file |
+| 2 | GROWTH | write_code | Load settings with defaults for missing keys |
+| 3 | INVESTIGATION | decode_error | Handle corrupted JSON files |
+| 4 | GROWTH | write_code | Build complete settings manager |
+
+**Placement:** Cluster I (JSON module)
 **Difficulty:** 3-4
-**Arc:** Rescue (adapted - SETBACK → INVESTIGATION → IMPROVEMENT → GROWTH)
+**Arc:** Custom (BUILD -> BUILD -> INVESTIGATE -> INTEGRATE)
 
-#### Hybrid 8: The Module Mashup
+#### Hybrid 9: The Records Keeper (NEW - CSV)
 
-**Story:** Combine multiple modules for a complex application.
-
-| Part | Beat | Type | Focus |
-|------|------|------|-------|
-| 1 | GROWTH | write_code | Use math + random together |
-| 2 | GROWTH | write_code | Add datetime for timestamps |
-| 3 | GROWTH | write_code | Add string for formatting |
-| 4 | IMPROVEMENT | add_error_handling | Handle all edge cases |
-
-**Placement:** Cluster H (integration)
-**Difficulty:** 4
-**Arc:** Custom (PROGRESSIVE BUILD → HARDEN)
-
-#### Hybrid 9: The {{school}} Management System
-
-**Story:** Capstone project using all learned modules.
+**Story:** {{school}} needs to track {{creature}} sightings in a spreadsheet format.
 
 | Part | Beat | Type | Focus |
 |------|------|------|-------|
-| 1 | GROWTH | write_code | Design module structure |
-| 2 | GROWTH | write_code | Implement core features with stdlib |
-| 3 | GROWTH | write_code | Add reporting with datetime/math |
-| 4 | IMPROVEMENT | add_error_handling | Production-ready error handling |
-| 5 | OWNERSHIP | write_code | Add your own custom feature |
+| 1 | GROWTH | write_code | Write records to CSV |
+| 2 | GROWTH | write_code | Read and display CSV data |
+| 3 | GROWTH | complete_function | Add search and filter functions |
+| 4 | GROWTH | write_code | Generate reports from CSV data |
+
+**Placement:** Cluster J (CSV module)
+**Difficulty:** 3-4
+**Arc:** Custom (BUILD -> BUILD -> SCAFFOLD -> EXTEND)
+
+#### Hybrid 10: The {{school}} Data System (Capstone)
+
+**Story:** Build a complete data management system using all learned modules.
+
+| Part | Beat | Type | Focus |
+|------|------|------|-------|
+| 1 | GROWTH | write_code | Design data structure (dicts for entities) |
+| 2 | GROWTH | write_code | Implement CRUD operations |
+| 3 | GROWTH | write_code | Add JSON persistence (save/load) |
+| 4 | GROWTH | write_code | Add CSV export for reports |
+| 5 | IMPROVEMENT | add_error_handling | Production-ready error handling |
 
 **Placement:** End of module (capstone)
 **Difficulty:** 5
-**Arc:** Custom (DESIGN → BUILD → EXTEND → HARDEN → CREATE)
+**Arc:** Custom (DESIGN -> BUILD -> PERSIST -> EXPORT -> HARDEN)
 
 ---
 
@@ -300,12 +357,13 @@ Exercises are organized into concept clusters, progressing from simple to comple
 ```
 Difficulty:  1 -----> 2 -----> 3 -----> 4 -----> 5
              |       |        |        |        |
-Exercises:   1,2     3,4,5,6  7,8,9    H6,H7,H8 H9
-             H1      H2,H3
+Exercises:   1,2     3,4,5,6  7,8      12,13,14 H10
+             H1      9,10,11  15,16,17 H6,H8,H9
+                     H2,H3    H7
                      H4,H5
 ```
 
-H1-H9 = Hybrid exercises
+H1-H10 = Hybrid exercises
 
 ---
 
@@ -320,11 +378,21 @@ exercises/
     │   ├── exercise_3_math_functions.py
     │   ├── exercise_4_datetime_basics.py
     │   ├── exercise_5_random_extended.py
-    │   └── exercise_6_string_constants.py
+    │   ├── exercise_6_string_constants.py
+    │   ├── exercise_7_file_basics.py
+    │   └── exercise_8_json_basics.py
+    ├── complete_function/
+    │   ├── exercise_1_file_patterns.py
+    │   └── exercise_2_csv_processing.py
+    ├── decode_error/
+    │   ├── exercise_1_file_errors.py
+    │   ├── exercise_2_json_errors.py
+    │   └── exercise_3_csv_errors.py
     ├── add_error_handling/
     │   ├── exercise_1_import_not_found.py
     │   ├── exercise_2_missing_attribute.py
-    │   └── exercise_3_fallback_imports.py
+    │   ├── exercise_3_file_not_found.py
+    │   └── exercise_4_json_fallback.py
     └── hybrid/
         ├── exercise_1_import_journey.py
         ├── exercise_2_math_toolkit.py
@@ -332,16 +400,17 @@ exercises/
         ├── exercise_4_random_adventures.py
         ├── exercise_5_password_generator.py
         ├── exercise_6_create_module.py
-        ├── exercise_7_resilient_importer.py
-        ├── exercise_8_module_mashup.py
-        └── exercise_9_school_management.py
+        ├── exercise_7_data_keeper.py
+        ├── exercise_8_settings_manager.py
+        ├── exercise_9_records_keeper.py
+        └── exercise_10_school_data_system.py
 ```
 
 ---
 
 ## 6. Implementation Phases
 
-Implementation is organized into 5 phases following the concept progression.
+Implementation is organized into 6 phases following the concept progression.
 
 ### Phase 1: Import Fundamentals (Clusters A, B)
 
@@ -364,47 +433,34 @@ Implementation is organized into 5 phases following the concept progression.
 
 ---
 
-### Phase 2: Time and Randomness (Clusters C, D)
+### Phase 2: Time, Randomness, and Strings (Clusters C, D, E)
 
-**Exercises:** 4, 5, Hybrid 3, Hybrid 4
+**Exercises:** 4, 5, 6, Hybrid 3, Hybrid 4, Hybrid 5
 **Difficulty:** 2-3
-**Estimated Files:** 4
+**Estimated Files:** 6
 
 | # | Type | File |
 |---|------|------|
 | 4 | write_code | `write_code/exercise_4_datetime_basics.py` |
 | 5 | write_code | `write_code/exercise_5_random_extended.py` |
+| 6 | write_code | `write_code/exercise_6_string_constants.py` |
 | H3 | hybrid | `hybrid/exercise_3_time_keeper.py` |
 | H4 | hybrid | `hybrid/exercise_4_random_adventures.py` |
-
----
-
-### Phase 3: String Utilities and Combinations (Cluster E)
-
-**Exercises:** 6, Hybrid 5
-**Difficulty:** 2-3
-**Estimated Files:** 2
-
-| # | Type | File |
-|---|------|------|
-| 6 | write_code | `write_code/exercise_6_string_constants.py` |
 | H5 | hybrid | `hybrid/exercise_5_password_generator.py` |
 
 ---
 
-### Phase 4: Custom Modules and Error Handling (Clusters F, G)
+### Phase 3: Custom Modules and Import Errors (Clusters F, G)
 
-**Exercises:** 7, 8, 9, Hybrid 6, Hybrid 7
+**Exercises:** 7, 8, Hybrid 6
 **Difficulty:** 3-4
-**Estimated Files:** 5
+**Estimated Files:** 3
 
 | # | Type | File |
 |---|------|------|
 | 7 | add_error_handling | `add_error_handling/exercise_1_import_not_found.py` |
 | 8 | add_error_handling | `add_error_handling/exercise_2_missing_attribute.py` |
-| 9 | add_error_handling | `add_error_handling/exercise_3_fallback_imports.py` |
 | H6 | hybrid | `hybrid/exercise_6_create_module.py` |
-| H7 | hybrid | `hybrid/exercise_7_resilient_importer.py` |
 
 **Read Before This Phase:**
 | Template | Path |
@@ -413,16 +469,55 @@ Implementation is organized into 5 phases following the concept progression.
 
 ---
 
-### Phase 5: Integration Projects (Cluster H)
+### Phase 4: File I/O Basics (Cluster H)
 
-**Exercises:** Hybrid 8, Hybrid 9
-**Difficulty:** 4-5
-**Estimated Files:** 2
+**Exercises:** 9, 10, 11, Hybrid 7
+**Difficulty:** 2-3
+**Estimated Files:** 4
 
 | # | Type | File |
 |---|------|------|
-| H8 | hybrid | `hybrid/exercise_8_module_mashup.py` |
-| H9 | hybrid | `hybrid/exercise_9_school_management.py` |
+| 9 | write_code | `write_code/exercise_7_file_basics.py` |
+| 10 | complete_function | `complete_function/exercise_1_file_patterns.py` |
+| 11 | decode_error | `decode_error/exercise_1_file_errors.py` |
+| H7 | hybrid | `hybrid/exercise_7_data_keeper.py` |
+
+**Read Before This Phase:**
+| Template | Path |
+|----------|------|
+| complete_function | [templates/exercise_types/complete_function.py](../../templates/exercise_types/complete_function.py) |
+| decode_error | [templates/exercise_types/decode_error.py](../../templates/exercise_types/decode_error.py) |
+
+---
+
+### Phase 5: JSON and CSV (Clusters I, J)
+
+**Exercises:** 12, 13, 14, 15, 16, 17, Hybrid 8, Hybrid 9
+**Difficulty:** 3-4
+**Estimated Files:** 8
+
+| # | Type | File |
+|---|------|------|
+| 12 | write_code | `write_code/exercise_8_json_basics.py` |
+| 13 | decode_error | `decode_error/exercise_2_json_errors.py` |
+| 14 | add_error_handling | `add_error_handling/exercise_4_json_fallback.py` |
+| 15 | write_code | `write_code/exercise_9_csv_basics.py` |
+| 16 | complete_function | `complete_function/exercise_2_csv_processing.py` |
+| 17 | decode_error | `decode_error/exercise_3_csv_errors.py` |
+| H8 | hybrid | `hybrid/exercise_8_settings_manager.py` |
+| H9 | hybrid | `hybrid/exercise_9_records_keeper.py` |
+
+---
+
+### Phase 6: Integration (Cluster K)
+
+**Exercises:** Hybrid 10
+**Difficulty:** 5
+**Estimated Files:** 1
+
+| # | Type | File |
+|---|------|------|
+| H10 | hybrid | `hybrid/exercise_10_school_data_system.py` |
 
 ---
 
@@ -431,11 +526,12 @@ Implementation is organized into 5 phases following the concept progression.
 | Phase | Cluster | Exercises | Files | New Templates |
 |:-----:|---------|-----------|:-----:|---------------|
 | 1 | Import Fundamentals | 1-3, H1, H2 | 5 | write_code |
-| 2 | Time and Randomness | 4-5, H3, H4 | 4 | *(none)* |
-| 3 | String Utilities | 6, H5 | 2 | *(none)* |
-| 4 | Custom Modules + Errors | 7-9, H6, H7 | 5 | add_error_handling |
-| 5 | Integration | H8, H9 | 2 | *(none)* |
-| **Total** | | **18** | **18** | |
+| 2 | Time/Random/String | 4-6, H3-H5 | 6 | *(none)* |
+| 3 | Custom Modules + Errors | 7-8, H6 | 3 | add_error_handling |
+| 4 | File I/O Basics | 9-11, H7 | 4 | complete_function, decode_error |
+| 5 | JSON and CSV | 12-17, H8, H9 | 8 | *(none)* |
+| 6 | Integration | H10 | 1 | *(none)* |
+| **Total** | | **27** | **27** | |
 
 ---
 
@@ -444,10 +540,10 @@ Implementation is organized into 5 phases following the concept progression.
 ### Content Requirements
 
 - [ ] Every exercise contains at least one `{{placeholder}}`
-- [ ] NO concepts from later modules used (no classes, file I/O, third-party packages)
-- [ ] All 10 learning objectives covered
+- [ ] NO concepts from later modules used (no classes, third-party packages)
+- [ ] All 13 learning objectives covered
 - [ ] Progressive difficulty (1 to 5)
-- [ ] Only uses write_code and add_error_handling types
+- [ ] Uses all 4 available exercise types appropriately
 
 ### Format Requirements
 
@@ -459,8 +555,8 @@ Implementation is organized into 5 phases following the concept progression.
 
 ### Curriculum Compliance
 
-| Concept | Used In |
-|---------|---------|
+| Concept | Covered In |
+|---------|------------|
 | `import module` syntax | Exercises 1, H1 |
 | `from module import` syntax | Exercises 2, H1 |
 | `import as` aliases | Exercises 2, H1 |
@@ -470,10 +566,14 @@ Implementation is organized into 5 phases following the concept progression.
 | string module constants | Exercises 6, H5 |
 | Creating custom modules | H6 |
 | `__name__ == "__main__"` | H6 |
-| ModuleNotFoundError handling | Exercises 7, H7 |
+| ModuleNotFoundError handling | Exercises 7, H6 |
 | AttributeError from imports | Exercise 8 |
-| Fallback imports | Exercises 9, H7 |
-| Multi-module integration | H8, H9 |
+| **File I/O with `with open()`** | Exercises 9, 10, 11, H7 |
+| **json.load() / json.dump()** | Exercises 12, 13, 14, H8 |
+| **csv.reader / csv.writer** | Exercises 15, 16, 17, H9 |
+| **FileNotFoundError handling** | Exercises 11, 14, H7 |
+| **JSONDecodeError handling** | Exercises 13, 14, H8 |
+| **Full integration** | H10 |
 
 ---
 
@@ -481,11 +581,11 @@ Implementation is organized into 5 phases following the concept progression.
 
 ### Key Constraints
 
-1. **No file I/O** - Cannot read/write files, only in-memory operations
+1. **No classes** - Functions and modules only (classes come in module 9)
 2. **No third-party packages** - Only standard library
-3. **No classes** - Functions and modules only
-4. **Students HAVE try/except** - Available from module 4 (games) for error handling
-5. **Students HAVE dicts** - Can use for complex data structures
+3. **Students HAVE try/except** - Available from module 4 (games) for error handling
+4. **Students HAVE dicts** - JSON works naturally with dict structures
+5. **Context managers (`with`) are NEW** - Teach as the safe way to handle files
 
 ### Standard Library Modules to Teach
 
@@ -495,52 +595,69 @@ Implementation is organized into 5 phases following the concept progression.
 | **datetime** | date, datetime, timedelta | High |
 | **random** | choice, shuffle, sample (extend from module 5) | High |
 | **string** | ascii_letters, digits, punctuation | Medium |
+| **json** | load, dump, loads, dumps | High |
+| **csv** | reader, writer, DictReader, DictWriter | High |
+
+### File I/O Concepts to Teach
+
+| Concept | Priority | Notes |
+|---------|:--------:|-------|
+| `with open(file, mode) as f:` | High | Always use context manager |
+| File modes: 'r', 'w', 'a' | High | Read, write, append |
+| `f.read()`, `f.write()` | High | Basic operations |
+| `f.readlines()` | Medium | For line-by-line processing |
+| `json.dump(data, f)` | High | Save dict/list to file |
+| `json.load(f)` | High | Load dict/list from file |
+| `csv.reader(f)` | High | Read rows as lists |
+| `csv.writer(f)` | High | Write rows as lists |
+| `csv.DictReader(f)` | Medium | Read rows as dicts |
+| `csv.DictWriter(f, fieldnames)` | Medium | Write dicts as rows |
 
 ### Modules NOT to Teach (Too Advanced)
 
 | Module | Reason |
 |--------|--------|
-| os, sys | File system operations |
-| json | Requires file I/O context |
+| os, sys | System-level operations |
+| pathlib | Path manipulation (keep it simple with strings) |
 | collections | Counter/defaultdict - could confuse dict learning |
-| re (regex) | Too complex |
-| pathlib | File path manipulation |
+| re (regex) | Too complex for this level |
+| pickle | Security concerns, binary format |
+
+### Common File Errors to Cover
+
+| Error | When It Occurs | Teaching Approach |
+|-------|----------------|-------------------|
+| FileNotFoundError | File doesn't exist when reading | decode_error, add_error_handling |
+| PermissionError | No access rights | decode_error (brief mention) |
+| JSONDecodeError | Malformed JSON content | decode_error, add_error_handling |
+| csv format issues | Wrong delimiter, missing fields | decode_error |
 
 ### Pedagogical Considerations
 
-**Why modules are challenging:**
+**Why file I/O is challenging:**
 
-- Namespace concept is abstract
-- Multiple import syntaxes cause confusion
-- Understanding what "module" means
-- The `__name__` pattern is non-intuitive
-- Finding and reading documentation
+- Context managers (`with`) are new syntax
+- File modes are easy to confuse
+- Path handling can be tricky
+- Error handling is essential (files may not exist)
+- JSON/CSV formats have specific requirements
 
 **Building mental models:**
 
-- Module = "toolbox" containing related tools
-- `import math` = "bring the whole toolbox"
-- `from math import sqrt` = "take just the sqrt tool"
-- `as` = "give it a nickname"
-- `__name__` = "am I the main program or being used as a tool?"
-
-### Common Errors for add_error_handling Exercises
-
-1. **ModuleNotFoundError:** Importing a module that doesn't exist
-2. **ImportError:** Importing a name that doesn't exist in the module
-3. **AttributeError:** Accessing an attribute that doesn't exist
-4. **TypeError:** Using imported function incorrectly
+- `with open() as f:` = "borrow the file, return it when done"
+- File modes: 'r' = reading glasses, 'w' = writing pen (erases!), 'a' = adding to a list
+- JSON = "Python dicts/lists saved as text"
+- CSV = "spreadsheet saved as text"
 
 ### Placeholder Usage Ideas
 
-- `{{hero}}` stat calculations using math module
-- `{{school}}` event scheduling with datetime
-- `{{creature}}` random encounters with extended random
-- `{{password}}` generation using string constants
-- `{{spell1}}`, `{{spell2}}` in a custom magic module
-- `{{mentor}}` teaches import patterns
-- `{{item}}` inventory with module-based utilities
-- `{{location}}` scheduling system
+- `{{hero}}` profile saved to JSON
+- `{{school}}` settings/configuration file
+- `{{creature}}` sightings logged to CSV
+- `{{item}}` inventory persisted between sessions
+- `{{location}}` data exported to reports
+- `{{spell1}}`, `{{spell2}}` in a custom module
+- `{{mentor}}` provides save/load guidance
 
 ---
 
@@ -555,114 +672,109 @@ from math import sqrt # Access directly as sqrt()
 import math as m      # Access with m.sqrt()
 ```
 
-**Key points:**
-- Dot notation prevents naming conflicts
-- `from` imports can shadow local names
-- Aliases help with long module names
+### Context Managers (Cluster H) - NEW
 
-### math Module (Cluster B)
-
-| Function | What It Does | Example |
-|----------|--------------|---------|
-| `sqrt(x)` | Square root | `sqrt(16)` → 4.0 |
-| `floor(x)` | Round down | `floor(3.7)` → 3 |
-| `ceil(x)` | Round up | `ceil(3.2)` → 4 |
-| `pow(x, y)` | x to the power y | `pow(2, 3)` → 8.0 |
-| `pi` | 3.14159... | `pi * r**2` |
-
-### datetime Module (Cluster C)
-
-**Core classes:**
-- `date` - just date (year, month, day)
-- `datetime` - date and time
-- `timedelta` - duration/difference
-
-**Common patterns:**
+**The `with` statement:**
 ```python
-from datetime import date, timedelta
-today = date.today()
-week_later = today + timedelta(days=7)
+# Always use with for files - it handles closing automatically
+with open("data.txt", "r") as f:
+    content = f.read()
+# File is automatically closed here, even if errors occur
 ```
 
-### Extended random (Cluster D)
+**Why `with` matters:**
+- Automatically closes the file
+- Works even if an error occurs
+- Cleaner than try/finally
+- The "Pythonic" way
 
-Building on module 5's `randint` and `random`:
+### JSON Module (Cluster I) - NEW
 
-| Function | What It Does |
-|----------|--------------|
-| `choice(seq)` | Pick one random element |
-| `shuffle(list)` | Reorder list in-place |
-| `sample(seq, k)` | Pick k unique elements |
-
-### string Module (Cluster E)
-
-**Useful constants:**
+**Saving data:**
 ```python
-import string
-string.ascii_letters  # 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-string.digits         # '0123456789'
-string.punctuation    # '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+import json
+
+data = {"name": "{{hero}}", "level": 5, "items": ["sword", "shield"]}
+
+with open("save.json", "w") as f:
+    json.dump(data, f, indent=2)  # indent for readability
 ```
 
-### Custom Modules (Cluster F)
-
-**Creating a module:**
-1. Create a `.py` file with functions
-2. Import it from another file
-3. Use `__name__ == "__main__"` for runnable modules
-
-**The `__name__` pattern:**
+**Loading data:**
 ```python
-if __name__ == "__main__":
-    # Only runs when this file is run directly
-    # Not when imported as a module
-    test_functions()
+with open("save.json", "r") as f:
+    data = json.load(f)
 ```
 
-### Error Handling (Cluster G)
+**JSON supports:** dicts, lists, strings, numbers, booleans, None
+**JSON does NOT support:** sets, tuples (become lists), custom objects
 
-**Defensive import pattern:**
+### CSV Module (Cluster J) - NEW
+
+**Writing CSV:**
 ```python
-try:
-    import some_module
-except ModuleNotFoundError:
-    # Provide fallback or warning
-    some_module = None
+import csv
+
+records = [
+    ["name", "level", "house"],
+    ["{{hero}}", 5, "{{house}}"],
+    ["{{heroine}}", 6, "{{house}}"]
+]
+
+with open("students.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerows(records)
 ```
 
-**Feature detection:**
+**Reading CSV:**
 ```python
-if some_module is not None:
-    # Use the module
-else:
-    # Use alternative approach
+with open("students.csv", "r") as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)  # Each row is a list
+```
+
+**DictReader/DictWriter** - More advanced, uses first row as keys
+
+### Error Handling Patterns
+
+**Safe file loading with fallback:**
+```python
+def load_settings(filename):
+    try:
+        with open(filename, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {"default": "settings"}
+    except json.JSONDecodeError:
+        print("Settings file corrupted, using defaults")
+        return {"default": "settings"}
 ```
 
 ---
 
 ## 10. Arc Adaptations
 
-Since module 8 only has 2 exercise types, standard arcs need adaptation:
+With 4 exercise types, module 8 now has more arc flexibility:
 
 | Standard Arc | Adaptation for Module 8 |
 |--------------|------------------------|
-| Rescue | write_code (broken) → write_code (understand) → add_error_handling |
-| Apprentice | write_code (guided) → write_code (practice) → write_code (independent) |
-| Competition | Not feasible (needs which_is_better) |
-| Inheritance | write_code (study) → write_code (own) → add_error_handling (fix) |
+| Rescue | write_code (broken) -> decode_error (understand) -> add_error_handling (fix) |
+| Apprentice | write_code (guided) -> write_code (practice) -> write_code (independent) |
+| Investigation | write_code (build) -> decode_error (investigate) -> add_error_handling (harden) |
 
-### Custom Arcs for Module 8
+### Custom Arcs for File I/O
 
-**BUILD → EXTEND → HARDEN:**
+**BUILD -> BUILD -> INVESTIGATE -> HARDEN:**
 1. Build basic functionality (write_code)
-2. Add more features (write_code)
-3. Add error handling (add_error_handling)
+2. Extend with more features (write_code)
+3. Understand what can go wrong (decode_error)
+4. Add defensive error handling (add_error_handling)
 
-**PROGRESSIVE BUILD:**
-1. Start simple (write_code)
-2. Add complexity (write_code)
-3. Integrate multiple parts (write_code)
-4. Production-ready (add_error_handling)
+**BUILD -> SCAFFOLD -> EXTEND:**
+1. Learn the pattern (write_code)
+2. Practice with guidance (complete_function)
+3. Build independently (write_code)
 
 ---
 
@@ -670,17 +782,19 @@ Since module 8 only has 2 exercise types, standard arcs need adaptation:
 
 | Aspect | Module 7 (Dicts) | Module 8 (Modules) | Module 9 (OOP) |
 |--------|------------------|-------------------|----------------|
-| Exercise types | 7 | **2** | 5 |
-| Total exercises | 20 | 18 | TBD |
-| Hybrid count | 8 | 9 | TBD |
-| Hybrid ratio | 57% | 60% | TBD |
-| Key challenge | Key-based mental model | Import/namespace concepts | Object orientation |
-| Arc diversity | High | Low (constrained) | Medium |
+| Exercise types | 7 | **4** | 5 |
+| Total exercises | 20 | **27** | 20 |
+| Hybrid count | 8 | **10** | 8 |
+| Hybrid ratio | 57% | **59%** | 62% |
+| Key challenge | Key-based mental model | Import/namespace + File I/O | Object orientation |
+| Enables for next | Dict → JSON bridge | File I/O → Persistence | OOP → Full projects |
 
-**Note:** Module 8's constraint of only 2 exercise types is compensated by:
-1. Longer multi-part hybrids (4-5 parts instead of 3)
-2. Progressive complexity within write_code sequences
-3. Meaningful integration with add_error_handling for production readiness
+**Module 8's expanded scope:**
+1. Standard library mastery (import patterns)
+2. File I/O fundamentals (persistence)
+3. JSON for structured data (builds on dicts)
+4. CSV for tabular data (builds on lists)
+5. Error handling patterns (production readiness)
 
 ---
 
@@ -691,5 +805,57 @@ A successful module 8 implementation will:
 1. **Teach import mastery** - Students can use all import variations confidently
 2. **Build stdlib familiarity** - Students know when to reach for math, datetime, random, string
 3. **Enable code organization** - Students can create and import their own modules
-4. **Develop defensive coding** - Students handle import failures gracefully
-5. **Prepare for OOP** - Namespace understanding prepares for class concepts in module 9
+4. **Enable data persistence** - Students can save/load data with JSON and CSV
+5. **Develop defensive coding** - Students handle file and import errors gracefully
+6. **Prepare for OOP and mega project** - File I/O + modules = ready for real applications
+
+### Measurable Outcomes
+
+| Objective | How We'll Know |
+|-----------|----------------|
+| Can use imports | Exercises 1-2, H1 completed correctly |
+| Knows stdlib | Exercises 3-6, H2-H5 show appropriate module use |
+| Can create modules | H6 produces working custom module |
+| Can persist data | H7, H8, H9 show working save/load |
+| Handles errors | add_error_handling exercises show defensive patterns |
+
+---
+
+## 13. Transition Notes
+
+### From Module 7 (Dicts)
+
+Students arrive knowing:
+- Dictionary creation and manipulation
+- Nested data structures
+- `.get()` for safe access
+- When to use dicts vs lists
+
+**Bridge concepts:**
+- JSON is "dicts/lists saved to a file"
+- CSV is "lists saved as spreadsheet rows"
+- File paths are just strings
+
+### To Module 9 (OOP)
+
+Students should leave ready to:
+- Organize code across multiple files
+- Persist object state (save/load objects as dicts/JSON)
+- Handle errors gracefully
+- Work with structured data formats
+
+**OOP prep:**
+- Namespaces prepare for class scope
+- Module organization prepares for class organization
+- JSON persistence will work with object `__dict__`
+
+### To Module 10 (Mega Project)
+
+With module 8 complete, students can:
+- Build multi-file projects (custom modules)
+- Save and load game state (JSON)
+- Export reports and data (CSV)
+- Handle all common errors
+- Use the full standard library
+
+This is the foundation for a **real** mega project with persistence and proper architecture.
