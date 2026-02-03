@@ -28,8 +28,8 @@ Systematic approach for recreating all exercise modules using the universal temp
 | 6 | module_5_games | 18 | 18 | No | **Implemented** |
 | 7 | module_6_mid_project | 4 | 4 | No | **Implemented** |
 | 8 | module_7_dicts | 20 | 20 | No | **Implemented** |
-| 9 | module_8_modules | 27 | 0 | No | **Planned** |
-| 10 | module_9_oop | 20 | 0 | No | **Planned** |
+| 9 | module_8_modules | 27 | 28 | No | **Implemented** |
+| 10 | module_9_oop | 20 | 22 | No | **Implemented** |
 | 11 | module_10_mega_project | 2 projects | 2 projects | No | **Implemented** |
 
 ### Plan Links

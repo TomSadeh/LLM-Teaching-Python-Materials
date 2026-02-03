@@ -1,0 +1,243 @@
+{
+  "version": "3.0.0",
+  "theme_support": true,
+  "generated_at": "2026-02-03T12:37:49.674637",
+  "module": "module_10_mega_project",
+  "count": 10,
+  "exercise_types": [
+    "project_1_entity_manager",
+    "project_2_data_tracker"
+  ],
+  "exercises": [
+    {
+      "id": "module_10_mega_project.project_1_entity_manager.main",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_1_entity_manager",
+      "category": "free_writing",
+      "title": "Main",
+      "title_en": "Main",
+      "title_he": "Main",
+      "description_en": "Mega Project: Main\n\n{{school}} Entity Manager - Main Application\n\n{{CONTEXT_INTRO}}\n\nRun this file to start: python main.py",
+      "description_he": "פרויקט מסכם: Main\n\n{{school}} Entity Manager - Main Application\n\n{{CONTEXT_INTRO}}\n\nRun this file to start: python main.py",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Entity Manager - Main Application\n\n{{CONTEXT_INTRO}}\n\nRun this file to start: python main.py\n\"\"\"\n\n# ✏️ YOUR CODE HERE ✏️\n# Build your application here\n#\n# You'll need:\n# - Import and use your other modules\n# - A menu loop so users can interact with the system\n# - Load existing data when the program starts\n# - Save data before the program exits\n\n\ndef main():\n    \"\"\"Main application entry point.\"\"\"\n    print(\"{{greeting}}\")\n    print(\"Welcome to the {{school}} Entity Manager!\")\n\n    # ✏️ YOUR CODE HERE ✏️\n\n    print(\"\\n{{exclamation}} Goodbye!\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_1_entity_manager"
+      ],
+      "source_file": "module_10_mega_project/project_1_entity_manager/main.py"
+    },
+    {
+      "id": "module_10_mega_project.project_1_entity_manager.models",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_1_entity_manager",
+      "category": "free_writing",
+      "title": "Models",
+      "title_en": "Models",
+      "title_he": "Models",
+      "description_en": "Mega Project: Models\n\n{{school}} Entity Manager - Models Module\n\nDefine your entity classes here using inheritance.",
+      "description_he": "פרויקט מסכם: Models\n\n{{school}} Entity Manager - Models Module\n\nDefine your entity classes here using inheritance.",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Entity Manager - Models Module\n\nDefine your entity classes here using inheritance.\n\"\"\"\n\nfrom datetime import date\n\n\n# ✏️ YOUR CODE HERE ✏️\n# Create your entity class hierarchy\n#\n# You'll need:\n# - A base class that all entities share (name, type, creation date)\n# - At least 2 specialized subclasses with unique attributes\n# - A way to display each entity nicely (hint: __str__)\n# - A way to convert entities to dicts for JSON storage\n\n\nif __name__ == \"__main__\":\n    # Test your classes\n    pass\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_1_entity_manager"
+      ],
+      "source_file": "module_10_mega_project/project_1_entity_manager/models.py"
+    },
+    {
+      "id": "module_10_mega_project.project_1_entity_manager.reports",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_1_entity_manager",
+      "category": "free_writing",
+      "title": "Reports",
+      "title_en": "Reports",
+      "title_he": "Reports",
+      "description_en": "Mega Project: Reports\n\n{{school}} Entity Manager - Reports Module\n\nGenerate statistics and export data to CSV.",
+      "description_he": "פרויקט מסכם: Reports\n\n{{school}} Entity Manager - Reports Module\n\nGenerate statistics and export data to CSV.",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Entity Manager - Reports Module\n\nGenerate statistics and export data to CSV.\n\"\"\"\n\nimport csv\n\n\n# ✏️ YOUR CODE HERE ✏️\n# Create functions for reporting and export\n#\n# You'll need:\n# - A way to calculate statistics (counts by type, averages, etc.)\n# - A way to export all entity data to a CSV file\n\n\nif __name__ == \"__main__\":\n    # Test your report functions\n    pass\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_1_entity_manager"
+      ],
+      "source_file": "module_10_mega_project/project_1_entity_manager/reports.py"
+    },
+    {
+      "id": "module_10_mega_project.project_1_entity_manager.storage",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_1_entity_manager",
+      "category": "free_writing",
+      "title": "Storage",
+      "title_en": "Storage",
+      "title_he": "Storage",
+      "description_en": "Mega Project: Storage\n\n{{school}} Entity Manager - Storage Module\n\nHandle saving and loading entity data with JSON.",
+      "description_he": "פרויקט מסכם: Storage\n\n{{school}} Entity Manager - Storage Module\n\nHandle saving and loading entity data with JSON.",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Entity Manager - Storage Module\n\nHandle saving and loading entity data with JSON.\n\"\"\"\n\nimport json\n\n\n# ✏️ YOUR CODE HERE ✏️\n# Create functions for data persistence\n#\n# You'll need:\n# - A way to save all entities to a JSON file\n# - A way to load entities back (reconstructing the right class types)\n# - Graceful handling when the file doesn't exist yet\n\n\nif __name__ == \"__main__\":\n    # Test your storage functions\n    pass\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_1_entity_manager"
+      ],
+      "source_file": "module_10_mega_project/project_1_entity_manager/storage.py"
+    },
+    {
+      "id": "module_10_mega_project.project_1_entity_manager.utils",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_1_entity_manager",
+      "category": "free_writing",
+      "title": "Utils",
+      "title_en": "Utils",
+      "title_he": "Utils",
+      "description_en": "Mega Project: Utils\n\n{{school}} Entity Manager - Utilities Module\n\nHelper functions for input validation and formatting.",
+      "description_he": "פרויקט מסכם: Utils\n\n{{school}} Entity Manager - Utilities Module\n\nHelper functions for input validation and formatting.",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Entity Manager - Utilities Module\n\nHelper functions for input validation and formatting.\n\"\"\"\n\n\n# ✏️ YOUR CODE HERE ✏️\n# Create helper functions as needed for your main application\n# (This file is optional - add helpers if they make your code cleaner)\n\n\nif __name__ == \"__main__\":\n    # Test your utility functions\n    pass\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_1_entity_manager"
+      ],
+      "source_file": "module_10_mega_project/project_1_entity_manager/utils.py"
+    },
+    {
+      "id": "module_10_mega_project.project_2_data_tracker.analyzer",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_2_data_tracker",
+      "category": "free_writing",
+      "title": "Analyzer",
+      "title_en": "Analyzer",
+      "title_he": "Analyzer",
+      "description_en": "Mega Project: Analyzer\n\n{{school}} Data Tracker - Analysis Module\n\nStatistics and analysis functions for tracking data.",
+      "description_he": "פרויקט מסכם: Analyzer\n\n{{school}} Data Tracker - Analysis Module\n\nStatistics and analysis functions for tracking data.",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Data Tracker - Analysis Module\n\nStatistics and analysis functions for tracking data.\n\"\"\"\n\n\n# ✏️ YOUR CODE HERE ✏️\n# Create your analysis functions\n#\n# You'll need:\n# - A way to count records by category or other fields\n# - A way to find the date range of your data\n# - A way to generate a summary report\n\n\nif __name__ == \"__main__\":\n    # Test your analysis functions\n    pass\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_2_data_tracker"
+      ],
+      "source_file": "module_10_mega_project/project_2_data_tracker/analyzer.py"
+    },
+    {
+      "id": "module_10_mega_project.project_2_data_tracker.config",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_2_data_tracker",
+      "category": "free_writing",
+      "title": "Config",
+      "title_en": "Config",
+      "title_he": "Config",
+      "description_en": "Mega Project: Config\n\n{{school}} Data Tracker - Configuration\n\nDefine your data fields and settings here.",
+      "description_he": "פרויקט מסכם: Config\n\n{{school}} Data Tracker - Configuration\n\nDefine your data fields and settings here.",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Data Tracker - Configuration\n\nDefine your data fields and settings here.\n\"\"\"\n\n# ✏️ YOUR CODE HERE ✏️\n# Set up your tracking data structure\n#\n# You'll need to decide:\n# - What fields each record should have (date, category, location, etc.)\n# - What categories are valid for your tracker\n# - What filename to use for storing data\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_2_data_tracker"
+      ],
+      "source_file": "module_10_mega_project/project_2_data_tracker/config.py"
+    },
+    {
+      "id": "module_10_mega_project.project_2_data_tracker.data_io",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_2_data_tracker",
+      "category": "free_writing",
+      "title": "Data Io",
+      "title_en": "Data Io",
+      "title_he": "Data Io",
+      "description_en": "Mega Project: Data Io\n\n{{school}} Data Tracker - Data I/O Module\n\nRead and write record data to CSV files.",
+      "description_he": "פרויקט מסכם: Data Io\n\n{{school}} Data Tracker - Data I/O Module\n\nRead and write record data to CSV files.",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Data Tracker - Data I/O Module\n\nRead and write record data to CSV files.\n\"\"\"\n\nimport csv\n\n\n# ✏️ YOUR CODE HERE ✏️\n# Create your CSV operations\n#\n# You'll need:\n# - A way to save records to a CSV file\n# - A way to load records from a CSV file\n# - A way to add a single new record to an existing file\n# - Graceful handling when the file doesn't exist yet\n\n\nif __name__ == \"__main__\":\n    # Test your I/O functions\n    pass\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_2_data_tracker"
+      ],
+      "source_file": "module_10_mega_project/project_2_data_tracker/data_io.py"
+    },
+    {
+      "id": "module_10_mega_project.project_2_data_tracker.main",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_2_data_tracker",
+      "category": "free_writing",
+      "title": "Main",
+      "title_en": "Main",
+      "title_he": "Main",
+      "description_en": "Mega Project: Main\n\n{{school}} Data Tracker - Main Application\n\n{{CONTEXT_INTRO}}\n\nRun this file to start: python main.py",
+      "description_he": "פרויקט מסכם: Main\n\n{{school}} Data Tracker - Main Application\n\n{{CONTEXT_INTRO}}\n\nRun this file to start: python main.py",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Data Tracker - Main Application\n\n{{CONTEXT_INTRO}}\n\nRun this file to start: python main.py\n\"\"\"\n\n# ✏️ YOUR CODE HERE ✏️\n# Build your application here\n#\n# You'll need:\n# - Import and use your other modules\n# - A menu loop so users can interact with the system\n# - Load existing data when the program starts\n\n\ndef main():\n    \"\"\"Main application entry point.\"\"\"\n    print(\"{{greeting}}\")\n    print(\"Welcome to the {{school}} Data Tracker!\")\n\n    # ✏️ YOUR CODE HERE ✏️\n\n    print(\"\\n{{exclamation}} Goodbye!\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_2_data_tracker"
+      ],
+      "source_file": "module_10_mega_project/project_2_data_tracker/main.py"
+    },
+    {
+      "id": "module_10_mega_project.project_2_data_tracker.tracker",
+      "topic_id": "project.capstone",
+      "exercise_type": "project_2_data_tracker",
+      "category": "free_writing",
+      "title": "Tracker",
+      "title_en": "Tracker",
+      "title_he": "Tracker",
+      "description_en": "Mega Project: Tracker\n\n{{school}} Data Tracker - Core Tracker Module\n\nFunctions for creating, validating, and filtering records.",
+      "description_he": "פרויקט מסכם: Tracker\n\n{{school}} Data Tracker - Core Tracker Module\n\nFunctions for creating, validating, and filtering records.",
+      "difficulty": 4,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [],
+      "starter_code": "\"\"\"\n{{school}} Data Tracker - Core Tracker Module\n\nFunctions for creating, validating, and filtering records.\n\"\"\"\n\nfrom datetime import date\n\n\n# ✏️ YOUR CODE HERE ✏️\n# Create your record management functions\n#\n# You'll need:\n# - A way to create new records with the right fields\n# - A way to validate that records have required data\n# - Ways to filter and search through records\n\n\nif __name__ == \"__main__\":\n    # Test your tracker functions\n    pass\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_10_mega_project",
+        "project_2_data_tracker"
+      ],
+      "source_file": "module_10_mega_project/project_2_data_tracker/tracker.py"
+    }
+  ]
+}

@@ -2,12 +2,15 @@
   "version": "3.0.0",
   "modules": [
     "module_0_basics",
+    "module_10_mega_project",
     "module_1_turtle_loops",
     "module_2_decisions",
     "module_3_lists",
     "module_4_functions",
     "module_5_games",
     "module_6_mid_project",
-    "module_7_dicts"
+    "module_7_dicts",
+    "module_8_modules",
+    "module_9_oop"
   ]
 }

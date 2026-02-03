@@ -83,9 +83,75 @@ Each exercise in `exercises.json` has this structure:
   "solution_code": null,
   "hints": [],
   "tags": "module_0_basics",
-  "source_file": "module_0_basics/exercise_01_hello.py"
+  "source_file": "module_0_basics/exercise_01_hello.py",
+  "pedagogy": "homework"
 }
 ```
+
+## Pedagogy Field
+
+The `pedagogy` field categorizes how an exercise fits into the curriculum's progress system. This field is optional and controls module advancement gating.
+
+### Values
+
+| Value | Purpose | Progress Impact |
+|-------|---------|-----------------|
+| `homework` | Required for module completion | **Blocks next module** until completed |
+| `lesson` | Integrated into lesson flow | No gating effect |
+| `practice` | Additional practice | No gating effect |
+| `challenge` | Advanced/bonus exercises | No gating effect |
+| `null` (or omitted) | Uncategorized | No gating effect |
+
+### Module Gating Rules
+
+When progress mode is enabled in Maya Chat:
+- Module N+1 is **locked** until all `homework` exercises in Module N are completed
+- Only exercises with `pedagogy: "homework"` count toward unlocking
+- Other pedagogy types (`lesson`, `practice`, `challenge`) are purely organizational
+
+### Guidelines for Setting Pedagogy
+
+1. **homework** - Use sparingly (2-4 per module). These are the "must do" exercises that verify understanding before advancing:
+   ```json
+   {
+     "id": "module_0_basics.write_code.exercise_5_variables",
+     "pedagogy": "homework"
+   }
+   ```
+
+2. **lesson** - Exercises that are part of a guided lesson flow:
+   ```json
+   {
+     "id": "module_0_basics.write_code.exercise_2_name",
+     "pedagogy": "lesson"
+   }
+   ```
+
+3. **practice** - Extra exercises for reinforcement (not required):
+   ```json
+   {
+     "id": "module_0_basics.bug_hunt.exercise_1",
+     "pedagogy": "practice"
+   }
+   ```
+
+4. **challenge** - Advanced exercises for students who want more:
+   ```json
+   {
+     "id": "module_0_basics.write_code.exercise_bonus",
+     "pedagogy": "challenge"
+   }
+   ```
+
+5. **null/omitted** - Default for exercises not yet categorized
+
+### Example Module Setup
+
+For a typical module with 10 exercises:
+- 2-3 marked as `homework` (required for advancement)
+- 3-4 marked as `lesson` (integrated with lesson content)
+- 3-4 marked as `practice` or left as `null`
+- 0-1 marked as `challenge` (bonus)
 
 ## Prompt Fragments
 

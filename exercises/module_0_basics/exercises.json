@@ -1,7 +1,7 @@
 {
   "version": "3.0.0",
   "theme_support": true,
-  "generated_at": "2026-02-03T10:42:23.030062",
+  "generated_at": "2026-02-03T12:37:49.672062",
   "module": "module_0_basics",
   "count": 20,
   "exercise_types": [
@@ -426,7 +426,8 @@
         "module_0_basics",
         "write_code"
       ],
-      "source_file": "module_0_basics/write_code/exercise_1_hello.py"
+      "source_file": "module_0_basics/write_code/exercise_1_hello.py",
+      "pedagogy": "homework"
     },
     {
       "id": "module_0_basics.write_code.exercise_2_variables",
@@ -480,7 +481,8 @@
         "module_0_basics",
         "write_code"
       ],
-      "source_file": "module_0_basics/write_code/exercise_3_calculator.py"
+      "source_file": "module_0_basics/write_code/exercise_3_calculator.py",
+      "pedagogy": "homework"
     },
     {
       "id": "module_0_basics.write_code.exercise_4_strings",
@@ -534,7 +536,8 @@
         "module_0_basics",
         "write_code"
       ],
-      "source_file": "module_0_basics/write_code/exercise_5_input.py"
+      "source_file": "module_0_basics/write_code/exercise_5_input.py",
+      "pedagogy": "homework"
     },
     {
       "id": "module_0_basics.write_code.exercise_6_fstrings",
