@@ -20,13 +20,13 @@ Systematic approach for recreating all exercise modules using the universal temp
 
 | Order | Module | Planned | Implemented | Validated | Status |
 |:-----:|--------|:-------:|:-----------:|:---------:|--------|
-| 1 | module_0_basics | 20 | 20 | Yes | **Planned** |
-| 2 | module_1_turtle_loops | 18 | 0 | No | **Planned** |
-| 3 | module_2_decisions | - | 0 | No | Pending |
-| 4 | module_3_lists | - | 0 | No | Pending |
-| 5 | module_4_functions | - | 0 | No | Pending |
-| 6 | module_5_games | - | 0 | No | Pending |
-| 7 | module_6_mid_project | - | 0 | No | Pending |
+| 1 | module_0_basics | 20 | 20 | Yes | **Complete** |
+| 2 | module_1_turtle_loops | 18 | 18 | No | **Implemented** |
+| 3 | module_2_decisions | 19 | 19 | No | **Implemented** |
+| 4 | module_3_lists | 23 | 24 | No | **Implemented** |
+| 5 | module_4_functions | 22 | 0 | No | **Planned** |
+| 6 | module_5_games | 18 | 0 | No | **Planned** |
+| 7 | module_6_final_project | 4 | 4 | No | **Implemented** |
 | 8 | module_7_dicts | - | 0 | No | Pending |
 | 9 | module_8_modules | - | 0 | No | Pending |
 | 10 | module_9_oop | - | 0 | No | Pending |
@@ -38,6 +38,11 @@ Systematic approach for recreating all exercise modules using the universal temp
 |--------|---------------|
 | module_0_basics | [PLAN_MODULE_0_BASICS.md](plans/PLAN_MODULE_0_BASICS.md) |
 | module_1_turtle_loops | [PLAN_MODULE_1_TURTLE_LOOPS.md](plans/PLAN_MODULE_1_TURTLE_LOOPS.md) |
+| module_2_decisions | [PLAN_MODULE_2_DECISIONS.md](plans/PLAN_MODULE_2_DECISIONS.md) |
+| module_3_lists | [PLAN_MODULE_3_LISTS.md](plans/PLAN_MODULE_3_LISTS.md) |
+| module_4_functions | [PLAN_MODULE_4_FUNCTIONS.md](plans/PLAN_MODULE_4_FUNCTIONS.md) |
+| module_5_games | [PLAN_MODULE_5_GAMES.md](plans/PLAN_MODULE_5_GAMES.md) |
+| module_6_final_project | [PLAN_MODULE_6_FINAL_PROJECT.md](plans/PLAN_MODULE_6_FINAL_PROJECT.md) |
 
 ---
 
@@ -171,7 +176,7 @@ For each module:
 
 | Document | Purpose |
 |----------|---------|
-| [WRITING_GUIDE.md](WRITING_GUIDE.md) | Format and style rules |
+| [WRITING_GUIDE_EXERCISES.md](WRITING_GUIDE_EXERCISES.md) | Format and style rules |
 | [TEMPLATE.md](../TEMPLATE.md) | Placeholder reference |
 | [EXERCISE_TYPE_MODULE_MAPPING.md](../templates/EXERCISE_TYPE_MODULE_MAPPING.md) | Valid types per module |
 | [hybrid_arcs/README.md](../templates/hybrid_arcs/README.md) | Narrative arc definitions |

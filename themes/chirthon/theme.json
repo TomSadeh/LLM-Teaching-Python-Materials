@@ -3,7 +3,7 @@
   "name_en": "Chirthon",
   "name_he": "קיירת'ון",
   "icon": "🏛️",
-  "logo": "/logos/chirthon.jpg",
+  "logo": "assets/logo.jpg",
   "app_name": "Camp Half-Blood Coding",
   "teacher_name": "Chirthon",
   "teacher_name_he": "קיירת'ון",
@@ -30,6 +30,16 @@
     "exclamation": ["Oh my gods!", "What the Hades?", "Holy Hera!", "Di Immortales!", "Oh Styx!"],
     "greeting": ["Welcome to Camp Half-Blood", "Welcome, demigod"],
     "password": ["demigod", "half-blood"],
+
+    "obstacle": ["monster", "trap", "barrier", "curse"],
+    "danger_location": ["the labyrinth", "the dark cave", "enemy territory"],
+    "harmful_status": ["poisoned", "cursed", "weakened", "wounded"],
+    "busy_activity": ["in combat", "fighting monsters", "on a quest"],
+
+    "primary_stat": ["health", "life force", "stamina"],
+    "secondary_stat": ["divine power", "godly energy", "ichor"],
+    "retreat_action": ["flee", "tactical retreat", "fall back"],
+    "basic_action": ["use basic attack", "defend", "dodge"],
 
     "ROLE_TITLE": "Demigod",
     "ROLE_TITLE_PLURAL": "Demigods",
@@ -79,6 +89,11 @@
     "CONTEXT_INVESTIGATION_COMPLETE": "All systems restored! The camp is safe thanks to your debugging skills.",
     "CONTEXT_IMPROVEMENT_COMPLETE": "Great work! Your refactored code is now worthy of the Camp Archives.",
     "CONTEXT_TRIUMPH_COMPLETE": "Congratulations, demigod! You've completed this challenge and grown stronger!",
+
+    "CONTEXT_SETBACK_INTRO": "{{hero}} suffered a crushing defeat. The monster was too strong this time. But demigods never give up.",
+    "CONTEXT_SETBACK_NARRATIVE": "Analyze what went wrong in the last battle. Find the bugs in {{hero}}'s strategy that let {{villain}} triumph.",
+    "CONTEXT_CONFRONTATION_INTRO": "The final confrontation awaits. {{hero}} faces {{villain}} for the fate of the camp!",
+    "CONTEXT_CONFRONTATION_NARRATIVE": "Every training session, every quest, has prepared you for this moment. Fight with honor!",
 
     "PHASE_1_TITLE": "Training Day 1: The Basics",
     "CONTEXT_PHASE_1": "Every demigod starts here. Master this fundamental skill before moving on.",

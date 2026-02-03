@@ -81,8 +81,8 @@ def guided_character_header(name, title):
         A formatted header string
 
     Example:
-        >>> guided_character_header("{{hero}}", "Wizard")
-        "=== {{hero}} the Wizard ==="
+        >>> guided_character_header("{{hero}}", "{{ROLE_TITLE}}")
+        "=== {{hero}} the {{ROLE_TITLE}} ==="
     """
     # ✏️ COMPLETE THIS FUNCTION ✏️
     #
@@ -137,12 +137,12 @@ def my_character_creator():
     # 6. Print a separator line at the end
     #
     # Example output:
-    # === Maya the Warrior ===
+    # === Maya the {{ROLE_TITLE}} ===
     # Health: 120
     # Strength: 15
     # Defense: 12
     # Speed: 8
-    # Combat Rating: 27
+    # Total Power: 27
     # ==============================
     #
     # Be creative! Add your own stats and style.
@@ -164,11 +164,11 @@ def my_interactive_creator():
     #
     # Example interaction:
     # Enter character name: Luna
-    # Enter character class: Mage
-    # Enter magic power: 25
+    # Enter character class: {{ROLE_TITLE}}
+    # Enter power level: 25
     #
-    # === Luna the Mage ===
-    # Magic Power: 25
+    # === Luna the {{ROLE_TITLE}} ===
+    # Power Level: 25
     # (etc...)
 
     pass
@@ -190,9 +190,9 @@ def main():
     print("=" * 50)
 
     print("\n--- Testing guided_character_header ---")
-    result1 = guided_character_header("{{hero}}", "Wizard")
+    result1 = guided_character_header("{{hero}}", "{{ROLE_TITLE}}")
     print("Result:", result1)
-    print("Expected: === {{hero}} the Wizard ===")
+    print("Expected: === {{hero}} the {{ROLE_TITLE}} ===")
 
     print("\n--- Testing guided_stat_line ---")
     result2 = guided_stat_line("Health", 100)

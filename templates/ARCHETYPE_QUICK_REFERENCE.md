@@ -386,4 +386,5 @@ A: Use lightest archetype (Character Creation) or skip for pure syntax.
 
 - [NARRATIVE_ARCHETYPES.md](../docs/NARRATIVE_ARCHETYPES.md) - Full archetype documentation
 - [TEMPLATE.md](../TEMPLATE.md) - Available placeholders
-- [WRITING_GUIDE.md](../docs/WRITING_GUIDE.md) - Exercise writing standards
+- [WRITING_GUIDE_EXERCISES.md](../docs/WRITING_GUIDE_EXERCISES.md) - Exercise writing standards
+- [WRITING_GUIDE_LESSONS.md](../docs/WRITING_GUIDE_LESSONS.md) - Lesson writing standards

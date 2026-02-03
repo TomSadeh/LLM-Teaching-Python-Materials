@@ -33,7 +33,17 @@
     "group": ["Organizations or teams"],
     "exclamation": ["Theme-appropriate exclamations (e.g., 'Great job!', 'By the stars!')"],
     "greeting": ["Welcome message for exercises"],
-    "password": ["Secret codes or access phrases"]
+    "password": ["Secret codes or access phrases"],
+
+    "obstacle": ["Things that block progress (traps, defenders, errors)"],
+    "danger_location": ["Risky places to enter (cave, danger zone, untested code)"],
+    "harmful_status": ["Negative conditions (poisoned, injured, flagged)"],
+    "busy_activity": ["Activities preventing rest (in combat, processing, playing)"],
+
+    "primary_stat": ["Main resource (health, stamina, progress)"],
+    "secondary_stat": ["Secondary resource (mana, energy, power)"],
+    "retreat_action": ["Escape action (flee, retreat, cancel)"],
+    "basic_action": ["Simple action (basic attack, defend, try again)"]
   },
 
   "layer_2_universal": {
@@ -137,6 +147,14 @@
       "CONTEXT_AUDIT_STANDARDS": "What standards to apply",
       "CONTEXT_ISSUES_FOUND": "Overview of problems to fix",
       "CONTEXT_SPEC_SOURCE": "Who wrote the specification"
+    },
+
+    "rivalry": {
+      "_description": "For rivalry/showdown game exercises with defeat-training-victory arcs",
+      "CONTEXT_SETBACK_INTRO": "Opening for setback/defeat scenario",
+      "CONTEXT_SETBACK_NARRATIVE": "Story explaining the defeat and what went wrong",
+      "CONTEXT_CONFRONTATION_INTRO": "Opening for the final confrontation",
+      "CONTEXT_CONFRONTATION_NARRATIVE": "Story building to the climactic showdown"
     }
   },
 

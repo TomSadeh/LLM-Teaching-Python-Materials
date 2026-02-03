@@ -1,7 +1,7 @@
 {
   "version": "3.0.0",
   "theme_support": true,
-  "generated_at": "2026-02-02T12:00:00.000000",
+  "generated_at": "2026-02-02T23:30:23.810640",
   "module": "module_0_basics",
   "count": 20,
   "exercise_types": [
@@ -19,228 +19,549 @@
   ],
   "exercises": [
     {
-      "id": "module_0_basics.output_prediction.exercise_1_print_basics",
-      "exercise_type": "output_prediction",
-      "category": "reading",
-      "title_en": "Print Basics",
-      "title_he": "יסודות הדפסה",
+      "id": "module_0_basics.bug_hunt.exercise_1_basics_bugs",
+      "topic_id": "basics.print",
+      "exercise_type": "bug_hunt",
+      "category": "debugging",
+      "title": "Basics Bugs",
+      "title_en": "Basics Bugs",
+      "title_he": "Basics Bugs",
+      "description_en": "Basics: Basics Bugs\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Basics Bugs\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
       "difficulty": 1,
-      "order_index": 1,
-      "concepts": ["print() function", "string literals", "commas in print"],
-      "source_file": "output_prediction/exercise_1_print_basics.py"
-    },
-    {
-      "id": "module_0_basics.write_code.exercise_1_hello",
-      "exercise_type": "write_code",
-      "category": "free_writing",
-      "title_en": "Hello World",
-      "title_he": "שלום עולם",
-      "difficulty": 1,
-      "order_index": 2,
-      "concepts": ["print() function", "string literals", "printing multiple values"],
-      "source_file": "write_code/exercise_1_hello.py"
-    },
-    {
-      "id": "module_0_basics.fill_blanks.exercise_1_variables",
-      "exercise_type": "fill_blanks",
-      "category": "scaffolded_writing",
-      "title_en": "Variables",
-      "title_he": "משתנים",
-      "difficulty": 2,
-      "order_index": 3,
-      "concepts": ["variable assignment", "naming", "using variables in print"],
-      "source_file": "fill_blanks/exercise_1_variables.py"
-    },
-    {
-      "id": "module_0_basics.spot_difference.exercise_1_variable_errors",
-      "exercise_type": "spot_difference",
-      "category": "analysis",
-      "title_en": "Variable Errors",
-      "title_he": "שגיאות משתנים",
-      "difficulty": 2,
-      "order_index": 4,
-      "concepts": ["variable assignment vs comparison", "variable naming", "typos"],
-      "source_file": "spot_difference/exercise_1_variable_errors.py"
-    },
-    {
-      "id": "module_0_basics.write_code.exercise_2_variables",
-      "exercise_type": "write_code",
-      "category": "free_writing",
-      "title_en": "Variables",
-      "title_he": "משתנים",
-      "difficulty": 2,
-      "order_index": 5,
-      "concepts": ["variable creation", "assignment", "using variables in print"],
-      "source_file": "write_code/exercise_2_variables.py"
-    },
-    {
-      "id": "module_0_basics.output_prediction.exercise_2_arithmetic",
-      "exercise_type": "output_prediction",
-      "category": "reading",
-      "title_en": "Arithmetic",
-      "title_he": "חשבון",
-      "difficulty": 2,
-      "order_index": 6,
-      "concepts": ["arithmetic operators", "order of operations", "integer vs float division"],
-      "source_file": "output_prediction/exercise_2_arithmetic.py"
+      "requires_running": false,
+      "estimated_time_minutes": 8,
+      "skills": [
+        "debugging",
+        "critical_reading",
+        "common_mistakes"
+      ],
+      "starter_code": "# =============================================================================\n# Bug Hunt: Basics Bugs\n# =============================================================================\n# Difficulty: 5\n# Concepts: All Module 0 concepts - integration debugging\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_INVESTIGATION_INTRO}}\n{{CONTEXT_INVESTIGATION_MISSION}}\n\"\"\"\n\n\n# ============================================================\n# {{CASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_1_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Should print \"{{hero}} has 75 gold\" (100 - 25 = 75)\n#\n# ACTUAL BEHAVIOR:\n# Prints \"{{hero}} has 10025 gold\" (concatenated as strings!)\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_1}}\n\n\ndef buggy_a():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    gold = \"100\"\n    spent = 25\n    remaining = gold - spent\n    print(\"{{hero}} has\", remaining, \"gold\")\n\n\ndef fix_a():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    #\n    # Hint: Look at how gold is defined. Is it a number or a string?\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_2_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Should print the hero's name stored in the variable\n#\n# ACTUAL BEHAVIOR:\n# Prints the word \"hero_name\" instead of the actual name\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_2}}\n\n\ndef buggy_b():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    hero_name = \"{{hero}}\"\n    print(\"Welcome,\", \"hero_name\")\n\n\ndef fix_b():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    #\n    # Hint: When do you use quotes around a variable name?\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_3_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Should calculate double the score: 50 * 2 = 100\n#\n# ACTUAL BEHAVIOR:\n# The doubled variable is never used!\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_3}}\n\n\ndef buggy_c():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    score = 50\n    doubled = score * 2\n    print(\"Double score:\", score)\n\n\ndef fix_c():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    #\n    # Hint: Check which variable is being printed.\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_4_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Should greet {{hero}} at {{school}} on one line\n#\n# ACTUAL BEHAVIOR:\n# Error: can only concatenate str (not \"int\") to str\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_4}}\n\n\ndef buggy_d():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    name = \"{{hero}}\"\n    level = 5\n    message = name + \" is level \" + level + \" at {{school}}\"\n    print(message)\n\n\ndef fix_d():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    #\n    # Hint: You can't use + to join a string with a number directly.\n    # Either convert the number to a string, or use a different approach.\n    #\n    # The fix:\n\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_INVESTIGATION_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{CASE_1_TITLE}} ===\")\n    print(\"Buggy version:\")\n    # buggy_a()  # This would cause an error!\n    print(\"(Error: can't subtract from string)\")\n    print(\"\\nFixed version:\")\n    fix_a()\n\n    print(\"\\n=== {{CASE_2_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_b()\n    print(\"\\nFixed version:\")\n    fix_b()\n\n    print(\"\\n=== {{CASE_3_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_c()\n    print(\"\\nFixed version:\")\n    fix_c()\n\n    print(\"\\n=== {{CASE_4_TITLE}} ===\")\n    print(\"Buggy version:\")\n    # buggy_d()  # This would cause an error!\n    print(\"(Error: can't concatenate str and int)\")\n    print(\"\\nFixed version:\")\n    fix_d()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_INVESTIGATION_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "bug_hunt"
+      ],
+      "source_file": "module_0_basics/bug_hunt/exercise_1_basics_bugs.py"
     },
     {
       "id": "module_0_basics.code_ordering.exercise_1_program_flow",
+      "topic_id": "basics.print",
       "exercise_type": "code_ordering",
       "category": "scaffolded_writing",
+      "title": "Program Flow",
       "title_en": "Program Flow",
-      "title_he": "זרימת תוכנית",
-      "difficulty": 2,
-      "order_index": 7,
-      "concepts": ["variable creation before use", "order of operations", "program sequence"],
-      "source_file": "code_ordering/exercise_1_program_flow.py"
-    },
-    {
-      "id": "module_0_basics.write_code.exercise_3_calculator",
-      "exercise_type": "write_code",
-      "category": "free_writing",
-      "title_en": "Calculator",
-      "title_he": "מחשבון",
-      "difficulty": 2,
-      "order_index": 8,
-      "concepts": ["arithmetic operators (+, -, *, /, //, %, **)"],
-      "source_file": "write_code/exercise_3_calculator.py"
-    },
-    {
-      "id": "module_0_basics.match_output.exercise_1_string_output",
-      "exercise_type": "match_output",
-      "category": "reading",
-      "title_en": "String Output",
-      "title_he": "פלט מחרוזות",
-      "difficulty": 3,
-      "order_index": 9,
-      "concepts": ["string concatenation", "print with commas vs plus"],
-      "source_file": "match_output/exercise_1_string_output.py"
-    },
-    {
-      "id": "module_0_basics.decode_error.exercise_1_string_errors",
-      "exercise_type": "decode_error",
-      "category": "debugging",
-      "title_en": "String Errors",
-      "title_he": "שגיאות מחרוזות",
-      "difficulty": 3,
-      "order_index": 10,
-      "concepts": ["TypeError", "quote matching", "string + number errors"],
-      "source_file": "decode_error/exercise_1_string_errors.py"
-    },
-    {
-      "id": "module_0_basics.write_code.exercise_4_strings",
-      "exercise_type": "write_code",
-      "category": "free_writing",
-      "title_en": "Strings",
-      "title_he": "מחרוזות",
-      "difficulty": 3,
-      "order_index": 11,
-      "concepts": ["string creation", "concatenation", "combining with print"],
-      "source_file": "write_code/exercise_4_strings.py"
-    },
-    {
-      "id": "module_0_basics.hybrid.exercise_1_apprentice_variables",
-      "exercise_type": "hybrid",
-      "category": "integration",
-      "title_en": "The Apprentice: Variables",
-      "title_he": "החניך: משתנים",
-      "difficulty": 3,
-      "order_index": 12,
-      "concepts": ["variables", "strings", "concatenation", "printing"],
-      "arc": "apprentice",
-      "parts": ["DISCOVERY", "GUIDANCE", "GROWTH"],
-      "source_file": "hybrid/exercise_1_apprentice_variables.py"
-    },
-    {
-      "id": "module_0_basics.fill_blanks.exercise_2_input",
-      "exercise_type": "fill_blanks",
-      "category": "scaffolded_writing",
-      "title_en": "Input",
-      "title_he": "קלט",
-      "difficulty": 3,
-      "order_index": 13,
-      "concepts": ["input() function", "type conversion", "int(), str()"],
-      "source_file": "fill_blanks/exercise_2_input.py"
-    },
-    {
-      "id": "module_0_basics.decode_error.exercise_2_input_errors",
-      "exercise_type": "decode_error",
-      "category": "debugging",
-      "title_en": "Input Errors",
-      "title_he": "שגיאות קלט",
-      "difficulty": 3,
-      "order_index": 14,
-      "concepts": ["TypeError with input", "ValueError", "type conversion"],
-      "source_file": "decode_error/exercise_2_input_errors.py"
-    },
-    {
-      "id": "module_0_basics.write_code.exercise_5_input",
-      "exercise_type": "write_code",
-      "category": "free_writing",
-      "title_en": "Input",
-      "title_he": "קלט",
-      "difficulty": 3,
-      "order_index": 15,
-      "concepts": ["input()", "type conversion", "interactive programs"],
-      "source_file": "write_code/exercise_5_input.py"
+      "title_he": "Program Flow",
+      "description_en": "Basics: Program Flow\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Program Flow\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "program_flow",
+        "dependencies",
+        "structure"
+      ],
+      "starter_code": "# =============================================================================\n# Code Ordering: Program Flow\n# =============================================================================\n# Difficulty: 2-3\n# Concepts: variable creation before use, order of operations, program sequence\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_CODE_ORDERING_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# ============================================================\n# {{ORDERING_1_TITLE}}\n# ============================================================\n# {{CONTEXT_ORDERING_1_NARRATIVE}}\n#\n# SCRAMBLED LINES:\n#   print(\"Final score:\", score)\n#   score = base + bonus\n#   bonus = 50\n#   base = 100\n\n\ndef challenge_a():\n    # ✏️ REORDER THE LINES ✏️\n    # Copy the lines above in the CORRECT order.\n    #\n    # Hint: You must create a variable before you can use it.\n    # What values do you need before you can calculate score?\n\n    pass  # Delete this and add the correctly ordered lines\n\n\n# ============================================================\n# {{ORDERING_2_TITLE}}\n# ============================================================\n# {{CONTEXT_ORDERING_2_NARRATIVE}}\n#\n# SCRAMBLED LINES:\n#   total = price * quantity\n#   print(\"{{hero}} pays:\", total)\n#   quantity = 4\n#   price = 25\n\n\ndef challenge_b():\n    # ✏️ REORDER THE LINES ✏️\n    #\n    # Hint: Think about what values the total calculation needs.\n    # price and quantity must exist before you multiply them.\n\n    pass\n\n\n# ============================================================\n# {{ORDERING_3_TITLE}}\n# ============================================================\n# {{CONTEXT_ORDERING_3_NARRATIVE}}\n#\n# SCRAMBLED LINES:\n#   print(\"{{hero}} has\", leftover, \"remaining\")\n#   leftover = total - spent\n#   spent = 30\n#   print(\"{{hero}} starts with\", total)\n#   total = 100\n\n\ndef challenge_c():\n    # ✏️ REORDER THE LINES ✏️\n    #\n    # Hint: There are TWO print statements. Consider when each should appear\n    # to tell the story in order: first the starting amount, then the result.\n\n    pass\n\n\n# ============================================================\n# {{ORDERING_4_TITLE}}\n# ============================================================\n# {{CONTEXT_ORDERING_4_NARRATIVE}}\n#\n# SCRAMBLED LINES:\n#   final = doubled ** 2\n#   print(\"Result:\", final)\n#   start = 3\n#   doubled = start * 2\n\n\ndef challenge_d():\n    # ✏️ REORDER THE LINES ✏️\n    #\n    # Hint: Each calculation depends on the previous one.\n    # start -> doubled -> final -> print\n\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_CODE_ORDERING_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{ORDERING_1_TITLE}} ===\")\n    # challenge_a()  # Uncomment when ordered correctly\n\n    print(\"\\n=== {{ORDERING_2_TITLE}} ===\")\n    # challenge_b()\n\n    print(\"\\n=== {{ORDERING_3_TITLE}} ===\")\n    # challenge_c()\n\n    print(\"\\n=== {{ORDERING_4_TITLE}} ===\")\n    # challenge_d()\n\n    print(\"\\nReorder each challenge, then uncomment to test!\")\n    print(\"{{CONTEXT_ROLE_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "code_ordering"
+      ],
+      "source_file": "module_0_basics/code_ordering/exercise_1_program_flow.py"
     },
     {
       "id": "module_0_basics.complete_function.exercise_1_format_output",
+      "topic_id": "basics.print",
       "exercise_type": "complete_function",
       "category": "scaffolded_writing",
+      "title": "Format Output",
       "title_en": "Format Output",
-      "title_he": "עיצוב פלט",
-      "difficulty": 4,
-      "order_index": 16,
-      "concepts": ["f-strings", "string formatting", "return values"],
-      "source_file": "complete_function/exercise_1_format_output.py"
+      "title_he": "Format Output",
+      "description_en": "Basics: Format Output\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Format Output\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "pattern_recognition",
+        "working_with_constraints"
+      ],
+      "starter_code": "# =============================================================================\n# Complete the Function: Format Output\n# =============================================================================\n# Difficulty: 4\n# Concepts: f-strings, string formatting, return values\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_COMPLETE_FUNCTION_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# ============================================================\n# {{FUNCTION_1_TITLE}}\n# ============================================================\n# {{CONTEXT_FUNCTION_1_NARRATIVE}}\n\n\ndef format_greeting(name, location):\n    \"\"\"\n    Create a formatted greeting message.\n\n    Args:\n        name: The person's name (string)\n        location: Where they are (string)\n\n    Returns:\n        A greeting string in the format: \"Hello, NAME! Welcome to LOCATION.\"\n\n    Examples:\n        >>> format_greeting(\"{{hero}}\", \"{{school}}\")\n        \"Hello, {{hero}}! Welcome to {{school}}.\"\n        >>> format_greeting(\"Maya\", \"Python Academy\")\n        \"Hello, Maya! Welcome to Python Academy.\"\n    \"\"\"\n    # ✏️ COMPLETE THIS FUNCTION ✏️\n    #\n    # Use an f-string to create the greeting.\n    # f-strings let you put variables inside curly braces: f\"Hello, {name}!\"\n    #\n    # Hint: The f goes BEFORE the opening quote.\n\n    pass  # Replace with: return f\"...\"\n\n\n# ============================================================\n# {{FUNCTION_2_TITLE}}\n# ============================================================\n# {{CONTEXT_FUNCTION_2_NARRATIVE}}\n\n\ndef format_stats(hero_name, health, gold):\n    \"\"\"\n    Create a formatted stats display.\n\n    Args:\n        hero_name: The character's name (string)\n        health: Current health points (integer)\n        gold: Amount of gold (integer)\n\n    Returns:\n        A stats string with the hero's name, health, and gold.\n\n    Examples:\n        >>> format_stats(\"{{hero}}\", 100, 50)\n        \"{{hero}} - HP: 100 | Gold: 50\"\n        >>> format_stats(\"Alex\", 75, 200)\n        \"Alex - HP: 75 | Gold: 200\"\n    \"\"\"\n    # ✏️ COMPLETE THIS FUNCTION ✏️\n    #\n    # Use an f-string with multiple variables.\n    # You can put any variable inside {braces}.\n    #\n    # Hint: Numbers work inside f-strings too!\n\n    pass\n\n\n# ============================================================\n# {{FUNCTION_3_TITLE}}\n# ============================================================\n# {{CONTEXT_FUNCTION_3_NARRATIVE}}\n\n\ndef format_calculation(num1, num2):\n    \"\"\"\n    Create a formatted calculation result.\n\n    Args:\n        num1: First number (integer)\n        num2: Second number (integer)\n\n    Returns:\n        A string showing the calculation and result.\n\n    Examples:\n        >>> format_calculation(10, 5)\n        \"10 + 5 = 15\"\n        >>> format_calculation(3, 7)\n        \"3 + 7 = 10\"\n    \"\"\"\n    # ✏️ COMPLETE THIS FUNCTION ✏️\n    #\n    # You can do math INSIDE the f-string braces!\n    # Example: f\"{a} + {b} = {a + b}\"\n    #\n    # Hint: The calculation happens when the f-string is created.\n\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_COMPLETE_FUNCTION_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== Testing {{FUNCTION_1_TITLE}} ===\")\n    result1 = format_greeting(\"{{hero}}\", \"{{school}}\")\n    print(\"Result:\", result1)\n    print(\"Expected: Hello, {{hero}}! Welcome to {{school}}.\")\n\n    print(\"\\n=== Testing {{FUNCTION_2_TITLE}} ===\")\n    result2 = format_stats(\"{{hero}}\", 100, 50)\n    print(\"Result:\", result2)\n    print(\"Expected: {{hero}} - HP: 100 | Gold: 50\")\n\n    print(\"\\n=== Testing {{FUNCTION_3_TITLE}} ===\")\n    result3 = format_calculation(10, 5)\n    print(\"Result:\", result3)\n    print(\"Expected: 10 + 5 = 15\")\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "complete_function"
+      ],
+      "source_file": "module_0_basics/complete_function/exercise_1_format_output.py"
     },
     {
-      "id": "module_0_basics.write_code.exercise_6_fstrings",
-      "exercise_type": "write_code",
-      "category": "free_writing",
-      "title_en": "F-Strings",
-      "title_he": "מחרוזות עיצוב",
-      "difficulty": 4,
-      "order_index": 17,
-      "concepts": ["f-string syntax", "expressions in f-strings", "formatting"],
-      "source_file": "write_code/exercise_6_fstrings.py"
-    },
-    {
-      "id": "module_0_basics.bug_hunt.exercise_1_basics_bugs",
-      "exercise_type": "bug_hunt",
+      "id": "module_0_basics.decode_error.exercise_1_string_errors",
+      "topic_id": "basics.print",
+      "exercise_type": "decode_error",
       "category": "debugging",
-      "title_en": "Basics Bugs",
-      "title_he": "באגים ביסודות",
-      "difficulty": 5,
-      "order_index": 18,
-      "concepts": ["All Module 0 concepts - integration debugging"],
-      "source_file": "bug_hunt/exercise_1_basics_bugs.py"
+      "title": "String Errors",
+      "title_en": "String Errors",
+      "title_he": "String Errors",
+      "description_en": "Basics: String Errors\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: String Errors\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "error_literacy",
+        "debugging",
+        "python_errors"
+      ],
+      "starter_code": "# =============================================================================\n# Decode the Error: String Errors\n# =============================================================================\n# Difficulty: 3\n# Concepts: TypeError, quote matching, string + number errors\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_DECODE_ERROR_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# ============================================================\n# {{ERROR_1_TITLE}}\n# ============================================================\n# {{CONTEXT_ERROR_1_NARRATIVE}}\n\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"program.py\", line 3, in <module>\n    message = \"Welcome to \" + school_name + \", \" + hero_name\nTypeError: can only concatenate str (not \"int\") to str\n\"\"\"\n\n\ndef buggy_code_a():\n    \"\"\"The code that caused the error\"\"\"\n    school_name = 42\n    hero_name = \"{{hero}}\"\n    message = \"Welcome to \" + school_name + \", \" + hero_name\n    print(message)\n\n\ndef fix_code_a():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    #\n    # Hint: Look at what type school_name is. Can you concatenate (+)\n    # a string with a number directly?\n    #\n    # Write the fixed code below:\n\n    pass\n\n\n# ============================================================\n# {{ERROR_2_TITLE}}\n# ============================================================\n# {{CONTEXT_ERROR_2_NARRATIVE}}\n\n\"\"\"\nERROR MESSAGE:\n--------------\n  File \"program.py\", line 2\n    greeting = \"Hello, {{hero}}!\n                                ^\nSyntaxError: unterminated string literal\n\"\"\"\n\n\ndef buggy_code_b():\n    \"\"\"The code that caused the error (this is a representation)\"\"\"\n    # The actual buggy code would be:\n    # greeting = \"Hello, {{hero}}!\n    # print(greeting)\n    pass\n\n\ndef fix_code_b():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    #\n    # Hint: String literals need both an opening and closing quote.\n    #\n    # Write the fixed code below:\n\n    pass\n\n\n# ============================================================\n# {{ERROR_3_TITLE}}\n# ============================================================\n# {{CONTEXT_ERROR_3_NARRATIVE}}\n\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"program.py\", line 3, in <module>\n    print(\"Score: \" + score)\nTypeError: can only concatenate str (not \"int\") to str\n\"\"\"\n\n\ndef buggy_code_c():\n    \"\"\"The code that caused the error\"\"\"\n    score = 100\n    print(\"Score: \" + score)\n\n\ndef fix_code_c():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    #\n    # Hint: There are two ways to fix this:\n    # 1. Convert score to a string using str()\n    # 2. Use a comma instead of + in print()\n    #\n    # Write the fixed code below (try both solutions!):\n\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_DECODE_ERROR_INTRO}}\")\n    print(\"=\" * 50)\n    print()\n    print(\"For each exercise:\")\n    print(\"1. Read the error message carefully\")\n    print(\"2. Identify what caused the error\")\n    print(\"3. Fix the code in the fix_code_X function\")\n    print()\n\n    print(\"=== {{ERROR_1_TITLE}} ===\")\n    # Uncomment to test after fixing:\n    # fix_code_a()\n\n    print(\"\\n=== {{ERROR_2_TITLE}} ===\")\n    # fix_code_b()\n\n    print(\"\\n=== {{ERROR_3_TITLE}} ===\")\n    # fix_code_c()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_INVESTIGATION_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "decode_error"
+      ],
+      "source_file": "module_0_basics/decode_error/exercise_1_string_errors.py"
+    },
+    {
+      "id": "module_0_basics.decode_error.exercise_2_input_errors",
+      "topic_id": "basics.print",
+      "exercise_type": "decode_error",
+      "category": "debugging",
+      "title": "Input Errors",
+      "title_en": "Input Errors",
+      "title_he": "Input Errors",
+      "description_en": "Basics: Input Errors\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Input Errors\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "error_literacy",
+        "debugging",
+        "python_errors"
+      ],
+      "starter_code": "# =============================================================================\n# Decode the Error: Input Errors\n# =============================================================================\n# Difficulty: 3-4\n# Concepts: TypeError with input, ValueError, type conversion\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_DECODE_ERROR_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# ============================================================\n# {{ERROR_1_TITLE}}\n# ============================================================\n# {{CONTEXT_ERROR_1_NARRATIVE}}\n\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"program.py\", line 3, in <module>\n    total = price + 10\nTypeError: can only concatenate str (not \"int\") to str\n\"\"\"\n\n\ndef buggy_code_a():\n    \"\"\"The code that caused the error\"\"\"\n    price = input(\"Enter price: \")\n    total = price + 10\n    print(\"With tax:\", total)\n\n\ndef fix_code_a():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    #\n    # Hint: What type does input() return? What type do we need for math?\n    #\n    # Write the fixed code below:\n\n    pass\n\n\n# ============================================================\n# {{ERROR_2_TITLE}}\n# ============================================================\n# {{CONTEXT_ERROR_2_NARRATIVE}}\n\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"program.py\", line 2, in <module>\n    age = int(age_text)\nValueError: invalid literal for int() with base 10: 'twenty'\n\"\"\"\n\n\ndef buggy_code_b():\n    \"\"\"The code that caused the error\"\"\"\n    age_text = \"twenty\"  # Simulating user typing \"twenty\"\n    age = int(age_text)\n    print(\"Age:\", age)\n\n\ndef fix_code_b():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    #\n    # Hint: int() can only convert strings that contain digits like \"20\".\n    # The word \"twenty\" cannot be converted to a number.\n    #\n    # Note: This error happens when a user types text instead of numbers.\n    # For this exercise, change the input to a valid number string.\n    #\n    # Write the fixed code below:\n\n    pass\n\n\n# ============================================================\n# {{ERROR_3_TITLE}}\n# ============================================================\n# {{CONTEXT_ERROR_3_NARRATIVE}}\n\n\"\"\"\nERROR MESSAGE:\n--------------\nTraceback (most recent call last):\n  File \"program.py\", line 4, in <module>\n    result = num1 + num2\nTypeError: can only concatenate str (not \"str\") to str\n\"\"\"\n\n\ndef buggy_code_c():\n    \"\"\"The code that caused the error\"\"\"\n    num1 = input(\"First number: \")\n    num2 = input(\"Second number: \")\n    result = num1 + num2\n    print(\"Sum:\", result)\n\n\ndef fix_code_c():\n    # ✏️ FIX THE CODE ✏️\n    #\n    # The error occurred because: _______________\n    #\n    # Hint: If user types 5 and 3, the current code would print \"53\"\n    # because it concatenates strings instead of adding numbers!\n    #\n    # Write the fixed code below:\n\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_DECODE_ERROR_INTRO}}\")\n    print(\"=\" * 50)\n    print()\n    print(\"For each exercise:\")\n    print(\"1. Read the error message carefully\")\n    print(\"2. Identify what caused the error\")\n    print(\"3. Fix the code in the fix_code_X function\")\n    print()\n\n    print(\"=== {{ERROR_1_TITLE}} ===\")\n    # Uncomment to test after fixing:\n    # fix_code_a()\n\n    print(\"\\n=== {{ERROR_2_TITLE}} ===\")\n    # fix_code_b()\n\n    print(\"\\n=== {{ERROR_3_TITLE}} ===\")\n    # fix_code_c()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_INVESTIGATION_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "decode_error"
+      ],
+      "source_file": "module_0_basics/decode_error/exercise_2_input_errors.py"
+    },
+    {
+      "id": "module_0_basics.fill_blanks.exercise_1_variables",
+      "topic_id": "basics.print",
+      "exercise_type": "fill_blanks",
+      "category": "scaffolded_writing",
+      "title": "Variables",
+      "title_en": "Variables",
+      "title_he": "Variables",
+      "description_en": "Basics: Variables\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Variables\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "syntax_recall",
+        "code_structure",
+        "vocabulary"
+      ],
+      "starter_code": "# =============================================================================\n# Fill in the Blanks: Variables\n# =============================================================================\n# Difficulty: 2\n# Concepts: variable assignment, naming, using variables in print\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_FILL_BLANKS_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# --- {{EXERCISE_1_TITLE}} ---\n# {{CONTEXT_EXERCISE_1_NARRATIVE}}\n\n\ndef exercise_a():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Create a variable to store {{hero}}'s name.\n    #\n    # Hint: Use the = sign to assign a value to a variable.\n    #\n    # hero_name ___ \"{{hero}}\"     # Fill in the assignment operator\n    # print(hero_name)\n    pass\n\n\n# --- {{EXERCISE_2_TITLE}} ---\n# {{CONTEXT_EXERCISE_2_NARRATIVE}}\n\n\ndef exercise_b():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Store information about {{school}}.\n    #\n    # Hint: Variable names should be descriptive and use underscores.\n    #\n    # school_name = \"{{school}}\"\n    # ___ = 100                    # Number of students (choose a good variable name)\n    # print(school_name)\n    # print(student_count)\n    pass\n\n\n# --- {{EXERCISE_3_TITLE}} ---\n# {{CONTEXT_EXERCISE_3_NARRATIVE}}\n\n\ndef exercise_c():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Use variables in print statements.\n    #\n    # Hint: Don't use quotes around variable names when printing them.\n    #\n    # item = \"{{item}}\"\n    # owner = \"{{hero}}\"\n    # print(___)                   # Print the item variable\n    # print(\"belongs to\", ___)     # Print the owner variable\n    pass\n\n\n# --- {{EXERCISE_4_TITLE}} ---\n# {{CONTEXT_EXERCISE_4_NARRATIVE}}\n\n\ndef exercise_d():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Change a variable's value.\n    #\n    # Hint: You can assign a new value to an existing variable.\n    #\n    # points = 0\n    # print(\"Starting points:\", points)\n    # points ___ 10                # Assign 10 to points\n    # print(\"After bonus:\", points)\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_FILL_BLANKS_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{EXERCISE_1_TITLE}} ===\")\n    # exercise_a()  # Uncomment when you've filled the blanks\n\n    print(\"\\n=== {{EXERCISE_2_TITLE}} ===\")\n    # exercise_b()\n\n    print(\"\\n=== {{EXERCISE_3_TITLE}} ===\")\n    # exercise_c()\n\n    print(\"\\n=== {{EXERCISE_4_TITLE}} ===\")\n    # exercise_d()\n\n    print(\"\\nFill in all the blanks, then uncomment to test!\")\n    print(\"{{CONTEXT_ROLE_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "fill_blanks"
+      ],
+      "source_file": "module_0_basics/fill_blanks/exercise_1_variables.py"
+    },
+    {
+      "id": "module_0_basics.fill_blanks.exercise_2_input",
+      "topic_id": "basics.print",
+      "exercise_type": "fill_blanks",
+      "category": "scaffolded_writing",
+      "title": "Input",
+      "title_en": "Input",
+      "title_he": "Input",
+      "description_en": "Basics: Input\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Input\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "syntax_recall",
+        "code_structure",
+        "vocabulary"
+      ],
+      "starter_code": "# =============================================================================\n# Fill in the Blanks: Input\n# =============================================================================\n# Difficulty: 3-4\n# Concepts: input() function, type conversion, int(), str()\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_FILL_BLANKS_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# --- {{EXERCISE_1_TITLE}} ---\n# {{CONTEXT_EXERCISE_1_NARRATIVE}}\n\n\ndef exercise_a():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Get {{hero}}'s name from the user.\n    #\n    # Hint: Use the input() function to get text from the user.\n    #\n    # name = ___(\"What is your name? \")    # Fill in the function name\n    # print(\"Hello,\", name)\n    pass\n\n\n# --- {{EXERCISE_2_TITLE}} ---\n# {{CONTEXT_EXERCISE_2_NARRATIVE}}\n\n\ndef exercise_b():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Get {{hero}}'s age and store it as a number.\n    #\n    # Hint: input() always returns a string. Use int() to convert to a number.\n    #\n    # age_text = input(\"How old are you? \")\n    # age = ___(age_text)                  # Convert string to integer\n    # print(\"Next year you will be\", age + 1)\n    pass\n\n\n# --- {{EXERCISE_3_TITLE}} ---\n# {{CONTEXT_EXERCISE_3_NARRATIVE}}\n\n\ndef exercise_c():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Get the price of a {{item}} and calculate the total.\n    #\n    # Hint: You can wrap input() directly with int().\n    #\n    # price = ___(input(\"Enter the price: \"))    # Convert input directly\n    # quantity = 3\n    # total = price ___ quantity                  # Multiply price by quantity\n    # print(\"Total:\", total)\n    pass\n\n\n# --- {{EXERCISE_4_TITLE}} ---\n# {{CONTEXT_EXERCISE_4_NARRATIVE}}\n\n\ndef exercise_d():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Create a personalized welcome for {{school}}.\n    #\n    # Hint: Combine input() with string concatenation.\n    #\n    # name = input(\"Enter your name: \")\n    # print(\"Welcome to {{school}}, \" ___ name ___ \"!\")    # Join strings\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_FILL_BLANKS_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{EXERCISE_1_TITLE}} ===\")\n    # exercise_a()  # Uncomment when you've filled the blanks\n\n    print(\"\\n=== {{EXERCISE_2_TITLE}} ===\")\n    # exercise_b()\n\n    print(\"\\n=== {{EXERCISE_3_TITLE}} ===\")\n    # exercise_c()\n\n    print(\"\\n=== {{EXERCISE_4_TITLE}} ===\")\n    # exercise_d()\n\n    print(\"\\nFill in all the blanks, then uncomment to test!\")\n    print(\"{{CONTEXT_ROLE_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "fill_blanks"
+      ],
+      "source_file": "module_0_basics/fill_blanks/exercise_2_input.py"
     },
     {
       "id": "module_0_basics.fix_style.exercise_1_naming",
+      "topic_id": "basics.print",
       "exercise_type": "fix_style",
       "category": "improvement",
-      "title_en": "Naming Conventions",
-      "title_he": "מוסכמות שמות",
-      "difficulty": 5,
-      "order_index": 19,
-      "concepts": ["PEP 8 naming", "readable code", "meaningful variable names"],
-      "source_file": "fix_style/exercise_1_naming.py"
+      "title": "Naming",
+      "title_en": "Naming",
+      "title_he": "Naming",
+      "description_en": "Basics: Naming\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Naming\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 8,
+      "skills": [
+        "pep8",
+        "readability",
+        "conventions",
+        "code_quality"
+      ],
+      "starter_code": "# =============================================================================\n# Fix the Style: Naming Conventions\n# =============================================================================\n# Difficulty: 5\n# Concepts: PEP 8 naming, readable code, meaningful variable names\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_FIX_STYLE_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# ============================================================\n# {{STYLE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_STYLE_1_NARRATIVE}}\n\n\ndef original_a():\n    \"\"\"ORIGINAL - This code works but has style issues\"\"\"\n    x = \"{{hero}}\"\n    y = \"{{school}}\"\n    z = 100\n    print(x, \"studies at\", y, \"with\", z, \"points\")\n\n\ndef fixed_a():\n    # ✏️ FIX THE STYLE ✏️\n    #\n    # {{CONTEXT_STYLE_FIX_1}}\n    #\n    # Rewrite the code above with proper style.\n    # Changes to make:\n    # - Rename x to something meaningful (like hero_name)\n    # - Rename y to something meaningful (like school_name)\n    # - Rename z to something meaningful (like points)\n    #\n    # The output should be exactly the same!\n\n    pass\n\n\n# ============================================================\n# {{STYLE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_STYLE_2_NARRATIVE}}\n\n\ndef original_b():\n    \"\"\"ORIGINAL - This code works but has style issues\"\"\"\n    a=10\n    b=5\n    c=a+b\n    d=a*b\n    print(\"Sum:\",c,\"Product:\",d)\n\n\ndef fixed_b():\n    # ✏️ FIX THE STYLE ✏️\n    #\n    # {{CONTEXT_STYLE_FIX_2}}\n    #\n    # Changes to make:\n    # - Add spaces around = signs\n    # - Add spaces around + and * operators\n    # - Add spaces after colons in the print statement\n    # - Use meaningful variable names\n\n    pass\n\n\n# ============================================================\n# {{STYLE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_STYLE_3_NARRATIVE}}\n\n\ndef original_c():\n    \"\"\"ORIGINAL - This code works but has style issues\"\"\"\n    n = \"{{hero}}\"\n    l = 5\n    h = 100\n    g = 50\n    print(n)\n    print(\"Level:\" + str(l))\n    print(\"HP:\" + str(h))\n    print(\"Gold:\" + str(g))\n\n\ndef fixed_c():\n    # ✏️ FIX THE STYLE ✏️\n    #\n    # {{CONTEXT_STYLE_FIX_3}}\n    #\n    # Changes to make:\n    # - Use meaningful variable names (name, level, health, gold)\n    # - Use f-strings instead of concatenation\n    # - Add spaces after colons in output\n\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_FIX_STYLE_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{STYLE_1_TITLE}} ===\")\n    print(\"Original (poor style):\")\n    original_a()\n    print(\"\\nFixed (your version):\")\n    fixed_a()\n\n    print(\"\\n=== {{STYLE_2_TITLE}} ===\")\n    print(\"Original (poor style):\")\n    original_b()\n    print(\"\\nFixed (your version):\")\n    fixed_b()\n\n    print(\"\\n=== {{STYLE_3_TITLE}} ===\")\n    print(\"Original (poor style):\")\n    original_c()\n    print(\"\\nFixed (your version):\")\n    fixed_c()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_IMPROVEMENT_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "fix_style"
+      ],
+      "source_file": "module_0_basics/fix_style/exercise_1_naming.py"
+    },
+    {
+      "id": "module_0_basics.hybrid.exercise_1_apprentice_variables",
+      "topic_id": "basics.print",
+      "exercise_type": "hybrid",
+      "category": "hybrid",
+      "title": "Apprentice Variables",
+      "title_en": "Apprentice Variables",
+      "title_he": "Apprentice Variables",
+      "description_en": "Basics: Apprentice Variables\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Apprentice Variables\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 15,
+      "skills": [
+        "mental_execution",
+        "syntax_recall",
+        "implementation",
+        "pattern_recognition",
+        "independence"
+      ],
+      "starter_code": "# =============================================================================\n# Hybrid Exercise: The Apprentice - Variables and Strings\n# =============================================================================\n# Difficulty: 3\n# Arc: The Apprentice\n# Parts: DISCOVERY -> GUIDANCE -> GROWTH\n# Concepts: variables, strings, concatenation, printing\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_DISCOVERY_INTRO}}\n\nThis is a multi-part exercise. Complete each part in order.\n\"\"\"\n\n\n# ============================================================\n# PART 1: DISCOVERY - Study the Master's Work\n# ============================================================\n# {{CONTEXT_DISCOVERY_NARRATIVE}}\n#\n# Study how {{hero}}'s mentor uses variables and strings.\n# Predict the output before running the code.\n\n\ndef master_code_1():\n    \"\"\"DO NOT MODIFY - Study and predict\"\"\"\n    title = \"Apprentice\"\n    name = \"{{hero}}\"\n    full_title = title + \" \" + name\n    print(full_title)\n\n\ndef master_code_2():\n    \"\"\"DO NOT MODIFY - Study and predict\"\"\"\n    school = \"{{school}}\"\n    year = 1\n    print(school, \"- Year\", year)\n\n\ndef master_code_3():\n    \"\"\"DO NOT MODIFY - Study and predict\"\"\"\n    item = \"{{item}}\"\n    owner = \"{{hero}}\"\n    description = \"The \" + item + \" belongs to \" + owner\n    print(description)\n\n\ndef your_predictions():\n    # ✏️ YOUR PREDICTIONS HERE ✏️\n    #\n    # Write EXACTLY what each master_code function will print.\n    #\n    # master_code_1 output: _______________\n    # master_code_2 output: _______________\n    # master_code_3 output: _______________\n    #\n    # Hint: Pay attention to spaces - where do they come from?\n    pass\n\n\n# ============================================================\n# PART 2: GUIDANCE - Practice with Support\n# ============================================================\n# {{CONTEXT_GUIDANCE_INTRO}}\n# {{CONTEXT_GUIDANCE_NARRATIVE}}\n#\n# Now practice with some scaffolding to help you.\n\n\ndef guided_exercise_a():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Create and use variables like the master did.\n    #\n    # role = \"Guardian\"\n    # hero = \"{{hero}}\"\n    # title = role ___ \" \" ___ hero     # Fill in the operator to join strings\n    # print(title)\n    #\n    # Hint: Use + to concatenate (join) strings.\n    pass\n\n\ndef guided_exercise_b():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Print multiple items with automatic spacing.\n    #\n    # location = \"{{school}}\"\n    # status = \"training\"\n    # print(___,  \"is now\", ___)        # Fill in the variable names\n    #\n    # Hint: Print the location and status variables.\n    pass\n\n\n# ============================================================\n# PART 3: GROWTH - Create Your Own\n# ============================================================\n# {{CONTEXT_GROWTH_INTRO}}\n# {{CONTEXT_GROWTH_NARRATIVE}}\n#\n# Now create your own code using what you've learned!\n\n\ndef your_creation_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a character introduction.\n    #\n    # Step 1: Create a variable `hero_name` with value \"{{hero}}\"\n    # Step 2: Create a variable `class_type` with value \"{{ROLE_TITLE}}\"\n    # Step 3: Create a variable `intro` that combines:\n    #         hero_name + \" the \" + class_type\n    # Step 4: Print the intro\n    #\n    # Expected output: {{hero}} the {{ROLE_TITLE}}\n    pass\n\n\ndef your_creation_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a status report for {{hero}}.\n    #\n    # Step 1: Create `location` with value \"{{school}}\"\n    # Step 2: Create `health` with value 100 (a number!)\n    # Step 3: Create `gold` with value 50 (a number!)\n    # Step 4: Print using commas: \"Location:\", location\n    # Step 5: Print using commas: \"Health:\", health, \"Gold:\", gold\n    #\n    # Expected output:\n    # Location: {{school}}\n    # Health: 100 Gold: 50\n    pass\n\n\ndef main():\n    print(\"=\" * 50)\n    print(\"PART 1: DISCOVERY - Study the Master's Work\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- master_code_1 ---\")\n    master_code_1()\n\n    print(\"\\n--- master_code_2 ---\")\n    master_code_2()\n\n    print(\"\\n--- master_code_3 ---\")\n    master_code_3()\n\n    print(\"\\n--- Your Predictions ---\")\n    your_predictions()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"PART 2: GUIDANCE - Practice with Support\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- guided_exercise_a ---\")\n    # guided_exercise_a()  # Uncomment when blanks are filled\n\n    print(\"\\n--- guided_exercise_b ---\")\n    # guided_exercise_b()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"PART 3: GROWTH - Create Your Own\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- your_creation_a ---\")\n    your_creation_a()\n\n    print(\"\\n--- your_creation_b ---\")\n    your_creation_b()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_TRIUMPH_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "hybrid"
+      ],
+      "source_file": "module_0_basics/hybrid/exercise_1_apprentice_variables.py"
     },
     {
       "id": "module_0_basics.hybrid.exercise_2_apprentice_program",
+      "topic_id": "basics.print",
       "exercise_type": "hybrid",
-      "category": "integration",
-      "title_en": "The Apprentice: Complete Program",
-      "title_he": "החניך: תוכנית מלאה",
-      "difficulty": 5,
-      "order_index": 20,
-      "concepts": ["All Module 0 - variables, strings, numbers, input, f-strings"],
-      "arc": "apprentice",
-      "parts": ["DISCOVERY", "GUIDANCE", "GROWTH"],
-      "source_file": "hybrid/exercise_2_apprentice_program.py"
+      "category": "hybrid",
+      "title": "Apprentice Program",
+      "title_en": "Apprentice Program",
+      "title_he": "Apprentice Program",
+      "description_en": "Basics: Apprentice Program\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Apprentice Program\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 15,
+      "skills": [
+        "mental_execution",
+        "syntax_recall",
+        "implementation",
+        "pattern_recognition",
+        "independence"
+      ],
+      "starter_code": "# =============================================================================\n# Hybrid Exercise: The Apprentice - Complete Program\n# =============================================================================\n# Difficulty: 4-5\n# Arc: The Apprentice\n# Parts: DISCOVERY -> GUIDANCE -> GROWTH\n# Concepts: All Module 0 - variables, strings, numbers, input, f-strings\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_DISCOVERY_INTRO}}\n\nThis is a multi-part exercise. Complete each part in order.\nYou will study a complete program, practice with guidance, then build your own!\n\"\"\"\n\n\n# ============================================================\n# PART 1: DISCOVERY - Study the Master's Program\n# ============================================================\n# {{CONTEXT_DISCOVERY_NARRATIVE}}\n#\n# Study this complete character creator program.\n# Predict what it will do before running it.\n\n\ndef master_program():\n    \"\"\"DO NOT MODIFY - Study and predict\"\"\"\n    # Character setup\n    name = \"{{hero}}\"\n    character_class = \"Apprentice\"\n\n    # Stats\n    health = 100\n    strength = 10\n    defense = 8\n\n    # Calculated stats\n    power = strength + defense\n\n    # Display character sheet\n    print(f\"=== {name} the {character_class} ===\")\n    print(f\"Health: {health}\")\n    print(f\"Strength: {strength}\")\n    print(f\"Defense: {defense}\")\n    print(f\"Power Rating: {power}\")\n    print(\"=\" * 30)\n\n\ndef your_predictions():\n    # ✏️ YOUR PREDICTIONS HERE ✏️\n    #\n    # Before running master_program(), predict:\n    #\n    # 1. How many lines will be printed? ___\n    # 2. What will the Power Rating be? ___\n    # 3. What type of quotes does the program use for output? ___\n    #\n    # Run the program to check your predictions!\n    pass\n\n\n# ============================================================\n# PART 2: GUIDANCE - Practice with Scaffolding\n# ============================================================\n# {{CONTEXT_GUIDANCE_INTRO}}\n# {{CONTEXT_GUIDANCE_NARRATIVE}}\n#\n# Complete these functions by filling in the missing parts.\n\n\ndef guided_character_header(name, title):\n    \"\"\"\n    Create a character header.\n\n    Args:\n        name: The character's name\n        title: The character's title\n\n    Returns:\n        A formatted header string\n\n    Example:\n        >>> guided_character_header(\"{{hero}}\", \"{{ROLE_TITLE}}\")\n        \"=== {{hero}} the {{ROLE_TITLE}} ===\"\n    \"\"\"\n    # ✏️ COMPLETE THIS FUNCTION ✏️\n    #\n    # Use an f-string to create the header.\n    # Pattern: \"=== {name} the {title} ===\"\n\n    pass\n\n\ndef guided_stat_line(stat_name, stat_value):\n    \"\"\"\n    Create a stat display line.\n\n    Args:\n        stat_name: Name of the stat (like \"Health\")\n        stat_value: Value of the stat (like 100)\n\n    Returns:\n        A formatted stat string\n\n    Example:\n        >>> guided_stat_line(\"Health\", 100)\n        \"Health: 100\"\n    \"\"\"\n    # ✏️ COMPLETE THIS FUNCTION ✏️\n    #\n    # Use an f-string: f\"{stat_name}: {stat_value}\"\n\n    pass\n\n\n# ============================================================\n# PART 3: GROWTH - Create Your Own\n# ============================================================\n# {{CONTEXT_GROWTH_INTRO}}\n# {{CONTEXT_GROWTH_NARRATIVE}}\n#\n# Now create your own character creator from scratch!\n\n\ndef my_character_creator():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create your own character profile program!\n    #\n    # Requirements:\n    # 1. Create at least 5 variables (name, class, and 3+ stats)\n    # 2. Calculate at least one derived stat (like power = str + def)\n    # 3. Use f-strings for all output\n    # 4. Print a header with the character's name and class\n    # 5. Print all stats in a formatted way\n    # 6. Print a separator line at the end\n    #\n    # Example output:\n    # === Maya the {{ROLE_TITLE}} ===\n    # Health: 120\n    # Strength: 15\n    # Defense: 12\n    # Speed: 8\n    # Total Power: 27\n    # ==============================\n    #\n    # Be creative! Add your own stats and style.\n\n    pass\n\n\ndef my_interactive_creator():\n    # ✏️ BONUS CHALLENGE ✏️\n    #\n    # Make an INTERACTIVE version that asks the user for input!\n    #\n    # Use input() to ask for:\n    # - Character name\n    # - Character class\n    # - At least one stat value\n    #\n    # Then display the character sheet using f-strings.\n    #\n    # Example interaction:\n    # Enter character name: Luna\n    # Enter character class: {{ROLE_TITLE}}\n    # Enter power level: 25\n    #\n    # === Luna the {{ROLE_TITLE}} ===\n    # Power Level: 25\n    # (etc...)\n\n    pass\n\n\ndef main():\n    print(\"=\" * 50)\n    print(\"PART 1: DISCOVERY - Study the Master's Program\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- master_program output ---\")\n    master_program()\n\n    print(\"\\n--- Your Predictions ---\")\n    your_predictions()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"PART 2: GUIDANCE - Practice with Scaffolding\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- Testing guided_character_header ---\")\n    result1 = guided_character_header(\"{{hero}}\", \"{{ROLE_TITLE}}\")\n    print(\"Result:\", result1)\n    print(\"Expected: === {{hero}} the {{ROLE_TITLE}} ===\")\n\n    print(\"\\n--- Testing guided_stat_line ---\")\n    result2 = guided_stat_line(\"Health\", 100)\n    print(\"Result:\", result2)\n    print(\"Expected: Health: 100\")\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"PART 3: GROWTH - Create Your Own\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- my_character_creator ---\")\n    my_character_creator()\n\n    print(\"\\n--- my_interactive_creator (BONUS) ---\")\n    # Uncomment to test interactive version:\n    # my_interactive_creator()\n    print(\"(Uncomment the line above to test!)\")\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_TRIUMPH_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "hybrid"
+      ],
+      "source_file": "module_0_basics/hybrid/exercise_2_apprentice_program.py"
+    },
+    {
+      "id": "module_0_basics.match_output.exercise_1_string_output",
+      "topic_id": "basics.print",
+      "exercise_type": "match_output",
+      "category": "reading",
+      "title": "String Output",
+      "title_en": "String Output",
+      "title_he": "String Output",
+      "description_en": "Basics: String Output\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: String Output\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "pattern_recognition",
+        "quick_reading",
+        "comparison"
+      ],
+      "starter_code": "# =============================================================================\n# Match the Output: String Operations\n# =============================================================================\n# Difficulty: 3\n# Concepts: string concatenation, print with commas vs plus\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_MATCH_OUTPUT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# ============================================================\n# {{MATCH_SET_1_TITLE}}\n# ============================================================\n# {{CONTEXT_MATCH_SET_1_NARRATIVE}}\n\n# --- CODE SNIPPETS ---\n\n\ndef snippet_1():\n    name = \"{{hero}}\"\n    print(\"Hello \" + name)\n\n\ndef snippet_2():\n    name = \"{{hero}}\"\n    print(\"Hello\", name)\n\n\ndef snippet_3():\n    name = \"{{hero}}\"\n    print(\"Hello\" + name)\n\n\n# --- POSSIBLE OUTPUTS ---\n\"\"\"\nOUTPUT A:\n---------\nHello {{hero}}\n\nOUTPUT B:\n---------\nHello{{hero}}\n\nOUTPUT C:\n---------\nHello  {{hero}}\n\"\"\"\n\n\n# --- YOUR ANSWERS ---\n\n\ndef your_matches_set1():\n    # ✏️ MATCH SNIPPETS TO OUTPUTS ✏️\n    #\n    # Write the letter (A, B, or C) that matches each snippet.\n    #\n    # Hint: The + operator joins strings exactly as they are.\n    # The comma in print() adds a space between items.\n\n    matches = {\n        \"snippet_1\": \"?\",\n        \"snippet_2\": \"?\",\n        \"snippet_3\": \"?\",\n    }\n\n    return matches\n\n\n# ============================================================\n# {{MATCH_SET_2_TITLE}}\n# ============================================================\n# {{CONTEXT_MATCH_SET_2_NARRATIVE}}\n\n# --- CODE SNIPPETS ---\n\n\ndef snippet_4():\n    item = \"{{item}}\"\n    count = 5\n    print(item, count)\n\n\ndef snippet_5():\n    item = \"{{item}}\"\n    count = 5\n    print(item + str(count))\n\n\ndef snippet_6():\n    item = \"{{item}}\"\n    count = 5\n    print(item + \" \" + str(count))\n\n\n# --- POSSIBLE OUTPUTS ---\n\"\"\"\nOUTPUT D:\n---------\n{{item}}5\n\nOUTPUT E:\n---------\n{{item}} 5\n\nOUTPUT F:\n---------\n{{item}}  5\n\"\"\"\n\n\n# --- YOUR ANSWERS ---\n\n\ndef your_matches_set2():\n    # ✏️ MATCH SNIPPETS TO OUTPUTS ✏️\n    #\n    # Hint: When using + with strings and numbers, you must convert\n    # the number to a string first using str().\n\n    matches = {\n        \"snippet_4\": \"?\",\n        \"snippet_5\": \"?\",\n        \"snippet_6\": \"?\",\n    }\n\n    return matches\n\n\ndef main():\n    print(\"{{CONTEXT_MATCH_OUTPUT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{MATCH_SET_1_TITLE}} ===\")\n    print(\"\\nSnippet 1 output:\")\n    snippet_1()\n    print(\"\\nSnippet 2 output:\")\n    snippet_2()\n    print(\"\\nSnippet 3 output:\")\n    snippet_3()\n    print(\"\\nYour matches:\", your_matches_set1())\n\n    print(\"\\n=== {{MATCH_SET_2_TITLE}} ===\")\n    print(\"\\nSnippet 4 output:\")\n    snippet_4()\n    print(\"\\nSnippet 5 output:\")\n    snippet_5()\n    print(\"\\nSnippet 6 output:\")\n    snippet_6()\n    print(\"\\nYour matches:\", your_matches_set2())\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "match_output"
+      ],
+      "source_file": "module_0_basics/match_output/exercise_1_string_output.py"
+    },
+    {
+      "id": "module_0_basics.output_prediction.exercise_1_print_basics",
+      "topic_id": "basics.print",
+      "exercise_type": "output_prediction",
+      "category": "reading",
+      "title": "Print Basics",
+      "title_en": "Print Basics",
+      "title_he": "Print Basics",
+      "description_en": "Basics: Print Basics\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Print Basics\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "mental_execution",
+        "program_flow",
+        "tracing"
+      ],
+      "starter_code": "# =============================================================================\n# Output Prediction: Print Basics\n# =============================================================================\n# Difficulty: 1\n# Concepts: print() function, string literals, commas in print\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PREDICTION_INTRO}}\n{{CONTEXT_PREDICTION_PURPOSE}}\n\"\"\"\n\n\n# --- {{CHALLENGE_1_TITLE}} ---\n# {{CONTEXT_CHALLENGE_1_NARRATIVE}}\n\n\ndef challenge_a_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    print(\"Hello, world!\")\n    print(\"Welcome to {{school}}\")\n\n\ndef challenge_a_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Line 1: _______________\n    # Line 2: _______________\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_1}}\n    pass\n\n\n# --- {{CHALLENGE_2_TITLE}} ---\n# {{CONTEXT_CHALLENGE_2_NARRATIVE}}\n\n\ndef challenge_b_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    print(\"{{hero}}\", \"is learning\")\n    print(\"Python\" + \" programming\")\n\n\ndef challenge_b_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Line 1: _______________\n    # Line 2: _______________\n    #\n    # Hint: Notice the difference between comma (,) and plus (+).\n    # Comma adds a space between items, plus joins them directly.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_2}}\n    pass\n\n\n# --- {{CHALLENGE_3_TITLE}} ---\n# {{CONTEXT_CHALLENGE_3_NARRATIVE}}\n\n\ndef challenge_c_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    message = \"{{greeting}}\"\n    print(message)\n    print(\"message\")\n\n\ndef challenge_c_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Line 1: _______________\n    # Line 2: _______________\n    #\n    # Hint: Notice the difference between a variable name (no quotes)\n    # and a string literal (with quotes).\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_3}}\n    pass\n\n\ndef main():\n    print(\"=== {{CHALLENGE_1_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_a_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_a_prediction()\n\n    print(\"\\n=== {{CHALLENGE_2_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_b_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_b_prediction()\n\n    print(\"\\n=== {{CHALLENGE_3_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_c_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_c_prediction()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "output_prediction"
+      ],
+      "source_file": "module_0_basics/output_prediction/exercise_1_print_basics.py"
+    },
+    {
+      "id": "module_0_basics.output_prediction.exercise_2_arithmetic",
+      "topic_id": "basics.print",
+      "exercise_type": "output_prediction",
+      "category": "reading",
+      "title": "Arithmetic",
+      "title_en": "Arithmetic",
+      "title_he": "Arithmetic",
+      "description_en": "Basics: Arithmetic\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Arithmetic\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "mental_execution",
+        "program_flow",
+        "tracing"
+      ],
+      "starter_code": "# =============================================================================\n# Output Prediction: Arithmetic\n# =============================================================================\n# Difficulty: 2-3\n# Concepts: arithmetic operators, order of operations, integer vs float division\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PREDICTION_INTRO}}\n{{CONTEXT_PREDICTION_PURPOSE}}\n\"\"\"\n\n\n# --- {{CHALLENGE_1_TITLE}} ---\n# {{CONTEXT_CHALLENGE_1_NARRATIVE}}\n\n\ndef challenge_a_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    gold = 100\n    spent = 25\n    remaining = gold - spent\n    print(remaining)\n\n\ndef challenge_a_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Output: _______________\n    #\n    # Hint: Subtraction works just like in math.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_1}}\n    pass\n\n\n# --- {{CHALLENGE_2_TITLE}} ---\n# {{CONTEXT_CHALLENGE_2_NARRATIVE}}\n\n\ndef challenge_b_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    items = 3\n    price = 10\n    total = items * price\n    print(\"Total cost:\", total)\n\n\ndef challenge_b_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Output: _______________\n    #\n    # Hint: The * symbol means multiplication.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_2}}\n    pass\n\n\n# --- {{CHALLENGE_3_TITLE}} ---\n# {{CONTEXT_CHALLENGE_3_NARRATIVE}}\n\n\ndef challenge_c_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    cookies = 10\n    people = 3\n    each_gets = cookies // people\n    leftover = cookies % people\n    print(\"Each person gets:\", each_gets)\n    print(\"Leftover:\", leftover)\n\n\ndef challenge_c_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Line 1: _______________\n    # Line 2: _______________\n    #\n    # Hint: // gives the whole number part of division.\n    # % gives the remainder after division.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_3}}\n    pass\n\n\n# --- {{CHALLENGE_4_TITLE}} ---\n# {{CONTEXT_CHALLENGE_4_NARRATIVE}}\n\n\ndef challenge_d_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    base = 2\n    power = base ** 3\n    print(power)\n\n\ndef challenge_d_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Output: _______________\n    #\n    # Hint: ** means exponentiation (power).\n    # 2 ** 3 means 2 * 2 * 2\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_4}}\n    pass\n\n\n# --- {{CHALLENGE_5_TITLE}} ---\n# {{CONTEXT_CHALLENGE_5_NARRATIVE}}\n\n\ndef challenge_e_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    result = 2 + 3 * 4\n    print(result)\n\n\ndef challenge_e_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Write EXACTLY what you think will be printed above.\n    #\n    # Output: _______________\n    #\n    # Hint: Python follows math order of operations.\n    # Multiplication happens before addition.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_5}}\n    pass\n\n\ndef main():\n    print(\"=== {{CHALLENGE_1_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_a_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_a_prediction()\n\n    print(\"\\n=== {{CHALLENGE_2_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_b_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_b_prediction()\n\n    print(\"\\n=== {{CHALLENGE_3_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_c_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_c_prediction()\n\n    print(\"\\n=== {{CHALLENGE_4_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_d_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_d_prediction()\n\n    print(\"\\n=== {{CHALLENGE_5_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_e_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_e_prediction()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "output_prediction"
+      ],
+      "source_file": "module_0_basics/output_prediction/exercise_2_arithmetic.py"
+    },
+    {
+      "id": "module_0_basics.spot_difference.exercise_1_variable_errors",
+      "topic_id": "basics.print",
+      "exercise_type": "spot_difference",
+      "category": "analysis",
+      "title": "Variable Errors",
+      "title_en": "Variable Errors",
+      "title_he": "Variable Errors",
+      "description_en": "Basics: Variable Errors\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Variable Errors\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": false,
+      "estimated_time_minutes": 5,
+      "skills": [
+        "attention_to_detail",
+        "subtle_bugs",
+        "language_nuances"
+      ],
+      "starter_code": "# =============================================================================\n# Spot the Difference: Variable Errors\n# =============================================================================\n# Difficulty: 2\n# Concepts: variable assignment vs comparison, variable naming, typos\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_SPOT_DIFFERENCE_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# ============================================================\n# {{COMPARISON_1_TITLE}}\n# ============================================================\n# {{CONTEXT_COMPARISON_1_NARRATIVE}}\n\n\ndef snippet_a1():\n    \"\"\"Version 1\"\"\"\n    hero_name = \"{{hero}}\"\n    print(hero_name)\n\n\ndef snippet_a2():\n    \"\"\"Version 2 - spot the difference!\"\"\"\n    hero_name = \"{{hero}}\"\n    print(hero_Name)\n\n\ndef explain_difference_a():\n    # ✏️ EXPLAIN THE DIFFERENCE ✏️\n    #\n    # Look closely at both versions. What's different?\n    # Hint: Python cares about uppercase and lowercase letters.\n\n    explanation = \"\"\"\n    The difference is:\n    -\n\n    Version 1 behavior:\n    -\n\n    Version 2 behavior:\n    -\n\n    Why this matters:\n    -\n    \"\"\"\n    return explanation\n\n\n# ============================================================\n# {{COMPARISON_2_TITLE}}\n# ============================================================\n# {{CONTEXT_COMPARISON_2_NARRATIVE}}\n\n\ndef snippet_b1():\n    \"\"\"Version 1\"\"\"\n    points = 50\n    print(\"Score:\", points)\n\n\ndef snippet_b2():\n    \"\"\"Version 2 - spot the difference!\"\"\"\n    points = 50\n    print(\"Score:\", \"points\")\n\n\ndef explain_difference_b():\n    # ✏️ EXPLAIN THE DIFFERENCE ✏️\n    #\n    # One version prints the value, one prints the word.\n    # Hint: Quotes make a difference!\n\n    explanation = \"\"\"\n    The difference is:\n    -\n\n    Version 1 output:\n    -\n\n    Version 2 output:\n    -\n\n    Why this matters:\n    -\n    \"\"\"\n    return explanation\n\n\n# ============================================================\n# {{COMPARISON_3_TITLE}}\n# ============================================================\n# {{CONTEXT_COMPARISON_3_NARRATIVE}}\n\n\ndef snippet_c1():\n    \"\"\"Version 1\"\"\"\n    item_count = 5\n    print(\"{{hero}} has\", item_count, \"{{item}}s\")\n\n\ndef snippet_c2():\n    \"\"\"Version 2 - spot the difference!\"\"\"\n    itemcount = 5\n    print(\"{{hero}} has\", item_count, \"{{item}}s\")\n\n\ndef explain_difference_c():\n    # ✏️ EXPLAIN THE DIFFERENCE ✏️\n    #\n    # The variable is created with one name but used with another.\n    # Hint: Underscores matter in variable names.\n\n    explanation = \"\"\"\n    The difference is:\n    -\n\n    Version 1 behavior:\n    -\n\n    Version 2 behavior:\n    -\n\n    Why this matters:\n    -\n    \"\"\"\n    return explanation\n\n\ndef main():\n    print(\"{{CONTEXT_SPOT_DIFFERENCE_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{COMPARISON_1_TITLE}} ===\")\n    print(\"Version 1:\")\n    snippet_a1()\n    print(\"\\nVersion 2:\")\n    # snippet_a2()  # This would cause an error!\n    print(\"(This version has a bug - can you find it?)\")\n    print(f\"\\nYour explanation:{explain_difference_a()}\")\n\n    print(\"\\n=== {{COMPARISON_2_TITLE}} ===\")\n    print(\"Version 1:\")\n    snippet_b1()\n    print(\"\\nVersion 2:\")\n    snippet_b2()\n    print(f\"\\nYour explanation:{explain_difference_b()}\")\n\n    print(\"\\n=== {{COMPARISON_3_TITLE}} ===\")\n    print(\"Version 1:\")\n    snippet_c1()\n    print(\"\\nVersion 2:\")\n    # snippet_c2()  # This would cause an error!\n    print(\"(This version has a bug - can you find it?)\")\n    print(f\"\\nYour explanation:{explain_difference_c()}\")\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_ROLE_COMPLETE}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "spot_difference"
+      ],
+      "source_file": "module_0_basics/spot_difference/exercise_1_variable_errors.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_1_hello",
+      "topic_id": "basics.print",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Hello",
+      "title_en": "Hello",
+      "title_he": "Hello",
+      "description_en": "Basics: Hello\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Hello\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# =============================================================================\n# Write Code: Hello World\n# =============================================================================\n# Difficulty: 1\n# Concepts: print() function, string literals, printing multiple values\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Print the message: Hello, world!\n    #\n    # Step 1: Use the print() function\n    # Step 2: Put your message inside quotes within the parentheses\n    #\n    # Example output: Hello, world!\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Print a greeting for {{hero}}.\n    #\n    # Step 1: Print \"Welcome, {{hero}}!\"\n    # Step 2: Print \"You are now at {{school}}.\"\n    #\n    # Expected output (2 lines):\n    # Welcome, {{hero}}!\n    # You are now at {{school}}.\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Use print() with multiple items separated by commas.\n    #\n    # Step 1: Print three items in one print statement: \"{{hero}}\", \"has a\", \"{{item}}\"\n    #\n    # Hint: When you use commas in print(), Python adds spaces between items.\n    # Example: print(\"Hello\", \"World\") outputs: Hello World\n    #\n    # Expected output: {{hero}} has a {{item}}\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_1_hello.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_2_variables",
+      "topic_id": "basics.print",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Variables",
+      "title_en": "Variables",
+      "title_he": "Variables",
+      "description_en": "Basics: Variables\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Variables\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# =============================================================================\n# Write Code: Variables\n# =============================================================================\n# Difficulty: 2\n# Concepts: variable creation, assignment, using variables in print\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a variable called `hero_name` and store \"{{hero}}\" in it.\n    # Then print the variable.\n    #\n    # Step 1: Create the variable: hero_name = \"{{hero}}\"\n    # Step 2: Print it: print(hero_name)\n    #\n    # Expected output: {{hero}}\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create two variables and print them together.\n    #\n    # Step 1: Create a variable `location` with value \"{{school}}\"\n    # Step 2: Create a variable `activity` with value \"learning Python\"\n    # Step 3: Print both using: print(location, \"-\", activity)\n    #\n    # Expected output: {{school}} - learning Python\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create variables for {{hero}}'s inventory.\n    #\n    # Step 1: Create `item_name` with value \"{{item}}\"\n    # Step 2: Create `item_count` with value 3 (a number, no quotes!)\n    # Step 3: Print a message like: \"{{hero}} has 3 {{item}}s\"\n    #         Use: print(\"{{hero}} has\", item_count, item_name + \"s\")\n    #\n    # Expected output: {{hero}} has 3 {{item}}s\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Update a variable's value.\n    #\n    # Step 1: Create `level` with value 1\n    # Step 2: Print \"Starting level:\" followed by the level variable\n    # Step 3: Change `level` to 2 (assign a new value)\n    # Step 4: Print \"New level:\" followed by the level variable\n    #\n    # Expected output:\n    # Starting level: 1\n    # New level: 2\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_2_variables.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_3_calculator",
+      "topic_id": "basics.print",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Calculator",
+      "title_en": "Calculator",
+      "title_he": "Calculator",
+      "description_en": "Basics: Calculator\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Calculator\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# =============================================================================\n# Write Code: Calculator\n# =============================================================================\n# Difficulty: 2-3\n# Concepts: arithmetic operators (+, -, *, /, //, %, **)\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Calculate the total cost of {{item}}s at {{school}}.\n    #\n    # Step 1: Create a variable `price` with value 15\n    # Step 2: Create a variable `quantity` with value 4\n    # Step 3: Create a variable `total` that multiplies price by quantity\n    # Step 4: Print \"Total cost:\" followed by the total variable\n    #\n    # Expected output: Total cost: 60\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Calculate how to divide {{item}}s among {{hero}}'s friends.\n    #\n    # Step 1: Create `items` with value 17\n    # Step 2: Create `friends` with value 5\n    # Step 3: Create `each_gets` using // (integer division)\n    # Step 4: Create `leftover` using % (remainder)\n    # Step 5: Print \"Each friend gets:\" followed by each_gets\n    # Step 6: Print \"Leftover:\" followed by leftover\n    #\n    # Expected output:\n    # Each friend gets: 3\n    # Leftover: 2\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Calculate {{hero}}'s power level at {{school}}.\n    #\n    # Step 1: Create `base_power` with value 2\n    # Step 2: Create `level` with value 5\n    # Step 3: Create `total_power` using ** (exponentiation): base_power ** level\n    # Step 4: Print \"Power level:\" followed by total_power\n    #\n    # Hint: 2 ** 5 means 2 * 2 * 2 * 2 * 2\n    #\n    # Expected output: Power level: 32\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Calculate {{hero}}'s score with bonuses.\n    #\n    # Step 1: Create `base_score` with value 100\n    # Step 2: Create `bonus` with value 25\n    # Step 3: Create `penalty` with value 10\n    # Step 4: Create `final_score` = base_score + bonus - penalty\n    # Step 5: Print \"Final score:\" followed by final_score\n    #\n    # Expected output: Final score: 115\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_3_calculator.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_4_strings",
+      "topic_id": "basics.print",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Strings",
+      "title_en": "Strings",
+      "title_he": "Strings",
+      "description_en": "Basics: Strings\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Strings\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# =============================================================================\n# Write Code: Strings\n# =============================================================================\n# Difficulty: 3\n# Concepts: string creation, concatenation, combining with print\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a welcome message for {{school}}.\n    #\n    # Step 1: Create a variable `school` with value \"{{school}}\"\n    # Step 2: Create a variable `message` that combines \"Welcome to \" with school\n    #         Use the + operator: message = \"Welcome to \" + school\n    # Step 3: Print the message\n    #\n    # Expected output: Welcome to {{school}}\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a greeting for {{hero}} at {{school}}.\n    #\n    # Step 1: Create `hero` with value \"{{hero}}\"\n    # Step 2: Create `location` with value \"{{school}}\"\n    # Step 3: Print using commas: print(hero, \"is studying at\", location)\n    #\n    # Hint: Commas automatically add spaces between items.\n    #\n    # Expected output: {{hero}} is studying at {{school}}\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Build {{hero}}'s {{item}} description.\n    #\n    # Step 1: Create `item` with value \"{{item}}\"\n    # Step 2: Create `color` with value \"golden\"\n    # Step 3: Create `description` by combining: \"a \" + color + \" \" + item\n    # Step 4: Print: \"{{hero}} found\" followed by description\n    #\n    # Expected output: {{hero}} found a golden {{item}}\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Mix strings and numbers in output.\n    #\n    # Step 1: Create `hero` with value \"{{hero}}\"\n    # Step 2: Create `level` with value 5 (a number, no quotes!)\n    # Step 3: Print using commas: print(hero, \"reached level\", level)\n    #\n    # Note: Using commas in print() handles the number automatically.\n    # You don't need to convert it to a string!\n    #\n    # Expected output: {{hero}} reached level 5\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_4_strings.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_5_input",
+      "topic_id": "basics.print",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Input",
+      "title_en": "Input",
+      "title_he": "Input",
+      "description_en": "Basics: Input\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Input\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# =============================================================================\n# Write Code: Input\n# =============================================================================\n# Difficulty: 3-4\n# Concepts: input(), type conversion, interactive programs\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Get {{hero}}'s name and greet them.\n    #\n    # Step 1: Use input() to ask \"What is your name? \" and store in `name`\n    # Step 2: Print \"Welcome to {{school}},\" followed by name\n    #\n    # Example interaction:\n    # What is your name? Maya\n    # Welcome to {{school}}, Maya\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Calculate the total cost of {{item}}s.\n    #\n    # Step 1: Use input() to ask \"How many {{item}}s? \" and store in `quantity_text`\n    # Step 2: Convert quantity_text to an integer: quantity = int(quantity_text)\n    # Step 3: Create `price` with value 10\n    # Step 4: Create `total` = quantity * price\n    # Step 5: Print \"Total cost:\" followed by total\n    #\n    # Example interaction:\n    # How many {{item}}s? 5\n    # Total cost: 50\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a character stats calculator.\n    #\n    # Step 1: Ask \"Enter strength: \" and convert to int, store in `strength`\n    # Step 2: Ask \"Enter defense: \" and convert to int, store in `defense`\n    # Step 3: Calculate `power` = strength * 2 + defense\n    # Step 4: Print \"Power level:\" followed by power\n    #\n    # Tip: You can combine int() and input():\n    #      strength = int(input(\"Enter strength: \"))\n    #\n    # Example interaction:\n    # Enter strength: 10\n    # Enter defense: 5\n    # Power level: 25\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a personalized {{school}} ID card.\n    #\n    # Step 1: Ask \"Student name: \" and store in `name`\n    # Step 2: Ask \"Student age: \" and convert to int, store in `age`\n    # Step 3: Ask \"Favorite subject: \" and store in `subject`\n    # Step 4: Print \"=== {{school}} ID ===\"\n    # Step 5: Print \"Name:\" followed by name\n    # Step 6: Print \"Age:\" followed by age\n    # Step 7: Print \"Specialty:\" followed by subject\n    #\n    # Example interaction:\n    # Student name: {{hero}}\n    # Student age: 12\n    # Favorite subject: Coding\n    # === {{school}} ID ===\n    # Name: {{hero}}\n    # Age: 12\n    # Specialty: Coding\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_5_input.py"
+    },
+    {
+      "id": "module_0_basics.write_code.exercise_6_fstrings",
+      "topic_id": "basics.print",
+      "exercise_type": "write_code",
+      "category": "free_writing",
+      "title": "Fstrings",
+      "title_en": "Fstrings",
+      "title_he": "Fstrings",
+      "description_en": "Basics: Fstrings\n\nComplete the code in the functions marked with pass",
+      "description_he": "יסודות: Fstrings\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
+      "difficulty": 1,
+      "requires_running": true,
+      "estimated_time_minutes": 10,
+      "skills": [
+        "implementation",
+        "problem_solving",
+        "syntax"
+      ],
+      "starter_code": "# =============================================================================\n# Write Code: f-strings\n# =============================================================================\n# Difficulty: 4\n# Concepts: f-string syntax, expressions in f-strings, formatting\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a greeting using an f-string.\n    #\n    # Step 1: Create `name` with value \"{{hero}}\"\n    # Step 2: Create `message` using an f-string: f\"Hello, {name}!\"\n    # Step 3: Print the message\n    #\n    # Hint: The f goes before the opening quote: f\"...\"\n    # Variables go inside {curly braces}\n    #\n    # Expected output: Hello, {{hero}}!\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a status line using multiple variables in an f-string.\n    #\n    # Step 1: Create `hero` with value \"{{hero}}\"\n    # Step 2: Create `location` with value \"{{school}}\"\n    # Step 3: Create `level` with value 5\n    # Step 4: Print an f-string: f\"{hero} is at {location}, level {level}\"\n    #\n    # Expected output: {{hero}} is at {{school}}, level 5\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Use expressions inside an f-string.\n    #\n    # Step 1: Create `base_price` with value 25\n    # Step 2: Create `quantity` with value 4\n    # Step 3: Print an f-string that calculates the total:\n    #         f\"Total cost: {base_price * quantity}\"\n    #\n    # Hint: You can do math inside the {braces}!\n    #\n    # Expected output: Total cost: 100\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create {{hero}}'s character sheet using f-strings.\n    #\n    # Step 1: Create `name` with value \"{{hero}}\"\n    # Step 2: Create `class_type` with value \"Apprentice\"\n    # Step 3: Create `health` with value 100\n    # Step 4: Create `attack` with value 15\n    # Step 5: Create `defense` with value 10\n    # Step 6: Print f\"=== {name} the {class_type} ===\"\n    # Step 7: Print f\"HP: {health} | ATK: {attack} | DEF: {defense}\"\n    # Step 8: Print f\"Power Rating: {attack + defense}\"\n    #\n    # Expected output:\n    # === {{hero}} the Apprentice ===\n    # HP: 100 | ATK: 15 | DEF: 10\n    # Power Rating: 25\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n\n\nmain()\n",
+      "solution_code": null,
+      "hints": [],
+      "tags": [
+        "module_0_basics",
+        "write_code"
+      ],
+      "source_file": "module_0_basics/write_code/exercise_6_fstrings.py"
     }
   ]
 }

@@ -184,8 +184,8 @@ def main():
     config = load_module_config(root)
 
     # Find lesson directories
-    en_lessons_dir = root / "en" / "lessons"
-    he_lessons_dir = root / "he" / "lessons"
+    en_lessons_dir = root / "lessons" / "en"
+    he_lessons_dir = root / "lessons" / "he"
 
     lessons = []
     seen_sources = set()

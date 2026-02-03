@@ -3,7 +3,7 @@
   "name_en": "Superhero Training",
   "name_he": "אימון גיבורי-על",
   "icon": "⚡",
-  "logo": "/logos/superhero-training.jpg",
+  "logo": "assets/logo.jpg",
   "app_name": "Hero Academy",
   "teacher_name": "Captain Valor",
   "teacher_name_he": "קפטן ואלור",
@@ -29,6 +29,17 @@
     "exclamation": ["Hero up!", "Powers activated!", "Time to save the day!", "Let's go!"],
     "greeting": ["Welcome to Hero Academy, recruit!"],
     "password": ["Hero Protocol Alpha", "Justice Code 7", "Power Sequence", "Defender Mode"],
+
+    "obstacle": ["trap", "villain", "force field", "laser grid"],
+    "danger_location": ["the danger zone", "enemy headquarters", "the villain's lair"],
+    "harmful_status": ["injured", "weakened", "power-drained", "stunned"],
+    "busy_activity": ["in combat", "fighting villains", "on a rescue mission"],
+
+    "primary_stat": ["health", "stamina", "energy"],
+    "secondary_stat": ["power", "super energy", "hero charge"],
+    "retreat_action": ["retreat", "fall back", "regroup"],
+    "basic_action": ["use basic attack", "defend", "dodge"],
+
     "ROLE_TITLE": "Hero",
     "ROLE_TITLE_PLURAL": "Heroes",
     "MENTOR_TITLE": "Captain",
@@ -74,6 +85,12 @@
     "CONTEXT_INVESTIGATION_COMPLETE": "All systems restored! The training facility is back online thanks to your debugging skills.",
     "CONTEXT_IMPROVEMENT_COMPLETE": "Great work! Your refactored code is now worthy of the Hero Code Archives.",
     "CONTEXT_TRIUMPH_COMPLETE": "Congratulations, hero! You've completed this training challenge and grown stronger!",
+
+    "CONTEXT_SETBACK_INTRO": "{{hero}} suffered a defeat. {{villain}} exploited a weakness in the hero's approach. But true heroes rise from every setback!",
+    "CONTEXT_SETBACK_NARRATIVE": "Study what went wrong in the last battle. Find the bugs that let {{villain}} gain the upper hand.",
+    "CONTEXT_CONFRONTATION_INTRO": "The final showdown has arrived! {{hero}} faces {{villain}} in the ultimate battle!",
+    "CONTEXT_CONFRONTATION_NARRATIVE": "Every power you've trained, every technique you've mastered, leads to this heroic moment. Save the day!",
+
     "PHASE_1_TITLE": "Training Level 1: The Basics",
     "CONTEXT_PHASE_1": "Every hero starts here. Master this fundamental skill before moving on.",
     "PHASE_2_TITLE": "Training Level 2: Building Power",

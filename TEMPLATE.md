@@ -66,6 +66,24 @@ Simple noun replacements. Arrays in theme files allow random selection for varie
 | `{{greeting}}` | Welcome message | Welcome to Hogwarts | Welcome aboard | Welcome |
 | `{{password}}` | Secret phrase | Caput Draconis | clearance code | password123 |
 
+### Dangers & Conditions
+
+| Placeholder | Description | Fantasy | Sci-Fi | Plain |
+|-------------|-------------|---------|--------|-------|
+| `{{obstacle}}` | Things that block | trap | force field | error |
+| `{{danger_location}}` | Risky place | the dark cave | the danger zone | untested code |
+| `{{harmful_status}}` | Negative condition | poisoned | injured | flagged |
+| `{{busy_activity}}` | Prevents rest | in combat | on mission | processing |
+
+### Game Stats & Actions
+
+| Placeholder | Description | Fantasy | Sci-Fi | Plain |
+|-------------|-------------|---------|--------|-------|
+| `{{primary_stat}}` | Main resource | health | stamina | progress |
+| `{{secondary_stat}}` | Secondary resource | mana | energy | resources |
+| `{{retreat_action}}` | Escape action | flee | retreat | cancel |
+| `{{basic_action}}` | Simple action | basic attack | defend | try again |
+
 ---
 
 ## Layer 2: Context Blocks
@@ -98,6 +116,15 @@ Full sentences that provide narrative framing. Use for introductions, instructio
 | `{{CONTEXT_IMPLEMENTATION_GUIDANCE}}` | Tips for writing code |
 | `{{CONTEXT_ANALYSIS_PROMPT}}` | How to analyze tradeoffs |
 | `{{CONTEXT_DECISION_GUIDANCE}}` | Criteria for decisions |
+
+### Rivalry/Showdown Blocks
+
+| Placeholder | Use For |
+|-------------|---------|
+| `{{CONTEXT_SETBACK_INTRO}}` | Opening for setback/defeat scenario |
+| `{{CONTEXT_SETBACK_NARRATIVE}}` | Story explaining the defeat |
+| `{{CONTEXT_CONFRONTATION_INTRO}}` | Opening for final confrontation |
+| `{{CONTEXT_CONFRONTATION_NARRATIVE}}` | Story for climactic showdown |
 
 ### Completion Blocks
 
@@ -210,6 +237,7 @@ Theme values are defined in `theme_mappings/*.json`:
 ## Quick Links
 
 - Full template: [theme_mappings/_TEMPLATE.json](theme_mappings/_TEMPLATE.json)
-- Writing guide: [docs/WRITING_GUIDE.md](docs/WRITING_GUIDE.md)
+- Writing exercises: [docs/WRITING_GUIDE_EXERCISES.md](docs/WRITING_GUIDE_EXERCISES.md)
+- Writing lessons: [docs/WRITING_GUIDE_LESSONS.md](docs/WRITING_GUIDE_LESSONS.md)
 - Theme creation: [theme_mappings/THEME_CREATOR_GUIDE.md](theme_mappings/THEME_CREATOR_GUIDE.md)
 - Narrative system: [docs/NARRATIVE_SYSTEM.md](docs/NARRATIVE_SYSTEM.md)

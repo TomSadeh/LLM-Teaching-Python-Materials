@@ -377,4 +377,5 @@ python scripts/apply_theme_placeholders.py --theme my_theme --check
 | Example theme | [theme_mappings/_EXAMPLE_fantasy_complete.json](../theme_mappings/_EXAMPLE_fantasy_complete.json) |
 | Theme creator guide | [theme_mappings/THEME_CREATOR_GUIDE.md](../theme_mappings/THEME_CREATOR_GUIDE.md) |
 | Narrative templates | [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md) |
-| Writing guide | [WRITING_GUIDE.md](WRITING_GUIDE.md) |
+| Writing exercises | [WRITING_GUIDE_EXERCISES.md](WRITING_GUIDE_EXERCISES.md) |
+| Writing lessons | [WRITING_GUIDE_LESSONS.md](WRITING_GUIDE_LESSONS.md) |

@@ -6,7 +6,9 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 
 **Always load relevant context before writing:**
 
-1. **Read** [docs/WRITING_GUIDE.md](docs/WRITING_GUIDE.md) for format and style rules
+1. **Read** the relevant writing guide:
+   - Exercises: [docs/WRITING_GUIDE_EXERCISES.md](docs/WRITING_GUIDE_EXERCISES.md)
+   - Lessons: [docs/WRITING_GUIDE_LESSONS.md](docs/WRITING_GUIDE_LESSONS.md)
 2. **Search** [docs/CATALOG.md](docs/CATALOG.md) to understand existing content
 3. **Search** [docs/REFERENCES.md](docs/REFERENCES.md) for pedagogical context on the topic
 4. **Load** the relevant template from [templates/](templates/)
@@ -28,12 +30,12 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 - [ ] Add Hebrew translations to `convert_exercises.py`
 
 ### Single Lesson Checklist
-- [ ] Create both `en/` and `he/` versions
+- [ ] Create both `lessons/en/` and `lessons/he/` versions
 - [ ] Run `python scripts/build_lessons_json.py`
 - [ ] Verify lesson appears in `lessons.json`
 
 ### Batch of Lessons Checklist
-- [ ] Create both `en/` and `he/` versions for all
+- [ ] Create both `lessons/en/` and `lessons/he/` versions for all
 - [ ] Run `python scripts/build_lessons_json.py`
 - [ ] Update [docs/CATALOG.md](docs/CATALOG.md) lesson table
 
@@ -41,7 +43,7 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 - [ ] Create `exercises/module_N_topic/` directory
 - [ ] Add module to `exercises_config.json`
 - [ ] Add translations to `scripts/convert_exercises.py`
-- [ ] Create lesson files in `en/lessons/` and `he/lessons/`
+- [ ] Create lesson files in `lessons/en/` and `lessons/he/`
 - [ ] Update [docs/CATALOG.md](docs/CATALOG.md) modules table
 - [ ] Update [docs/REFERENCES.md](docs/REFERENCES.md) lookup tables
 - [ ] Run both generation scripts
@@ -59,7 +61,8 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 | Need | Document |
 |------|----------|
 | Content inventory | [docs/CATALOG.md](docs/CATALOG.md) |
-| Writing exercises/lessons | [docs/WRITING_GUIDE.md](docs/WRITING_GUIDE.md) |
+| Writing exercises | [docs/WRITING_GUIDE_EXERCISES.md](docs/WRITING_GUIDE_EXERCISES.md) |
+| Writing lessons | [docs/WRITING_GUIDE_LESSONS.md](docs/WRITING_GUIDE_LESSONS.md) |
 | Narrative archetypes | [docs/NARRATIVE_ARCHETYPES.md](docs/NARRATIVE_ARCHETYPES.md) |
 | Archetype quick templates | [templates/ARCHETYPE_QUICK_REFERENCE.md](templates/ARCHETYPE_QUICK_REFERENCE.md) |
 | Archetype visual guide | [docs/ARCHETYPE_VISUAL_GUIDE.md](docs/ARCHETYPE_VISUAL_GUIDE.md) |
@@ -71,7 +74,7 @@ Python exercises for Maya Chat, a teaching app with dynamic theming.
 | Hybrid arcs | [templates/hybrid_arcs/](templates/hybrid_arcs/) |
 | Exercise type mapping | [templates/EXERCISE_TYPE_MODULE_MAPPING.md](templates/EXERCISE_TYPE_MODULE_MAPPING.md) |
 | Raw reference files | [references/](references/) |
-| Lesson templates | [en/lessons/TEMPLATE_PART1.md](en/lessons/TEMPLATE_PART1.md) |
+| Lesson templates | [lessons/en/TEMPLATE_PART1.md](lessons/en/TEMPLATE_PART1.md) |
 | Theme system | [docs/THEME_SYSTEM.md](docs/THEME_SYSTEM.md) |
 | Create a theme | [docs/QUICK_START_THEMES.md](docs/QUICK_START_THEMES.md) |
 | Narrative templates | [docs/NARRATIVE_SYSTEM.md](docs/NARRATIVE_SYSTEM.md) |
@@ -108,15 +111,19 @@ LLM-Teaching-Python-Materials/
 │   └── module_X_topic/
 │       └── {exercise_type}/
 │           └── exercise_N_name.py
+├── lessons/                    # Lesson files by language
+│   ├── en/                     # English lessons (multi-part)
+│   └── he/                     # Hebrew lessons
 ├── templates/                  # Exercise type templates
-├── en/lessons/                 # English lessons (multi-part)
-├── he/lessons/                 # Hebrew lessons
-├── references/                 # Curriculum analysis
-├── docs/                       # Documentation
-├── scripts/                    # Build scripts
+├── themes/                     # Themed content bundles
+│   └── {theme_name}/           # Individual theme directories
 ├── theme_mappings/             # Theme definitions (one JSON per theme)
 │   ├── _TEMPLATE.json          # Complete placeholder reference
 │   └── *.json                  # Individual theme files
+├── references/                 # Curriculum analysis
+├── docs/                       # Documentation
+├── scripts/                    # Build scripts
+├── archive/                    # Deprecated content
 ├── exercises_config.json       # Module/exercise translations
 ├── manifest.json               # Module list for sync
 └── version.json                # Content version
@@ -133,7 +140,7 @@ LLM-Teaching-Python-Materials/
 
 ### Add/modify lessons
 
-1. Edit files in `en/lessons/` and `he/lessons/`
+1. Edit files in `lessons/en/` and `lessons/he/`
 2. Run: `python scripts/build_lessons_json.py`
 
 ### Add new module

@@ -3,10 +3,10 @@
   "name_en": "Plain",
   "name_he": "רגיל",
   "icon": "📚",
-  "logo": "/logos/mmcc.jpg",
+  "logo": "assets/logo.jpg",
   "app_name": "Maya's Magic Coding Chat",
-  "teacher_name": "Maya",
-  "teacher_name_he": "מאיה",
+  "teacher_name": "Teacher",
+  "teacher_name_he": "המורה",
   "variables": {
     "hero": ["the student", "the learner", "Alex", "Sam"],
     "heroine": ["the student", "the learner", "Maya", "Dana"],
@@ -29,6 +29,16 @@
     "exclamation": ["Great job!", "Excellent!", "Well done!", "Perfect!"],
     "greeting": ["Welcome to coding class!"],
     "password": ["python", "code"],
+
+    "obstacle": ["error", "bug", "blocker", "exception"],
+    "danger_location": ["the untested section", "the risky code", "the legacy function"],
+    "harmful_status": ["flagged", "blocked", "errored", "timed out"],
+    "busy_activity": ["processing", "running", "executing code"],
+
+    "primary_stat": ["progress", "completion", "health"],
+    "secondary_stat": ["resources", "memory", "power"],
+    "retreat_action": ["cancel", "abort", "stop"],
+    "basic_action": ["use simple approach", "try again", "debug"],
 
     "ROLE_TITLE": "Student",
     "ROLE_TITLE_PLURAL": "Students",
@@ -78,6 +88,11 @@
     "CONTEXT_INVESTIGATION_COMPLETE": "All bugs fixed! The code works correctly now.",
     "CONTEXT_IMPROVEMENT_COMPLETE": "Your improved code follows best practices.",
     "CONTEXT_TRIUMPH_COMPLETE": "Excellent work! You've mastered this concept!",
+
+    "CONTEXT_SETBACK_INTRO": "Something went wrong. The code had bugs that caused it to fail. Every programmer learns from debugging mistakes.",
+    "CONTEXT_SETBACK_NARRATIVE": "Analyze the broken code. Find and understand the bugs that caused the failure.",
+    "CONTEXT_CONFRONTATION_INTRO": "Time for the final test. Put everything you've learned into practice!",
+    "CONTEXT_CONFRONTATION_NARRATIVE": "All your practice and learning has prepared you for this challenge. Write clean, working code!",
 
     "PHASE_1_TITLE": "Step 1",
     "CONTEXT_PHASE_1": "Start with the basics.",

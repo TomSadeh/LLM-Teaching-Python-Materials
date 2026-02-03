@@ -3,7 +3,7 @@
   "name_en": "Pyfire",
   "name_he": "פייפייר",
   "icon": "✨",
-  "logo": "/logos/pyfire.jpg",
+  "logo": "assets/logo.jpg",
   "app_name": "Foxfire Academy",
   "teacher_name": "Pyfire",
   "teacher_name_he": "פייפייר",
@@ -30,6 +30,16 @@
     "exclamation": ["What the mallowmelt!", "Foster!", "By the Great Gulon Incident!"],
     "greeting": ["Welcome to Foxfire", "Welcome to the Lost Cities"],
     "password": ["cognate", "moonlark", "Project Moonlark"],
+
+    "obstacle": ["glitch", "malfunction", "Neverseen agent", "ability block"],
+    "danger_location": ["the Forbidden Cities", "the void", "Neverseen territory"],
+    "harmful_status": ["fading", "malfunctioning", "weakened", "ability-blocked"],
+    "busy_activity": ["channeling", "manifesting abilities", "in telepathic combat"],
+
+    "primary_stat": ["health", "concentration", "focus"],
+    "secondary_stat": ["ability power", "mental energy", "light energy"],
+    "retreat_action": ["light leap away", "retreat", "fall back"],
+    "basic_action": ["use basic ability", "defend", "shield"],
 
     "ROLE_TITLE": "Prodigy",
     "ROLE_TITLE_PLURAL": "Prodigies",
@@ -79,6 +89,11 @@
     "CONTEXT_INVESTIGATION_COMPLETE": "All systems restored! The academy is operational thanks to your debugging skills.",
     "CONTEXT_IMPROVEMENT_COMPLETE": "Great work! Your refactored code is now worthy of the Foxfire Archives.",
     "CONTEXT_TRIUMPH_COMPLETE": "Congratulations, prodigy! You've completed this challenge and your abilities have grown!",
+
+    "CONTEXT_SETBACK_INTRO": "{{hero}} experienced a setback. The ability malfunctioned at the worst moment. But every prodigy grows from challenges.",
+    "CONTEXT_SETBACK_NARRATIVE": "Examine what went wrong during the last session. Identify the glitches that allowed {{villain}} to succeed.",
+    "CONTEXT_CONFRONTATION_INTRO": "The final test awaits. {{hero}} confronts {{villain}} to prove their abilities!",
+    "CONTEXT_CONFRONTATION_NARRATIVE": "Every training session, every ability you've developed, leads to this ultimate challenge. Manifest your power!",
 
     "PHASE_1_TITLE": "Session 1: The Basics",
     "CONTEXT_PHASE_1": "Every prodigy starts here. Master this fundamental skill before moving on.",

@@ -47,7 +47,7 @@ By the end of this module, students will be able to:
 | [META_PLAN_MODULE_RECREATION.md](META_PLAN_MODULE_RECREATION.md) | Overall strategy |
 | [EXERCISE_TYPE_MODULE_MAPPING.md](../../templates/EXERCISE_TYPE_MODULE_MAPPING.md) | Valid types for Module 0 (see "module_0_basics" section) |
 | [TEMPLATE.md](../../TEMPLATE.md) | Placeholder reference |
-| [WRITING_GUIDE.md](WRITING_GUIDE.md) | Format standards |
+| [WRITING_GUIDE_EXERCISES.md](WRITING_GUIDE_EXERCISES.md) | Exercise format standards |
 
 **Note:** Phase-specific templates are listed in each implementation phase below.
 

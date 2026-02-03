@@ -65,8 +65,8 @@ def format_stats(hero_name, health, gold):
     Examples:
         >>> format_stats("{{hero}}", 100, 50)
         "{{hero}} - HP: 100 | Gold: 50"
-        >>> format_stats("Knight", 75, 200)
-        "Knight - HP: 75 | Gold: 200"
+        >>> format_stats("Alex", 75, 200)
+        "Alex - HP: 75 | Gold: 200"
     """
     # ✏️ COMPLETE THIS FUNCTION ✏️
     #

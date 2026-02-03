@@ -37,23 +37,23 @@
       "description_en": "Working with lists, iterating over lists and list methods",
       "description_he": "עבודה עם רשימות, לולאות על רשימות ושיטות רשימה"
     },
-    "module_4_games": {
+    "module_4_functions": {
       "order_index": 4,
       "difficulty": 2,
-      "topic_id": "loops.while",
-      "name_en": "Games",
-      "name_he": "משחקים",
-      "description_en": "Building games with while loops and random",
-      "description_he": "בניית משחקים עם לולאות while ומשתנים אקראיים"
-    },
-    "module_5_functions": {
-      "order_index": 5,
-      "difficulty": 3,
       "topic_id": "functions.basic",
       "name_en": "Functions",
       "name_he": "פונקציות",
       "description_en": "Functions, parameters, return values and code reuse",
       "description_he": "פונקציות, פרמטרים, ערכי החזרה ושימוש חוזר בקוד"
+    },
+    "module_5_games": {
+      "order_index": 5,
+      "difficulty": 3,
+      "topic_id": "loops.while",
+      "name_en": "Games",
+      "name_he": "משחקים",
+      "description_en": "Building games with while loops and random",
+      "description_he": "בניית משחקים עם לולאות while ומשתנים אקראיים"
     },
     "module_6_final_project": {
       "order_index": 6,
@@ -96,6 +96,11 @@
     "output_prediction": {
       "name_en": "Output Prediction",
       "name_he": "ניבוי פלט",
+      "category": "reading"
+    },
+    "code_tracing": {
+      "name_en": "Code Tracing",
+      "name_he": "מעקב קוד",
       "category": "reading"
     },
     "match_output": {

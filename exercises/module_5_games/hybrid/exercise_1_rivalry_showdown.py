@@ -22,8 +22,8 @@ import random
 
 def buggy_match():
     """The buggy code that caused {{hero}} to lose."""
-    hero_score = 0
-    villain_score = 0
+    player_a_score = 0
+    player_b_score = 0
     rounds_played = 0
     max_rounds = 5
 
@@ -35,28 +35,28 @@ def buggy_match():
         print(f"--- Round {rounds_played} ---")
 
         # {{hero}}'s turn
-        hero_result = random.choice(["success", "success", "fail"])
-        if hero_result == "success":
-            hero_score + 1  # BUG 2: Should be hero_score += 1
-            print(f"{{{{hero}}}} scores! Total: {hero_score}")
+        player_a_result = random.choice(["success", "success", "fail"])
+        if player_a_result == "success":
+            player_a_score + 1  # BUG 2: Should be player_a_score += 1
+            print(f"{{{{hero}}}} scores! Total: {player_a_score}")
         else:
             print(f"{{{{hero}}}} misses...")
 
         # {{villain}}'s turn
-        villain_result = random.choice(["success", "success", "fail"])
-        if villain_result == "success":
-            villain_score += 1
-            print(f"{{{{villain}}}} scores. Total: {villain_score}")
+        player_b_result = random.choice(["success", "success", "fail"])
+        if player_b_result == "success":
+            player_b_score += 1
+            print(f"{{{{villain}}}} scores. Total: {player_b_score}")
         else:
             print(f"{{{{villain}}}} misses!")
 
         print()
 
     print("=== FINAL RESULT ===")
-    print(f"{{{{hero}}}}: {hero_score}")
-    print(f"{{{{villain}}}}: {villain_score}")
+    print(f"{{{{hero}}}}: {player_a_score}")
+    print(f"{{{{villain}}}}: {player_b_score}")
 
-    if hero_score >= villain_score:  # BUG 3: Should be > for hero win, = is tie
+    if player_a_score >= player_b_score:  # BUG 3: Should be > for hero win, = is tie
         print(f"{{{{villain}}}} wins!")
     else:
         print(f"{{{{hero}}}} wins!")
@@ -177,7 +177,7 @@ def training_session():
 # Use everything you've learned. This is the final test.
 
 
-def hero_turn():
+def player_a_turn():
     """
     {{hero}}'s turn. Ask for move type and execute.
 
@@ -188,7 +188,7 @@ def hero_turn():
     pass
 
 
-def villain_turn():
+def player_b_turn():
     """
     {{villain}}'s turn. Always uses regular move.
 
@@ -199,20 +199,20 @@ def villain_turn():
     pass
 
 
-def play_round(round_num, hero_score, villain_score):
+def play_round(round_num, player_a_score, player_b_score):
     """
     Play one round of the showdown.
 
     Args:
         round_num: Current round number
-        hero_score: {{hero}}'s current score
-        villain_score: {{villain}}'s current score
+        player_a_score: {{hero}}'s current score
+        player_b_score: {{villain}}'s current score
 
     Returns:
         tuple: (hero_points_this_round, villain_points_this_round)
     """
     print(f"--- Round {round_num} ---")
-    print(f"Score: {{{{hero}}}} {hero_score} - {villain_score} {{{{villain}}}}")
+    print(f"Score: {{{{hero}}}} {player_a_score} - {player_b_score} {{{{villain}}}}")
 
     # ✏️ YOUR CODE HERE ✏️
     pass
@@ -238,8 +238,8 @@ def the_showdown():
     print("=" * 50)
     print()
 
-    hero_score = 0
-    villain_score = 0
+    player_a_score = 0
+    player_b_score = 0
 
     # ✏️ YOUR CODE HERE ✏️
     # 1. Main match: 5 rounds

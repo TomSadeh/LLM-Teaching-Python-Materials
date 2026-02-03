@@ -61,6 +61,41 @@ See [templates/EXERCISE_ADDITION_PLAN.md](../templates/EXERCISE_ADDITION_PLAN.md
 
 ---
 
+## Exercise Inventory by Module
+
+### Module 0: Basics
+
+| Type | Count | Files |
+|------|:-----:|-------|
+| output_prediction | 2 | exercise_1_print_basics, exercise_2_arithmetic |
+| write_code | 6 | exercise_1_hello, exercise_2_variables, exercise_3_calculator, exercise_4_strings, exercise_5_input, exercise_6_fstrings |
+| fill_blanks | 2 | exercise_1_variables, exercise_2_input |
+| code_ordering | 1 | exercise_1_program_flow |
+| match_output | 1 | exercise_1_string_output |
+| decode_error | 2 | exercise_1_string_errors, exercise_2_input_errors |
+| spot_difference | 1 | exercise_1_variable_errors |
+| complete_function | 1 | exercise_1_format_output |
+| bug_hunt | 1 | exercise_1_basics_bugs |
+| fix_style | 1 | exercise_1_naming |
+| hybrid | 2 | exercise_1_apprentice_variables, exercise_2_apprentice_program |
+| **Total** | **20** | |
+
+### Module 1: Turtle and Loops
+
+| Type | Count | Files |
+|------|:-----:|-------|
+| output_prediction | 2 | exercise_1_turtle_position, exercise_2_range_output |
+| write_code | 6 | exercise_1_turtle_basics, exercise_2_first_loop, exercise_3_range_variations, exercise_4_polygons, exercise_5_pattern_angles, exercise_6_changing_values |
+| fill_blanks | 2 | exercise_1_loop_syntax, exercise_2_accumulator |
+| code_ordering | 1 | exercise_1_shape_sequence |
+| code_tracing | 2 | exercise_1_loop_variables, exercise_2_accumulator_trace |
+| match_output | 1 | exercise_1_code_to_shape |
+| bug_hunt | 2 | exercise_1_loop_bugs, exercise_2_drawing_bugs |
+| hybrid | 2 | exercise_1_apprentice_loops, exercise_2_mystery_shapes |
+| **Total** | **18** | Hybrid ratio: 11% |
+
+---
+
 ## Templates
 
 Templates are organized into four directories:

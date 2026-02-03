@@ -110,12 +110,12 @@ def your_creation_a():
     # Create a character introduction.
     #
     # Step 1: Create a variable `hero_name` with value "{{hero}}"
-    # Step 2: Create a variable `class_type` with value "Warrior"
+    # Step 2: Create a variable `class_type` with value "{{ROLE_TITLE}}"
     # Step 3: Create a variable `intro` that combines:
     #         hero_name + " the " + class_type
     # Step 4: Print the intro
     #
-    # Expected output: {{hero}} the Warrior
+    # Expected output: {{hero}} the {{ROLE_TITLE}}
     pass
 
 

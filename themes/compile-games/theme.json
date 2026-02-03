@@ -3,7 +3,7 @@
   "name_en": "Compile Games",
   "name_he": "קומפייל גיימס",
   "icon": "🔥",
-  "logo": "/logos/compile-games.jpg",
+  "logo": "assets/logo.jpg",
   "app_name": "The Compile Games",
   "teacher_name": "Haymitch",
   "teacher_name_he": "היימיץ'",
@@ -30,6 +30,16 @@
     "exclamation": ["May the odds be ever in your favor!", "I volunteer as tribute!", "Fire is catching!", "If we burn, you burn with us!"],
     "greeting": ["Welcome, tribute", "Happy Hunger Games"],
     "password": ["tribute", "mockingjay", "nightlock"],
+
+    "obstacle": ["trap", "Career tribute", "mutt", "force field"],
+    "danger_location": ["the clearing", "the dark cave", "the Cornucopia"],
+    "harmful_status": ["poisoned", "injured", "starving", "dehydrated"],
+    "busy_activity": ["in combat", "fleeing", "evading tributes"],
+
+    "primary_stat": ["health", "stamina", "strength"],
+    "secondary_stat": ["supplies", "energy", "resources"],
+    "retreat_action": ["flee", "escape", "hide"],
+    "basic_action": ["use basic attack", "defend", "conserve energy"],
 
     "ROLE_TITLE": "Tribute",
     "ROLE_TITLE_PLURAL": "Tributes",
@@ -79,6 +89,11 @@
     "CONTEXT_INVESTIGATION_COMPLETE": "All systems restored! The Training Center is operational thanks to your debugging skills.",
     "CONTEXT_IMPROVEMENT_COMPLETE": "Great work! Your refactored code is now efficient and reliable.",
     "CONTEXT_TRIUMPH_COMPLETE": "Congratulations, tribute! You've completed this challenge and grown stronger!",
+
+    "CONTEXT_SETBACK_INTRO": "{{hero}} was defeated. The arena claimed another victim of poor preparation. But a smart tribute learns from every loss.",
+    "CONTEXT_SETBACK_NARRATIVE": "Study the failure carefully. Find the bugs in {{hero}}'s approach that gave {{villain}} the advantage.",
+    "CONTEXT_CONFRONTATION_INTRO": "This is it. The final showdown. {{hero}} versus {{villain}} for survival!",
+    "CONTEXT_CONFRONTATION_NARRATIVE": "Every skill you've trained, every strategy you've planned, comes down to this moment. May the odds be ever in your favor!",
 
     "PHASE_1_TITLE": "Day 1: The Basics",
     "CONTEXT_PHASE_1": "Every tribute starts here. Master this fundamental skill before moving on.",

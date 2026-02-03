@@ -1,7 +1,11 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "modules": [
     "module_0_basics",
-    "module_5_games"
+    "module_1_turtle_loops",
+    "module_2_decisions",
+    "module_3_lists",
+    "module_5_games",
+    "module_6_final_project"
   ]
 }

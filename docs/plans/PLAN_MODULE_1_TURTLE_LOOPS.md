@@ -54,7 +54,7 @@ By the end of this module, students will be able to:
 | [META_PLAN_MODULE_RECREATION.md](META_PLAN_MODULE_RECREATION.md) | Overall strategy |
 | [EXERCISE_TYPE_MODULE_MAPPING.md](../../templates/EXERCISE_TYPE_MODULE_MAPPING.md) | Valid types for Module 1 (see "module_1_turtle_loops" section) |
 | [TEMPLATE.md](../../TEMPLATE.md) | Placeholder reference |
-| [WRITING_GUIDE.md](WRITING_GUIDE.md) | Format standards |
+| [WRITING_GUIDE_EXERCISES.md](WRITING_GUIDE_EXERCISES.md) | Exercise format standards |
 | [common-struggles.md](../../references/pedagogy/common-struggles.md) | Loop mental model challenges |
 
 **Note:** Phase-specific templates are listed in each implementation phase below.

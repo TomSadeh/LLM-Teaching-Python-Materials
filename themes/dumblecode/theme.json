@@ -3,7 +3,7 @@
   "name_en": "Dumblecode",
   "name_he": "דאמבלקוד",
   "icon": "🧙",
-  "logo": "/logos/dumblecode.jpg",
+  "logo": "assets/logo.jpg",
   "app_name": "Dumblecode's Coding Academy",
   "teacher_name": "Dumblecode",
   "teacher_name_he": "דאמבלקוד",
@@ -30,6 +30,16 @@
     "exclamation": ["By Merlin's beard!", "Brilliant!", "Wicked!", "Blimey!", "Bloody hell!"],
     "greeting": ["Welcome to Hogwarts"],
     "password": ["Caput Draconis", "Pig Snout", "Fortuna Major", "Mimbulus mimbletonia", "Balderdash"],
+
+    "obstacle": ["trap", "curse", "hex", "dark spell"],
+    "danger_location": ["the Forbidden Forest", "the dark cave", "the cursed chamber"],
+    "harmful_status": ["poisoned", "cursed", "hexed", "petrified"],
+    "busy_activity": ["dueling", "in combat", "casting a spell"],
+
+    "primary_stat": ["health", "life force", "vitality"],
+    "secondary_stat": ["mana", "magic power", "spell energy"],
+    "retreat_action": ["flee", "apparate away", "retreat"],
+    "basic_action": ["use a basic spell", "defend", "dodge"],
 
     "ROLE_TITLE": "Wizard",
     "ROLE_TITLE_PLURAL": "Wizards",
@@ -79,6 +89,11 @@
     "CONTEXT_INVESTIGATION_COMPLETE": "All enchantments restored! The castle is safe once more thanks to your debugging skills.",
     "CONTEXT_IMPROVEMENT_COMPLETE": "Splendid! Your refined spell is now worthy of the Grand Grimoire.",
     "CONTEXT_TRIUMPH_COMPLETE": "Congratulations, wizard! You've completed this magical challenge and grown more powerful!",
+
+    "CONTEXT_SETBACK_INTRO": "{{hero}} faced a devastating defeat. A spell backfired, and the consequences were severe. But every great wizard learns from failure.",
+    "CONTEXT_SETBACK_NARRATIVE": "Study what went wrong in the previous duel. Identify the bugs in {{hero}}'s code that allowed {{villain}} to win.",
+    "CONTEXT_CONFRONTATION_INTRO": "The moment has arrived. {{hero}} faces {{villain}} in the ultimate magical showdown!",
+    "CONTEXT_CONFRONTATION_NARRATIVE": "Every spell you've practiced, every lesson you've learned, has led to this moment. Cast wisely!",
 
     "PHASE_1_TITLE": "Year 1: The Basics",
     "CONTEXT_PHASE_1": "Every wizard starts here. Master this fundamental charm before moving on.",
