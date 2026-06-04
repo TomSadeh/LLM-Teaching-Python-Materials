@@ -1,325 +1,219 @@
-"""
-{{CONTEXT_COMPLETE_FUNCTION_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
+# %% [markdown]
+# {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# נושא: פונקציות לעיבוד קבצי CSV
+# רמת קושי: 3-4
+#
+# השלימי את פונקציות עיבוד ה-CSV האלה על ידי מימוש הלוגיקה המרכזית.
+# חתימות הפונקציות ו-docstrings כבר מסופקים.
 
-Topic: CSV processing functions
-Difficulty: 3-4
-
-Complete these CSV processing functions by implementing the core logic.
-The function signatures and docstrings are provided.
-"""
-
+# %%
 import csv
 
-
-# ============================================================
-# {{FUNCTION_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 #
-# Complete a function to read CSV and return as list of dicts.
+# השלימי פונקציה שקוראת קובץ CSV ומחזירה רשימה של מילונים.
 
+# %%
+# Started for you:
+records = []
 
-def read_csv_as_dicts(filename):
-    """
-    Read a CSV file and return as list of dictionaries.
+# %% [markdown]
+# {{CONTEXT_FUNCTION_HINT_1}}
+#
+# 1. נסי לפתוח את הקובץ
+#
+# 2. צרי `DictReader`
+#
+# 3. המירי את הקורא לרשימה:
+#         records = list(reader)
+#
+# 4. טפלי ב-`FileNotFoundError`
+#
+# 5. החזירי את `records`
 
-    Args:
-        filename: Path to the CSV file
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        list: List of dicts (one per row), or empty list if error
+# %%
+pass  # Replace with implementation
 
-    Examples:
-        # If file contains:
-        # Name,Level,Score
-        # {{hero}},5,100
-        >>> read_csv_as_dicts("data.csv")
-        [{"Name": "{{hero}}", "Level": "5", "Score": "100"}]
-    """
-    # Started for you:
-    records = []
-
-    # ✏️ COMPLETE THIS FUNCTION ✏️
-    #
-    # {{CONTEXT_FUNCTION_HINT_1}}
-    #
-    # Step 1: Try to open the file
-    #
-    # Step 2: Create a DictReader
-    #
-    # Step 3: Convert reader to list
-    #         records = list(reader)
-    #
-    # Step 4: Handle FileNotFoundError
-    #
-    # Step 5: Return records
-
-    pass  # Replace with implementation
-
-
-# ============================================================
-# {{FUNCTION_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 #
-# Complete a function to write dicts to CSV.
+# השלימי פונקציה שכותבת מילונים לקובץ CSV.
+#
+# {{CONTEXT_FUNCTION_HINT_2}}
+#
+# 1. טפלי ב-records ריק:
+#         if not records:
+#             return 0
+#
+# 2. קבלי את שמות השדות מהרשומה הראשונה אם לא סופקו:
+#         if fieldnames is None:
+#             fieldnames = list(records[0].keys())
+#
+# 3. פתחי את הקובץ וצרי `DictWriter`:
+#         with open(filename, "w", newline="") as f:
+#             writer = csv.DictWriter(f, fieldnames=fieldnames)
+#
+# 4. כתבי את הכותרת והשורות:
+#             writer.writeheader()
+#             writer.writerows(records)
+#
+# 5. החזירי את הספירה
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def write_dicts_to_csv(filename, records, fieldnames=None):
-    """
-    Write a list of dictionaries to a CSV file.
+# %%
+pass  # Replace with implementation
 
-    Args:
-        filename: Path to output file
-        records: List of dicts to write
-        fieldnames: Column order (optional, uses first record's keys if None)
-
-    Returns:
-        int: Number of records written
-
-    Examples:
-        >>> records = [{"Name": "{{hero}}", "Level": 5}]
-        >>> write_dicts_to_csv("out.csv", records)
-        1
-    """
-    # ✏️ COMPLETE THIS FUNCTION ✏️
-    #
-    # {{CONTEXT_FUNCTION_HINT_2}}
-    #
-    # Step 1: Handle empty records:
-    #         if not records:
-    #             return 0
-    #
-    # Step 2: Get fieldnames from first record if not provided:
-    #         if fieldnames is None:
-    #             fieldnames = list(records[0].keys())
-    #
-    # Step 3: Open file and create DictWriter
-    #         with open(filename, "w", newline="") as f:
-    #             writer = csv.DictWriter(f, fieldnames=fieldnames)
-    #
-    # Step 4: Write header and rows:
-    #             writer.writeheader()
-    #             writer.writerows(records)
-    #
-    # Step 5: Return count
-
-    pass  # Replace with implementation
-
-
-# ============================================================
-# {{FUNCTION_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 #
-# Complete a function to filter CSV rows.
+# השלימי פונקציה שמסננת שורות מקובץ CSV.
 
+# %%
+# Started for you:
+matches = []
 
-def filter_csv(filename, column, value):
-    """
-    Filter CSV rows where column matches value.
+# %% [markdown]
+# {{CONTEXT_FUNCTION_HINT_3}}
+#
+# 1. טעיני את כל הרשומות באמצעות `read_csv_as_dicts`
+#         (השתמשי בפונקציה שכבר השלמת!)
+#
+# 2. סנני את השורות התואמות:
+#         for record in records:
+#             if record.get(column) == value:
+#                 matches.append(record)
+#
+# 3. החזירי את `matches`
 
-    Args:
-        filename: Path to CSV file
-        column: Column name to filter on
-        value: Value to match
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        list: Matching rows as dicts
+# %%
+pass  # Replace with implementation
 
-    Examples:
-        # If file has columns Name,Level,Active
-        >>> filter_csv("data.csv", "Active", "True")
-        [{"Name": "{{hero}}", "Level": "5", "Active": "True"}]
-    """
-    # Started for you:
-    matches = []
-
-    # ✏️ COMPLETE THIS FUNCTION ✏️
-    #
-    # {{CONTEXT_FUNCTION_HINT_3}}
-    #
-    # Step 1: Load all records using read_csv_as_dicts
-    #         (reuse the function you completed!)
-    #
-    # Step 2: Filter matching rows:
-    #         for record in records:
-    #             if record.get(column) == value:
-    #                 matches.append(record)
-    #
-    # Step 3: Return matches
-
-    pass  # Replace with implementation
-
-
-# ============================================================
-# {{FUNCTION_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 #
-# Complete a function to update a CSV column.
+# השלימי פונקציה שמעדכנת עמודה בקובץ CSV.
+#
+# {{CONTEXT_FUNCTION_HINT_4}}
+#
+# 1. טעיני את כל הרשומות
+#
+# 2. עקבי אחרי השינויים:
+#         updated = 0
+#
+# 3. עברי על הרשומות ועדכני את התואמות:
+#         for record in records:
+#             if record.get(key_column) == key_value:
+#                 record[update_column] = new_value
+#                 updated += 1
+#
+# 4. כתבי את כל הרשומות בחזרה לקובץ
+#
+# 5. החזירי את הספירה
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def update_csv_column(filename, key_column, key_value, update_column, new_value):
-    """
-    Update a specific cell in a CSV file.
+# %%
+pass  # Replace with implementation
 
-    Args:
-        filename: Path to CSV file
-        key_column: Column to search in
-        key_value: Value to find
-        update_column: Column to update
-        new_value: New value to set
-
-    Returns:
-        int: Number of rows updated
-
-    Examples:
-        # Update {{hero}}'s level to 10
-        >>> update_csv_column("chars.csv", "Name", "{{hero}}", "Level", "10")
-        1
-    """
-    # ✏️ COMPLETE THIS FUNCTION ✏️
-    #
-    # {{CONTEXT_FUNCTION_HINT_4}}
-    #
-    # Step 1: Load all records
-    #
-    # Step 2: Track changes:
-    #         updated = 0
-    #
-    # Step 3: Loop through and update matching records:
-    #         for record in records:
-    #             if record.get(key_column) == key_value:
-    #                 record[update_column] = new_value
-    #                 updated += 1
-    #
-    # Step 4: Write all records back to file
-    #
-    # Step 5: Return count
-
-    pass  # Replace with implementation
-
-
-# ============================================================
-# {{FUNCTION_5_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_5_TITLE}}
 # {{CONTEXT_FUNCTION_5_NARRATIVE}}
 #
-# Complete a function to aggregate CSV data.
+# השלימי פונקציה שמצטברת נתונים מקובץ CSV.
 
+# %%
+# Started for you:
+total = 0.0
 
-def sum_csv_column(filename, column):
-    """
-    Sum all numeric values in a column.
+# %% [markdown]
+# {{CONTEXT_FUNCTION_HINT_5}}
+#
+# 1. טעיני את הרשומות
+#
+# 2. עברי על הרשומות וסכמי את הערכים:
+#         for record in records:
+#             try:
+#                 total += float(record.get(column, 0))
+#             except ValueError:
+#                 continue  # Skip non-numeric values
+#
+# 3. החזירי את `total`
 
-    Args:
-        filename: Path to CSV file
-        column: Column name to sum
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        float: Sum of values, or 0 if error/empty
+# %%
+pass  # Replace with implementation
 
-    Examples:
-        # If Score column has 100, 150, 75
-        >>> sum_csv_column("scores.csv", "Score")
-        325.0
-    """
-    # Started for you:
-    total = 0.0
-
-    # ✏️ COMPLETE THIS FUNCTION ✏️
-    #
-    # {{CONTEXT_FUNCTION_HINT_5}}
-    #
-    # Step 1: Load records
-    #
-    # Step 2: Loop through and sum values:
-    #         for record in records:
-    #             try:
-    #                 total += float(record.get(column, 0))
-    #             except ValueError:
-    #                 continue  # Skip non-numeric values
-    #
-    # Step 3: Return total
-
-    pass  # Replace with implementation
-
-
-# ============================================================
-# {{FUNCTION_6_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_6_TITLE}}
 # {{CONTEXT_FUNCTION_6_NARRATIVE}}
 #
-# Complete a function to merge two CSV files.
+# השלימי פונקציה שממזגת שני קבצי CSV לאחד.
+#
+# {{CONTEXT_FUNCTION_HINT_6}}
+#
+# 1. טעיני את הרשומות משני הקבצים
+#
+# 2. שלבי את הרשימות:
+#         all_records = records1 + records2
+#
+# 3. כתבי את הרשומות המשולבות לפלט
+#
+# 4. החזירי את הספירה הכוללת
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def merge_csv_files(file1, file2, output_file):
-    """
-    Merge two CSV files with the same structure.
+# %%
+pass  # Replace with implementation
 
-    Args:
-        file1: First input file
-        file2: Second input file
-        output_file: Where to save merged data
+# %%
+print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
+print("=" * 50)
 
-    Returns:
-        int: Total number of records in output
+print("\n=== Testing CSV Functions ===")
 
-    Examples:
-        >>> merge_csv_files("data1.csv", "data2.csv", "combined.csv")
-        10  # 5 from each file
-    """
-    # ✏️ COMPLETE THIS FUNCTION ✏️
-    #
-    # {{CONTEXT_FUNCTION_HINT_6}}
-    #
-    # Step 1: Load records from both files
-    #
-    # Step 2: Combine lists:
-    #         all_records = records1 + records2
-    #
-    # Step 3: Write combined records to output
-    #
-    # Step 4: Return total count
+# Create test data
+test_records = [
+    {"Name": "{{hero}}", "Level": "5", "Score": "100"},
+    {"Name": "{{heroine}}", "Level": "7", "Score": "150"},
+    {"Name": "{{friend}}", "Level": "3", "Score": "75"}
+]
 
-    pass  # Replace with implementation
+print("\n--- Testing write_dicts_to_csv ---")
+# count = write_dicts_to_csv("test_data.csv", test_records)
+# print(f"Wrote {count} records")
 
+print("\n--- Testing read_csv_as_dicts ---")
+# records = read_csv_as_dicts("test_data.csv")
+# print(f"Read {len(records)} records")
+# for r in records:
+#     print(f"  {r}")
 
-def main():
-    print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
-    print("=" * 50)
+print("\n--- Testing filter_csv ---")
+# matches = filter_csv("test_data.csv", "Level", "5")
+# print(f"Found {len(matches)} matches")
 
-    print("\n=== Testing CSV Functions ===")
+print("\n--- Testing sum_csv_column ---")
+# total = sum_csv_column("test_data.csv", "Score")
+# print(f"Total score: {total}")
 
-    # Create test data
-    test_records = [
-        {"Name": "{{hero}}", "Level": "5", "Score": "100"},
-        {"Name": "{{heroine}}", "Level": "7", "Score": "150"},
-        {"Name": "{{friend}}", "Level": "3", "Score": "75"}
-    ]
-
-    print("\n--- Testing write_dicts_to_csv ---")
-    # count = write_dicts_to_csv("test_data.csv", test_records)
-    # print(f"Wrote {count} records")
-
-    print("\n--- Testing read_csv_as_dicts ---")
-    # records = read_csv_as_dicts("test_data.csv")
-    # print(f"Read {len(records)} records")
-    # for r in records:
-    #     print(f"  {r}")
-
-    print("\n--- Testing filter_csv ---")
-    # matches = filter_csv("test_data.csv", "Level", "5")
-    # print(f"Found {len(matches)} matches")
-
-    print("\n--- Testing sum_csv_column ---")
-    # total = sum_csv_column("test_data.csv", "Score")
-    # print(f"Total score: {total}")
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

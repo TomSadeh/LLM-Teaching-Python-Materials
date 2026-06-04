@@ -7,223 +7,209 @@
 # Concepts: debugging loops, tracing, fixing turtle programs
 # =============================================================================
 
-"""
-{{CONTEXT_DISCOVERY_INTRO}}
+# %% [markdown]
+# {{CONTEXT_DISCOVERY_INTRO}}
+#
+# זוהי תרגיל רב-חלקי. השלימי כל חלק לפי הסדר.
 
-This is a multi-part exercise. Complete each part in order.
-"""
-
+# %%
 import turtle
 
-
-# ============================================================
-# PART 1: DISCOVERY - Observe the Unexpected
-# ============================================================
+# %% [markdown]
+# ## חלק 1: גילוי - שימי לב למשהו לא צפוי
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{hero}} found some drawing code at {{school}}.
-# The code is supposed to draw a square, but something is wrong!
-# Study the output and notice the problem.
+# {{hero}} מצאה קצת קוד ציור ב-{{school}}.
+# הקוד אמור לצייר ריבוע, אבל משהו לא בסדר!
+# עיייני בפלט ושימי לב לבעיה.
 
+# %%
+# This should draw a square... but does it?
+t = turtle.Turtle()
+t.speed(0)
+for i in range(4):
+    t.forward(80)
+    t.right(80)  # Something's off!
 
-def mystery_code_1():
-    """Run this and observe what happens"""
-    # This should draw a square... but does it?
-    t = turtle.Turtle()
-    t.speed(0)
-    for i in range(4):
-        t.forward(80)
-        t.right(80)  # Something's off!
+# %%
+# This should count 1 to 5, but look at the output!
+for num in range(5):
+    print(f"Count: {num}")
 
+# %%
+# This should draw a growing spiral...
+t = turtle.Turtle()
+t.speed(0)
+t.penup()
+t.goto(150, 50)
+t.pendown()
+for i in range(1, 6):
+    length = 20  # All lines are the same!
+    t.forward(length)
+    t.right(90)
 
-def mystery_code_2():
-    """Run this and observe what happens"""
-    # This should count 1 to 5, but look at the output!
-    for num in range(5):
-        print(f"Count: {num}")
+# %% [markdown]
+# ## התצפיות שלי
+#
+# mystery_code_1:
+#   ציפינו: ריבוע סגור
+#   בפועל: ________________________________
+#   מה נראה שגוי? ________________________________
+#
+# mystery_code_2:
+#   ציפינו: מדפיס 1, 2, 3, 4, 5
+#   בפועל: ________________________________
+#   מה נראה שגוי? ________________________________
+#
+# mystery_code_3:
+#   ציפינו: קווים מתארכים (20, 40, 60, 80, 100)
+#   בפועל: ________________________________
+#   מה נראה שגוי? ________________________________
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def mystery_code_3():
-    """Run this and observe what happens"""
-    # This should draw a growing spiral...
-    t = turtle.Turtle()
-    t.speed(0)
-    t.penup()
-    t.goto(150, 50)
-    t.pendown()
-    for i in range(1, 6):
-        length = 20  # All lines are the same!
-        t.forward(length)
-        t.right(90)
-
-
-def your_observations():
-    # ✏️ YOUR OBSERVATIONS HERE ✏️
-    #
-    # mystery_code_1:
-    #   Expected: A closed square
-    #   Actual: ________________________________
-    #   What seems wrong? ________________________________
-    #
-    # mystery_code_2:
-    #   Expected: Prints 1, 2, 3, 4, 5
-    #   Actual: ________________________________
-    #   What seems wrong? ________________________________
-    #
-    # mystery_code_3:
-    #   Expected: Lines get longer (20, 40, 60, 80, 100)
-    #   Actual: ________________________________
-    #   What seems wrong? ________________________________
-    pass
-
-
-# ============================================================
-# PART 2: INVESTIGATION - Trace the Code
-# ============================================================
+# %% [markdown]
+# ## חלק 2: חקירה - עקבי אחרי הקוד
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Now trace through each mystery to understand exactly why
-# it behaves unexpectedly.
+# עכשיו עקבי אחרי כל תעלומה כדי להבין בדיוק למה
+# הקוד מתנהג בצורה לא צפויה.
+#
+# ## עקבי אחרי הקוד
+#
+# mystery_code_1 משתמש ב-`right(80)` במקום `right(90)`.
+#
+# | איטרציה | סך הזווית שנפנתה |
+# |---------|-----------------|
+# | 1       | 80               |
+# | 2       |                  |
+# | 3       |                  |
+# | 4       |                  |
+#
+# סך הזווית: ___ מעלות
+# לצורה סגורה: צריך להיות ___ מעלות
+#
+# הבאג: ________________________________
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def trace_mystery_1():
-    # ✏️ TRACE THE CODE ✏️
-    #
-    # mystery_code_1 uses right(80) instead of right(90).
-    #
-    # | Iteration | Angle turned so far |
-    # |-----------|---------------------|
-    # | 1         | 80                  |
-    # | 2         |                     |
-    # | 3         |                     |
-    # | 4         |                     |
-    #
-    # Total angle: ___ degrees
-    # For a closed shape: should be ___ degrees
-    #
-    # The bug: ________________________________
-    pass
+# %% [markdown]
+# ## עקבי אחרי הקוד
+#
+# `range(5)` מייצר: ___, ___, ___, ___, ___
+# אבל רצינו: 1, 2, 3, 4, 5
+#
+# כדי לקבל 1 עד 5, צריך להשתמש ב: `range(___, ___)`
+#
+# הבאג: ________________________________
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def trace_mystery_2():
-    # ✏️ TRACE THE CODE ✏️
-    #
-    # range(5) produces: ___, ___, ___, ___, ___
-    # But we wanted: 1, 2, 3, 4, 5
-    #
-    # To get 1-5, we should use: range(___, ___)
-    #
-    # The bug: ________________________________
-    pass
+# %% [markdown]
+# ## עקבי אחרי הקוד
+#
+# | איטרציה | i | אורך (כפי שצריך) | אורך (בפועל) |
+# |---------|---|-----------------|-------------|
+# | 1       | 1 | 20               | 20          |
+# | 2       | 2 | 40               | 20          |
+# | 3       | 3 | 60               | 20          |
+# | 4       | 4 | 80               | 20          |
+# | 5       | 5 | 100              | 20          |
+#
+# הקוד מגדיר `length = 20` ישירות, ומתעלם מ-`i`.
+# צריך להיות: `length = i * ___`
+#
+# הבאג: ________________________________
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def trace_mystery_3():
-    # ✏️ TRACE THE CODE ✏️
-    #
-    # | Iteration | i | length (should be) | length (actual) |
-    # |-----------|---|-------------------|-----------------|
-    # | 1         | 1 | 20                | 20              |
-    # | 2         | 2 | 40                | 20              |
-    # | 3         | 3 | 60                | 20              |
-    # | 4         | 4 | 80                | 20              |
-    # | 5         | 5 | 100               | 20              |
-    #
-    # The code sets length = 20 directly, ignoring i.
-    # It should be: length = i * ___
-    #
-    # The bug: ________________________________
-    pass
-
-
-# ============================================================
-# PART 3: IMPROVEMENT - Fix the Issues
-# ============================================================
+# %% [markdown]
+# ## חלק 3: שיפור - תקני את הבעיות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Now that you understand the bugs, fix them!
+# עכשיו שהבנת את הבאגים, תקני אותם!
+#
+# ## תקני את הבאג
+#
+# תקני את הזווית כך שהריבוע ייסגר כראוי.
+#
+# התיקון שלי:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fixed_code_1():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # Fix the angle so the square closes properly.
-    #
-    # Your fix:
+# %% [markdown]
+# ## תקני את הבאג
+#
+# תקני את ה-`range` כך שיספור מ-1 עד 5.
+#
+# התיקון שלי:
 
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %% [markdown]
+# ## תקני את הבאג
+#
+# תקני את חישוב האורך כך שהקווים יתארכו.
+#
+# התיקון שלי:
 
-def fixed_code_2():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # Fix the range so it counts 1 to 5.
-    #
-    # Your fix:
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    pass
+# %%
+print("=" * 50)
+print("PART 1: DISCOVERY - Observe the Unexpected")
+print("=" * 50)
 
+print("\n--- mystery_code_1 ---")
+print("This should draw a square...")
+mystery_code_1()
 
-def fixed_code_3():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # Fix the length calculation so lines grow.
-    #
-    # Your fix:
+print("\n--- mystery_code_2 ---")
+print("This should count 1 to 5...")
+mystery_code_2()
 
-    pass
+print("\n--- mystery_code_3 ---")
+print("This should draw a growing spiral...")
+mystery_code_3()
 
+print("\n--- Your Observations ---")
+your_observations()
 
-def main():
-    print("=" * 50)
-    print("PART 1: DISCOVERY - Observe the Unexpected")
-    print("=" * 50)
+print("\n" + "=" * 50)
+print("PART 2: INVESTIGATION - Trace the Code")
+print("=" * 50)
 
-    print("\n--- mystery_code_1 ---")
-    print("This should draw a square...")
-    mystery_code_1()
+print("\n--- trace_mystery_1 ---")
+trace_mystery_1()
 
-    print("\n--- mystery_code_2 ---")
-    print("This should count 1 to 5...")
-    mystery_code_2()
+print("\n--- trace_mystery_2 ---")
+trace_mystery_2()
 
-    print("\n--- mystery_code_3 ---")
-    print("This should draw a growing spiral...")
-    mystery_code_3()
+print("\n--- trace_mystery_3 ---")
+trace_mystery_3()
 
-    print("\n--- Your Observations ---")
-    your_observations()
+print("\n" + "=" * 50)
+print("PART 3: IMPROVEMENT - Fix the Issues")
+print("=" * 50)
 
-    print("\n" + "=" * 50)
-    print("PART 2: INVESTIGATION - Trace the Code")
-    print("=" * 50)
+print("\n--- fixed_code_1 ---")
+# fixed_code_1()  # Uncomment when fixed
 
-    print("\n--- trace_mystery_1 ---")
-    trace_mystery_1()
+print("\n--- fixed_code_2 ---")
+# fixed_code_2()
 
-    print("\n--- trace_mystery_2 ---")
-    trace_mystery_2()
+print("\n--- fixed_code_3 ---")
+# fixed_code_3()
 
-    print("\n--- trace_mystery_3 ---")
-    trace_mystery_3()
-
-    print("\n" + "=" * 50)
-    print("PART 3: IMPROVEMENT - Fix the Issues")
-    print("=" * 50)
-
-    print("\n--- fixed_code_1 ---")
-    # fixed_code_1()  # Uncomment when fixed
-
-    print("\n--- fixed_code_2 ---")
-    # fixed_code_2()
-
-    print("\n--- fixed_code_3 ---")
-    # fixed_code_3()
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_TRIUMPH_COMPLETE}}")
-    turtle.done()
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_TRIUMPH_COMPLETE}}")
+turtle.done()

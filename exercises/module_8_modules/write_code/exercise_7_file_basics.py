@@ -1,194 +1,176 @@
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-
-In this exercise, you'll learn to read from and write to files using
-Python's built-in file handling. This is essential for saving data,
-loading configuration, and working with external data.
-
-Topic: File I/O basics with context managers
-Difficulty: 2-3
-"""
-
-
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# בתרגיל הזה תלמדי לקרוא מקבצים ולכתוב אליהם
+# באמצעות הכלים המובנים של Python לטיפול בקבצים.
+# זה חיוני לשמירת נתונים, טעינת הגדרות ועבודה עם מידע חיצוני.
+#
+# נושא: קלט/פלט קבצים עם מנהלי הקשר
+# רמת קושי: 2-3
+#
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# Learn the 'with' statement (context manager) for safe file handling.
+# למדי את משפט `with` (מנהל הקשר) לטיפול בטוח בקבצים.
+#
+# כתבי טקסט לקובץ באמצעות מנהל הקשר.
+#
+# 1. השתמשי ב-`with open()` כדי לפתוח קובץ לכתיבה:
+#         with open("greeting.txt", "w") as f:
+#             # פעולות על הקובץ כאן
+#
+# 2. כתבי הודעת ברכה:
+#         f.write("Welcome to {{school}}!\n")
+#         f.write("Greetings, {{hero}}.\n")
+#
+# 3. הקובץ נסגר אוטומטית כשבלוק ה-`with` מסתיים!
+#
+# 4. הדפיסי: `"File 'greeting.txt' created successfully!"`
+#
+# מצבי פתיחת קובץ:
+#   `"w"` = כתיבה (יוצר קובץ חדש או מחליף קיים)
+#   `"r"` = קריאה (ברירת מחדל)
+#   `"a"` = הוספה לסוף
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Write text to a file using a context manager.
-    #
-    # Step 1: Use 'with open()' to open a file for writing:
-    #         with open("greeting.txt", "w") as f:
-    #             # file operations go here
-    #
-    # Step 2: Write a greeting message:
-    #         f.write("Welcome to {{school}}!\n")
-    #         f.write("Greetings, {{hero}}.\n")
-    #
-    # Step 3: The file is automatically closed when the 'with' block ends!
-    #
-    # Step 4: Print: "File 'greeting.txt' created successfully!"
-    #
-    # File modes:
-    #   "w" = write (creates new or overwrites existing)
-    #   "r" = read (default)
-    #   "a" = append (add to end)
-    pass
+# %% [markdown]
+#
+# קראי טקסט מהקובץ שיצרת זה עתה.
+#
+# 1. פתחי את הקובץ לקריאה:
+#         with open("greeting.txt", "r") as f:
+#
+# 2. קראי את כל התוכן בבת אחת:
+#         content = f.read()
+#
+# 3. הדפיסי את התוכן:
+#         print("File content:")
+#         print(content)
+#
+# > רמז: אחרי בלוק ה-`with`, הקובץ נסגר אוטומטית
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Read text from the file you just created.
-    #
-    # Step 1: Open the file for reading:
-    #         with open("greeting.txt", "r") as f:
-    #
-    # Step 2: Read all content at once:
-    #         content = f.read()
-    #
-    # Step 3: Print the content:
-    #         print("File content:")
-    #         print(content)
-    #
-    # Note: After the 'with' block, the file is closed automatically
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# Learn different ways to read files.
+# למדי דרכים שונות לקריאת קבצים.
+#
+# ראשית, צרי קובץ עם כמה שורות.
+#
+# 1. צרי קובץ עם שורות ממוספרות:
+#         with open("lines.txt", "w") as f:
+#             for i in range(1, 6):
+#                 f.write(f"Line {i}: {{spell1}}\n")
+#
+# 2. קראי והדפיסי באמצעות `readlines()`:
+#         with open("lines.txt", "r") as f:
+#             lines = f.readlines()  # מחזירה רשימה של שורות
+#
+# 3. הדפיסי כל שורה עם האינדקס שלה:
+#         for i, line in enumerate(lines):
+#             print(f"{i}: {line.strip()}")  # strip() מסיר את \n
+#
+# > רמז: `readlines()` כוללת את תו השורה החדשה `\n`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # First, create a file with multiple lines.
-    #
-    # Step 1: Create a file with numbered lines:
-    #         with open("lines.txt", "w") as f:
-    #             for i in range(1, 6):
-    #                 f.write(f"Line {i}: {{spell1}}\n")
-    #
-    # Step 2: Read and print using readlines():
-    #         with open("lines.txt", "r") as f:
-    #             lines = f.readlines()  # Returns a list of lines
-    #
-    # Step 3: Print each line with its index:
-    #         for i, line in enumerate(lines):
-    #             print(f"{i}: {line.strip()}")  # strip() removes \n
-    #
-    # Note: readlines() includes the newline character \n
-    pass
+# %% [markdown]
+#
+# קראי קובץ שורה אחר שורה (יעיל יותר בזיכרון לקבצים גדולים).
+#
+# 1. פתחי את הקובץ:
+#         with open("lines.txt", "r") as f:
+#
+# 2. עברי ישירות על אובייקט הקובץ:
+#             for line in f:
+#                 print(line.strip())
+#
+# זו הדרך הכי פייתונית לקרוא קבצים שורה אחר שורה.
+# היא לא טוענת את כל הקובץ לזיכרון בבת אחת.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_d():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Read a file line by line (more memory efficient for large files).
-    #
-    # Step 1: Open the file
-    #         with open("lines.txt", "r") as f:
-    #
-    # Step 2: Iterate directly over the file object:
-    #             for line in f:
-    #                 print(line.strip())
-    #
-    # This is the most Pythonic way to read files line by line.
-    # It doesn't load the entire file into memory at once.
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# Learn to append to files and work with file paths.
+# למדי להוסיף לקבצים קיימים ולעבוד עם נתיבי קבצים.
+#
+# הוסיפי תוכן לקובץ קיים.
+#
+# 1. פתחי במצב הוספה `"a"`:
+#         with open("greeting.txt", "a") as f:
+#             f.write("\nNew message added!\n")
+#             f.write("From {{heroine}}.\n")
+#
+# 2. קראי את הקובץ כדי לוודא:
+#         with open("greeting.txt", "r") as f:
+#             print(f.read())
+#
+# > רמז: מצב `"a"` מוסיף לסוף, מצב `"w"` מחליף את כל התוכן!
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_e():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Append to an existing file.
-    #
-    # Step 1: Open in append mode "a":
-    #         with open("greeting.txt", "a") as f:
-    #             f.write("\nNew message added!\n")
-    #             f.write("From {{heroine}}.\n")
-    #
-    # Step 2: Read the file to verify:
-    #         with open("greeting.txt", "r") as f:
-    #             print(f.read())
-    #
-    # Note: "a" mode adds to the end, "w" mode overwrites!
-    pass
+# %% [markdown]
+#
+# צרי פונקציה לשמירת רשימה בקובץ.
+#
+# 1. צרי רשימת פריטים:
+#         inventory = ["{{item}}", "potion", "scroll", "gem", "key"]
+#
+# 2. כתבי כל פריט לקובץ (אחד בכל שורה):
+#         with open("inventory.txt", "w") as f:
+#             for item in inventory:
+#                 f.write(item + "\n")
+#
+# 3. קראי את הקובץ בחזרה לרשימה:
+#         with open("inventory.txt", "r") as f:
+#             loaded = []
+#             for line in f:
+#                 loaded.append(line.strip())
+#
+# 4. הדפיסי את שתי הרשימות כדי לוודא שהן זהות:
+#         print(f"Original: {inventory}")
+#         print(f"Loaded: {loaded}")
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_f():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create a function to save a list to a file.
-    #
-    # Step 1: Create a list of items:
-    #         inventory = ["{{item}}", "potion", "scroll", "gem", "key"]
-    #
-    # Step 2: Write each item to a file (one per line):
-    #         with open("inventory.txt", "w") as f:
-    #             for item in inventory:
-    #                 f.write(item + "\n")
-    #
-    # Step 3: Read the file back into a list:
-    #         with open("inventory.txt", "r") as f:
-    #             loaded = []
-    #             for line in f:
-    #                 loaded.append(line.strip())
-    #
-    # Step 4: Print both lists to verify they match:
-    #         print(f"Original: {inventory}")
-    #         print(f"Loaded: {loaded}")
-    pass
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
+print("\n=== {{PHASE_1_TITLE}} ===")
+print("Writing and reading files with 'with' statement")
+exercise_a()
+exercise_b()
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_2_TITLE}} ===")
+print("Different ways to read files")
+exercise_c()
+exercise_d()
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    print("Writing and reading files with 'with' statement")
-    exercise_a()
-    exercise_b()
+print("\n=== {{PHASE_3_TITLE}} ===")
+print("Appending and saving lists")
+exercise_e()
+exercise_f()
 
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    print("Different ways to read files")
-    exercise_c()
-    exercise_d()
-
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    print("Appending and saving lists")
-    exercise_e()
-    exercise_f()
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-    print()
-    print("File I/O Summary:")
-    print("  with open(file, 'w') as f:  # Write (overwrite)")
-    print("  with open(file, 'r') as f:  # Read")
-    print("  with open(file, 'a') as f:  # Append")
-    print("  f.read()       # Read all content")
-    print("  f.readlines()  # Read as list of lines")
-    print("  f.write(text)  # Write text")
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")
+print()
+print("File I/O Summary:")
+print("  with open(file, 'w') as f:  # Write (overwrite)")
+print("  with open(file, 'r') as f:  # Read")
+print("  with open(file, 'a') as f:  # Append")
+print("  f.read()       # Read all content")
+print("  f.readlines()  # Read as list of lines")
+print("  f.write(text)  # Write text")

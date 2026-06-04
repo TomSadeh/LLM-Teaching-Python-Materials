@@ -5,161 +5,137 @@
 # Concepts: calculated angles, star patterns, geometric patterns
 # =============================================================================
 
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
 
+# %%
 import turtle
 
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
+#
+# צייר כוכב בעל 5 קצוות עבור {{hero}}.
+#
+# 1. צרי צב
+# 2. השתמשי בלולאת `for` עם `range(5)`
+# 3. בתוך הלולאה:
+#         - `t.forward(100)`
+#         - `t.right(144)`  # זווית הכוכב: 144 מעלות
+#
+# למה 144? כוכב בעל 5 קצוות "קופץ" מעל קודקודים, ולכן הפנייה היא 144 מעלות.
+# נוסחה: `180 - (180 / 5) = 180 - 36 = 144`
+# או בדרך אחרת: `2 * (360/5) = 2 * 72 = 144`
+#
+# תוצאה צפויה: צורת כוכב קלאסית בעלת 5 קצוות.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Draw a 5-pointed star for {{hero}}.
-    #
-    # Step 1: Create a turtle
-    # Step 2: Use a for loop with range(5)
-    # Step 3: Inside the loop:
-    #         - t.forward(100)
-    #         - t.right(144)  # Star angle: 144 degrees
-    #
-    # Why 144? A 5-pointed star skips vertices, creating a 144-degree turn.
-    # Formula: 180 - (180 / 5) = 180 - 36 = 144
-    # Or think of it as: 2 * (360/5) = 2 * 72 = 144
-    #
-    # Expected: A classic 5-pointed star shape.
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
+#
+# צייר כוכב בעל 6 קצוות (דגם מגן דוד) ב-{{school}}.
+# הכוכב הזה מורכב משני משולשים חופפים!
+#
+# 1. צרי צב ומקמי אותו ב-`(150, 0)`
+# 2. צייר את המשולש הראשון (3 צלעות, פנייה ימינה של 120 מעלות)
+# 3. פני ימינה 60 מעלות להכנה למשולש השני
+# 4. צייר את המשולש השני (3 צלעות, פנייה ימינה של 120 מעלות)
+#
+# > רמז: כל משולש הוא משולש שווה-צלעות. המשולש השני מסובב 60 מעלות ביחס לראשון.
+#
+# תוצאה צפויה: שני משולשים חופפים שיוצרים כוכב בעל 6 קצוות.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Draw a 6-pointed star (Star of David pattern) at {{school}}.
-    # This is made of two overlapping triangles!
-    #
-    # Step 1: Create a turtle and position at (150, 0)
-    # Step 2: Draw first triangle (3 sides, 120 degree right turns)
-    # Step 3: Turn right 60 degrees to prepare for second triangle
-    # Step 4: Draw second triangle (3 sides, 120 degree right turns)
-    #
-    # Hint: Each triangle is a regular triangle.
-    # The second triangle is rotated 60 degrees from the first.
-    #
-    # Expected: Two overlapping triangles forming a 6-pointed star.
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
+#
+# צייר דפוס ספירלה מרובעת עבור {{creature}}.
+# כל צלע נעשית ארוכה יותר ככל שמתקדמים!
+#
+# 1. צרי צב ומקמי אותו ב-`(-100, 100)`
+# 2. השתמשי בלולאת `for` עם `range(1, 21)` לציור 20 קווים
+# 3. בתוך הלולאה:
+#         - `t.forward(i * 5)` כאשר `i` הוא משתנה הלולאה
+#         - `t.right(90)`
+#
+# תוצאה צפויה: ספירלה שמתרחבת החוצה בדפוס מרובע.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Draw a spiral square pattern for {{creature}}.
-    # Each side gets longer as you go around!
-    #
-    # Step 1: Create a turtle and position at (-100, 100)
-    # Step 2: Use a for loop with range(1, 21) for 20 lines
-    # Step 3: Inside the loop:
-    #         - t.forward(i * 5)  where i is the loop variable
-    #         - t.right(90)
-    #
-    # Expected: A spiral that grows outward in a square pattern.
-    pass
-
-
-# ============================================================
-# {{PHASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
+#
+# צייר דפוס מעגלי של משולשים ב-{{location}}.
+# צייר 12 קווים קטנים המסודרים במעגל.
+#
+# 1. צרי צב ומקמי אותו ב-`(0, -100)`
+# 2. השתמשי בלולאה עם `range(12)` ל-12 משולשים
+# 3. בתוך הלולאה:
+#         א) חשבת על לולאה פנימית... רגע, עדיין אין לנו לולאות מקוננות!
+#         ב) במקום זאת: כתבי 3 פקודות `forward`/`right(120)` למשולש
+#         ג) לאחר מכן פני ימינה 30 מעלות למיקום המשולש הבא
+#
+# רגע, בואי נפשט — נצייר 12 קווים שקורנים מהמרכז:
+# 3. בתוך הלולאה:
+#         - `t.forward(60)`
+#         - `t.backward(60)`
+#         - `t.right(30)`  # 360/12 = 30 מעלות
+#
+# תוצאה צפויה: 12 קווים שקורנים החוצה כמו חישורים של גלגל.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_d():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Draw a circular pattern of triangles at {{location}}.
-    # Draw 12 small triangles arranged in a circle.
-    #
-    # Step 1: Create a turtle and position at (0, -100)
-    # Step 2: Use an outer loop with range(12) for 12 triangles
-    # Step 3: Inside the outer loop:
-    #         a) Use an inner... wait, NO NESTED LOOPS YET!
-    #         b) Instead: draw 3 forward/right(120) commands for triangle
-    #         c) Then turn right 30 degrees to position for next triangle
-    #
-    # Actually, let's simplify - draw 12 lines radiating from center:
-    # Step 3: Inside the loop:
-    #         - t.forward(60)
-    #         - t.backward(60)
-    #         - t.right(30)  # 360/12 = 30 degrees
-    #
-    # Expected: 12 lines radiating outward like spokes of a wheel.
-    pass
-
-
-# ============================================================
-# {{PHASE_5_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
+#
+# צרי דפוס "פרח" ב-{{place}} עבור {{hero}}.
+# צייר 36 קווים קטנים בדפוס מעגלי, כל אחד מסובב 10 מעלות.
+#
+# 1. צרי צב
+# 2. השתמשי בלולאת `for` עם `range(36)`
+# 3. בתוך הלולאה:
+#         - `t.forward(80)`
+#         - `t.backward(80)`
+#         - `t.right(10)`  # 360/36 = 10 מעלות
+#
+# אתגר אופציונלי: גרמי לכל קו שני להיות באורך שונה!
+# (בדקי אם `i` זוגי או אי-זוגי... אבל עדיין אין לנו `if`!)
+#
+# תוצאה צפויה: דפוס "שמש" מעגלי עם 36 קרניים.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_e():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create a "flower" pattern at {{place}} for {{hero}}.
-    # Draw 36 small lines in a circular pattern, each rotated 10 degrees.
-    #
-    # Step 1: Create a turtle
-    # Step 2: Use a for loop with range(36)
-    # Step 3: Inside the loop:
-    #         - t.forward(80)
-    #         - t.backward(80)
-    #         - t.right(10)  # 360/36 = 10 degrees
-    #
-    # Optional challenge: Make every other line a different length!
-    # (Check if i is even or odd... but we can't use if yet!)
-    #
-    # Expected: A circular sunburst pattern with 36 rays.
-    pass
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
+print("\n=== {{PHASE_1_TITLE}} ===")
+exercise_a()
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_2_TITLE}} ===")
+exercise_b()
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    exercise_a()
+print("\n=== {{PHASE_3_TITLE}} ===")
+exercise_c()
 
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    exercise_b()
+print("\n=== {{PHASE_4_TITLE}} ===")
+exercise_d()
 
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    exercise_c()
+print("\n=== {{PHASE_5_TITLE}} ===")
+exercise_e()
 
-    print("\n=== {{PHASE_4_TITLE}} ===")
-    exercise_d()
-
-    print("\n=== {{PHASE_5_TITLE}} ===")
-    exercise_e()
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-    turtle.done()
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")
+turtle.done()

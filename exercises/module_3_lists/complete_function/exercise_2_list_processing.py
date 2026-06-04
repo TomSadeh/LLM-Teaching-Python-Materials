@@ -5,228 +5,119 @@
 # Concepts: Iterating, filtering, accumulating with lists
 # =============================================================================
 
-"""
-{{CONTEXT_COMPLETE_FUNCTION_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
-
-
-# ============================================================
-# {{FUNCTION_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
+# %%
+# Started for you:
+count = 0
 
-def count_matches(items, target):
-    """
-    Count how many times target appears in items.
+# COMPLETE THIS FUNCTION
+#
+# Loop through each item in items.
+# If the item equals target, add 1 to count.
+# Return the final count.
+#
+# Hint: for item in items: if item == target: count = count + 1
 
-    Args:
-        items: A list of items to search
-        target: The value to count
+pass  # Replace with implementation
 
-    Returns:
-        The number of times target appears in items
-
-    Examples:
-        >>> count_matches(["{{item}}", "potion", "{{item}}", "key"], "{{item}}")
-        2
-        >>> count_matches([1, 2, 3, 2, 2], 2)
-        3
-        >>> count_matches(["a", "b", "c"], "x")
-        0
-    """
-    # Started for you:
-    count = 0
-
-    # COMPLETE THIS FUNCTION
-    #
-    # Loop through each item in items.
-    # If the item equals target, add 1 to count.
-    # Return the final count.
-    #
-    # Hint: for item in items: if item == target: count = count + 1
-
-    pass  # Replace with implementation
-
-
-# ============================================================
-# {{FUNCTION_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
+# %%
+# Started for you:
+result = []
 
-def find_all_above(numbers, threshold):
-    """
-    Return all numbers greater than threshold.
+# COMPLETE THIS FUNCTION
+#
+# Loop through each number in numbers.
+# If number > threshold, append it to result.
+# Return result.
 
-    Args:
-        numbers: A list of numbers
-        threshold: The minimum value (exclusive)
+pass  # Replace with implementation
 
-    Returns:
-        A new list with only numbers > threshold
-
-    Examples:
-        >>> find_all_above([10, 25, 5, 30, 15], 20)
-        [25, 30]
-        >>> find_all_above([1, 2, 3, 4, 5], 3)
-        [4, 5]
-        >>> find_all_above([5, 5, 5], 5)
-        []
-    """
-    # Started for you:
-    result = []
-
-    # COMPLETE THIS FUNCTION
-    #
-    # Loop through each number in numbers.
-    # If number > threshold, append it to result.
-    # Return result.
-
-    pass  # Replace with implementation
-
-
-# ============================================================
-# {{FUNCTION_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
+# %%
+# Started for you:
+longest = strings[0]  # Start with first string
 
-def get_longest_string(strings):
-    """
-    Return the longest string in the list.
+# COMPLETE THIS FUNCTION
+#
+# Loop through each string in strings.
+# If len(string) > len(longest), update longest = string.
+# Return longest.
+#
+# Hint: Start from strings[1:] since we already have the first
 
-    Args:
-        strings: A list of strings (at least one)
+pass  # Replace with implementation
 
-    Returns:
-        The string with the most characters
-
-    Examples:
-        >>> get_longest_string(["{{hero}}", "{{heroine}}", "{{friend}}"])
-        '{{heroine}}'  # Assuming heroine is longest
-        >>> get_longest_string(["cat", "elephant", "dog"])
-        'elephant'
-        >>> get_longest_string(["one"])
-        'one'
-    """
-    # Started for you:
-    longest = strings[0]  # Start with first string
-
-    # COMPLETE THIS FUNCTION
-    #
-    # Loop through each string in strings.
-    # If len(string) > len(longest), update longest = string.
-    # Return longest.
-    #
-    # Hint: Start from strings[1:] since we already have the first
-
-    pass  # Replace with implementation
-
-
-# ============================================================
-# {{FUNCTION_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 
+# %%
+# COMPLETE THIS FUNCTION
+#
+# Create an empty result list.
+# Loop through each number in numbers.
+# Append number * 2 to result.
+# Return result.
 
-def double_all(numbers):
-    """
-    Return a new list with all numbers doubled.
+pass  # Replace with implementation
 
-    Args:
-        numbers: A list of numbers
-
-    Returns:
-        A new list where each number is multiplied by 2
-
-    Examples:
-        >>> double_all([1, 2, 3, 4])
-        [2, 4, 6, 8]
-        >>> double_all([10, 20, 30])
-        [20, 40, 60]
-        >>> double_all([])
-        []
-    """
-    # COMPLETE THIS FUNCTION
-    #
-    # Create an empty result list.
-    # Loop through each number in numbers.
-    # Append number * 2 to result.
-    # Return result.
-
-    pass  # Replace with implementation
-
-
-# ============================================================
-# {{FUNCTION_5_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_5_TITLE}}
 # {{CONTEXT_FUNCTION_5_NARRATIVE}}
 
+# %%
+# COMPLETE THIS FUNCTION
+#
+# Loop through indices using range(len(items)).
+# If items[i] == target, return i immediately.
+# If loop completes without finding, return -1.
+#
+# Hint: Use "for i in range(len(items)):"
 
-def index_of_first(items, target):
-    """
-    Find the index of the first occurrence of target.
+pass  # Replace with implementation
 
-    Args:
-        items: A list to search
-        target: The value to find
+# %%
+print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
+print("=" * 50)
 
-    Returns:
-        The index of first occurrence, or -1 if not found
+print("\n=== Testing {{FUNCTION_1_TITLE}} ===")
+result1 = count_matches(["{{item}}", "potion", "{{item}}", "key"], "{{item}}")
+print(f"count_matches([...], '{{item}}'): {result1}")
+result2 = count_matches([1, 2, 3, 2, 2], 2)
+print(f"count_matches([1,2,3,2,2], 2): {result2}")
 
-    Examples:
-        >>> index_of_first(["{{spell1}}", "{{spell2}}", "{{spell3}}"], "{{spell2}}")
-        1
-        >>> index_of_first([10, 20, 30, 20], 20)
-        1
-        >>> index_of_first(["a", "b", "c"], "x")
-        -1
-    """
-    # COMPLETE THIS FUNCTION
-    #
-    # Loop through indices using range(len(items)).
-    # If items[i] == target, return i immediately.
-    # If loop completes without finding, return -1.
-    #
-    # Hint: Use "for i in range(len(items)):"
+print("\n=== Testing {{FUNCTION_2_TITLE}} ===")
+result3 = find_all_above([10, 25, 5, 30, 15], 20)
+print(f"find_all_above([10,25,5,30,15], 20): {result3}")
+result4 = find_all_above([1, 2, 3, 4, 5], 3)
+print(f"find_all_above([1,2,3,4,5], 3): {result4}")
 
-    pass  # Replace with implementation
+print("\n=== Testing {{FUNCTION_3_TITLE}} ===")
+result5 = get_longest_string(["cat", "elephant", "dog"])
+print(f"get_longest_string(['cat','elephant','dog']): {result5}")
 
+print("\n=== Testing {{FUNCTION_4_TITLE}} ===")
+result6 = double_all([1, 2, 3, 4])
+print(f"double_all([1, 2, 3, 4]): {result6}")
 
-def main():
-    print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
-    print("=" * 50)
+print("\n=== Testing {{FUNCTION_5_TITLE}} ===")
+result7 = index_of_first([10, 20, 30, 20], 20)
+print(f"index_of_first([10,20,30,20], 20): {result7}")
+result8 = index_of_first(["a", "b", "c"], "x")
+print(f"index_of_first(['a','b','c'], 'x'): {result8}")
 
-    print("\n=== Testing {{FUNCTION_1_TITLE}} ===")
-    result1 = count_matches(["{{item}}", "potion", "{{item}}", "key"], "{{item}}")
-    print(f"count_matches([...], '{{item}}'): {result1}")
-    result2 = count_matches([1, 2, 3, 2, 2], 2)
-    print(f"count_matches([1,2,3,2,2], 2): {result2}")
-
-    print("\n=== Testing {{FUNCTION_2_TITLE}} ===")
-    result3 = find_all_above([10, 25, 5, 30, 15], 20)
-    print(f"find_all_above([10,25,5,30,15], 20): {result3}")
-    result4 = find_all_above([1, 2, 3, 4, 5], 3)
-    print(f"find_all_above([1,2,3,4,5], 3): {result4}")
-
-    print("\n=== Testing {{FUNCTION_3_TITLE}} ===")
-    result5 = get_longest_string(["cat", "elephant", "dog"])
-    print(f"get_longest_string(['cat','elephant','dog']): {result5}")
-
-    print("\n=== Testing {{FUNCTION_4_TITLE}} ===")
-    result6 = double_all([1, 2, 3, 4])
-    print(f"double_all([1, 2, 3, 4]): {result6}")
-
-    print("\n=== Testing {{FUNCTION_5_TITLE}} ===")
-    result7 = index_of_first([10, 20, 30, 20], 20)
-    print(f"index_of_first([10,20,30,20], 20): {result7}")
-    result8 = index_of_first(["a", "b", "c"], "x")
-    print(f"index_of_first(['a','b','c'], 'x'): {result8}")
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

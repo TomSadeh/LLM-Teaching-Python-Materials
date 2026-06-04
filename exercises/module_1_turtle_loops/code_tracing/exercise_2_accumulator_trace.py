@@ -5,170 +5,158 @@
 # Concepts: tracking accumulator values, running totals through iterations
 # =============================================================================
 
-"""
-{{CONTEXT_CODE_TRACING_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
-
-
-# --- {{TRACE_1_TITLE}} ---
+# %% [markdown]
+# {{CONTEXT_CODE_TRACING_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# ## {{TRACE_1_TITLE}}
 # {{CONTEXT_TRACE_1_NARRATIVE}}
 
+# %%
+# {{hero}} calculates total energy at {{school}}
+total = 0
+for i in range(1, 4):
+    total = total + i
+    print(f"After adding {i}: total = {total}")
 
-def code_to_trace_a():
-    """Study this code - don't run it yet!"""
-    # {{hero}} calculates total energy at {{school}}
-    total = 0
-    for i in range(1, 4):
-        total = total + i
-        print(f"After adding {i}: total = {total}")
+# %% [markdown]
+# מלאי את טבלת המעקב
+#
+# עקבי אחרי `i` ו-`total` בכל איטרציה.
+#
+# | לפני/אחרי    | i | total (לפני) | total (אחרי) | פלט |
+# |--------------|---|--------------|--------------|-----|
+# | התחלה        | - | 0            | -            | -   |
+# | איטרציה 1    |   |              |              |     |
+# | איטרציה 2    |   |              |              |     |
+# | איטרציה 3    |   |              |              |     |
+#
+# > רמז: `total` מתחיל ב-0. בכל איטרציה, מוסיפים את `i` ל-`total`.
+# > `range(1, 4)` נותן: 1, 2, 3
+#
+# {{CONTEXT_TRACE_HINT_1}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def trace_table_a():
-    # ✏️ FILL IN THE TRACING TABLE ✏️
-    #
-    # Track `i` and `total` through each iteration.
-    #
-    # | Before/After | i | total (before) | total (after) | Output |
-    # |--------------|---|----------------|---------------|--------|
-    # | Start        | - | 0              | -             | -      |
-    # | Iteration 1  |   |                |               |        |
-    # | Iteration 2  |   |                |               |        |
-    # | Iteration 3  |   |                |               |        |
-    #
-    # Hint: total starts at 0. Each iteration, we add i to total.
-    # range(1, 4) gives: 1, 2, 3
-    #
-    # {{CONTEXT_TRACE_HINT_1}}
-    pass
-
-
-# --- {{TRACE_2_TITLE}} ---
+# %% [markdown]
+# ## {{TRACE_2_TITLE}}
 # {{CONTEXT_TRACE_2_NARRATIVE}}
 
+# %%
+# Calculating distances for {{creature}}
+distance = 0
+for step in range(1, 5):
+    move = step * 10
+    distance = distance + move
+    print(f"Step {step}: moved {move}, total distance = {distance}")
 
-def code_to_trace_b():
-    """Study this code - don't run it yet!"""
-    # Calculating distances for {{creature}}
-    distance = 0
-    for step in range(1, 5):
-        move = step * 10
-        distance = distance + move
-        print(f"Step {step}: moved {move}, total distance = {distance}")
+# %% [markdown]
+# מלאי את טבלת המעקב
+#
+# עקבי אחרי `step`, `move` ו-`distance`.
+#
+# | איטרציה   | step | move (step*10) | distance (לפני) | distance (אחרי) |
+# |-----------|------|----------------|-----------------|-----------------|
+# | התחלה     | -    | -              | 0               | -               |
+# | 1         |      |                |                 |                 |
+# | 2         |      |                |                 |                 |
+# | 3         |      |                |                 |                 |
+# | 4         |      |                |                 |                 |
+#
+# > רמז: `move` מחושב בכל איטרציה, ו-`distance` מצטבר לאורך כל הלולאה.
+#
+# {{CONTEXT_TRACE_HINT_2}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def trace_table_b():
-    # ✏️ FILL IN THE TRACING TABLE ✏️
-    #
-    # Track `step`, `move`, and `distance`.
-    #
-    # | Iteration | step | move (step*10) | distance (before) | distance (after) |
-    # |-----------|------|----------------|-------------------|------------------|
-    # | Start     | -    | -              | 0                 | -                |
-    # | 1         |      |                |                   |                  |
-    # | 2         |      |                |                   |                  |
-    # | 3         |      |                |                   |                  |
-    # | 4         |      |                |                   |                  |
-    #
-    # Hint: move is calculated each iteration, distance accumulates.
-    #
-    # {{CONTEXT_TRACE_HINT_2}}
-    pass
-
-
-# --- {{TRACE_3_TITLE}} ---
+# %% [markdown]
+# ## {{TRACE_3_TITLE}}
 # {{CONTEXT_TRACE_3_NARRATIVE}}
 
+# %%
+# Tracking angles at {{location}}
+total_angle = 0
+for side in range(4):
+    turn = 90
+    total_angle = total_angle + turn
+    print(f"After side {side}: turned {total_angle} degrees total")
 
-def code_to_trace_c():
-    """Study this code - don't run it yet!"""
-    # Tracking angles at {{location}}
-    total_angle = 0
-    for side in range(4):
-        turn = 90
-        total_angle = total_angle + turn
-        print(f"After side {side}: turned {total_angle} degrees total")
+# %% [markdown]
+# מלאי את טבלת המעקב
+#
+# עקבי אחרי `side` ו-`total_angle`.
+#
+# | איטרציה   | side | turn | total_angle (לפני) | total_angle (אחרי) |
+# |-----------|------|------|--------------------|--------------------|
+# | התחלה     | -    | -    | 0                  | -                  |
+# | 1         |      | 90   |                    |                    |
+# | 2         |      | 90   |                    |                    |
+# | 3         |      | 90   |                    |                    |
+# | 4         |      | 90   |                    |                    |
+#
+# > רמז: שימי לב ש-`side` מתחיל ב-0 (מ-`range(4)`: 0, 1, 2, 3).
+# > `turn` תמיד שווה ל-90, ו-`total_angle` גדל ב-90 בכל פעם.
+#
+# {{CONTEXT_TRACE_HINT_3}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def trace_table_c():
-    # ✏️ FILL IN THE TRACING TABLE ✏️
-    #
-    # Track `side` and `total_angle`.
-    #
-    # | Iteration | side | turn | total_angle (before) | total_angle (after) |
-    # |-----------|------|------|----------------------|---------------------|
-    # | Start     | -    | -    | 0                    | -                   |
-    # | 1         |      | 90   |                      |                     |
-    # | 2         |      | 90   |                      |                     |
-    # | 3         |      | 90   |                      |                     |
-    # | 4         |      | 90   |                      |                     |
-    #
-    # Hint: Note that side starts at 0 (from range(4): 0, 1, 2, 3)
-    # turn is always 90, total_angle grows by 90 each time.
-    #
-    # {{CONTEXT_TRACE_HINT_3}}
-    pass
-
-
-# --- {{TRACE_4_TITLE}} ---
+# %% [markdown]
+# ## {{TRACE_4_TITLE}}
 # {{CONTEXT_TRACE_4_NARRATIVE}}
 
+# %%
+# Building a message for {{hero}} at {{place}}
+message = ""
+for count in range(1, 4):
+    message = message + str(count) + "! "
+    print(f"Message so far: '{message}'")
 
-def code_to_trace_d():
-    """Study this code - don't run it yet!"""
-    # Building a message for {{hero}} at {{place}}
-    message = ""
-    for count in range(1, 4):
-        message = message + str(count) + "! "
-        print(f"Message so far: '{message}'")
+# %% [markdown]
+# מלאי את טבלת המעקב
+#
+# עקבי אחרי `count` ו-`message`.
+#
+# | איטרציה   | count | message (לפני) | message (אחרי) |
+# |-----------|-------|----------------|----------------|
+# | התחלה     | -     | `""`           | -              |
+# | 1         |       |                |                |
+# | 2         |       |                |                |
+# | 3         |       |                |                |
+#
+# > רמז: גם מחרוזות יכולות להצטבר!
+# > בכל איטרציה מתווסף: `str(count) + "! "`
+#
+# {{CONTEXT_TRACE_HINT_4}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def trace_table_d():
-    # ✏️ FILL IN THE TRACING TABLE ✏️
-    #
-    # Track `count` and `message`.
-    #
-    # | Iteration | count | message (before) | message (after) |
-    # |-----------|-------|------------------|-----------------|
-    # | Start     | -     | ""               | -               |
-    # | 1         |       |                  |                 |
-    # | 2         |       |                  |                 |
-    # | 3         |       |                  |                 |
-    #
-    # Hint: Strings can be accumulated too!
-    # Each iteration adds: str(count) + "! "
-    #
-    # {{CONTEXT_TRACE_HINT_4}}
-    pass
+# %%
+print("=== {{TRACE_1_TITLE}} - Actual Execution ===")
+code_to_trace_a()
 
+print("\n=== {{TRACE_2_TITLE}} - Actual Execution ===")
+code_to_trace_b()
 
-def verify_traces():
-    """Run this after completing your traces to check your work"""
-    print("=== {{TRACE_1_TITLE}} - Actual Execution ===")
-    code_to_trace_a()
+print("\n=== {{TRACE_3_TITLE}} - Actual Execution ===")
+code_to_trace_c()
 
-    print("\n=== {{TRACE_2_TITLE}} - Actual Execution ===")
-    code_to_trace_b()
+print("\n=== {{TRACE_4_TITLE}} - Actual Execution ===")
+code_to_trace_d()
 
-    print("\n=== {{TRACE_3_TITLE}} - Actual Execution ===")
-    code_to_trace_c()
+# %%
+print("{{CONTEXT_CODE_TRACING_INTRO}}")
+print("=" * 50)
+print()
+print("Complete the tracing tables in trace_table_X functions first!")
+print("Then uncomment the line below to verify your answers.")
+print()
 
-    print("\n=== {{TRACE_4_TITLE}} - Actual Execution ===")
-    code_to_trace_d()
+# Uncomment this line AFTER completing your traces:
+# verify_traces()
 
-
-def main():
-    print("{{CONTEXT_CODE_TRACING_INTRO}}")
-    print("=" * 50)
-    print()
-    print("Complete the tracing tables in trace_table_X functions first!")
-    print("Then uncomment the line below to verify your answers.")
-    print()
-
-    # Uncomment this line AFTER completing your traces:
-    # verify_traces()
-
-    print("{{CONTEXT_VERIFICATION_COMPLETE}}")
-
-
-main()
+print("{{CONTEXT_VERIFICATION_COMPLETE}}")

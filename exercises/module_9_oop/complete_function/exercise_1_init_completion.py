@@ -1,19 +1,15 @@
-"""
-{{CONTEXT_COMPLETE_FUNCTION_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-
-In this exercise, you'll practice completing __init__ methods
-to properly initialize object state. Understanding __init__ is
-essential for creating well-structured classes.
-"""
-
-
-# ============================================================
-# {{FUNCTION_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# בתרגיל הזה תתרגלי השלמה של מתודות `__init__`
+# כדי לאתחל נכון את מצב האובייקט. הבנת `__init__` היא
+# הכרחית ליצירת מחלקות מסודרות.
+#
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
-
+# %%
 class Creature:
     """A creature that can be encountered at {{school}}."""
 
@@ -50,13 +46,11 @@ class Creature:
 
         pass
 
-
-# ============================================================
-# {{FUNCTION_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
-
+# %%
 class Inventory:
     """An inventory system for holding items."""
 
@@ -95,13 +89,11 @@ class Inventory:
 
         pass
 
-
-# ============================================================
-# {{FUNCTION_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
-
+# %%
 class QuestLog:
     """Tracks active and completed quests."""
 
@@ -140,13 +132,11 @@ class QuestLog:
 
         pass
 
-
-# ============================================================
-# {{FUNCTION_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 
-
+# %%
 class SkillTree:
     """A skill tree for character progression."""
 
@@ -183,53 +173,49 @@ class SkillTree:
 
         pass
 
+# %%
+print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
+print("=" * 50)
 
-def main():
-    print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
-    print("=" * 50)
+print("\n=== Testing {{FUNCTION_1_TITLE}} ===")
+creature = Creature("{{creature}}", 100, 25)
+if creature.name:
+    print(f"Created: {creature.name}")
+    print(f"  Health: {creature.health}")
+    print(f"  Strength: {creature.strength}")
+    print(f"  Alive: {creature.is_alive}")
+else:
+    print("  (Complete the __init__ method)")
 
-    print("\n=== Testing {{FUNCTION_1_TITLE}} ===")
-    creature = Creature("{{creature}}", 100, 25)
-    if creature.name:
-        print(f"Created: {creature.name}")
-        print(f"  Health: {creature.health}")
-        print(f"  Strength: {creature.strength}")
-        print(f"  Alive: {creature.is_alive}")
-    else:
-        print("  (Complete the __init__ method)")
+print("\n=== Testing {{FUNCTION_2_TITLE}} ===")
+inventory = Inventory("{{hero}}")
+if inventory.owner:
+    print(f"Owner: {inventory.owner}")
+    print(f"  Capacity: {inventory.capacity}")
+    print(f"  Items: {inventory.items}")
+    print(f"  Gold: {inventory.gold}")
+else:
+    print("  (Complete the __init__ method)")
 
-    print("\n=== Testing {{FUNCTION_2_TITLE}} ===")
-    inventory = Inventory("{{hero}}")
-    if inventory.owner:
-        print(f"Owner: {inventory.owner}")
-        print(f"  Capacity: {inventory.capacity}")
-        print(f"  Items: {inventory.items}")
-        print(f"  Gold: {inventory.gold}")
-    else:
-        print("  (Complete the __init__ method)")
+print("\n=== Testing {{FUNCTION_3_TITLE}} ===")
+quest_log = QuestLog("{{heroine}}", max_active=3)
+if quest_log.character_name:
+    print(f"Quest log for: {quest_log.character_name}")
+    print(f"  Max active: {quest_log.max_active}")
+    print(f"  Active quests: {quest_log.active_quests}")
+    print(f"  Completed: {quest_log.total_quests_completed}")
+else:
+    print("  (Complete the __init__ method)")
 
-    print("\n=== Testing {{FUNCTION_3_TITLE}} ===")
-    quest_log = QuestLog("{{heroine}}", max_active=3)
-    if quest_log.character_name:
-        print(f"Quest log for: {quest_log.character_name}")
-        print(f"  Max active: {quest_log.max_active}")
-        print(f"  Active quests: {quest_log.active_quests}")
-        print(f"  Completed: {quest_log.total_quests_completed}")
-    else:
-        print("  (Complete the __init__ method)")
+print("\n=== Testing {{FUNCTION_4_TITLE}} ===")
+skill_tree = SkillTree("{{ROLE_TITLE}}", 10)
+if skill_tree.class_name:
+    print(f"Skill tree for: {skill_tree.class_name}")
+    print(f"  Available points: {skill_tree.available_points}")
+    print(f"  Spent points: {skill_tree.spent_points}")
+    print(f"  Unlocked skills: {skill_tree.unlocked_skills}")
+else:
+    print("  (Complete the __init__ method)")
 
-    print("\n=== Testing {{FUNCTION_4_TITLE}} ===")
-    skill_tree = SkillTree("{{ROLE_TITLE}}", 10)
-    if skill_tree.class_name:
-        print(f"Skill tree for: {skill_tree.class_name}")
-        print(f"  Available points: {skill_tree.available_points}")
-        print(f"  Spent points: {skill_tree.spent_points}")
-        print(f"  Unlocked skills: {skill_tree.unlocked_skills}")
-    else:
-        print("  (Complete the __init__ method)")
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

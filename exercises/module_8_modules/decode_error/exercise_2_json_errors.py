@@ -1,253 +1,217 @@
-"""
-{{CONTEXT_DECODE_ERROR_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
+# %% [markdown]
+# {{CONTEXT_DECODE_ERROR_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# בתרגיל הזה תלמדי להבין ולתקן שגיאות הקשורות ל-JSON,
+# ובמיוחד את `JSONDecodeError` שמופיעה כשמנסים לפרסר JSON לא תקין.
+#
+# נושא: פירוש שגיאות JSON
+# רמת קושי: 3
 
-In this exercise, you'll learn to understand and fix JSON-related errors,
-especially JSONDecodeError which occurs when parsing invalid JSON.
-
-Topic: JSON error interpretation
-Difficulty: 3
-"""
-
+# %%
 import json
 
-
-# ============================================================
-# {{ERROR_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{ERROR_1_TITLE}}
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# The most common JSON error: malformed JSON syntax.
+# שגיאת JSON הנפוצה ביותר: תחביר JSON שגוי.
+#
+# הודעת השגיאה:
+# --------------
+# Traceback (most recent call last):
+#   File "load_config.py", line 3, in <module>
+#     config = json.load(f)
+# json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
 
-"""
-ERROR MESSAGE:
---------------
-Traceback (most recent call last):
-  File "load_config.py", line 3, in <module>
+# %%
+# The file "config.json" contains:
+# {
+#     name: "{{hero}}"
+# }
+# Notice: 'name' should be "name" (double quotes required!)
+
+with open("config.json", "r") as f:
     config = json.load(f)
-json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 5 (char 6)
-"""
 
+# %% [markdown]
+# {{CONTEXT_ERROR_HINT_1}}
+#
+# JSON דורשת גרשיים כפולים לכל המחרוזות והמפתחות!
+# שלא כמו Python, אי אפשר להשתמש בגרשיים בודדים או במפתחות ללא גרשיים.
+#
+# שגוי: `{name: "value"}` — מפתח ללא גרשיים
+# שגוי: `{"name": 'value'}` — גרשיים בודדים
+# נכון: `{"name": "value"}` — גרשיים כפולים בכל מקום
+#
+# קודם, הסבירי מה גרם לשגיאה:
+# השגיאה קרתה כי: _______________
+#
+# תיקון: תקני את תוכן קובץ ה-JSON, או טפלי בשגיאה:
+#   try:
+#       with open("config.json", "r") as f:
+#           config = json.load(f)
+#   except json.JSONDecodeError as e:
+#       print(f"Invalid JSON: {e}")
+#       config = {"default": "settings"}
 
-def buggy_code_a():
-    """The JSON file that caused the error."""
-    # The file "config.json" contains:
-    # {
-    #     name: "{{hero}}"
-    # }
-    # Notice: 'name' should be "name" (double quotes required!)
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    with open("config.json", "r") as f:
-        config = json.load(f)
-
-
-def fix_code_a():
-    # ✏️ FIX THE CODE ✏️
-    #
-    # First, explain what caused the error:
-    # The error occurred because: _______________
-    #
-    # {{CONTEXT_ERROR_HINT_1}}
-    #
-    # JSON REQUIRES double quotes for all strings and keys!
-    # Unlike Python, you cannot use single quotes or unquoted keys.
-    #
-    # Wrong: {name: "value"}      - unquoted key
-    # Wrong: {"name": 'value'}    - single quotes
-    # Right: {"name": "value"}    - double quotes everywhere
-    #
-    # Fix: Correct the JSON file content, or handle the error:
-    #   try:
-    #       with open("config.json", "r") as f:
-    #           config = json.load(f)
-    #   except json.JSONDecodeError as e:
-    #       print(f"Invalid JSON: {e}")
-    #       config = {"default": "settings"}
-
-    pass
-
-
-# ============================================================
-# {{ERROR_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{ERROR_2_TITLE}}
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# Trailing commas cause JSON errors (unlike Python).
+# פסיק עודף בסוף גורם לשגיאות JSON (שלא כמו ב-Python).
+#
+# הודעת השגיאה:
+# --------------
+# Traceback (most recent call last):
+#   File "load_list.py", line 3, in <module>
+#     data = json.load(f)
+# json.decoder.JSONDecodeError: Expecting value: line 5 column 1 (char 42)
 
-"""
-ERROR MESSAGE:
---------------
-Traceback (most recent call last):
-  File "load_list.py", line 3, in <module>
+# %%
+# The file "items.json" contains:
+# {
+#     "items": [
+#         "{{spell1}}",
+#         "{{spell2}}",
+#     ]
+# }
+# Notice: Trailing comma after "{{spell2}}" is not allowed!
+
+with open("items.json", "r") as f:
     data = json.load(f)
-json.decoder.JSONDecodeError: Expecting value: line 5 column 1 (char 42)
-"""
 
+# %% [markdown]
+# {{CONTEXT_ERROR_HINT_2}}
+#
+# JSON לא מאפשרת פסיק עודף בסוף (Python כן מאפשרת).
+#
+# שגוי: `["a", "b", "c",]` — פסיק עודף
+# נכון: `["a", "b", "c"]` — ללא פסיק עודף
+#
+# זו טעות נפוצה כשמעתיקים קוד מ-Python!
+#
+# השגיאה קרתה כי: _______________
 
-def buggy_code_b():
-    """The JSON file that caused the error."""
-    # The file "items.json" contains:
-    # {
-    #     "items": [
-    #         "{{spell1}}",
-    #         "{{spell2}}",
-    #     ]
-    # }
-    # Notice: Trailing comma after "{{spell2}}" is not allowed!
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    with open("items.json", "r") as f:
-        data = json.load(f)
-
-
-def fix_code_b():
-    # ✏️ FIX THE CODE ✏️
-    #
-    # The error occurred because: _______________
-    #
-    # {{CONTEXT_ERROR_HINT_2}}
-    #
-    # JSON does NOT allow trailing commas (Python does).
-    #
-    # Wrong: ["a", "b", "c",]   - trailing comma
-    # Right: ["a", "b", "c"]    - no trailing comma
-    #
-    # This is a common mistake when copy-pasting from Python code!
-
-    pass
-
-
-# ============================================================
-# {{ERROR_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{ERROR_3_TITLE}}
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# Empty or truncated files cause JSON errors.
+# קבצים ריקים או קטועים גורמים לשגיאות JSON.
+#
+# הודעת השגיאה:
+# --------------
+# Traceback (most recent call last):
+#   File "load_save.py", line 3, in <module>
+#     save_data = json.load(f)
+# json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
-"""
-ERROR MESSAGE:
---------------
-Traceback (most recent call last):
-  File "load_save.py", line 3, in <module>
+# %%
+# The file "save.json" is empty or corrupted (incomplete write)
+
+with open("save.json", "r") as f:
     save_data = json.load(f)
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-"""
 
+# %% [markdown]
+# {{CONTEXT_ERROR_HINT_3}}
+#
+# הקובץ ריק או לא מכיל JSON תקין.
+# זה יכול לקרות אם:
+# - לא נכתב כלום לקובץ
+# - פעולת הכתיבה הופסקה באמצע
+# - הקובץ נמחק בטעות
+#
+# השגיאה קרתה כי: _______________
+#
+# תיקון: בדקי אם הקובץ ריק, או טפלי בשגיאה:
+#   try:
+#       with open("save.json", "r") as f:
+#           content = f.read()
+#           if not content.strip():
+#               save_data = {}  # Default for empty file
+#           else:
+#               save_data = json.loads(content)
+#   except json.JSONDecodeError:
+#       save_data = {}  # Default for corrupt file
 
-def buggy_code_c():
-    """The code that caused the error."""
-    # The file "save.json" is empty or corrupted (incomplete write)
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    with open("save.json", "r") as f:
-        save_data = json.load(f)
-
-
-def fix_code_c():
-    # ✏️ FIX THE CODE ✏️
-    #
-    # The error occurred because: _______________
-    #
-    # {{CONTEXT_ERROR_HINT_3}}
-    #
-    # The file is empty or contains no valid JSON.
-    # This can happen if:
-    # - File was never written to
-    # - Write operation was interrupted
-    # - File was accidentally cleared
-    #
-    # Fix: Check for empty file or handle the error:
-    #   try:
-    #       with open("save.json", "r") as f:
-    #           content = f.read()
-    #           if not content.strip():
-    #               save_data = {}  # Default for empty file
-    #           else:
-    #               save_data = json.loads(content)
-    #   except json.JSONDecodeError:
-    #       save_data = {}  # Default for corrupt file
-
-    pass
-
-
-# ============================================================
-# {{ERROR_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{ERROR_4_TITLE}}
 # {{CONTEXT_ERROR_4_NARRATIVE}}
 #
-# Type errors when working with JSON data.
+# שגיאות טיפוס כשעובדים עם נתוני JSON.
+#
+# הודעת השגיאה:
+# --------------
+# Traceback (most recent call last):
+#   File "process_data.py", line 6, in <module>
+#     level = data["level"] + 1
+# TypeError: can only concatenate str (not "int") to str
 
-"""
-ERROR MESSAGE:
---------------
-Traceback (most recent call last):
-  File "process_data.py", line 6, in <module>
-    level = data["level"] + 1
-TypeError: can only concatenate str (not "int") to str
-"""
+# %%
+json_string = '{"name": "{{hero}}", "level": "5"}'  # Note: "5" is a string!
 
+data = json.loads(json_string)
+level = data["level"] + 1  # Error: "5" + 1 doesn't work
 
-def buggy_code_d():
-    """The code that caused the error."""
-    json_string = '{"name": "{{hero}}", "level": "5"}'  # Note: "5" is a string!
+# %% [markdown]
+# {{CONTEXT_ERROR_HINT_4}}
+#
+# ה-JSON הכיל `"5"` (מחרוזת) במקום `5` (מספר).
+# JSON שומרת על הטיפוסים — אם זו מחרוזת ב-JSON, היא תישאר מחרוזת ב-Python.
+#
+# השגיאה קרתה כי: _______________
+#
+# 1. אפשרות תיקון — תקני את מקור ה-JSON:
+#    `json_string = '{"name": "{{hero}}", "level": 5}'` — ללא גרשיים סביב 5
+#
+# 2. אפשרות תיקון — המירי בעת השימוש:
+#    `level = int(data["level"]) + 1`
 
-    data = json.loads(json_string)
-    level = data["level"] + 1  # Error: "5" + 1 doesn't work
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+print("{{CONTEXT_DECODE_ERROR_INTRO}}")
+print("=" * 50)
+print()
+print("For each exercise:")
+print("1. Read the error message carefully")
+print("2. Identify what caused the error")
+print("3. Fix the code in the fix_code_X function")
+print()
 
-def fix_code_d():
-    # ✏️ FIX THE CODE ✏️
-    #
-    # The error occurred because: _______________
-    #
-    # {{CONTEXT_ERROR_HINT_4}}
-    #
-    # The JSON had "5" (string) instead of 5 (number).
-    # JSON preserves types, so if it's a string in JSON, it's a string in Python.
-    #
-    # Fix option 1: Fix the JSON source
-    #   json_string = '{"name": "{{hero}}", "level": 5}'  # No quotes around 5
-    #
-    # Fix option 2: Convert when using
-    #   level = int(data["level"]) + 1
+print("=== {{ERROR_1_TITLE}} ===")
+print("JSONDecodeError - missing quotes on keys")
+# Uncomment to test after fixing:
+# fix_code_a()
 
-    pass
+print("\n=== {{ERROR_2_TITLE}} ===")
+print("JSONDecodeError - trailing comma")
+# fix_code_b()
 
+print("\n=== {{ERROR_3_TITLE}} ===")
+print("JSONDecodeError - empty/corrupt file")
+# fix_code_c()
 
-def main():
-    print("{{CONTEXT_DECODE_ERROR_INTRO}}")
-    print("=" * 50)
-    print()
-    print("For each exercise:")
-    print("1. Read the error message carefully")
-    print("2. Identify what caused the error")
-    print("3. Fix the code in the fix_code_X function")
-    print()
+print("\n=== {{ERROR_4_TITLE}} ===")
+print("TypeError - wrong data type from JSON")
+# fix_code_d()
 
-    print("=== {{ERROR_1_TITLE}} ===")
-    print("JSONDecodeError - missing quotes on keys")
-    # Uncomment to test after fixing:
-    # fix_code_a()
-
-    print("\n=== {{ERROR_2_TITLE}} ===")
-    print("JSONDecodeError - trailing comma")
-    # fix_code_b()
-
-    print("\n=== {{ERROR_3_TITLE}} ===")
-    print("JSONDecodeError - empty/corrupt file")
-    # fix_code_c()
-
-    print("\n=== {{ERROR_4_TITLE}} ===")
-    print("TypeError - wrong data type from JSON")
-    # fix_code_d()
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_INVESTIGATION_COMPLETE}}")
-    print()
-    print("Key differences between JSON and Python:")
-    print("  1. JSON keys MUST be double-quoted strings")
-    print("  2. JSON strings MUST use double quotes")
-    print("  3. JSON does NOT allow trailing commas")
-    print("  4. JSON has: true, false, null (not True, False, None)")
-    print("  5. JSON numbers can be strings - watch for type issues!")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_INVESTIGATION_COMPLETE}}")
+print()
+print("Key differences between JSON and Python:")
+print("  1. JSON keys MUST be double-quoted strings")
+print("  2. JSON strings MUST use double quotes")
+print("  3. JSON does NOT allow trailing commas")
+print("  4. JSON has: true, false, null (not True, False, None)")
+print("  5. JSON numbers can be strings - watch for type issues!")

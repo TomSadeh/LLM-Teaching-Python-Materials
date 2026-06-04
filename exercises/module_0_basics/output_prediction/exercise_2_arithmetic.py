@@ -5,168 +5,152 @@
 # Concepts: arithmetic operators, order of operations, integer vs float division
 # =============================================================================
 
-"""
-{{CONTEXT_PREDICTION_INTRO}}
-{{CONTEXT_PREDICTION_PURPOSE}}
-"""
-
-
-# --- {{CHALLENGE_1_TITLE}} ---
+# %% [markdown]
+# {{CONTEXT_PREDICTION_INTRO}}
+# {{CONTEXT_PREDICTION_PURPOSE}}
+#
+# ## {{CHALLENGE_1_TITLE}}
 # {{CONTEXT_CHALLENGE_1_NARRATIVE}}
 
+# %% locked
+gold = 100
+spent = 25
+remaining = gold - spent
+print(remaining)
 
-def challenge_a_code():
-    """DO NOT MODIFY - Just read and predict"""
-    gold = 100
-    spent = 25
-    remaining = gold - spent
-    print(remaining)
+# %% [markdown]
+# כתבי בדיוק מה לדעתך יודפס למעלה.
+#
+# פלט: _______________
+#
+# > רמז: חיסור עובד בדיוק כמו במתמטיקה.
+#
+# {{CONTEXT_PREDICTION_GUIDANCE_1}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def challenge_a_prediction():
-    # ✏️ YOUR PREDICTION HERE ✏️
-    # Write EXACTLY what you think will be printed above.
-    #
-    # Output: _______________
-    #
-    # Hint: Subtraction works just like in math.
-    #
-    # {{CONTEXT_PREDICTION_GUIDANCE_1}}
-    pass
-
-
-# --- {{CHALLENGE_2_TITLE}} ---
+# %% [markdown]
+# ## {{CHALLENGE_2_TITLE}}
 # {{CONTEXT_CHALLENGE_2_NARRATIVE}}
 
+# %% locked
+items = 3
+price = 10
+total = items * price
+print("Total cost:", total)
 
-def challenge_b_code():
-    """DO NOT MODIFY - Just read and predict"""
-    items = 3
-    price = 10
-    total = items * price
-    print("Total cost:", total)
+# %% [markdown]
+# כתבי בדיוק מה לדעתך יודפס למעלה.
+#
+# פלט: _______________
+#
+# > רמז: הסימן `*` אומר כפל.
+#
+# {{CONTEXT_PREDICTION_GUIDANCE_2}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def challenge_b_prediction():
-    # ✏️ YOUR PREDICTION HERE ✏️
-    # Write EXACTLY what you think will be printed above.
-    #
-    # Output: _______________
-    #
-    # Hint: The * symbol means multiplication.
-    #
-    # {{CONTEXT_PREDICTION_GUIDANCE_2}}
-    pass
-
-
-# --- {{CHALLENGE_3_TITLE}} ---
+# %% [markdown]
+# ## {{CHALLENGE_3_TITLE}}
 # {{CONTEXT_CHALLENGE_3_NARRATIVE}}
 
+# %% locked
+cookies = 10
+people = 3
+each_gets = cookies // people
+leftover = cookies % people
+print("Each person gets:", each_gets)
+print("Leftover:", leftover)
 
-def challenge_c_code():
-    """DO NOT MODIFY - Just read and predict"""
-    cookies = 10
-    people = 3
-    each_gets = cookies // people
-    leftover = cookies % people
-    print("Each person gets:", each_gets)
-    print("Leftover:", leftover)
+# %% [markdown]
+# כתבי בדיוק מה לדעתך יודפס למעלה.
+#
+# שורה 1: _______________
+# שורה 2: _______________
+#
+# > רמז: `//` נותן את החלק השלם של החלוקה.
+# > `%` נותן את השארית אחרי החלוקה.
+#
+# {{CONTEXT_PREDICTION_GUIDANCE_3}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def challenge_c_prediction():
-    # ✏️ YOUR PREDICTION HERE ✏️
-    # Write EXACTLY what you think will be printed above.
-    #
-    # Line 1: _______________
-    # Line 2: _______________
-    #
-    # Hint: // gives the whole number part of division.
-    # % gives the remainder after division.
-    #
-    # {{CONTEXT_PREDICTION_GUIDANCE_3}}
-    pass
-
-
-# --- {{CHALLENGE_4_TITLE}} ---
+# %% [markdown]
+# ## {{CHALLENGE_4_TITLE}}
 # {{CONTEXT_CHALLENGE_4_NARRATIVE}}
 
+# %% locked
+base = 2
+power = base ** 3
+print(power)
 
-def challenge_d_code():
-    """DO NOT MODIFY - Just read and predict"""
-    base = 2
-    power = base ** 3
-    print(power)
+# %% [markdown]
+# כתבי בדיוק מה לדעתך יודפס למעלה.
+#
+# פלט: _______________
+#
+# > רמז: `**` אומר חזקה (העלאה בחזקה).
+# > `2 ** 3` פירושו `2 * 2 * 2`
+#
+# {{CONTEXT_PREDICTION_GUIDANCE_4}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def challenge_d_prediction():
-    # ✏️ YOUR PREDICTION HERE ✏️
-    # Write EXACTLY what you think will be printed above.
-    #
-    # Output: _______________
-    #
-    # Hint: ** means exponentiation (power).
-    # 2 ** 3 means 2 * 2 * 2
-    #
-    # {{CONTEXT_PREDICTION_GUIDANCE_4}}
-    pass
-
-
-# --- {{CHALLENGE_5_TITLE}} ---
+# %% [markdown]
+# ## {{CHALLENGE_5_TITLE}}
 # {{CONTEXT_CHALLENGE_5_NARRATIVE}}
 
+# %% locked
+result = 2 + 3 * 4
+print(result)
 
-def challenge_e_code():
-    """DO NOT MODIFY - Just read and predict"""
-    result = 2 + 3 * 4
-    print(result)
+# %% [markdown]
+# כתבי בדיוק מה לדעתך יודפס למעלה.
+#
+# פלט: _______________
+#
+# > רמז: Python פועל לפי סדר הפעולות המתמטי.
+# > כפל מתבצע לפני חיבור.
+#
+# {{CONTEXT_PREDICTION_GUIDANCE_5}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def challenge_e_prediction():
-    # ✏️ YOUR PREDICTION HERE ✏️
-    # Write EXACTLY what you think will be printed above.
-    #
-    # Output: _______________
-    #
-    # Hint: Python follows math order of operations.
-    # Multiplication happens before addition.
-    #
-    # {{CONTEXT_PREDICTION_GUIDANCE_5}}
-    pass
+# %%
+print("=== {{CHALLENGE_1_TITLE}} ===")
+print("-- Actual Output --")
+challenge_a_code()
+print("\n-- Your Prediction --")
+challenge_a_prediction()
 
+print("\n=== {{CHALLENGE_2_TITLE}} ===")
+print("-- Actual Output --")
+challenge_b_code()
+print("\n-- Your Prediction --")
+challenge_b_prediction()
 
-def main():
-    print("=== {{CHALLENGE_1_TITLE}} ===")
-    print("-- Actual Output --")
-    challenge_a_code()
-    print("\n-- Your Prediction --")
-    challenge_a_prediction()
+print("\n=== {{CHALLENGE_3_TITLE}} ===")
+print("-- Actual Output --")
+challenge_c_code()
+print("\n-- Your Prediction --")
+challenge_c_prediction()
 
-    print("\n=== {{CHALLENGE_2_TITLE}} ===")
-    print("-- Actual Output --")
-    challenge_b_code()
-    print("\n-- Your Prediction --")
-    challenge_b_prediction()
+print("\n=== {{CHALLENGE_4_TITLE}} ===")
+print("-- Actual Output --")
+challenge_d_code()
+print("\n-- Your Prediction --")
+challenge_d_prediction()
 
-    print("\n=== {{CHALLENGE_3_TITLE}} ===")
-    print("-- Actual Output --")
-    challenge_c_code()
-    print("\n-- Your Prediction --")
-    challenge_c_prediction()
+print("\n=== {{CHALLENGE_5_TITLE}} ===")
+print("-- Actual Output --")
+challenge_e_code()
+print("\n-- Your Prediction --")
+challenge_e_prediction()
 
-    print("\n=== {{CHALLENGE_4_TITLE}} ===")
-    print("-- Actual Output --")
-    challenge_d_code()
-    print("\n-- Your Prediction --")
-    challenge_d_prediction()
-
-    print("\n=== {{CHALLENGE_5_TITLE}} ===")
-    print("-- Actual Output --")
-    challenge_e_code()
-    print("\n-- Your Prediction --")
-    challenge_e_prediction()
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_VERIFICATION_COMPLETE}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_VERIFICATION_COMPLETE}}")

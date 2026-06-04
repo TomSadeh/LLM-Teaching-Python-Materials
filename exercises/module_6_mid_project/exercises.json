@@ -1,7 +1,7 @@
 {
   "version": "3.0.0",
   "theme_support": true,
-  "generated_at": "2026-02-03T12:37:49.695886",
+  "generated_at": "2026-06-05T01:03:33.916236",
   "module": "module_6_mid_project",
   "count": 4,
   "exercise_types": [
@@ -16,8 +16,8 @@
       "title": "Character System",
       "title_en": "Character System",
       "title_he": "Character System",
-      "description_en": "Mid Project: Character System\n\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild a character profile manager for {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
-      "description_he": "פרויקט אמצע: Character System\n\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild a character profile manager for {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_en": "Mid Project: Character System\n\nComplete the code in the functions marked with pass",
+      "description_he": "פרויקט אמצע: Character System\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
       "difficulty": 3,
       "requires_running": true,
       "estimated_time_minutes": 15,
@@ -28,7 +28,34 @@
         "pattern_recognition",
         "independence"
       ],
-      "starter_code": "\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild a character profile manager for {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# ============================================================\n# Project: Character Profile System\n# ============================================================\n# Build a system to create, display, and manage character profiles.\n#\n# Your system should:\n# - Store character data (name, health, ability, level) in lists\n# - Display character information in a formatted way\n# - Allow modifications (level up, take damage, heal)\n# - Provide an interactive menu for users\n#\n# ✏️ YOUR CODE HERE ✏️\n# Design your own functions to accomplish the above goals.\n# Think about what operations you need and how to organize them.\n\n\ndef main():\n    print(\"{{greeting}}\")\n    print(\"Welcome to the {{school}} Character Manager!\")\n    print()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Build your character management system\n\n    print()\n    print(\"{{exclamation}} Goodbye!\")\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CONTEXT_PROJECT_INTRO}}\n\nבני מנהל פרופילי דמויות עבור {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\nפרויקט: מערכת פרופילי דמויות\nבני מערכת ליצירה, הצגה וניהול של פרופילי דמויות.\n\nהמערכת שלך צריכה:\n- לשמור נתוני דמות (שם, בריאות, יכולת, רמה) ברשימות\n- להציג מידע על הדמות בצורה מסודרת\n- לאפשר שינויים (עלייה ברמה, קבלת נזק, ריפוי)\n- לספק תפריט אינטראקטיבי למשתמש\n\nעצבי פונקציות משלך כדי להשיג את המטרות האלו.\nחשבי אילו פעולות את צריכה ואיך לארגן אותן."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{greeting}}\")\nprint(\"Welcome to the {{school}} Character Manager!\")\nprint()"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "בני את מערכת ניהול הדמויות שלך"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print()\nprint(\"{{exclamation}} Goodbye!\")"
+        }
+      ],
+      "starter_code": "print(\"{{greeting}}\")\nprint(\"Welcome to the {{school}} Character Manager!\")\nprint()\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint()\nprint(\"{{exclamation}} Goodbye!\")",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -45,8 +72,8 @@
       "title": "Quiz Game",
       "title_en": "Quiz Game",
       "title_he": "Quiz Game",
-      "description_en": "Mid Project: Quiz Game\n\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild an interactive quiz game about {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
-      "description_he": "פרויקט אמצע: Quiz Game\n\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild an interactive quiz game about {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_en": "Mid Project: Quiz Game\n\nComplete the code in the functions marked with pass",
+      "description_he": "פרויקט אמצע: Quiz Game\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
       "difficulty": 3,
       "requires_running": true,
       "estimated_time_minutes": 15,
@@ -57,7 +84,44 @@
         "pattern_recognition",
         "independence"
       ],
-      "starter_code": "\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild an interactive quiz game about {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport random\n\n\n# ============================================================\n# Project: Quiz Game\n# ============================================================\n# Build a quiz game with multiple choice questions.\n#\n# Your game should:\n# - Store questions with correct and wrong answers\n# - Display questions with shuffled answer choices\n# - Track the player's score\n# - Show results at the end\n# - Offer to play again\n#\n# ✏️ YOUR CODE HERE ✏️\n# Design your own functions to accomplish the above goals.\n# Think about how to structure your question data and game flow.\n\n\ndef main():\n    print(\"{{greeting}}\")\n    print(\"Welcome to the {{school}} Quiz!\")\n    print()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Build your quiz game\n\n    print()\n    print(\"{{exclamation}} Thanks for playing!\")\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PROJECT_INTRO}}\n\nבני משחק חידונים אינטראקטיבי על {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import random"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## פרויקט: משחק חידונים\nבני משחק חידונים עם שאלות רב-ברירה.\n\nהמשחק שלך צריך:\n- לשמור שאלות עם תשובות נכונות ושגויות\n- להציג שאלות עם אפשרויות תשובה בסדר אקראי\n- לעקוב אחר הניקוד של השחקנית\n- להציג את התוצאות בסוף\n- להציע לשחק שוב\n\nעצבי פונקציות משלך כדי להשיג את המטרות האלה.\nחשבי כיצד לארגן את נתוני השאלות ואת זרימת המשחק."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{greeting}}\")\nprint(\"Welcome to the {{school}} Quiz!\")\nprint()"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "בני את משחק החידונים שלך"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print()\nprint(\"{{exclamation}} Thanks for playing!\")"
+        }
+      ],
+      "starter_code": "import random\n\nprint(\"{{greeting}}\")\nprint(\"Welcome to the {{school}} Quiz!\")\nprint()\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint()\nprint(\"{{exclamation}} Thanks for playing!\")",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -74,8 +138,8 @@
       "title": "Collection Manager",
       "title_en": "Collection Manager",
       "title_he": "Collection Manager",
-      "description_en": "Mid Project: Collection Manager\n\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild a collection manager for {{item}} objects.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
-      "description_he": "פרויקט אמצע: Collection Manager\n\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild a collection manager for {{item}} objects.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_en": "Mid Project: Collection Manager\n\nComplete the code in the functions marked with pass",
+      "description_he": "פרויקט אמצע: Collection Manager\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
       "difficulty": 3,
       "requires_running": true,
       "estimated_time_minutes": 15,
@@ -86,7 +150,34 @@
         "pattern_recognition",
         "independence"
       ],
-      "starter_code": "\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild a collection manager for {{item}} objects.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# ============================================================\n# Project: Collection Manager\n# ============================================================\n# Build a system to manage a collection of items.\n#\n# Your system should:\n# - Store items with name, category, and quantity\n# - Add and remove items from the collection\n# - Search and filter items\n# - Display the collection and statistics\n# - Provide an interactive menu\n#\n# ✏️ YOUR CODE HERE ✏️\n# Design your own functions to accomplish the above goals.\n# Think about what data structure works best for your items.\n\n\ndef main():\n    print(\"{{greeting}}\")\n    print(\"Welcome to {{hero}}'s Collection Manager!\")\n    print()\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Build your collection manager\n\n    print()\n    print(\"{{exclamation}} Goodbye!\")\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PROJECT_INTRO}}\n\nבני מנהל אוסף עבור אובייקטים מסוג {{item}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\n## פרויקט: מנהל אוסף\nבני מערכת לניהול אוסף של פריטים.\n\nהמערכת שלך צריכה:\n- לשמור פריטים עם שם, קטגוריה וכמות\n- להוסיף ולהסיר פריטים מהאוסף\n- לחפש ולסנן פריטים\n- להציג את האוסף ונתונים סטטיסטיים\n- לספק תפריט אינטראקטיבי\n\nעצבי פונקציות משלך כדי להשיג את המטרות הללו.\nחשבי איזה מבנה נתונים מתאים הכי טוב לפריטים שלך."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{greeting}}\")\nprint(\"Welcome to {{hero}}'s Collection Manager!\")\nprint()"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "בני את מנהל האוסף שלך"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print()\nprint(\"{{exclamation}} Goodbye!\")"
+        }
+      ],
+      "starter_code": "print(\"{{greeting}}\")\nprint(\"Welcome to {{hero}}'s Collection Manager!\")\nprint()\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint()\nprint(\"{{exclamation}} Goodbye!\")",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -103,8 +194,8 @@
       "title": "Text Adventure",
       "title_en": "Text Adventure",
       "title_he": "Text Adventure",
-      "description_en": "Mid Project: Text Adventure\n\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild a text adventure game set at {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
-      "description_he": "פרויקט אמצע: Text Adventure\n\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild a text adventure game set at {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}",
+      "description_en": "Mid Project: Text Adventure\n\nComplete the code in the functions marked with pass",
+      "description_he": "פרויקט אמצע: Text Adventure\n\nהשלימי את הקוד בפונקציות המסומנות ב-pass",
       "difficulty": 3,
       "requires_running": true,
       "estimated_time_minutes": 15,
@@ -115,7 +206,44 @@
         "pattern_recognition",
         "independence"
       ],
-      "starter_code": "\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n\nBuild a text adventure game set at {{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport random\n\n\n# ============================================================\n# Project: Text Adventure\n# ============================================================\n# Build a text adventure where the player explores {{school}}.\n#\n# Your game should:\n# - Track player state (name, health, inventory, location)\n# - Have multiple locations to explore\n# - Allow picking up and using items\n# - Include random events or encounters\n# - Have win and lose conditions\n#\n# ✏️ YOUR CODE HERE ✏️\n# Design your own functions to accomplish the above goals.\n# Think about how to structure your game world and player actions.\n\n\ndef main():\n    print(\"{{greeting}}\")\n    print(\"Welcome to the {{school}} Adventure!\")\n\n    # ✏️ YOUR CODE HERE ✏️\n    # Build your text adventure\n\n    print()\n    print(\"{{exclamation}} Thanks for playing!\")\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PROJECT_INTRO}}\n\nבני משחק הרפתקאות טקסטואלי שמתרחש ב-{{school}}.\n\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import random"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## פרויקט: משחק הרפתקאות טקסטואלי\nבני משחק הרפתקאות שבו השחקנית חוקרת את {{school}}.\n\nהמשחק שלך צריך:\n- לעקוב אחרי מצב השחקנית (שם, בריאות, חפצים, מיקום)\n- לכלול כמה מיקומים שאפשר לחקור\n- לאפשר לאסוף ולהשתמש בחפצים\n- לכלול אירועים או מפגשים אקראיים\n- לכלול תנאי ניצחון והפסד\n\nעצבי פונקציות משלך כדי להשיג את המטרות האלה.\nחשבי איך לבנות את עולם המשחק ואת פעולות השחקנית."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{greeting}}\")\nprint(\"Welcome to the {{school}} Adventure!\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "בני את משחק ההרפתקאות שלך."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print()\nprint(\"{{exclamation}} Thanks for playing!\")"
+        }
+      ],
+      "starter_code": "import random\n\nprint(\"{{greeting}}\")\nprint(\"Welcome to the {{school}} Adventure!\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint()\nprint(\"{{exclamation}} Thanks for playing!\")",
       "solution_code": null,
       "hints": [],
       "tags": [

@@ -1,225 +1,131 @@
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-
-Topic: Using break to exit loops early
-Difficulty: 2-3
-
-The 'break' statement immediately exits the current loop.
-Use it when you've found what you're looking for or need to stop early.
-"""
-
-
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# נושא: שימוש ב-`break` כדי לצאת מלולאות מוקדם
+# רמת קושי: 2-3
+#
+# הפקודה `break` יוצאת מיד מהלולאה הנוכחית.
+# השתמשי בה כשמצאת את מה שחיפשת, או כשצריך לעצור מוקדם.
+#
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# Use break to exit a loop when a condition is met.
+# השתמשי ב-`break` כדי לצאת מלולאה כשמתקיים תנאי מסוים.
+#
+# 1. הגדירי `result = None`
+# 2. עברי על כל מספר ב-`numbers`
+# 3. אם המספר שלילי:
+#    - הכניסי אותו ל-`result`
+#    - צאי מהלולאה עם `break`
+# 4. החזירי את `result`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def find_first_negative(numbers):
-    """
-    Find the first negative number in a list.
-
-    Args:
-        numbers: A list of integers
-
-    Returns:
-        The first negative number, or None if all are non-negative
-
-    Example:
-        find_first_negative([3, 7, -2, 5, -8]) returns -2
-        find_first_negative([1, 2, 3]) returns None
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Set result = None
-    # Step 2: Loop through each number in numbers
-    # Step 3: If the number is negative:
-    #         - Set result to that number
-    #         - Break out of the loop
-    # Step 4: Return result
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# Use break with user input to create exit conditions.
+# השתמשי ב-`break` עם קלט מהמשתמש כדי ליצור תנאי יציאה.
+#
+# 1. צרי רשימה ריקה לשמות
+# 2. התחילי לולאה אינסופית (`while True`)
+# 3. בקשי קלט
+# 4. אם הקלט הוא `'done'`, צאי עם `break`
+# 5. אחרת, הוסיפי את השם לרשימה
+# 6. אחרי הלולאה, החזירי את הרשימה
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def collect_names_until_done():
-    """
-    Collect names from the user until they type 'done'.
-
-    Returns:
-        list: All the names collected (not including 'done')
-
-    The function should:
-    - Ask "Enter a name (or 'done' to finish): "
-    - Keep asking until user types 'done'
-    - Return the list of names collected
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Create an empty list for names
-    # Step 2: Start an infinite loop (while True)
-    # Step 3: Ask for input
-    # Step 4: If input is 'done', break
-    # Step 5: Otherwise, add the name to the list
-    # Step 6: After the loop, return the list
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# Use break in a search to stop once you find the target.
+# השתמשי ב-`break` בחיפוש כדי לעצור ברגע שמצאת את היעד.
+#
+# 1. עברי על `inventory` עם אינדקס (השתמשי ב-`range(len(...))`)
+# 2. הדפיסי `f"Checking: {item}"`
+# 3. אם ה-`item` שווה ל-`target`:
+#    - הדפיסי `f"Found {target}!"`
+#    - החזירי את האינדקס (עם `break` או `return` ישיר)
+# 4. אחרי הלולאה, הדפיסי `f"{target} not found."`
+# 5. החזירי `-1`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def search_inventory(inventory, target):
-    """
-    Search for a target item in an inventory.
-    Print each item checked, and stop when found.
-
-    Args:
-        inventory: List of items
-        target: Item to find
-
-    Returns:
-        int: Index where found, or -1 if not found
-
-    Example:
-        search_inventory(["{{item}}", "{{pet}}", "{{creature}}"], "{{pet}}")
-        Prints:
-            Checking: {{item}}
-            Checking: {{pet}}
-            Found {{pet}}!
-        Returns: 1
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Loop through inventory with index (use range(len(...)))
-    # Step 2: Print f"Checking: {item}"
-    # Step 3: If item equals target:
-    #         - Print f"Found {target}!"
-    #         - Return the index (using break or direct return)
-    # Step 4: After the loop, print f"{target} not found."
-    # Step 5: Return -1
-    pass
-
-
-# ============================================================
-# {{PHASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# Use break with a counter limit to prevent infinite loops.
+# השתמשי ב-`break` עם מגבלת מונה כדי למנוע לולאות אינסופיות.
 
+# %%
+secret = "{{password}}"
+max_attempts = 5
 
-def safe_guess_loop():
-    """
-    Let the user guess a secret word with a maximum of 5 attempts.
+# %% [markdown]
+# 1. הגדירי `attempts = 0`
+# 2. כל עוד `attempts < max_attempts`:
+#    - הגדילי את `attempts`
+#    - בקשי ניחוש
+#    - אם הניחוש שווה ל-`secret`, הדפיסי הצלחה והחזירי `True`
+# 3. אחרי הלולאה, הדפיסי הודעת כישלון
+# 4. החזירי `False`
 
-    The secret word is "{{password}}".
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        bool: True if guessed correctly, False if ran out of attempts
-
-    The function should:
-    - Give the user up to 5 attempts
-    - If they guess correctly, print a success message and return True
-    - If they run out of attempts, print failure message and return False
-    """
-    secret = "{{password}}"
-    max_attempts = 5
-
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Set attempts = 0
-    # Step 2: While attempts < max_attempts:
-    #         - Increase attempts
-    #         - Ask for a guess
-    #         - If guess equals secret, print success and return True
-    # Step 3: After the loop, print failure message
-    # Step 4: Return False
-    pass
-
-
-# ============================================================
-# {{PHASE_5_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# Combine break with complex conditions.
+# שלבי `break` עם תנאים מורכבים.
+#
+# 1. צרי רשימה ריקה לתוצאות
+# 2. עברי על כל `item` ב-`data`
+# 3. אם ה-`item` הוא `"ERROR"`, `""`, או `None`:
+#    - הדפיסי `f"Error encountered! Stopping."`
+#    - צאי עם `break`
+# 4. עבדי את ה-`item` (המירי לאותיות גדולות) והוסיפי לתוצאות
+#    - הדפיסי `f"Processed: {processed_item}"`
+# 5. החזירי את התוצאות
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def process_until_error(data):
-    """
-    Process data items until you encounter an error value.
-    Error values are: "ERROR", "", or None.
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
-    Args:
-        data: List of values to process
+print("\n=== {{PHASE_1_TITLE}} ===")
+numbers = [5, 12, 8, -3, 7, -1]
+result = find_first_negative(numbers)
+print(f"First negative in {numbers}: {result}")
 
-    Returns:
-        list: Successfully processed values (before the error)
+print("\n=== {{PHASE_2_TITLE}} ===")
+print("Collecting names (type 'done' to finish):")
+# Uncomment to test:
+# names = collect_names_until_done()
+# print(f"Collected: {names}")
 
-    Example:
-        process_until_error(["a", "b", "ERROR", "c"]) returns ["A", "B"]
-        (Values are uppercased during processing, stops at ERROR)
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Create an empty list for results
-    # Step 2: Loop through each item in data
-    # Step 3: If item is "ERROR", "", or None:
-    #         - Print f"Error encountered! Stopping."
-    #         - Break
-    # Step 4: Process the item (convert to uppercase) and add to results
-    #         - Print f"Processed: {processed_item}"
-    # Step 5: Return results
-    pass
+print("\n=== {{PHASE_3_TITLE}} ===")
+inventory = ["{{item}}", "{{pet}}", "{{creature}}", "{{transport}}"]
+index = search_inventory(inventory, "{{creature}}")
+print(f"Found at index: {index}")
 
+print("\n=== {{PHASE_4_TITLE}} ===")
+print("Guess the secret word:")
+# Uncomment to test:
+# success = safe_guess_loop()
+# print(f"Result: {'Success!' if success else 'Failed'}")
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_5_TITLE}} ===")
+test_data = ["{{hero}}", "{{heroine}}", "ERROR", "{{friend}}"]
+processed = process_until_error(test_data)
+print(f"Processed items: {processed}")
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    numbers = [5, 12, 8, -3, 7, -1]
-    result = find_first_negative(numbers)
-    print(f"First negative in {numbers}: {result}")
-
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    print("Collecting names (type 'done' to finish):")
-    # Uncomment to test:
-    # names = collect_names_until_done()
-    # print(f"Collected: {names}")
-
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    inventory = ["{{item}}", "{{pet}}", "{{creature}}", "{{transport}}"]
-    index = search_inventory(inventory, "{{creature}}")
-    print(f"Found at index: {index}")
-
-    print("\n=== {{PHASE_4_TITLE}} ===")
-    print("Guess the secret word:")
-    # Uncomment to test:
-    # success = safe_guess_loop()
-    # print(f"Result: {'Success!' if success else 'Failed'}")
-
-    print("\n=== {{PHASE_5_TITLE}} ===")
-    test_data = ["{{hero}}", "{{heroine}}", "ERROR", "{{friend}}"]
-    processed = process_until_error(test_data)
-    print(f"Processed items: {processed}")
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

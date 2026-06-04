@@ -1,7 +1,7 @@
 {
   "version": "3.0.0",
   "theme_support": true,
-  "generated_at": "2026-02-03T12:37:49.677767",
+  "generated_at": "2026-06-05T01:03:33.897140",
   "module": "module_1_turtle_loops",
   "count": 18,
   "exercise_types": [
@@ -33,7 +33,104 @@
         "critical_reading",
         "common_mistakes"
       ],
-      "starter_code": "# =============================================================================\n# Bug Hunt: Loop Bugs\n# =============================================================================\n# Difficulty: 5\n# Concepts: loop errors, off-by-one, wrong angles, incorrect range\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_INVESTIGATION_INTRO}}\n{{CONTEXT_INVESTIGATION_MISSION}}\n\"\"\"\n\nimport turtle\n\n\n# ============================================================\n# {{CASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_1_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Draw a square (4 sides, each 90-degree turn).\n# The shape should close completely.\n#\n# ACTUAL BEHAVIOR:\n# The turtle only draws 3 sides and doesn't close the square!\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_1}}\n\n\ndef buggy_a():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    # {{hero}} wanted to draw a square at {{school}}\n    t = turtle.Turtle()\n    t.speed(0)\n    for i in range(3):  # Bug is here!\n        t.forward(80)\n        t.right(90)\n\n\ndef fix_a():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    # Hint: How many sides does a square have?\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_2_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Draw an equilateral triangle (3 equal sides).\n# The shape should close completely.\n#\n# ACTUAL BEHAVIOR:\n# The turtle draws a shape but it doesn't close properly!\n# It looks more like a bent line than a triangle.\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_2}}\n\n\ndef buggy_b():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    # {{creature}} tried to draw a triangle\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(150, 0)\n    t.pendown()\n    for i in range(3):\n        t.forward(70)\n        t.right(60)  # Bug is here!\n\n\ndef fix_b():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    # Hint: The exterior angle of a triangle is 120 degrees, not 60.\n    # Think: 360 / 3 = ?\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_3_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Print numbers 1, 2, 3, 4, 5 (one per line).\n#\n# ACTUAL BEHAVIOR:\n# Prints 0, 1, 2, 3, 4 instead!\n# The starting number is wrong.\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_3}}\n\n\ndef buggy_c():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    # Counting {{item}} items for {{hero}}\n    for i in range(5):  # Bug is here!\n        print(i)\n\n\ndef fix_c():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    # Hint: range(5) starts at 0, not 1.\n    # To get 1-5, use range(start, stop).\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_4_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Draw a hexagon (6 sides) at {{location}}.\n#\n# ACTUAL BEHAVIOR:\n# The shape closes too early! It looks like a pentagon!\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_4}}\n\n\ndef buggy_d():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(-150, 0)\n    t.pendown()\n    for i in range(6):\n        t.forward(50)\n        t.left(72)  # Bug is here!\n\n\ndef fix_d():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    # Hint: A hexagon has 6 sides, so the angle should be 360/6 = 60.\n    # The code uses 72, which is the angle for a pentagon (360/5).\n    #\n    # The fix:\n\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_INVESTIGATION_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{CASE_1_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_a()\n    print(\"\\nFixed version:\")\n    # fix_a()  # Uncomment when fixed\n\n    print(\"\\n=== {{CASE_2_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_b()\n    print(\"\\nFixed version:\")\n    # fix_b()\n\n    print(\"\\n=== {{CASE_3_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_c()\n    print(\"\\nFixed version:\")\n    # fix_c()\n\n    print(\"\\n=== {{CASE_4_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_d()\n    print(\"\\nFixed version:\")\n    # fix_d()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_INVESTIGATION_COMPLETE}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_INVESTIGATION_INTRO}}\n{{CONTEXT_INVESTIGATION_MISSION}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CASE_1_TITLE}}\n{{CONTEXT_CASE_1_NARRATIVE}}\n\n**התנהגות צפויה:**\nלצייר ריבוע (4 צלעות, כל פנייה 90 מעלות).\nהצורה אמורה להיסגר לגמרי.\n\n**מה שקורה בפועל:**\nהצב מצייר רק 3 צלעות ולא סוגר את הריבוע!\n\n{{CONTEXT_INVESTIGATION_PROMPT_1}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# {{hero}} wanted to draw a square at {{school}}\nt = turtle.Turtle()\nt.speed(0)\nfor i in range(3):  # Bug is here!\n    t.forward(80)\n    t.right(90)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מה מצאתי: ________________________________\n> רמז: כמה צלעות יש לריבוע?\n\nהתיקון:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CASE_2_TITLE}}\n{{CONTEXT_CASE_2_NARRATIVE}}\n\n**התנהגות צפויה:**\nלצייר משולש שווה-צלעות (3 צלעות שוות).\nהצורה אמורה להיסגר לגמרי.\n\n**מה שקורה בפועל:**\nהצב מצייר צורה כלשהי אבל היא לא נסגרת כמו שצריך!\nזה נראה יותר כמו קו מעוקל מאשר משולש.\n\n{{CONTEXT_INVESTIGATION_PROMPT_2}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# {{creature}} tried to draw a triangle\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(150, 0)\nt.pendown()\nfor i in range(3):\n    t.forward(70)\n    t.right(60)  # Bug is here!"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מה מצאתי: ________________________________\n> רמז: הזווית החיצונית של משולש היא 120 מעלות, לא 60.\n> חשבי: 360 / 3 = ?\n\nהתיקון:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CASE_3_TITLE}}\n{{CONTEXT_CASE_3_NARRATIVE}}\n\n**התנהגות צפויה:**\nלהדפיס את המספרים 1, 2, 3, 4, 5 (כל אחד בשורה נפרדת).\n\n**מה שקורה בפועל:**\nמדפיס 0, 1, 2, 3, 4 במקום!\nמספר ההתחלה שגוי.\n\n{{CONTEXT_INVESTIGATION_PROMPT_3}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Counting {{item}} items for {{hero}}\nfor i in range(5):  # Bug is here!\n    print(i)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מה מצאתי: ________________________________\n> רמז: `range(5)` מתחיל מ-0, לא מ-1.\n> כדי לקבל 1-5, השתמשי ב-`range(start, stop)`.\n\nהתיקון:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CASE_4_TITLE}}\n{{CONTEXT_CASE_4_NARRATIVE}}\n\n**התנהגות צפויה:**\nלצייר משושה (6 צלעות) ב-{{location}}.\n\n**מה שקורה בפועל:**\nהצורה נסגרת מוקדם מדי! היא נראית כמו מחומש!\n\n{{CONTEXT_INVESTIGATION_PROMPT_4}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "t = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-150, 0)\nt.pendown()\nfor i in range(6):\n    t.forward(50)\n    t.left(72)  # Bug is here!"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מה מצאתי: ________________________________\n> רמז: למשושה יש 6 צלעות, אז הזווית צריכה להיות 360/6 = 60.\n> הקוד משתמש ב-72, שזו הזווית של מחומש (360/5).\n\nהתיקון:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_INVESTIGATION_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{CASE_1_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_a()\nprint(\"\\nFixed version:\")\n# fix_a()  # Uncomment when fixed\n\nprint(\"\\n=== {{CASE_2_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_b()\nprint(\"\\nFixed version:\")\n# fix_b()\n\nprint(\"\\n=== {{CASE_3_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_c()\nprint(\"\\nFixed version:\")\n# fix_c()\n\nprint(\"\\n=== {{CASE_4_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_d()\nprint(\"\\nFixed version:\")\n# fix_d()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_INVESTIGATION_COMPLETE}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# {{hero}} wanted to draw a square at {{school}}\nt = turtle.Turtle()\nt.speed(0)\nfor i in range(3):  # Bug is here!\n    t.forward(80)\n    t.right(90)\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# {{creature}} tried to draw a triangle\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(150, 0)\nt.pendown()\nfor i in range(3):\n    t.forward(70)\n    t.right(60)  # Bug is here!\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Counting {{item}} items for {{hero}}\nfor i in range(5):  # Bug is here!\n    print(i)\n\n# ✏️ כתבי את הקוד שלך כאן\n\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-150, 0)\nt.pendown()\nfor i in range(6):\n    t.forward(50)\n    t.left(72)  # Bug is here!\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_INVESTIGATION_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{CASE_1_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_a()\nprint(\"\\nFixed version:\")\n# fix_a()  # Uncomment when fixed\n\nprint(\"\\n=== {{CASE_2_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_b()\nprint(\"\\nFixed version:\")\n# fix_b()\n\nprint(\"\\n=== {{CASE_3_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_c()\nprint(\"\\nFixed version:\")\n# fix_c()\n\nprint(\"\\n=== {{CASE_4_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_d()\nprint(\"\\nFixed version:\")\n# fix_d()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_INVESTIGATION_COMPLETE}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -60,7 +157,124 @@
         "critical_reading",
         "common_mistakes"
       ],
-      "starter_code": "# =============================================================================\n# Bug Hunt: Drawing Bugs\n# =============================================================================\n# Difficulty: 5\n# Concepts: multi-step drawing errors, accumulator bugs, pen state errors\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_INVESTIGATION_INTRO}}\n{{CONTEXT_INVESTIGATION_MISSION}}\n\"\"\"\n\nimport turtle\n\n\n# ============================================================\n# {{CASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_1_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Draw two separate squares with a gap between them.\n#\n# ACTUAL BEHAVIOR:\n# The squares are connected by a line! There should be no line\n# between them.\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_1}}\n\n\ndef buggy_a():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    # {{hero}} wants two separate squares at {{school}}\n    t = turtle.Turtle()\n    t.speed(0)\n\n    # Draw first square\n    for i in range(4):\n        t.forward(50)\n        t.right(90)\n\n    # Move to next position (BUG: forgot something!)\n    t.forward(70)\n\n    # Draw second square\n    for i in range(4):\n        t.forward(50)\n        t.right(90)\n\n\ndef fix_a():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    # Hint: To move without drawing, you need to lift the pen first!\n    # Use t.penup() before moving and t.pendown() after.\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_2_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Calculate total = 10 + 20 + 30 + 40 = 100 and print it.\n#\n# ACTUAL BEHAVIOR:\n# The program prints 0 at the end! The sum is wrong.\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_2}}\n\n\ndef buggy_b():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    # Calculate total distance for {{creature}}\n    total = 0\n    for i in range(1, 5):\n        distance = i * 10\n        total = 0 + distance  # Bug is here!\n    print(\"Total distance:\", total)\n\n\ndef fix_b():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    # Hint: The accumulator pattern should be: total = total + distance\n    # Not: total = 0 + distance (which resets to the last value)\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_3_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Draw a star shape using 5 iterations with 144-degree turns.\n#\n# ACTUAL BEHAVIOR:\n# The program crashes with a NameError!\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_3}}\n\n\ndef buggy_c():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    # Drawing a star at {{location}}\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(100, 100)\n    t.pendown()\n    for i in range(5):\n        t.forward(80)\n        turtle.right(144)  # Bug is here!\n\n\ndef fix_c():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    # Hint: We created a turtle named 't', but one line uses 'turtle'\n    # instead of 't'. Variable names must be consistent!\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_4_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Draw a spiral with lines getting longer: 10, 20, 30, 40, 50.\n#\n# ACTUAL BEHAVIOR:\n# All lines are the same length! The spiral doesn't grow.\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_4}}\n\n\ndef buggy_d():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    # Creating a spiral for {{hero}} at {{place}}\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(-100, -100)\n    t.pendown()\n    for i in range(1, 6):\n        length = 10  # Bug is here!\n        t.forward(length)\n        t.right(90)\n\n\ndef fix_d():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    # Hint: The length should change based on i.\n    # For a growing spiral: length = i * 10\n    #\n    # The fix:\n\n    pass\n\n\n# ============================================================\n# {{CASE_5_TITLE}}\n# ============================================================\n# {{CONTEXT_CASE_5_NARRATIVE}}\n#\n# EXPECTED BEHAVIOR:\n# Draw 5 dashes separated by gaps.\n#\n# ACTUAL BEHAVIOR:\n# After the first dash, nothing else is drawn!\n#\n# {{CONTEXT_INVESTIGATION_PROMPT_5}}\n\n\ndef buggy_e():\n    \"\"\"This code has exactly ONE bug. Find it!\"\"\"\n    # Creating a dashed line at {{school}}\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(-200, -50)\n    t.pendown()\n    for i in range(5):\n        t.forward(30)   # Draw dash\n        t.penup()       # Lift pen\n        t.forward(15)   # Move gap\n        # Bug: forgot to put pen back down!\n\n\ndef fix_e():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # What I found: ________________________________\n    # Hint: After moving the gap, you need t.pendown() to draw again!\n    #\n    # The fix:\n\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_INVESTIGATION_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{CASE_1_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_a()\n    print(\"\\nFixed version:\")\n    # fix_a()\n\n    print(\"\\n=== {{CASE_2_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_b()\n    print(\"\\nFixed version:\")\n    # fix_b()\n\n    print(\"\\n=== {{CASE_3_TITLE}} ===\")\n    print(\"Buggy version:\")\n    # buggy_c()  # This one crashes!\n    print(\"(Skipped - would crash)\")\n    print(\"\\nFixed version:\")\n    # fix_c()\n\n    print(\"\\n=== {{CASE_4_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_d()\n    print(\"\\nFixed version:\")\n    # fix_d()\n\n    print(\"\\n=== {{CASE_5_TITLE}} ===\")\n    print(\"Buggy version:\")\n    buggy_e()\n    print(\"\\nFixed version:\")\n    # fix_e()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_INVESTIGATION_COMPLETE}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_INVESTIGATION_INTRO}}\n{{CONTEXT_INVESTIGATION_MISSION}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CASE_1_TITLE}}\n{{CONTEXT_CASE_1_NARRATIVE}}\n\n**מה אמור לקרות:**\nלצייר שני ריבועים נפרדים עם רווח ביניהם.\n\n**מה קורה בפועל:**\nהריבועים מחוברים בקו! אמור להיות אין קו\nביניהם.\n\n{{CONTEXT_INVESTIGATION_PROMPT_1}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# {{hero}} wants two separate squares at {{school}}\nt = turtle.Turtle()\nt.speed(0)\n\n# Draw first square\nfor i in range(4):\n    t.forward(50)\n    t.right(90)\n\n# Move to next position (BUG: forgot something!)\nt.forward(70)\n\n# Draw second square\nfor i in range(4):\n    t.forward(50)\n    t.right(90)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מה גיליתי: ________________________________\n> רמז: כדי לזוז בלי לצייר, צריך להרים את העט קודם!\n> השתמשי ב-`t.penup()` לפני הזוז וב-`t.pendown()` אחריו.\n\nהתיקון:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CASE_2_TITLE}}\n{{CONTEXT_CASE_2_NARRATIVE}}\n\n**מה אמור לקרות:**\nלחשב total = 10 + 20 + 30 + 40 = 100 ולהדפיס אותו.\n\n**מה קורה בפועל:**\nהתוכנית מדפיסה 0 בסוף! הסכום שגוי.\n\n{{CONTEXT_INVESTIGATION_PROMPT_2}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Calculate total distance for {{creature}}\ntotal = 0\nfor i in range(1, 5):\n    distance = i * 10\n    total = 0 + distance  # Bug is here!\nprint(\"Total distance:\", total)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מה גיליתי: ________________________________\n> רמז: התבנית הנכונה של המצבר היא: `total = total + distance`\n> ולא: `total = 0 + distance` (שמאפסת לערך האחרון)\n\nהתיקון:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CASE_3_TITLE}}\n{{CONTEXT_CASE_3_NARRATIVE}}\n\n**מה אמור לקרות:**\nלצייר צורת כוכב עם 5 איטרציות ופניות של 144 מעלות.\n\n**מה קורה בפועל:**\nהתוכנית קורסת עם `NameError`!\n\n{{CONTEXT_INVESTIGATION_PROMPT_3}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Drawing a star at {{location}}\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(100, 100)\nt.pendown()\nfor i in range(5):\n    t.forward(80)\n    turtle.right(144)  # Bug is here!"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מה גיליתי: ________________________________\n> רמז: יצרנו צב בשם `t`, אבל שורה אחת משתמשת ב-`turtle`\n> במקום ב-`t`. שמות משתנים חייבים להיות עקביים!\n\nהתיקון:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CASE_4_TITLE}}\n{{CONTEXT_CASE_4_NARRATIVE}}\n\n**מה אמור לקרות:**\nלצייר ספירלה עם קווים שמתארכים: 10, 20, 30, 40, 50.\n\n**מה קורה בפועל:**\nכל הקווים באותו אורך! הספירלה לא גדלה.\n\n{{CONTEXT_INVESTIGATION_PROMPT_4}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Creating a spiral for {{hero}} at {{place}}\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-100, -100)\nt.pendown()\nfor i in range(1, 6):\n    length = 10  # Bug is here!\n    t.forward(length)\n    t.right(90)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מה גיליתי: ________________________________\n> רמז: האורך צריך להשתנות בהתאם ל-`i`.\n> לספירלה גדלה: `length = i * 10`\n\nהתיקון:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CASE_5_TITLE}}\n{{CONTEXT_CASE_5_NARRATIVE}}\n\n**מה אמור לקרות:**\nלצייר 5 מקפים עם רווחים ביניהם.\n\n**מה קורה בפועל:**\nאחרי המקף הראשון, שום דבר לא מצטייר!\n\n{{CONTEXT_INVESTIGATION_PROMPT_5}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Creating a dashed line at {{school}}\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-200, -50)\nt.pendown()\nfor i in range(5):\n    t.forward(30)   # Draw dash\n    t.penup()       # Lift pen\n    t.forward(15)   # Move gap"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## שגיאה: שכחו לשים את העט בחזרה למטה!\n\nמה גיליתי: ________________________________\n> רמז: אחרי הזזת הרווח, צריך `t.pendown()` כדי לצייר שוב!\n\nהתיקון:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_INVESTIGATION_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{CASE_1_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_a()\nprint(\"\\nFixed version:\")\n# fix_a()\n\nprint(\"\\n=== {{CASE_2_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_b()\nprint(\"\\nFixed version:\")\n# fix_b()\n\nprint(\"\\n=== {{CASE_3_TITLE}} ===\")\nprint(\"Buggy version:\")\n# buggy_c()  # This one crashes!\nprint(\"(Skipped - would crash)\")\nprint(\"\\nFixed version:\")\n# fix_c()\n\nprint(\"\\n=== {{CASE_4_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_d()\nprint(\"\\nFixed version:\")\n# fix_d()\n\nprint(\"\\n=== {{CASE_5_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_e()\nprint(\"\\nFixed version:\")\n# fix_e()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_INVESTIGATION_COMPLETE}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# {{hero}} wants two separate squares at {{school}}\nt = turtle.Turtle()\nt.speed(0)\n\n# Draw first square\nfor i in range(4):\n    t.forward(50)\n    t.right(90)\n\n# Move to next position (BUG: forgot something!)\nt.forward(70)\n\n# Draw second square\nfor i in range(4):\n    t.forward(50)\n    t.right(90)\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Calculate total distance for {{creature}}\ntotal = 0\nfor i in range(1, 5):\n    distance = i * 10\n    total = 0 + distance  # Bug is here!\nprint(\"Total distance:\", total)\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Drawing a star at {{location}}\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(100, 100)\nt.pendown()\nfor i in range(5):\n    t.forward(80)\n    turtle.right(144)  # Bug is here!\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Creating a spiral for {{hero}} at {{place}}\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-100, -100)\nt.pendown()\nfor i in range(1, 6):\n    length = 10  # Bug is here!\n    t.forward(length)\n    t.right(90)\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Creating a dashed line at {{school}}\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-200, -50)\nt.pendown()\nfor i in range(5):\n    t.forward(30)   # Draw dash\n    t.penup()       # Lift pen\n    t.forward(15)   # Move gap\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_INVESTIGATION_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{CASE_1_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_a()\nprint(\"\\nFixed version:\")\n# fix_a()\n\nprint(\"\\n=== {{CASE_2_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_b()\nprint(\"\\nFixed version:\")\n# fix_b()\n\nprint(\"\\n=== {{CASE_3_TITLE}} ===\")\nprint(\"Buggy version:\")\n# buggy_c()  # This one crashes!\nprint(\"(Skipped - would crash)\")\nprint(\"\\nFixed version:\")\n# fix_c()\n\nprint(\"\\n=== {{CASE_4_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_d()\nprint(\"\\nFixed version:\")\n# fix_d()\n\nprint(\"\\n=== {{CASE_5_TITLE}} ===\")\nprint(\"Buggy version:\")\nbuggy_e()\nprint(\"\\nFixed version:\")\n# fix_e()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_INVESTIGATION_COMPLETE}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -87,7 +301,69 @@
         "dependencies",
         "structure"
       ],
-      "starter_code": "# =============================================================================\n# Code Ordering: Shape Sequence\n# =============================================================================\n# Difficulty: 2\n# Concepts: turtle setup, for loop structure, loop body order\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_CODE_ORDERING_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport turtle\n\n\n# ============================================================\n# {{ORDERING_1_TITLE}}\n# ============================================================\n# {{CONTEXT_ORDERING_1_NARRATIVE}}\n#\n# Help {{hero}} draw a triangle. Put these lines in order:\n#\n# SCRAMBLED LINES:\n#   for i in range(3):\n#       t.forward(100)\n#       t.left(120)\n#   t = turtle.Turtle()\n\n\ndef challenge_a():\n    # ✏️ REORDER THE LINES ✏️\n    # Copy the lines above in the CORRECT order.\n    #\n    # Hint: You must create the turtle before using it.\n    # The loop header comes before the loop body.\n    # Loop body lines must be indented!\n\n    pass  # Delete this and add the correctly ordered lines\n\n\n# ============================================================\n# {{ORDERING_2_TITLE}}\n# ============================================================\n# {{CONTEXT_ORDERING_2_NARRATIVE}}\n#\n# Create a square for {{school}}. Put these lines in order:\n#\n# SCRAMBLED LINES:\n#       t.right(90)\n#   t = turtle.Turtle()\n#       t.forward(80)\n#   for side in range(4):\n\n\ndef challenge_b():\n    # ✏️ REORDER THE LINES ✏️\n    #\n    # Hint: What comes first: drawing or turning?\n    # After you draw forward, then you turn.\n\n    pass\n\n\n# ============================================================\n# {{ORDERING_3_TITLE}}\n# ============================================================\n# {{CONTEXT_ORDERING_3_NARRATIVE}}\n#\n# Draw a path with a message for {{creature}}. Put these lines in order:\n#\n# SCRAMBLED LINES:\n#   print(\"Path complete!\")\n#   for step in range(5):\n#   t = turtle.Turtle()\n#       t.forward(20)\n\n\ndef challenge_c():\n    # ✏️ REORDER THE LINES ✏️\n    #\n    # Hint: The print statement should come AFTER all drawing is done.\n    # The message announces completion.\n\n    pass\n\n\n# ============================================================\n# {{ORDERING_4_TITLE}}\n# ============================================================\n# {{CONTEXT_ORDERING_4_NARRATIVE}}\n#\n# Draw a colored square at {{location}}. Put these lines in order:\n#\n# SCRAMBLED LINES:\n#   for i in range(4):\n#       t.forward(60)\n#   t.color(\"blue\")\n#       t.left(90)\n#   t = turtle.Turtle()\n\n\ndef challenge_d():\n    # ✏️ REORDER THE LINES ✏️\n    #\n    # Hint: Set the color BEFORE you start drawing.\n    # The turtle must exist before you can set its color!\n\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_CODE_ORDERING_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{ORDERING_1_TITLE}} ===\")\n    # challenge_a()  # Uncomment when ordered correctly\n\n    print(\"\\n=== {{ORDERING_2_TITLE}} ===\")\n    # challenge_b()\n\n    print(\"\\n=== {{ORDERING_3_TITLE}} ===\")\n    # challenge_c()\n\n    print(\"\\n=== {{ORDERING_4_TITLE}} ===\")\n    # challenge_d()\n\n    print(\"\\nReorder each challenge, then uncomment to test!\")\n    print(\"{{CONTEXT_ROLE_COMPLETE}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_CODE_ORDERING_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{ORDERING_1_TITLE}}\n{{CONTEXT_ORDERING_1_NARRATIVE}}\n\nעזרי ל-{{hero}} לצייר משולש. סדרי את השורות הבאות בסדר הנכון:\n\nSCRAMBLED LINES:\n  for i in range(3):\n      t.forward(100)\n      t.left(120)\n  t = turtle.Turtle()\n\nהעתיקי את השורות למעלה בסדר הנכון.\n\n> רמז: צריך ליצור את הצב לפני שמשתמשים בו.\n> כותרת הלולאה באה לפני גוף הלולאה.\n> שורות גוף הלולאה חייבות להיות עם הזחה (indented)!"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "pass  # Delete this and add the correctly ordered lines"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{ORDERING_2_TITLE}}\n{{CONTEXT_ORDERING_2_NARRATIVE}}\n\nצרי ריבוע עבור {{school}}. סדרי את השורות הבאות בסדר הנכון:\n\nSCRAMBLED LINES:\n      t.right(90)\n  t = turtle.Turtle()\n      t.forward(80)\n  for side in range(4):\n\n> רמז: מה בא קודם — ציור או פנייה?\n> קודם מתקדמים קדימה עם `t.forward()`, ואחר כך פונים עם `t.right()`."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{ORDERING_3_TITLE}}\n{{CONTEXT_ORDERING_3_NARRATIVE}}\n\nצייר מסלול עם הודעה עבור {{creature}}. סדרי את השורות הבאות בסדר הנכון:\n\nSCRAMBLED LINES:\n  print(\"Path complete!\")\n  for step in range(5):\n  t = turtle.Turtle()\n      t.forward(20)\n\n> רמז: פקודת `print()` צריכה לבוא אחרי שכל הציור הסתיים.\n> ההודעה מכריזה שהמסלול הושלם."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{ORDERING_4_TITLE}}\n{{CONTEXT_ORDERING_4_NARRATIVE}}\n\nצייר ריבוע צבעוני ב-{{location}}. סדרי את השורות הבאות בסדר הנכון:\n\nSCRAMBLED LINES:\n  for i in range(4):\n      t.forward(60)\n  t.color(\"blue\")\n      t.left(90)\n  t = turtle.Turtle()\n\n> רמז: הגדירי את הצבע לפני שמתחילים לצייר.\n> הצב חייב להיות קיים לפני שאפשר להגדיר את צבעו!"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_CODE_ORDERING_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{ORDERING_1_TITLE}} ===\")\n# challenge_a()  # Uncomment when ordered correctly\n\nprint(\"\\n=== {{ORDERING_2_TITLE}} ===\")\n# challenge_b()\n\nprint(\"\\n=== {{ORDERING_3_TITLE}} ===\")\n# challenge_c()\n\nprint(\"\\n=== {{ORDERING_4_TITLE}} ===\")\n# challenge_d()\n\nprint(\"\\nReorder each challenge, then uncomment to test!\")\nprint(\"{{CONTEXT_ROLE_COMPLETE}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# ✏️ כתבי את הקוד שלך כאן\n\npass  # Delete this and add the correctly ordered lines\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_CODE_ORDERING_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{ORDERING_1_TITLE}} ===\")\n# challenge_a()  # Uncomment when ordered correctly\n\nprint(\"\\n=== {{ORDERING_2_TITLE}} ===\")\n# challenge_b()\n\nprint(\"\\n=== {{ORDERING_3_TITLE}} ===\")\n# challenge_c()\n\nprint(\"\\n=== {{ORDERING_4_TITLE}} ===\")\n# challenge_d()\n\nprint(\"\\nReorder each challenge, then uncomment to test!\")\nprint(\"{{CONTEXT_ROLE_COMPLETE}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -114,7 +390,99 @@
         "state_tracking",
         "systematic_thinking"
       ],
-      "starter_code": "# =============================================================================\n# Code Tracing: Loop Variables\n# =============================================================================\n# Difficulty: 3\n# Concepts: loop variable changes, tracking iterations\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_CODE_TRACING_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# --- {{TRACE_1_TITLE}} ---\n# {{CONTEXT_TRACE_1_NARRATIVE}}\n\n\ndef code_to_trace_a():\n    \"\"\"Study this code - don't run it yet!\"\"\"\n    # {{hero}} tracks steps taken at {{school}}\n    for step in range(4):\n        print(f\"Step {step}\")\n\n\ndef trace_table_a():\n    # ✏️ FILL IN THE TRACING TABLE ✏️\n    #\n    # Track the value of `step` in each iteration.\n    #\n    # | Iteration | step | Output |\n    # |-----------|------|--------|\n    # | 1         |      |        |\n    # | 2         |      |        |\n    # | 3         |      |        |\n    # | 4         |      |        |\n    #\n    # Hint: range(4) produces the values 0, 1, 2, 3.\n    # Each iteration, `step` takes the next value.\n    #\n    # {{CONTEXT_TRACE_HINT_1}}\n    pass\n\n\n# --- {{TRACE_2_TITLE}} ---\n# {{CONTEXT_TRACE_2_NARRATIVE}}\n\n\ndef code_to_trace_b():\n    \"\"\"Study this code - don't run it yet!\"\"\"\n    # Counting down for {{creature}} at {{location}}\n    for num in range(3, 0, -1):\n        print(f\"T-minus {num}\")\n    print(\"Launch!\")\n\n\ndef trace_table_b():\n    # ✏️ FILL IN THE TRACING TABLE ✏️\n    #\n    # Track the value of `num` in each iteration.\n    #\n    # | Iteration | num | Output |\n    # |-----------|-----|--------|\n    # | 1         |     |        |\n    # | 2         |     |        |\n    # | 3         |     |        |\n    # | After loop |  - | ????   |\n    #\n    # Hint: range(3, 0, -1) counts backwards: 3, 2, 1.\n    # After the loop ends, the final print() runs.\n    #\n    # {{CONTEXT_TRACE_HINT_2}}\n    pass\n\n\n# --- {{TRACE_3_TITLE}} ---\n# {{CONTEXT_TRACE_3_NARRATIVE}}\n\n\ndef code_to_trace_c():\n    \"\"\"Study this code - don't run it yet!\"\"\"\n    # Drawing segments for {{hero}}'s path\n    for i in range(1, 4):\n        length = i * 10\n        print(f\"Segment {i}: {length} units\")\n\n\ndef trace_table_c():\n    # ✏️ FILL IN THE TRACING TABLE ✏️\n    #\n    # Track BOTH `i` AND `length` in each iteration.\n    #\n    # | Iteration | i | length (i * 10) | Output |\n    # |-----------|---|-----------------|--------|\n    # | 1         |   |                 |        |\n    # | 2         |   |                 |        |\n    # | 3         |   |                 |        |\n    #\n    # Hint: length is calculated INSIDE the loop, so it changes\n    # based on the current value of i.\n    #\n    # {{CONTEXT_TRACE_HINT_3}}\n    pass\n\n\n# --- {{TRACE_4_TITLE}} ---\n# {{CONTEXT_TRACE_4_NARRATIVE}}\n\n\ndef code_to_trace_d():\n    \"\"\"Study this code - don't run it yet!\"\"\"\n    # Calculating angles for shapes at {{place}}\n    for sides in range(3, 6):\n        angle = 360 // sides\n        print(f\"{sides} sides: turn {angle} degrees\")\n\n\ndef trace_table_d():\n    # ✏️ FILL IN THE TRACING TABLE ✏️\n    #\n    # Track `sides` and `angle` in each iteration.\n    # Remember: // is integer division (no decimals).\n    #\n    # | Iteration | sides | angle (360 // sides) | Output |\n    # |-----------|-------|----------------------|--------|\n    # | 1         |       |                      |        |\n    # | 2         |       |                      |        |\n    # | 3         |       |                      |        |\n    #\n    # Hint: 360 // 3 = 120, 360 // 4 = 90, 360 // 5 = 72\n    #\n    # {{CONTEXT_TRACE_HINT_4}}\n    pass\n\n\ndef verify_traces():\n    \"\"\"Run this after completing your traces to check your work\"\"\"\n    print(\"=== {{TRACE_1_TITLE}} - Actual Execution ===\")\n    code_to_trace_a()\n\n    print(\"\\n=== {{TRACE_2_TITLE}} - Actual Execution ===\")\n    code_to_trace_b()\n\n    print(\"\\n=== {{TRACE_3_TITLE}} - Actual Execution ===\")\n    code_to_trace_c()\n\n    print(\"\\n=== {{TRACE_4_TITLE}} - Actual Execution ===\")\n    code_to_trace_d()\n\n\ndef main():\n    print(\"{{CONTEXT_CODE_TRACING_INTRO}}\")\n    print(\"=\" * 50)\n    print()\n    print(\"Complete the tracing tables in trace_table_X functions first!\")\n    print(\"Then uncomment the line below to verify your answers.\")\n    print()\n\n    # Uncomment this line AFTER completing your traces:\n    # verify_traces()\n\n    print(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_CODE_TRACING_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\n## {{TRACE_1_TITLE}}\n{{CONTEXT_TRACE_1_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# {{hero}} tracks steps taken at {{school}}\nfor step in range(4):\n    print(f\"Step {step}\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "עקבי אחרי הערך של `step` בכל איטרציה.\n\n| Iteration | step | Output |\n|-----------|------|--------|\n| 1         |      |        |\n| 2         |      |        |\n| 3         |      |        |\n| 4         |      |        |\n\n> רמז: `range(4)` מייצר את הערכים 0, 1, 2, 3.\n> בכל איטרציה, `step` מקבל את הערך הבא.\n\n{{CONTEXT_TRACE_HINT_1}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{TRACE_2_TITLE}}\n{{CONTEXT_TRACE_2_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Counting down for {{creature}} at {{location}}\nfor num in range(3, 0, -1):\n    print(f\"T-minus {num}\")\nprint(\"Launch!\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "עקבי אחרי הערך של `num` בכל איטרציה.\n\n| Iteration | num | Output |\n|-----------|-----|--------|\n| 1         |     |        |\n| 2         |     |        |\n| 3         |     |        |\n| After loop |  - | ????   |\n\n> רמז: `range(3, 0, -1)` סופר לאחור: 3, 2, 1.\n> אחרי שהלולאה מסתיימת, ה-`print()` האחרון רץ.\n\n{{CONTEXT_TRACE_HINT_2}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{TRACE_3_TITLE}}\n{{CONTEXT_TRACE_3_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Drawing segments for {{hero}}'s path\nfor i in range(1, 4):\n    length = i * 10\n    print(f\"Segment {i}: {length} units\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "עקבי אחרי שני הערכים `i` וגם `length` בכל איטרציה.\n\n| Iteration | i | length (i * 10) | Output |\n|-----------|---|-----------------|--------|\n| 1         |   |                 |        |\n| 2         |   |                 |        |\n| 3         |   |                 |        |\n\n> רמז: `length` מחושב בתוך הלולאה, כך שהוא משתנה\n> בהתאם לערך הנוכחי של `i`.\n\n{{CONTEXT_TRACE_HINT_3}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{TRACE_4_TITLE}}\n{{CONTEXT_TRACE_4_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Calculating angles for shapes at {{place}}\nfor sides in range(3, 6):\n    angle = 360 // sides\n    print(f\"{sides} sides: turn {angle} degrees\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "עקבי אחרי `sides` ו-`angle` בכל איטרציה.\nזכרי: `//` הוא חילוק שלם (ללא עשרונות).\n\n| Iteration | sides | angle (360 // sides) | Output |\n|-----------|-------|----------------------|--------|\n| 1         |       |                      |        |\n| 2         |       |                      |        |\n| 3         |       |                      |        |\n\n> רמז: `360 // 3 = 120`, `360 // 4 = 90`, `360 // 5 = 72`\n\n{{CONTEXT_TRACE_HINT_4}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"=== {{TRACE_1_TITLE}} - Actual Execution ===\")\ncode_to_trace_a()\n\nprint(\"\\n=== {{TRACE_2_TITLE}} - Actual Execution ===\")\ncode_to_trace_b()\n\nprint(\"\\n=== {{TRACE_3_TITLE}} - Actual Execution ===\")\ncode_to_trace_c()\n\nprint(\"\\n=== {{TRACE_4_TITLE}} - Actual Execution ===\")\ncode_to_trace_d()"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_CODE_TRACING_INTRO}}\")\nprint(\"=\" * 50)\nprint()\nprint(\"Complete the tracing tables in trace_table_X functions first!\")\nprint(\"Then uncomment the line below to verify your answers.\")\nprint()\n\n# Uncomment this line AFTER completing your traces:\n# verify_traces()\n\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")"
+        }
+      ],
+      "starter_code": "# {{hero}} tracks steps taken at {{school}}\nfor step in range(4):\n    print(f\"Step {step}\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Counting down for {{creature}} at {{location}}\nfor num in range(3, 0, -1):\n    print(f\"T-minus {num}\")\nprint(\"Launch!\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Drawing segments for {{hero}}'s path\nfor i in range(1, 4):\n    length = i * 10\n    print(f\"Segment {i}: {length} units\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Calculating angles for shapes at {{place}}\nfor sides in range(3, 6):\n    angle = 360 // sides\n    print(f\"{sides} sides: turn {angle} degrees\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"=== {{TRACE_1_TITLE}} - Actual Execution ===\")\ncode_to_trace_a()\n\nprint(\"\\n=== {{TRACE_2_TITLE}} - Actual Execution ===\")\ncode_to_trace_b()\n\nprint(\"\\n=== {{TRACE_3_TITLE}} - Actual Execution ===\")\ncode_to_trace_c()\n\nprint(\"\\n=== {{TRACE_4_TITLE}} - Actual Execution ===\")\ncode_to_trace_d()\n\nprint(\"{{CONTEXT_CODE_TRACING_INTRO}}\")\nprint(\"=\" * 50)\nprint()\nprint(\"Complete the tracing tables in trace_table_X functions first!\")\nprint(\"Then uncomment the line below to verify your answers.\")\nprint()\n\n# Uncomment this line AFTER completing your traces:\n# verify_traces()\n\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -141,7 +509,99 @@
         "state_tracking",
         "systematic_thinking"
       ],
-      "starter_code": "# =============================================================================\n# Code Tracing: Accumulator Trace\n# =============================================================================\n# Difficulty: 4\n# Concepts: tracking accumulator values, running totals through iterations\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_CODE_TRACING_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# --- {{TRACE_1_TITLE}} ---\n# {{CONTEXT_TRACE_1_NARRATIVE}}\n\n\ndef code_to_trace_a():\n    \"\"\"Study this code - don't run it yet!\"\"\"\n    # {{hero}} calculates total energy at {{school}}\n    total = 0\n    for i in range(1, 4):\n        total = total + i\n        print(f\"After adding {i}: total = {total}\")\n\n\ndef trace_table_a():\n    # ✏️ FILL IN THE TRACING TABLE ✏️\n    #\n    # Track `i` and `total` through each iteration.\n    #\n    # | Before/After | i | total (before) | total (after) | Output |\n    # |--------------|---|----------------|---------------|--------|\n    # | Start        | - | 0              | -             | -      |\n    # | Iteration 1  |   |                |               |        |\n    # | Iteration 2  |   |                |               |        |\n    # | Iteration 3  |   |                |               |        |\n    #\n    # Hint: total starts at 0. Each iteration, we add i to total.\n    # range(1, 4) gives: 1, 2, 3\n    #\n    # {{CONTEXT_TRACE_HINT_1}}\n    pass\n\n\n# --- {{TRACE_2_TITLE}} ---\n# {{CONTEXT_TRACE_2_NARRATIVE}}\n\n\ndef code_to_trace_b():\n    \"\"\"Study this code - don't run it yet!\"\"\"\n    # Calculating distances for {{creature}}\n    distance = 0\n    for step in range(1, 5):\n        move = step * 10\n        distance = distance + move\n        print(f\"Step {step}: moved {move}, total distance = {distance}\")\n\n\ndef trace_table_b():\n    # ✏️ FILL IN THE TRACING TABLE ✏️\n    #\n    # Track `step`, `move`, and `distance`.\n    #\n    # | Iteration | step | move (step*10) | distance (before) | distance (after) |\n    # |-----------|------|----------------|-------------------|------------------|\n    # | Start     | -    | -              | 0                 | -                |\n    # | 1         |      |                |                   |                  |\n    # | 2         |      |                |                   |                  |\n    # | 3         |      |                |                   |                  |\n    # | 4         |      |                |                   |                  |\n    #\n    # Hint: move is calculated each iteration, distance accumulates.\n    #\n    # {{CONTEXT_TRACE_HINT_2}}\n    pass\n\n\n# --- {{TRACE_3_TITLE}} ---\n# {{CONTEXT_TRACE_3_NARRATIVE}}\n\n\ndef code_to_trace_c():\n    \"\"\"Study this code - don't run it yet!\"\"\"\n    # Tracking angles at {{location}}\n    total_angle = 0\n    for side in range(4):\n        turn = 90\n        total_angle = total_angle + turn\n        print(f\"After side {side}: turned {total_angle} degrees total\")\n\n\ndef trace_table_c():\n    # ✏️ FILL IN THE TRACING TABLE ✏️\n    #\n    # Track `side` and `total_angle`.\n    #\n    # | Iteration | side | turn | total_angle (before) | total_angle (after) |\n    # |-----------|------|------|----------------------|---------------------|\n    # | Start     | -    | -    | 0                    | -                   |\n    # | 1         |      | 90   |                      |                     |\n    # | 2         |      | 90   |                      |                     |\n    # | 3         |      | 90   |                      |                     |\n    # | 4         |      | 90   |                      |                     |\n    #\n    # Hint: Note that side starts at 0 (from range(4): 0, 1, 2, 3)\n    # turn is always 90, total_angle grows by 90 each time.\n    #\n    # {{CONTEXT_TRACE_HINT_3}}\n    pass\n\n\n# --- {{TRACE_4_TITLE}} ---\n# {{CONTEXT_TRACE_4_NARRATIVE}}\n\n\ndef code_to_trace_d():\n    \"\"\"Study this code - don't run it yet!\"\"\"\n    # Building a message for {{hero}} at {{place}}\n    message = \"\"\n    for count in range(1, 4):\n        message = message + str(count) + \"! \"\n        print(f\"Message so far: '{message}'\")\n\n\ndef trace_table_d():\n    # ✏️ FILL IN THE TRACING TABLE ✏️\n    #\n    # Track `count` and `message`.\n    #\n    # | Iteration | count | message (before) | message (after) |\n    # |-----------|-------|------------------|-----------------|\n    # | Start     | -     | \"\"               | -               |\n    # | 1         |       |                  |                 |\n    # | 2         |       |                  |                 |\n    # | 3         |       |                  |                 |\n    #\n    # Hint: Strings can be accumulated too!\n    # Each iteration adds: str(count) + \"! \"\n    #\n    # {{CONTEXT_TRACE_HINT_4}}\n    pass\n\n\ndef verify_traces():\n    \"\"\"Run this after completing your traces to check your work\"\"\"\n    print(\"=== {{TRACE_1_TITLE}} - Actual Execution ===\")\n    code_to_trace_a()\n\n    print(\"\\n=== {{TRACE_2_TITLE}} - Actual Execution ===\")\n    code_to_trace_b()\n\n    print(\"\\n=== {{TRACE_3_TITLE}} - Actual Execution ===\")\n    code_to_trace_c()\n\n    print(\"\\n=== {{TRACE_4_TITLE}} - Actual Execution ===\")\n    code_to_trace_d()\n\n\ndef main():\n    print(\"{{CONTEXT_CODE_TRACING_INTRO}}\")\n    print(\"=\" * 50)\n    print()\n    print(\"Complete the tracing tables in trace_table_X functions first!\")\n    print(\"Then uncomment the line below to verify your answers.\")\n    print()\n\n    # Uncomment this line AFTER completing your traces:\n    # verify_traces()\n\n    print(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_CODE_TRACING_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\n## {{TRACE_1_TITLE}}\n{{CONTEXT_TRACE_1_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# {{hero}} calculates total energy at {{school}}\ntotal = 0\nfor i in range(1, 4):\n    total = total + i\n    print(f\"After adding {i}: total = {total}\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מלאי את טבלת המעקב\n\nעקבי אחרי `i` ו-`total` בכל איטרציה.\n\n| לפני/אחרי    | i | total (לפני) | total (אחרי) | פלט |\n|--------------|---|--------------|--------------|-----|\n| התחלה        | - | 0            | -            | -   |\n| איטרציה 1    |   |              |              |     |\n| איטרציה 2    |   |              |              |     |\n| איטרציה 3    |   |              |              |     |\n\n> רמז: `total` מתחיל ב-0. בכל איטרציה, מוסיפים את `i` ל-`total`.\n> `range(1, 4)` נותן: 1, 2, 3\n\n{{CONTEXT_TRACE_HINT_1}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{TRACE_2_TITLE}}\n{{CONTEXT_TRACE_2_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Calculating distances for {{creature}}\ndistance = 0\nfor step in range(1, 5):\n    move = step * 10\n    distance = distance + move\n    print(f\"Step {step}: moved {move}, total distance = {distance}\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מלאי את טבלת המעקב\n\nעקבי אחרי `step`, `move` ו-`distance`.\n\n| איטרציה   | step | move (step*10) | distance (לפני) | distance (אחרי) |\n|-----------|------|----------------|-----------------|-----------------|\n| התחלה     | -    | -              | 0               | -               |\n| 1         |      |                |                 |                 |\n| 2         |      |                |                 |                 |\n| 3         |      |                |                 |                 |\n| 4         |      |                |                 |                 |\n\n> רמז: `move` מחושב בכל איטרציה, ו-`distance` מצטבר לאורך כל הלולאה.\n\n{{CONTEXT_TRACE_HINT_2}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{TRACE_3_TITLE}}\n{{CONTEXT_TRACE_3_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Tracking angles at {{location}}\ntotal_angle = 0\nfor side in range(4):\n    turn = 90\n    total_angle = total_angle + turn\n    print(f\"After side {side}: turned {total_angle} degrees total\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מלאי את טבלת המעקב\n\nעקבי אחרי `side` ו-`total_angle`.\n\n| איטרציה   | side | turn | total_angle (לפני) | total_angle (אחרי) |\n|-----------|------|------|--------------------|--------------------|\n| התחלה     | -    | -    | 0                  | -                  |\n| 1         |      | 90   |                    |                    |\n| 2         |      | 90   |                    |                    |\n| 3         |      | 90   |                    |                    |\n| 4         |      | 90   |                    |                    |\n\n> רמז: שימי לב ש-`side` מתחיל ב-0 (מ-`range(4)`: 0, 1, 2, 3).\n> `turn` תמיד שווה ל-90, ו-`total_angle` גדל ב-90 בכל פעם.\n\n{{CONTEXT_TRACE_HINT_3}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{TRACE_4_TITLE}}\n{{CONTEXT_TRACE_4_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# Building a message for {{hero}} at {{place}}\nmessage = \"\"\nfor count in range(1, 4):\n    message = message + str(count) + \"! \"\n    print(f\"Message so far: '{message}'\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מלאי את טבלת המעקב\n\nעקבי אחרי `count` ו-`message`.\n\n| איטרציה   | count | message (לפני) | message (אחרי) |\n|-----------|-------|----------------|----------------|\n| התחלה     | -     | `\"\"`           | -              |\n| 1         |       |                |                |\n| 2         |       |                |                |\n| 3         |       |                |                |\n\n> רמז: גם מחרוזות יכולות להצטבר!\n> בכל איטרציה מתווסף: `str(count) + \"! \"`\n\n{{CONTEXT_TRACE_HINT_4}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"=== {{TRACE_1_TITLE}} - Actual Execution ===\")\ncode_to_trace_a()\n\nprint(\"\\n=== {{TRACE_2_TITLE}} - Actual Execution ===\")\ncode_to_trace_b()\n\nprint(\"\\n=== {{TRACE_3_TITLE}} - Actual Execution ===\")\ncode_to_trace_c()\n\nprint(\"\\n=== {{TRACE_4_TITLE}} - Actual Execution ===\")\ncode_to_trace_d()"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_CODE_TRACING_INTRO}}\")\nprint(\"=\" * 50)\nprint()\nprint(\"Complete the tracing tables in trace_table_X functions first!\")\nprint(\"Then uncomment the line below to verify your answers.\")\nprint()\n\n# Uncomment this line AFTER completing your traces:\n# verify_traces()\n\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")"
+        }
+      ],
+      "starter_code": "# {{hero}} calculates total energy at {{school}}\ntotal = 0\nfor i in range(1, 4):\n    total = total + i\n    print(f\"After adding {i}: total = {total}\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Calculating distances for {{creature}}\ndistance = 0\nfor step in range(1, 5):\n    move = step * 10\n    distance = distance + move\n    print(f\"Step {step}: moved {move}, total distance = {distance}\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Tracking angles at {{location}}\ntotal_angle = 0\nfor side in range(4):\n    turn = 90\n    total_angle = total_angle + turn\n    print(f\"After side {side}: turned {total_angle} degrees total\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Building a message for {{hero}} at {{place}}\nmessage = \"\"\nfor count in range(1, 4):\n    message = message + str(count) + \"! \"\n    print(f\"Message so far: '{message}'\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"=== {{TRACE_1_TITLE}} - Actual Execution ===\")\ncode_to_trace_a()\n\nprint(\"\\n=== {{TRACE_2_TITLE}} - Actual Execution ===\")\ncode_to_trace_b()\n\nprint(\"\\n=== {{TRACE_3_TITLE}} - Actual Execution ===\")\ncode_to_trace_c()\n\nprint(\"\\n=== {{TRACE_4_TITLE}} - Actual Execution ===\")\ncode_to_trace_d()\n\nprint(\"{{CONTEXT_CODE_TRACING_INTRO}}\")\nprint(\"=\" * 50)\nprint()\nprint(\"Complete the tracing tables in trace_table_X functions first!\")\nprint(\"Then uncomment the line below to verify your answers.\")\nprint()\n\n# Uncomment this line AFTER completing your traces:\n# verify_traces()\n\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -168,7 +628,74 @@
         "code_structure",
         "vocabulary"
       ],
-      "starter_code": "# =============================================================================\n# Fill in the Blanks: Loop Syntax\n# =============================================================================\n# Difficulty: 2\n# Concepts: for loop keyword, range() function, in keyword, loop variable\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_FILL_BLANKS_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport turtle\n\n\n# --- {{EXERCISE_1_TITLE}} ---\n# {{CONTEXT_EXERCISE_1_NARRATIVE}}\n\n\ndef exercise_a():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Complete the for loop to repeat 4 times for {{hero}}.\n    #\n    # Hint: A for loop starts with the keyword \"for\".\n    #\n    # ___ i in range(4):              # Fill in the loop keyword\n    #     print(\"Step\", i)\n    pass\n\n\n# --- {{EXERCISE_2_TITLE}} ---\n# {{CONTEXT_EXERCISE_2_NARRATIVE}}\n\n\ndef exercise_b():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Complete the loop to iterate over a range for {{creature}}.\n    #\n    # Hint: The keyword \"in\" connects the variable to what we loop over.\n    #\n    # for step ___ range(3):          # Fill in the connecting keyword\n    #     print(\"{{creature}} takes step\", step)\n    pass\n\n\n# --- {{EXERCISE_3_TITLE}} ---\n# {{CONTEXT_EXERCISE_3_NARRATIVE}}\n\n\ndef exercise_c():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Complete the range to repeat 5 times at {{school}}.\n    #\n    # Hint: range(n) creates numbers from 0 to n-1.\n    #       To repeat 5 times, what should n be?\n    #\n    # for i in ___(5):                # Fill in the function name\n    #     print(\"Repeat number\", i)\n    pass\n\n\n# --- {{EXERCISE_4_TITLE}} ---\n# {{CONTEXT_EXERCISE_4_NARRATIVE}}\n\n\ndef exercise_d():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Complete this loop that draws a square at {{location}}.\n    #\n    # Hint: A square has 4 sides, so we repeat 4 times.\n    #\n    # t = turtle.Turtle()\n    # ___ side ___ range(___):        # Fill in: keyword, keyword, number\n    #     t.forward(50)\n    #     t.right(90)\n    pass\n\n\n# --- {{EXERCISE_5_TITLE}} ---\n# {{CONTEXT_EXERCISE_5_NARRATIVE}}\n\n\ndef exercise_e():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Complete the loop body indentation for {{hero}}'s journey.\n    #\n    # Hint: Code inside a loop must be indented (4 spaces or 1 tab).\n    #\n    # t = turtle.Turtle()\n    # for i in range(3):\n    # ___t.forward(30)                # Add proper indentation\n    # ___t.right(120)                 # Add proper indentation\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_FILL_BLANKS_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{EXERCISE_1_TITLE}} ===\")\n    # exercise_a()  # Uncomment when you've filled the blanks\n\n    print(\"\\n=== {{EXERCISE_2_TITLE}} ===\")\n    # exercise_b()\n\n    print(\"\\n=== {{EXERCISE_3_TITLE}} ===\")\n    # exercise_c()\n\n    print(\"\\n=== {{EXERCISE_4_TITLE}} ===\")\n    # exercise_d()\n\n    print(\"\\n=== {{EXERCISE_5_TITLE}} ===\")\n    # exercise_e()\n\n    print(\"\\nFill in all the blanks, then uncomment to test!\")\n    print(\"{{CONTEXT_ROLE_COMPLETE}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_FILL_BLANKS_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{EXERCISE_1_TITLE}}\n{{CONTEXT_EXERCISE_1_NARRATIVE}}\n\nהשלימי את לולאת ה-`for` כדי לחזור 4 פעמים עבור {{hero}}.\n\n> רמז: לולאת `for` מתחילה במילת המפתח `for`.\n\n___ i in range(4):              # Fill in the loop keyword\n    print(\"Step\", i)"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{EXERCISE_2_TITLE}}\n{{CONTEXT_EXERCISE_2_NARRATIVE}}\n\nהשלימי את הלולאה כדי לעבור על טווח עבור {{creature}}.\n\n> רמז: מילת המפתח `in` מחברת בין המשתנה לבין מה שעוברים עליו בלולאה.\n\nfor step ___ range(3):          # Fill in the connecting keyword\n    print(\"{{creature}} takes step\", step)"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{EXERCISE_3_TITLE}}\n{{CONTEXT_EXERCISE_3_NARRATIVE}}\n\nהשלימי את הטווח כדי לחזור 5 פעמים ב-{{school}}.\n\n> רמז: `range(n)` יוצרת מספרים מ-0 עד n-1.\n> כדי לחזור 5 פעמים, מה צריך להיות n?\n\nfor i in ___(5):                # Fill in the function name\n    print(\"Repeat number\", i)"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{EXERCISE_4_TITLE}}\n{{CONTEXT_EXERCISE_4_NARRATIVE}}\n\nהשלימי את הלולאה שמציירת ריבוע ב-{{location}}.\n\n> רמז: לריבוע יש 4 צלעות, אז חוזרים 4 פעמים.\n\nt = turtle.Turtle()\n___ side ___ range(___):        # Fill in: keyword, keyword, number\n    t.forward(50)\n    t.right(90)"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{EXERCISE_5_TITLE}}\n{{CONTEXT_EXERCISE_5_NARRATIVE}}\n\nהשלימי את ההזחה של גוף הלולאה למסע של {{hero}}.\n\n> רמז: קוד שנמצא בתוך לולאה חייב להיות מוזח (4 רווחים או טאב אחד).\n\nt = turtle.Turtle()\nfor i in range(3):\n___t.forward(30)                # Add proper indentation\n___t.right(120)                 # Add proper indentation"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_FILL_BLANKS_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{EXERCISE_1_TITLE}} ===\")\n# exercise_a()  # Uncomment when you've filled the blanks\n\nprint(\"\\n=== {{EXERCISE_2_TITLE}} ===\")\n# exercise_b()\n\nprint(\"\\n=== {{EXERCISE_3_TITLE}} ===\")\n# exercise_c()\n\nprint(\"\\n=== {{EXERCISE_4_TITLE}} ===\")\n# exercise_d()\n\nprint(\"\\n=== {{EXERCISE_5_TITLE}} ===\")\n# exercise_e()\n\nprint(\"\\nFill in all the blanks, then uncomment to test!\")\nprint(\"{{CONTEXT_ROLE_COMPLETE}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_FILL_BLANKS_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{EXERCISE_1_TITLE}} ===\")\n# exercise_a()  # Uncomment when you've filled the blanks\n\nprint(\"\\n=== {{EXERCISE_2_TITLE}} ===\")\n# exercise_b()\n\nprint(\"\\n=== {{EXERCISE_3_TITLE}} ===\")\n# exercise_c()\n\nprint(\"\\n=== {{EXERCISE_4_TITLE}} ===\")\n# exercise_d()\n\nprint(\"\\n=== {{EXERCISE_5_TITLE}} ===\")\n# exercise_e()\n\nprint(\"\\nFill in all the blanks, then uncomment to test!\")\nprint(\"{{CONTEXT_ROLE_COMPLETE}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -195,7 +722,64 @@
         "code_structure",
         "vocabulary"
       ],
-      "starter_code": "# =============================================================================\n# Fill in the Blanks: Accumulator Pattern\n# =============================================================================\n# Difficulty: 4\n# Concepts: accumulator variables, running totals, loop-based calculations\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_FILL_BLANKS_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\n\n# --- {{EXERCISE_1_TITLE}} ---\n# {{CONTEXT_EXERCISE_1_NARRATIVE}}\n\n\ndef exercise_a():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Calculate the sum of numbers 1 through 5 for {{hero}}.\n    #\n    # Hint: Initialize the accumulator to 0 before the loop.\n    #\n    # total = ___                         # Start with zero\n    # for num in range(1, 6):\n    #     total = total ___ num           # Add each number\n    # print(\"Sum:\", total)                # Should print 15\n    pass\n\n\n# --- {{EXERCISE_2_TITLE}} ---\n# {{CONTEXT_EXERCISE_2_NARRATIVE}}\n\n\ndef exercise_b():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Count down and track total distance at {{school}}.\n    #\n    # Hint: Each step adds to total_distance.\n    #\n    # total_distance = 0\n    # for step in range(1, 5):\n    #     distance = step * 10\n    #     total_distance = ___ + distance  # Add to accumulator\n    # print(\"Total distance:\", ___)        # Print the result\n    pass\n\n\n# --- {{EXERCISE_3_TITLE}} ---\n# {{CONTEXT_EXERCISE_3_NARRATIVE}}\n\n\ndef exercise_c():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Build a message by adding words for {{creature}}.\n    #\n    # Hint: Strings can be accumulated too! Start with empty string \"\".\n    #\n    # message = ___                        # Start with empty string\n    # for i in range(3):\n    #     message = message ___ \"Go! \"     # Add \"Go! \" each time\n    # print(message)                       # Should print \"Go! Go! Go! \"\n    pass\n\n\n# --- {{EXERCISE_4_TITLE}} ---\n# {{CONTEXT_EXERCISE_4_NARRATIVE}}\n\n\ndef exercise_d():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Calculate total turning for drawing at {{location}}.\n    # When drawing a shape, track total degrees turned.\n    #\n    # total_turns = ___                    # Initialize accumulator\n    # for side in range(4):\n    #     turn_amount = 90\n    #     total_turns = total_turns + ___  # Add turn amount\n    # print(\"Total turned:\", total_turns, \"degrees\")  # Should be 360\n    pass\n\n\n# --- {{EXERCISE_5_TITLE}} ---\n# {{CONTEXT_EXERCISE_5_NARRATIVE}}\n\n\ndef exercise_e():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Calculate total line length for {{hero}}'s path.\n    # Lines increase: 10, 20, 30, 40, 50 units.\n    #\n    # total_length = 0\n    # ___ i in range(1, 6):               # Fill in loop keyword\n    #     line_length = i ___ 10          # Calculate: i times 10\n    #     total_length = total_length + line_length\n    # print(\"Total length:\", ___)         # Print the accumulator\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_FILL_BLANKS_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{EXERCISE_1_TITLE}} ===\")\n    # exercise_a()  # Uncomment when you've filled the blanks\n\n    print(\"\\n=== {{EXERCISE_2_TITLE}} ===\")\n    # exercise_b()\n\n    print(\"\\n=== {{EXERCISE_3_TITLE}} ===\")\n    # exercise_c()\n\n    print(\"\\n=== {{EXERCISE_4_TITLE}} ===\")\n    # exercise_d()\n\n    print(\"\\n=== {{EXERCISE_5_TITLE}} ===\")\n    # exercise_e()\n\n    print(\"\\nFill in all the blanks, then uncomment to test!\")\n    print(\"{{CONTEXT_ROLE_COMPLETE}}\")\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_FILL_BLANKS_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\n## {{EXERCISE_1_TITLE}}\n{{CONTEXT_EXERCISE_1_NARRATIVE}}\n\nחשבי את סכום המספרים 1 עד 5 עבור {{hero}}.\n\n> רמז: אתחלי את המצבר לערך 0 לפני הלולאה.\n\n```python\ntotal = ___                         # התחילי מאפס\nfor num in range(1, 6):\n    total = total ___ num           # הוסיפי כל מספר\nprint(\"Sum:\", total)                # צריך להדפיס 15\n```"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{EXERCISE_2_TITLE}}\n{{CONTEXT_EXERCISE_2_NARRATIVE}}\n\nספרי אחורה ועקבי אחר המרחק הכולל ב-{{school}}.\n\n> רמז: כל צעד מתווסף אל `total_distance`.\n\n```python\ntotal_distance = 0\nfor step in range(1, 5):\n    distance = step * 10\n    total_distance = ___ + distance  # הוסיפי למצבר\nprint(\"Total distance:\", ___)        # הדפיסי את התוצאה\n```"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{EXERCISE_3_TITLE}}\n{{CONTEXT_EXERCISE_3_NARRATIVE}}\n\nבני משפט על ידי הוספת מילים עבור {{creature}}.\n\n> רמז: גם מחרוזות אפשר לצבור! התחילי עם מחרוזת ריקה `\"\"`.\n\n```python\nmessage = ___                        # התחילי עם מחרוזת ריקה\nfor i in range(3):\n    message = message ___ \"Go! \"     # הוסיפי \"Go! \" בכל פעם\nprint(message)                       # צריך להדפיס \"Go! Go! Go! \"\n```"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{EXERCISE_4_TITLE}}\n{{CONTEXT_EXERCISE_4_NARRATIVE}}\n\nחשבי את סך הפניות לצייר ב-{{location}}.\nכשמציירים צורה, עקבי אחר סך המעלות שפנית.\n\n```python\ntotal_turns = ___                    # אתחלי את המצבר\nfor side in range(4):\n    turn_amount = 90\n    total_turns = total_turns + ___  # הוסיפי את כמות הפנייה\nprint(\"Total turned:\", total_turns, \"degrees\")  # צריך להיות 360\n```"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{EXERCISE_5_TITLE}}\n{{CONTEXT_EXERCISE_5_NARRATIVE}}\n\nחשבי את אורך הקו הכולל במסלול של {{hero}}.\nהקווים גדלים: 10, 20, 30, 40, 50 יחידות.\n\n```python\ntotal_length = 0\n___ i in range(1, 6):               # מלאי את מילת המפתח של הלולאה\n    line_length = i ___ 10          # חשבי: i כפול 10\n    total_length = total_length + line_length\nprint(\"Total length:\", ___)         # הדפיסי את המצבר\n```"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_FILL_BLANKS_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{EXERCISE_1_TITLE}} ===\")\n# exercise_a()  # Uncomment when you've filled the blanks\n\nprint(\"\\n=== {{EXERCISE_2_TITLE}} ===\")\n# exercise_b()\n\nprint(\"\\n=== {{EXERCISE_3_TITLE}} ===\")\n# exercise_c()\n\nprint(\"\\n=== {{EXERCISE_4_TITLE}} ===\")\n# exercise_d()\n\nprint(\"\\n=== {{EXERCISE_5_TITLE}} ===\")\n# exercise_e()\n\nprint(\"\\nFill in all the blanks, then uncomment to test!\")\nprint(\"{{CONTEXT_ROLE_COMPLETE}}\")"
+        }
+      ],
+      "starter_code": "# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_FILL_BLANKS_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{EXERCISE_1_TITLE}} ===\")\n# exercise_a()  # Uncomment when you've filled the blanks\n\nprint(\"\\n=== {{EXERCISE_2_TITLE}} ===\")\n# exercise_b()\n\nprint(\"\\n=== {{EXERCISE_3_TITLE}} ===\")\n# exercise_c()\n\nprint(\"\\n=== {{EXERCISE_4_TITLE}} ===\")\n# exercise_d()\n\nprint(\"\\n=== {{EXERCISE_5_TITLE}} ===\")\n# exercise_e()\n\nprint(\"\\nFill in all the blanks, then uncomment to test!\")\nprint(\"{{CONTEXT_ROLE_COMPLETE}}\")",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -224,7 +808,104 @@
         "pattern_recognition",
         "independence"
       ],
-      "starter_code": "# =============================================================================\n# Hybrid Exercise: The Apprentice - Learning Loops\n# =============================================================================\n# Difficulty: 3\n# Arc: The Apprentice\n# Parts: DISCOVERY -> GUIDANCE -> GROWTH\n# Concepts: for loops, range(), turtle graphics, loop patterns\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_DISCOVERY_INTRO}}\n\nThis is a multi-part exercise. Complete each part in order.\n\"\"\"\n\nimport turtle\n\n\n# ============================================================\n# PART 1: DISCOVERY - Study the Master's Work\n# ============================================================\n# {{CONTEXT_DISCOVERY_NARRATIVE}}\n#\n# Study how {{mentor}} uses loops to draw shapes.\n# Predict the output before running the code.\n\n\ndef master_code_1():\n    \"\"\"DO NOT MODIFY - Study and predict\"\"\"\n    # The master draws a simple shape\n    t = turtle.Turtle()\n    t.speed(0)  # Fastest drawing\n    for i in range(3):\n        t.forward(80)\n        t.left(120)\n\n\ndef master_code_2():\n    \"\"\"DO NOT MODIFY - Study and predict\"\"\"\n    # The master draws another shape\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(150, 0)  # Move to a new position\n    t.pendown()\n    for i in range(4):\n        t.forward(60)\n        t.right(90)\n\n\ndef master_code_3():\n    \"\"\"DO NOT MODIFY - Study and predict\"\"\"\n    # The master draws a series of marks\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(-200, 0)\n    t.pendown()\n    for count in range(1, 6):\n        t.forward(count * 15)\n        t.penup()\n        t.forward(10)\n        t.pendown()\n\n\ndef your_predictions():\n    # ✏️ YOUR PREDICTIONS HERE ✏️\n    #\n    # Describe what each master_code function will draw.\n    #\n    # master_code_1 draws: _______________ (hint: 3 sides, left turns)\n    #     Shape: _______________\n    #     Number of sides: ___\n    #     Turn angle: ___ degrees\n    #\n    # master_code_2 draws: _______________ (hint: 4 sides, right turns)\n    #     Shape: _______________\n    #     Number of sides: ___\n    #     Turn angle: ___ degrees\n    #\n    # master_code_3 draws: _______________ (hint: lines get longer)\n    #     How many lines: ___\n    #     First line length: ___ units\n    #     Last line length: ___ units\n    #\n    # Hint: The exterior angle of a shape with N sides is 360/N degrees.\n    pass\n\n\n# ============================================================\n# PART 2: GUIDANCE - Practice with Support\n# ============================================================\n# {{CONTEXT_GUIDANCE_INTRO}}\n# {{CONTEXT_GUIDANCE_NARRATIVE}}\n#\n# Now practice with some scaffolding to help you.\n\n\ndef guided_exercise_a():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Complete the loop to draw a pentagon (5 sides).\n    # A pentagon needs exterior angles of 72 degrees (360/5 = 72).\n    #\n    # t = turtle.Turtle()\n    # t.speed(0)\n    # t.penup()\n    # t.goto(-100, 150)\n    # t.pendown()\n    # for i in range(___):           # How many sides?\n    #     t.forward(50)\n    #     t.right(___)               # What angle?\n    #\n    # Hint: A pentagon has 5 sides and turns 72 degrees each time.\n    pass\n\n\ndef guided_exercise_b():\n    # ✏️ FILL IN THE BLANKS ✏️\n    #\n    # Complete the loop to draw a hexagon (6 sides).\n    # A hexagon needs exterior angles of 60 degrees (360/6 = 60).\n    #\n    # t = turtle.Turtle()\n    # t.speed(0)\n    # t.penup()\n    # t.goto(100, 150)\n    # t.pendown()\n    # ___ i in ___(6):               # Fill in the loop keywords\n    #     t.forward(40)\n    #     t.___(60)                  # Fill in the turn method\n    #\n    # Hint: Use \"for\" and \"range\" to create the loop.\n    pass\n\n\n# ============================================================\n# PART 3: GROWTH - Create Your Own\n# ============================================================\n# {{CONTEXT_GROWTH_INTRO}}\n# {{CONTEXT_GROWTH_NARRATIVE}}\n#\n# Now create your own shapes using what you've learned!\n\n\ndef your_creation_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw an octagon (8 sides) for {{hero}}.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Position it at (-200, -100) using penup/goto/pendown\n    # Step 3: Use a for loop to repeat 8 times\n    # Step 4: Each iteration: forward 35 units, left 45 degrees\n    #\n    # Hint: 360/8 = 45 degrees per turn\n    #\n    # Expected: An octagon (8-sided shape).\n    pass\n\n\ndef your_creation_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a spiral staircase pattern for {{creature}}.\n    # Each step is slightly longer than the previous.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Position it at (0, -150)\n    # Step 3: Use a for loop with range(1, 13) to draw 12 lines\n    # Step 4: Each iteration:\n    #         - forward(step * 8) where step is the loop variable\n    #         - right(30)\n    #\n    # Expected: A spiral pattern where each line is longer than the last.\n    pass\n\n\ndef your_creation_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create your own shape at {{school}}!\n    # Try a different number of sides, or a star pattern.\n    #\n    # Ideas:\n    # - Draw a 10-sided shape (decagon) with 36-degree turns\n    # - Draw a 5-pointed star with 144-degree turns\n    # - Draw a 7-pointed star with 154-degree turns (approximately)\n    #\n    # Be creative!\n    pass\n\n\ndef main():\n    print(\"=\" * 50)\n    print(\"PART 1: DISCOVERY - Study the Master's Work\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- master_code_1 ---\")\n    master_code_1()\n\n    print(\"\\n--- master_code_2 ---\")\n    master_code_2()\n\n    print(\"\\n--- master_code_3 ---\")\n    master_code_3()\n\n    print(\"\\n--- Your Predictions ---\")\n    your_predictions()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"PART 2: GUIDANCE - Practice with Support\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- guided_exercise_a ---\")\n    # guided_exercise_a()  # Uncomment when blanks are filled\n\n    print(\"\\n--- guided_exercise_b ---\")\n    # guided_exercise_b()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"PART 3: GROWTH - Create Your Own\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- your_creation_a ---\")\n    your_creation_a()\n\n    print(\"\\n--- your_creation_b ---\")\n    your_creation_b()\n\n    print(\"\\n--- your_creation_c ---\")\n    your_creation_c()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_TRIUMPH_COMPLETE}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_DISCOVERY_INTRO}}\n\nזוהי תרגילה מרובת-חלקים. השלימי כל חלק לפי הסדר."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## חלק 1: גילוי - לומדים מעבודת המאסטר\n{{CONTEXT_DISCOVERY_NARRATIVE}}\n\nשימי לב כיצד {{mentor}} משתמשת בלולאות כדי לצייר צורות.\nנסי לנחש את הפלט לפני שתריצי את הקוד."
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# The master draws a simple shape\nt = turtle.Turtle()\nt.speed(0)  # Fastest drawing\nfor i in range(3):\n    t.forward(80)\n    t.left(120)"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# The master draws another shape\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(150, 0)  # Move to a new position\nt.pendown()\nfor i in range(4):\n    t.forward(60)\n    t.right(90)"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# The master draws a series of marks\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-200, 0)\nt.pendown()\nfor count in range(1, 6):\n    t.forward(count * 15)\n    t.penup()\n    t.forward(10)\n    t.pendown()"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "תארי מה תצייר כל לולאה.\n\nהלולאה הראשונה מציירת: _______________ (רמז: 3 צלעות, פניות שמאלה)\n    צורה: _______________\n    מספר צלעות: ___\n    זווית פנייה: ___ מעלות\n\nהלולאה השנייה מציירת: _______________ (רמז: 4 צלעות, פניות ימינה)\n    צורה: _______________\n    מספר צלעות: ___\n    זווית פנייה: ___ מעלות\n\nהלולאה השלישית מציירת: _______________ (רמז: הקווים מתארכים)\n    כמה קווים: ___\n    אורך הקו הראשון: ___ יחידות\n    אורך הקו האחרון: ___ יחידות\n\n> רמז: הזווית החיצונית של צורה עם N צלעות היא 360/N מעלות."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## חלק 2: הדרכה - תרגול עם עזרה\n{{CONTEXT_GUIDANCE_INTRO}}\n{{CONTEXT_GUIDANCE_NARRATIVE}}\n\nעכשיו נתרגלי עם קצת פיגום שיעזור לך.\n\nהשלימי את הרווחים החסרים כדי לצייר מחומש (5 צלעות).\nמחומש זקוק לזוויות חיצוניות של 72 מעלות (360/5 = 72).\n\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-100, 150)\nt.pendown()\nfor i in range(___):           # כמה צלעות?\n    t.forward(50)\n    t.right(___)               # איזו זווית?\n\n> רמז: למחומש יש 5 צלעות ופונים 72 מעלות בכל פעם."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "השלימי את הרווחים החסרים כדי לצייר משושה (6 צלעות).\nמשושה זקוק לזוויות חיצוניות של 60 מעלות (360/6 = 60).\n\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(100, 150)\nt.pendown()\n___ i in ___(6):               # השלימי את מילות המפתח של הלולאה\n    t.forward(40)\n    t.___(60)                  # השלימי את שיטת הפנייה\n\n> רמז: השתמשי ב-`for` וב-`range` כדי ליצור את הלולאה."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## חלק 3: צמיחה - צרי משלך\n{{CONTEXT_GROWTH_INTRO}}\n{{CONTEXT_GROWTH_NARRATIVE}}\n\nעכשיו צרי צורות משלך עם מה שלמדת!\n\nצייר מתומן (8 צלעות) עבור {{hero}}.\n\n1. צרי צב\n2. מקמי אותו בנקודה (-200, -100) עם `penup`/`goto`/`pendown`\n3. השתמשי בלולאת `for` שחוזרת 8 פעמים\n4. בכל סיבוב: `forward` 35 יחידות, `left` 45 מעלות\n\n> רמז: 360/8 = 45 מעלות לכל פנייה\n\nפלט צפוי: מתומן (צורה בת 8 צלעות)."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "צייר דפוס מדרגות ספירלי עבור {{creature}}.\nכל מדרגה קצת ארוכה מהקודמת.\n\n1. צרי צב\n2. מקמי אותו בנקודה (0, -150)\n3. השתמשי בלולאת `for` עם `range(1, 13)` לציור 12 קווים\n4. בכל סיבוב:\n   - `forward(step * 8)` כאשר `step` הוא משתנה הלולאה\n   - `right(30)`\n\nפלט צפוי: דפוס ספירלי שבו כל קו ארוך מהקודם."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "צרי צורה משלך ב{{school}}!\nנסי מספר צלעות שונה, או דפוס כוכב.\n\nרעיונות:\n- צייר צורה בת 10 צלעות (עשרון) עם פניות של 36 מעלות\n- צייר כוכב בן 5 קצוות עם פניות של 144 מעלות\n- צייר כוכב בן 7 קצוות עם פניות של כ-154 מעלות\n\nהיי יצירתית!"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"=\" * 50)\nprint(\"PART 1: DISCOVERY - Study the Master's Work\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- master_code_1 ---\")\nmaster_code_1()\n\nprint(\"\\n--- master_code_2 ---\")\nmaster_code_2()\n\nprint(\"\\n--- master_code_3 ---\")\nmaster_code_3()\n\nprint(\"\\n--- Your Predictions ---\")\nyour_predictions()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"PART 2: GUIDANCE - Practice with Support\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- guided_exercise_a ---\")\n# guided_exercise_a()  # Uncomment when blanks are filled\n\nprint(\"\\n--- guided_exercise_b ---\")\n# guided_exercise_b()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"PART 3: GROWTH - Create Your Own\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- your_creation_a ---\")\nyour_creation_a()\n\nprint(\"\\n--- your_creation_b ---\")\nyour_creation_b()\n\nprint(\"\\n--- your_creation_c ---\")\nyour_creation_c()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_TRIUMPH_COMPLETE}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# The master draws a simple shape\nt = turtle.Turtle()\nt.speed(0)  # Fastest drawing\nfor i in range(3):\n    t.forward(80)\n    t.left(120)\n\n# The master draws another shape\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(150, 0)  # Move to a new position\nt.pendown()\nfor i in range(4):\n    t.forward(60)\n    t.right(90)\n\n# The master draws a series of marks\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-200, 0)\nt.pendown()\nfor count in range(1, 6):\n    t.forward(count * 15)\n    t.penup()\n    t.forward(10)\n    t.pendown()\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"=\" * 50)\nprint(\"PART 1: DISCOVERY - Study the Master's Work\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- master_code_1 ---\")\nmaster_code_1()\n\nprint(\"\\n--- master_code_2 ---\")\nmaster_code_2()\n\nprint(\"\\n--- master_code_3 ---\")\nmaster_code_3()\n\nprint(\"\\n--- Your Predictions ---\")\nyour_predictions()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"PART 2: GUIDANCE - Practice with Support\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- guided_exercise_a ---\")\n# guided_exercise_a()  # Uncomment when blanks are filled\n\nprint(\"\\n--- guided_exercise_b ---\")\n# guided_exercise_b()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"PART 3: GROWTH - Create Your Own\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- your_creation_a ---\")\nyour_creation_a()\n\nprint(\"\\n--- your_creation_b ---\")\nyour_creation_b()\n\nprint(\"\\n--- your_creation_c ---\")\nyour_creation_c()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_TRIUMPH_COMPLETE}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -253,7 +934,114 @@
         "pattern_recognition",
         "independence"
       ],
-      "starter_code": "# =============================================================================\n# Hybrid Exercise: The Mystery - Strange Shapes\n# =============================================================================\n# Difficulty: 4-5\n# Arc: The Mystery\n# Parts: DISCOVERY -> INVESTIGATION -> IMPROVEMENT\n# Concepts: debugging loops, tracing, fixing turtle programs\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_DISCOVERY_INTRO}}\n\nThis is a multi-part exercise. Complete each part in order.\n\"\"\"\n\nimport turtle\n\n\n# ============================================================\n# PART 1: DISCOVERY - Observe the Unexpected\n# ============================================================\n# {{CONTEXT_DISCOVERY_NARRATIVE}}\n#\n# {{hero}} found some drawing code at {{school}}.\n# The code is supposed to draw a square, but something is wrong!\n# Study the output and notice the problem.\n\n\ndef mystery_code_1():\n    \"\"\"Run this and observe what happens\"\"\"\n    # This should draw a square... but does it?\n    t = turtle.Turtle()\n    t.speed(0)\n    for i in range(4):\n        t.forward(80)\n        t.right(80)  # Something's off!\n\n\ndef mystery_code_2():\n    \"\"\"Run this and observe what happens\"\"\"\n    # This should count 1 to 5, but look at the output!\n    for num in range(5):\n        print(f\"Count: {num}\")\n\n\ndef mystery_code_3():\n    \"\"\"Run this and observe what happens\"\"\"\n    # This should draw a growing spiral...\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(150, 50)\n    t.pendown()\n    for i in range(1, 6):\n        length = 20  # All lines are the same!\n        t.forward(length)\n        t.right(90)\n\n\ndef your_observations():\n    # ✏️ YOUR OBSERVATIONS HERE ✏️\n    #\n    # mystery_code_1:\n    #   Expected: A closed square\n    #   Actual: ________________________________\n    #   What seems wrong? ________________________________\n    #\n    # mystery_code_2:\n    #   Expected: Prints 1, 2, 3, 4, 5\n    #   Actual: ________________________________\n    #   What seems wrong? ________________________________\n    #\n    # mystery_code_3:\n    #   Expected: Lines get longer (20, 40, 60, 80, 100)\n    #   Actual: ________________________________\n    #   What seems wrong? ________________________________\n    pass\n\n\n# ============================================================\n# PART 2: INVESTIGATION - Trace the Code\n# ============================================================\n# {{CONTEXT_INVESTIGATION_INTRO}}\n# {{CONTEXT_INVESTIGATION_NARRATIVE}}\n#\n# Now trace through each mystery to understand exactly why\n# it behaves unexpectedly.\n\n\ndef trace_mystery_1():\n    # ✏️ TRACE THE CODE ✏️\n    #\n    # mystery_code_1 uses right(80) instead of right(90).\n    #\n    # | Iteration | Angle turned so far |\n    # |-----------|---------------------|\n    # | 1         | 80                  |\n    # | 2         |                     |\n    # | 3         |                     |\n    # | 4         |                     |\n    #\n    # Total angle: ___ degrees\n    # For a closed shape: should be ___ degrees\n    #\n    # The bug: ________________________________\n    pass\n\n\ndef trace_mystery_2():\n    # ✏️ TRACE THE CODE ✏️\n    #\n    # range(5) produces: ___, ___, ___, ___, ___\n    # But we wanted: 1, 2, 3, 4, 5\n    #\n    # To get 1-5, we should use: range(___, ___)\n    #\n    # The bug: ________________________________\n    pass\n\n\ndef trace_mystery_3():\n    # ✏️ TRACE THE CODE ✏️\n    #\n    # | Iteration | i | length (should be) | length (actual) |\n    # |-----------|---|-------------------|-----------------|\n    # | 1         | 1 | 20                | 20              |\n    # | 2         | 2 | 40                | 20              |\n    # | 3         | 3 | 60                | 20              |\n    # | 4         | 4 | 80                | 20              |\n    # | 5         | 5 | 100               | 20              |\n    #\n    # The code sets length = 20 directly, ignoring i.\n    # It should be: length = i * ___\n    #\n    # The bug: ________________________________\n    pass\n\n\n# ============================================================\n# PART 3: IMPROVEMENT - Fix the Issues\n# ============================================================\n# {{CONTEXT_IMPROVEMENT_INTRO}}\n# {{CONTEXT_IMPROVEMENT_NARRATIVE}}\n#\n# Now that you understand the bugs, fix them!\n\n\ndef fixed_code_1():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # Fix the angle so the square closes properly.\n    #\n    # Your fix:\n\n    pass\n\n\ndef fixed_code_2():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # Fix the range so it counts 1 to 5.\n    #\n    # Your fix:\n\n    pass\n\n\ndef fixed_code_3():\n    # ✏️ FIX THE BUG ✏️\n    #\n    # Fix the length calculation so lines grow.\n    #\n    # Your fix:\n\n    pass\n\n\ndef main():\n    print(\"=\" * 50)\n    print(\"PART 1: DISCOVERY - Observe the Unexpected\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- mystery_code_1 ---\")\n    print(\"This should draw a square...\")\n    mystery_code_1()\n\n    print(\"\\n--- mystery_code_2 ---\")\n    print(\"This should count 1 to 5...\")\n    mystery_code_2()\n\n    print(\"\\n--- mystery_code_3 ---\")\n    print(\"This should draw a growing spiral...\")\n    mystery_code_3()\n\n    print(\"\\n--- Your Observations ---\")\n    your_observations()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"PART 2: INVESTIGATION - Trace the Code\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- trace_mystery_1 ---\")\n    trace_mystery_1()\n\n    print(\"\\n--- trace_mystery_2 ---\")\n    trace_mystery_2()\n\n    print(\"\\n--- trace_mystery_3 ---\")\n    trace_mystery_3()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"PART 3: IMPROVEMENT - Fix the Issues\")\n    print(\"=\" * 50)\n\n    print(\"\\n--- fixed_code_1 ---\")\n    # fixed_code_1()  # Uncomment when fixed\n\n    print(\"\\n--- fixed_code_2 ---\")\n    # fixed_code_2()\n\n    print(\"\\n--- fixed_code_3 ---\")\n    # fixed_code_3()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_TRIUMPH_COMPLETE}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_DISCOVERY_INTRO}}\n\nזוהי תרגיל רב-חלקי. השלימי כל חלק לפי הסדר."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## חלק 1: גילוי - שימי לב למשהו לא צפוי\n{{CONTEXT_DISCOVERY_NARRATIVE}}\n\n{{hero}} מצאה קצת קוד ציור ב-{{school}}.\nהקוד אמור לצייר ריבוע, אבל משהו לא בסדר!\nעיייני בפלט ושימי לב לבעיה."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# This should draw a square... but does it?\nt = turtle.Turtle()\nt.speed(0)\nfor i in range(4):\n    t.forward(80)\n    t.right(80)  # Something's off!"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# This should count 1 to 5, but look at the output!\nfor num in range(5):\n    print(f\"Count: {num}\")"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# This should draw a growing spiral...\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(150, 50)\nt.pendown()\nfor i in range(1, 6):\n    length = 20  # All lines are the same!\n    t.forward(length)\n    t.right(90)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## התצפיות שלי\n\nmystery_code_1:\n  ציפינו: ריבוע סגור\n  בפועל: ________________________________\n  מה נראה שגוי? ________________________________\n\nmystery_code_2:\n  ציפינו: מדפיס 1, 2, 3, 4, 5\n  בפועל: ________________________________\n  מה נראה שגוי? ________________________________\n\nmystery_code_3:\n  ציפינו: קווים מתארכים (20, 40, 60, 80, 100)\n  בפועל: ________________________________\n  מה נראה שגוי? ________________________________"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## חלק 2: חקירה - עקבי אחרי הקוד\n{{CONTEXT_INVESTIGATION_INTRO}}\n{{CONTEXT_INVESTIGATION_NARRATIVE}}\n\nעכשיו עקבי אחרי כל תעלומה כדי להבין בדיוק למה\nהקוד מתנהג בצורה לא צפויה.\n\n## עקבי אחרי הקוד\n\nmystery_code_1 משתמש ב-`right(80)` במקום `right(90)`.\n\n| איטרציה | סך הזווית שנפנתה |\n|---------|-----------------|\n| 1       | 80               |\n| 2       |                  |\n| 3       |                  |\n| 4       |                  |\n\nסך הזווית: ___ מעלות\nלצורה סגורה: צריך להיות ___ מעלות\n\nהבאג: ________________________________"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## עקבי אחרי הקוד\n\n`range(5)` מייצר: ___, ___, ___, ___, ___\nאבל רצינו: 1, 2, 3, 4, 5\n\nכדי לקבל 1 עד 5, צריך להשתמש ב: `range(___, ___)`\n\nהבאג: ________________________________"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## עקבי אחרי הקוד\n\n| איטרציה | i | אורך (כפי שצריך) | אורך (בפועל) |\n|---------|---|-----------------|-------------|\n| 1       | 1 | 20               | 20          |\n| 2       | 2 | 40               | 20          |\n| 3       | 3 | 60               | 20          |\n| 4       | 4 | 80               | 20          |\n| 5       | 5 | 100              | 20          |\n\nהקוד מגדיר `length = 20` ישירות, ומתעלם מ-`i`.\nצריך להיות: `length = i * ___`\n\nהבאג: ________________________________"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## חלק 3: שיפור - תקני את הבעיות\n{{CONTEXT_IMPROVEMENT_INTRO}}\n{{CONTEXT_IMPROVEMENT_NARRATIVE}}\n\nעכשיו שהבנת את הבאגים, תקני אותם!\n\n## תקני את הבאג\n\nתקני את הזווית כך שהריבוע ייסגר כראוי.\n\nהתיקון שלי:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## תקני את הבאג\n\nתקני את ה-`range` כך שיספור מ-1 עד 5.\n\nהתיקון שלי:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## תקני את הבאג\n\nתקני את חישוב האורך כך שהקווים יתארכו.\n\nהתיקון שלי:"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"=\" * 50)\nprint(\"PART 1: DISCOVERY - Observe the Unexpected\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- mystery_code_1 ---\")\nprint(\"This should draw a square...\")\nmystery_code_1()\n\nprint(\"\\n--- mystery_code_2 ---\")\nprint(\"This should count 1 to 5...\")\nmystery_code_2()\n\nprint(\"\\n--- mystery_code_3 ---\")\nprint(\"This should draw a growing spiral...\")\nmystery_code_3()\n\nprint(\"\\n--- Your Observations ---\")\nyour_observations()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"PART 2: INVESTIGATION - Trace the Code\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- trace_mystery_1 ---\")\ntrace_mystery_1()\n\nprint(\"\\n--- trace_mystery_2 ---\")\ntrace_mystery_2()\n\nprint(\"\\n--- trace_mystery_3 ---\")\ntrace_mystery_3()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"PART 3: IMPROVEMENT - Fix the Issues\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- fixed_code_1 ---\")\n# fixed_code_1()  # Uncomment when fixed\n\nprint(\"\\n--- fixed_code_2 ---\")\n# fixed_code_2()\n\nprint(\"\\n--- fixed_code_3 ---\")\n# fixed_code_3()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_TRIUMPH_COMPLETE}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# This should draw a square... but does it?\nt = turtle.Turtle()\nt.speed(0)\nfor i in range(4):\n    t.forward(80)\n    t.right(80)  # Something's off!\n\n# This should count 1 to 5, but look at the output!\nfor num in range(5):\n    print(f\"Count: {num}\")\n\n# This should draw a growing spiral...\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(150, 50)\nt.pendown()\nfor i in range(1, 6):\n    length = 20  # All lines are the same!\n    t.forward(length)\n    t.right(90)\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"=\" * 50)\nprint(\"PART 1: DISCOVERY - Observe the Unexpected\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- mystery_code_1 ---\")\nprint(\"This should draw a square...\")\nmystery_code_1()\n\nprint(\"\\n--- mystery_code_2 ---\")\nprint(\"This should count 1 to 5...\")\nmystery_code_2()\n\nprint(\"\\n--- mystery_code_3 ---\")\nprint(\"This should draw a growing spiral...\")\nmystery_code_3()\n\nprint(\"\\n--- Your Observations ---\")\nyour_observations()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"PART 2: INVESTIGATION - Trace the Code\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- trace_mystery_1 ---\")\ntrace_mystery_1()\n\nprint(\"\\n--- trace_mystery_2 ---\")\ntrace_mystery_2()\n\nprint(\"\\n--- trace_mystery_3 ---\")\ntrace_mystery_3()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"PART 3: IMPROVEMENT - Fix the Issues\")\nprint(\"=\" * 50)\n\nprint(\"\\n--- fixed_code_1 ---\")\n# fixed_code_1()  # Uncomment when fixed\n\nprint(\"\\n--- fixed_code_2 ---\")\n# fixed_code_2()\n\nprint(\"\\n--- fixed_code_3 ---\")\n# fixed_code_3()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_TRIUMPH_COMPLETE}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -280,7 +1068,94 @@
         "quick_reading",
         "comparison"
       ],
-      "starter_code": "# =============================================================================\n# Match the Output: Code to Shape\n# =============================================================================\n# Difficulty: 3-4\n# Concepts: loop count to sides, turn angles to shape type\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_MATCH_OUTPUT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport turtle\n\n\n# ============================================================\n# {{MATCH_SET_1_TITLE}}\n# ============================================================\n# {{CONTEXT_MATCH_SET_1_NARRATIVE}}\n#\n# Match each code snippet to the shape it draws.\n\n# --- CODE SNIPPETS ---\n\n\ndef snippet_1():\n    \"\"\"What shape does this draw?\"\"\"\n    t = turtle.Turtle()\n    t.speed(0)\n    for i in range(3):\n        t.forward(80)\n        t.right(120)\n\n\ndef snippet_2():\n    \"\"\"What shape does this draw?\"\"\"\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(150, 0)\n    t.pendown()\n    for i in range(4):\n        t.forward(60)\n        t.right(90)\n\n\ndef snippet_3():\n    \"\"\"What shape does this draw?\"\"\"\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(-150, 0)\n    t.pendown()\n    for i in range(6):\n        t.forward(40)\n        t.right(60)\n\n\n# --- POSSIBLE OUTPUTS ---\n\"\"\"\nOUTPUT A: Triangle\n---------\nA 3-sided closed shape with equal sides.\nThe turtle turns 120 degrees at each corner.\n\nOUTPUT B: Square\n---------\nA 4-sided closed shape with equal sides.\nThe turtle turns 90 degrees at each corner.\n\nOUTPUT C: Hexagon\n---------\nA 6-sided closed shape with equal sides.\nThe turtle turns 60 degrees at each corner.\n\"\"\"\n\n\n# --- YOUR ANSWERS ---\n\n\ndef your_matches_set1():\n    # ✏️ MATCH SNIPPETS TO OUTPUTS ✏️\n    #\n    # Write the letter (A, B, or C) that matches each snippet.\n    #\n    # Hint: Look at range(N) to find the number of sides.\n    # The turn angle determines what shape it is:\n    # - Triangle: 120 degrees (360 / 3)\n    # - Square: 90 degrees (360 / 4)\n    # - Hexagon: 60 degrees (360 / 6)\n\n    matches = {\n        \"snippet_1\": \"?\",\n        \"snippet_2\": \"?\",\n        \"snippet_3\": \"?\",\n    }\n\n    return matches\n\n\n# ============================================================\n# {{MATCH_SET_2_TITLE}}\n# ============================================================\n# {{CONTEXT_MATCH_SET_2_NARRATIVE}}\n#\n# These snippets look similar but produce different results!\n# {{hero}} must identify each pattern.\n\n# --- CODE SNIPPETS ---\n\n\ndef snippet_4():\n    \"\"\"What does this code draw?\"\"\"\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(-200, -100)\n    t.pendown()\n    for i in range(5):\n        t.forward(80)\n        t.right(72)\n\n\ndef snippet_5():\n    \"\"\"What does this code draw?\"\"\"\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(0, -100)\n    t.pendown()\n    for i in range(5):\n        t.forward(80)\n        t.right(144)\n\n\ndef snippet_6():\n    \"\"\"What does this code draw?\"\"\"\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    t.goto(200, -100)\n    t.pendown()\n    for i in range(5):\n        t.forward(80)\n        t.left(72)\n\n\n# --- POSSIBLE OUTPUTS ---\n\"\"\"\nOUTPUT D: Pentagon (5-sided polygon)\n---------\nA regular 5-sided closed shape.\nTurn angle: 72 degrees (360/5).\nTurns RIGHT at each corner.\n\nOUTPUT E: 5-Pointed Star\n---------\nA star shape with 5 points.\nTurn angle: 144 degrees (larger than polygon).\nLines cross through the center.\n\nOUTPUT F: Pentagon (counterclockwise)\n---------\nA regular 5-sided closed shape.\nTurn angle: 72 degrees.\nTurns LEFT at each corner (draws in opposite direction).\n\"\"\"\n\n\n# --- YOUR ANSWERS ---\n\n\ndef your_matches_set2():\n    # ✏️ MATCH SNIPPETS TO OUTPUTS ✏️\n    #\n    # Hint: Compare the turn angles and directions!\n    # - 72 degrees = 360/5, creates a regular pentagon\n    # - 144 degrees = 2 * 72, creates a star pattern\n    # - left vs right affects which way the shape is drawn\n\n    matches = {\n        \"snippet_4\": \"?\",\n        \"snippet_5\": \"?\",\n        \"snippet_6\": \"?\",\n    }\n\n    return matches\n\n\ndef main():\n    print(\"{{CONTEXT_MATCH_OUTPUT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{MATCH_SET_1_TITLE}} ===\")\n    print(\"\\nRunning all snippets...\")\n    snippet_1()\n    snippet_2()\n    snippet_3()\n    print(\"\\nYour matches:\", your_matches_set1())\n\n    print(\"\\n=== {{MATCH_SET_2_TITLE}} ===\")\n    snippet_4()\n    snippet_5()\n    snippet_6()\n    print(\"\\nYour matches:\", your_matches_set2())\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_MATCH_OUTPUT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{MATCH_SET_1_TITLE}}\n{{CONTEXT_MATCH_SET_1_NARRATIVE}}\n\nהתאימי כל קטע קוד לצורה שהוא מצייר.\n\n## קטעי הקוד"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "t = turtle.Turtle()\nt.speed(0)\nfor i in range(3):\n    t.forward(80)\n    t.right(120)"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "t = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(150, 0)\nt.pendown()\nfor i in range(4):\n    t.forward(60)\n    t.right(90)"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "t = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-150, 0)\nt.pendown()\nfor i in range(6):\n    t.forward(40)\n    t.right(60)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## פלטים אפשריים\n\nפלט A: משולש (Triangle)\n---------\nצורה סגורה בת 3 צלעות שוות.\nהצב מסתובב 120 מעלות בכל פינה.\n\nפלט B: ריבוע (Square)\n---------\nצורה סגורה בת 4 צלעות שוות.\nהצב מסתובב 90 מעלות בכל פינה.\n\nפלט C: משושה (Hexagon)\n---------\nצורה סגורה בת 6 צלעות שוות.\nהצב מסתובב 60 מעלות בכל פינה.\n\n## התשובות שלך\n\nכתבי את האות (A, B או C) שמתאימה לכל קטע קוד.\n\n> רמז: הסתכלי על `range(N)` כדי למצוא את מספר הצלעות.\n> זווית הסיבוב קובעת את סוג הצורה:\n> - Triangle: 120 מעלות (360 / 3)\n> - Square: 90 מעלות (360 / 4)\n> - Hexagon: 60 מעלות (360 / 6)"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "matches = {\n    \"snippet_1\": \"?\",\n    \"snippet_2\": \"?\",\n    \"snippet_3\": \"?\",\n}\n\nreturn matches"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{MATCH_SET_2_TITLE}}\n{{CONTEXT_MATCH_SET_2_NARRATIVE}}\n\nקטעי הקוד האלה נראים דומים אבל מייצרים תוצאות שונות!\n{{hero}} צריכה לזהות כל תבנית.\n\n## קטעי הקוד"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "t = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-200, -100)\nt.pendown()\nfor i in range(5):\n    t.forward(80)\n    t.right(72)"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "t = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(0, -100)\nt.pendown()\nfor i in range(5):\n    t.forward(80)\n    t.right(144)"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "t = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(200, -100)\nt.pendown()\nfor i in range(5):\n    t.forward(80)\n    t.left(72)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## פלטים אפשריים\n\nפלט D: מחומש (Pentagon)\n---------\nצורה סגורה וסדירה בת 5 צלעות.\nזווית סיבוב: 72 מעלות (360/5).\nמסתובבת ימינה (`right`) בכל פינה.\n\nפלט E: כוכב בן 5 קצוות (5-Pointed Star)\n---------\nצורה של כוכב עם 5 קצוות.\nזווית סיבוב: 144 מעלות (גדולה יותר מאשר פולייגון).\nהקווים חוצים זה את זה דרך המרכז.\n\nפלט F: מחומש נגד כיוון השעון (Pentagon counterclockwise)\n---------\nצורה סגורה וסדירה בת 5 צלעות.\nזווית סיבוב: 72 מעלות.\nמסתובבת שמאלה (`left`) בכל פינה — מצייר בכיוון הפוך.\n\n## התשובות שלך\n\n> רמז: השווי את זוויות הסיבוב והכיוונים!\n> - 72 מעלות = 360/5, יוצרת מחומש סדיר\n> - 144 מעלות = 2 * 72, יוצרת תבנית כוכב\n> - `left` לעומת `right` קובע לאיזה כיוון הצורה מצוירת"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "matches = {\n    \"snippet_4\": \"?\",\n    \"snippet_5\": \"?\",\n    \"snippet_6\": \"?\",\n}\n\nreturn matches"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_MATCH_OUTPUT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{MATCH_SET_1_TITLE}} ===\")\nprint(\"\\nRunning all snippets...\")\nsnippet_1()\nsnippet_2()\nsnippet_3()\nprint(\"\\nYour matches:\", your_matches_set1())\n\nprint(\"\\n=== {{MATCH_SET_2_TITLE}} ===\")\nsnippet_4()\nsnippet_5()\nsnippet_6()\nprint(\"\\nYour matches:\", your_matches_set2())\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\nt = turtle.Turtle()\nt.speed(0)\nfor i in range(3):\n    t.forward(80)\n    t.right(120)\n\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(150, 0)\nt.pendown()\nfor i in range(4):\n    t.forward(60)\n    t.right(90)\n\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-150, 0)\nt.pendown()\nfor i in range(6):\n    t.forward(40)\n    t.right(60)\n\n# ✏️ כתבי את הקוד שלך כאן\n\nmatches = {\n    \"snippet_1\": \"?\",\n    \"snippet_2\": \"?\",\n    \"snippet_3\": \"?\",\n}\n\nreturn matches\n\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(-200, -100)\nt.pendown()\nfor i in range(5):\n    t.forward(80)\n    t.right(72)\n\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(0, -100)\nt.pendown()\nfor i in range(5):\n    t.forward(80)\n    t.right(144)\n\nt = turtle.Turtle()\nt.speed(0)\nt.penup()\nt.goto(200, -100)\nt.pendown()\nfor i in range(5):\n    t.forward(80)\n    t.left(72)\n\n# ✏️ כתבי את הקוד שלך כאן\n\nmatches = {\n    \"snippet_4\": \"?\",\n    \"snippet_5\": \"?\",\n    \"snippet_6\": \"?\",\n}\n\nreturn matches\n\nprint(\"{{CONTEXT_MATCH_OUTPUT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{MATCH_SET_1_TITLE}} ===\")\nprint(\"\\nRunning all snippets...\")\nsnippet_1()\nsnippet_2()\nsnippet_3()\nprint(\"\\nYour matches:\", your_matches_set1())\n\nprint(\"\\n=== {{MATCH_SET_2_TITLE}} ===\")\nsnippet_4()\nsnippet_5()\nsnippet_6()\nprint(\"\\nYour matches:\", your_matches_set2())\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -307,7 +1182,104 @@
         "program_flow",
         "tracing"
       ],
-      "starter_code": "# =============================================================================\n# Output Prediction: Turtle Position\n# =============================================================================\n# Difficulty: 1\n# Concepts: turtle movement, direction, forward(), backward(), right(), left()\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PREDICTION_INTRO}}\n{{CONTEXT_PREDICTION_PURPOSE}}\n\"\"\"\n\nimport turtle\n\n\n# --- {{CHALLENGE_1_TITLE}} ---\n# {{CONTEXT_CHALLENGE_1_NARRATIVE}}\n\n\ndef challenge_a_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    # {{hero}} commands the {{creature}} to move forward\n    t = turtle.Turtle()\n    t.forward(100)\n    t.forward(50)\n    print(f\"Final X position: {t.xcor()}\")\n\n\ndef challenge_a_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # The turtle starts at position (0, 0) facing right (East).\n    # After moving forward 100, it's at (100, 0).\n    # After moving forward 50 more, where is it?\n    #\n    # Final X position: _______________\n    #\n    # Hint: forward() adds to the position in the direction the turtle faces.\n    # The turtle starts facing right, so forward moves right (increases X).\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_1}}\n    pass\n\n\n# --- {{CHALLENGE_2_TITLE}} ---\n# {{CONTEXT_CHALLENGE_2_NARRATIVE}}\n\n\ndef challenge_b_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    # Navigating through {{location}}\n    t = turtle.Turtle()\n    t.forward(80)\n    t.backward(30)\n    print(f\"Final X position: {t.xcor()}\")\n\n\ndef challenge_b_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Starting at (0, 0), facing right:\n    # - forward(80) moves to X = ?\n    # - backward(30) moves back, so X = ?\n    #\n    # Final X position: _______________\n    #\n    # Hint: backward() moves in the OPPOSITE direction the turtle faces,\n    # but the turtle keeps facing the same way.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_2}}\n    pass\n\n\n# --- {{CHALLENGE_3_TITLE}} ---\n# {{CONTEXT_CHALLENGE_3_NARRATIVE}}\n\n\ndef challenge_c_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    # Charting a path to {{place}}\n    t = turtle.Turtle()\n    t.right(90)\n    t.forward(60)\n    print(f\"Final Y position: {t.ycor()}\")\n\n\ndef challenge_c_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # The turtle starts facing right (East).\n    # right(90) turns it 90 degrees clockwise - now facing which direction?\n    # Then forward(60) moves it 60 units in that direction.\n    #\n    # Final Y position: _______________\n    #\n    # Hint: Turning right from East points you South.\n    # In turtle graphics, South means Y decreases (negative Y direction).\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_3}}\n    pass\n\n\n# --- {{CHALLENGE_4_TITLE}} ---\n# {{CONTEXT_CHALLENGE_4_NARRATIVE}}\n\n\ndef challenge_d_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    # A journey around {{school}}\n    t = turtle.Turtle()\n    t.forward(50)\n    t.left(90)\n    t.forward(50)\n    print(f\"Position: ({t.xcor()}, {t.ycor()})\")\n\n\ndef challenge_d_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # Starting at (0, 0), facing right (East):\n    # - forward(50) moves to position (?, ?)\n    # - left(90) turns 90 degrees counter-clockwise - now facing ?\n    # - forward(50) moves to position (?, ?)\n    #\n    # Position: (_____, _____)\n    #\n    # Hint: Turning left from East points you North.\n    # North means Y increases (positive Y direction).\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_4}}\n    pass\n\n\ndef main():\n    print(\"=== {{CHALLENGE_1_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_a_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_a_prediction()\n\n    print(\"\\n=== {{CHALLENGE_2_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_b_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_b_prediction()\n\n    print(\"\\n=== {{CHALLENGE_3_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_c_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_c_prediction()\n\n    print(\"\\n=== {{CHALLENGE_4_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_d_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_d_prediction()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PREDICTION_INTRO}}\n{{CONTEXT_PREDICTION_PURPOSE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CHALLENGE_1_TITLE}}\n{{CONTEXT_CHALLENGE_1_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# {{hero}} commands the {{creature}} to move forward\nt = turtle.Turtle()\nt.forward(100)\nt.forward(50)\nprint(f\"Final X position: {t.xcor()}\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "הצב מתחילה במיקום (0, 0) ופונה ימינה (מזרח).\nאחרי `forward(100)`, היא נמצאת ב־(100, 0).\nאחרי עוד `forward(50)`, איפה היא תהיה?\n\nFinal X position: _______________\n\n> רמז: `forward()` מוסיפה למיקום בכיוון שהצב פונה אליו. הצב פונה ימינה, אז קדימה פירושו ימינה (X גדל).\n\n{{CONTEXT_PREDICTION_GUIDANCE_1}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CHALLENGE_2_TITLE}}\n{{CONTEXT_CHALLENGE_2_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# Navigating through {{location}}\nt = turtle.Turtle()\nt.forward(80)\nt.backward(30)\nprint(f\"Final X position: {t.xcor()}\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מתחילים ב־(0, 0), פונים ימינה:\n- `forward(80)` מגיעה ל־X = ?\n- `backward(30)` זוזה אחורה, אז X = ?\n\nFinal X position: _______________\n\n> רמז: `backward()` זזה בכיוון ההפוך מהכיוון שהצב פונה אליו, אבל הצב ממשיכה לפנות לאותו הכיוון.\n\n{{CONTEXT_PREDICTION_GUIDANCE_2}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CHALLENGE_3_TITLE}}\n{{CONTEXT_CHALLENGE_3_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# Charting a path to {{place}}\nt = turtle.Turtle()\nt.right(90)\nt.forward(60)\nprint(f\"Final Y position: {t.ycor()}\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "הצב מתחילה ופונה ימינה (מזרח).\n`right(90)` מסובבת אותה 90 מעלות בכיוון השעון — לאן היא פונה עכשיו?\nאחר כך `forward(60)` מזיזה אותה 60 יחידות בכיוון הזה.\n\nFinal Y position: _______________\n\n> רמז: פנייה ימינה ממזרח מכוונת אותך דרומה. בגרפיקת הצב, דרום אומר ש־Y קטן (כיוון Y שלילי).\n\n{{CONTEXT_PREDICTION_GUIDANCE_3}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CHALLENGE_4_TITLE}}\n{{CONTEXT_CHALLENGE_4_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# A journey around {{school}}\nt = turtle.Turtle()\nt.forward(50)\nt.left(90)\nt.forward(50)\nprint(f\"Position: ({t.xcor()}, {t.ycor()})\")"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "מתחילים ב־(0, 0), פונים ימינה (מזרח):\n- `forward(50)` מגיעה למיקום (?, ?)\n- `left(90)` מסובבת 90 מעלות נגד כיוון השעון — עכשיו פונים לאן?\n- `forward(50)` מגיעה למיקום (?, ?)\n\nPosition: (_____, _____)\n\n> רמז: פנייה שמאלה ממזרח מכוונת אותך צפונה. צפון אומר ש־Y גדל (כיוון Y חיובי).\n\n{{CONTEXT_PREDICTION_GUIDANCE_4}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"=== {{CHALLENGE_1_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_a_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_a_prediction()\n\nprint(\"\\n=== {{CHALLENGE_2_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_b_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_b_prediction()\n\nprint(\"\\n=== {{CHALLENGE_3_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_c_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_c_prediction()\n\nprint(\"\\n=== {{CHALLENGE_4_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_d_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_d_prediction()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# {{hero}} commands the {{creature}} to move forward\nt = turtle.Turtle()\nt.forward(100)\nt.forward(50)\nprint(f\"Final X position: {t.xcor()}\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Navigating through {{location}}\nt = turtle.Turtle()\nt.forward(80)\nt.backward(30)\nprint(f\"Final X position: {t.xcor()}\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Charting a path to {{place}}\nt = turtle.Turtle()\nt.right(90)\nt.forward(60)\nprint(f\"Final Y position: {t.ycor()}\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# A journey around {{school}}\nt = turtle.Turtle()\nt.forward(50)\nt.left(90)\nt.forward(50)\nprint(f\"Position: ({t.xcor()}, {t.ycor()})\")\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"=== {{CHALLENGE_1_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_a_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_a_prediction()\n\nprint(\"\\n=== {{CHALLENGE_2_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_b_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_b_prediction()\n\nprint(\"\\n=== {{CHALLENGE_3_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_c_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_c_prediction()\n\nprint(\"\\n=== {{CHALLENGE_4_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_d_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_d_prediction()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -334,7 +1306,114 @@
         "program_flow",
         "tracing"
       ],
-      "starter_code": "# =============================================================================\n# Output Prediction: Range Output\n# =============================================================================\n# Difficulty: 3\n# Concepts: range() with 1, 2, and 3 arguments\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PREDICTION_INTRO}}\n{{CONTEXT_PREDICTION_PURPOSE}}\n\"\"\"\n\n\n# --- {{CHALLENGE_1_TITLE}} ---\n# {{CONTEXT_CHALLENGE_1_NARRATIVE}}\n\n\ndef challenge_a_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    # {{hero}} uses range to count steps at {{school}}\n    for i in range(4):\n        print(i)\n\n\ndef challenge_a_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # range(4) generates numbers starting from 0.\n    # How many numbers? What are they?\n    #\n    # Line 1: ___\n    # Line 2: ___\n    # Line 3: ___\n    # Line 4: ___\n    #\n    # Hint: range(n) gives you n numbers: 0, 1, 2, ..., n-1\n    # It STOPS before reaching n.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_1}}\n    pass\n\n\n# --- {{CHALLENGE_2_TITLE}} ---\n# {{CONTEXT_CHALLENGE_2_NARRATIVE}}\n\n\ndef challenge_b_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    # Counting {{creature}} sightings at {{location}}\n    for num in range(2, 6):\n        print(num)\n\n\ndef challenge_b_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # range(2, 6) has TWO arguments: start and stop.\n    # What number does it start at? What number does it stop before?\n    #\n    # Line 1: ___\n    # Line 2: ___\n    # Line 3: ___\n    # Line 4: ___\n    #\n    # Hint: range(start, stop) gives numbers from start up to (but not including) stop.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_2}}\n    pass\n\n\n# --- {{CHALLENGE_3_TITLE}} ---\n# {{CONTEXT_CHALLENGE_3_NARRATIVE}}\n\n\ndef challenge_c_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    # Levels at {{school}} that {{hero}} can access\n    for level in range(1, 10, 2):\n        print(level)\n\n\ndef challenge_c_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # range(1, 10, 2) has THREE arguments: start, stop, step.\n    # It starts at 1, stops before 10, and steps by 2.\n    #\n    # Line 1: ___\n    # Line 2: ___\n    # Line 3: ___\n    # Line 4: ___\n    # Line 5: ___\n    #\n    # Hint: Step of 2 means skip every other number.\n    # 1, 3, 5, 7, 9... until you reach 10.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_3}}\n    pass\n\n\n# --- {{CHALLENGE_4_TITLE}} ---\n# {{CONTEXT_CHALLENGE_4_NARRATIVE}}\n\n\ndef challenge_d_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    # Countdown for {{hero}}'s {{spell1}}\n    for count in range(5, 0, -1):\n        print(count)\n\n\ndef challenge_d_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # range(5, 0, -1) counts BACKWARDS!\n    # Start at 5, stop before 0, step by -1.\n    #\n    # Line 1: ___\n    # Line 2: ___\n    # Line 3: ___\n    # Line 4: ___\n    # Line 5: ___\n    #\n    # Hint: A negative step goes backwards: 5, 4, 3, 2, 1\n    # It stops BEFORE reaching 0.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_4}}\n    pass\n\n\n# --- {{CHALLENGE_5_TITLE}} ---\n# {{CONTEXT_CHALLENGE_5_NARRATIVE}}\n\n\ndef challenge_e_code():\n    \"\"\"DO NOT MODIFY - Just read and predict\"\"\"\n    # Power levels for {{creature}} at {{place}}\n    for power in range(10, 31, 10):\n        print(power)\n\n\ndef challenge_e_prediction():\n    # ✏️ YOUR PREDICTION HERE ✏️\n    # range(10, 31, 10) starts at 10, stops before 31, steps by 10.\n    #\n    # Line 1: ___\n    # Line 2: ___\n    # Line 3: ___\n    #\n    # Hint: 10, 20, 30... but stop before 31, so we get all three.\n    #\n    # {{CONTEXT_PREDICTION_GUIDANCE_5}}\n    pass\n\n\ndef main():\n    print(\"=== {{CHALLENGE_1_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_a_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_a_prediction()\n\n    print(\"\\n=== {{CHALLENGE_2_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_b_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_b_prediction()\n\n    print(\"\\n=== {{CHALLENGE_3_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_c_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_c_prediction()\n\n    print(\"\\n=== {{CHALLENGE_4_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_d_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_d_prediction()\n\n    print(\"\\n=== {{CHALLENGE_5_TITLE}} ===\")\n    print(\"-- Actual Output --\")\n    challenge_e_code()\n    print(\"\\n-- Your Prediction --\")\n    challenge_e_prediction()\n\n    print(\"\\n\" + \"=\" * 50)\n    print(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PREDICTION_INTRO}}\n{{CONTEXT_PREDICTION_PURPOSE}}\n\n## {{CHALLENGE_1_TITLE}}\n{{CONTEXT_CHALLENGE_1_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# {{hero}} uses range to count steps at {{school}}\nfor i in range(4):\n    print(i)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "`range(4)` מייצרת מספרים שמתחילים מ-0.\nכמה מספרים? מה הם?\n\nשורה 1: ___\nשורה 2: ___\nשורה 3: ___\nשורה 4: ___\n\n> רמז: `range(n)` נותנת לך n מספרים: 0, 1, 2, ..., n-1\n> היא עוצרת לפני שמגיעים ל-n.\n\n{{CONTEXT_PREDICTION_GUIDANCE_1}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CHALLENGE_2_TITLE}}\n{{CONTEXT_CHALLENGE_2_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# Counting {{creature}} sightings at {{location}}\nfor num in range(2, 6):\n    print(num)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "ל-`range(2, 6)` יש שני ארגומנטים: התחלה ועצירה.\nבאיזה מספר היא מתחילה? לפני איזה מספר היא עוצרת?\n\nשורה 1: ___\nשורה 2: ___\nשורה 3: ___\nשורה 4: ___\n\n> רמז: `range(start, stop)` נותנת מספרים החל מ-start ועד (לא כולל) stop.\n\n{{CONTEXT_PREDICTION_GUIDANCE_2}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CHALLENGE_3_TITLE}}\n{{CONTEXT_CHALLENGE_3_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# Levels at {{school}} that {{hero}} can access\nfor level in range(1, 10, 2):\n    print(level)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "ל-`range(1, 10, 2)` יש שלושה ארגומנטים: התחלה, עצירה, וצעד.\nהיא מתחילה ב-1, עוצרת לפני 10, ומתקדמת בצעדים של 2.\n\nשורה 1: ___\nשורה 2: ___\nשורה 3: ___\nשורה 4: ___\nשורה 5: ___\n\n> רמז: צעד של 2 אומר לדלג על כל מספר שני.\n> 1, 3, 5, 7, 9... עד שמגיעים ל-10.\n\n{{CONTEXT_PREDICTION_GUIDANCE_3}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CHALLENGE_4_TITLE}}\n{{CONTEXT_CHALLENGE_4_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# Countdown for {{hero}}'s {{spell1}}\nfor count in range(5, 0, -1):\n    print(count)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "`range(5, 0, -1)` סופרת אחורה!\nמתחילה ב-5, עוצרת לפני 0, מתקדמת בצעד של 1-.\n\nשורה 1: ___\nשורה 2: ___\nשורה 3: ___\nשורה 4: ___\nשורה 5: ___\n\n> רמז: צעד שלילי הולך אחורה: 5, 4, 3, 2, 1\n> היא עוצרת לפני שמגיעים ל-0.\n\n{{CONTEXT_PREDICTION_GUIDANCE_4}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{CHALLENGE_5_TITLE}}\n{{CONTEXT_CHALLENGE_5_NARRATIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": true,
+          "source": "# Power levels for {{creature}} at {{place}}\nfor power in range(10, 31, 10):\n    print(power)"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "`range(10, 31, 10)` מתחילה ב-10, עוצרת לפני 31, מתקדמת בצעדים של 10.\n\nשורה 1: ___\nשורה 2: ___\nשורה 3: ___\n\n> רמז: 10, 20, 30... אבל עוצרים לפני 31, ולכן מקבלים את שלושתם.\n\n{{CONTEXT_PREDICTION_GUIDANCE_5}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"=== {{CHALLENGE_1_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_a_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_a_prediction()\n\nprint(\"\\n=== {{CHALLENGE_2_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_b_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_b_prediction()\n\nprint(\"\\n=== {{CHALLENGE_3_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_c_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_c_prediction()\n\nprint(\"\\n=== {{CHALLENGE_4_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_d_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_d_prediction()\n\nprint(\"\\n=== {{CHALLENGE_5_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_e_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_e_prediction()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")"
+        }
+      ],
+      "starter_code": "# {{hero}} uses range to count steps at {{school}}\nfor i in range(4):\n    print(i)\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Counting {{creature}} sightings at {{location}}\nfor num in range(2, 6):\n    print(num)\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Levels at {{school}} that {{hero}} can access\nfor level in range(1, 10, 2):\n    print(level)\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Countdown for {{hero}}'s {{spell1}}\nfor count in range(5, 0, -1):\n    print(count)\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# Power levels for {{creature}} at {{place}}\nfor power in range(10, 31, 10):\n    print(power)\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"=== {{CHALLENGE_1_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_a_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_a_prediction()\n\nprint(\"\\n=== {{CHALLENGE_2_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_b_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_b_prediction()\n\nprint(\"\\n=== {{CHALLENGE_3_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_c_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_c_prediction()\n\nprint(\"\\n=== {{CHALLENGE_4_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_d_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_d_prediction()\n\nprint(\"\\n=== {{CHALLENGE_5_TITLE}} ===\")\nprint(\"-- Actual Output --\")\nchallenge_e_code()\nprint(\"\\n-- Your Prediction --\")\nchallenge_e_prediction()\n\nprint(\"\\n\" + \"=\" * 50)\nprint(\"{{CONTEXT_VERIFICATION_COMPLETE}}\")",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -361,7 +1440,64 @@
         "problem_solving",
         "syntax"
       ],
-      "starter_code": "# =============================================================================\n# Write Code: Turtle Basics\n# =============================================================================\n# Difficulty: 1\n# Concepts: turtle movement, forward(), backward(), right(), left(), penup(), pendown()\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport turtle\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a straight line 100 units long for {{hero}}.\n    #\n    # Step 1: Create a turtle with t = turtle.Turtle()\n    # Step 2: Use t.forward(100) to draw the line\n    #\n    # Expected: A horizontal line from the center going right.\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Help {{hero}} draw an L-shape on the map of {{school}}.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Move forward 80 units\n    # Step 3: Turn left 90 degrees (use t.left(90))\n    # Step 4: Move forward 60 units\n    #\n    # Expected: An L-shape (horizontal line, then vertical line going up).\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a staircase pattern with 3 steps for {{creature}}.\n    # Each step is: forward 30, turn right 90, forward 30, turn left 90\n    #\n    # Step 1: Create a turtle\n    # Step 2: For each of the 3 steps:\n    #         - forward(30), right(90), forward(30), left(90)\n    #\n    # Hint: You can write out all 12 commands for now.\n    # Later you'll learn to use loops to repeat patterns!\n    #\n    # Expected: A staircase going right and down.\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Use penup() and pendown() to draw two separate lines\n    # representing paths in {{location}}.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Draw a line forward 50 units\n    # Step 3: Lift the pen with t.penup()\n    # Step 4: Move forward 30 units (no line drawn)\n    # Step 5: Put the pen down with t.pendown()\n    # Step 6: Draw another line forward 50 units\n    #\n    # Expected: Two horizontal lines with a gap between them.\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_1_TITLE}}\n{{CONTEXT_PHASE_1}}\n\nצייגי קו ישר באורך 100 יחידות עבור {{hero}}.\n\n1. צרי צב עם `t = turtle.Turtle()`\n2. השתמשי ב-`t.forward(100)` כדי לצייר את הקו\n\nפלט צפוי: קו אופקי ממרכז המסך ימינה."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_2_TITLE}}\n{{CONTEXT_PHASE_2}}\n\nעזרי ל-{{hero}} לצייר צורת L על מפת {{school}}.\n\n1. צרי צב\n2. התקדמי קדימה 80 יחידות\n3. פני שמאלה 90 מעלות (השתמשי ב-`t.left(90)`)\n4. התקדמי קדימה 60 יחידות\n\nפלט צפוי: צורת L (קו אופקי ואחריו קו אנכי כלפי מעלה)."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_3_TITLE}}\n{{CONTEXT_PHASE_3}}\n\nצייגי דוגמת מדרגות עם 3 מדרגות עבור {{creature}}.\nכל מדרגה היא: קדימה 30, ימינה 90, קדימה 30, שמאלה 90\n\n1. צרי צב\n2. עבור כל אחת מ-3 המדרגות:\n   `forward(30)`, `right(90)`, `forward(30)`, `left(90)`\n\n> רמז: כרגע כתבי את כל 12 הפקודות בנפרד. בהמשך תלמדי להשתמש בלולאות כדי לחזור על דפוסים!\n\nפלט צפוי: מדרגות הממשיכות ימינה ומטה."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_4_TITLE}}\n{{CONTEXT_PHASE_4}}\n\nהשתמשי ב-`penup()` וב-`pendown()` כדי לצייר שני קווים נפרדים\nהמייצגים שבילים ב-{{location}}.\n\n1. צרי צב\n2. צייגי קו קדימה 50 יחידות\n3. הרימי את העט עם `t.penup()`\n4. התקדמי קדימה 30 יחידות (ללא ציור)\n5. הורידי את העט עם `t.pendown()`\n6. צייגי קו נוסף קדימה 50 יחידות\n\nפלט צפוי: שני קווים אופקיים עם רווח ביניהם."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -388,7 +1524,64 @@
         "problem_solving",
         "syntax"
       ],
-      "starter_code": "# =============================================================================\n# Write Code: First Loop\n# =============================================================================\n# Difficulty: 2\n# Concepts: for loop, range(n), repeating turtle commands\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport turtle\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Use a loop to print \"Hello, {{school}}!\" three times.\n    #\n    # Step 1: Write: for i in range(3):\n    # Step 2: On the next line, INDENTED, write: print(\"Hello, {{school}}!\")\n    #\n    # Expected output:\n    # Hello, {{school}}!\n    # Hello, {{school}}!\n    # Hello, {{school}}!\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a square for {{hero}} using a loop.\n    # A square has 4 sides, each with a 90-degree turn.\n    #\n    # Step 1: Create a turtle with t = turtle.Turtle()\n    # Step 2: Write a for loop that repeats 4 times\n    # Step 3: Inside the loop (indented):\n    #         - t.forward(100)\n    #         - t.right(90)\n    #\n    # Hint: Each side is: move forward, then turn right.\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a triangle for {{creature}} using a loop.\n    # A triangle has 3 sides with 120-degree turns.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Write a for loop that repeats 3 times\n    # Step 3: Inside the loop:\n    #         - Move forward 80 units\n    #         - Turn left 120 degrees\n    #\n    # Hint: The exterior angle of a triangle is 120 degrees.\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a dashed line at {{location}} by repeating:\n    # draw, lift pen, move, put pen down.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Use a for loop that repeats 5 times\n    # Step 3: Inside the loop:\n    #         - t.forward(20)      # Draw a dash\n    #         - t.penup()          # Lift the pen\n    #         - t.forward(10)      # Move without drawing\n    #         - t.pendown()        # Put pen back down\n    #\n    # Expected: A dashed line with 5 dashes and 4 gaps.\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_1_TITLE}}\n{{CONTEXT_PHASE_1}}\n\nהשתמשי בלולאה כדי להדפיסי \"Hello, {{school}}!\" שלוש פעמים.\n\n1. כתבי: `for i in range(3):`\n2. בשורה הבאה, עם הזחה (indentation), כתבי: `print(\"Hello, {{school}}!\")`\n\nפלט צפוי:\nHello, {{school}}!\nHello, {{school}}!\nHello, {{school}}!"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_2_TITLE}}\n{{CONTEXT_PHASE_2}}\n\nצייר ריבוע עבור {{hero}} בעזרת לולאה.\nלריבוע יש 4 צלעות, עם פנייה של 90 מעלות בכל פינה.\n\n1. צרי צב בעזרת `t = turtle.Turtle()`\n2. כתבי לולאה שחוזרת 4 פעמים\n3. בתוך הלולאה (עם הזחה):\n   - `t.forward(100)`\n   - `t.right(90)`\n\n> רמז: כל צלע היא: התקדמי קדימה, אחר כך פני ימינה."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_3_TITLE}}\n{{CONTEXT_PHASE_3}}\n\nצייר משולש עבור {{creature}} בעזרת לולאה.\nלמשולש יש 3 צלעות עם פניות של 120 מעלות.\n\n1. צרי צב\n2. כתבי לולאה שחוזרת 3 פעמים\n3. בתוך הלולאה:\n   - התקדמי 80 יחידות קדימה\n   - פני שמאלה 120 מעלות\n\n> רמז: הזווית החיצונית של משולש שווה צלעות היא 120 מעלות."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_4_TITLE}}\n{{CONTEXT_PHASE_4}}\n\nצרי קו מקווקו ב-{{location}} על ידי חזרה על הפעולות:\nשרטטי, הרימי את העט, התקדמי, הורידי את העט.\n\n1. צרי צב\n2. השתמשי בלולאה שחוזרת 5 פעמים\n3. בתוך הלולאה:\n   - `t.forward(20)`      # שרטטי קו קצר\n   - `t.penup()`          # הרימי את העט\n   - `t.forward(10)`      # התקדמי בלי לצייר\n   - `t.pendown()`        # הורידי את העט\n\nפלט צפוי: קו מקווקו עם 5 קווים ו-4 רווחים."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -415,7 +1608,74 @@
         "problem_solving",
         "syntax"
       ],
-      "starter_code": "# =============================================================================\n# Write Code: Range Variations\n# =============================================================================\n# Difficulty: 3\n# Concepts: range(start, stop), range(start, stop, step), counting patterns\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport turtle\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Print numbers 5 through 9 for {{hero}}'s countdown.\n    #\n    # Step 1: Use a for loop with range(5, 10)\n    # Step 2: Print each number inside the loop\n    #\n    # Expected output:\n    # 5\n    # 6\n    # 7\n    # 8\n    # 9\n    #\n    # Hint: range(5, 10) gives 5, 6, 7, 8, 9 - it stops BEFORE 10.\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Print even numbers from 2 to 10 for {{creature}}'s training.\n    #\n    # Step 1: Use a for loop with range(2, 11, 2)\n    # Step 2: Print each number\n    #\n    # Expected output:\n    # 2\n    # 4\n    # 6\n    # 8\n    # 10\n    #\n    # Hint: The step of 2 skips every other number.\n    # We use 11 as stop because we WANT to include 10.\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a countdown from 10 to 1 for {{hero}}'s challenge.\n    #\n    # Step 1: Use a for loop with range(10, 0, -1)\n    # Step 2: Print each number\n    #\n    # Expected output:\n    # 10\n    # 9\n    # 8\n    # 7\n    # 6\n    # 5\n    # 4\n    # 3\n    # 2\n    # 1\n    #\n    # Hint: A negative step (-1) counts backwards.\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a series of lines with increasing lengths at {{location}}.\n    # Each line should be 20, 40, 60, 80, and 100 units long.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Use a for loop with range(20, 101, 20)\n    # Step 3: Inside the loop:\n    #         - t.forward(length) where length is the loop variable\n    #         - t.penup()\n    #         - t.backward(length)  # Return to start\n    #         - t.right(90)\n    #         - t.forward(15)       # Move down\n    #         - t.left(90)\n    #         - t.pendown()\n    #\n    # Expected: 5 horizontal lines of increasing length, stacked vertically.\n    pass\n\n\n# ============================================================\n# {{PHASE_5_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_5}}\n\n\ndef exercise_e():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a star pattern at {{school}} by drawing lines at every 144 degrees.\n    # A 5-pointed star requires turning 144 degrees after each line.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Use a for loop with range(5) to draw 5 lines\n    # Step 3: Inside the loop:\n    #         - t.forward(100)\n    #         - t.right(144)\n    #\n    # Expected: A 5-pointed star shape.\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"\\n=== {{PHASE_5_TITLE}} ===\")\n    exercise_e()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_1_TITLE}}\n{{CONTEXT_PHASE_1}}\n\nהדפיסי את המספרים 5 עד 9 עבור ספירת לאחור של {{hero}}.\n\n1. השתמשי בלולאת `for` עם `range(5, 10)`\n2. הדפיסי כל מספר בתוך הלולאה\n\nפלט צפוי:\n5\n6\n7\n8\n9\n\n> רמז: `range(5, 10)` נותנת 5, 6, 7, 8, 9 - היא עוצרת לפני 10."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_2_TITLE}}\n{{CONTEXT_PHASE_2}}\n\nהדפיסי מספרים זוגיים מ-2 עד 10 עבור אימון {{creature}}.\n\n1. השתמשי בלולאת `for` עם `range(2, 11, 2)`\n2. הדפיסי כל מספר\n\nפלט צפוי:\n2\n4\n6\n8\n10\n\n> רמז: הצעד 2 מדלג על כל מספר שני.\n> משתמשים ב-11 כערך הסיום כי אנחנו רוצות לכלול את 10."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_3_TITLE}}\n{{CONTEXT_PHASE_3}}\n\nצרי ספירה לאחור מ-10 עד 1 עבור האתגר של {{hero}}.\n\n1. השתמשי בלולאת `for` עם `range(10, 0, -1)`\n2. הדפיסי כל מספר\n\nפלט צפוי:\n10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n\n> רמז: צעד שלילי (-1) סופר לאחור."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_4_TITLE}}\n{{CONTEXT_PHASE_4}}\n\nציירי סדרה של קווים עם אורכים גדלים ב-{{location}}.\nכל קו צריך להיות באורך 20, 40, 60, 80 ו-100 יחידות.\n\n1. צרי צב\n2. השתמשי בלולאת `for` עם `range(20, 101, 20)`\n3. בתוך הלולאה:\n        - `t.forward(length)` כאשר `length` הוא משתנה הלולאה\n        - `t.penup()`\n        - `t.backward(length)`  # חזרה להתחלה\n        - `t.right(90)`\n        - `t.forward(15)`       # ירידה למטה\n        - `t.left(90)`\n        - `t.pendown()`\n\nצפוי: 5 קווים אופקיים באורכים גדלים, מסודרים אנכית."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_5_TITLE}}\n{{CONTEXT_PHASE_5}}\n\nציירי כוכב ב-{{school}} על ידי ציור קווים בכל 144 מעלות.\nכוכב עם 5 קצוות דורש פנייה של 144 מעלות אחרי כל קו.\n\n1. צרי צב\n2. השתמשי בלולאת `for` עם `range(5)` לציור 5 קווים\n3. בתוך הלולאה:\n        - `t.forward(100)`\n        - `t.right(144)`\n\nצפוי: צורת כוכב עם 5 קצוות."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"\\n=== {{PHASE_5_TITLE}} ===\")\nexercise_e()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"\\n=== {{PHASE_5_TITLE}} ===\")\nexercise_e()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -442,7 +1702,74 @@
         "problem_solving",
         "syntax"
       ],
-      "starter_code": "# =============================================================================\n# Write Code: Polygons\n# =============================================================================\n# Difficulty: 3-4\n# Concepts: regular polygons, exterior angles, loop patterns for shapes\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport turtle\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a regular pentagon (5 sides) for {{hero}}.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Use a for loop with range(5)\n    # Step 3: Inside the loop:\n    #         - t.forward(70)\n    #         - t.right(72)  # 360/5 = 72 degrees\n    #\n    # Key formula: exterior angle = 360 / number_of_sides\n    # Pentagon: 360 / 5 = 72 degrees\n    #\n    # Expected: A regular 5-sided shape.\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a regular hexagon (6 sides) at {{school}}.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Position it at (100, 0) using penup/goto/pendown\n    # Step 3: Use a for loop with range(6)\n    # Step 4: Inside the loop:\n    #         - forward(60)\n    #         - right(60)  # 360/6 = 60 degrees\n    #\n    # Expected: A regular 6-sided shape.\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a regular octagon (8 sides) for {{creature}}.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Position it at (-100, 0)\n    # Step 3: Use a for loop with range(8)\n    # Step 4: Inside the loop:\n    #         - forward(50)\n    #         - right(45)  # 360/8 = 45 degrees\n    #\n    # Expected: A regular 8-sided shape.\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a regular decagon (10 sides) at {{location}}.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Position it at (0, -150)\n    # Step 3: Use a for loop with range(10)\n    # Step 4: Inside the loop:\n    #         - forward(40)\n    #         - right(36)  # 360/10 = 36 degrees\n    #\n    # Expected: A regular 10-sided shape (almost a circle!).\n    pass\n\n\n# ============================================================\n# {{PHASE_5_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_5}}\n\n\ndef exercise_e():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw multiple polygons in a row at {{place}}.\n    # Draw: triangle, square, pentagon, hexagon from left to right.\n    #\n    # Step 1: Create a turtle and set t.speed(0)\n    # Step 2: Start at position (-250, 100)\n    # Step 3: For each shape:\n    #         - Draw the polygon using a loop\n    #         - Move right to the next position (penup, forward 150, pendown)\n    #\n    # Shapes to draw:\n    #   Triangle: 3 sides, 120 degree turns, 50 forward\n    #   Square: 4 sides, 90 degree turns, 40 forward\n    #   Pentagon: 5 sides, 72 degree turns, 35 forward\n    #   Hexagon: 6 sides, 60 degree turns, 30 forward\n    #\n    # Hint: After drawing each shape, move right before starting the next.\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"\\n=== {{PHASE_5_TITLE}} ===\")\n    exercise_e()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_1_TITLE}}\n{{CONTEXT_PHASE_1}}\n\nציירי מחומש (5 צלעות) עבור {{hero}}.\n\n1. צרי צב חדש\n2. השתמשי בלולאה `for` עם `range(5)`\n3. בתוך הלולאה:\n   - `t.forward(70)`\n   - `t.right(72)`  # 360/5 = 72 מעלות\n\nנוסחת המפתח: זווית חיצונית = 360 / מספר_הצלעות\nמחומש: 360 / 5 = 72 מעלות\n\nפלט צפוי: צורה קבועה עם 5 צלעות."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_2_TITLE}}\n{{CONTEXT_PHASE_2}}\n\nציירי משושה (6 צלעות) ב{{school}}.\n\n1. צרי צב חדש\n2. מקמי אותו ב-(100, 0) בעזרת `penup` / `goto` / `pendown`\n3. השתמשי בלולאה `for` עם `range(6)`\n4. בתוך הלולאה:\n   - `forward(60)`\n   - `right(60)`  # 360/6 = 60 מעלות\n\nפלט צפוי: צורה קבועה עם 6 צלעות."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_3_TITLE}}\n{{CONTEXT_PHASE_3}}\n\nציירי משמונה (8 צלעות) עבור {{creature}}.\n\n1. צרי צב חדש\n2. מקמי אותו ב-(-100, 0)\n3. השתמשי בלולאה `for` עם `range(8)`\n4. בתוך הלולאה:\n   - `forward(50)`\n   - `right(45)`  # 360/8 = 45 מעלות\n\nפלט צפוי: צורה קבועה עם 8 צלעות."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_4_TITLE}}\n{{CONTEXT_PHASE_4}}\n\nציירי עשרון (10 צלעות) ב{{location}}.\n\n1. צרי צב חדש\n2. מקמי אותו ב-(0, -150)\n3. השתמשי בלולאה `for` עם `range(10)`\n4. בתוך הלולאה:\n   - `forward(40)`\n   - `right(36)`  # 360/10 = 36 מעלות\n\nפלט צפוי: צורה קבועה עם 10 צלעות (כמעט עיגול!)."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_5_TITLE}}\n{{CONTEXT_PHASE_5}}\n\nציירי מספר מצולעים בשורה ב{{place}}.\nציירי בסדר: משולש, ריבוע, מחומש, משושה — משמאל לימין.\n\n1. צרי צב חדש והגדירי `t.speed(0)`\n2. התחילי מהמיקום (-250, 100)\n3. עבור כל צורה:\n   - ציירי את המצולע בעזרת לולאה\n   - הזזי ימינה למיקום הבא (`penup`, `forward 150`, `pendown`)\n\nהצורות לציור:\n  משולש: 3 צלעות, פניות של 120 מעלות, `forward` 50\n  ריבוע: 4 צלעות, פניות של 90 מעלות, `forward` 40\n  מחומש: 5 צלעות, פניות של 72 מעלות, `forward` 35\n  משושה: 6 צלעות, פניות של 60 מעלות, `forward` 30\n\n> רמז: אחרי שציירת כל צורה, הזזי ימינה לפני שמתחילים את הבאה."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"\\n=== {{PHASE_5_TITLE}} ===\")\nexercise_e()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"\\n=== {{PHASE_5_TITLE}} ===\")\nexercise_e()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -469,7 +1796,74 @@
         "problem_solving",
         "syntax"
       ],
-      "starter_code": "# =============================================================================\n# Write Code: Pattern Angles\n# =============================================================================\n# Difficulty: 4\n# Concepts: calculated angles, star patterns, geometric patterns\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport turtle\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a 5-pointed star for {{hero}}.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Use a for loop with range(5)\n    # Step 3: Inside the loop:\n    #         - t.forward(100)\n    #         - t.right(144)  # Star angle: 144 degrees\n    #\n    # Why 144? A 5-pointed star skips vertices, creating a 144-degree turn.\n    # Formula: 180 - (180 / 5) = 180 - 36 = 144\n    # Or think of it as: 2 * (360/5) = 2 * 72 = 144\n    #\n    # Expected: A classic 5-pointed star shape.\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a 6-pointed star (Star of David pattern) at {{school}}.\n    # This is made of two overlapping triangles!\n    #\n    # Step 1: Create a turtle and position at (150, 0)\n    # Step 2: Draw first triangle (3 sides, 120 degree right turns)\n    # Step 3: Turn right 60 degrees to prepare for second triangle\n    # Step 4: Draw second triangle (3 sides, 120 degree right turns)\n    #\n    # Hint: Each triangle is a regular triangle.\n    # The second triangle is rotated 60 degrees from the first.\n    #\n    # Expected: Two overlapping triangles forming a 6-pointed star.\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a spiral square pattern for {{creature}}.\n    # Each side gets longer as you go around!\n    #\n    # Step 1: Create a turtle and position at (-100, 100)\n    # Step 2: Use a for loop with range(1, 21) for 20 lines\n    # Step 3: Inside the loop:\n    #         - t.forward(i * 5)  where i is the loop variable\n    #         - t.right(90)\n    #\n    # Expected: A spiral that grows outward in a square pattern.\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a circular pattern of triangles at {{location}}.\n    # Draw 12 small triangles arranged in a circle.\n    #\n    # Step 1: Create a turtle and position at (0, -100)\n    # Step 2: Use an outer loop with range(12) for 12 triangles\n    # Step 3: Inside the outer loop:\n    #         a) Use an inner... wait, NO NESTED LOOPS YET!\n    #         b) Instead: draw 3 forward/right(120) commands for triangle\n    #         c) Then turn right 30 degrees to position for next triangle\n    #\n    # Actually, let's simplify - draw 12 lines radiating from center:\n    # Step 3: Inside the loop:\n    #         - t.forward(60)\n    #         - t.backward(60)\n    #         - t.right(30)  # 360/12 = 30 degrees\n    #\n    # Expected: 12 lines radiating outward like spokes of a wheel.\n    pass\n\n\n# ============================================================\n# {{PHASE_5_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_5}}\n\n\ndef exercise_e():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Create a \"flower\" pattern at {{place}} for {{hero}}.\n    # Draw 36 small lines in a circular pattern, each rotated 10 degrees.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Use a for loop with range(36)\n    # Step 3: Inside the loop:\n    #         - t.forward(80)\n    #         - t.backward(80)\n    #         - t.right(10)  # 360/36 = 10 degrees\n    #\n    # Optional challenge: Make every other line a different length!\n    # (Check if i is even or odd... but we can't use if yet!)\n    #\n    # Expected: A circular sunburst pattern with 36 rays.\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"\\n=== {{PHASE_5_TITLE}} ===\")\n    exercise_e()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_1_TITLE}}\n{{CONTEXT_PHASE_1}}\n\nצייר כוכב בעל 5 קצוות עבור {{hero}}.\n\n1. צרי צב\n2. השתמשי בלולאת `for` עם `range(5)`\n3. בתוך הלולאה:\n        - `t.forward(100)`\n        - `t.right(144)`  # זווית הכוכב: 144 מעלות\n\nלמה 144? כוכב בעל 5 קצוות \"קופץ\" מעל קודקודים, ולכן הפנייה היא 144 מעלות.\nנוסחה: `180 - (180 / 5) = 180 - 36 = 144`\nאו בדרך אחרת: `2 * (360/5) = 2 * 72 = 144`\n\nתוצאה צפויה: צורת כוכב קלאסית בעלת 5 קצוות."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_2_TITLE}}\n{{CONTEXT_PHASE_2}}\n\nצייר כוכב בעל 6 קצוות (דגם מגן דוד) ב-{{school}}.\nהכוכב הזה מורכב משני משולשים חופפים!\n\n1. צרי צב ומקמי אותו ב-`(150, 0)`\n2. צייר את המשולש הראשון (3 צלעות, פנייה ימינה של 120 מעלות)\n3. פני ימינה 60 מעלות להכנה למשולש השני\n4. צייר את המשולש השני (3 צלעות, פנייה ימינה של 120 מעלות)\n\n> רמז: כל משולש הוא משולש שווה-צלעות. המשולש השני מסובב 60 מעלות ביחס לראשון.\n\nתוצאה צפויה: שני משולשים חופפים שיוצרים כוכב בעל 6 קצוות."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_3_TITLE}}\n{{CONTEXT_PHASE_3}}\n\nצייר דפוס ספירלה מרובעת עבור {{creature}}.\nכל צלע נעשית ארוכה יותר ככל שמתקדמים!\n\n1. צרי צב ומקמי אותו ב-`(-100, 100)`\n2. השתמשי בלולאת `for` עם `range(1, 21)` לציור 20 קווים\n3. בתוך הלולאה:\n        - `t.forward(i * 5)` כאשר `i` הוא משתנה הלולאה\n        - `t.right(90)`\n\nתוצאה צפויה: ספירלה שמתרחבת החוצה בדפוס מרובע."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_4_TITLE}}\n{{CONTEXT_PHASE_4}}\n\nצייר דפוס מעגלי של משולשים ב-{{location}}.\nצייר 12 קווים קטנים המסודרים במעגל.\n\n1. צרי צב ומקמי אותו ב-`(0, -100)`\n2. השתמשי בלולאה עם `range(12)` ל-12 משולשים\n3. בתוך הלולאה:\n        א) חשבת על לולאה פנימית... רגע, עדיין אין לנו לולאות מקוננות!\n        ב) במקום זאת: כתבי 3 פקודות `forward`/`right(120)` למשולש\n        ג) לאחר מכן פני ימינה 30 מעלות למיקום המשולש הבא\n\nרגע, בואי נפשט — נצייר 12 קווים שקורנים מהמרכז:\n3. בתוך הלולאה:\n        - `t.forward(60)`\n        - `t.backward(60)`\n        - `t.right(30)`  # 360/12 = 30 מעלות\n\nתוצאה צפויה: 12 קווים שקורנים החוצה כמו חישורים של גלגל."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_5_TITLE}}\n{{CONTEXT_PHASE_5}}\n\nצרי דפוס \"פרח\" ב-{{place}} עבור {{hero}}.\nצייר 36 קווים קטנים בדפוס מעגלי, כל אחד מסובב 10 מעלות.\n\n1. צרי צב\n2. השתמשי בלולאת `for` עם `range(36)`\n3. בתוך הלולאה:\n        - `t.forward(80)`\n        - `t.backward(80)`\n        - `t.right(10)`  # 360/36 = 10 מעלות\n\nאתגר אופציונלי: גרמי לכל קו שני להיות באורך שונה!\n(בדקי אם `i` זוגי או אי-זוגי... אבל עדיין אין לנו `if`!)\n\nתוצאה צפויה: דפוס \"שמש\" מעגלי עם 36 קרניים."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"\\n=== {{PHASE_5_TITLE}} ===\")\nexercise_e()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"\\n=== {{PHASE_5_TITLE}} ===\")\nexercise_e()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [
@@ -496,7 +1890,74 @@
         "problem_solving",
         "syntax"
       ],
-      "starter_code": "# =============================================================================\n# Write Code: Changing Values\n# =============================================================================\n# Difficulty: 4\n# Concepts: loop variables in calculations, accumulators, changing patterns\n# =============================================================================\n\n\"\"\"\n{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}\n\"\"\"\n\nimport turtle\n\n# ============================================================\n# {{PHASE_1_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_1}}\n\n\ndef exercise_a():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Calculate and print the sum of 1 + 2 + 3 + 4 + 5 for {{hero}}.\n    #\n    # Step 1: Create a variable `total` and set it to 0\n    # Step 2: Use a for loop with range(1, 6)\n    # Step 3: Inside the loop: total = total + i (where i is loop variable)\n    # Step 4: After the loop, print \"Sum:\", total\n    #\n    # Expected output: Sum: 15\n    pass\n\n\n# ============================================================\n# {{PHASE_2_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_2}}\n\n\ndef exercise_b():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Print a multiplication table for 3 at {{school}}.\n    #\n    # Step 1: Use a for loop with range(1, 6)\n    # Step 2: Inside the loop:\n    #         - result = 3 * i (where i is the loop variable)\n    #         - print(f\"3 x {i} = {result}\")\n    #\n    # Expected output:\n    # 3 x 1 = 3\n    # 3 x 2 = 6\n    # 3 x 3 = 9\n    # 3 x 4 = 12\n    # 3 x 5 = 15\n    pass\n\n\n# ============================================================\n# {{PHASE_3_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_3}}\n\n\ndef exercise_c():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a growing staircase for {{creature}}.\n    # Each step is taller than the previous.\n    #\n    # Step 1: Create a turtle and position at (-200, 100)\n    # Step 2: Use a for loop with range(1, 8)\n    # Step 3: Inside the loop:\n    #         - height = i * 15  (step height grows)\n    #         - t.forward(30)    (horizontal part)\n    #         - t.right(90)\n    #         - t.forward(height)  (vertical part - varies!)\n    #         - t.left(90)\n    #\n    # Expected: A staircase where each step is taller.\n    pass\n\n\n# ============================================================\n# {{PHASE_4_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_4}}\n\n\ndef exercise_d():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Draw a spiral at {{location}} where line length increases.\n    #\n    # Step 1: Create a turtle\n    # Step 2: Use a for loop with range(1, 25)\n    # Step 3: Inside the loop:\n    #         - length = i * 5  (length grows each iteration)\n    #         - t.forward(length)\n    #         - t.right(90)\n    #\n    # Expected: A square spiral that grows outward.\n    pass\n\n\n# ============================================================\n# {{PHASE_5_TITLE}}\n# ============================================================\n# {{CONTEXT_PHASE_5}}\n\n\ndef exercise_e():\n    # ✏️ YOUR CODE HERE ✏️\n    #\n    # Track and print total distance traveled at {{place}}.\n    #\n    # Step 1: Create a turtle and position at (100, 0)\n    # Step 2: Create total_distance = 0\n    # Step 3: Use a for loop with range(1, 6)\n    # Step 4: Inside the loop:\n    #         - distance = i * 20\n    #         - t.forward(distance)\n    #         - total_distance = total_distance + distance\n    #         - t.right(144)  (star pattern)\n    #         - print(f\"Moved {distance}, total: {total_distance}\")\n    #\n    # Expected: A star shape with increasing line lengths,\n    # and a printed report of distances.\n    pass\n\n\ndef main():\n    print(\"{{CONTEXT_PROJECT_INTRO}}\")\n    print(\"=\" * 50)\n\n    print(\"\\n=== {{PHASE_1_TITLE}} ===\")\n    exercise_a()\n\n    print(\"\\n=== {{PHASE_2_TITLE}} ===\")\n    exercise_b()\n\n    print(\"\\n=== {{PHASE_3_TITLE}} ===\")\n    exercise_c()\n\n    print(\"\\n=== {{PHASE_4_TITLE}} ===\")\n    exercise_d()\n\n    print(\"\\n=== {{PHASE_5_TITLE}} ===\")\n    exercise_e()\n\n    print(\"=\" * 50)\n    print(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\n    turtle.done()\n\n\nmain()\n",
+      "cells": [
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "{{CONTEXT_PROJECT_INTRO}}\n{{CONTEXT_LEARNING_OBJECTIVE}}"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "import turtle"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_1_TITLE}}\n{{CONTEXT_PHASE_1}}\n\nחשבי והדפיסי את הסכום של 1 + 2 + 3 + 4 + 5 עבור {{hero}}.\n\n1. צרי משתנה בשם `total` והגדירי אותו ל-0\n2. השתמשי בלולאת `for` עם `range(1, 6)`\n3. בתוך הלולאה: `total = total + i` (כאשר `i` הוא משתנה הלולאה)\n4. אחרי הלולאה, הדפיסי `\"Sum:\", total`\n\nפלט צפוי: `Sum: 15`"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_2_TITLE}}\n{{CONTEXT_PHASE_2}}\n\nהדפיסי לוח כפל של 3 ב-{{school}}.\n\n1. השתמשי בלולאת `for` עם `range(1, 6)`\n2. בתוך הלולאה:\n   - `result = 3 * i` (כאשר `i` הוא משתנה הלולאה)\n   - `print(f\"3 x {i} = {result}\")`\n\nפלט צפוי:\n`3 x 1 = 3`\n`3 x 2 = 6`\n`3 x 3 = 9`\n`3 x 4 = 12`\n`3 x 5 = 15`"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_3_TITLE}}\n{{CONTEXT_PHASE_3}}\n\nשרטטי מדרגות גדלות עבור {{creature}}.\nכל מדרגה גבוהה יותר מהקודמת.\n\n1. צרי צב ומקמי אותו בנקודה `(-200, 100)`\n2. השתמשי בלולאת `for` עם `range(1, 8)`\n3. בתוך הלולאה:\n   - `height = i * 15`  (גובה המדרגה גדל)\n   - `t.forward(30)`    (החלק האופקי)\n   - `t.right(90)`\n   - `t.forward(height)`  (החלק האנכי - משתנה!)\n   - `t.left(90)`\n\nפלט צפוי: מדרגות שבהן כל שלב גבוה יותר מהקודם."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_4_TITLE}}\n{{CONTEXT_PHASE_4}}\n\nשרטטי ספירלה ב-{{location}} שבה אורך הקו גדל.\n\n1. צרי צב\n2. השתמשי בלולאת `for` עם `range(1, 25)`\n3. בתוך הלולאה:\n   - `length = i * 5`  (האורך גדל בכל איטרציה)\n   - `t.forward(length)`\n   - `t.right(90)`\n\nפלט צפוי: ספירלה מרובעת שגדלה כלפי חוץ."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "markdown",
+          "locked": false,
+          "source": "## {{PHASE_5_TITLE}}\n{{CONTEXT_PHASE_5}}\n\nעקבי והדפיסי את המרחק הכולל שעברת ב-{{place}}.\n\n1. צרי צב ומקמי אותו בנקודה `(100, 0)`\n2. צרי משתנה `total_distance = 0`\n3. השתמשי בלולאת `for` עם `range(1, 6)`\n4. בתוך הלולאה:\n   - `distance = i * 20`\n   - `t.forward(distance)`\n   - `total_distance = total_distance + distance`\n   - `t.right(144)`  (דפוס כוכב)\n   - `print(f\"Moved {distance}, total: {total_distance}\")`\n\nפלט צפוי: צורת כוכב עם קווים שגדלים בהדרגה,\nודוח מודפס של המרחקים."
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "# ✏️ כתבי את הקוד שלך כאן"
+        },
+        {
+          "type": "code",
+          "locked": false,
+          "source": "print(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"\\n=== {{PHASE_5_TITLE}} ===\")\nexercise_e()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()"
+        }
+      ],
+      "starter_code": "import turtle\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\n# ✏️ כתבי את הקוד שלך כאן\n\nprint(\"{{CONTEXT_PROJECT_INTRO}}\")\nprint(\"=\" * 50)\n\nprint(\"\\n=== {{PHASE_1_TITLE}} ===\")\nexercise_a()\n\nprint(\"\\n=== {{PHASE_2_TITLE}} ===\")\nexercise_b()\n\nprint(\"\\n=== {{PHASE_3_TITLE}} ===\")\nexercise_c()\n\nprint(\"\\n=== {{PHASE_4_TITLE}} ===\")\nexercise_d()\n\nprint(\"\\n=== {{PHASE_5_TITLE}} ===\")\nexercise_e()\n\nprint(\"=\" * 50)\nprint(\"{{CONTEXT_FINAL_ASSEMBLY}}\")\nturtle.done()",
       "solution_code": null,
       "hints": [],
       "tags": [

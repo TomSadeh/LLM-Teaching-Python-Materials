@@ -1,21 +1,17 @@
-"""
-{{CONTEXT_DISCOVERY_INTRO}}
-
-This is the capstone project for Module 7. You'll study a model system,
-design your own structure, implement operations, and add a custom feature.
-
-Programming concepts: All dictionary concepts from Module 7
-"""
-
-
-# ============================================================
-# PART 1: Discovery - Study the Model System
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_DISCOVERY_INTRO}}
+#
+# זהו פרויקט הסיום של מודול 7. תלמדי מערכת לדוגמה,
+# תעצבי מבנה משלך, תממשי פעולות, ותוסיפי פיצ'ר מיוחד משלך.
+#
+# מושגי תכנות: כל מושגי המילונים ממודול 7
+#
+# ## חלק 1: גילוי - לימוד המערכת לדוגמה
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Study this achievement system to understand how it works.
+# לימדי את מערכת ההישגים הזו כדי להבין איך היא עובדת.
 
-
+# %%
 MODEL_ACHIEVEMENTS = {
     "achievements": {
         "first_steps": {
@@ -49,347 +45,186 @@ MODEL_ACHIEVEMENTS = {
     }
 }
 
+# %%
+system = MODEL_ACHIEVEMENTS
 
-def study_model():
-    """Study how the model system works."""
-    system = MODEL_ACHIEVEMENTS
+# Get all achievement IDs
+achievement_ids = list(system["achievements"].keys())
 
-    # Get all achievement IDs
-    achievement_ids = list(system["achievements"].keys())
+# Get a specific achievement's details
+collector_details = system["achievements"]["collector"]
 
-    # Get a specific achievement's details
-    collector_details = system["achievements"]["collector"]
+# Check what {{hero}} has unlocked
+hero_unlocked = system["players"]["{{hero}}"]["unlocked"]
 
-    # Check what {{hero}} has unlocked
-    hero_unlocked = system["players"]["{{hero}}"]["unlocked"]
+# Get {{hero}}'s points
+hero_points = system["players"]["{{hero}}"]["total_points"]
 
-    # Get {{hero}}'s points
-    hero_points = system["players"]["{{hero}}"]["total_points"]
+print(f"All achievements: {achievement_ids}")
+print(f"Collector details: {collector_details}")
+print(f"{{{{hero}}}} unlocked: {hero_unlocked}")
+print(f"{{{{hero}}}} points: {hero_points}")
 
-    print(f"All achievements: {achievement_ids}")
-    print(f"Collector details: {collector_details}")
-    print(f"{{{{hero}}}} unlocked: {hero_unlocked}")
-    print(f"{{{{hero}}}} points: {hero_points}")
+# %% [markdown]
+# מלאי את טבלת המעקב הזו:
+#
+# | נתון                    | נתיב הגישה                                     |
+# |-------------------------|------------------------------------------------|
+# | השם "Master"            | MODEL_ACHIEVEMENTS["achievements"]["master"]["name"] |
+# | נקודות ה-Collector      | MODEL_ACHIEVEMENTS[?][?][?]                   |
+# | הנקודות של {{heroine}}  | MODEL_ACHIEVEMENTS[?][?][?]                   |
+# | האם {{hero}} היא master? | "master" in MODEL_ACHIEVEMENTS[?][?][?]      |
+#
+# כמה רמות עמוק הגישה העמוקה ביותר?
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def trace_model_access():
-    # ✏️ FILL IN THE TRACING TABLE ✏️
-    #
-    # Trace the path to access each piece of data:
-    #
-    # | Data                  | Access Path                                    |
-    # |-----------------------|------------------------------------------------|
-    # | "Master" name         | MODEL_ACHIEVEMENTS["achievements"]["master"]["name"] |
-    # | Collector points      | MODEL_ACHIEVEMENTS[?][?][?]                   |
-    # | {{heroine}}'s points  | MODEL_ACHIEVEMENTS[?][?][?]                   |
-    # | Is {{hero}} a master? | "master" in MODEL_ACHIEVEMENTS[?][?][?]       |
-    #
-    # How many levels deep is the deepest access?
-    #
-
-    pass
-
-
-# ============================================================
-# PART 2: Growth - Design Your Own Structure
-# ============================================================
+# %% [markdown]
+# ## חלק 2: צמיחה - עיצוב מבנה משלך
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Design and create your own data system using dictionaries.
+# עצבי וצרי מערכת נתונים משלך באמצעות מילונים.
+#
+# עצבי קווסטים משלך! היי יצירתית עם שמות ותיאורים.
+# השתמשי ב-`{{placeholders}}` לתוכן ערכותי.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def create_quest_system():
-    """
-    Create a quest tracking system.
-
-    Returns:
-        dict: A quest system with 'quests' and 'players' sections.
-
-    Structure:
-        {
-            "quests": {
-                "quest_id": {
-                    "name": str,
-                    "description": str,
-                    "reward": int,
-                    "difficulty": str ("easy", "medium", "hard")
-                },
-                ...
-            },
-            "players": {
-                "player_name": {
-                    "active_quests": [list of quest_ids],
-                    "completed_quests": [list of quest_ids],
-                    "total_rewards": int
-                },
-                ...
-            }
-        }
-
-    Create at least 3 quests and 2 players.
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Design your own quests! Be creative with names and descriptions.
-    # Use {{placeholders}} for thematic content.
-
-    pass
-
-
-# ============================================================
-# PART 3: Growth - Implement Core Operations
-# ============================================================
+# %% [markdown]
+# ## חלק 3: צמיחה - מימוש פעולות בסיסיות
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Implement CRUD operations for your quest system.
+# ממשי פעולות CRUD עבור מערכת הקווסטים שלך.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def add_quest(system, quest_id, name, description, reward, difficulty):
-    """
-    Add a new quest to the system.
+# %% [markdown]
 
-    Args:
-        system: The quest system dictionary
-        quest_id: Unique identifier for the quest
-        name: Display name of the quest
-        description: Quest description
-        reward: Points awarded on completion
-        difficulty: "easy", "medium", or "hard"
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        bool: True if added, False if quest_id already exists
-    """
-    # ✏️ YOUR CODE HERE ✏️
+# %% [markdown]
 
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %% [markdown]
 
-def add_player(system, player_name):
-    """
-    Add a new player to the system.
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Args:
-        system: The quest system dictionary
-        player_name: Name of the new player
+# %% [markdown]
 
-    Returns:
-        bool: True if added, False if player already exists
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    New players start with empty quest lists and 0 rewards.
-    """
-    # ✏️ YOUR CODE HERE ✏️
+# %% [markdown]
 
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-
-def start_quest(system, player_name, quest_id):
-    """
-    Start a quest for a player.
-
-    Args:
-        system: The quest system dictionary
-        player_name: Player starting the quest
-        quest_id: Quest to start
-
-    Returns:
-        bool: True if started, False if:
-              - Player doesn't exist
-              - Quest doesn't exist
-              - Quest already active or completed
-    """
-    # ✏️ YOUR CODE HERE ✏️
-
-    pass
-
-
-def complete_quest(system, player_name, quest_id):
-    """
-    Complete an active quest for a player.
-
-    Args:
-        system: The quest system dictionary
-        player_name: Player completing the quest
-        quest_id: Quest to complete
-
-    Returns:
-        int: Reward points earned, or 0 if:
-             - Player doesn't exist
-             - Quest not in player's active quests
-
-    Move quest from active to completed and add rewards.
-    """
-    # ✏️ YOUR CODE HERE ✏️
-
-    pass
-
-
-def get_player_stats(system, player_name):
-    """
-    Get statistics for a player.
-
-    Args:
-        system: The quest system dictionary
-        player_name: Player to get stats for
-
-    Returns:
-        dict or None: Stats dictionary with keys:
-                      - "active_count": int
-                      - "completed_count": int
-                      - "total_rewards": int
-                      - "completion_rate": float (0.0 to 1.0)
-                      Returns None if player doesn't exist.
-    """
-    # ✏️ YOUR CODE HERE ✏️
-
-    pass
-
-
-def get_available_quests(system, player_name):
-    """
-    Get quests the player hasn't started or completed.
-
-    Args:
-        system: The quest system dictionary
-        player_name: Player to check
-
-    Returns:
-        list: Quest IDs that are available to this player
-              Empty list if player doesn't exist
-    """
-    # ✏️ YOUR CODE HERE ✏️
-
-    pass
-
-
-# ============================================================
-# PART 4: Ownership - Add Your Own Feature
-# ============================================================
+# %% [markdown]
+# ## חלק 4: בעלות - הוסיפי פיצ'ר משלך
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Design and implement a new feature of your own choice!
+# עצבי וממשי פיצ'ר חדש לפי בחירתך!
+#
+# היי יצירתית! זה הפיצ'ר שלך.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def your_custom_feature(system, *args, **kwargs):
-    """
-    Implement a feature of your own design!
+# %% [markdown]
+# ## DEMONSTRATION
 
-    Ideas:
-    - Quest chains (complete quest A to unlock quest B)
-    - Difficulty bonuses (harder quests give more rewards)
-    - Quest categories with filtering
-    - Leaderboard of top players
-    - Quest recommendations based on player level
-    - Achievement badges for quest milestones
+# %%
+print("=== Creating Quest System ===")
+system = create_quest_system()
 
-    Document what your feature does in this docstring,
-    then implement it below.
+if system is None:
+    print("Please implement create_quest_system() first!")
+    return
 
-    Your feature: _______________
-    Description: _______________
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Be creative! This is YOUR feature.
+print(f"Quests: {list(system['quests'].keys())}")
+print(f"Players: {list(system['players'].keys())}")
+print()
 
-    pass
+print("=== Adding New Content ===")
+# Add a new quest
+add_quest(system, "secret", "Secret Mission",
+          "Find the hidden {{item}}", 50, "hard")
+print(f"Added secret quest: {'secret' in system['quests']}")
 
+# Add a new player
+add_player(system, "{{friend}}")
+print(f"Added {{{{friend}}}}: {'{{friend}}' in system['players']}")
+print()
 
-# ============================================================
-# DEMONSTRATION
-# ============================================================
+print("=== Quest Operations ===")
+# Start a quest
+if start_quest(system, "{{friend}}", "secret"):
+    print("{{friend}} started the secret quest!")
 
-def demonstrate_system():
-    """Demonstrate the quest system in action."""
-    print("=== Creating Quest System ===")
-    system = create_quest_system()
+# Complete a quest
+reward = complete_quest(system, "{{friend}}", "secret")
+print(f"{{{{friend}}}} completed quest, earned {reward} points!")
+print()
 
-    if system is None:
-        print("Please implement create_quest_system() first!")
-        return
+print("=== Player Stats ===")
+stats = get_player_stats(system, "{{friend}}")
+if stats:
+    print(f"{{{{friend}}}} stats: {stats}")
 
-    print(f"Quests: {list(system['quests'].keys())}")
-    print(f"Players: {list(system['players'].keys())}")
-    print()
+available = get_available_quests(system, "{{friend}}")
+print(f"Available quests for {{{{friend}}}}: {available}")
+print()
 
-    print("=== Adding New Content ===")
-    # Add a new quest
-    add_quest(system, "secret", "Secret Mission",
-              "Find the hidden {{item}}", 50, "hard")
-    print(f"Added secret quest: {'secret' in system['quests']}")
+print("=== Your Custom Feature ===")
+# Call your custom feature here
+# result = your_custom_feature(system, ...)
+# print(f"Custom feature result: {result}")
+print("(Implement and demonstrate your custom feature!)")
 
-    # Add a new player
-    add_player(system, "{{friend}}")
-    print(f"Added {{{{friend}}}}: {'{{friend}}' in system['players']}")
-    print()
+# %% [markdown]
+# ## MAIN
 
-    print("=== Quest Operations ===")
-    # Start a quest
-    if start_quest(system, "{{friend}}", "secret"):
-        print("{{friend}} started the secret quest!")
+# %%
+print("=" * 60)
+print("{{CONTEXT_DISCOVERY_INTRO}}")
+print("=" * 60)
+print()
 
-    # Complete a quest
-    reward = complete_quest(system, "{{friend}}", "secret")
-    print(f"{{{{friend}}}} completed quest, earned {reward} points!")
-    print()
+print(">>> PART 1: Study the model system...")
+print()
+study_model()
+print()
+print("(Complete trace_model_access())")
+print()
 
-    print("=== Player Stats ===")
-    stats = get_player_stats(system, "{{friend}}")
-    if stats:
-        print(f"{{{{friend}}}} stats: {stats}")
+print(">>> PART 2: Design your quest system...")
+print("(Implement create_quest_system())")
+print()
 
-    available = get_available_quests(system, "{{friend}}")
-    print(f"Available quests for {{{{friend}}}}: {available}")
-    print()
+print(">>> PART 3: Implement operations...")
+print("(Implement add_quest, add_player, start_quest, complete_quest,")
+print(" get_player_stats, get_available_quests)")
+print()
 
-    print("=== Your Custom Feature ===")
-    # Call your custom feature here
-    # result = your_custom_feature(system, ...)
-    # print(f"Custom feature result: {result}")
-    print("(Implement and demonstrate your custom feature!)")
+print(">>> PART 4: Add your custom feature...")
+print("(Design and implement your_custom_feature())")
+print()
 
+# Uncomment to demonstrate:
+# demonstrate_system()
 
-# ============================================================
-# MAIN
-# ============================================================
-
-def main():
-    print("=" * 60)
-    print("{{CONTEXT_DISCOVERY_INTRO}}")
-    print("=" * 60)
-    print()
-
-    print(">>> PART 1: Study the model system...")
-    print()
-    study_model()
-    print()
-    print("(Complete trace_model_access())")
-    print()
-
-    print(">>> PART 2: Design your quest system...")
-    print("(Implement create_quest_system())")
-    print()
-
-    print(">>> PART 3: Implement operations...")
-    print("(Implement add_quest, add_player, start_quest, complete_quest,")
-    print(" get_player_stats, get_available_quests)")
-    print()
-
-    print(">>> PART 4: Add your custom feature...")
-    print("(Design and implement your_custom_feature())")
-    print()
-
-    # Uncomment to demonstrate:
-    # demonstrate_system()
-
-    print()
-    print("=" * 60)
-    print("{{CONTEXT_TRIUMPH_COMPLETE}}")
-    print()
-    print("Congratulations! You've mastered dictionaries!")
-    print("=" * 60)
-
-
-if __name__ == "__main__":
-    main()
+print()
+print("=" * 60)
+print("{{CONTEXT_TRIUMPH_COMPLETE}}")
+print()
+print("Congratulations! You've mastered dictionaries!")
+print("=" * 60)

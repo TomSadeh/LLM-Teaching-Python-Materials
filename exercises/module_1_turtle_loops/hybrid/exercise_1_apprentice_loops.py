@@ -7,233 +7,209 @@
 # Concepts: for loops, range(), turtle graphics, loop patterns
 # =============================================================================
 
-"""
-{{CONTEXT_DISCOVERY_INTRO}}
+# %% [markdown]
+# {{CONTEXT_DISCOVERY_INTRO}}
+#
+# זוהי תרגילה מרובת-חלקים. השלימי כל חלק לפי הסדר.
 
-This is a multi-part exercise. Complete each part in order.
-"""
-
+# %%
 import turtle
 
-
-# ============================================================
-# PART 1: DISCOVERY - Study the Master's Work
-# ============================================================
+# %% [markdown]
+# ## חלק 1: גילוי - לומדים מעבודת המאסטר
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Study how {{mentor}} uses loops to draw shapes.
-# Predict the output before running the code.
+# שימי לב כיצד {{mentor}} משתמשת בלולאות כדי לצייר צורות.
+# נסי לנחש את הפלט לפני שתריצי את הקוד.
 
+# %% locked
+# The master draws a simple shape
+t = turtle.Turtle()
+t.speed(0)  # Fastest drawing
+for i in range(3):
+    t.forward(80)
+    t.left(120)
 
-def master_code_1():
-    """DO NOT MODIFY - Study and predict"""
-    # The master draws a simple shape
-    t = turtle.Turtle()
-    t.speed(0)  # Fastest drawing
-    for i in range(3):
-        t.forward(80)
-        t.left(120)
+# %% locked
+# The master draws another shape
+t = turtle.Turtle()
+t.speed(0)
+t.penup()
+t.goto(150, 0)  # Move to a new position
+t.pendown()
+for i in range(4):
+    t.forward(60)
+    t.right(90)
 
-
-def master_code_2():
-    """DO NOT MODIFY - Study and predict"""
-    # The master draws another shape
-    t = turtle.Turtle()
-    t.speed(0)
+# %% locked
+# The master draws a series of marks
+t = turtle.Turtle()
+t.speed(0)
+t.penup()
+t.goto(-200, 0)
+t.pendown()
+for count in range(1, 6):
+    t.forward(count * 15)
     t.penup()
-    t.goto(150, 0)  # Move to a new position
+    t.forward(10)
     t.pendown()
-    for i in range(4):
-        t.forward(60)
-        t.right(90)
 
+# %% [markdown]
+# תארי מה תצייר כל לולאה.
+#
+# הלולאה הראשונה מציירת: _______________ (רמז: 3 צלעות, פניות שמאלה)
+#     צורה: _______________
+#     מספר צלעות: ___
+#     זווית פנייה: ___ מעלות
+#
+# הלולאה השנייה מציירת: _______________ (רמז: 4 צלעות, פניות ימינה)
+#     צורה: _______________
+#     מספר צלעות: ___
+#     זווית פנייה: ___ מעלות
+#
+# הלולאה השלישית מציירת: _______________ (רמז: הקווים מתארכים)
+#     כמה קווים: ___
+#     אורך הקו הראשון: ___ יחידות
+#     אורך הקו האחרון: ___ יחידות
+#
+# > רמז: הזווית החיצונית של צורה עם N צלעות היא 360/N מעלות.
 
-def master_code_3():
-    """DO NOT MODIFY - Study and predict"""
-    # The master draws a series of marks
-    t = turtle.Turtle()
-    t.speed(0)
-    t.penup()
-    t.goto(-200, 0)
-    t.pendown()
-    for count in range(1, 6):
-        t.forward(count * 15)
-        t.penup()
-        t.forward(10)
-        t.pendown()
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-
-def your_predictions():
-    # ✏️ YOUR PREDICTIONS HERE ✏️
-    #
-    # Describe what each master_code function will draw.
-    #
-    # master_code_1 draws: _______________ (hint: 3 sides, left turns)
-    #     Shape: _______________
-    #     Number of sides: ___
-    #     Turn angle: ___ degrees
-    #
-    # master_code_2 draws: _______________ (hint: 4 sides, right turns)
-    #     Shape: _______________
-    #     Number of sides: ___
-    #     Turn angle: ___ degrees
-    #
-    # master_code_3 draws: _______________ (hint: lines get longer)
-    #     How many lines: ___
-    #     First line length: ___ units
-    #     Last line length: ___ units
-    #
-    # Hint: The exterior angle of a shape with N sides is 360/N degrees.
-    pass
-
-
-# ============================================================
-# PART 2: GUIDANCE - Practice with Support
-# ============================================================
+# %% [markdown]
+# ## חלק 2: הדרכה - תרגול עם עזרה
 # {{CONTEXT_GUIDANCE_INTRO}}
 # {{CONTEXT_GUIDANCE_NARRATIVE}}
 #
-# Now practice with some scaffolding to help you.
+# עכשיו נתרגלי עם קצת פיגום שיעזור לך.
+#
+# השלימי את הרווחים החסרים כדי לצייר מחומש (5 צלעות).
+# מחומש זקוק לזוויות חיצוניות של 72 מעלות (360/5 = 72).
+#
+# t = turtle.Turtle()
+# t.speed(0)
+# t.penup()
+# t.goto(-100, 150)
+# t.pendown()
+# for i in range(___):           # כמה צלעות?
+#     t.forward(50)
+#     t.right(___)               # איזו זווית?
+#
+# > רמז: למחומש יש 5 צלעות ופונים 72 מעלות בכל פעם.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def guided_exercise_a():
-    # ✏️ FILL IN THE BLANKS ✏️
-    #
-    # Complete the loop to draw a pentagon (5 sides).
-    # A pentagon needs exterior angles of 72 degrees (360/5 = 72).
-    #
-    # t = turtle.Turtle()
-    # t.speed(0)
-    # t.penup()
-    # t.goto(-100, 150)
-    # t.pendown()
-    # for i in range(___):           # How many sides?
-    #     t.forward(50)
-    #     t.right(___)               # What angle?
-    #
-    # Hint: A pentagon has 5 sides and turns 72 degrees each time.
-    pass
+# %% [markdown]
+# השלימי את הרווחים החסרים כדי לצייר משושה (6 צלעות).
+# משושה זקוק לזוויות חיצוניות של 60 מעלות (360/6 = 60).
+#
+# t = turtle.Turtle()
+# t.speed(0)
+# t.penup()
+# t.goto(100, 150)
+# t.pendown()
+# ___ i in ___(6):               # השלימי את מילות המפתח של הלולאה
+#     t.forward(40)
+#     t.___(60)                  # השלימי את שיטת הפנייה
+#
+# > רמז: השתמשי ב-`for` וב-`range` כדי ליצור את הלולאה.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def guided_exercise_b():
-    # ✏️ FILL IN THE BLANKS ✏️
-    #
-    # Complete the loop to draw a hexagon (6 sides).
-    # A hexagon needs exterior angles of 60 degrees (360/6 = 60).
-    #
-    # t = turtle.Turtle()
-    # t.speed(0)
-    # t.penup()
-    # t.goto(100, 150)
-    # t.pendown()
-    # ___ i in ___(6):               # Fill in the loop keywords
-    #     t.forward(40)
-    #     t.___(60)                  # Fill in the turn method
-    #
-    # Hint: Use "for" and "range" to create the loop.
-    pass
-
-
-# ============================================================
-# PART 3: GROWTH - Create Your Own
-# ============================================================
+# %% [markdown]
+# ## חלק 3: צמיחה - צרי משלך
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now create your own shapes using what you've learned!
+# עכשיו צרי צורות משלך עם מה שלמדת!
+#
+# צייר מתומן (8 צלעות) עבור {{hero}}.
+#
+# 1. צרי צב
+# 2. מקמי אותו בנקודה (-200, -100) עם `penup`/`goto`/`pendown`
+# 3. השתמשי בלולאת `for` שחוזרת 8 פעמים
+# 4. בכל סיבוב: `forward` 35 יחידות, `left` 45 מעלות
+#
+# > רמז: 360/8 = 45 מעלות לכל פנייה
+#
+# פלט צפוי: מתומן (צורה בת 8 צלעות).
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def your_creation_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Draw an octagon (8 sides) for {{hero}}.
-    #
-    # Step 1: Create a turtle
-    # Step 2: Position it at (-200, -100) using penup/goto/pendown
-    # Step 3: Use a for loop to repeat 8 times
-    # Step 4: Each iteration: forward 35 units, left 45 degrees
-    #
-    # Hint: 360/8 = 45 degrees per turn
-    #
-    # Expected: An octagon (8-sided shape).
-    pass
+# %% [markdown]
+# צייר דפוס מדרגות ספירלי עבור {{creature}}.
+# כל מדרגה קצת ארוכה מהקודמת.
+#
+# 1. צרי צב
+# 2. מקמי אותו בנקודה (0, -150)
+# 3. השתמשי בלולאת `for` עם `range(1, 13)` לציור 12 קווים
+# 4. בכל סיבוב:
+#    - `forward(step * 8)` כאשר `step` הוא משתנה הלולאה
+#    - `right(30)`
+#
+# פלט צפוי: דפוס ספירלי שבו כל קו ארוך מהקודם.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def your_creation_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Draw a spiral staircase pattern for {{creature}}.
-    # Each step is slightly longer than the previous.
-    #
-    # Step 1: Create a turtle
-    # Step 2: Position it at (0, -150)
-    # Step 3: Use a for loop with range(1, 13) to draw 12 lines
-    # Step 4: Each iteration:
-    #         - forward(step * 8) where step is the loop variable
-    #         - right(30)
-    #
-    # Expected: A spiral pattern where each line is longer than the last.
-    pass
+# %% [markdown]
+# צרי צורה משלך ב{{school}}!
+# נסי מספר צלעות שונה, או דפוס כוכב.
+#
+# רעיונות:
+# - צייר צורה בת 10 צלעות (עשרון) עם פניות של 36 מעלות
+# - צייר כוכב בן 5 קצוות עם פניות של 144 מעלות
+# - צייר כוכב בן 7 קצוות עם פניות של כ-154 מעלות
+#
+# היי יצירתית!
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def your_creation_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create your own shape at {{school}}!
-    # Try a different number of sides, or a star pattern.
-    #
-    # Ideas:
-    # - Draw a 10-sided shape (decagon) with 36-degree turns
-    # - Draw a 5-pointed star with 144-degree turns
-    # - Draw a 7-pointed star with 154-degree turns (approximately)
-    #
-    # Be creative!
-    pass
+# %%
+print("=" * 50)
+print("PART 1: DISCOVERY - Study the Master's Work")
+print("=" * 50)
 
+print("\n--- master_code_1 ---")
+master_code_1()
 
-def main():
-    print("=" * 50)
-    print("PART 1: DISCOVERY - Study the Master's Work")
-    print("=" * 50)
+print("\n--- master_code_2 ---")
+master_code_2()
 
-    print("\n--- master_code_1 ---")
-    master_code_1()
+print("\n--- master_code_3 ---")
+master_code_3()
 
-    print("\n--- master_code_2 ---")
-    master_code_2()
+print("\n--- Your Predictions ---")
+your_predictions()
 
-    print("\n--- master_code_3 ---")
-    master_code_3()
+print("\n" + "=" * 50)
+print("PART 2: GUIDANCE - Practice with Support")
+print("=" * 50)
 
-    print("\n--- Your Predictions ---")
-    your_predictions()
+print("\n--- guided_exercise_a ---")
+# guided_exercise_a()  # Uncomment when blanks are filled
 
-    print("\n" + "=" * 50)
-    print("PART 2: GUIDANCE - Practice with Support")
-    print("=" * 50)
+print("\n--- guided_exercise_b ---")
+# guided_exercise_b()
 
-    print("\n--- guided_exercise_a ---")
-    # guided_exercise_a()  # Uncomment when blanks are filled
+print("\n" + "=" * 50)
+print("PART 3: GROWTH - Create Your Own")
+print("=" * 50)
 
-    print("\n--- guided_exercise_b ---")
-    # guided_exercise_b()
+print("\n--- your_creation_a ---")
+your_creation_a()
 
-    print("\n" + "=" * 50)
-    print("PART 3: GROWTH - Create Your Own")
-    print("=" * 50)
+print("\n--- your_creation_b ---")
+your_creation_b()
 
-    print("\n--- your_creation_a ---")
-    your_creation_a()
+print("\n--- your_creation_c ---")
+your_creation_c()
 
-    print("\n--- your_creation_b ---")
-    your_creation_b()
-
-    print("\n--- your_creation_c ---")
-    your_creation_c()
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_TRIUMPH_COMPLETE}}")
-    turtle.done()
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_TRIUMPH_COMPLETE}}")
+turtle.done()

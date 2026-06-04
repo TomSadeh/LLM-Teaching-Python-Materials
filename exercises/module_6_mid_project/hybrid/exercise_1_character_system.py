@@ -1,38 +1,33 @@
-"""
-{{CONTEXT_PROJECT_INTRO}}
-
-Build a character profile manager for {{school}}.
-
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
-
-
-# ============================================================
-# Project: Character Profile System
-# ============================================================
-# Build a system to create, display, and manage character profiles.
+# %% [markdown]
+# ## {{CONTEXT_PROJECT_INTRO}}
 #
-# Your system should:
-# - Store character data (name, health, ability, level) in lists
-# - Display character information in a formatted way
-# - Allow modifications (level up, take damage, heal)
-# - Provide an interactive menu for users
+# בני מנהל פרופילי דמויות עבור {{school}}.
 #
-# ✏️ YOUR CODE HERE ✏️
-# Design your own functions to accomplish the above goals.
-# Think about what operations you need and how to organize them.
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# פרויקט: מערכת פרופילי דמויות
+# בני מערכת ליצירה, הצגה וניהול של פרופילי דמויות.
+#
+# המערכת שלך צריכה:
+# - לשמור נתוני דמות (שם, בריאות, יכולת, רמה) ברשימות
+# - להציג מידע על הדמות בצורה מסודרת
+# - לאפשר שינויים (עלייה ברמה, קבלת נזק, ריפוי)
+# - לספק תפריט אינטראקטיבי למשתמש
+#
+# עצבי פונקציות משלך כדי להשיג את המטרות האלו.
+# חשבי אילו פעולות את צריכה ואיך לארגן אותן.
 
+# %%
+print("{{greeting}}")
+print("Welcome to the {{school}} Character Manager!")
+print()
 
-def main():
-    print("{{greeting}}")
-    print("Welcome to the {{school}} Character Manager!")
-    print()
+# %% [markdown]
+# בני את מערכת ניהול הדמויות שלך
 
-    # ✏️ YOUR CODE HERE ✏️
-    # Build your character management system
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    print()
-    print("{{exclamation}} Goodbye!")
-
-
-main()
+# %%
+print()
+print("{{exclamation}} Goodbye!")

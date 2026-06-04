@@ -1,104 +1,86 @@
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-
-In this exercise, you'll learn the fundamentals of dictionaries:
-creating them, accessing values, and understanding key-value pairs.
-"""
-
-
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# בתרגיל הזה תלמדי את היסודות של מילונים:
+# יצירתם, גישה לערכים, והבנת זוגות מפתח-ערך.
+#
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
+#
+# צרי מילון שמאחסן מידע על {{hero}}.
+#
+# 1. צרי מילון בשם `profile` עם המפתחות והערכים הבאים:
+#    - "name" -> המחרוזת "{{hero}}"
+#    - "skill" -> המחרוזת "{{spell1}}"
+#    - "level" -> המספר השלם 1
+#
+# 2. הדפיסי את המילון כולו
+#
+# 3. הדפיסי רק את הערך המשויך למפתח "name"
+#
+# דוגמה לפורמט הפלט:
+#   {'name': '...', 'skill': '...', 'level': 1}
+#   ...
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create a dictionary to store information about {{hero}}.
-    #
-    # Step 1: Create a dictionary called `profile` with these keys and values:
-    #         - "name" -> the string "{{hero}}"
-    #         - "skill" -> the string "{{spell1}}"
-    #         - "level" -> the integer 1
-    #
-    # Step 2: Print the entire dictionary
-    #
-    # Step 3: Print just the value associated with "name"
-    #
-    # Example output format:
-    #   {'name': '...', 'skill': '...', 'level': 1}
-    #   ...
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
+#
+# צרי מילון שמאחסן ניקוד עבור כמה דמויות.
+#
+# 1. צרי מילון בשם `scores` עם:
+#    - "{{hero}}" -> 100
+#    - "{{heroine}}" -> 150
+#    - "{{friend}}" -> 75
+#
+# 2. הדפיסי את הניקוד של כל דמות בעזרת f-string
+#    פורמט: "[name] has [score] points"
+#
+# 3. חשבי והדפיסי את סכום כל הניקודים
+#
+# > רמז: גישה לערכים עם scores["key_name"]
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create a dictionary to store scores for multiple characters.
-    #
-    # Step 1: Create a dictionary called `scores` with:
-    #         - "{{hero}}" -> 100
-    #         - "{{heroine}}" -> 150
-    #         - "{{friend}}" -> 75
-    #
-    # Step 2: Print each character's score using an f-string
-    #         Format: "[name] has [score] points"
-    #
-    # Step 3: Calculate and print the total of all scores
-    #
-    # Hint: Access values with scores["key_name"]
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
+#
+# צרי מילון שמייצג את המאפיינים של {{item}}.
+#
+# 1. צרי מילון בשם `item_stats` עם:
+#    - "name" -> "{{item}}"
+#    - "power" -> 50
+#    - "durability" -> 100
+#    - "rarity" -> "uncommon"
+#
+# 2. בדקי אם הכוח גדול מ-30
+#    אם כן, הדפיסי: "[item name] is powerful!"
+#    אם לא, הדפיסי: "[item name] needs upgrading."
+#
+# 3. הדפיסי את כל המפתחות במילון
+# > רמז: השתמשי במתודה `.keys()`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create a dictionary to represent {{item}} attributes.
-    #
-    # Step 1: Create a dictionary called `item_stats` with:
-    #         - "name" -> "{{item}}"
-    #         - "power" -> 50
-    #         - "durability" -> 100
-    #         - "rarity" -> "uncommon"
-    #
-    # Step 2: Check if the power is greater than 30
-    #         If yes, print: "[item name] is powerful!"
-    #         If no, print: "[item name] needs upgrading."
-    #
-    # Step 3: Print all the keys in the dictionary
-    #         Hint: Use the .keys() method
-    pass
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
+print("\n=== {{PHASE_1_TITLE}} ===")
+exercise_a()
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_2_TITLE}} ===")
+exercise_b()
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    exercise_a()
+print("\n=== {{PHASE_3_TITLE}} ===")
+exercise_c()
 
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    exercise_b()
-
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    exercise_c()
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

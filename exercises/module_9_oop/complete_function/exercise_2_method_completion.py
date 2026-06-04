@@ -1,18 +1,14 @@
-"""
-{{CONTEXT_COMPLETE_FUNCTION_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-
-In this exercise, you'll complete methods that operate on object state.
-The class structure is provided - you write the method bodies.
-"""
-
-
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# בתרגיל הזה תשלימי מתודות שעובדות על מצב האובייקט.
+# מבנה המחלקה כבר נתון - את כותבת את גוף המתודות.
+#
 # {{FUNCTION_1_TITLE}}
-# ============================================================
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
-
+# %%
 class HealthTracker:
     """Tracks health for a character at {{school}}."""
 
@@ -102,13 +98,11 @@ class HealthTracker:
 
         pass
 
-
-# ============================================================
+# %% [markdown]
 # {{FUNCTION_2_TITLE}}
-# ============================================================
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
-
+# %%
 class ScoreKeeper:
     """Keeps track of points and achievements."""
 
@@ -202,13 +196,11 @@ class ScoreKeeper:
 
         pass
 
-
-# ============================================================
+# %% [markdown]
 # {{FUNCTION_3_TITLE}}
-# ============================================================
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
-
+# %%
 class ItemStack:
     """A stack of identical items in an inventory."""
 
@@ -303,39 +295,35 @@ class ItemStack:
 
         pass
 
+# %%
+print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
+print("=" * 50)
 
-def main():
-    print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
-    print("=" * 50)
+print("\n=== Testing {{FUNCTION_1_TITLE}} ===")
+tracker = HealthTracker("{{hero}}", 100)
+print(f"Starting health: {tracker.current_health}")
+tracker.take_damage(30)
+print(f"After 30 damage: {tracker.current_health}")
+tracker.heal(20)
+print(f"After 20 healing: {tracker.current_health}")
+print(f"Is alive: {tracker.is_alive()}")
 
-    print("\n=== Testing {{FUNCTION_1_TITLE}} ===")
-    tracker = HealthTracker("{{hero}}", 100)
-    print(f"Starting health: {tracker.current_health}")
-    tracker.take_damage(30)
-    print(f"After 30 damage: {tracker.current_health}")
-    tracker.heal(20)
-    print(f"After 20 healing: {tracker.current_health}")
-    print(f"Is alive: {tracker.is_alive()}")
+print("\n=== Testing {{FUNCTION_2_TITLE}} ===")
+keeper = ScoreKeeper("{{heroine}}")
+keeper.add_points(100)
+print(f"Score: {keeper.score}, High: {keeper.high_score}")
+print(f"New achievement: {keeper.unlock_achievement('First Win')}")
+print(f"Duplicate: {keeper.unlock_achievement('First Win')}")
+keeper.reset_score()
+print(f"After reset - Score: {keeper.score}, High: {keeper.high_score}")
 
-    print("\n=== Testing {{FUNCTION_2_TITLE}} ===")
-    keeper = ScoreKeeper("{{heroine}}")
-    keeper.add_points(100)
-    print(f"Score: {keeper.score}, High: {keeper.high_score}")
-    print(f"New achievement: {keeper.unlock_achievement('First Win')}")
-    print(f"Duplicate: {keeper.unlock_achievement('First Win')}")
-    keeper.reset_score()
-    print(f"After reset - Score: {keeper.score}, High: {keeper.high_score}")
+print("\n=== Testing {{FUNCTION_3_TITLE}} ===")
+stack = ItemStack("{{item}}", 50, max_stack=99)
+overflow = stack.add(60)
+print(f"Added 60, overflow: {overflow}, quantity: {stack.quantity}")
+removed = stack.remove(40)
+print(f"Removed {removed}, quantity: {stack.quantity}")
+print(f"Is empty: {stack.is_empty()}")
 
-    print("\n=== Testing {{FUNCTION_3_TITLE}} ===")
-    stack = ItemStack("{{item}}", 50, max_stack=99)
-    overflow = stack.add(60)
-    print(f"Added 60, overflow: {overflow}, quantity: {stack.quantity}")
-    removed = stack.remove(40)
-    print(f"Removed {removed}, quantity: {stack.quantity}")
-    print(f"Is empty: {stack.is_empty()}")
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

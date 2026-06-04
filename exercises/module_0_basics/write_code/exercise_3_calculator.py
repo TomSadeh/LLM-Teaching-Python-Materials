@@ -5,116 +5,95 @@
 # Concepts: arithmetic operators (+, -, *, /, //, %, **)
 # =============================================================================
 
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
-
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
+#
+# חשבי את העלות הכוללת של {{item}}ים ב{{school}}.
+#
+# 1. צרי משתנה `price` עם הערך 15
+# 2. צרי משתנה `quantity` עם הערך 4
+# 3. צרי משתנה `total` שמכפיל את price ב-quantity
+# 4. הדפיסי `Total cost:` ואחריו את המשתנה total
+#
+# פלט צפוי: `Total cost: 60`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Calculate the total cost of {{item}}s at {{school}}.
-    #
-    # Step 1: Create a variable `price` with value 15
-    # Step 2: Create a variable `quantity` with value 4
-    # Step 3: Create a variable `total` that multiplies price by quantity
-    # Step 4: Print "Total cost:" followed by the total variable
-    #
-    # Expected output: Total cost: 60
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
+#
+# חשבי איך לחלק {{item}}ים בין החברים של {{hero}}.
+#
+# 1. צרי `items` עם הערך 17
+# 2. צרי `friends` עם הערך 5
+# 3. צרי `each_gets` באמצעות `//` (חילוק שלם)
+# 4. צרי `leftover` באמצעות `%` (שארית)
+# 5. הדפיסי `Each friend gets:` ואחריו את each_gets
+# 6. הדפיסי `Leftover:` ואחריו את leftover
+#
+# פלט צפוי:
+# `Each friend gets: 3`
+# `Leftover: 2`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Calculate how to divide {{item}}s among {{hero}}'s friends.
-    #
-    # Step 1: Create `items` with value 17
-    # Step 2: Create `friends` with value 5
-    # Step 3: Create `each_gets` using // (integer division)
-    # Step 4: Create `leftover` using % (remainder)
-    # Step 5: Print "Each friend gets:" followed by each_gets
-    # Step 6: Print "Leftover:" followed by leftover
-    #
-    # Expected output:
-    # Each friend gets: 3
-    # Leftover: 2
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
+#
+# חשבי את רמת הכוח של {{hero}} ב{{school}}.
+#
+# 1. צרי `base_power` עם הערך 2
+# 2. צרי `level` עם הערך 5
+# 3. צרי `total_power` באמצעות `**` (חזקה): `base_power ** level`
+# 4. הדפיסי `Power level:` ואחריו את total_power
+#
+# > רמז: `2 ** 5` פירושו `2 * 2 * 2 * 2 * 2`
+#
+# פלט צפוי: `Power level: 32`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Calculate {{hero}}'s power level at {{school}}.
-    #
-    # Step 1: Create `base_power` with value 2
-    # Step 2: Create `level` with value 5
-    # Step 3: Create `total_power` using ** (exponentiation): base_power ** level
-    # Step 4: Print "Power level:" followed by total_power
-    #
-    # Hint: 2 ** 5 means 2 * 2 * 2 * 2 * 2
-    #
-    # Expected output: Power level: 32
-    pass
-
-
-# ============================================================
-# {{PHASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
+#
+# חשבי את הניקוד של {{hero}} עם הבונוסים.
+#
+# 1. צרי `base_score` עם הערך 100
+# 2. צרי `bonus` עם הערך 25
+# 3. צרי `penalty` עם הערך 10
+# 4. צרי `final_score` = `base_score + bonus - penalty`
+# 5. הדפיסי `Final score:` ואחריו את final_score
+#
+# פלט צפוי: `Final score: 115`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_d():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Calculate {{hero}}'s score with bonuses.
-    #
-    # Step 1: Create `base_score` with value 100
-    # Step 2: Create `bonus` with value 25
-    # Step 3: Create `penalty` with value 10
-    # Step 4: Create `final_score` = base_score + bonus - penalty
-    # Step 5: Print "Final score:" followed by final_score
-    #
-    # Expected output: Final score: 115
-    pass
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
+print("\n=== {{PHASE_1_TITLE}} ===")
+exercise_a()
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_2_TITLE}} ===")
+exercise_b()
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    exercise_a()
+print("\n=== {{PHASE_3_TITLE}} ===")
+exercise_c()
 
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    exercise_b()
+print("\n=== {{PHASE_4_TITLE}} ===")
+exercise_d()
 
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    exercise_c()
-
-    print("\n=== {{PHASE_4_TITLE}} ===")
-    exercise_d()
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

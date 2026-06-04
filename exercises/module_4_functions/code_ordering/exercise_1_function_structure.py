@@ -5,66 +5,58 @@
 # Concepts: Function definition order, calling functions, parameters
 # =============================================================================
 
-"""
-{{CONTEXT_CODE_ORDERING_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
-
-
-# ============================================================
-# Challenge A: Basic Function Order
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_CODE_ORDERING_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# ## אתגר א': סדר בסיסי של פונקציה
 # {{CONTEXT_ORDERING_1_NARRATIVE}}
 #
-# Arrange these lines to create and call a function.
+# סדרי את השורות כדי ליצור ולקרוא לפונקציה.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   greet_visitor()
 #   print("Welcome to {{school}}!")
 #   def greet_visitor():
 
-def challenge_a():
-    # REORDER THE LINES
-    #
-    # Copy the lines above in the CORRECT order.
-    #
-    # Hint: A function must be defined before it can be called.
-    #       The function body must be indented.
+# %%
+# REORDER THE LINES
+#
+# Copy the lines above in the CORRECT order.
+#
+# Hint: A function must be defined before it can be called.
+#       The function body must be indented.
 
-    pass  # Delete this and add the correctly ordered lines
+pass  # Delete this and add the correctly ordered lines
 
-
-# ============================================================
-# Challenge B: Function with Parameter
-# ============================================================
+# %% [markdown]
+# ## אתגר ב': פונקציה עם פרמטר
 # {{CONTEXT_ORDERING_2_NARRATIVE}}
 #
-# Arrange these lines to create a function with a parameter.
+# סדרי את השורות כדי ליצור פונקציה עם פרמטר.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   print(f"Hello, {name}!")
 #   greet("{{hero}}")
 #   def greet(name):
 #   print(f"{name} has arrived.")
 
-def challenge_b():
-    # REORDER THE LINES
-    #
-    # Hint: Function definition comes first.
-    #       Both print statements are inside the function.
-    #       The function call is last.
+# %%
+# REORDER THE LINES
+#
+# Hint: Function definition comes first.
+#       Both print statements are inside the function.
+#       The function call is last.
 
-    pass
+pass
 
-
-# ============================================================
-# Challenge C: Multiple Functions
-# ============================================================
+# %% [markdown]
+# ## אתגר ג': מספר פונקציות
 # {{CONTEXT_ORDERING_3_NARRATIVE}}
 #
-# Arrange these lines to define two functions and call them.
+# סדרי את השורות כדי להגדיר שתי פונקציות ולקרוא להן.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   show_header()
 #   def show_header():
 #   def show_footer():
@@ -72,81 +64,73 @@ def challenge_b():
 #   show_footer()
 #   print("=== {{school}} ===")
 
-def challenge_c():
-    # REORDER THE LINES
-    #
-    # Hint: Both functions must be defined before they are called.
-    #       Each function has one print statement as its body.
+# %%
+# REORDER THE LINES
+#
+# Hint: Both functions must be defined before they are called.
+#       Each function has one print statement as its body.
 
-    pass
+pass
 
-
-# ============================================================
-# Challenge D: Function with Setup
-# ============================================================
+# %% [markdown]
+# ## אתגר ד': פונקציה עם הגדרת משתנה
 # {{CONTEXT_ORDERING_4_NARRATIVE}}
 #
-# Arrange these lines for a function that uses a variable.
+# סדרי את השורות לפונקציה שמשתמשת במשתנה.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   print(f"Status: {status}")
 #   display_status()
 #   status = "Active"
 #   def display_status():
 #   print(f"Location: {{location}}")
 
-def challenge_d():
-    # REORDER THE LINES
-    #
-    # Hint: Inside the function, create the variable before using it.
-    #       Variables defined inside a function are local to it.
+# %%
+# REORDER THE LINES
+#
+# Hint: Inside the function, create the variable before using it.
+#       Variables defined inside a function are local to it.
 
-    pass
+pass
 
-
-# ============================================================
-# Challenge E: Function Call with Arguments
-# ============================================================
+# %% [markdown]
+# ## אתגר ה': קריאה לפונקציה עם ארגומנטים
 # {{CONTEXT_ORDERING_5_NARRATIVE}}
 #
-# Arrange these lines to create and call a function with two parameters.
+# סדרי את השורות כדי ליצור ולקרוא לפונקציה עם שני פרמטרים.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   introduce("{{hero}}", "{{school}}")
 #   def introduce(person, place):
 #   print(f"{person} attends {place}.")
 #   print(f"Welcome, {person}!")
 
-def challenge_e():
-    # REORDER THE LINES
-    #
-    # Hint: Both print statements belong inside the function.
-    #       Order them so the welcome comes before the attendance info.
+# %%
+# REORDER THE LINES
+#
+# Hint: Both print statements belong inside the function.
+#       Order them so the welcome comes before the attendance info.
 
-    pass
+pass
 
+# %%
+print("{{CONTEXT_CODE_ORDERING_INTRO}}")
+print("=" * 50)
 
-def main():
-    print("{{CONTEXT_CODE_ORDERING_INTRO}}")
-    print("=" * 50)
+print("\n=== Challenge A: Basic Function Order ===")
+# challenge_a()  # Uncomment when ordered correctly
 
-    print("\n=== Challenge A: Basic Function Order ===")
-    # challenge_a()  # Uncomment when ordered correctly
+print("\n=== Challenge B: Function with Parameter ===")
+# challenge_b()
 
-    print("\n=== Challenge B: Function with Parameter ===")
-    # challenge_b()
+print("\n=== Challenge C: Multiple Functions ===")
+# challenge_c()
 
-    print("\n=== Challenge C: Multiple Functions ===")
-    # challenge_c()
+print("\n=== Challenge D: Function with Setup ===")
+# challenge_d()
 
-    print("\n=== Challenge D: Function with Setup ===")
-    # challenge_d()
+print("\n=== Challenge E: Function Call with Arguments ===")
+# challenge_e()
 
-    print("\n=== Challenge E: Function Call with Arguments ===")
-    # challenge_e()
-
-    print("\nReorder each challenge, then uncomment to test!")
-    print("{{CONTEXT_ROLE_COMPLETE}}")
-
-
-main()
+print("\nReorder each challenge, then uncomment to test!")
+print("{{CONTEXT_ROLE_COMPLETE}}")

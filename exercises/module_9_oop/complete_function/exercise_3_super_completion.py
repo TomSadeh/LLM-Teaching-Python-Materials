@@ -1,19 +1,14 @@
-"""
-{{CONTEXT_COMPLETE_FUNCTION_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-
-In this exercise, you'll practice using super() to call parent class
-methods. Understanding super() is essential for properly initializing
-subclasses and extending parent behavior.
-"""
-
-
-# ============================================================
-# {{FUNCTION_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# בתרגיל הזה תתרגלי שימוש ב-`super()` כדי לקרוא למתודות של מחלקת האב.
+# הבנת `super()` חיונית כדי לאתחל תת-מחלקות כמו שצריך ולהרחיב את ההתנהגות של האב.
+#
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
-
+# %%
 class BaseUnit:
     """Base class for all units at {{school}}."""
 
@@ -22,7 +17,7 @@ class BaseUnit:
         self.health = health
         self.max_health = health
 
-
+# %%
 class AdvancedUnit(BaseUnit):
     """
     A unit with additional capabilities.
@@ -52,13 +47,11 @@ class AdvancedUnit(BaseUnit):
 
         pass
 
-
-# ============================================================
-# {{FUNCTION_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
-
+# %%
 class BaseCharacter:
     """Base class for characters."""
 
@@ -67,7 +60,7 @@ class BaseCharacter:
         self.level = level
         self.experience = 0
 
-
+# %%
 class PlayerCharacter(BaseCharacter):
     """
     A player-controlled character with a class role.
@@ -100,13 +93,11 @@ class PlayerCharacter(BaseCharacter):
 
         pass
 
-
-# ============================================================
-# {{FUNCTION_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
-
+# %%
 class BaseCreature:
     """Base class for creatures."""
 
@@ -116,7 +107,7 @@ class BaseCreature:
         self.power = power
         self.is_wild = True
 
-
+# %%
 class TamedCreature(BaseCreature):
     """
     A creature that has been tamed by a character.
@@ -150,13 +141,11 @@ class TamedCreature(BaseCreature):
 
         pass
 
-
-# ============================================================
-# {{FUNCTION_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 
-
+# %%
 class BaseItem:
     """Base class for items."""
 
@@ -168,7 +157,7 @@ class BaseItem:
         """Return the item's value."""
         return self.base_value
 
-
+# %%
 class EnchantedItem(BaseItem):
     """
     An item with magical enhancements.
@@ -215,52 +204,48 @@ class EnchantedItem(BaseItem):
 
         pass
 
+# %%
+print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
+print("=" * 50)
 
-def main():
-    print("{{CONTEXT_COMPLETE_FUNCTION_INTRO}}")
-    print("=" * 50)
+print("\n=== Testing {{FUNCTION_1_TITLE}} ===")
+unit = AdvancedUnit("{{hero}}", 100, 50)
+if unit.name:
+    print(f"Name: {unit.name}")
+    print(f"Health: {unit.health}/{unit.max_health}")
+    print(f"Power: {unit.power}")
+else:
+    print("  (Complete the __init__ method)")
 
-    print("\n=== Testing {{FUNCTION_1_TITLE}} ===")
-    unit = AdvancedUnit("{{hero}}", 100, 50)
-    if unit.name:
-        print(f"Name: {unit.name}")
-        print(f"Health: {unit.health}/{unit.max_health}")
-        print(f"Power: {unit.power}")
-    else:
-        print("  (Complete the __init__ method)")
+print("\n=== Testing {{FUNCTION_2_TITLE}} ===")
+player = PlayerCharacter("{{heroine}}", "{{ROLE_TITLE}}", 5)
+if player.name:
+    print(f"Name: {player.name}")
+    print(f"Level: {player.level}")
+    print(f"Role: {player.role}")
+    print(f"Skills: {player.skills}")
+else:
+    print("  (Complete the __init__ method)")
 
-    print("\n=== Testing {{FUNCTION_2_TITLE}} ===")
-    player = PlayerCharacter("{{heroine}}", "{{ROLE_TITLE}}", 5)
-    if player.name:
-        print(f"Name: {player.name}")
-        print(f"Level: {player.level}")
-        print(f"Role: {player.role}")
-        print(f"Skills: {player.skills}")
-    else:
-        print("  (Complete the __init__ method)")
+print("\n=== Testing {{FUNCTION_3_TITLE}} ===")
+creature = TamedCreature("{{creature}}", 80, 40, "{{hero}}")
+if creature.species:
+    print(f"Species: {creature.species}")
+    print(f"Owner: {creature.owner}")
+    print(f"Is wild: {creature.is_wild}")
+    print(f"Loyalty: {creature.loyalty}")
+else:
+    print("  (Complete the __init__ method)")
 
-    print("\n=== Testing {{FUNCTION_3_TITLE}} ===")
-    creature = TamedCreature("{{creature}}", 80, 40, "{{hero}}")
-    if creature.species:
-        print(f"Species: {creature.species}")
-        print(f"Owner: {creature.owner}")
-        print(f"Is wild: {creature.is_wild}")
-        print(f"Loyalty: {creature.loyalty}")
-    else:
-        print("  (Complete the __init__ method)")
+print("\n=== Testing {{FUNCTION_4_TITLE}} ===")
+item = EnchantedItem("{{item}}", 100, 2)
+if item.name:
+    print(f"Name: {item.name}")
+    print(f"Base value: {item.base_value}")
+    print(f"Enchantment: +{item.enchantment_level}")
+    print(f"Actual value: {item.get_value()}")
+else:
+    print("  (Complete the __init__ and get_value methods)")
 
-    print("\n=== Testing {{FUNCTION_4_TITLE}} ===")
-    item = EnchantedItem("{{item}}", 100, 2)
-    if item.name:
-        print(f"Name: {item.name}")
-        print(f"Base value: {item.base_value}")
-        print(f"Enchantment: +{item.enchantment_level}")
-        print(f"Actual value: {item.get_value()}")
-    else:
-        print("  (Complete the __init__ and get_value methods)")
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

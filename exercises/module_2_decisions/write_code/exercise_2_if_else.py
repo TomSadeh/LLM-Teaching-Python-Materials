@@ -5,139 +5,118 @@
 # Concepts: if/else, two-branch decisions, mutual exclusion
 # =============================================================================
 
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
-
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
+#
+# {{CONTEXT_STUDENT_TASK}}
+#
+# {{hero}} צריכה לבדוק אם היא יכולה להיכנס ל-{{location}}.
+# הכניסה דורשת לפחות 100 זהב.
+#
+# 1. צרי משתנה בשם `gold` עם הערך 150
+# 2. כתבי משפט `if`: `if gold >= 100:`
+# 3. בתוך בלוק ה-`if`, הדפיסי `"{{hero}} enters {{location}}"`
+# 4. הוסיפי פסוקית `else`
+# 5. בתוך בלוק ה-`else`, הדפיסי `"{{hero}} cannot afford entry"`
+#
+# פלט צפוי כש-`gold` שווה 150:
+#   {{hero}} enters {{location}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # {{CONTEXT_STUDENT_TASK}}
-    #
-    # {{hero}} needs to check if they can enter {{location}}.
-    # Entry requires at least 100 gold.
-    #
-    # Step 1: Create a variable called gold with the value 150
-    # Step 2: Write an if statement: if gold >= 100:
-    # Step 3: Inside the if block, print "{{hero}} enters {{location}}"
-    # Step 4: Add an else clause
-    # Step 5: Inside the else block, print "{{hero}} cannot afford entry"
-    #
-    # Expected output when gold is 150:
-    #   {{hero}} enters {{location}}
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
+#
+# {{CONTEXT_STUDENT_TASK}}
+#
+# {{mentor}} בודקת את המבחן של {{hero}}.
+# ציון של 60 ומעלה נחשב לעובר.
+#
+# 1. צרי משתנה בשם `score` עם הערך 55
+# 2. הדפיסי `f"{{hero}}'s score: {score}"`
+# 3. כתבי `if/else` שבודק אם `score >= 60`
+# 4. אם נכון, הדפיסי `"Congratulations! You passed!"`
+# 5. אחרת, הדפיסי `"Keep practicing. You'll get it next time!"`
+# 6. אחרי ה-`if/else`, הדפיסי `"{{mentor}} records the result."`
+#
+# פלט צפוי כש-`score` שווה 55:
+#   {{hero}}'s score: 55
+#   Keep practicing. You'll get it next time!
+#   {{mentor}} records the result.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # {{CONTEXT_STUDENT_TASK}}
-    #
-    # {{mentor}} is grading {{hero}}'s exam.
-    # A score of 60 or higher is passing.
-    #
-    # Step 1: Create a variable called score with the value 55
-    # Step 2: Print f"{{hero}}'s score: {score}"
-    # Step 3: Write an if/else to check if score >= 60
-    # Step 4: If true, print "Congratulations! You passed!"
-    # Step 5: Else, print "Keep practicing. You'll get it next time!"
-    # Step 6: After the if/else, print "{{mentor}} records the result."
-    #
-    # Expected output when score is 55:
-    #   {{hero}}'s score: 55
-    #   Keep practicing. You'll get it next time!
-    #   {{mentor}} records the result.
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
+#
+# {{CONTEXT_STUDENT_TASK}}
+#
+# בדקי אם {{hero}} יודעת את הסיסמה כדי להיכנס ל-{{school}}.
+# השתמשי ב-`==` כדי להשוות מחרוזות.
+#
+# 1. צרי משתנה בשם `secret` עם הערך `"{{password}}"`
+# 2. צרי משתנה בשם `attempt` עם הערך `"{{password}}"`
+# 3. כתבי `if/else` שבודק אם `attempt == secret`
+# 4. אם נכון, הדפיסי `"{{greeting}}"`
+# 5. אחרת, הדפיסי `"Access denied. Incorrect password."`
+#
+# פלט צפוי כשהסיסמאות תואמות:
+#   {{greeting}}
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # {{CONTEXT_STUDENT_TASK}}
-    #
-    # Check if {{hero}} knows the password to enter {{school}}.
-    # Use == to compare strings.
-    #
-    # Step 1: Create a variable called secret with the value "{{password}}"
-    # Step 2: Create a variable called attempt with the value "{{password}}"
-    # Step 3: Write an if/else to check if attempt == secret
-    # Step 4: If true, print "{{greeting}}"
-    # Step 5: Else, print "Access denied. Incorrect password."
-    #
-    # Expected output when passwords match:
-    #   {{greeting}}
-    pass
-
-
-# ============================================================
-# {{PHASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
+#
+# {{CONTEXT_STUDENT_TASK}}
+#
+# {{hero}} רוצה לקנות {{item}} שעולה 80 זהב.
+# עדכני את `gold` אם הרכישה מצליחה.
+#
+# 1. צרי משתנה בשם `gold` עם הערך 100
+# 2. צרי משתנה בשם `price` עם הערך 80
+# 3. הדפיסי `f"{{hero}} has {gold} gold"`
+# 4. כתבי `if/else` שבודק אם `gold >= price`
+# 5. אם נכון:
+#    - חסרי את `price` מ-`gold`: `gold = gold - price`
+#    - הדפיסי `"Purchased {{item}}!"`
+# 6. אחרת:
+#    - הדפיסי `"Not enough gold!"`
+# 7. אחרי ה-`if/else`, הדפיסי `f"Remaining gold: {gold}"`
+#
+# פלט צפוי כש-`gold` שווה 100 ו-`price` שווה 80:
+#   {{hero}} has 100 gold
+#   Purchased {{item}}!
+#   Remaining gold: 20
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_d():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # {{CONTEXT_STUDENT_TASK}}
-    #
-    # {{hero}} wants to buy a {{item}} that costs 80 gold.
-    # Update gold if purchase is successful.
-    #
-    # Step 1: Create a variable called gold with the value 100
-    # Step 2: Create a variable called price with the value 80
-    # Step 3: Print f"{{hero}} has {gold} gold"
-    # Step 4: Write an if/else to check if gold >= price
-    # Step 5: If true:
-    #         - Subtract price from gold: gold = gold - price
-    #         - Print "Purchased {{item}}!"
-    # Step 6: Else:
-    #         - Print "Not enough gold!"
-    # Step 7: After if/else, print f"Remaining gold: {gold}"
-    #
-    # Expected output when gold is 100 and price is 80:
-    #   {{hero}} has 100 gold
-    #   Purchased {{item}}!
-    #   Remaining gold: 20
-    pass
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
+print("\n=== {{PHASE_1_TITLE}} ===")
+exercise_a()
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_2_TITLE}} ===")
+exercise_b()
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    exercise_a()
+print("\n=== {{PHASE_3_TITLE}} ===")
+exercise_c()
 
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    exercise_b()
+print("\n=== {{PHASE_4_TITLE}} ===")
+exercise_d()
 
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    exercise_c()
-
-    print("\n=== {{PHASE_4_TITLE}} ===")
-    exercise_d()
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

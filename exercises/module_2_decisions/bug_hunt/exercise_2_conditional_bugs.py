@@ -5,262 +5,247 @@
 # Concepts: Common conditional mistakes across all types
 # =============================================================================
 
-"""
-{{CONTEXT_INVESTIGATION_INTRO}}
-{{CONTEXT_INVESTIGATION_MISSION}}
-"""
-
-
-# ============================================================
-# {{CASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_INVESTIGATION_INTRO}}
+# {{CONTEXT_INVESTIGATION_MISSION}}
+#
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# {{hero}} checks if their score qualifies for a bonus.
-# Score of exactly 100 should get the bonus too!
+# {{hero}} בודקת אם הניקוד שלה מזכה אותה בבונוס.
+# ניקוד של בדיוק 100 אמור גם הוא לזכות בבונוס!
 #
-# EXPECTED BEHAVIOR:
-# With score=100, should print "Bonus earned!"
+# התנהגות צפויה:
+# כאשר score=100, אמורה להודפס ההודעה "Bonus earned!"
 #
-# ACTUAL BEHAVIOR:
-# With score=100, prints "No bonus."
+# התנהגות בפועל:
+# כאשר score=100, מודפסת ההודעה "No bonus."
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
-def buggy_a():
-    """This code has exactly ONE bug. Find it!"""
-    score = 100
-    if score > 100:  # BUG: Wrong operator
-        print("{{hero}} earned a bonus!")
-    else:
-        print("No bonus this time.")
+# %%
+score = 100
+if score > 100:  # BUG: Wrong operator
+    print("{{hero}} earned a bonus!")
+else:
+    print("No bonus this time.")
 
+# %% [markdown]
+# מה מצאתי: שימוש ב-`>` במקום ב-`>=`
+# הבאג: `>` פירושו "גדול מ-" ולא כולל שוויון.
+#        ‏score=100 אינו `> 100`, ולכן התנאי נכשל.
+#
+# התיקון:
 
-def fix_a():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: Using > instead of >=
-    # The bug: > means "greater than" but doesn't include equal
-    #          score=100 is NOT > 100, so it fails
-    #
-    # The fix:
-    score = 100
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+score = 100
+pass
 
-# ============================================================
-# {{CASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# {{mentor}} wants to give different messages based on grade.
-# But the conditions are in the wrong order!
+# {{mentor}} רוצה לתת הודעות שונות לפי הציון, אבל הסדר של התנאים לא נכון!
 #
-# EXPECTED BEHAVIOR:
-# With score=95, should print "Excellent!" (highest tier)
+# התנהגות צפויה:
+# כאשר score=95, אמורה להודפס ההודעה "Excellent!" (הדרגה הגבוהה ביותר)
 #
-# ACTUAL BEHAVIOR:
-# With score=95, prints "Good job!" (wrong tier)
+# התנהגות בפועל:
+# כאשר score=95, מודפסת ההודעה "Good job!" (דרגה שגויה)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
-def buggy_b():
-    """This code has exactly ONE bug. Find it!"""
-    score = 95
-    # BUG: Conditions in wrong order - first match wins!
-    if score >= 60:
-        print("Good job!")
-    elif score >= 80:
-        print("Great work!")
-    elif score >= 90:
-        print("Excellent!")
-    else:
-        print("Keep practicing.")
+# %%
+score = 95
+# BUG: Conditions in wrong order - first match wins!
+if score >= 60:
+    print("Good job!")
+elif score >= 80:
+    print("Great work!")
+elif score >= 90:
+    print("Excellent!")
+else:
+    print("Keep practicing.")
 
+# %% [markdown]
+# מה מצאתי: יש לבדוק את הסף הגבוה ביותר ראשון.
+# הבאג: ‏score=95 מתאים לתנאי `score >= 60` ראשון, ולכן הקוד עוצר שם.
+#        תנאי ה-`elif` לא נבדקים בכלל.
+#
+# התיקון (יש לבדוק את הסף הגבוה ביותר ראשון):
 
-def fix_b():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: Conditions should check highest first
-    # The bug: score=95 matches "score >= 60" first, so it stops there
-    #          The elif conditions are never checked
-    #
-    # The fix (check highest thresholds first):
-    score = 95
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+score = 95
+pass
 
-# ============================================================
-# {{CASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# {{hero}} tries to update their gold after a purchase.
-# But the gold doesn't actually change!
+# {{hero}} מנסה לעדכן את הזהב שלה אחרי רכישה, אבל הזהב לא משתנה בכלל!
 #
-# EXPECTED BEHAVIOR:
-# After buying, gold should be 70 (100 - 30)
+# התנהגות צפויה:
+# אחרי הרכישה, הזהב אמור להיות 70 (100 - 30)
 #
-# ACTUAL BEHAVIOR:
-# After buying, gold is still 100
+# התנהגות בפועל:
+# אחרי הרכישה, הזהב עדיין 100
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
-def buggy_c():
-    """This code has exactly ONE bug. Find it!"""
-    gold = 100
-    item_price = 30
+# %%
+gold = 100
+item_price = 30
 
-    if gold >= item_price:
-        print("{{hero}} buys the {{item}}!")
-        # BUG: Forgot to actually subtract!
-        # gold - item_price  # This calculates but doesn't save!
+if gold >= item_price:
+    print("{{hero}} buys the {{item}}!")
+    # BUG: Forgot to actually subtract!
+    # gold - item_price  # This calculates but doesn't save!
 
-    print(f"Gold remaining: {gold}")
+print(f"Gold remaining: {gold}")
 
+# %% [markdown]
+# מה מצאתי: החישוב לא שומר את התוצאה.
+# הבאג: `gold - item_price` מחשב אבל לא שומר,
+#        צריך לכתוב `gold = gold - item_price` כדי לשמור את התוצאה.
+#
+# התיקון:
 
-def fix_c():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: The calculation doesn't save the result
-    # The bug: "gold - item_price" calculates but doesn't assign
-    #          Need: "gold = gold - item_price" to save the result
-    #
-    # The fix:
-    gold = 100
-    item_price = 30
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+gold = 100
+item_price = 30
+pass
 
-# ============================================================
-# {{CASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# {{hero}} has code to check if two passwords match.
-# But the code has a syntax issue with comparison!
+# ל-{{hero}} יש קוד שבודק אם שתי סיסמאות תואמות, אבל יש בו בעיית תחביר בהשוואה!
 #
-# EXPECTED BEHAVIOR:
-# Correct password should print "Access granted!"
+# התנהגות צפויה:
+# סיסמה נכונה אמורה להדפיס "Access granted!"
 #
-# ACTUAL BEHAVIOR:
-# This code won't even run - syntax error!
+# התנהגות בפועל:
+# הקוד לא רץ בכלל — שגיאת תחביר!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
-def buggy_d():
-    """This code has exactly ONE bug. Find it!"""
-    # NOTE: This code is commented because it would cause a syntax error
-    #
-    # password = "{{password}}"
-    # attempt = "{{password}}"
-    #
-    # if attempt = password:  # BUG: = instead of ==
-    #     print("Access granted to {{location}}!")
-    # else:
-    #     print("Access denied!")
+# %%
+# NOTE: This code is commented because it would cause a syntax error
+#
+# password = "{{password}}"
+# attempt = "{{password}}"
+#
+# if attempt = password:  # BUG: = instead of ==
+#     print("Access granted to {{location}}!")
+# else:
+#     print("Access denied!")
 
-    # The bug is using = (assignment) instead of == (comparison)
-    print("(This function shows a common bug - see comments)")
+# The bug is using = (assignment) instead of == (comparison)
+print("(This function shows a common bug - see comments)")
 
+# %% [markdown]
+# מה מצאתי: שימוש ב-`=` במקום ב-`==`.
+# הבאג: `=` הוא השמה (קביעת ערך), `==` הוא השוואה (בדיקת שוויון).
+#        בתנאי צריך להשוות, לא להשים.
+#
+# התיקון:
 
-def fix_d():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: Using = instead of ==
-    # The bug: = is assignment (set value), == is comparison (check equality)
-    #          In a condition, we need to COMPARE, not assign
-    #
-    # The fix:
-    password = "{{password}}"
-    attempt = "{{password}}"
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+password = "{{password}}"
+attempt = "{{password}}"
+pass
 
-# ============================================================
-# {{CASE_5_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_5_TITLE}}
 # {{CONTEXT_CASE_5_NARRATIVE}}
 #
-# {{hero}}'s level-up code should trigger at level 10.
-# But it never prints the level-up message!
+# קוד ה-level-up של {{hero}} אמור לפעול כשמגיעים לרמה 10, אבל הודעת ה-level-up לא מודפסת!
 #
-# EXPECTED BEHAVIOR:
-# When level reaches 10, should print "Level up!"
+# התנהגות צפויה:
+# כשה-level מגיע ל-10, אמורה להודפס ההודעה "Level up!"
 #
-# ACTUAL BEHAVIOR:
-# The message never appears
+# התנהגות בפועל:
+# ההודעה לא מופיעה בכלל
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_5}}
 
-def buggy_e():
-    """This code has exactly ONE bug. Find it!"""
-    level = 9
+# %%
+level = 9
 
-    # {{hero}} gains experience...
-    level = level + 1  # Now level is 10
+# {{hero}} gains experience...
+level = level + 1  # Now level is 10
 
-    # BUG: Checking wrong variable/value
-    if level == 9:
-        print("{{hero}} leveled up! Now level 10!")
+# BUG: Checking wrong variable/value
+if level == 9:
+    print("{{hero}} leveled up! Now level 10!")
 
-    print(f"Current level: {level}")
+print(f"Current level: {level}")
 
+# %% [markdown]
+# מה מצאתי: בדיקה אם `level == 9` אחרי שכבר הוסיפו 1.
+# הבאג: אחרי `level + 1`, הרמה היא 10, לא 9.
+#        התנאי צריך לבדוק `== 10`.
+#
+# התיקון:
 
-def fix_e():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: Checking if level == 9 after adding 1
-    # The bug: After level + 1, level is 10, not 9
-    #          The condition should check == 10
-    #
-    # The fix:
-    level = 9
-    level = level + 1
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+level = 9
+level = level + 1
+pass
 
-def main():
-    print("{{CONTEXT_INVESTIGATION_INTRO}}")
-    print("=" * 50)
+# %%
+print("{{CONTEXT_INVESTIGATION_INTRO}}")
+print("=" * 50)
 
-    print("\n=== {{CASE_1_TITLE}} ===")
-    print("Expected: 'Bonus earned' when score is 100")
-    print("Buggy version:")
-    buggy_a()
-    print("\nFixed version:")
-    # fix_a()
+print("\n=== {{CASE_1_TITLE}} ===")
+print("Expected: 'Bonus earned' when score is 100")
+print("Buggy version:")
+buggy_a()
+print("\nFixed version:")
+# fix_a()
 
-    print("\n=== {{CASE_2_TITLE}} ===")
-    print("Expected: 'Excellent' for score of 95")
-    print("Buggy version:")
-    buggy_b()
-    print("\nFixed version:")
-    # fix_b()
+print("\n=== {{CASE_2_TITLE}} ===")
+print("Expected: 'Excellent' for score of 95")
+print("Buggy version:")
+buggy_b()
+print("\nFixed version:")
+# fix_b()
 
-    print("\n=== {{CASE_3_TITLE}} ===")
-    print("Expected: Gold should be 70 after purchase")
-    print("Buggy version:")
-    buggy_c()
-    print("\nFixed version:")
-    # fix_c()
+print("\n=== {{CASE_3_TITLE}} ===")
+print("Expected: Gold should be 70 after purchase")
+print("Buggy version:")
+buggy_c()
+print("\nFixed version:")
+# fix_c()
 
-    print("\n=== {{CASE_4_TITLE}} ===")
-    print("Expected: Working password comparison")
-    print("Buggy version:")
-    buggy_d()
-    print("\nFixed version:")
-    # fix_d()
+print("\n=== {{CASE_4_TITLE}} ===")
+print("Expected: Working password comparison")
+print("Buggy version:")
+buggy_d()
+print("\nFixed version:")
+# fix_d()
 
-    print("\n=== {{CASE_5_TITLE}} ===")
-    print("Expected: 'Level up' message when reaching level 10")
-    print("Buggy version:")
-    buggy_e()
-    print("\nFixed version:")
-    # fix_e()
+print("\n=== {{CASE_5_TITLE}} ===")
+print("Expected: 'Level up' message when reaching level 10")
+print("Buggy version:")
+buggy_e()
+print("\nFixed version:")
+# fix_e()
 
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_INVESTIGATION_COMPLETE}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_INVESTIGATION_COMPLETE}}")

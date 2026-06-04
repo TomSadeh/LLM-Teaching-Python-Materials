@@ -1,288 +1,215 @@
-"""
-{{CONTEXT_INVESTIGATION_INTRO}}
-{{CONTEXT_INVESTIGATION_MISSION}}
+# %% [markdown]
+# {{CONTEXT_INVESTIGATION_INTRO}}
+# {{CONTEXT_INVESTIGATION_MISSION}}
+#
+# נושא: מציאת באגים בשימוש במודול `random`
+# רמת קושי: 2-3
+#
+# כמה מלכודות נפוצות במודול `random`:
+# - `randint` כולל את שני הקצוות (שלא כמו `range`)
+# - שכחה לייבא את `random`
+# - שימוש בפונקציה הלא-נכונה למשימה
 
-Topic: Finding bugs in random module usage
-Difficulty: 2-3
-
-The random module has some common pitfalls:
-- randint is INCLUSIVE on both ends (unlike range)
-- Forgetting to import random
-- Using wrong function for the task
-"""
-
+# %%
 import random
 
-
-# ============================================================
-# {{CASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# This die roller should roll from 1 to 6, but something's off.
+# קוביה זו אמורה להטיל ערכים בין 1 ל-6, אבל משהו לא בסדר.
 #
-# EXPECTED BEHAVIOR:
-# Return values from 1 to 6 (inclusive)
+# התנהגות צפויה:
+# מחזירה ערכים מ-1 עד 6 (כולל)
 #
-# ACTUAL BEHAVIOR:
-# Returns values from 0 to 5 (never returns 6!)
+# התנהגות בפועל:
+# מחזירה ערכים מ-0 עד 5 (לעולם לא מחזירה 6!)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
+# %%
+return random.randint(0, 5)  # BUG: Range should be 1 to 6
 
-def buggy_roll_die():
-    """This code has exactly ONE bug. Find it!"""
-    return random.randint(0, 5)  # BUG: Range should be 1 to 6
+# %% [markdown]
+# מה מצאתי: ________________________________
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_roll_die():
-    """
-    Fix the die roller to return 1-6.
-
-    Returns:
-        int: A random number from 1 to 6 (inclusive)
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # The fix:
-    pass
-
-
-# ============================================================
-# {{CASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# This picker should select from a list, but picks indices instead.
+# הבוחרת הזו אמורה לבחור פריט מרשימה, אבל היא בוחרת אינדקסים במקום.
 #
-# EXPECTED BEHAVIOR:
-# Return one of: "{{hero}}", "{{villain}}", "{{friend}}"
+# התנהגות צפויה:
+# מחזירה אחד מהם: `"{{hero}}"`, `"{{villain}}"`, `"{{friend}}"`
 #
-# ACTUAL BEHAVIOR:
-# Returns 0, 1, or 2 (the indices, not the names!)
+# התנהגות בפועל:
+# מחזירה 0, 1 או 2 (האינדקסים, לא השמות!)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
+# %%
+characters = ["{{hero}}", "{{villain}}", "{{friend}}"]
+return random.randint(0, len(characters) - 1)  # BUG: Returns index, not item
 
-def buggy_pick_character():
-    """This code has exactly ONE bug. Find it!"""
-    characters = ["{{hero}}", "{{villain}}", "{{friend}}"]
-    return random.randint(0, len(characters) - 1)  # BUG: Returns index, not item
+# %% [markdown]
+# מה מצאתי: ________________________________
+#
+# > רמז: השתמשי ב-`random.choice()` במקום `randint` כדי לבחור מרשימה
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_pick_character():
-    """
-    Fix the picker to return an actual character name.
-
-    Returns:
-        str: A randomly chosen character name
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # Hint: Use random.choice() instead of randint for picking from lists
-    #
-    # The fix:
-    pass
-
-
-# ============================================================
-# {{CASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# This chance function should return True about 70% of the time.
+# פונקציית ההסתברות הזו אמורה להחזיר `True` בכ-70% מהמקרים.
 #
-# EXPECTED BEHAVIOR:
-# Returns True approximately 70% of the time
+# התנהגות צפויה:
+# מחזירה `True` בערך ב-70% מהפעמים
 #
-# ACTUAL BEHAVIOR:
-# Returns True approximately 30% of the time (inverted!)
+# התנהגות בפועל:
+# מחזירה `True` בערך ב-30% מהפעמים (הפוך!)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
+# %%
+roll = random.random()
+return roll > 0.7  # BUG: Condition is inverted! Should be < 0.7
 
-def buggy_seventy_percent_chance():
-    """This code has exactly ONE bug. Find it!"""
-    roll = random.random()
-    return roll > 0.7  # BUG: Condition is inverted! Should be < 0.7
+# %% [markdown]
+# מה מצאתי: ________________________________
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_seventy_percent_chance():
-    """
-    Fix the function to return True about 70% of the time.
-
-    Returns:
-        bool: True approximately 70% of the time
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # The fix:
-    pass
-
-
-# ============================================================
-# {{CASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# This damage calculator has an off-by-one error in its range.
+# מחשבון הנזק הזה סובל משגיאת off-by-one בטווח שלו.
 #
-# EXPECTED BEHAVIOR:
-# Deal base damage plus 1-5 bonus (so 11-15 if base is 10)
+# התנהגות צפויה:
+# מחלק נזק בסיס ועוד בונוס של 1-5 (כלומר 11-15 אם הבסיס הוא 10)
 #
-# ACTUAL BEHAVIOR:
-# Deals base damage plus 1-6 bonus (includes 6, which is too high)
+# התנהגות בפועל:
+# מחלק נזק בסיס ועוד בונוס של 1-6 (כולל 6, שהוא גבוה מדי)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
+# %%
+bonus = random.randint(1, 6)  # BUG: Should be 1-5, not 1-6
+return base_damage + bonus
 
-def buggy_calculate_damage(base_damage):
-    """This code has exactly ONE bug. Find it!"""
-    bonus = random.randint(1, 6)  # BUG: Should be 1-5, not 1-6
-    return base_damage + bonus
+# %% [markdown]
+# מה מצאתי: ________________________________
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_calculate_damage(base_damage):
-    """
-    Fix the damage calculator.
-
-    Args:
-        base_damage: The base damage amount
-
-    Returns:
-        int: base_damage plus a random bonus from 1 to 5
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # The fix:
-    pass
-
-
-# ============================================================
-# {{CASE_5_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_5_TITLE}}
 # {{CONTEXT_CASE_5_NARRATIVE}}
 #
-# This coin flipper should return "heads" or "tails" randomly.
+# מטיל המטבע הזה אמור להחזיר `"heads"` או `"tails"` באופן אקראי.
 #
-# EXPECTED BEHAVIOR:
-# Return "heads" or "tails" with equal probability
+# התנהגות צפויה:
+# מחזירה `"heads"` או `"tails"` בהסתברות שווה
 #
-# ACTUAL BEHAVIOR:
-# Always returns "heads" (the variable is assigned but never used)
+# התנהגות בפועל:
+# תמיד מחזירה `"heads"` (המשתנה מוגדר אבל לא נעשה בו שימוש)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_5}}
 
+# %%
+result = random.choice(["heads", "tails"])
+return "heads"  # BUG: Ignores the random result, always returns "heads"
 
-def buggy_flip_coin():
-    """This code has exactly ONE bug. Find it!"""
-    result = random.choice(["heads", "tails"])
-    return "heads"  # BUG: Ignores the random result, always returns "heads"
+# %% [markdown]
+# מה מצאתי: ________________________________
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_flip_coin():
-    """
-    Fix the coin flipper.
-
-    Returns:
-        str: Either "heads" or "tails" randomly
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # The fix:
-    pass
-
-
-# ============================================================
-# {{CASE_6_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_6_TITLE}}
 # {{CONTEXT_CASE_6_NARRATIVE}}
 #
-# This stat generator should create balanced stats (total around 30).
+# מחולל הסטטיסטיקות הזה אמור ליצור ערכים מאוזנים (סך-הכל בסביבות 30).
 #
-# EXPECTED BEHAVIOR:
-# Generate three stats of 8-12 each, total 24-36
+# התנהגות צפויה:
+# מייצר שלושה ערכים של 8-12 כל אחד, סך-הכל 24-36
 #
-# ACTUAL BEHAVIOR:
-# All three stats are the SAME value (rolled once, used three times)
+# התנהגות בפועל:
+# כל שלושת הערכים זהים (הגלגול בוצע פעם אחת ושימש שלוש פעמים)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_6}}
 
+# %%
+roll = random.randint(8, 12)
+return {
+    "strength": roll,  # BUG: Same roll used for all three!
+    "agility": roll,
+    "wisdom": roll
+}
 
-def buggy_generate_balanced_stats():
-    """This code has exactly ONE bug. Find it!"""
-    roll = random.randint(8, 12)
-    return {
-        "strength": roll,  # BUG: Same roll used for all three!
-        "agility": roll,
-        "wisdom": roll
-    }
+# %% [markdown]
+# מה מצאתי: ________________________________
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_generate_balanced_stats():
-    """
-    Fix the stat generator to give different values.
+# %%
+print("{{CONTEXT_INVESTIGATION_INTRO}}")
+print("=" * 50)
 
-    Returns:
-        dict: Three stats, each independently rolled 8-12
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # The fix:
-    pass
+print("\n=== {{CASE_1_TITLE}} ===")
+print("Testing die roller (should be 1-6):")
+results = [buggy_roll_die() for _ in range(10)]
+print(f"Buggy rolls: {results}")
+print("Notice: never gets 6, sometimes gets 0!")
 
+print("\n=== {{CASE_2_TITLE}} ===")
+print("Testing character picker:")
+print(f"Buggy result: {buggy_pick_character()} (should be a name, not number)")
 
-def main():
-    print("{{CONTEXT_INVESTIGATION_INTRO}}")
-    print("=" * 50)
+print("\n=== {{CASE_3_TITLE}} ===")
+print("Testing 70% chance (100 trials):")
+successes = sum(1 for _ in range(100) if buggy_seventy_percent_chance())
+print(f"Buggy successes: {successes}/100 (should be ~70)")
 
-    print("\n=== {{CASE_1_TITLE}} ===")
-    print("Testing die roller (should be 1-6):")
-    results = [buggy_roll_die() for _ in range(10)]
-    print(f"Buggy rolls: {results}")
-    print("Notice: never gets 6, sometimes gets 0!")
+print("\n=== {{CASE_4_TITLE}} ===")
+print("Testing damage calculator (base 10):")
+damages = [buggy_calculate_damage(10) for _ in range(10)]
+print(f"Buggy damages: {damages}")
+print("Notice: might include 16 (10+6), which shouldn't be possible!")
 
-    print("\n=== {{CASE_2_TITLE}} ===")
-    print("Testing character picker:")
-    print(f"Buggy result: {buggy_pick_character()} (should be a name, not number)")
+print("\n=== {{CASE_5_TITLE}} ===")
+print("Testing coin flipper (10 flips):")
+flips = [buggy_flip_coin() for _ in range(10)]
+print(f"Buggy flips: {flips}")
+print("Notice: always heads!")
 
-    print("\n=== {{CASE_3_TITLE}} ===")
-    print("Testing 70% chance (100 trials):")
-    successes = sum(1 for _ in range(100) if buggy_seventy_percent_chance())
-    print(f"Buggy successes: {successes}/100 (should be ~70)")
+print("\n=== {{CASE_6_TITLE}} ===")
+print("Testing stat generator:")
+stats = buggy_generate_balanced_stats()
+print(f"Buggy stats: {stats}")
+print("Notice: all stats are identical!")
 
-    print("\n=== {{CASE_4_TITLE}} ===")
-    print("Testing damage calculator (base 10):")
-    damages = [buggy_calculate_damage(10) for _ in range(10)]
-    print(f"Buggy damages: {damages}")
-    print("Notice: might include 16 (10+6), which shouldn't be possible!")
-
-    print("\n=== {{CASE_5_TITLE}} ===")
-    print("Testing coin flipper (10 flips):")
-    flips = [buggy_flip_coin() for _ in range(10)]
-    print(f"Buggy flips: {flips}")
-    print("Notice: always heads!")
-
-    print("\n=== {{CASE_6_TITLE}} ===")
-    print("Testing stat generator:")
-    stats = buggy_generate_balanced_stats()
-    print(f"Buggy stats: {stats}")
-    print("Notice: all stats are identical!")
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_INVESTIGATION_COMPLETE}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_INVESTIGATION_COMPLETE}}")

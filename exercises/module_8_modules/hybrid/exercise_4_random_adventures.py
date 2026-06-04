@@ -1,282 +1,166 @@
-"""
-{{CONTEXT_PROJECT_INTRO}}
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+#
+# זוהי תרגילה רב-חלקית שבה את מרחיבה את מערכת המשחק של {{school}}
+# עם פיצ'רים של אקראיות מתקדמים. תשתמשי ב-`choice()`, ב-`shuffle()`,
+# וב-`sample()` כדי ליצור מכניקות משחק מעניינות.
+#
+# מושגי תכנות: מודול `random`, מכניקות משחק, עבודה עם רשימות
+# רמת קושי: 2-3
 
-This is a multi-part exercise where you expand {{school}}'s game
-system with advanced random features. You'll use choice(), shuffle(),
-and sample() to create engaging game mechanics.
-
-Programming concepts: random module, game mechanics, list manipulation
-Difficulty: 2-3
-"""
-
+# %%
 import random
 
-
-# ============================================================
-# PART 1: Growth - Random Selection with choice()
-# ============================================================
+# %% [markdown]
+# ## חלק 1: צמיחה - בחירה אקראית עם `choice()`
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Use random.choice() to select random items from collections.
+# השתמשי ב-`random.choice()` כדי לבחור פריטים אקראיים מתוך אוספים.
+#
+# 1. צרי רשימות של אפשרויות:
+#    `creatures = ["{{creature}}", "guardian", "wanderer", "spirit"]`
+#    `actions = ["approaches", "appears", "emerges", "awaits"]`
+#    `locations = ["{{location}}", "the path", "the shadows", "ahead"]`
+# 2. השתמשי ב-`random.choice()` כדי לבחור מכל רשימה
+# 3. בני והחזירי משפט:
+#    `f"A {creature} {action} from {location}!"`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def get_random_encounter():
-    """
-    Generate a random encounter for {{hero}}.
+# %% [markdown]
+# 1. צרי רשימה ממושקלת:
+#    `outcomes = ["success"] * 3 + ["partial"] * 2 + ["failure"] * 1`
+#    כך מתקבל: 50% הצלחה, 33% חלקי, 17% כישלון
+# 2. השתמשי ב-`random.choice(outcomes)`
+# 3. החזירי את התוצאה
 
-    Returns:
-        str: Description of the encounter
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Create lists of options:
-    #         creatures = ["{{creature}}", "guardian", "wanderer", "spirit"]
-    #         actions = ["approaches", "appears", "emerges", "awaits"]
-    #         locations = ["{{location}}", "the path", "the shadows", "ahead"]
-    #
-    # Step 2: Use random.choice() to pick from each list
-    #
-    # Step 3: Build and return a sentence:
-    #         f"A {creature} {action} from {location}!"
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %% [markdown]
+# 1. צרי מאגרי פרסים לכל דרגה:
+#    `common = ["gold coins", "health potion", "basic scroll"]`
+#    `rare = ["{{item}}", "enchanted gem", "silver key"]`
+#    `legendary = ["ancient artifact", "{{spell3}}", "master key"]`
+# 2. בחרי את המאגר המתאים לפי הדרגה
+# 3. השתמשי ב-`random.choice()` על המאגר שבחרת
+# 4. החזירי את הפרס
 
-def random_event_outcome():
-    """
-    Determine a random outcome with weighted probabilities.
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        str: "success", "partial", or "failure"
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Create a weighted list:
-    #         outcomes = ["success"] * 3 + ["partial"] * 2 + ["failure"] * 1
-    #         This gives: 50% success, 33% partial, 17% failure
-    #
-    # Step 2: Use random.choice(outcomes)
-    #
-    # Step 3: Return the result
-    pass
-
-
-def select_reward(tier="common"):
-    """
-    Select a random reward based on tier.
-
-    Args:
-        tier: "common", "rare", or "legendary"
-
-    Returns:
-        str: The selected reward
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Create reward pools for each tier:
-    #         common = ["gold coins", "health potion", "basic scroll"]
-    #         rare = ["{{item}}", "enchanted gem", "silver key"]
-    #         legendary = ["ancient artifact", "{{spell3}}", "master key"]
-    #
-    # Step 2: Select the right pool based on tier
-    #
-    # Step 3: Use random.choice() on that pool
-    #
-    # Step 4: Return the reward
-    pass
-
-
-# ============================================================
-# PART 2: Growth - Shuffling with shuffle()
-# ============================================================
+# %% [markdown]
+# ## חלק 2: צמיחה - ערבוב עם `shuffle()`
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Use random.shuffle() to randomize order for fair gameplay.
+# השתמשי ב-`random.shuffle()` כדי לערבב סדר לגיימפליי הוגן.
+#
+# 1. צרי עותק: `deck = items.copy()` או `list(items)`
+#    (הפונקציה `shuffle` משנה את הרשימה במקום - לא נרצה לשנות את המקור)
+# 2. ערבבי את העותק: `random.shuffle(deck)`
+# 3. החזירי את החפיסה המעורבבת
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def create_shuffled_deck(items):
-    """
-    Create a shuffled copy of a deck/list.
+# %% [markdown]
+# השתמשי ב-`create_shuffled_deck` כדי לקבל סדר אקראי
 
-    Args:
-        items: List of items to shuffle
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        list: A new shuffled list (original unchanged)
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Make a copy: deck = items.copy() or list(items)
-    #         (shuffle modifies in place, we don't want to change original)
-    #
-    # Step 2: Shuffle the copy: random.shuffle(deck)
-    #
-    # Step 3: Return the shuffled deck
-    pass
+# %% [markdown]
+# החזירי עותק מעורבב של `challenges`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def determine_turn_order(players):
-    """
-    Randomly determine who goes first.
-
-    Args:
-        players: List of player names
-
-    Returns:
-        list: Players in random turn order
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Use create_shuffled_deck to get random order
-    pass
-
-
-def shuffle_challenges(challenges):
-    """
-    Shuffle a list of challenges for variety.
-
-    Args:
-        challenges: List of challenge descriptions
-
-    Returns:
-        list: Shuffled challenges
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Return a shuffled copy of challenges
-    pass
-
-
-# ============================================================
-# PART 3: Growth - Sampling with sample()
-# ============================================================
+# %% [markdown]
+# ## חלק 3: צמיחה - דגימה עם `sample()`
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Use random.sample() for lottery-style selections.
+# השתמשי ב-`random.sample()` לבחירות בסגנון הגרלה.
+#
+# 1. ודאי שה-`count` לא גדול מגודל ה-`pool`:
+#    `if count > len(pool):`
+#    `    count = len(pool)`
+# 2. השתמשי ב-`random.sample(pool, count)`
+# 3. החזירי את התוצאה
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def draw_items(pool, count):
-    """
-    Draw a number of unique items from a pool.
+# %% [markdown]
+# השתמשי ב-`draw_items` כדי לבחור חברות צוות
 
-    Args:
-        pool: List of available items
-        count: How many to draw
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        list: Selected items (no duplicates)
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Make sure count isn't larger than pool
-    #         if count > len(pool):
-    #             count = len(pool)
-    #
-    # Step 2: Use random.sample(pool, count)
-    #
-    # Step 3: Return the result
-    pass
+# %% [markdown]
+# 1. צרי מספרי משתתפות: `range(1, participant_count + 1)`
+# 2. השתמשי ב-`random.sample()` לבחירת הזוכות
+# 3. מיינ את הזוכות: `sorted(winners)`
+# 4. החזירי את הרשימה הממוינת
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def generate_quest_team(all_characters, team_size):
-    """
-    Randomly select a team for a quest.
+# %% [markdown]
+# ## MAIN
 
-    Args:
-        all_characters: List of all available characters
-        team_size: How many to select
+# %%
+print("=" * 60)
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("Random Adventures in {{school}}")
+print("=" * 60)
+print()
 
-    Returns:
-        list: The selected team
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Use draw_items to select team members
-    pass
+print(">>> PART 1: Random Selection")
+print("-" * 40)
+print("Generating random encounters...")
+# Uncomment to test:
+# for i in range(3):
+#     print(f"  {get_random_encounter()}")
+# print()
+# print("Testing outcomes:")
+# for i in range(5):
+#     print(f"  Attempt {i+1}: {random_event_outcome()}")
+# print()
+# print("Reward tiers:")
+# print(f"  Common: {select_reward('common')}")
+# print(f"  Rare: {select_reward('rare')}")
+# print(f"  Legendary: {select_reward('legendary')}")
+print()
 
+print(">>> PART 2: Shuffling")
+print("-" * 40)
+# Uncomment to test:
+# players = ["{{hero}}", "{{heroine}}", "{{friend}}", "{{mentor}}"]
+# print(f"Original order: {players}")
+# turn_order = determine_turn_order(players)
+# print(f"Turn order: {turn_order}")
+# print(f"Original unchanged: {players}")
+print()
 
-def lucky_draw(participant_count, winner_count):
-    """
-    Run a lottery-style drawing.
+print(">>> PART 3: Sampling")
+print("-" * 40)
+# Uncomment to test:
+# rewards = ["gold", "gem", "key", "scroll", "potion", "armor", "weapon"]
+# drawn = draw_items(rewards, 3)
+# print(f"Drew 3 items: {drawn}")
+# print()
+# all_chars = ["{{hero}}", "{{heroine}}", "{{friend}}", "{{mentor}}", "ally1", "ally2"]
+# team = generate_quest_team(all_chars, 3)
+# print(f"Quest team: {team}")
+# print()
+# winners = lucky_draw(100, 5)
+# print(f"Lucky draw winners (from 100): {winners}")
+print()
 
-    Args:
-        participant_count: Total number of participants (numbered 1 to N)
-        winner_count: How many winners to select
-
-    Returns:
-        list: Winning numbers (sorted)
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Create participant numbers: range(1, participant_count + 1)
-    #
-    # Step 2: Use random.sample() to pick winners
-    #
-    # Step 3: Sort the winners: sorted(winners)
-    #
-    # Step 4: Return the sorted list
-    pass
-
-
-# ============================================================
-# MAIN
-# ============================================================
-
-def main():
-    print("=" * 60)
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("Random Adventures in {{school}}")
-    print("=" * 60)
-    print()
-
-    print(">>> PART 1: Random Selection")
-    print("-" * 40)
-    print("Generating random encounters...")
-    # Uncomment to test:
-    # for i in range(3):
-    #     print(f"  {get_random_encounter()}")
-    # print()
-    # print("Testing outcomes:")
-    # for i in range(5):
-    #     print(f"  Attempt {i+1}: {random_event_outcome()}")
-    # print()
-    # print("Reward tiers:")
-    # print(f"  Common: {select_reward('common')}")
-    # print(f"  Rare: {select_reward('rare')}")
-    # print(f"  Legendary: {select_reward('legendary')}")
-    print()
-
-    print(">>> PART 2: Shuffling")
-    print("-" * 40)
-    # Uncomment to test:
-    # players = ["{{hero}}", "{{heroine}}", "{{friend}}", "{{mentor}}"]
-    # print(f"Original order: {players}")
-    # turn_order = determine_turn_order(players)
-    # print(f"Turn order: {turn_order}")
-    # print(f"Original unchanged: {players}")
-    print()
-
-    print(">>> PART 3: Sampling")
-    print("-" * 40)
-    # Uncomment to test:
-    # rewards = ["gold", "gem", "key", "scroll", "potion", "armor", "weapon"]
-    # drawn = draw_items(rewards, 3)
-    # print(f"Drew 3 items: {drawn}")
-    # print()
-    # all_chars = ["{{hero}}", "{{heroine}}", "{{friend}}", "{{mentor}}", "ally1", "ally2"]
-    # team = generate_quest_team(all_chars, 3)
-    # print(f"Quest team: {team}")
-    # print()
-    # winners = lucky_draw(100, 5)
-    # print(f"Lucky draw winners (from 100): {winners}")
-    print()
-
-    print("=" * 60)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-    print("=" * 60)
-
-
-if __name__ == "__main__":
-    main()
+print("=" * 60)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")
+print("=" * 60)

@@ -5,216 +5,206 @@
 # Concepts: and/or confusion, not placement, operator precedence
 # =============================================================================
 
-"""
-{{CONTEXT_INVESTIGATION_INTRO}}
-{{CONTEXT_INVESTIGATION_MISSION}}
-"""
-
-
-# ============================================================
-# {{CASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_INVESTIGATION_INTRO}}
+# {{CONTEXT_INVESTIGATION_MISSION}}
+#
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# {{hero}} wrote code to check if they can buy an item.
-# They need at least 100 gold AND at least 50 gems.
+# {{hero}} כתבה קוד שבודק אם אפשר לקנות פריט.
+# צריך לפחות 100 זהב **וגם** לפחות 50 אבני חן.
 #
-# EXPECTED BEHAVIOR:
-# With gold=150 and gems=30, should print "Cannot afford item"
-# (because gems is too low)
+# התנהגות צפויה:
+# עם `gold=150` ו-`gems=30`, צריך להדפיס `"Cannot afford item"`
+# (כי כמות אבני החן נמוכה מדי)
 #
-# ACTUAL BEHAVIOR:
-# It prints "Buying item!" even though gems is only 30
+# התנהגות בפועל:
+# מדפיס `"Buying item!"` למרות שיש רק 30 אבני חן
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
-def buggy_a():
-    """This code has exactly ONE bug. Find it!"""
-    gold = 150
-    gems = 30
+# %%
+gold = 150
+gems = 30
 
-    # Need BOTH resources to be sufficient
-    if gold >= 100 or gems >= 50:  # BUG: Wrong operator
-        print(f"{{hero}} buys the {{item}}!")
-    else:
-        print("Cannot afford the {{item}}.")
+# Need BOTH resources to be sufficient
+if gold >= 100 or gems >= 50:  # BUG: Wrong operator
+    print(f"{{hero}} buys the {{item}}!")
+else:
+    print("Cannot afford the {{item}}.")
 
+# %% [markdown]
+# מה מצאתי: שימוש ב-`or` כשצריך `and`
+# הבאג: `or` אומר שמספיק שתנאי **אחד** יהיה נכון
+#       `and` אומר שה**שניים** חייבים להיות נכונים
+#
+# התיקון:
 
-def fix_a():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: Using 'or' when 'and' is needed
-    # The bug: 'or' means only ONE condition needs to be True
-    #          'and' means BOTH conditions must be True
-    #
-    # The fix:
-    gold = 150
-    gems = 30
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+gold = 150
+gems = 30
+pass
 
-# ============================================================
-# {{CASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# {{hero}} wants to enter {{danger_location}} if there is NO {{obstacle}}.
+# {{hero}} רוצה להיכנס ל-{{danger_location}} רק אם **אין** {{obstacle}}.
 #
-# EXPECTED BEHAVIOR:
-# With danger_detected=True, should print "Too dangerous!"
+# התנהגות צפויה:
+# עם `danger_detected=True`, צריך להדפיס `"Too dangerous!"`
 #
-# ACTUAL BEHAVIOR:
-# It prints "Entering!" even when danger is detected
+# התנהגות בפועל:
+# מדפיס `"Entering!"` גם כשסכנה מזוהה
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
-def buggy_b():
-    """This code has exactly ONE bug. Find it!"""
-    danger_detected = True
+# %%
+danger_detected = True
 
-    if danger_detected == False:  # Awkward but works
-        print("{{hero}} enters {{danger_location}}!")
-    else:
-        print("Too dangerous! {{hero}} stays back.")
+if danger_detected == False:  # Awkward but works
+    print("{{hero}} enters {{danger_location}}!")
+else:
+    print("Too dangerous! {{hero}} stays back.")
 
-    # Wait, the bug is actually in this version:
-    if not danger_detected == True:  # BUG: Operator precedence!
-        print("Entering safely...")
+# Wait, the bug is actually in this version:
+if not danger_detected == True:  # BUG: Operator precedence!
+    print("Entering safely...")
 
+# %% [markdown]
+# מה מצאתי: `not danger_detected == True` מבלבל
+# הבאג: `not` פועל על `danger_detected` קודם, ואז משווה ל-`True`
+#       `not True` הוא `False`, ואז `False == True` הוא `False`
+#       כלומר התנאי תמיד `False`!
+#
+# דרכים טובות יותר לכתוב "אם danger_detected הוא False":
+# 1. `if not danger_detected:`
+# 2. `if danger_detected == False:`
+# 3. `if not (danger_detected == True):`  — עם סוגריים
+#
+# התיקון:
 
-def fix_b():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: 'not danger_detected == True' is confusing
-    # The bug: 'not' applies to 'danger_detected' first, then compares to True
-    #          'not True' is False, then 'False == True' is False
-    #          So the condition is always False!
-    #
-    # Better ways to write "if danger_detected is False":
-    # Option 1: if not danger_detected:
-    # Option 2: if danger_detected == False:
-    # Option 3: if not (danger_detected == True):  # with parentheses
-    #
-    # The fix:
-    danger_detected = True
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+danger_detected = True
+pass
 
-# ============================================================
-# {{CASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# {{mentor}} grades students: need score >= 60 OR extra_credit to pass.
+# {{mentor}} מדרגת תלמידות: צריך ציון >= 60 **או** `extra_credit` כדי לעבור.
 #
-# EXPECTED BEHAVIOR:
-# With score=55 and extra_credit=True, should print "Passed!"
-# (because extra_credit is True)
+# התנהגות צפויה:
+# עם `score=55` ו-`extra_credit=True`, צריך להדפיס `"Passed!"`
+# (כי `extra_credit` הוא `True`)
 #
-# ACTUAL BEHAVIOR:
-# It prints "Failed." even with extra credit
+# התנהגות בפועל:
+# מדפיס `"Failed."` גם עם קרדיט נוסף
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
-def buggy_c():
-    """This code has exactly ONE bug. Find it!"""
-    score = 55
-    extra_credit = True
+# %%
+score = 55
+extra_credit = True
 
-    if score >= 60 and extra_credit:  # BUG: Wrong operator
-        print("{{hero}} passed!")
-    else:
-        print("{{hero}} failed.")
+if score >= 60 and extra_credit:  # BUG: Wrong operator
+    print("{{hero}} passed!")
+else:
+    print("{{hero}} failed.")
 
+# %% [markdown]
+# מה מצאתי: שימוש ב-`and` כשצריך `or`
+# הבאג: `and` דורש שה**שני** תנאים יהיו `True`
+#       הדרישה אומרת ציון גבוה **או** קרדיט נוסף — מספיק אחד
+#
+# התיקון:
 
-def fix_c():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: Using 'and' when 'or' is needed
-    # The bug: 'and' requires BOTH conditions to be True
-    #          The requirement says EITHER high score OR extra credit
-    #
-    # The fix:
-    score = 55
-    extra_credit = True
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+score = 55
+extra_credit = True
+pass
 
-# ============================================================
-# {{CASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# {{hero}} can rest if NOT {{busy_activity}} AND NOT {{harmful_status}}.
+# {{hero}} יכולה לנוח אם **לא** {{busy_activity}} **וגם לא** {{harmful_status}}.
 #
-# EXPECTED BEHAVIOR:
-# With is_busy=False and is_harmed=True, should print "Cannot rest"
-# (because harmed, even though not busy)
+# התנהגות צפויה:
+# עם `is_busy=False` ו-`is_harmed=True`, צריך להדפיס `"Cannot rest"`
+# (כי היא פצועה, למרות שלא עסוקה)
 #
-# ACTUAL BEHAVIOR:
-# It prints "Resting..." even when harmed
+# התנהגות בפועל:
+# מדפיס `"Resting..."` גם כשהיא פצועה
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
-def buggy_d():
-    """This code has exactly ONE bug. Find it!"""
-    is_busy = False
-    is_harmed = True
+# %%
+is_busy = False
+is_harmed = True
 
-    if not is_busy or is_harmed:  # BUG: Logic error
-        print("{{hero}} rests and recovers.")
-    else:
-        print("Cannot rest right now!")
+if not is_busy or is_harmed:  # BUG: Logic error
+    print("{{hero}} rests and recovers.")
+else:
+    print("Cannot rest right now!")
 
+# %% [markdown]
+# מה מצאתי: התנאי הפוך
+# הבאג: `not is_busy or is_harmed` אומר:
+#       "יכולה לנוח אם לא עסוקה **או** אם פצועה"
+#       אבל אנחנו רוצות: "יכולה לנוח אם לא עסוקה **וגם** לא פצועה"
+#
+# התיקון (צריך שני התנאים כדי לנוח):
 
-def fix_d():
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: The condition is backwards
-    # The bug: 'not is_busy or is_harmed' means:
-    #          "can rest if NOT busy OR if harmed"
-    #          But we want: "can rest if NOT busy AND NOT harmed"
-    #
-    # The fix (need both conditions for resting):
-    is_busy = False
-    is_harmed = True
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+is_busy = False
+is_harmed = True
+pass
 
-def main():
-    print("{{CONTEXT_INVESTIGATION_INTRO}}")
-    print("=" * 50)
+# %%
+print("{{CONTEXT_INVESTIGATION_INTRO}}")
+print("=" * 50)
 
-    print("\n=== {{CASE_1_TITLE}} ===")
-    print("Expected: 'Cannot afford' (gems too low)")
-    print("Buggy version:")
-    buggy_a()
-    print("\nFixed version:")
-    # fix_a()
+print("\n=== {{CASE_1_TITLE}} ===")
+print("Expected: 'Cannot afford' (gems too low)")
+print("Buggy version:")
+buggy_a()
+print("\nFixed version:")
+# fix_a()
 
-    print("\n=== {{CASE_2_TITLE}} ===")
-    print("Expected: 'Too dangerous' when danger detected")
-    print("Buggy version:")
-    buggy_b()
-    print("\nFixed version:")
-    # fix_b()
+print("\n=== {{CASE_2_TITLE}} ===")
+print("Expected: 'Too dangerous' when danger detected")
+print("Buggy version:")
+buggy_b()
+print("\nFixed version:")
+# fix_b()
 
-    print("\n=== {{CASE_3_TITLE}} ===")
-    print("Expected: 'Passed' with extra credit")
-    print("Buggy version:")
-    buggy_c()
-    print("\nFixed version:")
-    # fix_c()
+print("\n=== {{CASE_3_TITLE}} ===")
+print("Expected: 'Passed' with extra credit")
+print("Buggy version:")
+buggy_c()
+print("\nFixed version:")
+# fix_c()
 
-    print("\n=== {{CASE_4_TITLE}} ===")
-    print("Expected: 'Cannot rest' when harmed")
-    print("Buggy version:")
-    buggy_d()
-    print("\nFixed version:")
-    # fix_d()
+print("\n=== {{CASE_4_TITLE}} ===")
+print("Expected: 'Cannot rest' when harmed")
+print("Buggy version:")
+buggy_d()
+print("\nFixed version:")
+# fix_d()
 
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_INVESTIGATION_COMPLETE}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_INVESTIGATION_COMPLETE}}")

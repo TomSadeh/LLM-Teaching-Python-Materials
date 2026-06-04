@@ -1,61 +1,45 @@
-"""
-{{CONTEXT_COMPARISON_INTRO}}
-{{CONTEXT_COMPARISON_DECISION}}
-
-The great debate: When should you use classes vs dictionaries and functions?
-Both approaches can solve the same problems, but each has trade-offs.
-"""
-
-
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_COMPARISON_INTRO}}
+# {{CONTEXT_COMPARISON_DECISION}}
+#
+# הדיון הגדול: מתי כדאי להשתמש במחלקות לעומת מילונים ופונקציות?
+# שתי הגישות יכולות לפתור את אותן הבעיות, אבל לכל אחת יש יתרונות וחסרונות.
+#
 # {{APPROACH_1_NAME}}
-# ============================================================
 # {{CONTEXT_APPROACH_1_NARRATIVE}}
+#
+# גישה פרוצדורלית — שימוש במילונים ובפונקציות
 
-# Procedural approach using dictionaries and functions
+# %%
+return {
+    "name": name,
+    "health": health,
+    "max_health": health,
+    "power": power
+}
 
+# %%
+character["health"] = max(0, character["health"] - amount)
+return character["health"]
 
-def create_character_proc(name, health, power):
-    """Create a character as a dictionary."""
-    return {
-        "name": name,
-        "health": health,
-        "max_health": health,
-        "power": power
-    }
+# %%
+max_h = character["max_health"]
+character["health"] = min(max_h, character["health"] + amount)
+return character["health"]
 
+# %%
+return character["health"] > 0
 
-def take_damage_proc(character, amount):
-    """Apply damage to a character dictionary."""
-    character["health"] = max(0, character["health"] - amount)
-    return character["health"]
+# %%
+return f"{character['name']}: {character['health']}/{character['max_health']} HP"
 
-
-def heal_proc(character, amount):
-    """Heal a character dictionary."""
-    max_h = character["max_health"]
-    character["health"] = min(max_h, character["health"] + amount)
-    return character["health"]
-
-
-def is_alive_proc(character):
-    """Check if character is alive."""
-    return character["health"] > 0
-
-
-def get_status_proc(character):
-    """Get character status string."""
-    return f"{character['name']}: {character['health']}/{character['max_health']} HP"
-
-
-# ============================================================
+# %% [markdown]
 # {{APPROACH_2_NAME}}
-# ============================================================
 # {{CONTEXT_APPROACH_2_NARRATIVE}}
+#
+# גישה מונחית-עצמים — שימוש במחלקה
 
-# Object-Oriented approach using a class
-
-
+# %%
 class CharacterOOP:
     """A character represented as an object."""
 
@@ -83,83 +67,72 @@ class CharacterOOP:
         """Get status string."""
         return f"{self.name}: {self.health}/{self.max_health} HP"
 
+# %% [markdown]
+# {{CONTEXT_ANALYSIS_PROMPT}}
 
-def comparison_1():
-    # ✏️ YOUR ANALYSIS ✏️
-    #
-    # {{CONTEXT_ANALYSIS_PROMPT}}
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    analysis = """
-    For a SIMPLE character system (just name, health, basic actions):
+# %%
+analysis = """
+For a SIMPLE character system (just name, health, basic actions):
 
-    Better approach: ??? (Procedural OR OOP)
+Better approach: ??? (Procedural OR OOP)
 
-    Reasons:
-    1.
-    2.
+Reasons:
+1.
+2.
 
-    Lines of code comparison:
-    - Procedural:
-    - OOP:
+Lines of code comparison:
+- Procedural:
+- OOP:
 
-    Which is easier to read?
-    -
-    """
-    return analysis
+Which is easier to read?
+-
+"""
+return analysis
 
+# %% [markdown]
+# ## השוואה 2: נתונים מורכבים
+#
+# גישה פרוצדורלית למלאי
 
-# ============================================================
-# COMPARISON 2: COMPLEX DATA
-# ============================================================
+# %%
+return {
+    "owner": owner,
+    "capacity": capacity,
+    "items": {},
+    "gold": 0
+}
 
-# Procedural approach for inventory
+# %%
+current = inventory["items"].get(item_name, 0)
+total_items = sum(inventory["items"].values())
+if total_items + count <= inventory["capacity"]:
+    inventory["items"][item_name] = current + count
+    return True
+return False
 
+# %%
+current = inventory["items"].get(item_name, 0)
+if current >= count:
+    inventory["items"][item_name] = current - count
+    if inventory["items"][item_name] == 0:
+        del inventory["items"][item_name]
+    return True
+return False
 
-def create_inventory_proc(owner, capacity):
-    """Create an inventory as a dictionary."""
-    return {
-        "owner": owner,
-        "capacity": capacity,
-        "items": {},
-        "gold": 0
-    }
+# %%
+inventory["gold"] += amount
 
+# %%
+items_str = ", ".join(f"{k}: {v}" for k, v in inventory["items"].items())
+return f"{inventory['owner']}'s inventory ({items_str}) - {inventory['gold']} gold"
 
-def add_item_proc(inventory, item_name, count=1):
-    """Add item to inventory."""
-    current = inventory["items"].get(item_name, 0)
-    total_items = sum(inventory["items"].values())
-    if total_items + count <= inventory["capacity"]:
-        inventory["items"][item_name] = current + count
-        return True
-    return False
+# %% [markdown]
+# ## גישה מונחית-עצמים למלאי
 
-
-def remove_item_proc(inventory, item_name, count=1):
-    """Remove item from inventory."""
-    current = inventory["items"].get(item_name, 0)
-    if current >= count:
-        inventory["items"][item_name] = current - count
-        if inventory["items"][item_name] == 0:
-            del inventory["items"][item_name]
-        return True
-    return False
-
-
-def add_gold_proc(inventory, amount):
-    """Add gold to inventory."""
-    inventory["gold"] += amount
-
-
-def get_inventory_str_proc(inventory):
-    """Get inventory as string."""
-    items_str = ", ".join(f"{k}: {v}" for k, v in inventory["items"].items())
-    return f"{inventory['owner']}'s inventory ({items_str}) - {inventory['gold']} gold"
-
-
-# OOP approach for inventory
-
-
+# %%
 class InventoryOOP:
     """An inventory represented as an object."""
 
@@ -196,139 +169,134 @@ class InventoryOOP:
         items_str = ", ".join(f"{k}: {v}" for k, v in self.items.items())
         return f"{self.owner}'s inventory ({items_str}) - {self.gold} gold"
 
+# %% [markdown]
+# ניתוח שלך
 
-def comparison_2():
-    # ✏️ YOUR ANALYSIS ✏️
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    analysis = """
-    For a MORE COMPLEX system (inventory with multiple operations):
+# %%
+analysis = """
+For a MORE COMPLEX system (inventory with multiple operations):
 
-    Better approach: ??? (Procedural OR OOP)
+Better approach: ??? (Procedural OR OOP)
 
-    Key differences:
-    1. In procedural, you must pass 'inventory' to every function
-    2. In OOP, methods know which inventory they belong to (self)
+Key differences:
+1. In procedural, you must pass 'inventory' to every function
+2. In OOP, methods know which inventory they belong to (self)
 
-    Which is easier to extend with new features?
-    -
+Which is easier to extend with new features?
+-
 
-    Which is harder to make mistakes with (e.g., passing wrong data)?
-    -
+Which is harder to make mistakes with (e.g., passing wrong data)?
+-
 
-    What if we had 10 different functions/methods? Which scales better?
-    -
-    """
-    return analysis
+What if we had 10 different functions/methods? Which scales better?
+-
+"""
+return analysis
 
+# %% [markdown]
+# ## השוואה 3: בדיקת סוגים ובטיחות
+#
+# שימי לב לדוגמה הזו — מה קורה בגישה פרוצדורלית:
+#     char = create_character_proc("{{hero}}", 100, 20)
+#     inv = create_inventory_proc("{{hero}}", 10)
+#
+#     # אופס! קוראים לפונקציה הלא נכונה עם הנתונים הלא נכונים
+#     take_damage_proc(inv, 50)  # זה עלול לקרוס או לפגוע בנתונים!
+#
+# ועכשיו בגישה מונחית-עצמים:
+#     char = CharacterOOP("{{hero}}", 100, 20)
+#     inv = InventoryOOP("{{hero}}", 10)
+#
+#     # לא ניתן לקרוא בטעות למתודה הלא נכונה
+#     # inv.take_damage(50)  # שגיאה: ל-InventoryOOP אין take_damage
 
-# ============================================================
-# COMPARISON 3: TYPE CHECKING AND SAFETY
-# ============================================================
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+analysis = """
+Type safety comparison:
 
-def comparison_3():
-    # ✏️ YOUR ANALYSIS ✏️
-    #
-    # Consider this procedural code:
-    #     char = create_character_proc("{{hero}}", 100, 20)
-    #     inv = create_inventory_proc("{{hero}}", 10)
-    #
-    #     # Oops! Wrong function for wrong data
-    #     take_damage_proc(inv, 50)  # This might crash or corrupt data!
-    #
-    # Now consider OOP:
-    #     char = CharacterOOP("{{hero}}", 100, 20)
-    #     inv = InventoryOOP("{{hero}}", 10)
-    #
-    #     # Can't accidentally call wrong method
-    #     # inv.take_damage(50)  # Error: InventoryOOP has no take_damage
+In procedural code, what could go wrong?
+1.
+2.
 
-    analysis = """
-    Type safety comparison:
+How does OOP help prevent these errors?
+1.
+2.
 
-    In procedural code, what could go wrong?
-    1.
-    2.
+This illustrates the OOP benefit of:
+- (hint: binding data and behavior together)
+"""
+return analysis
 
-    How does OOP help prevent these errors?
-    1.
-    2.
+# %% [markdown]
+# ## מתי להשתמש בכל גישה
 
-    This illustrates the OOP benefit of:
-    - (hint: binding data and behavior together)
-    """
-    return analysis
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+analysis = """
+Use PROCEDURAL (dictionaries + functions) when:
+1. Data is simple (few fields, few operations)
+2. You need quick prototyping
+3.
 
-# ============================================================
-# WHEN TO USE EACH
-# ============================================================
+Use OOP (classes) when:
+1. Data and behavior are closely related
+2. You have multiple instances with the same operations
+3.
 
+General guideline:
+-
+"""
+return analysis
 
-def final_analysis():
-    # ✏️ YOUR FINAL ANALYSIS ✏️
+# %%
+print("{{CONTEXT_COMPARISON_INTRO}}")
+print("=" * 50)
 
-    analysis = """
-    Use PROCEDURAL (dictionaries + functions) when:
-    1. Data is simple (few fields, few operations)
-    2. You need quick prototyping
-    3.
+print("\n=== Comparison 1: Simple Character ===")
+print()
 
-    Use OOP (classes) when:
-    1. Data and behavior are closely related
-    2. You have multiple instances with the same operations
-    3.
+# Procedural
+hero_p = create_character_proc("{{hero}}", 100, 20)
+take_damage_proc(hero_p, 30)
+print(f"Procedural: {get_status_proc(hero_p)}")
 
-    General guideline:
-    -
-    """
-    return analysis
+# OOP
+hero_o = CharacterOOP("{{hero}}", 100, 20)
+hero_o.take_damage(30)
+print(f"OOP: {hero_o.get_status()}")
 
+print(f"\nYour analysis:{comparison_1()}")
 
-def main():
-    print("{{CONTEXT_COMPARISON_INTRO}}")
-    print("=" * 50)
+print("\n=== Comparison 2: Complex Inventory ===")
+print()
 
-    print("\n=== Comparison 1: Simple Character ===")
-    print()
+# Procedural
+inv_p = create_inventory_proc("{{hero}}", 10)
+add_item_proc(inv_p, "{{item}}", 3)
+add_gold_proc(inv_p, 50)
+print(f"Procedural: {get_inventory_str_proc(inv_p)}")
 
-    # Procedural
-    hero_p = create_character_proc("{{hero}}", 100, 20)
-    take_damage_proc(hero_p, 30)
-    print(f"Procedural: {get_status_proc(hero_p)}")
+# OOP
+inv_o = InventoryOOP("{{hero}}", 10)
+inv_o.add_item("{{item}}", 3)
+inv_o.add_gold(50)
+print(f"OOP: {inv_o}")
 
-    # OOP
-    hero_o = CharacterOOP("{{hero}}", 100, 20)
-    hero_o.take_damage(30)
-    print(f"OOP: {hero_o.get_status()}")
+print(f"\nYour analysis:{comparison_2()}")
 
-    print(f"\nYour analysis:{comparison_1()}")
+print("\n=== Comparison 3: Type Safety ===")
+print(f"\nYour analysis:{comparison_3()}")
 
-    print("\n=== Comparison 2: Complex Inventory ===")
-    print()
+print("\n=== When to Use Each ===")
+print(f"\nYour analysis:{final_analysis()}")
 
-    # Procedural
-    inv_p = create_inventory_proc("{{hero}}", 10)
-    add_item_proc(inv_p, "{{item}}", 3)
-    add_gold_proc(inv_p, 50)
-    print(f"Procedural: {get_inventory_str_proc(inv_p)}")
-
-    # OOP
-    inv_o = InventoryOOP("{{hero}}", 10)
-    inv_o.add_item("{{item}}", 3)
-    inv_o.add_gold(50)
-    print(f"OOP: {inv_o}")
-
-    print(f"\nYour analysis:{comparison_2()}")
-
-    print("\n=== Comparison 3: Type Safety ===")
-    print(f"\nYour analysis:{comparison_3()}")
-
-    print("\n=== When to Use Each ===")
-    print(f"\nYour analysis:{final_analysis()}")
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_EVALUATION_COMPLETE}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_EVALUATION_COMPLETE}}")

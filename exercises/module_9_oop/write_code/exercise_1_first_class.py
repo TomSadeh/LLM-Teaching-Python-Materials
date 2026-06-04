@@ -1,121 +1,102 @@
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-
-In this exercise, you'll learn the fundamentals of classes:
-defining a class, writing the __init__ method, and using self
-to create instance attributes.
-"""
-
-
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# בתרגיל הזה תלמדי את יסודות המחלקות (classes):
+# הגדרת מחלקה, כתיבת מתודת `__init__`, ושימוש ב-`self`
+# כדי ליצור תכונות של אובייקט.
+#
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
+#
+# צרי את המחלקה הראשונה שלך כדי לייצג דמות ב-{{school}}.
+#
+# 1. הגדירי מחלקה בשם `Character` באמצעות:
+#    `class Character:`
+#
+# 2. בתוך המחלקה, הגדירי את מתודת `__init__`:
+#    `def __init__(self, name, level):`
+#
+# 3. בתוך `__init__`, שמרי את הפרמטרים כתכונות של האובייקט:
+#    `self.name = name`
+#    `self.level = level`
+#
+# 4. צרי אובייקט מסוג `Character` עבור {{hero}}:
+#    `hero = Character("{{hero}}", 1)`
+#
+# 5. הדפיסי את שם הגיבורה ורמתה באמצעות סימון הנקודה:
+#    `print(f"Name: {hero.name}, Level: {hero.level}")`
+#
+# > רמז: המילה השמורה `class` פותחת הגדרת מחלקה, בדיוק כמו ש-`def` פותחת פונקציה. `self` מתייחס לאובייקט הספציפי שנוצר.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create your first class to represent a character at {{school}}.
-    #
-    # Step 1: Define a class called `Character` using:
-    #         class Character:
-    #
-    # Step 2: Inside the class, define the __init__ method:
-    #         def __init__(self, name, level):
-    #
-    # Step 3: In __init__, store the parameters as instance attributes:
-    #         self.name = name
-    #         self.level = level
-    #
-    # Step 4: Create an instance of Character for {{hero}}:
-    #         hero = Character("{{hero}}", 1)
-    #
-    # Step 5: Print the hero's name and level using dot notation:
-    #         print(f"Name: {hero.name}, Level: {hero.level}")
-    #
-    # Hint: The class keyword starts a class definition, like def starts
-    #       a function. self refers to the specific object being created.
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
+#
+# צרי מחלקה עם יותר תכונות.
+#
+# 1. הגדירי מחלקה בשם `Item` עם `__init__` שמקבלת:
+#    - `self` (תמיד ראשון!)
+#    - `name` (שם הפריט)
+#    - `power` (מספר שלם לדירוג עוצמה)
+#    - `rarity` (מחרוזת כמו `"common"` או `"rare"`)
+#
+# 2. שמרי את שלושת הפרמטרים כתכונות של האובייקט באמצעות `self`
+#
+# 3. צרי שני אובייקטים:
+#    `item1 = Item("{{item}}", 50, "uncommon")`
+#    `item2 = Item("{{spell1}}", 25, "common")`
+#
+# 4. הדפיסי את התכונות של שני הפריטים:
+#    `"[name] - Power: [power], Rarity: [rarity]"`
+#
+# שימי לב: לכל אובייקט יש ערכים משלו הנפרדים לחלוטין!
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create a class with more attributes.
-    #
-    # Step 1: Define a class called `Item` with __init__ that takes:
-    #         - self (always first!)
-    #         - name (the item's name)
-    #         - power (integer for power rating)
-    #         - rarity (string like "common" or "rare")
-    #
-    # Step 2: Store all three as instance attributes using self
-    #
-    # Step 3: Create two instances:
-    #         item1 = Item("{{item}}", 50, "uncommon")
-    #         item2 = Item("{{spell1}}", 25, "common")
-    #
-    # Step 4: Print both items' attributes:
-    #         "[name] - Power: [power], Rarity: [rarity]"
-    #
-    # Note: Each instance has its own separate values!
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
+#
+# צרי מחלקה עם ערכי ברירת מחדל לפרמטרים.
+#
+# 1. הגדירי מחלקה בשם `Student` עם `__init__` שמקבלת:
+#    - `self`
+#    - `name`
+#    - `house` (ברירת מחדל: `"{{house}}"`)
+#    - `year` (ברירת מחדל: `1`)
+#
+# 2. שמרי את כולן כתכונות של האובייקט
+#
+# 3. צרי שלוש תלמידות:
+#    `student1 = Student("{{hero}}")  # משתמשת בברירות המחדל`
+#    `student2 = Student("{{heroine}}", "{{house}}", 2)`
+#    `student3 = Student("{{friend}}", year=3)  # ארגומנט בשם`
+#
+# 4. הדפיסי את הפרטים של כל תלמידה:
+#    `"[name] is in [house], year [year]"`
+#
+# > רמז: פרמטרים עם ברירת מחדל עובדים בדיוק אותו הדבר כמו בפונקציות רגילות!
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create a class with default parameter values.
-    #
-    # Step 1: Define a class called `Student` with __init__ that takes:
-    #         - self
-    #         - name
-    #         - house (default: "{{house}}")
-    #         - year (default: 1)
-    #
-    # Step 2: Store all as instance attributes
-    #
-    # Step 3: Create three students:
-    #         student1 = Student("{{hero}}")  # Uses defaults
-    #         student2 = Student("{{heroine}}", "{{house}}", 2)
-    #         student3 = Student("{{friend}}", year=3)  # Named argument
-    #
-    # Step 4: Print each student's info:
-    #         "[name] is in [house], year [year]"
-    #
-    # Hint: Default parameters work the same way as in regular functions!
-    pass
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
+print("\n=== {{PHASE_1_TITLE}} ===")
+exercise_a()
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_2_TITLE}} ===")
+exercise_b()
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    exercise_a()
+print("\n=== {{PHASE_3_TITLE}} ===")
+exercise_c()
 
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    exercise_b()
-
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    exercise_c()
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

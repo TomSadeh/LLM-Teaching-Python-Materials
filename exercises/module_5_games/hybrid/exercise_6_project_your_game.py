@@ -1,409 +1,212 @@
-"""
-{{CONTEXT_OWNERSHIP_INTRO}}
+# %% [markdown]
+# {{CONTEXT_OWNERSHIP_INTRO}}
+#
+# זהו פרויקט הסיום שלך: בני את המשחק שלך!
+# עקבי אחרי השלבים המודרכים כדי ליצור משחק שלם ומלוטש.
+#
+# מושגי תכנות: כל מה שלמדנו במודול 5!
 
-This is your capstone project: Build Your Own Game!
-Follow the guided steps to create a complete, polished game.
-
-Programming concepts: Everything from Module 5!
-"""
-
+# %%
 import random
 
-
-# ============================================================
-# PART 1: Design Your Game
-# ============================================================
+# %% [markdown]
+# ## חלק 1: עצבי את המשחק שלך
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Before coding, design your game!
+# לפני שמתחילים לכתוב קוד, עצבי את המשחק!
 #
-# Answer these questions (in comments or on paper):
-# 1. What is your game about? (theme, story)
-# 2. What does the player do? (actions, goals)
-# 3. How does the player win? (win condition)
-# 4. How does the player lose? (lose condition, or none?)
-# 5. What makes it fun? (randomness, choices, challenge)
-
-
-"""
-MY GAME DESIGN
---------------
-Theme: ________________________________
-Goal: ________________________________
-Win condition: ________________________________
-Lose condition: ________________________________
-Core mechanic: ________________________________
-
-Player actions:
-1. ________________________________
-2. ________________________________
-3. ________________________________
-
-Game state to track:
-- ________________________________
-- ________________________________
-- ________________________________
-"""
-
-
-# ============================================================
-# PART 2: Build the Core
-# ============================================================
+# ענּי על השאלות האלה (בהערות או על נייר):
+# 1. על מה המשחק שלך? (נושא, סיפור)
+# 2. מה השחקנית עושה? (פעולות, מטרות)
+# 3. איך השחקנית מנצחת? (תנאי ניצחון)
+# 4. איך השחקנית מפסידה? (תנאי הפסד, או שאין?)
+# 5. מה הופך אותו לכיף? (אקראיות, בחירות, אתגר)
+#
+# עיצוב המשחק שלי
+# ----------------
+# נושא: ________________________________
+# מטרה: ________________________________
+# תנאי ניצחון: ________________________________
+# תנאי הפסד: ________________________________
+# המנגנון המרכזי: ________________________________
+#
+# פעולות השחקנית:
+# 1. ________________________________
+# 2. ________________________________
+# 3. ________________________________
+#
+# מצב משחק לעקוב אחריו:
+# - ________________________________
+# - ________________________________
+# - ________________________________
+#
+# ## חלק 2: בני את הבסיס
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Implement the basic game mechanics.
+# ממשי את מנגנוני המשחק הבסיסיים.
+#
+# צרי והחזירי את מצב המשחק ההתחלתי שלך
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def initialize_game():
-    """
-    Set up the initial game state.
+# %% [markdown]
 
-    Returns:
-        dict: Initial game state
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Include whatever your game needs:
-    - Player stats (hp, score, level, etc.)
-    - Game progress (round, turn, etc.)
-    - Any other state variables
+# %% [markdown]
+# הגדירי את הפעולות האפשריות
+# הציגי תפריט
+# קבלי ואמתי את הקלט
+# החזירי את הפעולה
 
-    Example structure:
-        {
-            "player_hp": 100,
-            "score": 0,
-            "round": 1,
-            "playing": True
-        }
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create and return your initial game state
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %% [markdown]
+# טפלי בכל פעולה אפשרית
+# עדכני את `game_state` בהתאם
+# החזירי תיאור של מה שקרה
 
-def display_status(game_state):
-    """
-    Show the current game status to the player.
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Args:
-        game_state: Your game state dictionary
-
-    Display whatever is relevant:
-    - Health/lives
-    - Score/progress
-    - Current situation
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    pass
-
-
-def get_player_input(game_state):
-    """
-    Get the player's next action.
-
-    Args:
-        game_state: Current game state (might affect available actions)
-
-    Returns:
-        str: The valid action chosen
-
-    Requirements:
-    - Show available actions
-    - Validate input
-    - Return a valid action string
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Define your valid actions
-    # Show menu
-    # Get and validate input
-    # Return the action
-    pass
-
-
-def process_action(game_state, action):
-    """
-    Process the player's chosen action.
-
-    Args:
-        game_state: Current game state (will be modified)
-        action: The action string
-
-    Returns:
-        str: Message describing what happened
-
-    This is where your game logic lives!
-    Update game_state based on the action.
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Handle each possible action
-    # Update game_state appropriately
-    # Return a description of what happened
-    pass
-
-
-# ============================================================
-# PART 3: Add Win/Lose Conditions
-# ============================================================
+# %% [markdown]
+# ## חלק 3: הוסיפי תנאי ניצחון והפסד
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Define when the game ends.
+# הגדירי מתי המשחק מסתיים.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def check_win(game_state):
-    """
-    Check if the player has won.
+# %% [markdown]
 
-    Args:
-        game_state: Current game state
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        bool: True if player has won
+# %% [markdown]
 
-    What triggers a win in your game?
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-
-def check_lose(game_state):
-    """
-    Check if the player has lost.
-
-    Args:
-        game_state: Current game state
-
-    Returns:
-        bool: True if player has lost
-
-    What triggers a loss in your game?
-    (Return False if your game has no lose condition)
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    pass
-
-
-def display_end_message(game_state, won):
-    """
-    Show the appropriate end-game message.
-
-    Args:
-        game_state: Final game state
-        won: True if player won, False if lost
-
-    Include:
-    - Win/lose message
-    - Final stats (score, etc.)
-    - Any achievements
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    pass
-
-
-# ============================================================
-# PART 4: Make It Crash-Proof
-# ============================================================
+# %% [markdown]
+# ## חלק 4: הפכי את המשחק לעמיד לשגיאות
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Add validation and error handling throughout.
+# הוסיפי בדיקת קלט וטיפול בשגיאות בכל המשחק.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def validate_game_state(game_state):
-    """
-    Ensure game state is valid.
+# %% [markdown]
 
-    Args:
-        game_state: The state to validate
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        bool: True if valid
-
-    Check for:
-    - Required keys exist
-    - Values are in valid ranges
-    - No corruption
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    pass
-
-
-def safe_update_stat(game_state, stat_name, change, min_val=0, max_val=None):
-    """
-    Safely update a game stat with bounds checking.
-
-    Args:
-        game_state: Game state dict
-        stat_name: Key to update
-        change: Amount to add (can be negative)
-        min_val: Minimum allowed value
-        max_val: Maximum allowed value (None = no max)
-
-    Ensures stat stays within bounds.
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    pass
-
-
-# ============================================================
-# PART 5: Add Polish
-# ============================================================
+# %% [markdown]
+# ## חלק 5: הוסיפי ליטוש
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Make your game feel complete!
+# גרמי למשחק שלך להרגיש שלם!
+#
+# צרי פתיחה מרתקת למשחק שלך
+# השתמשי ב-`{{placeholders}}` לתוכן שאינו תלוי נושא!
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def display_intro():
-    """
-    Show the game introduction.
+# %% [markdown]
 
-    Include:
-    - Game title
-    - Brief story/context
-    - How to play
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create an engaging introduction for your game
-    # Use {{placeholders}} for theme-agnostic content!
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %% [markdown]
 
-def display_help():
-    """
-    Show help/instructions.
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    List:
-    - All commands
-    - Game rules
-    - Tips
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    pass
-
-
-def ask_play_again():
-    """
-    Ask if the player wants to play again.
-
-    Returns:
-        bool: True if yes
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    pass
-
-
-# ============================================================
-# PART 6: The Complete Game
-# ============================================================
+# %% [markdown]
+# ## חלק 6: המשחק המלא
 # {{CONTEXT_TRIUMPH_COMPLETE}}
 #
-# Put it all together!
+# חברי הכול יחד!
 
+# %%
+while game_state.get("playing", True):
+    # ✏️ YOUR CODE HERE ✏️
+    #
+    # 1. Display current status
+    # 2. Check win condition
+    #    If won: display_end_message, break
+    # 3. Check lose condition
+    #    If lost: display_end_message, break
+    # 4. Get player action
+    # 5. If action is "quit", break
+    # 6. Process action
+    # 7. Display result message
+    pass
 
-def game_loop(game_state):
-    """
-    The main game loop.
+# %%
+display_intro()
 
-    Args:
-        game_state: Initial game state
+playing = True
+while playing:
+    game_state = initialize_game()
 
-    Loop structure:
-    1. Display status
-    2. Check win/lose conditions
-    3. Get player input
-    4. Process action
-    5. Repeat until game ends
-    """
-    while game_state.get("playing", True):
-        # ✏️ YOUR CODE HERE ✏️
-        #
-        # 1. Display current status
-        # 2. Check win condition
-        #    If won: display_end_message, break
-        # 3. Check lose condition
-        #    If lost: display_end_message, break
-        # 4. Get player action
-        # 5. If action is "quit", break
-        # 6. Process action
-        # 7. Display result message
-        pass
+    if game_state is None:
+        print("Failed to initialize game!")
+        break
 
+    game_loop(game_state)
 
-def play_game():
-    """
-    Run the complete game experience.
+    playing = ask_play_again()
 
-    Structure:
-    1. Display intro
-    2. Initialize game
-    3. Run game loop
-    4. Ask play again
-    5. Repeat or exit
-    """
-    display_intro()
+print("\nThanks for playing!")
+print(f"{{{{exclamation}}}} Until next time!")
 
-    playing = True
-    while playing:
-        game_state = initialize_game()
+# %% [markdown]
+# ## תוכנית ראשית
 
-        if game_state is None:
-            print("Failed to initialize game!")
-            break
+# %%
+print("=" * 60)
+print("   BUILD YOUR OWN GAME")
+print("   Module 5 Capstone Project")
+print("=" * 60)
+print()
 
-        game_loop(game_state)
+print(">>> PART 1: Design your game (see comments above)")
+print()
 
-        playing = ask_play_again()
+print(">>> PART 2: Build the core")
+print("(Implement initialize_game, display_status, get_player_input, process_action)")
+print()
+# Test core:
+# state = initialize_game()
+# display_status(state)
+# action = get_player_input(state)
+# result = process_action(state, action)
+# print(result)
 
-    print("\nThanks for playing!")
-    print(f"{{{{exclamation}}}} Until next time!")
+print(">>> PART 3: Add win/lose conditions")
+print("(Implement check_win, check_lose, display_end_message)")
+print()
 
+print(">>> PART 4: Make it crash-proof")
+print("(Implement validate_game_state, safe_update_stat)")
+print()
 
-# ============================================================
-# MAIN
-# ============================================================
+print(">>> PART 5: Add polish")
+print("(Implement display_intro, display_help, ask_play_again)")
+print()
 
-def main():
-    print("=" * 60)
-    print("   BUILD YOUR OWN GAME")
-    print("   Module 5 Capstone Project")
-    print("=" * 60)
-    print()
+print(">>> PART 6: Launch your game!")
+print()
+# play_game()
 
-    print(">>> PART 1: Design your game (see comments above)")
-    print()
-
-    print(">>> PART 2: Build the core")
-    print("(Implement initialize_game, display_status, get_player_input, process_action)")
-    print()
-    # Test core:
-    # state = initialize_game()
-    # display_status(state)
-    # action = get_player_input(state)
-    # result = process_action(state, action)
-    # print(result)
-
-    print(">>> PART 3: Add win/lose conditions")
-    print("(Implement check_win, check_lose, display_end_message)")
-    print()
-
-    print(">>> PART 4: Make it crash-proof")
-    print("(Implement validate_game_state, safe_update_stat)")
-    print()
-
-    print(">>> PART 5: Add polish")
-    print("(Implement display_intro, display_help, ask_play_again)")
-    print()
-
-    print(">>> PART 6: Launch your game!")
-    print()
-    # play_game()
-
-    print("=" * 60)
-    print("{{CONTEXT_TRIUMPH_COMPLETE}}")
-    print("=" * 60)
-
-
-if __name__ == "__main__":
-    main()
+print("=" * 60)
+print("{{CONTEXT_TRIUMPH_COMPLETE}}")
+print("=" * 60)

@@ -1,321 +1,202 @@
-"""
-{{CONTEXT_SETBACK_INTRO}}
-
-This is a multi-part exercise where you rescue a crashed leaderboard system.
-The competition is tomorrow and the system must be fixed!
-
-Programming concepts: dictionaries, CRUD operations, sorting, error handling
-"""
-
-
-# ============================================================
-# PART 1: The Setback - Diagnose the Crash
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_SETBACK_INTRO}}
+#
+# זוהי תרגילה מרובת חלקים שבה את מצילה מערכת לוח תוצאות שקרסה.
+# התחרות מחר ויש לתקן את המערכת!
+#
+# מושגי תכנות: מילונים, פעולות CRUD, מיון, טיפול בשגיאות
+#
+# חלק 1: המשבר - אבחני את הקריסה
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# The leaderboard crashed during last night's tournament!
-# Read the error and understand what went wrong.
+# לוח התוצאות קרס במהלך הטורניר אמש!
+# קראי את השגיאה והביני מה השתבש.
+#
+# הודעת השגיאה:
+# --------------
+# Traceback (most recent call last):
+#   File "leaderboard.py", line 23, in <module>
+#     update_score(leaderboard, "NewPlayer", 50)
+#   File "leaderboard.py", line 15, in update_score
+#     leaderboard[player_name] += points
+# KeyError: 'NewPlayer'
 
-"""
-ERROR MESSAGE:
---------------
-Traceback (most recent call last):
-  File "leaderboard.py", line 23, in <module>
-    update_score(leaderboard, "NewPlayer", 50)
-  File "leaderboard.py", line 15, in update_score
-    leaderboard[player_name] += points
-KeyError: 'NewPlayer'
-"""
+# %%
+leaderboard[player_name] += points
 
+# %% [markdown]
+# ## אבחני את השגיאה
+#
+# ענני על השאלות הבאות:
+#
+# 1. איזה סוג שגיאה קרה?
+#    תשובה:
+#
+# 2. למה קרתה השגיאה?
+#    תשובה:
+#
+# 3. מה הקוד ניסה לעשות?
+#    תשובה:
+#
+# 4. מה ההבדל בין עדכון שחקנת קיימת
+#    לבין הוספת שחקנת חדשה?
+#    תשובה:
 
-def buggy_update_score(leaderboard, player_name, points):
-    """BUGGY: Add points to a player's score."""
-    leaderboard[player_name] += points
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-
-def diagnose_crash():
-    # ✏️ DIAGNOSE THE ERROR ✏️
-    #
-    # Answer these questions:
-    #
-    # 1. What type of error occurred?
-    #    Answer:
-    #
-    # 2. Why did the error happen?
-    #    Answer:
-    #
-    # 3. What was the code trying to do?
-    #    Answer:
-    #
-    # 4. What's the difference between updating an existing player
-    #    and adding a new player?
-    #    Answer:
-
-    pass
-
-
-# ============================================================
-# PART 2: Investigation - Trace the Score Logic
-# ============================================================
+# %% [markdown]
+# ## חלק 2: חקירה - עקבי אחרי לוגיקת הניקוד
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Trace through the intended behavior to understand
-# how the leaderboard should work.
+# עקבי אחרי ההתנהגות המיועדת כדי להבין
+# כיצד לוח התוצאות אמור לעבוד.
 
+# %%
+leaderboard = {"{{hero}}": 100, "{{heroine}}": 150}
 
-def code_to_trace():
-    """Trace this correct version."""
-    leaderboard = {"{{hero}}": 100, "{{heroine}}": 150}
+# Update existing player
+leaderboard["{{hero}}"] = leaderboard.get("{{hero}}", 0) + 50
 
-    # Update existing player
-    leaderboard["{{hero}}"] = leaderboard.get("{{hero}}", 0) + 50
+# Add new player
+leaderboard["{{friend}}"] = leaderboard.get("{{friend}}", 0) + 75
 
-    # Add new player
-    leaderboard["{{friend}}"] = leaderboard.get("{{friend}}", 0) + 75
+print(leaderboard)
 
-    print(leaderboard)
+# %% [markdown]
+# ## מלאי את טבלת המעקב
+#
+# | שלב | פעולה                  | `.get()` מחזיר | לוח התוצאות אחרי           |
+# |------|------------------------|----------------|----------------------------|
+# | 0    | מצב התחלתי             | -              | {"{{hero}}": 100, "{{heroine}}": 150} |
+# | 1    | עדכון {{hero}} +50     | 100            |                            |
+# | 2    | הוספת {{friend}} +75   |                |                            |
+#
+# מה מודפס?
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def trace_leaderboard():
-    # ✏️ FILL IN THE TRACING TABLE ✏️
-    #
-    # | Step | Operation              | .get() returns | leaderboard after           |
-    # |------|------------------------|----------------|----------------------------|
-    # | 0    | Initial state          | -              | {"{{hero}}": 100, "{{heroine}}": 150} |
-    # | 1    | Update {{hero}} +50    | 100            |                            |
-    # | 2    | Add {{friend}} +75     |                |                            |
-    #
-    # What is printed?
-
-    pass
-
-
-# ============================================================
-# PART 3: Improvement - Rebuild the Leaderboard
-# ============================================================
+# %% [markdown]
+# ## חלק 3: שיפור - בני מחדש את לוח התוצאות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Build a robust leaderboard system from scratch.
+# בני מערכת לוח תוצאות חזקה מאפס.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def create_leaderboard():
-    """
-    Create a new empty leaderboard.
+# %% [markdown]
+# בדקי תחילה אם השחקנת קיימת.
+# אם היא קיימת, החזירי `False` (אל תדרסי).
+# אם היא חדשה, הוסיפי אותה עם `initial_score` והחזירי `True`.
 
-    Returns:
-        dict: Empty dictionary for storing player scores
-    """
-    # ✏️ YOUR CODE HERE ✏️
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    pass
+# %% [markdown]
+# השתמשי ב-`.get()` כדי לטפל בבטחה בשחקניות חדשות.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def add_player(leaderboard, player_name, initial_score=0):
-    """
-    Add a new player to the leaderboard.
+# %% [markdown]
+# כתבי את הפונקציה הבאה:
 
-    Args:
-        leaderboard: The leaderboard dict
-        player_name: Name of the new player
-        initial_score: Starting score (default 0)
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        bool: True if added, False if player already exists
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Check if player exists first.
-    # If they exist, return False (don't overwrite).
-    # If new, add them with initial_score and return True.
+# %% [markdown]
+# 1. המירי את המילון לרשימת זוגות (שם, ניקוד) בעזרת `.items()`
+# 2. מיינו לפי ניקוד (רמז: השתמשי ב-`sorted()` עם פרמטר `key`)
+# 3. החזירי את `n` הראשונות
+#
+# > רמז: `sorted(items, key=lambda x: x[1], reverse=True)`
 
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %% [markdown]
+# קבלי את כל השחקניות ממוינות לפי ניקוד
+# הדפיסי עם דירוג: `"1. PlayerName: 150 points"`
 
-def update_score(leaderboard, player_name, points):
-    """
-    Update a player's score (add points).
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Args:
-        leaderboard: The leaderboard dict
-        player_name: Player to update
-        points: Points to add (can be negative)
-
-    If player doesn't exist, they are automatically added.
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Use .get() to safely handle new players.
-
-    pass
-
-
-def get_score(leaderboard, player_name):
-    """
-    Get a player's current score.
-
-    Args:
-        leaderboard: The leaderboard dict
-        player_name: Player to look up
-
-    Returns:
-        int: The player's score, or 0 if not on leaderboard
-    """
-    # ✏️ YOUR CODE HERE ✏️
-
-    pass
-
-
-def get_top_players(leaderboard, n=3):
-    """
-    Get the top N players by score.
-
-    Args:
-        leaderboard: The leaderboard dict
-        n: Number of top players to return
-
-    Returns:
-        list: List of (name, score) tuples, sorted by score descending
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Convert to list of (name, score) tuples using .items()
-    # Step 2: Sort by score (hint: use sorted() with key parameter)
-    # Step 3: Return the top n
-    #
-    # Hint: sorted(items, key=lambda x: x[1], reverse=True)
-
-    pass
-
-
-def display_leaderboard(leaderboard):
-    """
-    Display the full leaderboard in a nice format.
-
-    Args:
-        leaderboard: The leaderboard dict
-
-    Prints the leaderboard with rankings.
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Get all players sorted by score
-    # Print with ranking: "1. PlayerName: 150 points"
-
-    pass
-
-
-# ============================================================
-# PART 4: Growth - Add New Features
-# ============================================================
+# %% [markdown]
+# ## חלק 4: צמיחה - הוסיפי תכונות חדשות
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Add advanced features to the leaderboard.
+# הוסיפי תכונות מתקדמות ללוח התוצאות.
+#
+# מיינו את כל השחקניות לפי ניקוד, ואז מצאי את מיקום השחקנית.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def get_rank(leaderboard, player_name):
-    """
-    Get a player's current rank.
+# %% [markdown]
+# כתבי את הפונקציה הבאה:
 
-    Args:
-        leaderboard: The leaderboard dict
-        player_name: Player to find
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        int: The player's rank (1 = first place), or -1 if not found
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Sort all players by score, then find the player's position.
+# %% [markdown]
+# השאירי את כל השחקניות אבל אפסי את הניקוד שלהן ל-0.
 
-    pass
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %% [markdown]
+# ## MAIN
 
-def get_players_above(leaderboard, threshold):
-    """
-    Get all players with scores above a threshold.
+# %%
+print("=" * 60)
+print("{{CONTEXT_SETBACK_INTRO}}")
+print("=" * 60)
+print()
 
-    Args:
-        leaderboard: The leaderboard dict
-        threshold: Minimum score
+print(">>> PART 1: Diagnose the crash...")
+print("(Complete diagnose_crash())")
+print()
 
-    Returns:
-        list: Names of players with score > threshold
-    """
-    # ✏️ YOUR CODE HERE ✏️
+print(">>> PART 2: Trace the logic...")
+print("(Complete trace_leaderboard())")
+# Uncomment to verify:
+# code_to_trace()
+print()
 
-    pass
+print(">>> PART 3: Rebuild the leaderboard...")
+print("(Implement all leaderboard functions)")
+print()
+# Uncomment after implementing Part 3:
+# board = create_leaderboard()
+# add_player(board, "{{hero}}", 100)
+# add_player(board, "{{heroine}}", 150)
+# add_player(board, "{{friend}}", 75)
+# print(f"Leaderboard: {board}")
+#
+# update_score(board, "{{hero}}", 60)
+# update_score(board, "NewPlayer", 200)  # Should not crash!
+# print(f"After updates: {board}")
+#
+# print(f"{{{{hero}}}}'s score: {get_score(board, '{{hero}}')}")
+# print(f"Top 3: {get_top_players(board, 3)}")
+# print()
+# display_leaderboard(board)
 
+print()
+print(">>> PART 4: Add new features...")
+print("(Implement get_rank, get_players_above, reset_scores)")
+# Uncomment after implementing Part 4:
+# print(f"{{{{hero}}}}'s rank: {get_rank(board, '{{hero}}')}")
+# print(f"Players above 100: {get_players_above(board, 100)}")
+# reset_scores(board)
+# print(f"After reset: {board}")
 
-def reset_scores(leaderboard):
-    """
-    Reset all scores to 0 (for a new tournament).
-
-    Args:
-        leaderboard: The leaderboard dict (modified in place)
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Keep all players but set scores to 0.
-
-    pass
-
-
-# ============================================================
-# MAIN
-# ============================================================
-
-def main():
-    print("=" * 60)
-    print("{{CONTEXT_SETBACK_INTRO}}")
-    print("=" * 60)
-    print()
-
-    print(">>> PART 1: Diagnose the crash...")
-    print("(Complete diagnose_crash())")
-    print()
-
-    print(">>> PART 2: Trace the logic...")
-    print("(Complete trace_leaderboard())")
-    # Uncomment to verify:
-    # code_to_trace()
-    print()
-
-    print(">>> PART 3: Rebuild the leaderboard...")
-    print("(Implement all leaderboard functions)")
-    print()
-    # Uncomment after implementing Part 3:
-    # board = create_leaderboard()
-    # add_player(board, "{{hero}}", 100)
-    # add_player(board, "{{heroine}}", 150)
-    # add_player(board, "{{friend}}", 75)
-    # print(f"Leaderboard: {board}")
-    #
-    # update_score(board, "{{hero}}", 60)
-    # update_score(board, "NewPlayer", 200)  # Should not crash!
-    # print(f"After updates: {board}")
-    #
-    # print(f"{{{{hero}}}}'s score: {get_score(board, '{{hero}}')}")
-    # print(f"Top 3: {get_top_players(board, 3)}")
-    # print()
-    # display_leaderboard(board)
-
-    print()
-    print(">>> PART 4: Add new features...")
-    print("(Implement get_rank, get_players_above, reset_scores)")
-    # Uncomment after implementing Part 4:
-    # print(f"{{{{hero}}}}'s rank: {get_rank(board, '{{hero}}')}")
-    # print(f"Players above 100: {get_players_above(board, 100)}")
-    # reset_scores(board)
-    # print(f"After reset: {board}")
-
-    print()
-    print("=" * 60)
-    print("{{CONTEXT_TRIUMPH_COMPLETE}}")
-    print("=" * 60)
-
-
-if __name__ == "__main__":
-    main()
+print()
+print("=" * 60)
+print("{{CONTEXT_TRIUMPH_COMPLETE}}")
+print("=" * 60)

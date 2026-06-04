@@ -1,380 +1,254 @@
-"""
-{{CONTEXT_PROJECT_INTRO}}
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+#
+# בתרגיל הזה ב-{{school}} צריך לעקוב אחרי
+# תיעוד ראיות של {{creature}} בפורמט גיליון אלקטרוני באמצעות CSV.
+#
+# מושגי תכנות: מודול `csv`, עיבוד נתונים, קלט/פלט לקובץ
+# רמת קושי: 3-4
 
-This is a multi-part exercise where {{school}} needs to track
-{{creature}} sightings in a spreadsheet-style format using CSV.
-
-Programming concepts: CSV module, data processing, file I/O
-Difficulty: 3-4
-"""
-
+# %%
 import csv
+
+# %%
 from datetime import date
 
-
-# ============================================================
-# PART 1: Growth - Write Records to CSV
-# ============================================================
+# %% [markdown]
+# ## חלק 1: צמיחה - כתיבת רשומות לקובץ CSV
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Learn to create and write CSV files for record keeping.
+# למדי ליצור ולכתוב קבצי CSV לשמירת רשומות.
+#
+# החזירי מילון עם השדות הבאים:
+# {
+#     "date": str(date.today()),  # Current date as string
+#     "creature": creature_name,
+#     "location": location,
+#     "observer": observer,
+#     "notes": notes
+# }
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def create_sighting_record(creature_name, location, observer, notes=""):
-    """
-    Create a sighting record dictionary.
+# %% [markdown]
+#
+# 1. הגדירי את שמות השדות:
+#         fieldnames = ["date", "creature", "location", "observer", "notes"]
+#
+# 2. פתחי קובץ וצרי `DictWriter`:
+#         with open(filename, "w", newline="") as f:
+#             writer = csv.DictWriter(f, fieldnames=fieldnames)
+#
+# 3. כתבי כותרת ושורות:
+#             writer.writeheader()
+#             writer.writerows(sightings)
+#
+# 4. החזירי את הספירה
 
-    Args:
-        creature_name: Name of the creature spotted
-        location: Where it was seen
-        observer: Who spotted it
-        notes: Optional additional notes
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        dict: A sighting record with timestamp
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Return a dict with:
-    # {
-    #     "date": str(date.today()),  # Current date as string
-    #     "creature": creature_name,
-    #     "location": location,
-    #     "observer": observer,
-    #     "notes": notes
-    # }
-    pass
+# %% [markdown]
+#
+# 1. בדקי אם הקובץ קיים (כדי להחליט אם לכתוב כותרת):
+#         import os
+#         file_exists = os.path.exists(filename)
+#
+# 2. פתחי במצב הוספה:
+#         with open(filename, "a", newline="") as f:
+#
+# 3. צרי writer וכתבי:
+#         fieldnames = ["date", "creature", "location", "observer", "notes"]
+#         writer = csv.DictWriter(f, fieldnames=fieldnames)
+#         if not file_exists:
+#             writer.writeheader()
+#         writer.writerow(sighting)
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def save_sightings(filename, sightings):
-    """
-    Save a list of sighting records to CSV.
-
-    Args:
-        filename: Path to CSV file
-        sightings: List of sighting dicts
-
-    Returns:
-        int: Number of records saved
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Define fieldnames:
-    #         fieldnames = ["date", "creature", "location", "observer", "notes"]
-    #
-    # Step 2: Open file and create DictWriter:
-    #         with open(filename, "w", newline="") as f:
-    #             writer = csv.DictWriter(f, fieldnames=fieldnames)
-    #
-    # Step 3: Write header and rows:
-    #             writer.writeheader()
-    #             writer.writerows(sightings)
-    #
-    # Step 4: Return count
-    pass
-
-
-def append_sighting(filename, sighting):
-    """
-    Append a single sighting to an existing CSV file.
-
-    Args:
-        filename: Path to CSV file
-        sighting: Single sighting dict
-
-    Returns:
-        bool: True if successful
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Check if file exists (for header decision)
-    #         import os
-    #         file_exists = os.path.exists(filename)
-    #
-    # Step 2: Open in append mode:
-    #         with open(filename, "a", newline="") as f:
-    #
-    # Step 3: Create writer and write:
-    #         fieldnames = ["date", "creature", "location", "observer", "notes"]
-    #         writer = csv.DictWriter(f, fieldnames=fieldnames)
-    #         if not file_exists:
-    #             writer.writeheader()
-    #         writer.writerow(sighting)
-    pass
-
-
-# ============================================================
-# PART 2: Growth - Read and Display CSV Data
-# ============================================================
+# %% [markdown]
+# ## חלק 2: צמיחה - קריאה והצגת נתוני CSV
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Learn to read and display CSV records.
+# למדי לקרוא ולהציג רשומות CSV.
+#
+# 1. נסי לפתוח ולקרוא עם `DictReader`
+#
+# 2. המירי לרשימה:
+#         return list(reader)
+#
+# 3. טפלי ב-`FileNotFoundError`, החזירי `[]`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def load_sightings(filename):
-    """
-    Load all sightings from a CSV file.
+# %% [markdown]
+#
+# 1. הדפיסי כותרת:
+#         print(f"{'Date':<12} {'Creature':<15} {'Location':<15} {'Observer':<10}")
+#         print("-" * 55)
+#
+# 2. הדפיסי כל שורה:
+#         for s in sightings:
+#             print(f"{s['date']:<12} {s['creature']:<15} {s['location']:<15} {s['observer']:<10}")
 
-    Args:
-        filename: Path to CSV file
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        list: List of sighting dicts, empty list if file missing
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Try to open and read with DictReader
-    #
-    # Step 2: Convert to list:
-    #         return list(reader)
-    #
-    # Step 3: Handle FileNotFoundError, return []
-    pass
+# %% [markdown]
+#
+# 1. אתחלי מילון ספירות
+#
+# 2. עברי על הראיות בלולאה:
+#         for s in sightings:
+#             creature = s["creature"]
+#             counts[creature] = counts.get(creature, 0) + 1
+#
+# 3. החזירי את הספירות
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def display_sightings(sightings):
-    """
-    Display sightings in a formatted table.
-
-    Args:
-        sightings: List of sighting dicts
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Print header:
-    #         print(f"{'Date':<12} {'Creature':<15} {'Location':<15} {'Observer':<10}")
-    #         print("-" * 55)
-    #
-    # Step 2: Print each row:
-    #         for s in sightings:
-    #             print(f"{s['date']:<12} {s['creature']:<15} {s['location']:<15} {s['observer']:<10}")
-    pass
-
-
-def count_by_creature(sightings):
-    """
-    Count sightings by creature type.
-
-    Args:
-        sightings: List of sighting dicts
-
-    Returns:
-        dict: {creature_name: count}
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Initialize counts dict
-    #
-    # Step 2: Loop through sightings:
-    #         for s in sightings:
-    #             creature = s["creature"]
-    #             counts[creature] = counts.get(creature, 0) + 1
-    #
-    # Step 3: Return counts
-    pass
-
-
-# ============================================================
-# PART 3: Growth - Complete Search and Filter Functions
-# ============================================================
+# %% [markdown]
+# ## חלק 3: צמיחה - פונקציות חיפוש וסינון
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Add search and filter capabilities.
+# הוסיפי יכולות חיפוש וסינון.
+#
+# {{CONTEXT_FUNCTION_HINT_3}}
+#
+# 1. אתחלי רשימת התאמות
+#
+# 2. לכל ראיה, בדקי אם מונח החיפוש מופיע באחד השדות:
+#         search_lower = search_term.lower()
+#         for s in sightings:
+#             for value in s.values():
+#                 if search_lower in str(value).lower():
+#                     matches.append(s)
+#                     break
+#
+# 3. החזירי את ההתאמות
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def search_sightings(sightings, search_term):
-    """
-    Search for sightings containing a term.
+# %% [markdown]
+#
+# החזירי ראיות שבהן המיקום תואם (ללא תלות בגודל אות)
 
-    Args:
-        sightings: List of sighting dicts
-        search_term: Text to search for (case-insensitive)
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        list: Matching sightings
-    """
-    # ✏️ COMPLETE THIS FUNCTION ✏️
-    #
-    # {{CONTEXT_FUNCTION_HINT_3}}
-    #
-    # Step 1: Initialize matches list
-    #
-    # Step 2: For each sighting, check if search_term is in any field:
-    #         search_lower = search_term.lower()
-    #         for s in sightings:
-    #             for value in s.values():
-    #                 if search_lower in str(value).lower():
-    #                     matches.append(s)
-    #                     break
-    #
-    # Step 3: Return matches
-    pass
+# %% [markdown]
+#
+# השוואת מחרוזות תאריך (פורמט `YYYY-MM-DD` ממוין נכון!)
+# for s in sightings:
+#     if start_date <= s["date"] <= end_date:
+#         matches.append(s)
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def filter_by_location(sightings, location):
-    """
-    Filter sightings by location.
-
-    Args:
-        sightings: List of sighting dicts
-        location: Location to filter by
-
-    Returns:
-        list: Sightings at that location
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Return sightings where location matches (case-insensitive)
-    pass
-
-
-def filter_by_date_range(sightings, start_date, end_date):
-    """
-    Filter sightings within a date range.
-
-    Args:
-        sightings: List of sighting dicts
-        start_date: Start date string (YYYY-MM-DD)
-        end_date: End date string (YYYY-MM-DD)
-
-    Returns:
-        list: Sightings within range
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Compare date strings (YYYY-MM-DD format sorts correctly!)
-    # for s in sightings:
-    #     if start_date <= s["date"] <= end_date:
-    #         matches.append(s)
-    pass
-
-
-# ============================================================
-# PART 4: Growth - Generate Reports
-# ============================================================
+# %% [markdown]
+# ## חלק 4: צמיחה - יצירת דוחות
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Generate summary reports from the data.
+# צרי דוחות סיכום מהנתונים.
+#
+# 1. ספרי את סך הראיות
+#
+# 2. ספרי לפי סוג יצור
+#
+# 3. מצאי מיקומים ייחודיים
+#
+# 4. בני מחרוזת דוח:
+#         report = []
+#         report.append("=" * 40)
+#         report.append("SIGHTING SUMMARY REPORT")
+#         report.append("=" * 40)
+#         report.append(f"Total Sightings: {total}")
+#         report.append("")
+#         report.append("By Creature:")
+#         for creature, count in counts.items():
+#             report.append(f"  {creature}: {count}")
+#         ...
+#         return "\n".join(report)
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def generate_summary_report(sightings):
-    """
-    Generate a text summary report.
+# %% [markdown]
+#
+# 1. צרי דוח
+#
+# 2. כתבי לקובץ
 
-    Args:
-        sightings: List of sighting dicts
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    Returns:
-        str: Formatted report text
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Count total sightings
-    #
-    # Step 2: Count by creature type
-    #
-    # Step 3: Find unique locations
-    #
-    # Step 4: Build report string:
-    #         report = []
-    #         report.append("=" * 40)
-    #         report.append("SIGHTING SUMMARY REPORT")
-    #         report.append("=" * 40)
-    #         report.append(f"Total Sightings: {total}")
-    #         report.append("")
-    #         report.append("By Creature:")
-    #         for creature, count in counts.items():
-    #             report.append(f"  {creature}: {count}")
-    #         ...
-    #         return "\n".join(report)
-    pass
+# %% [markdown]
+# ## ראשי
 
+# %%
+print("=" * 60)
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("{{creature}} Sighting Records for {{school}}")
+print("=" * 60)
+print()
 
-def export_summary_to_file(sightings, filename):
-    """
-    Export summary report to a text file.
+# Sample data for testing
+sample_sightings = [
+    create_sighting_record("{{creature}}", "{{location}}", "{{hero}}", "Very rare!"),
+    create_sighting_record("phoenix", "tower", "{{heroine}}", ""),
+    create_sighting_record("{{creature}}", "forest", "{{friend}}", "Spotted at dawn"),
+    create_sighting_record("unicorn", "lake", "{{hero}}", "Drinking water"),
+    create_sighting_record("phoenix", "{{location}}", "{{mentor}}", "Teaching flight"),
+] if all([create_sighting_record]) else []
 
-    Args:
-        sightings: List of sighting dicts
-        filename: Output file path
+print(">>> PART 1: Writing Records")
+print("-" * 40)
+# Uncomment to test:
+# count = save_sightings("sightings.csv", sample_sightings)
+# print(f"Saved {count} sightings to CSV")
+# new_sighting = create_sighting_record("dragon", "mountain", "{{hero}}")
+# append_sighting("sightings.csv", new_sighting)
+# print("Appended new sighting")
+print()
 
-    Returns:
-        bool: True if successful
-    """
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Step 1: Generate report
-    #
-    # Step 2: Write to file
-    pass
+print(">>> PART 2: Reading and Displaying")
+print("-" * 40)
+# Uncomment to test:
+# sightings = load_sightings("sightings.csv")
+# print(f"Loaded {len(sightings)} sightings")
+# display_sightings(sightings)
+# print()
+# counts = count_by_creature(sightings)
+# print(f"Counts by creature: {counts}")
+print()
 
+print(">>> PART 3: Search and Filter")
+print("-" * 40)
+# Uncomment to test:
+# matches = search_sightings(sightings, "{{hero}}")
+# print(f"Sightings by {{hero}}: {len(matches)}")
+# by_location = filter_by_location(sightings, "{{location}}")
+# print(f"Sightings at {{location}}: {len(by_location)}")
+print()
 
-# ============================================================
-# MAIN
-# ============================================================
+print(">>> PART 4: Reports")
+print("-" * 40)
+# Uncomment to test:
+# report = generate_summary_report(sightings)
+# print(report)
+# export_summary_to_file(sightings, "sighting_report.txt")
+print()
 
-def main():
-    print("=" * 60)
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("{{creature}} Sighting Records for {{school}}")
-    print("=" * 60)
-    print()
-
-    # Sample data for testing
-    sample_sightings = [
-        create_sighting_record("{{creature}}", "{{location}}", "{{hero}}", "Very rare!"),
-        create_sighting_record("phoenix", "tower", "{{heroine}}", ""),
-        create_sighting_record("{{creature}}", "forest", "{{friend}}", "Spotted at dawn"),
-        create_sighting_record("unicorn", "lake", "{{hero}}", "Drinking water"),
-        create_sighting_record("phoenix", "{{location}}", "{{mentor}}", "Teaching flight"),
-    ] if all([create_sighting_record]) else []
-
-    print(">>> PART 1: Writing Records")
-    print("-" * 40)
-    # Uncomment to test:
-    # count = save_sightings("sightings.csv", sample_sightings)
-    # print(f"Saved {count} sightings to CSV")
-    # new_sighting = create_sighting_record("dragon", "mountain", "{{hero}}")
-    # append_sighting("sightings.csv", new_sighting)
-    # print("Appended new sighting")
-    print()
-
-    print(">>> PART 2: Reading and Displaying")
-    print("-" * 40)
-    # Uncomment to test:
-    # sightings = load_sightings("sightings.csv")
-    # print(f"Loaded {len(sightings)} sightings")
-    # display_sightings(sightings)
-    # print()
-    # counts = count_by_creature(sightings)
-    # print(f"Counts by creature: {counts}")
-    print()
-
-    print(">>> PART 3: Search and Filter")
-    print("-" * 40)
-    # Uncomment to test:
-    # matches = search_sightings(sightings, "{{hero}}")
-    # print(f"Sightings by {{hero}}: {len(matches)}")
-    # by_location = filter_by_location(sightings, "{{location}}")
-    # print(f"Sightings at {{location}}: {len(by_location)}")
-    print()
-
-    print(">>> PART 4: Reports")
-    print("-" * 40)
-    # Uncomment to test:
-    # report = generate_summary_report(sightings)
-    # print(report)
-    # export_summary_to_file(sightings, "sighting_report.txt")
-    print()
-
-    print("=" * 60)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-    print("=" * 60)
-
-
-if __name__ == "__main__":
-    main()
+print("=" * 60)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")
+print("=" * 60)

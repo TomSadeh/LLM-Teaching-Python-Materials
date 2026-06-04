@@ -14,6 +14,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from notebook_cells import parse_cells, code_of
 from datetime import datetime
 
 VERSION = "3.0.0"
@@ -120,6 +121,12 @@ def parse_exercise_file(
             elif isinstance(hint_entry, dict):
                 hints = hint_entry.get("hints", [])
 
+    # Notebook cell structure (FORMAT.md). starter_code is the student-runnable
+    # file: concatenated code cells. Files without markers (pending manual
+    # conversion) carry cells=None and their raw content as starter_code.
+    cells = parse_cells(content)
+    starter_code = code_of(cells) if cells else content
+
     return {
         "id": exercise_id,
         "topic_id": topic_id,
@@ -134,7 +141,8 @@ def parse_exercise_file(
         "requires_running": requires_running,
         "estimated_time_minutes": estimated_time,
         "skills": skills,
-        "starter_code": content,
+        "cells": cells,
+        "starter_code": starter_code,
         "solution_code": solution_code,
         "hints": hints,
         "tags": [module_name, exercise_type],

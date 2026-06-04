@@ -1,219 +1,156 @@
-"""
-{{CONTEXT_INVESTIGATION_INTRO}}
-{{CONTEXT_INVESTIGATION_MISSION}}
-
-Topic: Finding infinite loop bugs
-Difficulty: 1-2
-
-Infinite loops are one of the most common bugs when learning while loops.
-In this exercise, you'll find and fix loops that never end.
-"""
-
-
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_INVESTIGATION_INTRO}}
+# {{CONTEXT_INVESTIGATION_MISSION}}
+#
+# נושא: מציאת באגים של לולאות אינסופיות
+# רמת קושי: 1-2
+#
+# לולאות אינסופיות הן אחד הבאגים הנפוצים ביותר כשלומדים לולאות `while`.
+# בתרגיל הזה תמצאי ותתקני לולאות שלא נגמרות.
+#
 # {{CASE_1_TITLE}}
-# ============================================================
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# {{hero}} wrote this code to count items, but it runs forever!
+# {{hero}} כתבה את הקוד הזה כדי לספור פריטים, אבל הוא רץ לנצח!
 #
-# EXPECTED BEHAVIOR:
-# Print numbers 1 through 5, then stop
+# התנהגות צפויה:
+# הדפסת המספרים 1 עד 5, ואז עצירה
 #
-# ACTUAL BEHAVIOR:
-# Prints 1 forever without stopping
+# מה שקורה בפועל:
+# מדפיסה 1 לנצח, בלי לעצור
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
+# %%
+count = 1
+while count <= 5:
+    print(count)
 
-def buggy_counter():
-    """This code has exactly ONE bug. Find it!"""
-    count = 1
-    while count <= 5:
-        print(count)
-        # The counter never changes! Loop runs forever.
+# %% [markdown]
+# ## המונה לא משתנה! הלולאה רצה לנצח.
+#
+# מה מצאתי: ________________________________
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_counter():
-    """
-    Fix the infinite loop.
-
-    Expected output:
-        1
-        2
-        3
-        4
-        5
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # The fix:
-    pass
-
-
-# ============================================================
+# %% [markdown]
 # {{CASE_2_TITLE}}
-# ============================================================
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# This countdown should go from 5 to 1, but something's wrong.
+# הספירה לאחור הזו אמורה ללכת מ-5 עד 1, אבל משהו השתבש.
 #
-# EXPECTED BEHAVIOR:
-# Print 5, 4, 3, 2, 1, "Done!"
+# התנהגות צפויה:
+# הדפסת 5, 4, 3, 2, 1, `"Done!"`
 #
-# ACTUAL BEHAVIOR:
-# Counts the wrong direction and never reaches 0
+# מה שקורה בפועל:
+# סופרת בכיוון הלא נכון ולא מגיעה לעולם ל-0
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
+# %%
+num = 5
+while num > 0:
+    print(num)
+    num += 1  # Oops! Going the wrong way!
 
-def buggy_countdown():
-    """This code has exactly ONE bug. Find it!"""
-    num = 5
-    while num > 0:
-        print(num)
-        num += 1  # Oops! Going the wrong way!
+# %% [markdown]
+# מה מצאתי: ________________________________
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_countdown():
-    """
-    Fix the countdown direction.
-
-    Expected output:
-        5
-        4
-        3
-        2
-        1
-        Done!
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # The fix:
-    pass
-
-
-# ============================================================
+# %% [markdown]
 # {{CASE_3_TITLE}}
-# ============================================================
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# This loop should process a list, but it never terminates.
+# הלולאה הזו אמורה לעבד רשימה, אבל היא לא מסתיימת.
 #
-# EXPECTED BEHAVIOR:
-# Process each item and stop when list is empty
+# התנהגות צפויה:
+# עיבוד כל פריט ועצירה כשהרשימה מתרוקנת
 #
-# ACTUAL BEHAVIOR:
-# The list never gets shorter
+# מה שקורה בפועל:
+# הרשימה לא מתקצרת אף פעם
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
+# %%
+items = ["{{item}}", "{{pet}}", "{{creature}}"]
+index = 0
+while index < len(items):
+    print(f"Processing: {items[index]}")
 
-def buggy_list_processor():
-    """This code has exactly ONE bug. Find it!"""
-    items = ["{{item}}", "{{pet}}", "{{creature}}"]
-    index = 0
-    while index < len(items):
-        print(f"Processing: {items[index]}")
-        # Forgot to move to next item!
+# %% [markdown]
+# ## שכחנו לעבור לפריט הבא!
+#
+# מה מצאתי: ________________________________
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_list_processor():
-    """
-    Fix the list processor.
-
-    Expected output:
-        Processing: {{item}}
-        Processing: {{pet}}
-        Processing: {{creature}}
-        All items processed!
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # The fix:
-    pass
-
-
-# ============================================================
+# %% [markdown]
 # {{CASE_4_TITLE}}
-# ============================================================
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# This accumulator should add up numbers, but it loops forever.
+# המצבר הזה אמור לחבר מספרים, אבל הוא לולא לנצח.
 #
-# EXPECTED BEHAVIOR:
-# Add numbers until total exceeds 20, then stop
+# התנהגות צפויה:
+# הוספת מספרים עד שהסכום עולה על 20, ואז עצירה
 #
-# ACTUAL BEHAVIOR:
-# Total never changes, condition never becomes False
+# מה שקורה בפועל:
+# הסכום לא משתנה, התנאי לא הופך ל-`False` אף פעם
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
+# %%
+total = 0
+amount = 5
+while total < 20:
+    print(f"Adding {amount}, total would be {total + amount}")
 
-def buggy_accumulator():
-    """This code has exactly ONE bug. Find it!"""
-    total = 0
-    amount = 5
-    while total < 20:
-        print(f"Adding {amount}, total would be {total + amount}")
-        # total + amount doesn't save the result!
+# %% [markdown]
+# ## `total + amount` לא שומר את התוצאה!
+#
+# מה מצאתי: ________________________________
+#
+# התיקון:
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def fix_accumulator():
-    """
-    Fix the accumulator.
+# %%
+print("{{CONTEXT_INVESTIGATION_INTRO}}")
+print("=" * 50)
 
-    Expected output:
-        Adding 5, total is now 5
-        Adding 5, total is now 10
-        Adding 5, total is now 15
-        Adding 5, total is now 20
-        Final total: 20
-    """
-    # ✏️ FIX THE BUG ✏️
-    #
-    # What I found: ________________________________
-    #
-    # The fix:
-    pass
+print("\n=== {{CASE_1_TITLE}} ===")
+print("Buggy version (DON'T RUN - infinite loop):")
+print("# buggy_counter()")
+print("\nFixed version:")
+fix_counter()
 
+print("\n=== {{CASE_2_TITLE}} ===")
+print("Buggy version (DON'T RUN - infinite loop):")
+print("# buggy_countdown()")
+print("\nFixed version:")
+fix_countdown()
 
-def main():
-    print("{{CONTEXT_INVESTIGATION_INTRO}}")
-    print("=" * 50)
+print("\n=== {{CASE_3_TITLE}} ===")
+print("Buggy version (DON'T RUN - infinite loop):")
+print("# buggy_list_processor()")
+print("\nFixed version:")
+fix_list_processor()
 
-    print("\n=== {{CASE_1_TITLE}} ===")
-    print("Buggy version (DON'T RUN - infinite loop):")
-    print("# buggy_counter()")
-    print("\nFixed version:")
-    fix_counter()
+print("\n=== {{CASE_4_TITLE}} ===")
+print("Buggy version (DON'T RUN - infinite loop):")
+print("# buggy_accumulator()")
+print("\nFixed version:")
+fix_accumulator()
 
-    print("\n=== {{CASE_2_TITLE}} ===")
-    print("Buggy version (DON'T RUN - infinite loop):")
-    print("# buggy_countdown()")
-    print("\nFixed version:")
-    fix_countdown()
-
-    print("\n=== {{CASE_3_TITLE}} ===")
-    print("Buggy version (DON'T RUN - infinite loop):")
-    print("# buggy_list_processor()")
-    print("\nFixed version:")
-    fix_list_processor()
-
-    print("\n=== {{CASE_4_TITLE}} ===")
-    print("Buggy version (DON'T RUN - infinite loop):")
-    print("# buggy_accumulator()")
-    print("\nFixed version:")
-    fix_accumulator()
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_INVESTIGATION_COMPLETE}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_INVESTIGATION_COMPLETE}}")

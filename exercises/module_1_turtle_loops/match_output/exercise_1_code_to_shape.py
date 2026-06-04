@@ -5,208 +5,184 @@
 # Concepts: loop count to sides, turn angles to shape type
 # =============================================================================
 
-"""
-{{CONTEXT_MATCH_OUTPUT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
+# %% [markdown]
+# {{CONTEXT_MATCH_OUTPUT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
 
+# %%
 import turtle
 
-
-# ============================================================
-# {{MATCH_SET_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{MATCH_SET_1_TITLE}}
 # {{CONTEXT_MATCH_SET_1_NARRATIVE}}
 #
-# Match each code snippet to the shape it draws.
+# התאימי כל קטע קוד לצורה שהוא מצייר.
+#
+# ## קטעי הקוד
 
-# --- CODE SNIPPETS ---
+# %%
+t = turtle.Turtle()
+t.speed(0)
+for i in range(3):
+    t.forward(80)
+    t.right(120)
 
+# %%
+t = turtle.Turtle()
+t.speed(0)
+t.penup()
+t.goto(150, 0)
+t.pendown()
+for i in range(4):
+    t.forward(60)
+    t.right(90)
 
-def snippet_1():
-    """What shape does this draw?"""
-    t = turtle.Turtle()
-    t.speed(0)
-    for i in range(3):
-        t.forward(80)
-        t.right(120)
+# %%
+t = turtle.Turtle()
+t.speed(0)
+t.penup()
+t.goto(-150, 0)
+t.pendown()
+for i in range(6):
+    t.forward(40)
+    t.right(60)
 
+# %% [markdown]
+# ## פלטים אפשריים
+#
+# פלט A: משולש (Triangle)
+# ---------
+# צורה סגורה בת 3 צלעות שוות.
+# הצב מסתובב 120 מעלות בכל פינה.
+#
+# פלט B: ריבוע (Square)
+# ---------
+# צורה סגורה בת 4 צלעות שוות.
+# הצב מסתובב 90 מעלות בכל פינה.
+#
+# פלט C: משושה (Hexagon)
+# ---------
+# צורה סגורה בת 6 צלעות שוות.
+# הצב מסתובב 60 מעלות בכל פינה.
+#
+# ## התשובות שלך
+#
+# כתבי את האות (A, B או C) שמתאימה לכל קטע קוד.
+#
+# > רמז: הסתכלי על `range(N)` כדי למצוא את מספר הצלעות.
+# > זווית הסיבוב קובעת את סוג הצורה:
+# > - Triangle: 120 מעלות (360 / 3)
+# > - Square: 90 מעלות (360 / 4)
+# > - Hexagon: 60 מעלות (360 / 6)
 
-def snippet_2():
-    """What shape does this draw?"""
-    t = turtle.Turtle()
-    t.speed(0)
-    t.penup()
-    t.goto(150, 0)
-    t.pendown()
-    for i in range(4):
-        t.forward(60)
-        t.right(90)
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+matches = {
+    "snippet_1": "?",
+    "snippet_2": "?",
+    "snippet_3": "?",
+}
 
-def snippet_3():
-    """What shape does this draw?"""
-    t = turtle.Turtle()
-    t.speed(0)
-    t.penup()
-    t.goto(-150, 0)
-    t.pendown()
-    for i in range(6):
-        t.forward(40)
-        t.right(60)
+return matches
 
-
-# --- POSSIBLE OUTPUTS ---
-"""
-OUTPUT A: Triangle
----------
-A 3-sided closed shape with equal sides.
-The turtle turns 120 degrees at each corner.
-
-OUTPUT B: Square
----------
-A 4-sided closed shape with equal sides.
-The turtle turns 90 degrees at each corner.
-
-OUTPUT C: Hexagon
----------
-A 6-sided closed shape with equal sides.
-The turtle turns 60 degrees at each corner.
-"""
-
-
-# --- YOUR ANSWERS ---
-
-
-def your_matches_set1():
-    # ✏️ MATCH SNIPPETS TO OUTPUTS ✏️
-    #
-    # Write the letter (A, B, or C) that matches each snippet.
-    #
-    # Hint: Look at range(N) to find the number of sides.
-    # The turn angle determines what shape it is:
-    # - Triangle: 120 degrees (360 / 3)
-    # - Square: 90 degrees (360 / 4)
-    # - Hexagon: 60 degrees (360 / 6)
-
-    matches = {
-        "snippet_1": "?",
-        "snippet_2": "?",
-        "snippet_3": "?",
-    }
-
-    return matches
-
-
-# ============================================================
-# {{MATCH_SET_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{MATCH_SET_2_TITLE}}
 # {{CONTEXT_MATCH_SET_2_NARRATIVE}}
 #
-# These snippets look similar but produce different results!
-# {{hero}} must identify each pattern.
+# קטעי הקוד האלה נראים דומים אבל מייצרים תוצאות שונות!
+# {{hero}} צריכה לזהות כל תבנית.
+#
+# ## קטעי הקוד
 
-# --- CODE SNIPPETS ---
+# %%
+t = turtle.Turtle()
+t.speed(0)
+t.penup()
+t.goto(-200, -100)
+t.pendown()
+for i in range(5):
+    t.forward(80)
+    t.right(72)
 
+# %%
+t = turtle.Turtle()
+t.speed(0)
+t.penup()
+t.goto(0, -100)
+t.pendown()
+for i in range(5):
+    t.forward(80)
+    t.right(144)
 
-def snippet_4():
-    """What does this code draw?"""
-    t = turtle.Turtle()
-    t.speed(0)
-    t.penup()
-    t.goto(-200, -100)
-    t.pendown()
-    for i in range(5):
-        t.forward(80)
-        t.right(72)
+# %%
+t = turtle.Turtle()
+t.speed(0)
+t.penup()
+t.goto(200, -100)
+t.pendown()
+for i in range(5):
+    t.forward(80)
+    t.left(72)
 
+# %% [markdown]
+# ## פלטים אפשריים
+#
+# פלט D: מחומש (Pentagon)
+# ---------
+# צורה סגורה וסדירה בת 5 צלעות.
+# זווית סיבוב: 72 מעלות (360/5).
+# מסתובבת ימינה (`right`) בכל פינה.
+#
+# פלט E: כוכב בן 5 קצוות (5-Pointed Star)
+# ---------
+# צורה של כוכב עם 5 קצוות.
+# זווית סיבוב: 144 מעלות (גדולה יותר מאשר פולייגון).
+# הקווים חוצים זה את זה דרך המרכז.
+#
+# פלט F: מחומש נגד כיוון השעון (Pentagon counterclockwise)
+# ---------
+# צורה סגורה וסדירה בת 5 צלעות.
+# זווית סיבוב: 72 מעלות.
+# מסתובבת שמאלה (`left`) בכל פינה — מצייר בכיוון הפוך.
+#
+# ## התשובות שלך
+#
+# > רמז: השווי את זוויות הסיבוב והכיוונים!
+# > - 72 מעלות = 360/5, יוצרת מחומש סדיר
+# > - 144 מעלות = 2 * 72, יוצרת תבנית כוכב
+# > - `left` לעומת `right` קובע לאיזה כיוון הצורה מצוירת
 
-def snippet_5():
-    """What does this code draw?"""
-    t = turtle.Turtle()
-    t.speed(0)
-    t.penup()
-    t.goto(0, -100)
-    t.pendown()
-    for i in range(5):
-        t.forward(80)
-        t.right(144)
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+matches = {
+    "snippet_4": "?",
+    "snippet_5": "?",
+    "snippet_6": "?",
+}
 
-def snippet_6():
-    """What does this code draw?"""
-    t = turtle.Turtle()
-    t.speed(0)
-    t.penup()
-    t.goto(200, -100)
-    t.pendown()
-    for i in range(5):
-        t.forward(80)
-        t.left(72)
+return matches
 
+# %%
+print("{{CONTEXT_MATCH_OUTPUT_INTRO}}")
+print("=" * 50)
 
-# --- POSSIBLE OUTPUTS ---
-"""
-OUTPUT D: Pentagon (5-sided polygon)
----------
-A regular 5-sided closed shape.
-Turn angle: 72 degrees (360/5).
-Turns RIGHT at each corner.
+print("\n=== {{MATCH_SET_1_TITLE}} ===")
+print("\nRunning all snippets...")
+snippet_1()
+snippet_2()
+snippet_3()
+print("\nYour matches:", your_matches_set1())
 
-OUTPUT E: 5-Pointed Star
----------
-A star shape with 5 points.
-Turn angle: 144 degrees (larger than polygon).
-Lines cross through the center.
+print("\n=== {{MATCH_SET_2_TITLE}} ===")
+snippet_4()
+snippet_5()
+snippet_6()
+print("\nYour matches:", your_matches_set2())
 
-OUTPUT F: Pentagon (counterclockwise)
----------
-A regular 5-sided closed shape.
-Turn angle: 72 degrees.
-Turns LEFT at each corner (draws in opposite direction).
-"""
-
-
-# --- YOUR ANSWERS ---
-
-
-def your_matches_set2():
-    # ✏️ MATCH SNIPPETS TO OUTPUTS ✏️
-    #
-    # Hint: Compare the turn angles and directions!
-    # - 72 degrees = 360/5, creates a regular pentagon
-    # - 144 degrees = 2 * 72, creates a star pattern
-    # - left vs right affects which way the shape is drawn
-
-    matches = {
-        "snippet_4": "?",
-        "snippet_5": "?",
-        "snippet_6": "?",
-    }
-
-    return matches
-
-
-def main():
-    print("{{CONTEXT_MATCH_OUTPUT_INTRO}}")
-    print("=" * 50)
-
-    print("\n=== {{MATCH_SET_1_TITLE}} ===")
-    print("\nRunning all snippets...")
-    snippet_1()
-    snippet_2()
-    snippet_3()
-    print("\nYour matches:", your_matches_set1())
-
-    print("\n=== {{MATCH_SET_2_TITLE}} ===")
-    snippet_4()
-    snippet_5()
-    snippet_6()
-    print("\nYour matches:", your_matches_set2())
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_VERIFICATION_COMPLETE}}")
-    turtle.done()
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_VERIFICATION_COMPLETE}}")
+turtle.done()

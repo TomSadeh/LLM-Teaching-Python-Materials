@@ -6,283 +6,260 @@
 # Concepts: Return vs print, debugging, input validation
 # =============================================================================
 
-"""
-{{CONTEXT_SETBACK_INTRO}}
-
-This is a multi-part exercise. Complete each part in order.
-
-{{mentor}} built a calculator for {{school}}, but it's completely broken!
-Students are getting strange results and errors. You need to save the day.
-"""
-
-
-# ============================================================
-# PART 1: SETBACK - Understand the Errors
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_SETBACK_INTRO}}
+#
+# זוהי תרגילה מרובת-חלקים. השלימי כל חלק לפי הסדר.
+#
+# {{mentor}} בנה מחשבון עבור {{school}}, אבל הוא שבור לגמרי!
+# התלמידות מקבלות תוצאות מוזרות ושגיאות. את צריכה להציל את המצב.
+#
+# ## חלק 1: המכשול - הבן את השגיאות
 # {{CONTEXT_SETBACK_INTRO}}
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# The calculator is producing errors. Decode what went wrong.
+# המחשבון מייצר שגיאות. פענחי מה השתבש.
+#
+# הודעת שגיאה 1:
+# ----------------
+# Traceback (most recent call last):
+#   File "calculator.py", line 12, in <module>
+#     final = result * 2
+# TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+#
+# הקוד שגרם לכך:
+#     def add(a, b):
+#         print(a + b)
+#
+#     result = add(5, 3)
+#     final = result * 2
 
-"""
-ERROR MESSAGE 1:
-----------------
-Traceback (most recent call last):
-  File "calculator.py", line 12, in <module>
-    final = result * 2
-TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+# %%
+# DECODE THE ERROR
+#
+# Answer these questions:
+#
+# 1. What does "NoneType" mean in Python?
+#    Answer: _______________
+#
+# 2. Why is 'result' equal to None?
+#    Answer: _______________
+#
+# 3. What should the add() function do differently?
+#    Answer: _______________
 
-The code that caused this:
-    def add(a, b):
-        print(a + b)
+# Test your understanding - which function is correct?
+def add_broken(a, b):
+    print(a + b)  # This one prints but returns None
 
-    result = add(5, 3)
-    final = result * 2
-"""
+def add_fixed(a, b):
+    return a + b  # This one returns the value
 
+# Run both and see the difference:
+print("Testing broken version:")
+result1 = add_broken(5, 3)
+print(f"Stored result: {result1}")
+print(f"Type: {type(result1)}")
 
-def part_1_decode_errors():
-    # DECODE THE ERROR
-    #
-    # Answer these questions:
-    #
-    # 1. What does "NoneType" mean in Python?
-    #    Answer: _______________
-    #
-    # 2. Why is 'result' equal to None?
-    #    Answer: _______________
-    #
-    # 3. What should the add() function do differently?
-    #    Answer: _______________
+print("\nTesting fixed version:")
+result2 = add_fixed(5, 3)
+print(f"Stored result: {result2}")
+print(f"Type: {type(result2)}")
 
-    # Test your understanding - which function is correct?
-    def add_broken(a, b):
-        print(a + b)  # This one prints but returns None
-
-    def add_fixed(a, b):
-        return a + b  # This one returns the value
-
-    # Run both and see the difference:
-    print("Testing broken version:")
-    result1 = add_broken(5, 3)
-    print(f"Stored result: {result1}")
-    print(f"Type: {type(result1)}")
-
-    print("\nTesting fixed version:")
-    result2 = add_fixed(5, 3)
-    print(f"Stored result: {result2}")
-    print(f"Type: {type(result2)}")
-
-
-# ============================================================
-# PART 2: INVESTIGATION - Find and Fix the Bugs
-# ============================================================
+# %% [markdown]
+# ## חלק 2: החקירה - מצאי ותקני את הבאגים
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Here's the broken calculator. Find all the bugs!
+# הנה המחשבון השבור. מצאי את כל הבאגים!
 
+# %%
+def add(a, b):
+    print(a + b)  # BUG: Should return, not print
 
-def buggy_calculator():
-    """
-    BROKEN CALCULATOR - DO NOT USE!
-    This has multiple bugs related to return vs print.
-    """
-    def add(a, b):
-        print(a + b)  # BUG: Should return, not print
+def subtract(a, b):
+    result = a - b
+    print(result)  # BUG: Should return, not print
 
-    def subtract(a, b):
-        result = a - b
-        print(result)  # BUG: Should return, not print
+def multiply(a, b):
+    a * b  # BUG: Calculates but doesn't return or print!
 
-    def multiply(a, b):
-        a * b  # BUG: Calculates but doesn't return or print!
+def divide(a, b):
+    print(a / b)  # BUG: Should return, not print
 
-    def divide(a, b):
-        print(a / b)  # BUG: Should return, not print
+# Try to use the calculator
+sum_result = add(10, 5)
+diff_result = subtract(10, 5)
+product = multiply(10, 5)
 
-    # Try to use the calculator
-    sum_result = add(10, 5)
-    diff_result = subtract(10, 5)
-    product = multiply(10, 5)
+# %% [markdown]
+# כל אלה ייכשלו כי התוצאות הן `None`!
+# total = sum_result + diff_result + product
 
-    # These will all fail because results are None!
-    # total = sum_result + diff_result + product
+# %%
+# FIX THE CALCULATOR
+#
+# Rewrite all four functions to use return instead of print.
 
+def add(a, b):
+    # YOUR FIX HERE
+    pass
 
-def part_2_fix_the_bugs():
-    # FIX THE CALCULATOR
-    #
-    # Rewrite all four functions to use return instead of print.
+def subtract(a, b):
+    # YOUR FIX HERE
+    pass
 
-    def add(a, b):
-        # YOUR FIX HERE
-        pass
+def multiply(a, b):
+    # YOUR FIX HERE
+    pass
 
-    def subtract(a, b):
-        # YOUR FIX HERE
-        pass
+def divide(a, b):
+    # YOUR FIX HERE
+    pass
 
-    def multiply(a, b):
-        # YOUR FIX HERE
-        pass
+# Test your fixes
+print("Testing fixed calculator:")
+sum_result = add(10, 5)
+print(f"10 + 5 = {sum_result}")
 
-    def divide(a, b):
-        # YOUR FIX HERE
-        pass
+diff_result = subtract(10, 5)
+print(f"10 - 5 = {diff_result}")
 
-    # Test your fixes
-    print("Testing fixed calculator:")
-    sum_result = add(10, 5)
-    print(f"10 + 5 = {sum_result}")
+product = multiply(10, 5)
+print(f"10 * 5 = {product}")
 
-    diff_result = subtract(10, 5)
-    print(f"10 - 5 = {diff_result}")
+quotient = divide(10, 5)
+print(f"10 / 5 = {quotient}")
 
-    product = multiply(10, 5)
-    print(f"10 * 5 = {product}")
+# Now we can use the results!
+if sum_result and diff_result and product and quotient:
+    total = sum_result + diff_result + product
+    print(f"\nSum of results: {total}")
 
-    quotient = divide(10, 5)
-    print(f"10 / 5 = {quotient}")
-
-    # Now we can use the results!
-    if sum_result and diff_result and product and quotient:
-        total = sum_result + diff_result + product
-        print(f"\nSum of results: {total}")
-
-
-# ============================================================
-# PART 3: IMPROVEMENT - Add Input Validation
-# ============================================================
+# %% [markdown]
+# ## חלק 3: השיפור - הוספת בדיקת קלט
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# The calculator works now, but it crashes on bad input.
-# Add validation to make it robust.
+# המחשבון עובד עכשיו, אבל הוא קורס על קלט שגוי.
+# הוסיפי בדיקות כדי להפוך אותו לעמיד יותר.
 
+# %%
+# CREATE AN IMPROVED CALCULATOR
+#
+# Write functions that:
+# 1. Return the calculated value
+# 2. Handle edge cases gracefully
 
-def part_3_improved_calculator():
-    # CREATE AN IMPROVED CALCULATOR
+def safe_add(a, b):
+    # YOUR CODE HERE
     #
-    # Write functions that:
-    # 1. Return the calculated value
-    # 2. Handle edge cases gracefully
+    # Return a + b
+    # This one doesn't need special validation
+    pass
 
-    def safe_add(a, b):
-        # YOUR CODE HERE
-        #
-        # Return a + b
-        # This one doesn't need special validation
-        pass
-
-    def safe_subtract(a, b):
-        # YOUR CODE HERE
-        #
-        # Return a - b
-        pass
-
-    def safe_multiply(a, b):
-        # YOUR CODE HERE
-        #
-        # Return a * b
-        pass
-
-    def safe_divide(a, b):
-        # YOUR CODE HERE
-        #
-        # Return a / b if b is not zero
-        # If b is zero, return None (can't divide by zero)
-        #
-        # Hint: Check if b == 0 before dividing
-        pass
-
-    # Test normal operations
-    print("Testing improved calculator:")
-    print(f"15 + 7 = {safe_add(15, 7)}")
-    print(f"15 - 7 = {safe_subtract(15, 7)}")
-    print(f"15 * 7 = {safe_multiply(15, 7)}")
-    print(f"15 / 3 = {safe_divide(15, 3)}")
-
-    # Test edge case: division by zero
-    print("\nTesting division by zero:")
-    result = safe_divide(10, 0)
-    if result is None:
-        print("Cannot divide by zero! (Handled gracefully)")
-    else:
-        print(f"10 / 0 = {result}")
-
-
-# ============================================================
-# FINAL CHALLENGE: Complete Calculator
-# ============================================================
-
-def final_calculator():
-    # CREATE THE FINAL CALCULATOR
+def safe_subtract(a, b):
+    # YOUR CODE HERE
     #
-    # Put it all together: a working calculator with proper returns.
+    # Return a - b
+    pass
 
-    def calculate(operation, a, b):
-        """
-        Perform a calculation based on the operation.
+def safe_multiply(a, b):
+    # YOUR CODE HERE
+    #
+    # Return a * b
+    pass
 
-        Args:
-            operation: One of "add", "subtract", "multiply", "divide"
-            a: First number
-            b: Second number
+def safe_divide(a, b):
+    # YOUR CODE HERE
+    #
+    # Return a / b if b is not zero
+    # If b is zero, return None (can't divide by zero)
+    #
+    # Hint: Check if b == 0 before dividing
+    pass
 
-        Returns:
-            The result of the operation, or None if invalid
-        """
-        # YOUR CODE HERE
-        #
-        # Use if/elif/else to check the operation and return the result
-        # Handle division by zero by returning None
-        #
-        # Hint:
-        # if operation == "add":
-        #     return a + b
-        # elif operation == "subtract":
-        #     ...
-        pass
+# Test normal operations
+print("Testing improved calculator:")
+print(f"15 + 7 = {safe_add(15, 7)}")
+print(f"15 - 7 = {safe_subtract(15, 7)}")
+print(f"15 * 7 = {safe_multiply(15, 7)}")
+print(f"15 / 3 = {safe_divide(15, 3)}")
 
-    # Test the complete calculator
-    print("\n=== Complete Calculator ===")
-    print(f"add(20, 5) = {calculate('add', 20, 5)}")
-    print(f"subtract(20, 5) = {calculate('subtract', 20, 5)}")
-    print(f"multiply(20, 5) = {calculate('multiply', 20, 5)}")
-    print(f"divide(20, 5) = {calculate('divide', 20, 5)}")
-    print(f"divide(20, 0) = {calculate('divide', 20, 0)}")
+# Test edge case: division by zero
+print("\nTesting division by zero:")
+result = safe_divide(10, 0)
+if result is None:
+    print("Cannot divide by zero! (Handled gracefully)")
+else:
+    print(f"10 / 0 = {result}")
 
+# %% [markdown]
+# ## אתגר סיום: המחשבון השלם
 
-def main():
-    print("=" * 60)
-    print("THE RESCUE: The Broken Calculator")
-    print("=" * 60)
-    print("{{CONTEXT_SETBACK_INTRO}}")
+# %%
+# CREATE THE FINAL CALCULATOR
+#
+# Put it all together: a working calculator with proper returns.
 
-    print("\n--- PART 1: SETBACK - Decode the Error ---")
-    part_1_decode_errors()
+def calculate(operation, a, b):
+    """
+    Perform a calculation based on the operation.
 
-    print("\n--- PART 2: INVESTIGATION - Fix the Bugs ---")
-    print("\nBuggy calculator (for reference - don't run):")
-    print("def add(a, b): print(a + b)  # Wrong!")
-    print("def add(a, b): return a + b  # Correct!")
-    print("\nYour fixed calculator:")
-    part_2_fix_the_bugs()
+    Args:
+        operation: One of "add", "subtract", "multiply", "divide"
+        a: First number
+        b: Second number
 
-    print("\n--- PART 3: IMPROVEMENT - Add Validation ---")
-    part_3_improved_calculator()
+    Returns:
+        The result of the operation, or None if invalid
+    """
+    # YOUR CODE HERE
+    #
+    # Use if/elif/else to check the operation and return the result
+    # Handle division by zero by returning None
+    #
+    # Hint:
+    # if operation == "add":
+    #     return a + b
+    # elif operation == "subtract":
+    #     ...
+    pass
 
-    print("\n--- FINAL CHALLENGE ---")
-    final_calculator()
+# Test the complete calculator
+print("\n=== Complete Calculator ===")
+print(f"add(20, 5) = {calculate('add', 20, 5)}")
+print(f"subtract(20, 5) = {calculate('subtract', 20, 5)}")
+print(f"multiply(20, 5) = {calculate('multiply', 20, 5)}")
+print(f"divide(20, 5) = {calculate('divide', 20, 5)}")
+print(f"divide(20, 0) = {calculate('divide', 20, 0)}")
 
-    print("\n" + "=" * 60)
-    print("{{CONTEXT_TRIUMPH_COMPLETE}}")
-    print("\nKey Lessons:")
-    print("1. Functions should RETURN values, not just PRINT them")
-    print("2. return sends data back to your code")
-    print("3. print() only displays to humans, returns None")
-    print("4. Always validate inputs for edge cases")
+# %%
+print("=" * 60)
+print("THE RESCUE: The Broken Calculator")
+print("=" * 60)
+print("{{CONTEXT_SETBACK_INTRO}}")
 
+print("\n--- PART 1: SETBACK - Decode the Error ---")
+part_1_decode_errors()
 
-main()
+print("\n--- PART 2: INVESTIGATION - Fix the Bugs ---")
+print("\nBuggy calculator (for reference - don't run):")
+print("def add(a, b): print(a + b)  # Wrong!")
+print("def add(a, b): return a + b  # Correct!")
+print("\nYour fixed calculator:")
+part_2_fix_the_bugs()
+
+print("\n--- PART 3: IMPROVEMENT - Add Validation ---")
+part_3_improved_calculator()
+
+print("\n--- FINAL CHALLENGE ---")
+final_calculator()
+
+print("\n" + "=" * 60)
+print("{{CONTEXT_TRIUMPH_COMPLETE}}")
+print("\nKey Lessons:")
+print("1. Functions should RETURN values, not just PRINT them")
+print("2. return sends data back to your code")
+print("3. print() only displays to humans, returns None")
+print("4. Always validate inputs for edge cases")

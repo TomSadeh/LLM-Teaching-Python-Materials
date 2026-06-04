@@ -1,213 +1,175 @@
-"""
-{{CONTEXT_DECODE_ERROR_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-
-In this exercise, you'll learn to understand and fix errors
-that occur when working with nested dictionaries.
-"""
-
-
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_DECODE_ERROR_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# בתרגיל הזה תלמדי להבין ולתקן שגיאות
+# שקורות כשעובדים עם מילונים מקוננים.
+#
 # {{ERROR_1_TITLE}}
-# ============================================================
 # {{CONTEXT_ERROR_1_NARRATIVE}}
+#
+# הודעת השגיאה:
+# --------------
+# Traceback (most recent call last):
+#   File "config.py", line 8, in <module>
+#     volume = settings["audio"]["volume"]
+# KeyError: 'audio'
 
-"""
-ERROR MESSAGE:
---------------
-Traceback (most recent call last):
-  File "config.py", line 8, in <module>
-    volume = settings["audio"]["volume"]
-KeyError: 'audio'
-"""
+# %%
+settings = {
+    "display": {"brightness": 80, "resolution": "1080p"},
+    "controls": {"sensitivity": 5}
+}
 
+# Trying to access audio settings that don't exist
+volume = settings["audio"]["volume"]
+print(f"Volume: {volume}")
 
-def buggy_code_a():
-    """The code that caused the error."""
-    settings = {
-        "display": {"brightness": 80, "resolution": "1080p"},
-        "controls": {"sensitivity": 5}
-    }
+# %% [markdown]
+# קודם כל, הסבירי מה גרם לשגיאה:
+# השגיאה קרתה כי: _______________
+#
+# {{CONTEXT_ERROR_HINT_1}}
+#
+# 1. הוסיפי את המפתח החסר `"audio"` למילון `settings`
+# 2. בדקי אם `"audio"` קיים לפני הגישה אליו
+# 3. השתמשי ב-`.get()` עם ערך ברירת מחדל
+#
+# כתבי גרסה שמטפלת בצורה נאותה במפתחות מקוננים חסרים:
 
-    # Trying to access audio settings that don't exist
-    volume = settings["audio"]["volume"]
-    print(f"Volume: {volume}")
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-
-def fix_code_a():
-    # ✏️ FIX THE CODE ✏️
-    #
-    # First, explain what caused the error:
-    # The error occurred because: _______________
-    #
-    # {{CONTEXT_ERROR_HINT_1}}
-    #
-    # Option 1: Add the missing "audio" key to settings
-    # Option 2: Check if "audio" exists before accessing
-    # Option 3: Use .get() with a default value
-    #
-    # Write a version that handles missing nested keys gracefully:
-
-    pass
-
-
-# ============================================================
+# %% [markdown]
 # {{ERROR_2_TITLE}}
-# ============================================================
 # {{CONTEXT_ERROR_2_NARRATIVE}}
+#
+# הודעת השגיאה:
+# --------------
+# Traceback (most recent call last):
+#   File "profile.py", line 7, in <module>
+#     health = characters["{{hero}}"]["stats"]["health"]
+# TypeError: 'NoneType' object is not subscriptable
 
-"""
-ERROR MESSAGE:
---------------
-Traceback (most recent call last):
-  File "profile.py", line 7, in <module>
-    health = characters["{{hero}}"]["stats"]["health"]
-TypeError: 'NoneType' object is not subscriptable
-"""
+# %%
+characters = {
+    "{{hero}}": None,  # Character data not loaded yet!
+    "{{heroine}}": {"stats": {"health": 100, "mana": 50}}
+}
 
+# This crashes because characters["{{hero}}"] is None
+health = characters["{{hero}}"]["stats"]["health"]
+print(f"Health: {health}")
 
-def buggy_code_b():
-    """The code that caused the error."""
-    characters = {
-        "{{hero}}": None,  # Character data not loaded yet!
-        "{{heroine}}": {"stats": {"health": 100, "mana": 50}}
-    }
+# %% [markdown]
+# השגיאה קרתה כי: _______________
+#
+# {{CONTEXT_ERROR_HINT_2}}
+#
+# הודעת השגיאה אומרת `"NoneType object is not subscriptable"`
+# כלומר ניסינו להשתמש ב-`["stats"]` על `None`.
+#
+# תקני על ידי בדיקה אם נתוני הדמות קיימים לפני הגישה אליהם:
 
-    # This crashes because characters["{{hero}}"] is None
-    health = characters["{{hero}}"]["stats"]["health"]
-    print(f"Health: {health}")
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-
-def fix_code_b():
-    # ✏️ FIX THE CODE ✏️
-    #
-    # The error occurred because: _______________
-    #
-    # {{CONTEXT_ERROR_HINT_2}}
-    #
-    # The error message says "NoneType object is not subscriptable"
-    # This means we tried to use ["stats"] on None.
-    #
-    # Fix by checking if the character data exists before accessing:
-
-    pass
-
-
-# ============================================================
+# %% [markdown]
 # {{ERROR_3_TITLE}}
-# ============================================================
 # {{CONTEXT_ERROR_3_NARRATIVE}}
+#
+# הודעת השגיאה:
+# --------------
+# Traceback (most recent call last):
+#   File "inventory.py", line 10, in <module>
+#     player_data["inventory"]["{{item}}"] += 1
+# KeyError: '{{item}}'
 
-"""
-ERROR MESSAGE:
---------------
-Traceback (most recent call last):
-  File "inventory.py", line 10, in <module>
-    player_data["inventory"]["{{item}}"] += 1
-KeyError: '{{item}}'
-"""
-
-
-def buggy_code_c():
-    """The code that caused the error."""
-    player_data = {
-        "name": "{{hero}}",
-        "inventory": {
-            "{{spell1}}": 3
-        }
+# %%
+player_data = {
+    "name": "{{hero}}",
+    "inventory": {
+        "{{spell1}}": 3
     }
+}
 
-    # Trying to add to an item that doesn't exist in inventory
-    player_data["inventory"]["{{item}}"] += 1
-    print(player_data["inventory"])
+# Trying to add to an item that doesn't exist in inventory
+player_data["inventory"]["{{item}}"] += 1
+print(player_data["inventory"])
 
+# %% [markdown]
+# השגיאה קרתה כי: _______________
+#
+# {{CONTEXT_ERROR_HINT_3}}
+#
+# המילון המקונן קיים (`inventory`), אבל המפתח
+# `"{{item}}"` לא קיים בתוכו.
+#
+# השתמשי ב-`.get()` על המילון הפנימי:
+# player_data["inventory"]["{{item}}"] = player_data["inventory"].get("{{item}}", 0) + 1
 
-def fix_code_c():
-    # ✏️ FIX THE CODE ✏️
-    #
-    # The error occurred because: _______________
-    #
-    # {{CONTEXT_ERROR_HINT_3}}
-    #
-    # The nested dictionary exists (inventory), but the key
-    # "{{item}}" doesn't exist within it.
-    #
-    # Use .get() on the inner dictionary:
-    # player_data["inventory"]["{{item}}"] = player_data["inventory"].get("{{item}}", 0) + 1
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    pass
-
-
-# ============================================================
+# %% [markdown]
 # {{ERROR_4_TITLE}}
-# ============================================================
 # {{CONTEXT_ERROR_4_NARRATIVE}}
+#
+# הודעת השגיאה:
+# --------------
+# Traceback (most recent call last):
+#   File "game.py", line 8, in <module>
+#     abilities["{{hero}}"]["{{spell1}}"]["power"] = 20
+# KeyError: '{{spell1}}'
 
-"""
-ERROR MESSAGE:
---------------
-Traceback (most recent call last):
-  File "game.py", line 8, in <module>
-    abilities["{{hero}}"]["{{spell1}}"]["power"] = 20
-KeyError: '{{spell1}}'
-"""
+# %%
+abilities = {
+    "{{hero}}": {},  # Empty dict - no abilities yet!
+    "{{heroine}}": {"{{spell1}}": {"power": 10}}
+}
 
+# Trying to set a value in a nested dict that doesn't exist
+abilities["{{hero}}"]["{{spell1}}"]["power"] = 20
 
-def buggy_code_d():
-    """The code that caused the error."""
-    abilities = {
-        "{{hero}}": {},  # Empty dict - no abilities yet!
-        "{{heroine}}": {"{{spell1}}": {"power": 10}}
-    }
+# %% [markdown]
+# השגיאה קרתה כי: _______________
+#
+# {{CONTEXT_ERROR_HINT_4}}
+#
+# מילון היכולות של {{hero}} ריק - `"{{spell1}}"` לא קיים.
+# צריך ליצור את כל המבנה המקונן.
+#
+# אפשרות אחת: לבדוק וליצור כל רמה בנפרד
+# אפשרות אחרת: להקצות את כל המילון המקונן בבת אחת
 
-    # Trying to set a value in a nested dict that doesn't exist
-    abilities["{{hero}}"]["{{spell1}}"]["power"] = 20
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+print("{{CONTEXT_DECODE_ERROR_INTRO}}")
+print("=" * 50)
+print()
+print("Nested dictionary errors are trickier because the problem")
+print("might be at any level of the nesting!")
+print()
+print("For each exercise:")
+print("1. Identify WHICH key caused the error")
+print("2. Understand WHY that key is problematic")
+print("3. Fix the code to handle missing data gracefully")
+print()
 
-def fix_code_d():
-    # ✏️ FIX THE CODE ✏️
-    #
-    # The error occurred because: _______________
-    #
-    # {{CONTEXT_ERROR_HINT_4}}
-    #
-    # {{hero}}'s abilities dict is empty - "{{spell1}}" doesn't exist.
-    # We need to create the entire nested structure.
-    #
-    # One approach: Check and create each level
-    # Another approach: Assign the whole nested dict at once
+print("=== {{ERROR_1_TITLE}} ===")
+# Uncomment to test after fixing:
+# fix_code_a()
 
-    pass
+print("\n=== {{ERROR_2_TITLE}} ===")
+# fix_code_b()
 
+print("\n=== {{ERROR_3_TITLE}} ===")
+# fix_code_c()
 
-def main():
-    print("{{CONTEXT_DECODE_ERROR_INTRO}}")
-    print("=" * 50)
-    print()
-    print("Nested dictionary errors are trickier because the problem")
-    print("might be at any level of the nesting!")
-    print()
-    print("For each exercise:")
-    print("1. Identify WHICH key caused the error")
-    print("2. Understand WHY that key is problematic")
-    print("3. Fix the code to handle missing data gracefully")
-    print()
+print("\n=== {{ERROR_4_TITLE}} ===")
+# fix_code_d()
 
-    print("=== {{ERROR_1_TITLE}} ===")
-    # Uncomment to test after fixing:
-    # fix_code_a()
-
-    print("\n=== {{ERROR_2_TITLE}} ===")
-    # fix_code_b()
-
-    print("\n=== {{ERROR_3_TITLE}} ===")
-    # fix_code_c()
-
-    print("\n=== {{ERROR_4_TITLE}} ===")
-    # fix_code_d()
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_INVESTIGATION_COMPLETE}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_INVESTIGATION_COMPLETE}}")

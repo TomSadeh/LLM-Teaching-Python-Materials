@@ -1,39 +1,34 @@
-"""
-{{CONTEXT_PROJECT_INTRO}}
-
-Build a collection manager for {{item}} objects.
-
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
-
-
-# ============================================================
-# Project: Collection Manager
-# ============================================================
-# Build a system to manage a collection of items.
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
 #
-# Your system should:
-# - Store items with name, category, and quantity
-# - Add and remove items from the collection
-# - Search and filter items
-# - Display the collection and statistics
-# - Provide an interactive menu
+# בני מנהל אוסף עבור אובייקטים מסוג {{item}}.
 #
-# ✏️ YOUR CODE HERE ✏️
-# Design your own functions to accomplish the above goals.
-# Think about what data structure works best for your items.
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# ## פרויקט: מנהל אוסף
+# בני מערכת לניהול אוסף של פריטים.
+#
+# המערכת שלך צריכה:
+# - לשמור פריטים עם שם, קטגוריה וכמות
+# - להוסיף ולהסיר פריטים מהאוסף
+# - לחפש ולסנן פריטים
+# - להציג את האוסף ונתונים סטטיסטיים
+# - לספק תפריט אינטראקטיבי
+#
+# עצבי פונקציות משלך כדי להשיג את המטרות הללו.
+# חשבי איזה מבנה נתונים מתאים הכי טוב לפריטים שלך.
 
+# %%
+print("{{greeting}}")
+print("Welcome to {{hero}}'s Collection Manager!")
+print()
 
-def main():
-    print("{{greeting}}")
-    print("Welcome to {{hero}}'s Collection Manager!")
-    print()
+# %% [markdown]
+# בני את מנהל האוסף שלך
 
-    # ✏️ YOUR CODE HERE ✏️
-    # Build your collection manager
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    print()
-    print("{{exclamation}} Goodbye!")
-
-
-main()
+# %%
+print()
+print("{{exclamation}} Goodbye!")

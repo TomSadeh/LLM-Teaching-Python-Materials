@@ -5,219 +5,193 @@
 # Concepts: Combining for loops with if/elif/else statements
 # =============================================================================
 
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
-
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
+#
+# {{CONTEXT_STUDENT_TASK}}
+#
+# ספרי כמה מספרים בין 1 ל-10 גדולים מ-5.
+#
+# 1. צרי משתנה בשם `count` עם הערך 0
+# 2. השתמשי בלולאה: `for num in range(1, 11):`
+# 3. בתוך הלולאה, כתבי תנאי:
+#         `if num > 5:`
+#             `count = count + 1`
+# 4. אחרי הלולאה, הדפיסי `f"Numbers greater than 5: {count}"`
+#
+# פלט צפוי:
+#   Numbers greater than 5: 5
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # {{CONTEXT_STUDENT_TASK}}
-    #
-    # Count how many numbers from 1 to 10 are greater than 5.
-    #
-    # Step 1: Create a variable called count with the value 0
-    # Step 2: Use a for loop: for num in range(1, 11):
-    # Step 3: Inside the loop, write an if statement:
-    #         if num > 5:
-    #             count = count + 1
-    # Step 4: After the loop, print f"Numbers greater than 5: {count}"
-    #
-    # Expected output:
-    #   Numbers greater than 5: 5
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
+#
+# {{CONTEXT_STUDENT_TASK}}
+#
+# הדפיסי האם כל מספר בין 1 ל-5 הוא זוגי או אי-זוגי.
+#
+# 1. השתמשי בלולאה: `for num in range(1, 6):`
+# 2. בתוך הלולאה, בדקי אם `num % 2 == 0` (זוגי)
+# 3. אם זוגי, הדפיסי `f"{num} is even"`
+# 4. אחרת, הדפיסי `f"{num} is odd"`
+#
+# > רמז: `%` הוא אופרטור המודולו (שארית החלוקה).
+# >       אם `num % 2 == 0`, המספר מתחלק ב-2 בדיוק (זוגי).
+#
+# פלט צפוי:
+#   1 is odd
+#   2 is even
+#   3 is odd
+#   4 is even
+#   5 is odd
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # {{CONTEXT_STUDENT_TASK}}
-    #
-    # Print whether each number from 1 to 5 is even or odd.
-    #
-    # Step 1: Use a for loop: for num in range(1, 6):
-    # Step 2: Inside the loop, check if num % 2 == 0 (even)
-    # Step 3: If even, print f"{num} is even"
-    # Step 4: Else, print f"{num} is odd"
-    #
-    # Hint: % is the modulo operator (remainder after division)
-    #       If num % 2 == 0, the number divides evenly by 2 (even)
-    #
-    # Expected output:
-    #   1 is odd
-    #   2 is even
-    #   3 is odd
-    #   4 is even
-    #   5 is odd
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
+#
+# {{CONTEXT_STUDENT_TASK}}
+#
+# {{hero}} בודקת את המלאי. ספרי פריטים יקרי ערך (שווים יותר מ-50).
+# השתמשי בסכום מצטבר כדי לעקוב אחר הערך הכולל.
+#
+# 1. צרי משתנים:
+#         `item_values = [20, 75, 30, 100, 45, 80]`  # שימי לב: זו רשימה!
+#         `valuable_count = 0`
+#         `total_valuable = 0`
+#
+# 2. השתמשי בלולאה: `for value in item_values:`
+# 3. בתוך הלולאה, בדקי אם `value > 50`
+# 4. אם כן:
+#         - הוסיפי 1 ל-`valuable_count`
+#         - הוסיפי את `value` ל-`total_valuable`
+#
+# 5. אחרי הלולאה, הדפיסי:
+#         `f"Found {valuable_count} valuable items"`
+#         `f"Total value: {total_valuable} gold"`
+#
+# > רמז: כאן אנחנו עוברות על רשימה של מספרים — זו הצצה למודול 3 (רשימות)!
+#
+# פלט צפוי:
+#   Found 3 valuable items
+#   Total value: 255 gold
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # {{CONTEXT_STUDENT_TASK}}
-    #
-    # {{hero}} is checking inventory. Count valuable items (worth > 50).
-    # Use a running total to track total value.
-    #
-    # Step 1: Create variables:
-    #         item_values = [20, 75, 30, 100, 45, 80]  # Note: This is a list!
-    #         valuable_count = 0
-    #         total_valuable = 0
-    #
-    # Step 2: Use a for loop: for value in item_values:
-    # Step 3: Inside the loop, check if value > 50
-    # Step 4: If true:
-    #         - Add 1 to valuable_count
-    #         - Add value to total_valuable
-    #
-    # Step 5: After the loop, print:
-    #         f"Found {valuable_count} valuable items"
-    #         f"Total value: {total_valuable} gold"
-    #
-    # Note: We're iterating over a list of numbers.
-    #       This is a preview of Module 3 (Lists)!
-    #
-    # Expected output:
-    #   Found 3 valuable items
-    #   Total value: 255 gold
-    pass
-
-
-# ============================================================
-# {{PHASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
+#
+# {{CONTEXT_STUDENT_TASK}}
+#
+# סווגי ציונים באמצעות `if`/`elif`/`else` בתוך לולאה.
+# ספרי כמה A, B, C ו-F יש.
+#
+# 1. צרי רשימת ציונים:
+#         `scores = [95, 82, 67, 73, 88, 91, 55, 78]`
+#
+# 2. צרי מונים:
+#         `count_a = 0`
+#         `count_b = 0`
+#         `count_c = 0`
+#         `count_f = 0`
+#
+# 3. השתמשי בלולאה: `for score in scores:`
+# 4. בתוך הלולאה, השתמשי ב-`if`/`elif`/`elif`/`else`:
+#         - `if score >= 90: count_a += 1`
+#         - `elif score >= 80: count_b += 1`
+#         - `elif score >= 70: count_c += 1`
+#         - `else: count_f += 1`
+#
+# 5. אחרי הלולאה, הדפיסי את המונים:
+#         `f"A grades: {count_a}"`
+#         `f"B grades: {count_b}"`
+#         `f"C grades: {count_c}"`
+#         `f"F grades: {count_f}"`
+#
+# פלט צפוי:
+#   A grades: 2
+#   B grades: 2
+#   C grades: 2
+#   F grades: 2
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_d():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # {{CONTEXT_STUDENT_TASK}}
-    #
-    # Categorize scores using if/elif/else inside a loop.
-    # Count how many A's, B's, C's, and F's.
-    #
-    # Step 1: Create a list of scores:
-    #         scores = [95, 82, 67, 73, 88, 91, 55, 78]
-    #
-    # Step 2: Create counters:
-    #         count_a = 0
-    #         count_b = 0
-    #         count_c = 0
-    #         count_f = 0
-    #
-    # Step 3: Use a for loop: for score in scores:
-    # Step 4: Inside the loop, use if/elif/elif/else:
-    #         - if score >= 90: count_a += 1
-    #         - elif score >= 80: count_b += 1
-    #         - elif score >= 70: count_c += 1
-    #         - else: count_f += 1
-    #
-    # Step 5: After the loop, print the counts:
-    #         f"A grades: {count_a}"
-    #         f"B grades: {count_b}"
-    #         f"C grades: {count_c}"
-    #         f"F grades: {count_f}"
-    #
-    # Expected output:
-    #   A grades: 2
-    #   B grades: 2
-    #   C grades: 2
-    #   F grades: 2
-    pass
-
-
-# ============================================================
-# {{PHASE_5_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
+#
+# {{CONTEXT_STUDENT_TASK}}
+#
+# {{hero}} מתאמנת ב-{{school}}. בכל יום, בדקי תנאים ופעלי בהתאם.
+# השתמשי במספר תנאים בתוך לולאה.
+#
+# 1. צרי ערכי התחלה:
+#         `energy = 100`
+#         `skill = 0`
+#
+# 2. השתמשי בלולאה: `for day in range(1, 6):  # 5 ימים`
+# 3. הדפיסי `f"Day {day}: Energy={energy}, Skill={skill}"`
+#
+# 4. בתוך הלולאה, בדקי אנרגיה והתאמני:
+#         `if energy >= 30:`
+#             `# אימון: צוברת כישורים, מאבדת אנרגיה`
+#             `skill = skill + 10`
+#             `energy = energy - 25`
+#             `print "  {{hero}} trains hard!"`
+#         `else:`
+#             `# מנוחה: מחזירה אנרגיה`
+#             `energy = energy + 20`
+#             `print "  {{hero}} rests."`
+#
+# 5. אחרי הלולאה, הדפיסי את הנתונים הסופיים:
+#         `f"Final: Energy={energy}, Skill={skill}"`
+#
+# פלט צפוי (האנרגיה מתחילה ב-100):
+#   Day 1: Energy=100, Skill=0
+#     {{hero}} trains hard!
+#   Day 2: Energy=75, Skill=10
+#     {{hero}} trains hard!
+#   Day 3: Energy=50, Skill=20
+#     {{hero}} trains hard!
+#   Day 4: Energy=25, Skill=30
+#     {{hero}} rests.
+#   Day 5: Energy=45, Skill=30
+#     {{hero}} trains hard!
+#   Final: Energy=20, Skill=40
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_e():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # {{CONTEXT_STUDENT_TASK}}
-    #
-    # {{hero}} trains at {{school}}. Each day, check conditions and act.
-    # Use multiple conditions inside a loop.
-    #
-    # Step 1: Create starting values:
-    #         energy = 100
-    #         skill = 0
-    #
-    # Step 2: Use a for loop: for day in range(1, 6):  # 5 days
-    # Step 3: Print f"Day {day}: Energy={energy}, Skill={skill}"
-    #
-    # Step 4: Inside the loop, check energy and train:
-    #         if energy >= 30:
-    #             # Train: gain skill, lose energy
-    #             skill = skill + 10
-    #             energy = energy - 25
-    #             print "  {{hero}} trains hard!"
-    #         else:
-    #             # Rest: regain energy
-    #             energy = energy + 20
-    #             print "  {{hero}} rests."
-    #
-    # Step 5: After the loop, print final stats:
-    #         f"Final: Energy={energy}, Skill={skill}"
-    #
-    # Expected output (energy starts at 100):
-    #   Day 1: Energy=100, Skill=0
-    #     {{hero}} trains hard!
-    #   Day 2: Energy=75, Skill=10
-    #     {{hero}} trains hard!
-    #   Day 3: Energy=50, Skill=20
-    #     {{hero}} trains hard!
-    #   Day 4: Energy=25, Skill=30
-    #     {{hero}} rests.
-    #   Day 5: Energy=45, Skill=30
-    #     {{hero}} trains hard!
-    #   Final: Energy=20, Skill=40
-    pass
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
+print("\n=== {{PHASE_1_TITLE}} ===")
+exercise_a()
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_2_TITLE}} ===")
+exercise_b()
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    exercise_a()
+print("\n=== {{PHASE_3_TITLE}} ===")
+exercise_c()
 
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    exercise_b()
+print("\n=== {{PHASE_4_TITLE}} ===")
+exercise_d()
 
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    exercise_c()
+print("\n=== {{PHASE_5_TITLE}} ===")
+exercise_e()
 
-    print("\n=== {{PHASE_4_TITLE}} ===")
-    exercise_d()
-
-    print("\n=== {{PHASE_5_TITLE}} ===")
-    exercise_e()
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

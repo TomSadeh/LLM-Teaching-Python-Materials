@@ -5,109 +5,88 @@
 # Concepts: variable creation, assignment, using variables in print
 # =============================================================================
 
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
-
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
+#
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
+#
+# צרי משתנה בשם `hero_name` ושמרי בו את "{{hero}}".
+# אחר כך הדפיסי את המשתנה.
+#
+# 1. צרי את המשתנה: `hero_name = "{{hero}}"`
+# 2. הדפיסי אותו: `print(hero_name)`
+#
+# פלט מצופה: `{{hero}}`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create a variable called `hero_name` and store "{{hero}}" in it.
-    # Then print the variable.
-    #
-    # Step 1: Create the variable: hero_name = "{{hero}}"
-    # Step 2: Print it: print(hero_name)
-    #
-    # Expected output: {{hero}}
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
+#
+# צרי שני משתנים והדפיסי אותם יחד.
+#
+# 1. צרי משתנה `location` עם הערך `"{{school}}"`
+# 2. צרי משתנה `activity` עם הערך `"learning Python"`
+# 3. הדפיסי את שניהם כך: `print(location, "-", activity)`
+#
+# פלט מצופה: `{{school}} - learning Python`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create two variables and print them together.
-    #
-    # Step 1: Create a variable `location` with value "{{school}}"
-    # Step 2: Create a variable `activity` with value "learning Python"
-    # Step 3: Print both using: print(location, "-", activity)
-    #
-    # Expected output: {{school}} - learning Python
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
+#
+# צרי משתנים עבור המלאי של {{hero}}.
+#
+# 1. צרי `item_name` עם הערך `"{{item}}"`
+# 2. צרי `item_count` עם הערך `3` (מספר, בלי מרכאות!)
+# 3. הדפיסי הודעה כמו: `"{{hero}} has 3 {{item}}s"`
+#    השתמשי ב: `print("{{hero}} has", item_count, item_name + "s")`
+#
+# פלט מצופה: `{{hero}} has 3 {{item}}s`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create variables for {{hero}}'s inventory.
-    #
-    # Step 1: Create `item_name` with value "{{item}}"
-    # Step 2: Create `item_count` with value 3 (a number, no quotes!)
-    # Step 3: Print a message like: "{{hero}} has 3 {{item}}s"
-    #         Use: print("{{hero}} has", item_count, item_name + "s")
-    #
-    # Expected output: {{hero}} has 3 {{item}}s
-    pass
-
-
-# ============================================================
-# {{PHASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
+#
+# עדכני את הערך של משתנה.
+#
+# 1. צרי `level` עם הערך `1`
+# 2. הדפיסי `"Starting level:"` ואחריו את המשתנה `level`
+# 3. שני את `level` ל-`2` (השבי ערך חדש)
+# 4. הדפיסי `"New level:"` ואחריו את המשתנה `level`
+#
+# פלט מצופה:
+# `Starting level: 1`
+# `New level: 2`
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_d():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Update a variable's value.
-    #
-    # Step 1: Create `level` with value 1
-    # Step 2: Print "Starting level:" followed by the level variable
-    # Step 3: Change `level` to 2 (assign a new value)
-    # Step 4: Print "New level:" followed by the level variable
-    #
-    # Expected output:
-    # Starting level: 1
-    # New level: 2
-    pass
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
+print("\n=== {{PHASE_1_TITLE}} ===")
+exercise_a()
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_2_TITLE}} ===")
+exercise_b()
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    exercise_a()
+print("\n=== {{PHASE_3_TITLE}} ===")
+exercise_c()
 
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    exercise_b()
+print("\n=== {{PHASE_4_TITLE}} ===")
+exercise_d()
 
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    exercise_c()
-
-    print("\n=== {{PHASE_4_TITLE}} ===")
-    exercise_d()
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")

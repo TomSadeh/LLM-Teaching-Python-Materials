@@ -1,21 +1,17 @@
-"""
-{{CONTEXT_COMPARISON_INTRO}}
-{{CONTEXT_COMPARISON_DECISION}}
-
-In this exercise, you'll analyze different class design approaches.
-Both versions work correctly, but they have different trade-offs.
-Evaluate which is better for different situations.
-"""
-
-
-# ============================================================
+# %% [markdown]
+# {{CONTEXT_COMPARISON_INTRO}}
+# {{CONTEXT_COMPARISON_DECISION}}
+#
+# בתרגיל הזה תנתחי גישות שונות לעיצוב מחלקות.
+# שתי הגרסאות עובדות נכון, אבל לכל אחת יתרונות וחסרונות שונים.
+# העריכי איזו גישה עדיפה למצבים שונים.
+#
 # {{APPROACH_1_NAME}}
-# ============================================================
 # {{CONTEXT_APPROACH_1_NARRATIVE}}
+#
+# עיצוב A: מחלקה אחת שעושה הכול
 
-# Design A: One class does everything
-
-
+# %%
 class CharacterAllInOneA:
     """Single class with all functionality built in."""
 
@@ -49,15 +45,13 @@ class CharacterAllInOneA:
             return heal
         return 0
 
-
-# ============================================================
+# %% [markdown]
 # {{APPROACH_2_NAME}}
-# ============================================================
 # {{CONTEXT_APPROACH_2_NARRATIVE}}
+#
+# עיצוב B: מחלקות מתמחות דרך ירושה
 
-# Design B: Specialized classes through inheritance
-
-
+# %%
 class CharacterBaseB:
     """Base class with common functionality."""
 
@@ -66,7 +60,7 @@ class CharacterBaseB:
         self.health = health
         self.max_health = health
 
-
+# %%
 class WarriorB(CharacterBaseB):
     """Specialized for physical combat."""
 
@@ -79,7 +73,7 @@ class WarriorB(CharacterBaseB):
         target.health -= damage
         return damage
 
-
+# %%
 class MageB(CharacterBaseB):
     """Specialized for magic."""
 
@@ -105,45 +99,43 @@ class MageB(CharacterBaseB):
             return heal
         return 0
 
+# %% [markdown]
+# {{CONTEXT_ANALYSIS_PROMPT}}
+# שימי לב: {{CONTEXT_DECISION_GUIDANCE}}
 
-def analysis_1():
-    # ✏️ YOUR ANALYSIS ✏️
-    #
-    # {{CONTEXT_ANALYSIS_PROMPT}}
-    # Consider: {{CONTEXT_DECISION_GUIDANCE}}
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    analysis = """
-    Better design: ??? (A: All-in-one OR B: Specialized classes)
+# %%
+analysis = """
+Better design: ??? (A: All-in-one OR B: Specialized classes)
 
-    Advantages of Design A (All-in-one):
-    1.
-    2.
+Advantages of Design A (All-in-one):
+1.
+2.
 
-    Advantages of Design B (Specialized):
-    1.
-    2.
+Advantages of Design B (Specialized):
+1.
+2.
 
-    Design A is better when:
-    -
+Design A is better when:
+-
 
-    Design B is better when:
-    -
+Design B is better when:
+-
 
-    If I needed to add a new character type (Paladin with both
-    strength AND magic), which would be easier to extend?
-    -
-    """
-    return analysis
+If I needed to add a new character type (Paladin with both
+strength AND magic), which would be easier to extend?
+-
+"""
+return analysis
 
+# %% [markdown]
+# ## השוואה 2: שמירת מאפיינים
+#
+# עיצוב C: מאפיינים ישירים
 
-# ============================================================
-# COMPARISON 2: ATTRIBUTE STORAGE
-# ============================================================
-
-
-# Design C: Direct attributes
-
-
+# %%
 class InventoryDirectC:
     """Stores items as a simple list."""
 
@@ -166,10 +158,10 @@ class InventoryDirectC:
             return self.item_counts[index]
         return 0
 
+# %% [markdown]
+# ## עיצוב D: שימוש במילון
 
-# Design D: Using a dictionary
-
-
+# %%
 class InventoryDictD:
     """Stores items in a dictionary."""
 
@@ -183,37 +175,35 @@ class InventoryDictD:
     def get_count(self, name):
         return self.items.get(name, 0)
 
+# %% [markdown]
+# שני העיצובים שומרים את אותם הנתונים. איזה עדיף?
 
-def analysis_2():
-    # ✏️ YOUR ANALYSIS ✏️
-    #
-    # Both designs store the same data. Which is better?
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-    analysis = """
-    Better design: ??? (C: Parallel lists OR D: Dictionary)
+# %%
+analysis = """
+Better design: ??? (C: Parallel lists OR D: Dictionary)
 
-    Why Design C is problematic:
-    1.
-    2.
+Why Design C is problematic:
+1.
+2.
 
-    Why Design D is better:
-    1.
-    2.
+Why Design D is better:
+1.
+2.
 
-    The main lesson here is:
-    -
-    """
-    return analysis
+The main lesson here is:
+-
+"""
+return analysis
 
+# %% [markdown]
+# ## השוואה 3: מיקום מתודות
+#
+# עיצוב E: מתודות שפועלות על האובייקט עצמו
 
-# ============================================================
-# COMPARISON 3: METHOD PLACEMENT
-# ============================================================
-
-
-# Design E: Methods that operate ON the object
-
-
+# %%
 class BattleCharacterE:
     """Character with methods that modify self."""
 
@@ -230,10 +220,10 @@ class BattleCharacterE:
         """This character takes damage."""
         self.health -= amount
 
+# %% [markdown]
+# ## עיצוב F: פונקציות חיצוניות
 
-# Design F: External functions
-
-
+# %%
 class BattleCharacterF:
     """Character as pure data container."""
 
@@ -242,79 +232,72 @@ class BattleCharacterF:
         self.health = health
         self.power = power
 
+# %%
+target.health -= attacker.power
 
-def attack_f(attacker, target):
-    """External function to handle attack."""
-    target.health -= attacker.power
+# %%
+character.health -= amount
 
+# %% [markdown]
+# אותה פונקציונליות, אבל המתודות בתוך המחלקה מול מחוצה לה.
 
-def take_damage_f(character, amount):
-    """External function to handle damage."""
-    character.health -= amount
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
+# %%
+analysis = """
+Better design: ??? (E: Methods inside OR F: Functions outside)
 
-def analysis_3():
-    # ✏️ YOUR ANALYSIS ✏️
-    #
-    # Same functionality, but methods are inside vs outside the class.
+Why OOP (Design E) is typically preferred:
+1.
+2.
 
-    analysis = """
-    Better design: ??? (E: Methods inside OR F: Functions outside)
+When external functions (Design F) might be appropriate:
+1.
+2.
 
-    Why OOP (Design E) is typically preferred:
-    1.
-    2.
+The principle this illustrates (hint: encapsulation):
+-
+"""
+return analysis
 
-    When external functions (Design F) might be appropriate:
-    1.
-    2.
+# %%
+print("{{CONTEXT_COMPARISON_INTRO}}")
+print("=" * 50)
 
-    The principle this illustrates (hint: encapsulation):
-    -
-    """
-    return analysis
+print("\n=== Comparison 1: All-in-One vs Specialized ===")
+print()
 
+# Both designs work
+char_a = CharacterAllInOneA("{{hero}}", 100, 50, 20, 30)
+warrior_b = WarriorB("{{hero}}", 100, 20)
 
-def main():
-    print("{{CONTEXT_COMPARISON_INTRO}}")
-    print("=" * 50)
+dummy = CharacterAllInOneA("Dummy", 100, 0, 0, 0)
+print(f"Design A - Physical attack: {char_a.physical_attack(dummy)}")
 
-    print("\n=== Comparison 1: All-in-One vs Specialized ===")
-    print()
+dummy2 = CharacterBaseB("Dummy", 100)
+print(f"Design B - Physical attack: {warrior_b.physical_attack(dummy2)}")
 
-    # Both designs work
-    char_a = CharacterAllInOneA("{{hero}}", 100, 50, 20, 30)
-    warrior_b = WarriorB("{{hero}}", 100, 20)
+print(f"\nYour analysis:{analysis_1()}")
 
-    dummy = CharacterAllInOneA("Dummy", 100, 0, 0, 0)
-    print(f"Design A - Physical attack: {char_a.physical_attack(dummy)}")
+print("\n=== Comparison 2: Parallel Lists vs Dictionary ===")
+print()
 
-    dummy2 = CharacterBaseB("Dummy", 100)
-    print(f"Design B - Physical attack: {warrior_b.physical_attack(dummy2)}")
+inv_c = InventoryDirectC("{{hero}}")
+inv_c.add_item("{{item}}", 3)
+inv_c.add_item("{{spell1}}", 1)
+print(f"Design C - {{{{item}}}} count: {inv_c.get_count('{{item}}')}")
 
-    print(f"\nYour analysis:{analysis_1()}")
+inv_d = InventoryDictD("{{hero}}")
+inv_d.add_item("{{item}}", 3)
+inv_d.add_item("{{spell1}}", 1)
+print(f"Design D - {{{{item}}}} count: {inv_d.get_count('{{item}}')}")
 
-    print("\n=== Comparison 2: Parallel Lists vs Dictionary ===")
-    print()
+print(f"\nYour analysis:{analysis_2()}")
 
-    inv_c = InventoryDirectC("{{hero}}")
-    inv_c.add_item("{{item}}", 3)
-    inv_c.add_item("{{spell1}}", 1)
-    print(f"Design C - {{{{item}}}} count: {inv_c.get_count('{{item}}')}")
+print("\n=== Comparison 3: Methods Inside vs Outside ===")
+print()
+print(f"Your analysis:{analysis_3()}")
 
-    inv_d = InventoryDictD("{{hero}}")
-    inv_d.add_item("{{item}}", 3)
-    inv_d.add_item("{{spell1}}", 1)
-    print(f"Design D - {{{{item}}}} count: {inv_d.get_count('{{item}}')}")
-
-    print(f"\nYour analysis:{analysis_2()}")
-
-    print("\n=== Comparison 3: Methods Inside vs Outside ===")
-    print()
-    print(f"Your analysis:{analysis_3()}")
-
-    print("\n" + "=" * 50)
-    print("{{CONTEXT_EVALUATION_COMPLETE}}")
-
-
-main()
+print("\n" + "=" * 50)
+print("{{CONTEXT_EVALUATION_COMPLETE}}")

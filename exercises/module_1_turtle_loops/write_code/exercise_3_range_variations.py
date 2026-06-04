@@ -5,165 +5,142 @@
 # Concepts: range(start, stop), range(start, stop, step), counting patterns
 # =============================================================================
 
-"""
-{{CONTEXT_PROJECT_INTRO}}
-{{CONTEXT_LEARNING_OBJECTIVE}}
-"""
+# %% [markdown]
+# {{CONTEXT_PROJECT_INTRO}}
+# {{CONTEXT_LEARNING_OBJECTIVE}}
 
+# %%
 import turtle
 
-# ============================================================
-# {{PHASE_1_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
+#
+# הדפיסי את המספרים 5 עד 9 עבור ספירת לאחור של {{hero}}.
+#
+# 1. השתמשי בלולאת `for` עם `range(5, 10)`
+# 2. הדפיסי כל מספר בתוך הלולאה
+#
+# פלט צפוי:
+# 5
+# 6
+# 7
+# 8
+# 9
+#
+# > רמז: `range(5, 10)` נותנת 5, 6, 7, 8, 9 - היא עוצרת לפני 10.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_a():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Print numbers 5 through 9 for {{hero}}'s countdown.
-    #
-    # Step 1: Use a for loop with range(5, 10)
-    # Step 2: Print each number inside the loop
-    #
-    # Expected output:
-    # 5
-    # 6
-    # 7
-    # 8
-    # 9
-    #
-    # Hint: range(5, 10) gives 5, 6, 7, 8, 9 - it stops BEFORE 10.
-    pass
-
-
-# ============================================================
-# {{PHASE_2_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
+#
+# הדפיסי מספרים זוגיים מ-2 עד 10 עבור אימון {{creature}}.
+#
+# 1. השתמשי בלולאת `for` עם `range(2, 11, 2)`
+# 2. הדפיסי כל מספר
+#
+# פלט צפוי:
+# 2
+# 4
+# 6
+# 8
+# 10
+#
+# > רמז: הצעד 2 מדלג על כל מספר שני.
+# > משתמשים ב-11 כערך הסיום כי אנחנו רוצות לכלול את 10.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_b():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Print even numbers from 2 to 10 for {{creature}}'s training.
-    #
-    # Step 1: Use a for loop with range(2, 11, 2)
-    # Step 2: Print each number
-    #
-    # Expected output:
-    # 2
-    # 4
-    # 6
-    # 8
-    # 10
-    #
-    # Hint: The step of 2 skips every other number.
-    # We use 11 as stop because we WANT to include 10.
-    pass
-
-
-# ============================================================
-# {{PHASE_3_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
+#
+# צרי ספירה לאחור מ-10 עד 1 עבור האתגר של {{hero}}.
+#
+# 1. השתמשי בלולאת `for` עם `range(10, 0, -1)`
+# 2. הדפיסי כל מספר
+#
+# פלט צפוי:
+# 10
+# 9
+# 8
+# 7
+# 6
+# 5
+# 4
+# 3
+# 2
+# 1
+#
+# > רמז: צעד שלילי (-1) סופר לאחור.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_c():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Create a countdown from 10 to 1 for {{hero}}'s challenge.
-    #
-    # Step 1: Use a for loop with range(10, 0, -1)
-    # Step 2: Print each number
-    #
-    # Expected output:
-    # 10
-    # 9
-    # 8
-    # 7
-    # 6
-    # 5
-    # 4
-    # 3
-    # 2
-    # 1
-    #
-    # Hint: A negative step (-1) counts backwards.
-    pass
-
-
-# ============================================================
-# {{PHASE_4_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
+#
+# ציירי סדרה של קווים עם אורכים גדלים ב-{{location}}.
+# כל קו צריך להיות באורך 20, 40, 60, 80 ו-100 יחידות.
+#
+# 1. צרי צב
+# 2. השתמשי בלולאת `for` עם `range(20, 101, 20)`
+# 3. בתוך הלולאה:
+#         - `t.forward(length)` כאשר `length` הוא משתנה הלולאה
+#         - `t.penup()`
+#         - `t.backward(length)`  # חזרה להתחלה
+#         - `t.right(90)`
+#         - `t.forward(15)`       # ירידה למטה
+#         - `t.left(90)`
+#         - `t.pendown()`
+#
+# צפוי: 5 קווים אופקיים באורכים גדלים, מסודרים אנכית.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_d():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Draw a series of lines with increasing lengths at {{location}}.
-    # Each line should be 20, 40, 60, 80, and 100 units long.
-    #
-    # Step 1: Create a turtle
-    # Step 2: Use a for loop with range(20, 101, 20)
-    # Step 3: Inside the loop:
-    #         - t.forward(length) where length is the loop variable
-    #         - t.penup()
-    #         - t.backward(length)  # Return to start
-    #         - t.right(90)
-    #         - t.forward(15)       # Move down
-    #         - t.left(90)
-    #         - t.pendown()
-    #
-    # Expected: 5 horizontal lines of increasing length, stacked vertically.
-    pass
-
-
-# ============================================================
-# {{PHASE_5_TITLE}}
-# ============================================================
+# %% [markdown]
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
+#
+# ציירי כוכב ב-{{school}} על ידי ציור קווים בכל 144 מעלות.
+# כוכב עם 5 קצוות דורש פנייה של 144 מעלות אחרי כל קו.
+#
+# 1. צרי צב
+# 2. השתמשי בלולאת `for` עם `range(5)` לציור 5 קווים
+# 3. בתוך הלולאה:
+#         - `t.forward(100)`
+#         - `t.right(144)`
+#
+# צפוי: צורת כוכב עם 5 קצוות.
 
+# %%
+# ✏️ כתבי את הקוד שלך כאן
 
-def exercise_e():
-    # ✏️ YOUR CODE HERE ✏️
-    #
-    # Draw a star pattern at {{school}} by drawing lines at every 144 degrees.
-    # A 5-pointed star requires turning 144 degrees after each line.
-    #
-    # Step 1: Create a turtle
-    # Step 2: Use a for loop with range(5) to draw 5 lines
-    # Step 3: Inside the loop:
-    #         - t.forward(100)
-    #         - t.right(144)
-    #
-    # Expected: A 5-pointed star shape.
-    pass
+# %%
+print("{{CONTEXT_PROJECT_INTRO}}")
+print("=" * 50)
 
+print("\n=== {{PHASE_1_TITLE}} ===")
+exercise_a()
 
-def main():
-    print("{{CONTEXT_PROJECT_INTRO}}")
-    print("=" * 50)
+print("\n=== {{PHASE_2_TITLE}} ===")
+exercise_b()
 
-    print("\n=== {{PHASE_1_TITLE}} ===")
-    exercise_a()
+print("\n=== {{PHASE_3_TITLE}} ===")
+exercise_c()
 
-    print("\n=== {{PHASE_2_TITLE}} ===")
-    exercise_b()
+print("\n=== {{PHASE_4_TITLE}} ===")
+exercise_d()
 
-    print("\n=== {{PHASE_3_TITLE}} ===")
-    exercise_c()
+print("\n=== {{PHASE_5_TITLE}} ===")
+exercise_e()
 
-    print("\n=== {{PHASE_4_TITLE}} ===")
-    exercise_d()
-
-    print("\n=== {{PHASE_5_TITLE}} ===")
-    exercise_e()
-
-    print("=" * 50)
-    print("{{CONTEXT_FINAL_ASSEMBLY}}")
-    turtle.done()
-
-
-main()
+print("=" * 50)
+print("{{CONTEXT_FINAL_ASSEMBLY}}")
+turtle.done()
