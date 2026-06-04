@@ -1,17 +1,17 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# CAPSTONE EXERCISE: Build a complete data management system for {{school}}.
+# תרגיל מסכם: בני מערכת ניהול נתונים מלאה עבור {{school}}.
 #
-# This comprehensive project combines everything from Module 8:
-# - Standard library modules (datetime, random)
-# - File I/O with context managers
-# - JSON for structured data storage
-# - CSV for data export
-# - Error handling throughout
+# הפרויקט הזה משלב את כל מה שלמדנו במודול 8:
+# - מודולים מהספרייה הסטנדרטית (`datetime`, `random`)
+# - קריאה וכתיבה לקבצים עם context managers
+# - `JSON` לאחסון נתונים מובנים
+# - `CSV` לייצוא נתונים
+# - טיפול בשגיאות לאורך כל הקוד
 #
-# Programming concepts: Full integration of modules, files, JSON, CSV
-# Difficulty: 5 (Capstone)
+# מושגי תכנות: שילוב מלא של מודולים, קבצים, JSON ו-CSV
+# רמת קושי: 5 (מסכם)
 
 # %%
 import json
@@ -29,17 +29,16 @@ import random
 import string
 
 # %% [markdown]
-# PART 1: Growth - Design Data Structure
+# ## חלק 1: צמיחה - עיצוב מבנה הנתונים
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Design the data model for {{school}}'s student management system.
+# עצבי את מודל הנתונים עבור מערכת ניהול הסטודנטים של {{school}}.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Create a student dict with:
+# צרי מילון סטודנט עם השדות הבאים:
+# ```
 # {
-#     "id": generate_id(),  # Unique identifier
+#     "id": generate_id(),  # מזהה ייחודי
 #     "name": name,
 #     "house": house,
 #     "year": year,
@@ -49,24 +48,25 @@ import string
 #     "achievements": [],
 #     "status": "active"
 # }
+# ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use random and string modules:
+# השתמשי במודולים `random` ו-`string`:
+# ```
 # letters = ''.join(random.choices(string.ascii_uppercase, k=3))
 # numbers = ''.join(random.choices(string.digits, k=3))
 # return f"STU-{letters}{numbers}"
+# ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
+# צרי מילון קורס עם השדות הבאים:
+# ```
 # {
 #     "id": f"CRS-{...}",
 #     "name": name,
@@ -75,170 +75,138 @@ import string
 #     "enrolled_students": [],
 #     "schedule": {}
 # }
+# ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Implement CRUD Operations
+# ## חלק 2: צמיחה - פעולות CRUD
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Create, Read, Update, Delete operations for students.
+# מימשי פעולות יצירה, קריאה, עדכון ומחיקה עבור סטודנטים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Ensure "students" list exists:
-#         if "students" not in database:
-#             database["students"] = []
-#
-# Step 2: Check for duplicate ID
-#
-# Step 3: Append student and return ID
+# 1. וודאי שקיימת רשימת `"students"` במסד הנתונים:
+#    `if "students" not in database: database["students"] = []`
+# 2. בדקי שאין מזהה כפול
+# 3. הוסיפי את הסטודנט להחזירי את המזהה שלו
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Loop through database["students"]
-# Return student if id matches
+# עברי בלולאה על `database["students"]` והחזירי את הסטודנט שה-`id` שלו תואם.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Find the student
-#
-# Step 2: If found, update fields:
-#         student.update(updates)
-#
-# Step 3: Return success status
+# 1. מצאי את הסטודנט
+# 2. אם נמצא, עדכני את השדות: `student.update(updates)`
+# 3. החזירי אם הפעולה הצליחה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Find and remove the student from the list
+# מצאי את הסטודנט והסירי אותו מהרשימה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# If no filters, return all students
-# If filters, return matching students
+# אם אין פילטרים — החזירי את כל הסטודנטים. אם יש פילטרים — החזירי רק את אלה שמתאימים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - JSON Persistence
+# ## חלק 3: צמיחה - שמירת נתונים ב-JSON
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Save and load the database using JSON.
+# שמרי וטעני את מסד הנתונים בעזרת `JSON`.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Add metadata:
-#         database["_metadata"] = {
-#             "last_saved": str(datetime.now()),
-#             "version": "1.0"
-#         }
-#
-# Step 2: Save with error handling:
-#         try:
-#             with open(filename, "w") as f:
-#                 json.dump(database, f, indent=2)
-#             return True
-#         except Exception as e:
-#             print(f"Save error: {e}")
-#             return False
+# 1. הוסיפי מטא-דאטה:
+#    ```
+#    database["_metadata"] = {
+#        "last_saved": str(datetime.now()),
+#        "version": "1.0"
+#    }
+#    ```
+# 2. שמרי עם טיפול בשגיאות:
+#    ```
+#    try:
+#        with open(filename, "w") as f:
+#            json.dump(database, f, indent=2)
+#        return True
+#    except Exception as e:
+#        print(f"Save error: {e}")
+#        return False
+#    ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Try to load, return empty database on error:
-# {"students": [], "courses": [], "_metadata": {}}
+# נסי לטעון את הקובץ. אם נכשל — החזירי מסד נתונים ריק:
+# `{"students": [], "courses": [], "_metadata": {}}`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Generate backup filename:
-#         backup_name = f"{filename}.{date.today()}.backup"
-#
-# Step 2: Read original and write backup
+# 1. צרי שם לקובץ הגיבוי: `backup_name = f"{filename}.{date.today()}.backup"`
+# 2. קראי את הקובץ המקורי וכתבי אותו לגיבוי
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Growth - CSV Export
+# ## חלק 4: צמיחה - ייצוא ל-CSV
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Export data to CSV for reporting.
+# ייצאי נתונים לקובץ `CSV` לצורך דוחות.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Get students
-#
-# Step 2: Define fieldnames for export:
-#         fieldnames = ["id", "name", "house", "year", "status", "enrolled_date"]
-#
-# Step 3: Write CSV with DictWriter
-#         Note: extrasaction='ignore' skips fields not in fieldnames
-#
-# Step 4: Return count
+# 1. קבלי את רשימת הסטודנטים
+# 2. הגדירי את שמות העמודות לייצוא:
+#    `fieldnames = ["id", "name", "house", "year", "status", "enrolled_date"]`
+# 3. כתבי את ה-`CSV` עם `DictWriter`
+#    > רמז: `extrasaction='ignore'` מדלג על שדות שאינם ב-`fieldnames`
+# 4. החזירי את מספר השורות שנוצרו
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Create a row per student with their grades
-# Format: name, course1, course2, average
+# צרי שורה לכל סטודנט עם הציונים שלו.
+# פורמט: `name`, `course1`, `course2`, `average`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Calculate:
-# - Total students
-# - Students per house
-# - Students per year
-# - Active vs inactive
-# - Total courses
+# חשבי ואספי את הנתונים הבאים:
+# - סה"כ סטודנטים
+# - סטודנטים לפי בית/קבוצה
+# - סטודנטים לפי שנת לימוד
+# - פעילים מול לא פעילים
+# - סה"כ קורסים
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 5: Improvement - Production Error Handling
+# ## חלק 5: שיפור - טיפול מקצועי בשגיאות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Add comprehensive error handling for production use.
+# הוסיפי טיפול מקיף בשגיאות.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Wrap operation in try/except:
+# עטפי פעולה ב-`try/except`:
+# ```
 # try:
 #     return operation(*args, **kwargs)
 # except FileNotFoundError:
@@ -250,33 +218,30 @@ import string
 # except Exception as e:
 #     print(f"Operation failed: {e}")
 #     return default
+# ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Check required fields: id, name, house, year
-# Return (True, []) if valid
-# Return (False, ["Missing field: name"]) if invalid
+# בדקי שדות חובה: `id`, `name`, `house`, `year`
+# - אם תקין: החזירי `(True, [])`
+# - אם חסר שדה: החזירי `(False, ["Missing field: name"])`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Try to load backup
-# Step 2: Validate backup data
-# Step 3: Save to primary file
-# Step 4: Handle errors gracefully
+# 1. נסי לטעון את קובץ הגיבוי
+# 2. אמתי את תקינות הנתונים
+# 3. שמרי לקובץ הראשי
+# 4. טפלי בשגיאות בצורה נאותה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN - System Demo
+# ## הרצת המערכת - הדגמה
 
 # %%
 print("=" * 60)

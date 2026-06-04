@@ -21,10 +21,8 @@ hero_name = "{{hero}}"
 print(hero_Name)
 
 # %% [markdown]
-# ✏️ EXPLAIN THE DIFFERENCE ✏️
-#
-# Look closely at both versions. What's different?
-# Hint: Python cares about uppercase and lowercase letters.
+# שימי לב היטב לשתי הגרסאות. מה השוני ביניהן?
+# > רמז: פייתון מבחין בין אותיות גדולות וקטנות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -58,10 +56,8 @@ points = 50
 print("Score:", "points")
 
 # %% [markdown]
-# ✏️ EXPLAIN THE DIFFERENCE ✏️
-#
-# One version prints the value, one prints the word.
-# Hint: Quotes make a difference!
+# גרסה אחת מדפיסה את הערך, והגרסה השנייה מדפיסה את המילה עצמה.
+# > רמז: גרשיים עושים הבדל גדול!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -95,10 +91,8 @@ itemcount = 5
 print("{{hero}} has", item_count, "{{item}}s")
 
 # %% [markdown]
-# ✏️ EXPLAIN THE DIFFERENCE ✏️
-#
-# The variable is created with one name but used with another.
-# Hint: Underscores matter in variable names.
+# המשתנה נוצר בשם אחד, אבל משתמשים בו עם שם אחר.
+# > רמז: קו תחתון הוא חלק מהשם של המשתנה!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -7,17 +7,17 @@
 # =============================================================================
 
 # %% [markdown]
-# {{CONTEXT_EVALUATION_INTRO}}
+# ## {{CONTEXT_EVALUATION_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זו תרגילה בכמה חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: EVALUATION - Compare Approaches
+# חלק 1: הערכה - השוואת גישות
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# Two developers wrote code to solve the same problem.
-# Analyze which approach is better and why.
+# שני מפתחים כתבו קוד לאותה בעיה.
+# נתחי איזו גישה עדיפה ולמה.
 #
-# ## COMPARISON 1: Summing a List
+# ## השוואה 1: סכימת רשימה
 
 # %%
 total = 0
@@ -46,7 +46,7 @@ analysis = {
 return analysis
 
 # %% [markdown]
-# ## COMPARISON 2: Building a New List
+# ## השוואה 2: בניית רשימה חדשה
 
 # %%
 result = []
@@ -74,7 +74,7 @@ analysis = {
 return analysis
 
 # %% [markdown]
-# ## COMPARISON 3: Counting Matches
+# ## השוואה 3: ספירת התאמות
 
 # %%
 count = 0
@@ -100,11 +100,11 @@ analysis = {
 return analysis
 
 # %% [markdown]
-# PART 2: IMPROVEMENT - Simplify Verbose Code
+# חלק 2: שיפור - פשטי קוד מסורבל
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Now apply what you learned. Simplify these verbose functions.
+# עכשיו ישמי את מה שלמדת. פשטי את הפונקציות המסורבלות האלה.
 
 # %%
 # This code finds names starting with "A"

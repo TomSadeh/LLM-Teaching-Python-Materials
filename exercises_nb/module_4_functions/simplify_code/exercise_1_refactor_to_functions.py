@@ -9,7 +9,7 @@
 # {{CONTEXT_SIMPLIFY_CODE_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Simplify 1: Repeated Calculations
+# ## פישוט 1: חישובים חוזרים
 # {{CONTEXT_SIMPLIFY_1_NARRATIVE}}
 
 # %%
@@ -44,7 +44,7 @@ print(f"{{friend}} score: {friend_score}")
 pass
 
 # %% [markdown]
-# Simplify 2: Repeated Formatting
+# ## פישוט 2: עיצוב חוזר
 # {{CONTEXT_SIMPLIFY_2_NARRATIVE}}
 
 # %%
@@ -80,7 +80,7 @@ print(formatted4)
 pass
 
 # %% [markdown]
-# Simplify 3: Repeated Validation
+# ## פישוט 3: בדיקה חוזרת
 # {{CONTEXT_SIMPLIFY_3_NARRATIVE}}
 
 # %%
@@ -128,7 +128,7 @@ print(f"{{friend}}: {friend_status}")
 pass
 
 # %% [markdown]
-# Simplify 4: Repeated Report Sections
+# ## פישוט 4: חלקי דוח חוזרים
 # {{CONTEXT_SIMPLIFY_4_NARRATIVE}}
 
 # %%
@@ -166,7 +166,7 @@ print("-" * 30)
 pass
 
 # %% [markdown]
-# Simplify 5: Complex Refactoring
+# ## פישוט 5: ארגון מחדש מורכב
 # {{CONTEXT_SIMPLIFY_5_NARRATIVE}}
 
 # %%

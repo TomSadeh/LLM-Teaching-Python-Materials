@@ -9,10 +9,10 @@
 # {{CONTEXT_DECODE_ERROR_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{ERROR_1_TITLE}}
+# ## {{ERROR_1_TITLE}}
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "program.py", line 3, in <module>
@@ -25,22 +25,20 @@ total = price + 10
 print("With tax:", total)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
+# השגיאה קרתה כי: _______________
 #
-# The error occurred because: _______________
+# > רמז: איזה סוג מחזירה `input()`? איזה סוג אנחנו צריכות לחשבון?
 #
-# Hint: What type does input() return? What type do we need for math?
-#
-# Write the fixed code below:
+# כתבי את הקוד המתוקן למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_2_TITLE}}
+# ## {{ERROR_2_TITLE}}
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "program.py", line 2, in <module>
@@ -53,26 +51,24 @@ age = int(age_text)
 print("Age:", age)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
+# השגיאה קרתה כי: _______________
 #
-# The error occurred because: _______________
+# > רמז: `int()` יכולה להמיר רק מחרוזות שמכילות ספרות כמו `"20"`.
+# > המילה `"twenty"` לא יכולה להתמיר למספר.
 #
-# Hint: int() can only convert strings that contain digits like "20".
-# The word "twenty" cannot be converted to a number.
+# שימי לב: השגיאה הזו קורית כשמשתמש מקליד טקסט במקום מספרים.
+# לצורך התרגיל הזה, שני את הקלט למחרוזת מספר תקינה.
 #
-# Note: This error happens when a user types text instead of numbers.
-# For this exercise, change the input to a valid number string.
-#
-# Write the fixed code below:
+# כתבי את הקוד המתוקן למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_3_TITLE}}
+# ## {{ERROR_3_TITLE}}
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "program.py", line 4, in <module>
@@ -86,14 +82,12 @@ result = num1 + num2
 print("Sum:", result)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
+# השגיאה קרתה כי: _______________
 #
-# The error occurred because: _______________
+# > רמז: אם המשתמשת מקלידה 5 ו-3, הקוד הנוכחי ידפיס `"53"`
+# > כי הוא מחבר מחרוזות במקום לחבור מספרים!
 #
-# Hint: If user types 5 and 3, the current code would print "53"
-# because it concatenates strings instead of adding numbers!
-#
-# Write the fixed code below:
+# כתבי את הקוד המתוקן למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

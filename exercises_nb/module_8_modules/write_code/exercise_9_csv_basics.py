@@ -2,27 +2,25 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to work with CSV (Comma-Separated Values)
-# files using Python's csv module. CSV is perfect for spreadsheet-style
-# tabular data with rows and columns.
+# בתרגיל הזה תלמדי לעבוד עם קבצי CSV (Comma-Separated Values)
+# באמצעות מודול `csv` של פייתון. CSV מתאים בצורה מושלמת לנתונים
+# טבלאיים עם שורות ועמודות, כמו גיליון אלקטרוני.
 #
-# Topic: CSV module basics (reader, writer, DictReader, DictWriter)
-# Difficulty: 3
+# נושא: יסודות מודול csv (reader, writer, DictReader, DictWriter)
+# רמת קושי: 3
 
 # %%
 import csv
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# Learn to write data to CSV files.
+# תלמדי לכתוב נתונים לקבצי CSV.
 #
-# ✏️ YOUR CODE HERE ✏️
+# כתבי נתונים לקובץ CSV באמצעות `csv.writer`.
 #
-# Write data to a CSV file using csv.writer.
-#
-# Step 1: Prepare data as a list of lists (rows):
+# 1. הכיני את הנתונים כרשימה של רשימות (שורות):
 #         data = [
 #             ["Name", "Level", "Ability"],  # Header row
 #             ["{{hero}}", 5, "{{spell1}}"],
@@ -30,57 +28,53 @@ import csv
 #             ["{{friend}}", 3, "{{spell1}}"]
 #         ]
 #
-# Step 2: Write to CSV:
+# 2. כתבי לקובץ CSV:
 #         with open("characters.csv", "w", newline="") as f:
 #             writer = csv.writer(f)
 #             writer.writerows(data)  # Write all rows at once
 #
-# Step 3: Print confirmation
+# 3. הדפיסי אישור שהקובץ נוצר.
 #
-# Note: newline="" is important on Windows to prevent blank lines!
+# > רמז: `newline=""` חשוב על Windows כדי למנוע שורות ריקות!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# כתבי שורות אחת אחת באמצעות `writerow`.
 #
-# Write rows one at a time using writerow (singular).
-#
-# Step 1: Create the file and write header:
+# 1. צרי את הקובץ וכתבי כותרת:
 #         with open("scores.csv", "w", newline="") as f:
 #             writer = csv.writer(f)
 #             writer.writerow(["Player", "Score", "Date"])
 #
-# Step 2: Write individual rows:
+# 2. כתבי שורות בנפרד:
 #             writer.writerow(["{{hero}}", 1000, "2024-01-15"])
 #             writer.writerow(["{{heroine}}", 1500, "2024-01-16"])
 #             writer.writerow(["{{friend}}", 750, "2024-01-14"])
 #
-# Note: writerow() for one row, writerows() for multiple
+# > רמז: `writerow()` לשורה אחת, `writerows()` לכמה שורות יחד.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# Learn to read data from CSV files.
+# תלמדי לקרוא נתונים מקבצי CSV.
 #
-# ✏️ YOUR CODE HERE ✏️
+# קראי נתוני CSV באמצעות `csv.reader`.
 #
-# Read CSV data using csv.reader.
-#
-# Step 1: Open and read the CSV:
+# 1. פתחי וקראי את הקובץ:
 #         with open("characters.csv", "r") as f:
 #             reader = csv.reader(f)
 #
-# Step 2: Iterate through rows:
+# 2. עברי על השורות:
 #             for row in reader:
 #                 print(row)  # Each row is a list
 #
-# Step 3: Access specific columns:
+# 3. גשי לעמודות ספציפיות:
 #             # Reset to beginning
 #         with open("characters.csv", "r") as f:
 #             reader = csv.reader(f)
@@ -94,23 +88,21 @@ import csv
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# קראי קובץ CSV כרשימה של רשימות.
 #
-# Read CSV as list of lists.
-#
-# Step 1: Load entire CSV into memory:
+# 1. טעיני את כל הקובץ לזיכרון:
 #         with open("characters.csv", "r") as f:
 #             reader = csv.reader(f)
 #             all_rows = list(reader)
 #
-# Step 2: Access by index:
+# 2. גשי לפי אינדקס:
 #         header = all_rows[0]
 #         data_rows = all_rows[1:]
 #
 #         print(f"Columns: {header}")
 #         print(f"Number of records: {len(data_rows)}")
 #
-# Step 3: Find a specific row:
+# 3. חפשי שורה ספציפית:
 #         for row in data_rows:
 #             if row[0] == "{{hero}}":
 #                 print(f"Found: {row}")
@@ -119,50 +111,46 @@ import csv
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# Learn DictReader and DictWriter for easier column access.
+# תלמדי להשתמש ב-`DictReader` וב-`DictWriter` לגישה נוחה יותר לעמודות.
 #
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי ב-`DictWriter` כדי לכתוב מילונים כשורות.
 #
-# Use DictWriter to write dicts as rows.
-#
-# Step 1: Define field names (column headers):
+# 1. הגדירי את שמות השדות (כותרות העמודות):
 #         fieldnames = ["name", "level", "ability", "active"]
 #
-# Step 2: Create list of dicts:
+# 2. צרי רשימה של מילונים:
 #         records = [
 #             {"name": "{{hero}}", "level": 5, "ability": "{{spell1}}", "active": True},
 #             {"name": "{{heroine}}", "level": 7, "ability": "{{spell2}}", "active": True},
 #             {"name": "{{friend}}", "level": 3, "ability": "{{spell1}}", "active": False}
 #         ]
 #
-# Step 3: Write using DictWriter:
+# 3. כתבי באמצעות `DictWriter`:
 #         with open("roster.csv", "w", newline="") as f:
 #             writer = csv.DictWriter(f, fieldnames=fieldnames)
 #             writer.writeheader()  # Write column names
 #             writer.writerows(records)
 #
-# Note: DictWriter needs fieldnames to know column order
+# > רמז: `DictWriter` צריך את `fieldnames` כדי לדעת את סדר העמודות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי ב-`DictReader` כדי לקרוא שורות כמילונים.
 #
-# Use DictReader to read rows as dicts.
-#
-# Step 1: Read with DictReader:
+# 1. קראי עם `DictReader`:
 #         with open("roster.csv", "r") as f:
 #             reader = csv.DictReader(f)
 #
-# Step 2: Access columns by name:
+# 2. גשי לעמודות לפי שם:
 #             for row in reader:
 #                 print(f"{row['name']} - Level {row['level']}")
 #
-# Step 3: DictReader uses first row as keys automatically!
+# 3. `DictReader` משתמש בשורה הראשונה כמפתחות אוטומטית!
 #         with open("roster.csv", "r") as f:
 #             reader = csv.DictReader(f)
 #             print(f"Columns: {reader.fieldnames}")
@@ -170,7 +158,7 @@ import csv
 #             all_records = list(reader)
 #             print(f"Records: {all_records}")
 #
-# Note: This is much cleaner than using indices!
+# > רמז: זה הרבה יותר נקי מאשר שימוש באינדקסים!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

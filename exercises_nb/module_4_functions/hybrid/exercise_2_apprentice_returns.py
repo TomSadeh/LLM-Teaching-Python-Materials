@@ -9,14 +9,14 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגילה מרובת-חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: DISCOVERY - Observe Return vs Print
+# ## חלק 1: גילוי - שימי לב ל-`return` לעומת `print`
 # {{CONTEXT_DISCOVERY_INTRO}}
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Study these two functions carefully. They look similar but behave
-# differently.
+# למדי את שתי הפונקציות האלה בעיון. הן נראות דומות, אבל מתנהגות
+# בצורה שונה.
 
 # %%
 print(f"Hello, {name}!")
@@ -36,20 +36,20 @@ print(f"Stored result: {result2}")
 print(f"Type of result: {type(result2)}")
 
 # %% [markdown]
-# YOUR OBSERVATIONS
+# ## התצפיות שלי
 #
-# Answer these questions after running the code:
+# ענִי על השאלות האלה אחרי הרצת הקוד:
 #
-# 1. What does function_with_print return? _______________
-# 2. What does function_with_return return? _______________
-# 3. Which one can you use in other calculations? _______________
+# 1. מה מחזירה `function_with_print`? _______________
+# 2. מה מחזירה `function_with_return`? _______________
+# 3. איזו מהן אפשר להשתמש בה בחישובים נוספים? _______________
 #
 #
-# PART 2: GUIDANCE - Practice with Return Statements
+# ## חלק 2: הדרכה - תרגול עם משפטי `return`
 # {{CONTEXT_GUIDANCE_INTRO}}
 # {{CONTEXT_GUIDANCE_NARRATIVE}}
 #
-# Complete these functions by adding the correct return statements.
+# השלימי את הפונקציות האלה על ידי הוספת משפטי `return` הנכונים.
 
 # %%
 # Started for you:
@@ -80,11 +80,11 @@ pass
 pass
 
 # %% [markdown]
-# PART 3: GROWTH - Create Returning Functions
+# ## חלק 3: צמיחה - צרי פונקציות שמחזירות ערכים
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now create your own functions that return values.
+# כעת צרי פונקציות משלך שמחזירות ערכים.
 
 # %%
 # YOUR CODE HERE

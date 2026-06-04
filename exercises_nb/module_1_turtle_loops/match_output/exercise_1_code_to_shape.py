@@ -13,12 +13,12 @@
 import turtle
 
 # %% [markdown]
-# {{MATCH_SET_1_TITLE}}
+# ## {{MATCH_SET_1_TITLE}}
 # {{CONTEXT_MATCH_SET_1_NARRATIVE}}
 #
-# Match each code snippet to the shape it draws.
+# התאימי כל קטע קוד לצורה שהוא מצייר.
 #
-# ## CODE SNIPPETS
+# ## קטעי הקוד
 
 # %%
 t = turtle.Turtle()
@@ -48,34 +48,32 @@ for i in range(6):
     t.right(60)
 
 # %% [markdown]
-# ## POSSIBLE OUTPUTS
+# ## פלטים אפשריים
 #
-# OUTPUT A: Triangle
+# פלט A: משולש (Triangle)
 # ---------
-# A 3-sided closed shape with equal sides.
-# The turtle turns 120 degrees at each corner.
+# צורה סגורה בת 3 צלעות שוות.
+# הצב מסתובב 120 מעלות בכל פינה.
 #
-# OUTPUT B: Square
+# פלט B: ריבוע (Square)
 # ---------
-# A 4-sided closed shape with equal sides.
-# The turtle turns 90 degrees at each corner.
+# צורה סגורה בת 4 צלעות שוות.
+# הצב מסתובב 90 מעלות בכל פינה.
 #
-# OUTPUT C: Hexagon
+# פלט C: משושה (Hexagon)
 # ---------
-# A 6-sided closed shape with equal sides.
-# The turtle turns 60 degrees at each corner.
+# צורה סגורה בת 6 צלעות שוות.
+# הצב מסתובב 60 מעלות בכל פינה.
 #
-# ## YOUR ANSWERS
+# ## התשובות שלך
 #
-# ✏️ MATCH SNIPPETS TO OUTPUTS ✏️
+# כתבי את האות (A, B או C) שמתאימה לכל קטע קוד.
 #
-# Write the letter (A, B, or C) that matches each snippet.
-#
-# Hint: Look at range(N) to find the number of sides.
-# The turn angle determines what shape it is:
-# - Triangle: 120 degrees (360 / 3)
-# - Square: 90 degrees (360 / 4)
-# - Hexagon: 60 degrees (360 / 6)
+# > רמז: הסתכלי על `range(N)` כדי למצוא את מספר הצלעות.
+# > זווית הסיבוב קובעת את סוג הצורה:
+# > - Triangle: 120 מעלות (360 / 3)
+# > - Square: 90 מעלות (360 / 4)
+# > - Hexagon: 60 מעלות (360 / 6)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -90,13 +88,13 @@ matches = {
 return matches
 
 # %% [markdown]
-# {{MATCH_SET_2_TITLE}}
+# ## {{MATCH_SET_2_TITLE}}
 # {{CONTEXT_MATCH_SET_2_NARRATIVE}}
 #
-# These snippets look similar but produce different results!
-# {{hero}} must identify each pattern.
+# קטעי הקוד האלה נראים דומים אבל מייצרים תוצאות שונות!
+# {{hero}} צריכה לזהות כל תבנית.
 #
-# ## CODE SNIPPETS
+# ## קטעי הקוד
 
 # %%
 t = turtle.Turtle()
@@ -129,34 +127,32 @@ for i in range(5):
     t.left(72)
 
 # %% [markdown]
-# ## POSSIBLE OUTPUTS
+# ## פלטים אפשריים
 #
-# OUTPUT D: Pentagon (5-sided polygon)
+# פלט D: מחומש (Pentagon)
 # ---------
-# A regular 5-sided closed shape.
-# Turn angle: 72 degrees (360/5).
-# Turns RIGHT at each corner.
+# צורה סגורה וסדירה בת 5 צלעות.
+# זווית סיבוב: 72 מעלות (360/5).
+# מסתובבת ימינה (`right`) בכל פינה.
 #
-# OUTPUT E: 5-Pointed Star
+# פלט E: כוכב בן 5 קצוות (5-Pointed Star)
 # ---------
-# A star shape with 5 points.
-# Turn angle: 144 degrees (larger than polygon).
-# Lines cross through the center.
+# צורה של כוכב עם 5 קצוות.
+# זווית סיבוב: 144 מעלות (גדולה יותר מאשר פולייגון).
+# הקווים חוצים זה את זה דרך המרכז.
 #
-# OUTPUT F: Pentagon (counterclockwise)
+# פלט F: מחומש נגד כיוון השעון (Pentagon counterclockwise)
 # ---------
-# A regular 5-sided closed shape.
-# Turn angle: 72 degrees.
-# Turns LEFT at each corner (draws in opposite direction).
+# צורה סגורה וסדירה בת 5 צלעות.
+# זווית סיבוב: 72 מעלות.
+# מסתובבת שמאלה (`left`) בכל פינה — מצייר בכיוון הפוך.
 #
-# ## YOUR ANSWERS
+# ## התשובות שלך
 #
-# ✏️ MATCH SNIPPETS TO OUTPUTS ✏️
-#
-# Hint: Compare the turn angles and directions!
-# - 72 degrees = 360/5, creates a regular pentagon
-# - 144 degrees = 2 * 72, creates a star pattern
-# - left vs right affects which way the shape is drawn
+# > רמז: השווי את זוויות הסיבוב והכיוונים!
+# > - 72 מעלות = 360/5, יוצרת מחומש סדיר
+# > - 144 מעלות = 2 * 72, יוצרת תבנית כוכב
+# > - `left` לעומת `right` קובע לאיזה כיוון הצורה מצוירת
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

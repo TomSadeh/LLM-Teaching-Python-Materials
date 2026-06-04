@@ -9,18 +9,18 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זו תרגילה מרובת-חלקים. השלימי כל חלק לפי הסדר.
 #
-# The list processing system at {{school}} is failing. Students are getting
-# errors when they try to analyze their data. You need to fix it!
+# מערכת עיבוד הרשימות ב-{{school}} קורסת. תלמידים מקבלים
+# שגיאות כשהם מנסים לנתח את הנתונים שלהם. את צריכה לתקן את זה!
 #
-# PART 1: SETBACK - Understand the Error
+# ## חלק 1: המכשול - הבינו מה הלך פה
 # {{CONTEXT_SETBACK_INTRO}}
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# The system is crashing. Decode what went wrong.
+# המערכת קורסת. פענחי מה השתבש.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "processor.py", line 15, in <module>
@@ -29,12 +29,12 @@
 #     return items[0]
 # IndexError: list index out of range
 #
-# The code that caused this:
+# הקוד שגרם לשגיאה:
 #     def get_first(items):
 #         return items[0]
 #
 #     empty_list = []
-#     result = get_first(empty_list)  # Crashes!
+#     result = get_first(empty_list)  # קורס!
 
 # %%
 print("Demonstrating the problem:\n")
@@ -55,19 +55,19 @@ print("This would crash: buggy_get_first([])")
 print("IndexError: list index out of range")
 
 # %% [markdown]
-# YOUR UNDERSTANDING
+# ## ההבנה שלך
 #
-# Why does this error occur?
-# - Lists use 0-based indexing
-# - An empty list has no index 0
-# - Accessing a non-existent index raises IndexError
+# למה השגיאה הזו קורית?
+# - רשימות משתמשות באינדקס שמתחיל מ-0
+# - רשימה ריקה אין לה אינדקס 0
+# - גישה לאינדקס שלא קיים מעלה `IndexError`
 #
 #
-# PART 2: INVESTIGATION - Fix the Functions
+# ## חלק 2: החקירה - תקני את הפונקציות
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Here are the broken functions. Fix each one to handle edge cases.
+# הנה הפונקציות השבורות. תקני כל אחת כדי שתטפל במקרי קצה.
 
 # %%
 # FIX 1: get_first - Handle empty lists
@@ -142,11 +142,11 @@ print(f"  Team[10]: {get_item_at(team, 10)}")
 print(f"  Team[10] with default: {get_item_at(team, 10, 'Invalid')}")
 
 # %% [markdown]
-# PART 3: IMPROVEMENT - Build Robust List Functions
+# ## חלק 3: השיפור - בני פונקציות רשימה חסינות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Create a complete set of safe list processing functions.
+# צרי סט שלם של פונקציות עיבוד רשימה בטוחות.
 
 # %%
 # FUNCTION 1: safe_sum
@@ -241,7 +241,7 @@ print("\ntransform_all:")
 print(f"  Team with prefix: {transform_all(team, '>> ')}")
 
 # %% [markdown]
-# ## FINAL: Complete List Utility
+# ## סיכום: כלי רשימות שלם
 
 # %%
 def analyze_scores(scores, name="Data"):

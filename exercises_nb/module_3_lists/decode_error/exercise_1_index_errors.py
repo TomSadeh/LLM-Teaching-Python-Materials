@@ -9,10 +9,10 @@
 # {{CONTEXT_DECODE_ERROR_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{ERROR_1_TITLE}}
+# ## {{ERROR_1_TITLE}}
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "inventory.py", line 4, in <module>
@@ -37,10 +37,10 @@ print(items[3])  # BUG: Index 3 doesn't exist!
 pass
 
 # %% [markdown]
-# {{ERROR_2_TITLE}}
+# ## {{ERROR_2_TITLE}}
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "team.py", line 5, in <module>
@@ -66,10 +66,10 @@ print(team[team_size])  # BUG: team[3] doesn't exist!
 pass
 
 # %% [markdown]
-# {{ERROR_3_TITLE}}
+# ## {{ERROR_3_TITLE}}
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "empty.py", line 3, in <module>
@@ -94,10 +94,10 @@ print(inventory[0])  # BUG: Can't access index 0 of empty list
 pass
 
 # %% [markdown]
-# {{ERROR_4_TITLE}}
+# ## {{ERROR_4_TITLE}}
 # {{CONTEXT_ERROR_4_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "loop.py", line 4, in <module>

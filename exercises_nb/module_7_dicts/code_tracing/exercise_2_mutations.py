@@ -2,8 +2,8 @@
 # {{CONTEXT_CODE_TRACING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Trace through dictionary mutations to understand how
-# dictionaries change over multiple operations.
+# עקבי אחרי שינויים במילוניות כדי להבין כיצד
+# מילוניות משתנות לאורך מספר פעולות.
 #
 # ## {{TRACE_1_TITLE}}
 # {{CONTEXT_TRACE_1_NARRATIVE}}
@@ -16,21 +16,19 @@ del inventory["{{item}}"]
 print(inventory)
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_1}}
 #
-# Track the dictionary contents at each step.
+# עקבי אחרי תוכן המילונית בכל שלב.
 #
-# | Step | inventory contents             | Output (if any) |
-# |------|--------------------------------|-----------------|
-# | 0    | {"{{item}}": 2}                |                 |
-# | 1    |                                |                 |
-# | 2    |                                |                 |
-# | 3    |                                |                 |
-# | 4    |                                |                 |
+# | שלב | תוכן inventory                 | פלט (אם יש)     |
+# |-----|--------------------------------|-----------------|
+# | 0   | {"{{item}}": 2}                |                 |
+# | 1   |                                |                 |
+# | 2   |                                |                 |
+# | 3   |                                |                 |
+# | 4   |                                |                 |
 #
-# Write your completed table as comments below:
+# כתבי את הטבלה המלאה כהערות למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -47,20 +45,18 @@ for player in players:
 print(scores)
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_2}}
 #
-# Track the dictionary and loop variable at each iteration.
+# עקבי אחרי המילונית ומשתנה הלולאה בכל איטרציה.
 #
-# | Iter | player        | scores.get(player, 0) | scores after update      |
-# |------|---------------|-----------------------|--------------------------|
-# | 0    | -             | -                     | {}                       |
-# | 1    | "{{hero}}"    | 0                     |                          |
-# | 2    | "{{heroine}}" |                       |                          |
-# | 3    | "{{hero}}"    |                       |                          |
+# | איטרציה | player        | scores.get(player, 0) | scores אחרי העדכון       |
+# |---------|---------------|-----------------------|--------------------------|
+# | 0       | -             | -                     | {}                       |
+# | 1       | "{{hero}}"    | 0                     |                          |
+# | 2       | "{{heroine}}" |                       |                          |
+# | 3       | "{{hero}}"    |                       |                          |
 #
-# What is the final output?
+# מה הפלט הסופי?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -78,20 +74,18 @@ for key in data:
 print(f"Total: {total}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_3}}
 #
-# Track the loop variable, condition, and running total.
+# עקבי אחרי משתנה הלולאה, התנאי והסכום המצטבר.
 #
-# | Iter | key | data[key] | data[key] > 1 | total after |
-# |------|-----|-----------|---------------|-------------|
-# | 0    | -   | -         | -             | 0           |
-# | 1    | "a" | 1         | False         |             |
-# | 2    | "b" |           |               |             |
-# | 3    | "c" |           |               |             |
+# | איטרציה | key | data[key] | data[key] > 1 | total אחרי |
+# |---------|-----|-----------|---------------|------------|
+# | 0       | -   | -         | -             | 0          |
+# | 1       | "a" | 1         | False         |            |
+# | 2       | "b" |           |               |            |
+# | 3       | "c" |           |               |            |
 #
-# What is the final output?
+# מה הפלט הסופי?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -111,19 +105,17 @@ print(profiles["{{hero}}"]["level"])
 print(profiles["{{heroine}}"]["level"])
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_4}}
 #
-# Track the nested dictionary mutations.
+# עקבי אחרי השינויים במילוניות המקוננת.
 #
-# | Iter | name          | before update            | after update             |
-# |------|---------------|--------------------------|--------------------------|
-# | 0    | -             | {"{{hero}}": {"level": 5}, "{{heroine}}": {"level": 7}} | - |
-# | 1    | "{{hero}}"    |                          |                          |
-# | 2    | "{{heroine}}" |                          |                          |
+# | איטרציה | name          | לפני העדכון              | אחרי העדכון              |
+# |---------|---------------|--------------------------|--------------------------|
+# | 0       | -             | {"{{hero}}": {"level": 5}, "{{heroine}}": {"level": 7}} | - |
+# | 1       | "{{hero}}"    |                          |                          |
+# | 2       | "{{heroine}}" |                          |                          |
 #
-# What are the two printed values?
+# מה שני הערכים שמודפסים?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

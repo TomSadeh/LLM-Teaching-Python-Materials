@@ -9,9 +9,9 @@
 # {{CONTEXT_COMPARISON_INTRO}}
 # {{CONTEXT_COMPARISON_DECISION}}
 #
-# Scenario 1: A Calculation Function
-# You need a function that calculates a score.
-# You want to use the result in other calculations.
+# ## תרחיש 1: פונקציה לחישוב
+# את צריכה פונקציה שמחשבת ניקוד.
+# את רוצה להשתמש בתוצאה בחישובים נוספים.
 
 # %%
 result = base + bonus
@@ -46,8 +46,8 @@ When to use Version 2 (return):
 return analysis
 
 # %% [markdown]
-# Scenario 2: A Greeting Function
-# You need a function that shows a greeting to the user.
+# ## תרחיש 2: פונקציית ברכה
+# את צריכה פונקציה שמציגה ברכה למשתמש.
 
 # %%
 print(f"Hello, {name}!")
@@ -77,8 +77,8 @@ When to use Version 2 (return):
 return analysis
 
 # %% [markdown]
-# Scenario 3: A Status Check Function
-# You need to check if a user is qualified.
+# ## תרחיש 3: פונקציית בדיקת סטטוס
+# את צריכה לבדוק אם משתמש מוסמך.
 
 # %%
 if level >= 10:
@@ -110,8 +110,8 @@ When to use Version 2:
 return analysis
 
 # %% [markdown]
-# Scenario 4: A Report Generator
-# You need to create a formatted report.
+# ## תרחיש 4: מחולל דוחות
+# את צריכה ליצור דוח מעוצב.
 
 # %%
 print("=" * 40)
@@ -151,8 +151,8 @@ When to use Version 2:
 return analysis
 
 # %% [markdown]
-# Scenario 5: Combined Approach
-# Sometimes you want both: calculate AND display.
+# ## תרחיש 5: גישה משולבת
+# לפעמים את רוצה את שניהם: גם לחשב וגם להציג.
 
 # %%
 result = base + bonus

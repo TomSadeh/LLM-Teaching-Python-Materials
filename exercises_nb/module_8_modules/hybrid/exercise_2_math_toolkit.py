@@ -1,136 +1,123 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# This is a multi-part exercise where you build a complete math utilities
-# module for {{school}}. You'll implement helper functions, extend them
-# with more features, and add error handling.
+# בתרגיל הזה תבני מודול שלם של פונקציות עזר מתמטיות עבור {{school}}.
+# תממשי פונקציות בסיסיות, תרחיבי אותן עם יכולות נוספות, ותוסיפי טיפול בשגיאות.
 #
-# Programming concepts: math module, function design, error handling
-# Difficulty: 2-3
+# מושגי תכנות: מודול `math`, עיצוב פונקציות, טיפול בשגיאות
+# רמת קושי: 2-3
 
 # %%
 import math
 
 # %% [markdown]
-# PART 1: Growth - Basic Math Helper Functions
+# ## חלק 1: צמיחה - פונקציות עזר מתמטיות בסיסיות
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Build foundational math utility functions.
+# בני פונקציות עזר מתמטיות בסיסיות.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. השתמשי ב-`math.pi` ובנוסחה: `area = pi * radius^2`
+# 2. החזירי את השטח שחישבת
 #
-# Step 1: Use math.pi and the formula: area = pi * radius^2
-# Step 2: Return the calculated area
-#
-# Hint: radius**2 or math.pow(radius, 2)
+# > רמז: `radius**2` או `math.pow(radius, 2)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Use the Pythagorean theorem: c = sqrt(a^2 + b^2)
-# Step 2: Return the result
+# 1. השתמשי במשפט פיתגורס: `c = sqrt(a^2 + b^2)`
+# 2. החזירי את התוצאה
 #
-# Hint: math.sqrt(a**2 + b**2)
+# > רמז: `math.sqrt(a**2 + b**2)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Check the direction parameter
-# Step 2: If "up", use math.ceil()
-# Step 3: If "down", use math.floor()
-# Step 4: If "nearest", use round() (built-in)
-# Step 5: Return the result
+# 1. בדקי את הפרמטר `direction`
+# 2. אם `"up"` - השתמשי ב-`math.ceil()`
+# 3. אם `"down"` - השתמשי ב-`math.floor()`
+# 4. אם `"nearest"` - השתמשי ב-`round()` (מובנה)
+# 5. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Advanced Calculations
+# ## חלק 2: צמיחה - חישובים מתקדמים
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Add more sophisticated math operations.
+# הוסיפי פעולות מתמטיות מתוחכמות יותר.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Calculate differences: dx = x2 - x1, dy = y2 - y1
-# Step 2: Apply distance formula: sqrt(dx^2 + dy^2)
-# Step 3: Return the result
+# 1. חשבי את ההפרשים: `dx = x2 - x1`, `dy = y2 - y1`
+# 2. הפעילי את נוסחת המרחק: `sqrt(dx^2 + dy^2)`
+# 3. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Hint: The diagonal IS the hypotenuse of width and height!
-# You can reuse calculate_hypotenuse() or calculate directly
+# > רמז: האלכסון הוא בדיוק היתר של הרוחב והגובה!
+# > את יכולה לעשות שימוש חוזר ב-`calculate_hypotenuse()` או לחשב ישירות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Calculate math.pow(base, exponent) and convert to int
-# Step 2: If modulo is provided, return result % modulo
-# Step 3: Otherwise, return result
+# 1. חשבי `math.pow(base, exponent)` והמירי ל-`int`
+# 2. אם `modulo` סופק, החזירי `result % modulo`
+# 3. אחרת, החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Improvement - Error Handling
+# ## חלק 3: שיפור - טיפול בשגיאות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Add error handling for invalid inputs.
+# הוסיפי טיפול בשגיאות עבור קלט לא תקין.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Check if radius is a number (int or float)
-#         Use: isinstance(radius, (int, float))
-# Step 2: If not a number, print "Error: radius must be a number"
-#         and return None
-# Step 3: Check if radius is negative
-# Step 4: If negative, print "Error: radius cannot be negative"
-#         and return None
-# Step 5: Calculate and return the area
+# 1. בדקי אם `radius` הוא מספר (שלם או עשרוני)
+#    השתמשי ב: `isinstance(radius, (int, float))`
+# 2. אם זה לא מספר, הדפיסי `"Error: radius must be a number"`
+#    והחזירי `None`
+# 3. בדקי אם `radius` שלילי
+# 4. אם שלילי, הדפיסי `"Error: radius cannot be negative"`
+#    והחזירי `None`
+# 5. חשבי והחזירי את השטח
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Check if value is a number
-# Step 2: Check if value is negative (can't take sqrt of negative)
-# Step 3: If valid, return math.sqrt(value)
-# Step 4: If invalid, print appropriate error and return None
+# 1. בדקי אם `value` הוא מספר
+# 2. בדקי אם `value` שלילי (לא ניתן לחשב שורש של מספר שלילי)
+# 3. אם תקין, החזירי `math.sqrt(value)`
+# 4. אם לא תקין, הדפיסי שגיאה מתאימה והחזירי `None`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Check if both a and b are numbers
-# Step 2: Check if b is zero
-# Step 3: If valid, return a / b
-# Step 4: Handle errors appropriately
+# 1. בדקי אם גם `a` וגם `b` הם מספרים
+# 2. בדקי אם `b` הוא אפס
+# 3. אם תקין, החזירי `a / b`
+# 4. טפלי בשגיאות בצורה מתאימה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

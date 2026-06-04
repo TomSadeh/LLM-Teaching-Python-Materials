@@ -1,182 +1,166 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# This is a multi-part exercise where {{hero}} builds a data persistence
-# system for {{school}}. You'll save and load progress using text files,
-# understand common errors, and add proper error handling.
+# ## תרגיל מרובה-חלקים: {{hero}} בונה מערכת שמירת נתונים עבור {{school}}.
+# # תלמדי לשמור ולטעון נתוני התקדמות בקבצי טקסט,
+# # להבין שגיאות נפוצות ולהוסיף טיפול נכון בשגיאות.
 #
-# Programming concepts: file I/O, context managers, error handling
-# Difficulty: 2-3
+# # מושגי תכנות: קריאה וכתיבה לקבצים, מנהלי הקשר, טיפול בשגיאות
+# # רמת קושי: 2-3
 #
-# PART 1: Growth - Save Data to Files
-# {{CONTEXT_GROWTH_INTRO}}
-# {{CONTEXT_GROWTH_NARRATIVE}}
+# ## חלק 1: צמיחה — שמירת נתונים לקבצים
+# # {{CONTEXT_GROWTH_INTRO}}
+# # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Learn to save different types of data to text files.
+# # למדי לשמור סוגים שונים של נתונים לקבצי טקסט.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. פתחי קובץ לכתיבה:
+#    `with open(filename, "w") as f:`
 #
-# Step 1: Open file for writing
-#         with open(filename, "w") as f:
+# 2. כתבי כל שדה בשורה נפרדת:
+#    `f.write(f"NAME: {name}\n")`
+#    `f.write(f"LEVEL: {level}\n")`
+#    `f.write(f"ABILITIES: {', '.join(abilities)}\n")`
 #
-# Step 2: Write each field on its own line:
-#         f.write(f"NAME: {name}\n")
-#         f.write(f"LEVEL: {level}\n")
-#         f.write(f"ABILITIES: {', '.join(abilities)}\n")
-#
-# Step 3: Print confirmation message
+# 3. הדפיסי הודעת אישור
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# 1. פתחי קובץ לכתיבה
 #
-# Step 1: Open file for writing
-#
-# Step 2: Loop through scores dict:
-#         for name, score in scores.items():
-#             f.write(f"{name}: {score}\n")
+# 2. עברי על מילון הציונים:
+#    `for name, score in scores.items():`
+#        `f.write(f"{name}: {score}\n")`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Load Data from Files
-# {{CONTEXT_GROWTH_INTRO}}
-# {{CONTEXT_GROWTH_NARRATIVE}}
+# ## חלק 2: צמיחה — טעינת נתונים מקבצים
+# # {{CONTEXT_GROWTH_INTRO}}
+# # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Learn to read and parse data from text files.
+# # למדי לקרוא ולנתח נתונים מקבצי טקסט.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. אתחלי מילון פרופיל ריק
 #
-# Step 1: Initialize profile dict
+# 2. פתחי וקראי את הקובץ:
+#    `with open(filename, "r") as f:`
+#        `for line in f:`
+#            `# נתחי כל שורה`
 #
-# Step 2: Open and read file:
-#         with open(filename, "r") as f:
-#             for line in f:
-#                 # Parse each line
+# 3. נתחי את שורת ה-NAME:
+#    `if line.startswith("NAME:"):`
+#        `profile["name"] = line.replace("NAME:", "").strip()`
 #
-# Step 3: Parse NAME line:
-#         if line.startswith("NAME:"):
-#             profile["name"] = line.replace("NAME:", "").strip()
+# 4. נתחי את שורת ה-LEVEL (המירי ל-`int`):
+#    `if line.startswith("LEVEL:"):`
+#        `profile["level"] = int(line.replace("LEVEL:", "").strip())`
 #
-# Step 4: Parse LEVEL line (convert to int):
-#         if line.startswith("LEVEL:"):
-#             profile["level"] = int(line.replace("LEVEL:", "").strip())
+# 5. נתחי את שורת ה-ABILITIES (פצלי לרשימה):
+#    `if line.startswith("ABILITIES:"):`
+#        `abilities_str = line.replace("ABILITIES:", "").strip()`
+#        `profile["abilities"] = [a.strip() for a in abilities_str.split(",")]`
 #
-# Step 5: Parse ABILITIES line (split into list):
-#         if line.startswith("ABILITIES:"):
-#             abilities_str = line.replace("ABILITIES:", "").strip()
-#             profile["abilities"] = [a.strip() for a in abilities_str.split(",")]
-#
-# Step 6: Return the profile dict
+# 6. החזירי את מילון הפרופיל
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# 1. אתחלי מילון ציונים ריק
 #
-# Step 1: Initialize empty scores dict
+# 2. פתחי וקראי את הקובץ
 #
-# Step 2: Open and read file
+# 3. נתחי כל שורה:
+#    `for line in f:`
+#        `if ":" in line:`
+#            `name, score = line.split(":")`
+#            `scores[name.strip()] = int(score.strip())`
 #
-# Step 3: Parse each line:
-#         for line in f:
-#             if ":" in line:
-#                 name, score = line.split(":")
-#                 scores[name.strip()] = int(score.strip())
-#
-# Step 4: Return scores dict
+# 4. החזירי את מילון הציונים
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Investigation - Understanding File Errors
-# {{CONTEXT_INVESTIGATION_INTRO}}
-# {{CONTEXT_INVESTIGATION_NARRATIVE}}
+# ## חלק 3: חקירה — הבנת שגיאות קבצים
+# # {{CONTEXT_INVESTIGATION_INTRO}}
+# # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# What happens when things go wrong?
+# # מה קורה כשדברים משתבשים?
 #
-# ERROR MESSAGE 1:
-# ----------------
-# Traceback (most recent call last):
-#   File "load_game.py", line 2, in <module>
-#     with open("save_data.txt", "r") as f:
-# FileNotFoundError: [Errno 2] No such file or directory: 'save_data.txt'
+# # הודעת שגיאה 1:
+# # ----------------
+# # Traceback (most recent call last):
+# #   File "load_game.py", line 2, in <module>
+# #     with open("save_data.txt", "r") as f:
+# # FileNotFoundError: [Errno 2] No such file or directory: 'save_data.txt'
 #
-# ERROR MESSAGE 2:
-# ----------------
-# Traceback (most recent call last):
-#   File "parse_score.py", line 5, in <module>
-#     score = int(line.strip())
-# ValueError: invalid literal for int() with base 10: 'not_a_number'
+# # הודעת שגיאה 2:
+# # ----------------
+# # Traceback (most recent call last):
+# #   File "parse_score.py", line 5, in <module>
+# #     score = int(line.strip())
+# # ValueError: invalid literal for int() with base 10: 'not_a_number'
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. הסבירי את `FileNotFoundError`:
+#    `print("FileNotFoundError occurs when:")`
+#    `print("  - The file path is wrong")`
+#    `print("  - The file was deleted")`
+#    `print("  - The file was never created")`
 #
-# Step 1: Explain FileNotFoundError:
-#         print("FileNotFoundError occurs when:")
-#         print("  - The file path is wrong")
-#         print("  - The file was deleted")
-#         print("  - The file was never created")
-#
-# Step 2: Explain ValueError during parsing:
-#         print("\nValueError during int() occurs when:")
-#         print("  - The file format is corrupted")
-#         print("  - The data isn't what we expected")
-#         print("  - Extra whitespace or characters")
+# 2. הסבירי את `ValueError` בעת ניתוח הנתונים:
+#    `print("\nValueError during int() occurs when:")`
+#    `print("  - The file format is corrupted")`
+#    `print("  - The data isn't what we expected")`
+#    `print("  - Extra whitespace or characters")`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Improvement - Safe Loading with Error Handling
-# {{CONTEXT_IMPROVEMENT_INTRO}}
-# {{CONTEXT_IMPROVEMENT_NARRATIVE}}
+# ## חלק 4: שיפור — טעינה בטוחה עם טיפול בשגיאות
+# # {{CONTEXT_IMPROVEMENT_INTRO}}
+# # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Add error handling to make the system robust.
+# # הוסיפי טיפול בשגיאות כדי להפוך את המערכת לאמינה.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. קבעי ברירת מחדל אם לא סופקה:
+#    `if default is None:`
+#        `default = {"name": "Unknown", "level": 1, "abilities": []}`
 #
-# Step 1: Set default if not provided:
-#         if default is None:
-#             default = {"name": "Unknown", "level": 1, "abilities": []}
-#
-# Step 2: Try to load:
-#         try:
-#             profile = load_profile(filename)
-#             return profile
-#         except FileNotFoundError:
-#             print(f"No save file found: {filename}")
-#             return default
-#         except ValueError as e:
-#             print(f"Save file corrupted: {e}")
-#             return default
+# 2. נסי לטעון:
+#    `try:`
+#        `profile = load_profile(filename)`
+#        `return profile`
+#    `except FileNotFoundError:`
+#        `print(f"No save file found: {filename}")`
+#        `return default`
+#    `except ValueError as e:`
+#        `print(f"Save file corrupted: {e}")`
+#        `return default`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Handle FileNotFoundError and return {} as default
+# # טפלי ב-`FileNotFoundError` והחזירי `{}` כברירת מחדל
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# 1. אם `backup` הוא `True`, שנמי שם לקובץ הישן:
+#    `import os`
+#    `if os.path.exists(filename) and backup:`
+#        `os.rename(filename, filename + ".backup")`
 #
-# Step 1: If backup is True, rename old file:
-#         import os
-#         if os.path.exists(filename) and backup:
-#             os.rename(filename, filename + ".backup")
+# 2. שמרי את הפרופיל החדש
 #
-# Step 2: Save the new profile
-#
-# Step 3: Print confirmation
+# 3. הדפיסי הודעת אישור
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

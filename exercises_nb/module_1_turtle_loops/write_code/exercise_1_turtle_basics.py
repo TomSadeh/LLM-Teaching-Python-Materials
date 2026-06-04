@@ -13,77 +13,68 @@
 import turtle
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צייגי קו ישר באורך 100 יחידות עבור {{hero}}.
 #
-# Draw a straight line 100 units long for {{hero}}.
+# 1. צרי צב עם `t = turtle.Turtle()`
+# 2. השתמשי ב-`t.forward(100)` כדי לצייר את הקו
 #
-# Step 1: Create a turtle with t = turtle.Turtle()
-# Step 2: Use t.forward(100) to draw the line
-#
-# Expected: A horizontal line from the center going right.
+# פלט צפוי: קו אופקי ממרכז המסך ימינה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# עזרי ל-{{hero}} לצייר צורת L על מפת {{school}}.
 #
-# Help {{hero}} draw an L-shape on the map of {{school}}.
+# 1. צרי צב
+# 2. התקדמי קדימה 80 יחידות
+# 3. פני שמאלה 90 מעלות (השתמשי ב-`t.left(90)`)
+# 4. התקדמי קדימה 60 יחידות
 #
-# Step 1: Create a turtle
-# Step 2: Move forward 80 units
-# Step 3: Turn left 90 degrees (use t.left(90))
-# Step 4: Move forward 60 units
-#
-# Expected: An L-shape (horizontal line, then vertical line going up).
+# פלט צפוי: צורת L (קו אופקי ואחריו קו אנכי כלפי מעלה).
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צייגי דוגמת מדרגות עם 3 מדרגות עבור {{creature}}.
+# כל מדרגה היא: קדימה 30, ימינה 90, קדימה 30, שמאלה 90
 #
-# Draw a staircase pattern with 3 steps for {{creature}}.
-# Each step is: forward 30, turn right 90, forward 30, turn left 90
+# 1. צרי צב
+# 2. עבור כל אחת מ-3 המדרגות:
+#    `forward(30)`, `right(90)`, `forward(30)`, `left(90)`
 #
-# Step 1: Create a turtle
-# Step 2: For each of the 3 steps:
-#         - forward(30), right(90), forward(30), left(90)
+# > רמז: כרגע כתבי את כל 12 הפקודות בנפרד. בהמשך תלמדי להשתמש בלולאות כדי לחזור על דפוסים!
 #
-# Hint: You can write out all 12 commands for now.
-# Later you'll learn to use loops to repeat patterns!
-#
-# Expected: A staircase going right and down.
+# פלט צפוי: מדרגות הממשיכות ימינה ומטה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי ב-`penup()` וב-`pendown()` כדי לצייר שני קווים נפרדים
+# המייצגים שבילים ב-{{location}}.
 #
-# Use penup() and pendown() to draw two separate lines
-# representing paths in {{location}}.
+# 1. צרי צב
+# 2. צייגי קו קדימה 50 יחידות
+# 3. הרימי את העט עם `t.penup()`
+# 4. התקדמי קדימה 30 יחידות (ללא ציור)
+# 5. הורידי את העט עם `t.pendown()`
+# 6. צייגי קו נוסף קדימה 50 יחידות
 #
-# Step 1: Create a turtle
-# Step 2: Draw a line forward 50 units
-# Step 3: Lift the pen with t.penup()
-# Step 4: Move forward 30 units (no line drawn)
-# Step 5: Put the pen down with t.pendown()
-# Step 6: Draw another line forward 50 units
-#
-# Expected: Two horizontal lines with a gap between them.
+# פלט צפוי: שני קווים אופקיים עם רווח ביניהם.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

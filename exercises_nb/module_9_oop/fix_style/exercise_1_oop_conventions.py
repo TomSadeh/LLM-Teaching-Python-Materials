@@ -2,11 +2,11 @@
 # {{CONTEXT_FIX_STYLE_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll fix code that works but violates OOP naming
-# conventions and best practices. Good style makes code readable and
-# helps others understand your class designs.
+# בתרגיל הזה תתקני קוד שעובד אבל מפר את מוסכמות השמות של OOP
+# ואת שיטות העבודה הטובות. סגנון טוב הופך את הקוד לקריא
+# ועוזר לאחרים להבין את עיצובי הכיתות שלך.
 #
-# {{STYLE_1_TITLE}}
+# ## {{STYLE_1_TITLE}}
 # {{CONTEXT_STYLE_1_NARRATIVE}}
 #
 #
@@ -26,23 +26,21 @@ class character:  # Wrong! Classes should be PascalCase
         return self.n + " has " + str(self.hp) + " HP"  # Use f-string
 
 # %% [markdown]
-# ✏️ FIX THE STYLE ✏️
-#
 # {{CONTEXT_STYLE_FIX_1}}
 #
-# Rewrite the class with proper conventions:
-# - Class name: PascalCase (Character)
-# - Method names: snake_case (take_damage, get_info)
-# - Attribute names: snake_case, descriptive (name, health, power)
-# - Use f-strings for string formatting
+# שכתבי את הכיתה עם המוסכמות הנכונות:
+# - שם כיתה: `PascalCase` (‏`Character`)
+# - שמות מתודות: `snake_case` (‏`take_damage`, `get_info`)
+# - שמות תכונות: `snake_case`, ברורים (‏`name`, `health`, `power`)
+# - השתמשי ב-`f-strings` לעיצוב מחרוזות
 #
-# Write your fixed version below:
+# כתבי את הגרסה המתוקנת שלך למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{STYLE_2_TITLE}}
+# ## {{STYLE_2_TITLE}}
 # {{CONTEXT_STYLE_2_NARRATIVE}}
 #
 #
@@ -67,23 +65,21 @@ class INVENTORY:  # Wrong! Not PascalCase
         print(self.g)
 
 # %% [markdown]
-# ✏️ FIX THE STYLE ✏️
-#
 # {{CONTEXT_STYLE_FIX_2}}
 #
-# Fix:
-# - Class name to PascalCase
-# - All attributes to snake_case with clear names
-# - All methods to snake_case
-# - Be consistent throughout
+# תקני:
+# 1. שם הכיתה ל-`PascalCase`
+# 2. את כל התכונות ל-`snake_case` עם שמות ברורים
+# 3. את כל המתודות ל-`snake_case`
+# 4. היי עקבית לאורך כל הקוד
 #
-# Write your fixed version below:
+# כתבי את הגרסה המתוקנת שלך למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{STYLE_3_TITLE}}
+# ## {{STYLE_3_TITLE}}
 # {{CONTEXT_STYLE_3_NARRATIVE}}
 #
 #
@@ -111,25 +107,23 @@ class e:  # Single letter name!
         return self.a + " B:" + str(self.b) + " C:" + str(self.c)
 
 # %% [markdown]
-# ✏️ FIX THE STYLE ✏️
-#
 # {{CONTEXT_STYLE_FIX_3}}
 #
-# This appears to be a game entity with health (b) and mana (c).
+# נראה שמדובר בישות משחק עם בריאות (`b`) ומאנה (`c`).
 #
-# Fix:
-# - Give the class a meaningful name (Entity, Character, etc.)
-# - Rename all attributes descriptively
-# - Rename all methods descriptively (take_damage, use_mana, get_status)
-# - Add docstrings to the class and methods
+# תקני:
+# 1. תני לכיתה שם משמעותי (‏`Entity`, `Character` וכו')
+# 2. שנני את כל שמות התכונות לשמות ברורים
+# 3. שנני את כל שמות המתודות לשמות ברורים (‏`take_damage`, `use_mana`, `get_status`)
+# 4. הוסיפי `docstrings` לכיתה ולמתודות
 #
-# Write your fixed version below:
+# כתבי את הגרסה המתוקנת שלך למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{STYLE_4_TITLE}}
+# ## {{STYLE_4_TITLE}}
 # {{CONTEXT_STYLE_4_NARRATIVE}}
 #
 #
@@ -164,18 +158,16 @@ class MageUnit(baseUnit):  # Inconsistent with warrior_unit
         return 0
 
 # %% [markdown]
-# ✏️ FIX THE STYLE ✏️
-#
 # {{CONTEXT_STYLE_FIX_4}}
 #
-# Fix:
-# - All class names to PascalCase (BaseUnit, WarriorUnit, MageUnit)
-# - All attributes to snake_case
-# - All methods to snake_case
-# - Don't shadow built-ins (str -> strength)
-# - Be consistent across the hierarchy
+# תקני:
+# 1. את כל שמות הכיתות ל-`PascalCase` (‏`BaseUnit`, `WarriorUnit`, `MageUnit`)
+# 2. את כל התכונות ל-`snake_case`
+# 3. את כל המתודות ל-`snake_case`
+# 4. אל תסתירי פונקציות מובנות (‏`str` ← `strength`)
+# 5. היי עקבית בכל ההיררכיה
 #
-# Write your fixed version below:
+# כתבי את הגרסה המתוקנת שלך למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

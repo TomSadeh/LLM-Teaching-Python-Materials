@@ -2,25 +2,22 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn about the string module's useful
-# constants. These are pre-defined character sets that help with
-# validation, generation, and text processing.
+# בתרגיל הזה תלמדי על קבועי המחרוזות המועילים של מודול `string`.
+# אלו הם אוספי תווים מוגדרים מראש שעוזרים באימות קלט, יצירת מחרוזות ועיבוד טקסט.
 #
-# Topic: string module constants
-# Difficulty: 2
+# נושא: קבועי מודול string
+# רמת קושי: 2
 
 # %%
 import string
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# חקרי את קבועי התווים של מודול `string`.
 #
-# Explore the string module's character constants.
-#
-# Step 1: Print each constant to see what it contains:
+# 1. הדפיסי כל קבוע כדי לראות מה הוא מכיל:
 #
 #         print("Letters:", string.ascii_letters)
 #         print("Lowercase:", string.ascii_lowercase)
@@ -28,27 +25,25 @@ import string
 #         print("Digits:", string.digits)
 #         print("Punctuation:", string.punctuation)
 #
-# Step 2: Check the length of each:
+# 2. בדקי את האורך של כל קבוע:
 #         print(f"Letters count: {len(string.ascii_letters)}")
 #         print(f"Digits count: {len(string.digits)}")
 #
-# These constants are useful for:
-# - Validating input (is it all letters? all digits?)
-# - Generating random strings (passwords, codes)
-# - Text processing
+# הקבועים האלה שימושיים ל:
+# - אימות קלט (האם הטקסט מורכב רק מאותיות? רק מספרות?)
+# - יצירת מחרוזות אקראיות (סיסמאות, קודים)
+# - עיבוד טקסט
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי בקבועי `string` כדי לאמת קלט.
 #
-# Use string constants for input validation.
-#
-# Step 1: Create a function to check if text is all letters:
+# 1. צרי פונקציה שבודקת אם טקסט מורכב רק מאותיות:
 #
 #         def is_all_letters(text):
 #             for char in text:
@@ -56,12 +51,12 @@ import string
 #                     return False
 #             return True
 #
-# Step 2: Test it with different inputs:
+# 2. בדקי אותה עם קלטים שונים:
 #         print(is_all_letters("Hello"))        # True
 #         print(is_all_letters("Hello123"))     # False
 #         print(is_all_letters("Hello World"))  # False (space)
 #
-# Step 3: Create a similar function for alphanumeric:
+# 3. צרי פונקציה דומה לאלפאנומרי:
 #
 #         def is_alphanumeric(text):
 #             valid_chars = string.ascii_letters + string.digits
@@ -70,7 +65,7 @@ import string
 #                     return False
 #             return True
 #
-# Step 4: Test it:
+# 4. בדקי אותה:
 #         print(is_alphanumeric("User123"))     # True
 #         print(is_alphanumeric("User_123"))    # False (underscore)
 
@@ -78,16 +73,14 @@ import string
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# שלבי קבועי `string` עם `random` עבור {{school}}.
 #
-# Combine string constants with random for {{school}}.
+# 1. ייבאי את `random` בתחילת הפתרון שלך
 #
-# Step 1: Import random at the top of your solution
-#
-# Step 2: Create a simple code generator:
+# 2. צרי גנרטור קודים פשוט:
 #
 #         def generate_code(length):
 #             """Generate a random alphanumeric code."""
@@ -97,11 +90,11 @@ import string
 #                 code = code + random.choice(characters)
 #             return code
 #
-# Step 3: Generate and print several codes:
+# 3. צרי והדפיסי מספר קודים:
 #         print(f"Access code: {generate_code(6)}")
 #         print(f"Long code: {generate_code(10)}")
 #
-# Step 4: Create a variant that only uses digits:
+# 4. צרי גרסה שמשתמשת רק בספרות:
 #
 #         def generate_pin(length):
 #             pin = ""
@@ -111,8 +104,8 @@ import string
 #
 #         print(f"PIN: {generate_pin(4)}")
 #
-# Step 5: Create one that uses letters only:
-#         Generate a 5-letter "name" using lowercase letters
+# 5. צרי גרסה שמשתמשת רק באותיות:
+#         צרי "שם" בן 5 אותיות באמצעות אותיות קטנות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

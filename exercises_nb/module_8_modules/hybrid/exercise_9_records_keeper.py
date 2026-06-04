@@ -1,11 +1,11 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# This is a multi-part exercise where {{school}} needs to track
-# {{creature}} sightings in a spreadsheet-style format using CSV.
+# בתרגיל הזה ב-{{school}} צריך לעקוב אחרי
+# תיעוד ראיות של {{creature}} בפורמט גיליון אלקטרוני באמצעות CSV.
 #
-# Programming concepts: CSV module, data processing, file I/O
-# Difficulty: 3-4
+# מושגי תכנות: מודול `csv`, עיבוד נתונים, קלט/פלט לקובץ
+# רמת קושי: 3-4
 
 # %%
 import csv
@@ -14,15 +14,13 @@ import csv
 from datetime import date
 
 # %% [markdown]
-# PART 1: Growth - Write Records to CSV
+# ## חלק 1: צמיחה - כתיבת רשומות לקובץ CSV
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Learn to create and write CSV files for record keeping.
+# למדי ליצור ולכתוב קבצי CSV לשמירת רשומות.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Return a dict with:
+# החזירי מילון עם השדות הבאים:
 # {
 #     "date": str(date.today()),  # Current date as string
 #     "creature": creature_name,
@@ -35,35 +33,33 @@ from datetime import date
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Define fieldnames:
+# 1. הגדירי את שמות השדות:
 #         fieldnames = ["date", "creature", "location", "observer", "notes"]
 #
-# Step 2: Open file and create DictWriter:
+# 2. פתחי קובץ וצרי `DictWriter`:
 #         with open(filename, "w", newline="") as f:
 #             writer = csv.DictWriter(f, fieldnames=fieldnames)
 #
-# Step 3: Write header and rows:
+# 3. כתבי כותרת ושורות:
 #             writer.writeheader()
 #             writer.writerows(sightings)
 #
-# Step 4: Return count
+# 4. החזירי את הספירה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Check if file exists (for header decision)
+# 1. בדקי אם הקובץ קיים (כדי להחליט אם לכתוב כותרת):
 #         import os
 #         file_exists = os.path.exists(filename)
 #
-# Step 2: Open in append mode:
+# 2. פתחי במצב הוספה:
 #         with open(filename, "a", newline="") as f:
 #
-# Step 3: Create writer and write:
+# 3. צרי writer וכתבי:
 #         fieldnames = ["date", "creature", "location", "observer", "notes"]
 #         writer = csv.DictWriter(f, fieldnames=fieldnames)
 #         if not file_exists:
@@ -74,32 +70,29 @@ from datetime import date
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Read and Display CSV Data
+# ## חלק 2: צמיחה - קריאה והצגת נתוני CSV
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Learn to read and display CSV records.
+# למדי לקרוא ולהציג רשומות CSV.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. נסי לפתוח ולקרוא עם `DictReader`
 #
-# Step 1: Try to open and read with DictReader
-#
-# Step 2: Convert to list:
+# 2. המירי לרשימה:
 #         return list(reader)
 #
-# Step 3: Handle FileNotFoundError, return []
+# 3. טפלי ב-`FileNotFoundError`, החזירי `[]`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Print header:
+# 1. הדפיסי כותרת:
 #         print(f"{'Date':<12} {'Creature':<15} {'Location':<15} {'Observer':<10}")
 #         print("-" * 55)
 #
-# Step 2: Print each row:
+# 2. הדפיסי כל שורה:
 #         for s in sightings:
 #             print(f"{s['date']:<12} {s['creature']:<15} {s['location']:<15} {s['observer']:<10}")
 
@@ -107,34 +100,31 @@ from datetime import date
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Initialize counts dict
+# 1. אתחלי מילון ספירות
 #
-# Step 2: Loop through sightings:
+# 2. עברי על הראיות בלולאה:
 #         for s in sightings:
 #             creature = s["creature"]
 #             counts[creature] = counts.get(creature, 0) + 1
 #
-# Step 3: Return counts
+# 3. החזירי את הספירות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Complete Search and Filter Functions
+# ## חלק 3: צמיחה - פונקציות חיפוש וסינון
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Add search and filter capabilities.
-#
-# ✏️ COMPLETE THIS FUNCTION ✏️
+# הוסיפי יכולות חיפוש וסינון.
 #
 # {{CONTEXT_FUNCTION_HINT_3}}
 #
-# Step 1: Initialize matches list
+# 1. אתחלי רשימת התאמות
 #
-# Step 2: For each sighting, check if search_term is in any field:
+# 2. לכל ראיה, בדקי אם מונח החיפוש מופיע באחד השדות:
 #         search_lower = search_term.lower()
 #         for s in sightings:
 #             for value in s.values():
@@ -142,23 +132,21 @@ from datetime import date
 #                     matches.append(s)
 #                     break
 #
-# Step 3: Return matches
+# 3. החזירי את ההתאמות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Return sightings where location matches (case-insensitive)
+# החזירי ראיות שבהן המיקום תואם (ללא תלות בגודל אות)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Compare date strings (YYYY-MM-DD format sorts correctly!)
+# השוואת מחרוזות תאריך (פורמט `YYYY-MM-DD` ממוין נכון!)
 # for s in sightings:
 #     if start_date <= s["date"] <= end_date:
 #         matches.append(s)
@@ -167,21 +155,19 @@ from datetime import date
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Growth - Generate Reports
+# ## חלק 4: צמיחה - יצירת דוחות
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Generate summary reports from the data.
+# צרי דוחות סיכום מהנתונים.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. ספרי את סך הראיות
 #
-# Step 1: Count total sightings
+# 2. ספרי לפי סוג יצור
 #
-# Step 2: Count by creature type
+# 3. מצאי מיקומים ייחודיים
 #
-# Step 3: Find unique locations
-#
-# Step 4: Build report string:
+# 4. בני מחרוזת דוח:
 #         report = []
 #         report.append("=" * 40)
 #         report.append("SIGHTING SUMMARY REPORT")
@@ -198,17 +184,16 @@ from datetime import date
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Generate report
+# 1. צרי דוח
 #
-# Step 2: Write to file
+# 2. כתבי לקובץ
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

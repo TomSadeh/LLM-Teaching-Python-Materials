@@ -1,17 +1,17 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise where you learn to build characters
-# for {{school}} by studying examples, adding methods, and creating
-# your own class designs.
+# זוהי תרגילה מרובת-חלקים שבה תלמדי לבנות דמויות
+# עבור {{school}} — על ידי לימוד דוגמאות, הוספת מתודות ועיצוב
+# קלאסים משלך.
 #
-# Programming concepts: classes, __init__, self, instance methods, attributes
+# מושגי תכנות: classes, `__init__`, `self`, מתודות instance, attributes
 #
-# PART 1: Guidance - Study and Complete the Class
+# חלק 1: הנחיה — לימודי והשלימי את הקלאס
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{mentor}} has created a character class for you to study.
-# Complete the missing method to understand how the class works.
+# {{mentor}} יצר עבורך קלאס דמות ללימוד.
+# השלימי את המתודה החסרה כדי להבין איך הקלאס עובד.
 
 # %%
 class BaseCharacter:
@@ -70,11 +70,11 @@ hero.gain_experience(60)  # Should trigger level up
 print(f"After 60 more XP: {hero.get_info()}")
 
 # %% [markdown]
-# PART 2: Growth - Add New Methods
+# חלק 2: צמיחה — הוסיפי מתודות חדשות
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Now extend the character with combat abilities.
+# עכשיו הרחיבי את הדמות עם יכולות לחימה.
 
 # %%
 class CombatCharacter:
@@ -134,31 +134,28 @@ print(f"{{{{hero}}}} attacks defending enemy for {damage} damage!")
 print(f"After attack: {enemy.get_status()}")
 
 # %% [markdown]
-# PART 3: Ownership - Create Your Own Class
+# חלק 3: בעלות — צרי קלאס משלך
 # {{CONTEXT_MASTERY_INTRO}}
 # {{CONTEXT_MASTERY_NARRATIVE}}
 #
-# Design your own character class with unique abilities.
+# עצבי קלאס דמות משלך עם יכולות ייחודיות.
 #
-# ✏️ CREATE YOUR OWN CHARACTER CLASS ✏️
+# עליך לכלול:
 #
-# Design a class for a specific type of character (e.g., healer,
-# ranged attacker, support). Include:
+# חובה:
+#     `__init__` עם לפחות 4 attributes
+#     לפחות 3 מתודות שפועלות על מצב הדמות
+#     מתודה אחת שמתקשרת עם אובייקט דמות אחר
 #
-# Required:
-#     __init__ with at least 4 attributes
-#     At least 3 methods that operate on the character's state
-#     One method that interacts with another character object
+# רעיונות:
+#     - מרפאת עם מתודת `heal_ally(target)`
+#     - דמות עם משאב (מאנה, אנרגיה) שמגביל יכולות
+#     - דמות עם יכולות buff/debuff
 #
-# Ideas:
-#     - A healer with heal_ally(target) method
-#     - A character with a resource (mana, energy) that limits abilities
-#     - A character with buff/debuff abilities
-#
-# After defining your class:
-#     1. Create at least 2 instances
-#     2. Test all your methods
-#     3. Demonstrate the interaction method
+# אחרי שתגדירי את הקלאס שלך:
+# 1. צרי לפחות 2 instances
+# 2. בדקי את כל המתודות שלך
+# 3. הדגימי את מתודת האינטראקציה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -2,18 +2,18 @@
 # {{CONTEXT_DECODE_ERROR_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to understand and fix common file-related
-# errors: FileNotFoundError, PermissionError, and more.
+# בתרגיל הזה תלמדי לזהות ולתקן שגיאות נפוצות שקשורות לקבצים:
+# `FileNotFoundError`, `PermissionError`, ועוד.
 #
-# Topic: File I/O error interpretation
-# Difficulty: 2-3
+# נושא: פענוח שגיאות קבצים (File I/O)
+# רמת קושי: 2-3
 #
-# {{ERROR_1_TITLE}}
+# ## {{ERROR_1_TITLE}}
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# The most common file error: trying to read a file that doesn't exist.
+# השגיאה הנפוצה ביותר: מנסים לקרוא קובץ שלא קיים.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "read_data.py", line 3, in <module>
@@ -27,38 +27,36 @@ with open("nonexistent_file.txt", "r") as f:
 print(content)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# First, explain what caused the error:
-# The error occurred because: _______________
+# קודם כל, הסבירי מה גרם לשגיאה:
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_1}}
 #
-# Fix option 1: Check if file exists before opening
+# אפשרות תיקון 1: בדקי אם הקובץ קיים לפני הפתיחה
 #   import os
 #   if os.path.exists("data.txt"):
 #       with open("data.txt", "r") as f:
 #           content = f.read()
 #
-# Fix option 2: Use try/except to handle the error
+# אפשרות תיקון 2: השתמשי ב-`try/except` כדי לטפל בשגיאה
 #   try:
 #       with open("data.txt", "r") as f:
 #           content = f.read()
 #   except FileNotFoundError:
 #       content = "File not found, using default"
 #
-# Choose one approach and write the fixed code:
+# בחרי גישה אחת וכתבי את הקוד המתוקן:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_2_TITLE}}
+# ## {{ERROR_2_TITLE}}
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# Forgetting to handle the case where a directory doesn't exist.
+# שוכחים לטפל במצב שבו תיקייה לא קיימת.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "save_data.py", line 2, in <module>
@@ -71,16 +69,13 @@ with open("data/output.txt", "w") as f:
     f.write("Some data")
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_2}}
 #
-# The directory "data" doesn't exist! Python won't create
-# directories automatically when writing files.
+# התיקייה `"data"` לא קיימת! פייתון לא יוצרת תיקיות באופן אוטומטי כשכותבים קבצים.
 #
-# Fix: Create the directory first (if needed)
+# תיקון: צרי את התיקייה קודם (אם צריך)
 #   import os
 #   os.makedirs("data", exist_ok=True)  # exist_ok prevents error if exists
 #   with open("data/output.txt", "w") as f:
@@ -90,12 +85,12 @@ with open("data/output.txt", "w") as f:
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_3_TITLE}}
+# ## {{ERROR_3_TITLE}}
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# Opening a file in the wrong mode.
+# פותחים קובץ במצב לא נכון.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "update_data.py", line 3, in <module>
@@ -109,20 +104,18 @@ with open("data.txt", "r") as f:  # "r" = read mode!
     f.write("New line\n")
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_3}}
 #
-# The file was opened in read mode ("r") but we tried to write.
+# הקובץ נפתח במצב קריאה (`"r"`) אבל ניסינו לכתוב לתוכו.
 #
-# Fix: Use the correct mode
-#   "w" - write (overwrites file)
-#   "a" - append (adds to end)
-#   "r+" - read and write
+# תיקון: השתמשי במצב הנכון
+#   `"w"` - כתיבה (מוחקת את תוכן הקובץ)
+#   `"a"` - הוספה לסוף
+#   `"r+"` - קריאה וכתיבה
 #
-# If you want to append to the file:
+# אם רוצים להוסיף לסוף הקובץ:
 #   with open("data.txt", "a") as f:
 #       f.write("New line\n")
 
@@ -130,12 +123,12 @@ with open("data.txt", "r") as f:  # "r" = read mode!
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_4_TITLE}}
+# ## {{ERROR_4_TITLE}}
 # {{CONTEXT_ERROR_4_NARRATIVE}}
 #
-# Using a file object after the 'with' block has closed it.
+# משתמשים באובייקט הקובץ אחרי שבלוק ה-`with` סגר אותו.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "read_later.py", line 5, in <module>
@@ -150,16 +143,14 @@ content = f.read()  # Error: file is closed
 print(content)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_4}}
 #
-# When the 'with' block ends, the file is automatically closed.
-# Any file operations must happen INSIDE the 'with' block.
+# כשבלוק ה-`with` מסתיים, הקובץ נסגר אוטומטית.
+# כל פעולות הקובץ חייבות להתרחש בתוך בלוק ה-`with`.
 #
-# Fix: Do all file operations inside the 'with' block
+# תיקון: בצעי את כל פעולות הקובץ בתוך בלוק ה-`with`
 #   with open("data.txt", "r") as f:
 #       first_line = f.readline()
 #       content = f.read()  # Still inside the block!
@@ -169,12 +160,12 @@ print(content)
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_5_TITLE}}
+# ## {{ERROR_5_TITLE}}
 # {{CONTEXT_ERROR_5_NARRATIVE}}
 #
-# Forgetting to use the correct encoding.
+# שוכחים להשתמש בקידוד הנכון.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "read_unicode.py", line 2, in <module>
@@ -187,21 +178,18 @@ with open("unicode_file.txt", "r") as f:
     content = f.read()
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_5}}
 #
-# The file contains special characters (like emojis or accented
-# letters) encoded in UTF-8, but Python tried to read it with
-# a different encoding.
+# הקובץ מכיל תווים מיוחדים (כמו אמוג'ים או אותיות עם ניקוד)
+# שמקודדים ב-UTF-8, אבל פייתון ניסתה לקרוא אותו עם קידוד שונה.
 #
-# Fix: Specify UTF-8 encoding explicitly
+# תיקון: ציינו את קידוד UTF-8 במפורש
 #   with open("unicode_file.txt", "r", encoding="utf-8") as f:
 #       content = f.read()
 #
-# Best practice: Always specify encoding="utf-8" for text files
+# > רמז: תמיד ציינו `encoding="utf-8"` לקבצי טקסט — זה חוסך הרבה כאבי ראש!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

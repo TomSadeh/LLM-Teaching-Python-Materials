@@ -2,10 +2,10 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll complete functions that process
-# dictionary items using iteration methods.
+# בתרגיל הזה תשלימי פונקציות שמעבדות
+# פריטים ממילון תוך שימוש בשיטות איטרציה.
 #
-# {{FUNCTION_1_TITLE}}
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
 # %%
@@ -13,18 +13,16 @@
 count = 0
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_1}}
 #
-# Iterate over the roster values and count matches.
-# Use: for status in roster.values():
+# עברי על ערכי המילון וספרי את ההתאמות.
+# השתמשי בלולאה: `for status in roster.values():`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{FUNCTION_2_TITLE}}
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
 # %%
@@ -32,18 +30,16 @@ count = 0
 matches = []
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_2}}
 #
-# Iterate using .items() and check each value.
-# for key, value in data.items():
+# עברי על פריטי המילון עם `.items()` ובדקי כל ערך.
+# `for key, value in data.items():`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{FUNCTION_3_TITLE}}
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
 # %%
@@ -51,17 +47,15 @@ matches = []
 total = 0
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_3}}
 #
-# Iterate over values and add only those above threshold.
+# עברי על הערכים והוסיפי לסכום רק את אלה שמעל הסף.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{FUNCTION_4_TITLE}}
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 
 # %%
@@ -69,18 +63,16 @@ total = 0
 result = {}
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_4}}
 #
-# Iterate using .items() and build the new dictionary.
-# result[key] = value * multiplier
+# עברי על פריטי המילון עם `.items()` ובני את המילון החדש.
+# `result[key] = value * multiplier`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{FUNCTION_5_TITLE}}
+# ## {{FUNCTION_5_TITLE}}
 # {{CONTEXT_FUNCTION_5_NARRATIVE}}
 
 # %%
@@ -88,16 +80,14 @@ result = {}
 result = {}
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_5}}
 #
-# Step 1: Add all items from inv1 to result
-# Step 2: For each item in inv2:
-#         - If already in result, add the quantities
-#         - Otherwise, just add it to result
+# 1. הוסיפי את כל הפריטים מ-`inv1` ל-`result`
+# 2. עברי על כל פריט ב-`inv2`:
+#    - אם הפריט כבר קיים ב-`result`, הוסיפי את הכמויות
+#    - אחרת, פשוט הוסיפי אותו ל-`result`
 #
-# Hint: result[item] = result.get(item, 0) + quantity
+# > רמז: `result[item] = result.get(item, 0) + quantity`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

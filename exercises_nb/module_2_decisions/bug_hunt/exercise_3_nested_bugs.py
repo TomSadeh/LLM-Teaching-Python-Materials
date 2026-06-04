@@ -9,17 +9,17 @@
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_MISSION}}
 #
-# {{CASE_1_TITLE}}
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# {{hero}} needs to check multiple conditions to enter a restricted area.
-# Must be level 10+ AND have a pass OR be a VIP.
+# {{hero}} צריכה לעמוד במספר תנאים כדי להיכנס לאזור מוגבל.
+# צריך להיות ברמה 10+ ועם תעודת מעבר, **או** להיות VIP.
 #
-# EXPECTED BEHAVIOR:
-# VIP should enter regardless of level
+# **התנהגות מצופה:**
+# VIP אמורה להיכנס ללא קשר לרמה
 #
-# ACTUAL BEHAVIOR:
-# VIP at level 5 is denied entry
+# **התנהגות בפועל:**
+# VIP ברמה 5 נדחית מהכניסה
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -40,13 +40,11 @@ else:
     print("Access denied - level too low.")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# **מה מצאתי:** בדיקת VIP צריכה להיות עצמאית, ללא קשר לרמה
+# **הבאג:** בדיקת `is_vip` נמצאת בתוך הבלוק של `level >= 10`
+#          כך שמי שהיא VIP ברמה נמוכה לא נבדקת בכלל
 #
-# What I found: VIP check should be independent of level
-# The bug: The is_vip check is inside the level >= 10 block
-#          So VIPs with low level never get checked
-#
-# The fix: Check VIP first, OR restructure the logic
+# **התיקון:** לבדוק VIP קודם, או לשנות את מבנה הלוגיקה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -66,17 +64,17 @@ is_vip = True
 pass
 
 # %% [markdown]
-# {{CASE_2_TITLE}}
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# {{mentor}}'s grade calculator has nested conditions.
-# But something's wrong with the indentation logic!
+# למחשבון הציונים של {{mentor}} יש תנאים מקוננים.
+# אבל משהו לא בסדר עם לוגיקת ההזחה!
 #
-# EXPECTED BEHAVIOR:
-# Score of 75 should print "C" and "Needs improvement"
+# **התנהגות מצופה:**
+# ציון 75 אמור להדפיס `"C"` ו-`"Needs improvement"`
 #
-# ACTUAL BEHAVIOR:
-# Score of 75 prints "C" but also "Excellent work!" (wrong!)
+# **התנהגות בפועל:**
+# ציון 75 מדפיס `"C"` אבל גם `"Excellent work!"` (שגוי!)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -100,13 +98,11 @@ if grade == "A":
 print("Needs improvement.")  # This always runs!
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# **מה מצאתי:** `"Needs improvement"` רץ לכולם
+# **הבאג:** ההודעה השנייה לא נמצאת בתוך בלוק `else`
+#          היא אמורה להדפיס רק אם הציון הוא לא `"A"`
 #
-# What I found: "Needs improvement" runs for everyone
-# The bug: The second message isn't in an else block
-#          It should only print if grade is NOT "A"
-#
-# The fix:
+# **התיקון:**
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -121,18 +117,18 @@ score = 75
 pass
 
 # %% [markdown]
-# {{CASE_3_TITLE}}
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# {{hero}} checks if they can complete a challenge.
-# Multiple requirements must be checked in the right order.
+# {{hero}} בודקת אם היא יכולה להשלים אתגר.
+# יש לבדוק מספר דרישות בסדר הנכון.
 #
-# EXPECTED BEHAVIOR:
-# Should check level first, then gold, then item
-# Missing gold (level ok, no item) should say "Need more gold"
+# **התנהגות מצופה:**
+# לבדוק קודם רמה, אחר כך זהב, ואז פריט
+# חוסר בזהב (רמה בסדר, אין פריט) אמור להציג `"Need more gold"`
 #
-# ACTUAL BEHAVIOR:
-# Says "Need the {{item}}" even when gold is the problem
+# **התנהגות בפועל:**
+# מציג `"Need the {{item}}"` גם כשהבעיה היא בזהב
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -154,22 +150,20 @@ else:
     print("Level too low for this challenge.")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# **מה מצאתי:** סדר הקינון הלא נכון מביא להודעות שגיאה לא נכונות
+# **הבאג:** עם `gold=30` ו-`has_challenge_item=True`:
+#          - נכנסת לבדיקת הרמה (בסדר)
+#          - נכנסת לבדיקת `has_challenge_item` (נכון)
+#          - נכשלת בבדיקת הזהב -> `"Need more gold!"` (נכון במקרה הזה!)
 #
-# What I found: The nesting order gives wrong error messages
-# The bug: With gold=30 and has_challenge_item=True:
-#          - Enters level check (ok)
-#          - Enters has_challenge_item check (True)
-#          - Fails gold check -> "Need more gold!" (correct in this case!)
+# רגע, נקראי שוב... למעשה הקוד עובד לקלט הזה.
+# נסי: `level=10`, `gold=100`, `has_challenge_item=False`
+#          - נכנסת לבדיקת הרמה (בסדר)
+#          - נכשלת בבדיקת `has_challenge_item` (שקר)
+#          - מדפיסה `"Need the item!"` לפני שבדקה את הזהב
 #
-# Wait, let me re-read... actually the code works for this input.
-# Let me try: level=10, gold=100, has_challenge_item=False
-#          - Enters level check (ok)
-#          - Fails has_challenge_item check (False)
-#          - Prints "Need the item!" before checking gold
-#
-# The logic issue: We should check what's actually missing
-# A better approach: check each requirement and report what's missing
+# בעיית הלוגיקה: צריך לבדוק מה חסר בפועל
+# גישה טובה יותר: לבדוק כל דרישה ולדווח מה חסר
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -181,18 +175,18 @@ has_challenge_item = True
 pass
 
 # %% [markdown]
-# {{CASE_4_TITLE}}
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# {{hero}}'s action system chooses what to do based on {{primary_stat}} and {{secondary_stat}}.
-# But the nested conditions have a logical flaw!
+# מערכת הפעולות של {{hero}} בוחרת מה לעשות לפי {{primary_stat}} ו-{{secondary_stat}}.
+# אבל לתנאים המקוננים יש פגם לוגי!
 #
-# EXPECTED BEHAVIOR:
-# Low {{primary_stat}} AND low {{secondary_stat}} should "{{retreat_action}}"
-# Low {{primary_stat}} OR low {{secondary_stat}} (but not both) should "{{basic_action}}"
+# **התנהגות מצופה:**
+# {{primary_stat}} נמוך **וגם** {{secondary_stat}} נמוך — צריך `"{{retreat_action}}"`
+# {{primary_stat}} נמוך **או** {{secondary_stat}} נמוך (אבל לא שניהם) — צריך `"{{basic_action}}"`
 #
-# ACTUAL BEHAVIOR:
-# Low {{primary_stat}} always leads to "{{retreat_action}}" regardless of {{secondary_stat}}
+# **התנהגות בפועל:**
+# {{primary_stat}} נמוך תמיד מוביל ל-`"{{retreat_action}}"` ללא קשר ל-{{secondary_stat}}
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -209,13 +203,11 @@ else:
     print("{{hero}} uses {{spell2}}!")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# **מה מצאתי:** `{{retreat_action}}` צריך לדרוש גם {{primary_stat}} נמוך וגם {{secondary_stat}} נמוך
+# **הבאג:** הקוד הנוכחי מבצע נסיגה על {{primary_stat}} נמוך לבד
+#          צריך `{{retreat_action}}` רק אם `primary < 30` **ו-**`secondary < 20`
 #
-# What I found: {{retreat_action}} should require BOTH low {{primary_stat}} AND low {{secondary_stat}}
-# The bug: Current code retreats on low {{primary_stat}} alone
-#          Should only {{retreat_action}} if primary < 30 AND secondary < 20
-#
-# The fix:
+# **התיקון:**
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

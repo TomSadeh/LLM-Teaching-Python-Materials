@@ -9,9 +9,9 @@
 # {{CONTEXT_CODE_TRACING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{TRACE_1_TITLE}}
+# ## {{TRACE_1_TITLE}}
 # {{CONTEXT_TRACE_1_NARRATIVE}}
-# Basic slicing: list[start:stop] extracts elements from start UP TO (not including) stop.
+# חיתוך בסיסי: `list[start:stop]` מחלץ איברים החל מ-`start` ועד (לא כולל) `stop`.
 
 # %%
 items = ["{{item}}", "potion", "key", "map", "coin"]
@@ -44,9 +44,9 @@ print(f"items[3:5]: {last_two}")
 pass
 
 # %% [markdown]
-# {{TRACE_2_TITLE}}
+# ## {{TRACE_2_TITLE}}
 # {{CONTEXT_TRACE_2_NARRATIVE}}
-# Shorthand slicing: omit start (defaults to 0) or stop (defaults to end).
+# חיתוך מקוצר: אפשר להשמיט את `start` (ברירת מחדל: 0) או את `stop` (ברירת מחדל: סוף הרשימה).
 
 # %%
 team = ["{{hero}}", "{{heroine}}", "{{friend}}", "{{mentor}}"]
@@ -80,9 +80,9 @@ print(f"team[:]: {copy}")
 pass
 
 # %% [markdown]
-# {{TRACE_3_TITLE}}
+# ## {{TRACE_3_TITLE}}
 # {{CONTEXT_TRACE_3_NARRATIVE}}
-# Negative indices in slices work too!
+# אינדקסים שליליים עובדים גם בחיתוכים!
 
 # %%
 abilities = ["{{spell1}}", "{{spell2}}", "{{spell3}}", "{{spell4}}"]
@@ -115,9 +115,9 @@ print(f"abilities[1:-1]: {middle}")
 pass
 
 # %% [markdown]
-# {{TRACE_4_TITLE}}
+# ## {{TRACE_4_TITLE}}
 # {{CONTEXT_TRACE_4_NARRATIVE}}
-# Step slicing: list[start:stop:step] skips elements.
+# חיתוך עם צעד: `list[start:stop:step]` קופץ על איברים.
 
 # %%
 numbers = [0, 1, 2, 3, 4, 5, 6, 7]

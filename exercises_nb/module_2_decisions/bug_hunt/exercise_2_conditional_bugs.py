@@ -9,17 +9,17 @@
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_MISSION}}
 #
-# {{CASE_1_TITLE}}
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# {{hero}} checks if their score qualifies for a bonus.
-# Score of exactly 100 should get the bonus too!
+# {{hero}} בודקת אם הניקוד שלה מזכה אותה בבונוס.
+# ניקוד של בדיוק 100 אמור גם הוא לזכות בבונוס!
 #
-# EXPECTED BEHAVIOR:
-# With score=100, should print "Bonus earned!"
+# התנהגות צפויה:
+# כאשר score=100, אמורה להודפס ההודעה "Bonus earned!"
 #
-# ACTUAL BEHAVIOR:
-# With score=100, prints "No bonus."
+# התנהגות בפועל:
+# כאשר score=100, מודפסת ההודעה "No bonus."
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -31,13 +31,11 @@ else:
     print("No bonus this time.")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: שימוש ב-`>` במקום ב-`>=`
+# הבאג: `>` פירושו "גדול מ-" ולא כולל שוויון.
+#        ‏score=100 אינו `> 100`, ולכן התנאי נכשל.
 #
-# What I found: Using > instead of >=
-# The bug: > means "greater than" but doesn't include equal
-#          score=100 is NOT > 100, so it fails
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -47,17 +45,16 @@ score = 100
 pass
 
 # %% [markdown]
-# {{CASE_2_TITLE}}
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# {{mentor}} wants to give different messages based on grade.
-# But the conditions are in the wrong order!
+# {{mentor}} רוצה לתת הודעות שונות לפי הציון, אבל הסדר של התנאים לא נכון!
 #
-# EXPECTED BEHAVIOR:
-# With score=95, should print "Excellent!" (highest tier)
+# התנהגות צפויה:
+# כאשר score=95, אמורה להודפס ההודעה "Excellent!" (הדרגה הגבוהה ביותר)
 #
-# ACTUAL BEHAVIOR:
-# With score=95, prints "Good job!" (wrong tier)
+# התנהגות בפועל:
+# כאשר score=95, מודפסת ההודעה "Good job!" (דרגה שגויה)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -74,13 +71,11 @@ else:
     print("Keep practicing.")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: יש לבדוק את הסף הגבוה ביותר ראשון.
+# הבאג: ‏score=95 מתאים לתנאי `score >= 60` ראשון, ולכן הקוד עוצר שם.
+#        תנאי ה-`elif` לא נבדקים בכלל.
 #
-# What I found: Conditions should check highest first
-# The bug: score=95 matches "score >= 60" first, so it stops there
-#          The elif conditions are never checked
-#
-# The fix (check highest thresholds first):
+# התיקון (יש לבדוק את הסף הגבוה ביותר ראשון):
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -90,17 +85,16 @@ score = 95
 pass
 
 # %% [markdown]
-# {{CASE_3_TITLE}}
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# {{hero}} tries to update their gold after a purchase.
-# But the gold doesn't actually change!
+# {{hero}} מנסה לעדכן את הזהב שלה אחרי רכישה, אבל הזהב לא משתנה בכלל!
 #
-# EXPECTED BEHAVIOR:
-# After buying, gold should be 70 (100 - 30)
+# התנהגות צפויה:
+# אחרי הרכישה, הזהב אמור להיות 70 (100 - 30)
 #
-# ACTUAL BEHAVIOR:
-# After buying, gold is still 100
+# התנהגות בפועל:
+# אחרי הרכישה, הזהב עדיין 100
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -116,13 +110,11 @@ if gold >= item_price:
 print(f"Gold remaining: {gold}")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: החישוב לא שומר את התוצאה.
+# הבאג: `gold - item_price` מחשב אבל לא שומר,
+#        צריך לכתוב `gold = gold - item_price` כדי לשמור את התוצאה.
 #
-# What I found: The calculation doesn't save the result
-# The bug: "gold - item_price" calculates but doesn't assign
-#          Need: "gold = gold - item_price" to save the result
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -133,17 +125,16 @@ item_price = 30
 pass
 
 # %% [markdown]
-# {{CASE_4_TITLE}}
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# {{hero}} has code to check if two passwords match.
-# But the code has a syntax issue with comparison!
+# ל-{{hero}} יש קוד שבודק אם שתי סיסמאות תואמות, אבל יש בו בעיית תחביר בהשוואה!
 #
-# EXPECTED BEHAVIOR:
-# Correct password should print "Access granted!"
+# התנהגות צפויה:
+# סיסמה נכונה אמורה להדפיס "Access granted!"
 #
-# ACTUAL BEHAVIOR:
-# This code won't even run - syntax error!
+# התנהגות בפועל:
+# הקוד לא רץ בכלל — שגיאת תחביר!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -162,13 +153,11 @@ pass
 print("(This function shows a common bug - see comments)")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: שימוש ב-`=` במקום ב-`==`.
+# הבאג: `=` הוא השמה (קביעת ערך), `==` הוא השוואה (בדיקת שוויון).
+#        בתנאי צריך להשוות, לא להשים.
 #
-# What I found: Using = instead of ==
-# The bug: = is assignment (set value), == is comparison (check equality)
-#          In a condition, we need to COMPARE, not assign
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -179,17 +168,16 @@ attempt = "{{password}}"
 pass
 
 # %% [markdown]
-# {{CASE_5_TITLE}}
+# ## {{CASE_5_TITLE}}
 # {{CONTEXT_CASE_5_NARRATIVE}}
 #
-# {{hero}}'s level-up code should trigger at level 10.
-# But it never prints the level-up message!
+# קוד ה-level-up של {{hero}} אמור לפעול כשמגיעים לרמה 10, אבל הודעת ה-level-up לא מודפסת!
 #
-# EXPECTED BEHAVIOR:
-# When level reaches 10, should print "Level up!"
+# התנהגות צפויה:
+# כשה-level מגיע ל-10, אמורה להודפס ההודעה "Level up!"
 #
-# ACTUAL BEHAVIOR:
-# The message never appears
+# התנהגות בפועל:
+# ההודעה לא מופיעה בכלל
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_5}}
 
@@ -206,13 +194,11 @@ if level == 9:
 print(f"Current level: {level}")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: בדיקה אם `level == 9` אחרי שכבר הוסיפו 1.
+# הבאג: אחרי `level + 1`, הרמה היא 10, לא 9.
+#        התנאי צריך לבדוק `== 10`.
 #
-# What I found: Checking if level == 9 after adding 1
-# The bug: After level + 1, level is 10, not 9
-#          The condition should check == 10
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

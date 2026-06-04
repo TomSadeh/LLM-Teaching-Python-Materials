@@ -2,11 +2,11 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll practice completing __init__ methods
-# to properly initialize object state. Understanding __init__ is
-# essential for creating well-structured classes.
+# בתרגיל הזה תתרגלי השלמה של מתודות `__init__`
+# כדי לאתחל נכון את מצב האובייקט. הבנת `__init__` היא
+# הכרחית ליצירת מחלקות מסודרות.
 #
-# {{FUNCTION_1_TITLE}}
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
 # %%
@@ -47,7 +47,7 @@ class Creature:
         pass
 
 # %% [markdown]
-# {{FUNCTION_2_TITLE}}
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
 # %%
@@ -90,7 +90,7 @@ class Inventory:
         pass
 
 # %% [markdown]
-# {{FUNCTION_3_TITLE}}
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
 # %%
@@ -133,7 +133,7 @@ class QuestLog:
         pass
 
 # %% [markdown]
-# {{FUNCTION_4_TITLE}}
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 
 # %%

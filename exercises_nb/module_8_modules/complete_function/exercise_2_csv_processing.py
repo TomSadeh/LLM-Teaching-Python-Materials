@@ -2,40 +2,38 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: CSV processing functions
-# Difficulty: 3-4
+# נושא: פונקציות לעיבוד קבצי CSV
+# רמת קושי: 3-4
 #
-# Complete these CSV processing functions by implementing the core logic.
-# The function signatures and docstrings are provided.
+# השלימי את פונקציות עיבוד ה-CSV האלה על ידי מימוש הלוגיקה המרכזית.
+# חתימות הפונקציות ו-docstrings כבר מסופקים.
 
 # %%
 import csv
 
 # %% [markdown]
-# {{FUNCTION_1_TITLE}}
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 #
-# Complete a function to read CSV and return as list of dicts.
+# השלימי פונקציה שקוראת קובץ CSV ומחזירה רשימה של מילונים.
 
 # %%
 # Started for you:
 records = []
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_1}}
 #
-# Step 1: Try to open the file
+# 1. נסי לפתוח את הקובץ
 #
-# Step 2: Create a DictReader
+# 2. צרי `DictReader`
 #
-# Step 3: Convert reader to list
+# 3. המירי את הקורא לרשימה:
 #         records = list(reader)
 #
-# Step 4: Handle FileNotFoundError
+# 4. טפלי ב-`FileNotFoundError`
 #
-# Step 5: Return records
+# 5. החזירי את `records`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -44,32 +42,30 @@ records = []
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_2_TITLE}}
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 #
-# Complete a function to write dicts to CSV.
-#
-# ✏️ COMPLETE THIS FUNCTION ✏️
+# השלימי פונקציה שכותבת מילונים לקובץ CSV.
 #
 # {{CONTEXT_FUNCTION_HINT_2}}
 #
-# Step 1: Handle empty records:
+# 1. טפלי ב-records ריק:
 #         if not records:
 #             return 0
 #
-# Step 2: Get fieldnames from first record if not provided:
+# 2. קבלי את שמות השדות מהרשומה הראשונה אם לא סופקו:
 #         if fieldnames is None:
 #             fieldnames = list(records[0].keys())
 #
-# Step 3: Open file and create DictWriter
+# 3. פתחי את הקובץ וצרי `DictWriter`:
 #         with open(filename, "w", newline="") as f:
 #             writer = csv.DictWriter(f, fieldnames=fieldnames)
 #
-# Step 4: Write header and rows:
+# 4. כתבי את הכותרת והשורות:
 #             writer.writeheader()
 #             writer.writerows(records)
 #
-# Step 5: Return count
+# 5. החזירי את הספירה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -78,29 +74,27 @@ pass  # Replace with implementation
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_3_TITLE}}
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 #
-# Complete a function to filter CSV rows.
+# השלימי פונקציה שמסננת שורות מקובץ CSV.
 
 # %%
 # Started for you:
 matches = []
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_3}}
 #
-# Step 1: Load all records using read_csv_as_dicts
-#         (reuse the function you completed!)
+# 1. טעיני את כל הרשומות באמצעות `read_csv_as_dicts`
+#         (השתמשי בפונקציה שכבר השלמת!)
 #
-# Step 2: Filter matching rows:
+# 2. סנני את השורות התואמות:
 #         for record in records:
 #             if record.get(column) == value:
 #                 matches.append(record)
 #
-# Step 3: Return matches
+# 3. החזירי את `matches`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -109,29 +103,27 @@ matches = []
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_4_TITLE}}
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 #
-# Complete a function to update a CSV column.
-#
-# ✏️ COMPLETE THIS FUNCTION ✏️
+# השלימי פונקציה שמעדכנת עמודה בקובץ CSV.
 #
 # {{CONTEXT_FUNCTION_HINT_4}}
 #
-# Step 1: Load all records
+# 1. טעיני את כל הרשומות
 #
-# Step 2: Track changes:
+# 2. עקבי אחרי השינויים:
 #         updated = 0
 #
-# Step 3: Loop through and update matching records:
+# 3. עברי על הרשומות ועדכני את התואמות:
 #         for record in records:
 #             if record.get(key_column) == key_value:
 #                 record[update_column] = new_value
 #                 updated += 1
 #
-# Step 4: Write all records back to file
+# 4. כתבי את כל הרשומות בחזרה לקובץ
 #
-# Step 5: Return count
+# 5. החזירי את הספירה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -140,30 +132,28 @@ pass  # Replace with implementation
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_5_TITLE}}
+# ## {{FUNCTION_5_TITLE}}
 # {{CONTEXT_FUNCTION_5_NARRATIVE}}
 #
-# Complete a function to aggregate CSV data.
+# השלימי פונקציה שמצטברת נתונים מקובץ CSV.
 
 # %%
 # Started for you:
 total = 0.0
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_5}}
 #
-# Step 1: Load records
+# 1. טעיני את הרשומות
 #
-# Step 2: Loop through and sum values:
+# 2. עברי על הרשומות וסכמי את הערכים:
 #         for record in records:
 #             try:
 #                 total += float(record.get(column, 0))
 #             except ValueError:
 #                 continue  # Skip non-numeric values
 #
-# Step 3: Return total
+# 3. החזירי את `total`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -172,23 +162,21 @@ total = 0.0
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_6_TITLE}}
+# ## {{FUNCTION_6_TITLE}}
 # {{CONTEXT_FUNCTION_6_NARRATIVE}}
 #
-# Complete a function to merge two CSV files.
-#
-# ✏️ COMPLETE THIS FUNCTION ✏️
+# השלימי פונקציה שממזגת שני קבצי CSV לאחד.
 #
 # {{CONTEXT_FUNCTION_HINT_6}}
 #
-# Step 1: Load records from both files
+# 1. טעיני את הרשומות משני הקבצים
 #
-# Step 2: Combine lists:
+# 2. שלבי את הרשימות:
 #         all_records = records1 + records2
 #
-# Step 3: Write combined records to output
+# 3. כתבי את הרשומות המשולבות לפלט
 #
-# Step 4: Return total count
+# 4. החזירי את הספירה הכוללת
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

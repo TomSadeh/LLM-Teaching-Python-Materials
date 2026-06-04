@@ -1,22 +1,22 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is a multi-part exercise building Rock Paper Scissors.
-# Complete each part to go from buggy code to a full game!
+# זוהי תרגיל רב-חלקי לבניית משחק אבן-נייר-מספריים.
+# השלימי כל חלק כדי להגיע מקוד עם באגים למשחק שלם!
 #
-# Programming concepts: while loops, random, conditionals, game state
+# מושגי תכנות: לולאות `while`, `random`, תנאים, מצב משחק
 
 # %%
 import random
 
 # %% [markdown]
-# PART 1: The Buggy RPS
+# ## חלק 1: משחק אבן-נייר-מספריים עם באגים
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# {{hero}}'s first RPS game had bugs. {{villain}} exploited them!
-# Find and fix the 3 bugs.
+# המשחק הראשון של {{hero}} היה מלא בבאגים. {{villain}} ניצל אותם!
+# מצאי ותקני את 3 הבאגים.
 #
-# BUGS TO FIND: 3
+# מספר באגים למצוא: 3
 
 # %%
 # BUG 1: Wrong comparison - paper vs rock
@@ -55,65 +55,56 @@ else:
     print("It's a tie!")
 
 # %% [markdown]
-# ✏️ FIX THE BUGS ✏️
-#
-# Hint: Check ties first with player == computer
-# Then check all three player win conditions
-# Then the remaining cases are computer wins
+# > רמז: בדקי קודם תיקו עם `player == computer`
+# > אחר כך בדקי את שלושת תנאי הניצחון של השחקן
+# > שאר המקרים הם ניצחון המחשב
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Build the Core
+# ## חלק 2: בניית הליבה
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Build proper RPS functions from scratch.
+# בני פונקציות אבן-נייר-מספריים תקינות מאפס.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Define valid_choices and shortcuts
-#         shortcuts = {'r': 'rock', 'p': 'paper', 's': 'scissors'}
-# Step 2: While True loop
-# Step 3: Get input, lowercase
-# Step 4: Check if in shortcuts, convert
-# Step 5: Check if in valid_choices
-# Step 6: If valid, return. Otherwise print error.
+# 1. הגדירי `valid_choices` וקיצורים: `shortcuts = {'r': 'rock', 'p': 'paper', 's': 'scissors'}`
+# 2. לולאת `While True`
+# 3. קבלי קלט ממשתמשת, המרי לאותיות קטנות
+# 4. בדקי אם הקלט נמצא בקיצורים, המרי
+# 5. בדקי אם הקלט נמצא ב-`valid_choices`
+# 6. אם תקין — החזירי. אחרת — הדפיסי שגיאה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-
-# %%
-# ✏️ כתבי את הקוד שלך כאן
-
-# %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Step 1: Get player choice
-# Step 2: Get computer choice
-# Step 3: Print choices (use {{villain}} for computer)
-# Step 4: Determine winner using fixed_determine_winner
-# Step 5: Announce result
-# Step 6: Return result
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: The Championship
+# 1. קבלי את בחירת השחקן
+# 2. קבלי את בחירת המחשב
+# 3. הדפיסי את הבחירות (השתמשי ב-{{villain}} עבור המחשב)
+# 4. קבעי מנצח באמצעות `fixed_determine_winner`
+# 5. הכריזי על התוצאה
+# 6. החזירי את התוצאה
+
+# %%
+# ✏️ כתבי את הקוד שלך כאן
+
+# %% [markdown]
+# ## חלק 3: האליפות
 # {{CONTEXT_CONFRONTATION_INTRO}}
 # {{CONTEXT_CONFRONTATION_NARRATIVE}}
 #
-# Build the complete best-of game with:
-# - Score tracking
-# - Play-again loop
-# - Match statistics
-#
-# ✏️ YOUR CODE HERE ✏️
+# בני את המשחק המלא עם:
+# - מעקב ניקוד
+# - לולאת "שחקי שוב"
+# - סטטיסטיקות משחק
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -126,15 +117,13 @@ computer_wins = 0
 ties = 0
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# כל עוד אף שחקן לא צברה מספיק ניצחונות:
+# 1. שחקי סיבוב
+# 2. עדכני את המונה המתאים
+# 3. הציגי את הניקוד הנוכחי
+# 4. בדקי אם יש מנצחת
 #
-# While neither player has enough wins:
-#   1. Play a round
-#   2. Update appropriate counter
-#   3. Display current score
-#   4. Check for winner
-#
-# After loop: Announce match winner
+# אחרי הלולאה: הכריזי על מנצחת המשחק
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -150,23 +139,21 @@ player_championships = 0
 villain_championships = 0
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# לולאת "שחקי שוב":
+# 1. בקשי את אורך המשחק (1, 2 או 3 עבור מיטב מתוך 3/5/7)
+# 2. המרי ל-`rounds_to_win` (2, 3 או 4)
+# 3. שחקי מחזור
+# 4. עדכני את נתוני האליפות
+# 5. הציגי את התוצאה הכוללת
+# 6. שאלי אם לשחק שוב
 #
-# Play again loop:
-#   1. Ask for match length (1, 2, or 3 for best of 3/5/7)
-#   2. Convert to rounds_to_win (2, 3, or 4)
-#   3. Play match
-#   4. Update championship stats
-#   5. Show overall record
-#   6. Ask to play again
-#
-# Final: Show farewell and final record
+# בסוף: הציגי ברכת פרידה ותוצאה סופית
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

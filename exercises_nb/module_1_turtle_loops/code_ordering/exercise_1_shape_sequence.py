@@ -13,10 +13,10 @@
 import turtle
 
 # %% [markdown]
-# {{ORDERING_1_TITLE}}
+# ## {{ORDERING_1_TITLE}}
 # {{CONTEXT_ORDERING_1_NARRATIVE}}
 #
-# Help {{hero}} draw a triangle. Put these lines in order:
+# עזרי ל-{{hero}} לצייר משולש. סדרי את השורות הבאות בסדר הנכון:
 #
 # SCRAMBLED LINES:
 #   for i in range(3):
@@ -24,12 +24,11 @@ import turtle
 #       t.left(120)
 #   t = turtle.Turtle()
 #
-# ✏️ REORDER THE LINES ✏️
-# Copy the lines above in the CORRECT order.
+# העתיקי את השורות למעלה בסדר הנכון.
 #
-# Hint: You must create the turtle before using it.
-# The loop header comes before the loop body.
-# Loop body lines must be indented!
+# > רמז: צריך ליצור את הצב לפני שמשתמשים בו.
+# > כותרת הלולאה באה לפני גוף הלולאה.
+# > שורות גוף הלולאה חייבות להיות עם הזחה (indented)!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -38,10 +37,10 @@ import turtle
 pass  # Delete this and add the correctly ordered lines
 
 # %% [markdown]
-# {{ORDERING_2_TITLE}}
+# ## {{ORDERING_2_TITLE}}
 # {{CONTEXT_ORDERING_2_NARRATIVE}}
 #
-# Create a square for {{school}}. Put these lines in order:
+# צרי ריבוע עבור {{school}}. סדרי את השורות הבאות בסדר הנכון:
 #
 # SCRAMBLED LINES:
 #       t.right(90)
@@ -49,19 +48,17 @@ pass  # Delete this and add the correctly ordered lines
 #       t.forward(80)
 #   for side in range(4):
 #
-# ✏️ REORDER THE LINES ✏️
-#
-# Hint: What comes first: drawing or turning?
-# After you draw forward, then you turn.
+# > רמז: מה בא קודם — ציור או פנייה?
+# > קודם מתקדמים קדימה עם `t.forward()`, ואחר כך פונים עם `t.right()`.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ORDERING_3_TITLE}}
+# ## {{ORDERING_3_TITLE}}
 # {{CONTEXT_ORDERING_3_NARRATIVE}}
 #
-# Draw a path with a message for {{creature}}. Put these lines in order:
+# צייר מסלול עם הודעה עבור {{creature}}. סדרי את השורות הבאות בסדר הנכון:
 #
 # SCRAMBLED LINES:
 #   print("Path complete!")
@@ -69,19 +66,17 @@ pass  # Delete this and add the correctly ordered lines
 #   t = turtle.Turtle()
 #       t.forward(20)
 #
-# ✏️ REORDER THE LINES ✏️
-#
-# Hint: The print statement should come AFTER all drawing is done.
-# The message announces completion.
+# > רמז: פקודת `print()` צריכה לבוא אחרי שכל הציור הסתיים.
+# > ההודעה מכריזה שהמסלול הושלם.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ORDERING_4_TITLE}}
+# ## {{ORDERING_4_TITLE}}
 # {{CONTEXT_ORDERING_4_NARRATIVE}}
 #
-# Draw a colored square at {{location}}. Put these lines in order:
+# צייר ריבוע צבעוני ב-{{location}}. סדרי את השורות הבאות בסדר הנכון:
 #
 # SCRAMBLED LINES:
 #   for i in range(4):
@@ -90,10 +85,8 @@ pass  # Delete this and add the correctly ordered lines
 #       t.left(90)
 #   t = turtle.Turtle()
 #
-# ✏️ REORDER THE LINES ✏️
-#
-# Hint: Set the color BEFORE you start drawing.
-# The turtle must exist before you can set its color!
+# > רמז: הגדירי את הצבע לפני שמתחילים לצייר.
+# > הצב חייב להיות קיים לפני שאפשר להגדיר את צבעו!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

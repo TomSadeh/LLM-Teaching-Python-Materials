@@ -9,10 +9,10 @@
 # {{CONTEXT_FILL_BLANKS_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# ## Exercise A: Single Parameter
+# ## תרגיל א: פרמטר אחד
 # {{CONTEXT_EXERCISE_1_NARRATIVE}}
 #
-# Parameters let functions receive values from outside.
+# פרמטרים מאפשרים לפונקציות לקבל ערכים מבחוץ.
 
 # %%
 # FILL IN THE BLANKS
@@ -27,10 +27,10 @@
 pass
 
 # %% [markdown]
-# ## Exercise B: Using the Parameter
+# ## תרגיל ב: שימוש בפרמטר
 # {{CONTEXT_EXERCISE_2_NARRATIVE}}
 #
-# The parameter acts like a variable inside the function.
+# הפרמטר מתנהג כמו משתנה בתוך הפונקציה.
 
 # %%
 # FILL IN THE BLANKS
@@ -46,10 +46,10 @@ pass
 pass
 
 # %% [markdown]
-# ## Exercise C: Multiple Parameters
+# ## תרגיל ג: פרמטרים מרובים
 # {{CONTEXT_EXERCISE_3_NARRATIVE}}
 #
-# Functions can accept multiple parameters, separated by commas.
+# פונקציות יכולות לקבל פרמטרים מרובים, מופרדים בפסיקים.
 
 # %%
 # FILL IN THE BLANKS
@@ -64,10 +64,10 @@ pass
 pass
 
 # %% [markdown]
-# ## Exercise D: Using Multiple Parameters
+# ## תרגיל ד: שימוש בפרמטרים מרובים
 # {{CONTEXT_EXERCISE_4_NARRATIVE}}
 #
-# Each parameter can be used independently in the function body.
+# כל פרמטר יכול לשמש באופן עצמאי בגוף הפונקציה.
 
 # %%
 # FILL IN THE BLANKS
@@ -84,10 +84,10 @@ pass
 pass
 
 # %% [markdown]
-# ## Exercise E: Order Matters
+# ## תרגיל ה: הסדר חשוב
 # {{CONTEXT_EXERCISE_5_NARRATIVE}}
 #
-# Arguments are matched to parameters by position.
+# ארגומנטים מותאמים לפרמטרים לפי מיקומם.
 
 # %%
 # FILL IN THE BLANKS

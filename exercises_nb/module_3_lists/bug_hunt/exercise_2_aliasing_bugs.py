@@ -9,15 +9,15 @@
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_MISSION}}
 #
-# {{CASE_1_TITLE}}
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Create a backup of inventory, modify original, backup stays unchanged.
+# התנהגות מצופה:
+# יצירת גיבוי של המלאי, שינוי המקור - הגיבוי נשאר ללא שינוי.
 # Expected: Backup: ['{{item}}', 'potion', 'key']
 #
-# ACTUAL BEHAVIOR:
-# Backup changes when original changes!
+# התנהגות בפועל:
+# הגיבוי משתנה כשהמקור משתנה!
 # Actual: Backup: ['{{item}}', 'key', 'map']
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
@@ -50,15 +50,15 @@ print(f"Backup (should be unchanged): {backup}")
 pass
 
 # %% [markdown]
-# {{CASE_2_TITLE}}
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Two teams should be independent.
-# Team A changes shouldn't affect Team B.
+# התנהגות מצופה:
+# שתי הקבוצות אמורות להיות עצמאיות.
+# שינויים ב-Team A לא אמורים להשפיע על Team B.
 #
-# ACTUAL BEHAVIOR:
-# Both teams end up with the same members!
+# התנהגות בפועל:
+# שתי הקבוצות מסיימות עם אותם חברים!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -89,15 +89,15 @@ print(f"All three are the same object: {team_a is team_b is base_roster}")
 pass
 
 # %% [markdown]
-# {{CASE_3_TITLE}}
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Function should return a modified version without changing original.
-# Original scores should remain [85, 90, 75, 95]
+# התנהגות מצופה:
+# הפונקציה אמורה להחזיר גרסה מעודכנת מבלי לשנות את המקור.
+# הציונים המקוריים אמורים להישאר `[85, 90, 75, 95]`
 #
-# ACTUAL BEHAVIOR:
-# Original scores get modified too!
+# התנהגות בפועל:
+# גם הציונים המקוריים משתנים!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -135,14 +135,14 @@ print(f"Boosted: {boosted}")
 print(f"Original (should be unchanged): {original_scores}")
 
 # %% [markdown]
-# {{CASE_4_TITLE}}
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Undo the last action (restore previous state).
+# התנהגות מצופה:
+# ביטול הפעולה האחרונה (שחזור המצב הקודם).
 #
-# ACTUAL BEHAVIOR:
-# History is empty after modifications!
+# התנהגות בפועל:
+# ההיסטוריה ריקה לאחר השינויים!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -184,14 +184,14 @@ print(f"History[1] (should be ['{{item}}', 'potion', 'key']): {history[1]}")
 pass
 
 # %% [markdown]
-# {{CASE_5_TITLE}}
+# ## {{CASE_5_TITLE}}
 # {{CONTEXT_CASE_5_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Each player should have their own independent inventory.
+# התנהגות מצופה:
+# לכל שחקנית אמור להיות המלאי העצמאי שלה.
 #
-# ACTUAL BEHAVIOR:
-# All players share the same inventory somehow!
+# התנהגות בפועל:
+# כל השחקניות חולקות את אותו מלאי איכשהו!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_5}}
 

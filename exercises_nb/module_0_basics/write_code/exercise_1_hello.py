@@ -9,53 +9,47 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# הדפיסי את ההודעה: `Hello, world!`
 #
-# Print the message: Hello, world!
+# 1. השתמשי בפונקציה `print()`
+# 2. שימי את ההודעה שלך בתוך מרכאות בתוך הסוגריים
 #
-# Step 1: Use the print() function
-# Step 2: Put your message inside quotes within the parentheses
-#
-# Example output: Hello, world!
+# פלט לדוגמה: `Hello, world!`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# הדפיסי ברכה עבור {{hero}}.
 #
-# Print a greeting for {{hero}}.
+# 1. הדפיסי: `"Welcome, {{hero}}!"`
+# 2. הדפיסי: `"You are now at {{school}}."`
 #
-# Step 1: Print "Welcome, {{hero}}!"
-# Step 2: Print "You are now at {{school}}."
-#
-# Expected output (2 lines):
-# Welcome, {{hero}}!
-# You are now at {{school}}.
+# פלט צפוי (2 שורות):
+# `Welcome, {{hero}}!`
+# `You are now at {{school}}.`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי ב-`print()` עם כמה פריטים מופרדים בפסיקים.
 #
-# Use print() with multiple items separated by commas.
+# 1. הדפיסי שלושה פריטים בפקודת `print` אחת: `"{{hero}}"`, `"has a"`, `"{{item}}"`
 #
-# Step 1: Print three items in one print statement: "{{hero}}", "has a", "{{item}}"
+# > רמז: כשמשתמשים בפסיקים בתוך `print()`, פייתון מוסיפה רווחים בין הפריטים.
+# > לדוגמה: `print("Hello", "World")` מדפיסה: `Hello World`
 #
-# Hint: When you use commas in print(), Python adds spaces between items.
-# Example: print("Hello", "World") outputs: Hello World
-#
-# Expected output: {{hero}} has a {{item}}
+# פלט צפוי: `{{hero}} has a {{item}}`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

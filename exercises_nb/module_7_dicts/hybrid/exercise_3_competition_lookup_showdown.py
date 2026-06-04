@@ -1,18 +1,18 @@
 # %% [markdown]
 # {{CONTEXT_EVALUATION_INTRO}}
 #
-# This is a multi-part exercise comparing list-based and dictionary-based
-# approaches to data lookup. Evaluate, implement, and reflect.
+# זוהי תרגיל מרובה-חלקים שמשווה בין גישה מבוססת רשימות לבין גישה מבוססת מילונים
+# לחיפוש נתונים. תעריכי, תממשי ותשקפי.
 #
-# Programming concepts: dictionaries vs lists, lookup performance, data design
+# מושגי תכנות: מילונים מול רשימות, ביצועי חיפוש, עיצוב נתונים
 #
-# PART 1: Evaluation - Compare Existing Approaches
+# חלק 1: הערכה - השוואה בין הגישות הקיימות
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# Two approaches exist for looking up character data.
-# Study them and decide which is better.
+# קיימות שתי גישות לחיפוש נתוני דמות.
+# למדי אותן והחליטי איזו עדיפה.
 #
-# ## Approach A: List Search
+# ## גישה א׳: חיפוש ברשימה
 
 # %%
 for name, level, status in roster_list:
@@ -21,7 +21,7 @@ for name, level, status in roster_list:
 return None
 
 # %% [markdown]
-# ## Approach B: Dictionary Lookup
+# ## גישה ב׳: חיפוש במילון
 
 # %%
 if target_name in roster_dict:
@@ -30,9 +30,7 @@ if target_name in roster_dict:
 return None
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
-#
-# Compare the two approaches:
+# השוואה בין שתי הגישות:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -57,16 +55,14 @@ WHEN MIGHT LISTS BE PREFERRED?
 return analysis
 
 # %% [markdown]
-# PART 2: Growth - Implement the Dictionary Approach
+# חלק 2: צמיחה - מימוש גישת המילון
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Build a complete character lookup system using dictionaries.
+# בני מערכת חיפוש דמויות שלמה באמצעות מילונים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Create a roster with at least 4 characters.
-# Structure:
+# צרי רשימת דמויות עם לפחות 4 דמויות.
+# מבנה:
 # {
 #     "{{hero}}": {"level": 5, "status": "active"},
 #     "{{heroine}}": {"level": 7, "status": "active"},
@@ -77,39 +73,31 @@ return analysis
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use .get() for safe access.
-# Return the character's data dict, or None if not found.
+# השתמשי ב-`.get()` לגישה בטוחה.
+# החזירי את מילון הנתונים של הדמות, או `None` אם לא נמצאה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Iterate through roster.items()
-# Collect names where status matches.
+# עברי על `roster.items()`
+# ואספי שמות של דמויות שה-status שלהן תואם.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Iterate through roster.items()
-# Track the highest level seen and who has it.
+# עברי על `roster.items()`
+# ועקבי אחרי הרמה הגבוהה ביותר שנראתה ומי מחזיקה בה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Evaluation - Reflect on Trade-offs
+# חלק 3: הערכה - שיקוף על פשרות עיצוביות
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# Now that you've implemented it, reflect on the design choices.
-#
-# ✏️ YOUR REFLECTION ✏️
+# עכשיו שמימשת, שקפי את בחירות העיצוב.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -144,7 +132,7 @@ For a character roster, I would choose ___ because:
 return reflection
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

@@ -1,19 +1,19 @@
 # %% [markdown]
 # {{CONTEXT_COMPARISON_INTRO}}
 #
-# This is a multi-part exercise exploring when to use OOP vs procedural
-# approaches. You'll compare implementations, convert between styles,
-# and design your own system with justification.
+# זוהי תרגיל רב-חלקי שבו נחקרי מתי כדאי להשתמש ב-OOP ומתי בגישה פרוצדורלית.
+# תשווי בין מימושים שונים, תמירי בין סגנונות,
+# ותעצבי מערכת משלך עם הנמקה.
 #
-# Programming concepts: OOP vs procedural, design decisions, refactoring
+# מושגי תכנות: OOP מול פרוצדורלי, החלטות עיצוב, שיפוץ קוד
 #
-# PART 1: Evaluation - Compare Dict-Based vs Class-Based
+# ## חלק 1: הערכה - השוואה בין גישת המילון לגישת המחלקה
 # {{CONTEXT_COMPARISON_DECISION}}
 #
-# The {{school}} records system has two implementations.
+# למערכת הרישומים של {{school}} יש שני מימושים.
 #
 #
-# Version A: Dictionary-based (procedural)
+# ## גרסה א: מבוססת מילון (פרוצדורלית)
 
 # %%
 return {
@@ -40,7 +40,7 @@ return sum(grades) / len(grades)
 student["year"] += 1
 
 # %% [markdown]
-# ## Version B: Class-based (OOP)
+# ## גרסה ב: מבוססת מחלקה (OOP)
 
 # %%
 class Student:
@@ -72,25 +72,23 @@ class Student:
         self.year += 1
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
+# נסי את שתי הגרסאות:
 #
-# Test both versions:
-#
-#     # Dict version
+#     # גרסת המילון
 #     s1 = create_student_dict("{{hero}}", "{{house}}", 1)
 #     add_grade_dict(s1, "{{spell1}}", 90)
 #     add_grade_dict(s1, "{{spell2}}", 85)
 #     record_attendance_dict(s1)
 #     print(f"Dict avg: {get_average_grade_dict(s1)}")
 #
-#     # Class version
+#     # גרסת המחלקה
 #     s2 = Student("{{hero}}", "{{house}}", 1)
 #     s2.add_grade("{{spell1}}", 90)
 #     s2.add_grade("{{spell2}}", 85)
 #     s2.record_attendance()
 #     print(f"Class avg: {s2.get_average_grade()}")
 #
-# Write your comparison:
+# כתבי את ההשוואה שלך:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -117,14 +115,14 @@ Which would be easier to extend with new features?
 return analysis
 
 # %% [markdown]
-# PART 2: Growth - Convert Procedural to OOP
+# ## חלק 2: צמיחה - המרת קוד פרוצדורלי ל-OOP
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Convert this procedural inventory system to OOP.
+# המירי את מערכת המלאי הפרוצדורלית הזו ל-OOP.
 #
 #
-# Procedural version to convert
+# ## הגרסה הפרוצדורלית להמרה
 
 # %%
 return {"name": name, "max_slots": max_slots, "items": [], "gold": 0}
@@ -157,9 +155,7 @@ print(f"Gold: {inventory['gold']}")
 print(f"Total value: {get_total_value(inventory)}")
 
 # %% [markdown]
-# ✏️ CONVERT TO OOP ✏️
-#
-# Create an Inventory class and Item class that replicate this functionality.
+# צרי מחלקת `Inventory` ומחלקת `Item` שמשחזרות את הפונקציונליות הזו.
 #
 # class Item:
 #     def __init__(self, name, value):
@@ -181,7 +177,7 @@ print(f"Total value: {get_total_value(inventory)}")
 #     def __str__(self):
 #         pass
 #
-# Test your conversion:
+# נסי את ההמרה שלך:
 #     inv = Inventory("{{hero}}", 5)
 #     inv.add_item(Item("{{item}}", 100))
 #     inv.add_item(Item("{{spell1}}", 50))
@@ -193,33 +189,31 @@ print(f"Total value: {get_total_value(inventory)}")
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Ownership - Design Your Own System
+# ## חלק 3: בעלות - עצבי מערכת משלך
 # {{CONTEXT_MASTERY_INTRO}}
 # {{CONTEXT_MASTERY_NARRATIVE}}
 #
-# Design a quest tracking system. You choose the approach!
+# עצבי מערכת מעקב אחרי משימות. את בוחרת את הגישה!
 #
-# ✏️ DESIGN YOUR OWN SYSTEM ✏️
+# דרישות למערכת מעקב משימות:
+# - מעקב אחרי שם המשימה, תיאור וסטטוס (פעילה / הושלמה)
+# - מעקב אחרי פרסים (נקודות ניסיון, זהב, פריטים)
+# - תמיכה בכמה יעדים לכל משימה
+# - מעקב אחרי התקדמות בכל יעד
+# - סימון המשימה כהושלמה כשכל היעדים הושגו
 #
-# Requirements for Quest Tracking System:
-# - Track quest name, description, and status (active/completed)
-# - Track rewards (experience points, gold, items)
-# - Support multiple objectives per quest
-# - Track progress on each objective
-# - Mark quest complete when all objectives are done
+# החלטה: תשתמשי ב-OOP או בגישה פרוצדורלית?
 #
-# Decision: Will you use OOP or procedural?
+# אם OOP, שימי לב למחלקות האלה:
+# - `Quest` (name, description, status, objectives, rewards)
+# - `Objective` (description, current_progress, target_progress)
+# - `QuestLog` (אוסף משימות, סינון לפעילות / שהושלמו)
 #
-# If OOP, consider these classes:
-# - Quest (name, description, status, objectives, rewards)
-# - Objective (description, current_progress, target_progress)
-# - QuestLog (collection of quests, active/completed filtering)
+# אם פרוצדורלי, שימי לב לפונקציות האלה:
+# - `create_quest`, `add_objective`, `update_progress`
+# - `check_completion`, `get_active_quests` וכו'
 #
-# If procedural, consider these functions:
-# - create_quest, add_objective, update_progress
-# - check_completion, get_active_quests, etc.
-#
-# Implement your chosen approach and justify your decision:
+# מימשי את הגישה שבחרת והנמיקי את ההחלטה שלך:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

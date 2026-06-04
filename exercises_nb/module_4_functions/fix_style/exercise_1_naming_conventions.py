@@ -9,7 +9,7 @@
 # {{CONTEXT_FIX_STYLE_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Style Issue 1: Poor Function Names
+# ## בעיית סגנון 1: שמות פונקציות גרועים
 # {{CONTEXT_STYLE_1_NARRATIVE}}
 
 # %%
@@ -36,7 +36,7 @@ print(f"Results: {result1}, {result2}")
 pass
 
 # %% [markdown]
-# Style Issue 2: Poor Parameter Names
+# ## בעיית סגנון 2: שמות פרמטרים גרועים
 # {{CONTEXT_STYLE_2_NARRATIVE}}
 
 # %%
@@ -62,7 +62,7 @@ print(calculate(10, 5, 2))
 pass
 
 # %% [markdown]
-# Style Issue 3: Inconsistent Naming Style
+# ## בעיית סגנון 3: סגנון שמות לא עקבי
 # {{CONTEXT_STYLE_3_NARRATIVE}}
 
 # %%
@@ -90,7 +90,7 @@ print(f"{name}: {total}")
 pass
 
 # %% [markdown]
-# Style Issue 4: Unclear Purpose
+# ## בעיית סגנון 4: מטרה לא ברורה
 # {{CONTEXT_STYLE_4_NARRATIVE}}
 
 # %%
@@ -122,7 +122,7 @@ print(f"{result1}, {result2}, {result3}")
 pass
 
 # %% [markdown]
-# Style Issue 5: Complete Makeover
+# ## בעיית סגנון 5: שיפוץ מלא
 # {{CONTEXT_STYLE_5_NARRATIVE}}
 
 # %%

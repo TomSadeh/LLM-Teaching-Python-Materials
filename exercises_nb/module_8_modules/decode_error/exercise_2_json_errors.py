@@ -2,22 +2,22 @@
 # {{CONTEXT_DECODE_ERROR_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to understand and fix JSON-related errors,
-# especially JSONDecodeError which occurs when parsing invalid JSON.
+# בתרגיל הזה תלמדי להבין ולתקן שגיאות הקשורות ל-JSON,
+# ובמיוחד את `JSONDecodeError` שמופיעה כשמנסים לפרסר JSON לא תקין.
 #
-# Topic: JSON error interpretation
-# Difficulty: 3
+# נושא: פירוש שגיאות JSON
+# רמת קושי: 3
 
 # %%
 import json
 
 # %% [markdown]
-# {{ERROR_1_TITLE}}
+# ## {{ERROR_1_TITLE}}
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# The most common JSON error: malformed JSON syntax.
+# שגיאת JSON הנפוצה ביותר: תחביר JSON שגוי.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "load_config.py", line 3, in <module>
@@ -35,21 +35,19 @@ with open("config.json", "r") as f:
     config = json.load(f)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# First, explain what caused the error:
-# The error occurred because: _______________
-#
 # {{CONTEXT_ERROR_HINT_1}}
 #
-# JSON REQUIRES double quotes for all strings and keys!
-# Unlike Python, you cannot use single quotes or unquoted keys.
+# JSON דורשת גרשיים כפולים לכל המחרוזות והמפתחות!
+# שלא כמו Python, אי אפשר להשתמש בגרשיים בודדים או במפתחות ללא גרשיים.
 #
-# Wrong: {name: "value"}      - unquoted key
-# Wrong: {"name": 'value'}    - single quotes
-# Right: {"name": "value"}    - double quotes everywhere
+# שגוי: `{name: "value"}` — מפתח ללא גרשיים
+# שגוי: `{"name": 'value'}` — גרשיים בודדים
+# נכון: `{"name": "value"}` — גרשיים כפולים בכל מקום
 #
-# Fix: Correct the JSON file content, or handle the error:
+# קודם, הסבירי מה גרם לשגיאה:
+# השגיאה קרתה כי: _______________
+#
+# תיקון: תקני את תוכן קובץ ה-JSON, או טפלי בשגיאה:
 #   try:
 #       with open("config.json", "r") as f:
 #           config = json.load(f)
@@ -61,12 +59,12 @@ with open("config.json", "r") as f:
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_2_TITLE}}
+# ## {{ERROR_2_TITLE}}
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# Trailing commas cause JSON errors (unlike Python).
+# פסיק עודף בסוף גורם לשגיאות JSON (שלא כמו ב-Python).
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "load_list.py", line 3, in <module>
@@ -87,29 +85,27 @@ with open("items.json", "r") as f:
     data = json.load(f)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
-#
 # {{CONTEXT_ERROR_HINT_2}}
 #
-# JSON does NOT allow trailing commas (Python does).
+# JSON לא מאפשרת פסיק עודף בסוף (Python כן מאפשרת).
 #
-# Wrong: ["a", "b", "c",]   - trailing comma
-# Right: ["a", "b", "c"]    - no trailing comma
+# שגוי: `["a", "b", "c",]` — פסיק עודף
+# נכון: `["a", "b", "c"]` — ללא פסיק עודף
 #
-# This is a common mistake when copy-pasting from Python code!
+# זו טעות נפוצה כשמעתיקים קוד מ-Python!
+#
+# השגיאה קרתה כי: _______________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_3_TITLE}}
+# ## {{ERROR_3_TITLE}}
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# Empty or truncated files cause JSON errors.
+# קבצים ריקים או קטועים גורמים לשגיאות JSON.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "load_save.py", line 3, in <module>
@@ -123,19 +119,17 @@ with open("save.json", "r") as f:
     save_data = json.load(f)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
-#
 # {{CONTEXT_ERROR_HINT_3}}
 #
-# The file is empty or contains no valid JSON.
-# This can happen if:
-# - File was never written to
-# - Write operation was interrupted
-# - File was accidentally cleared
+# הקובץ ריק או לא מכיל JSON תקין.
+# זה יכול לקרות אם:
+# - לא נכתב כלום לקובץ
+# - פעולת הכתיבה הופסקה באמצע
+# - הקובץ נמחק בטעות
 #
-# Fix: Check for empty file or handle the error:
+# השגיאה קרתה כי: _______________
+#
+# תיקון: בדקי אם הקובץ ריק, או טפלי בשגיאה:
 #   try:
 #       with open("save.json", "r") as f:
 #           content = f.read()
@@ -150,12 +144,12 @@ with open("save.json", "r") as f:
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_4_TITLE}}
+# ## {{ERROR_4_TITLE}}
 # {{CONTEXT_ERROR_4_NARRATIVE}}
 #
-# Type errors when working with JSON data.
+# שגיאות טיפוס כשעובדים עם נתוני JSON.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "process_data.py", line 6, in <module>
@@ -169,20 +163,18 @@ data = json.loads(json_string)
 level = data["level"] + 1  # Error: "5" + 1 doesn't work
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
-#
 # {{CONTEXT_ERROR_HINT_4}}
 #
-# The JSON had "5" (string) instead of 5 (number).
-# JSON preserves types, so if it's a string in JSON, it's a string in Python.
+# ה-JSON הכיל `"5"` (מחרוזת) במקום `5` (מספר).
+# JSON שומרת על הטיפוסים — אם זו מחרוזת ב-JSON, היא תישאר מחרוזת ב-Python.
 #
-# Fix option 1: Fix the JSON source
-#   json_string = '{"name": "{{hero}}", "level": 5}'  # No quotes around 5
+# השגיאה קרתה כי: _______________
 #
-# Fix option 2: Convert when using
-#   level = int(data["level"]) + 1
+# 1. אפשרות תיקון — תקני את מקור ה-JSON:
+#    `json_string = '{"name": "{{hero}}", "level": 5}'` — ללא גרשיים סביב 5
+#
+# 2. אפשרות תיקון — המירי בעת השימוש:
+#    `level = int(data["level"]) + 1`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

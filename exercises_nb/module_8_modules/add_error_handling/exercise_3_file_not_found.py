@@ -2,31 +2,29 @@
 # {{CONTEXT_ERROR_HANDLING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Handling FileNotFoundError gracefully
-# Difficulty: 3
+# נושא: טיפול בשגיאת FileNotFoundError בצורה מסודרת
+# רמת קושי: 3
 #
-# Files may not exist when you try to read them. Learn to handle this
-# gracefully by providing defaults, creating the file, or informing the user.
+# לפעמים הקבצים שמנסים לפתוח פשוט לא קיימים. כאן נלמד להתמודד עם זה
+# בצורה חכמה — להחזיר ברירת מחדל, ליצור את הקובץ, או להודיע למשתמשת.
 #
 # {{HANDLING_1_TITLE}}
 # {{CONTEXT_HANDLING_1_NARRATIVE}}
 #
-# This function crashes if the file doesn't exist.
+# הפונקציה הזו קורסת אם הקובץ לא קיים.
 
 # %%
 with open("config.txt", "r") as f:
     return f.read()
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_1}}
 #
-# Step 1: Try to open and read the file
+# 1. נסי לפתוח ולקרוא את הקובץ
 #
-# Step 2: If FileNotFoundError, return default_content
+# 2. אם מתקבלת שגיאת `FileNotFoundError`, החזירי את `default_content`
 #
-# Pattern:
+# תבנית:
 #   try:
 #       with open(filename, "r") as f:
 #           return f.read()
@@ -40,24 +38,22 @@ with open("config.txt", "r") as f:
 # {{HANDLING_2_TITLE}}
 # {{CONTEXT_HANDLING_2_NARRATIVE}}
 #
-# This function doesn't handle missing files.
+# הפונקציה הזו לא מטפלת בקבצים חסרים.
 
 # %%
 with open("items.txt", "r") as f:
     return [line.strip() for line in f]
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_2}}
 #
-# Step 1: Handle None default (use empty list)
+# 1. טפלי ב-`None` כברירת מחדל (השתמשי ברשימה ריקה):
 #         if default_list is None:
 #             default_list = []
 #
-# Step 2: Try to load the file
+# 2. נסי לטעון את הקובץ
 #
-# Step 3: Handle FileNotFoundError
+# 3. טפלי בשגיאת `FileNotFoundError`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -66,25 +62,23 @@ with open("items.txt", "r") as f:
 # {{HANDLING_3_TITLE}}
 # {{CONTEXT_HANDLING_3_NARRATIVE}}
 #
-# Create file with defaults if it doesn't exist.
+# יש ליצור את הקובץ עם ברירות מחדל אם הוא לא קיים.
 
 # %%
 with open("settings.txt", "r") as f:
     return f.read()
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_3}}
 #
-# Step 1: Try to read existing file
+# 1. נסי לקרוא את הקובץ הקיים
 #
-# Step 2: If FileNotFoundError:
-#         - Create file with default_config
-#         - Print message about creating new file
-#         - Return default_config
+# 2. אם מתקבלת שגיאת `FileNotFoundError`:
+#         - צרי את הקובץ עם `default_config`
+#         - הדפיסי הודעה על יצירת הקובץ החדש
+#         - החזירי את `default_config`
 #
-# Pattern:
+# תבנית:
 #   try:
 #       with open(filename, "r") as f:
 #           return f.read()
@@ -101,7 +95,7 @@ with open("settings.txt", "r") as f:
 # {{HANDLING_4_TITLE}}
 # {{CONTEXT_HANDLING_4_NARRATIVE}}
 #
-# Handle multiple file operations safely.
+# יש לטפל בכמה פעולות על קבצים בצורה בטוחה.
 
 # %%
 with open("source.txt", "r") as src:
@@ -110,19 +104,17 @@ with open("dest.txt", "w") as dst:
     dst.write(content)
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_4}}
 #
-# Step 1: Try to read source file
+# 1. נסי לקרוא את קובץ המקור
 #
-# Step 2: Try to write destination file
+# 2. נסי לכתוב לקובץ היעד
 #
-# Step 3: Handle FileNotFoundError for source
+# 3. טפלי בשגיאת `FileNotFoundError` עבור קובץ המקור
 #
-# Step 4: Handle PermissionError for destination
+# 4. טפלי בשגיאת `PermissionError` עבור קובץ היעד
 #
-# Step 5: Return True on success, False on failure
+# 5. החזירי `True` בהצלחה ו-`False` בכישלון
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -131,23 +123,21 @@ with open("dest.txt", "w") as dst:
 # {{HANDLING_5_TITLE}}
 # {{CONTEXT_HANDLING_5_NARRATIVE}}
 #
-# Build a robust file loader for {{school}}.
-#
-# ✏️ ADD ERROR HANDLING ✏️
+# בני טוען קבצים חזק ל-{{school}}.
 #
 # {{CONTEXT_HANDLING_HINT_5}}
 #
-# Step 1: Loop through filenames
+# 1. עברי בלולאה על שמות הקבצים
 #
-# Step 2: Try to read each file
+# 2. נסי לקרוא כל קובץ
 #
-# Step 3: If successful, return content immediately
+# 3. אם הצלחת, החזירי את התוכן מיד
 #
-# Step 4: If FileNotFoundError, continue to next
+# 4. אם קיבלת `FileNotFoundError`, המשיכי לקובץ הבא
 #
-# Step 5: After loop (all failed), return default
+# 5. אחרי הלולאה (כולם נכשלו), החזירי את ברירת המחדל
 #
-# Pattern:
+# תבנית:
 #   for filename in filenames:
 #       try:
 #           with open(filename, "r") as f:

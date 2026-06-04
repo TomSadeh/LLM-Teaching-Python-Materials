@@ -2,34 +2,32 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to write instance methods - functions
-# inside classes that can read and modify the object's attributes using self.
+# בתרגיל הזה תלמדי לכתוב מתודות מופע — פונקציות בתוך מחלקות שיכולות לקרוא
+# ולשנות את המאפיינים של האובייקט באמצעות `self`.
 #
 # {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ## צרי מחלקה עם מתודות שקוראות מאפיינים
 #
-# Create a class with methods that READ attributes.
+# 1. הגדירי מחלקה בשם `Character` עם `__init__` שמקבלת:
+#    - `self`, `name`, `health`, `max_health`
+#    שמרי את כולם כמאפייני מופע.
 #
-# Step 1: Define a class called `Character` with __init__ that takes:
-#         - self, name, health, max_health
-#         Store all as instance attributes.
+# 2. הוסיפי מתודה בשם `get_status`:
+#    `def get_status(self):`
+#    היא תחזיר מחרוזת בתבנית: `"[name]: [health]/[max_health] HP"`
 #
-# Step 2: Add a method called `get_status`:
-#         def get_status(self):
-#         It should return a string: "[name]: [health]/[max_health] HP"
+# 3. הוסיפי מתודה בשם `is_healthy`:
+#    `def is_healthy(self):`
+#    היא תחזיר `True` אם `health > max_health / 2`, אחרת `False`
 #
-# Step 3: Add a method called `is_healthy`:
-#         def is_healthy(self):
-#         It should return True if health > max_health / 2, else False
+# 4. צרי דמות ובדקי את המתודות:
+#    `hero = Character("{{hero}}", 75, 100)`
+#    `print(hero.get_status())`  # תדפיס את הסטטוס
+#    `print(hero.is_healthy())`  # תדפיס True
 #
-# Step 4: Create a character and test the methods:
-#         hero = Character("{{hero}}", 75, 100)
-#         print(hero.get_status())  # Should print status
-#         print(hero.is_healthy())  # Should print True
-#
-# Remember: Methods always have self as the first parameter!
+# > רמז: מתודות תמיד מקבלות `self` כפרמטר הראשון!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -38,31 +36,29 @@
 # {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ## צרי מחלקה עם מתודות שמשנות מאפיינים
 #
-# Create a class with methods that MODIFY attributes.
+# 1. הגדירי מחלקה בשם `Counter` עם `__init__` שמקבלת:
+#    - `self`, `name`, `start_value=0`
+#    שמרי כ-`self.name` ו-`self.value`
 #
-# Step 1: Define a class called `Counter` with __init__ that takes:
-#         - self, name, start_value=0
-#         Store as self.name and self.value
+# 2. הוסיפי מתודה `increment` שמגדילה את הערך ב-1:
+#    `def increment(self):`
+#        `self.value += 1`
 #
-# Step 2: Add a method `increment` that increases value by 1:
-#         def increment(self):
-#             self.value += 1
+# 3. הוסיפי מתודה `add` שמקבלת פרמטר `amount`:
+#    `def add(self, amount):`
+#    היא תוסיף את `amount` ל-`self.value`
 #
-# Step 3: Add a method `add` that takes an amount parameter:
-#         def add(self, amount):
-#         It should add the amount to self.value
+# 4. הוסיפי מתודה `reset` שמחזירה את הערך ל-0
 #
-# Step 4: Add a method `reset` that sets value back to 0
-#
-# Step 5: Test your counter:
-#         counter = Counter("{{spell1}} uses")
-#         counter.increment()
-#         counter.add(5)
-#         print(f"{counter.name}: {counter.value}")  # Should be 6
-#         counter.reset()
-#         print(f"After reset: {counter.value}")  # Should be 0
+# 5. בדקי את המונה שלך:
+#    `counter = Counter("{{spell1}} uses")`
+#    `counter.increment()`
+#    `counter.add(5)`
+#    `print(f"{counter.name}: {counter.value}")`  # צריך להיות 6
+#    `counter.reset()`
+#    `print(f"After reset: {counter.value}")`  # צריך להיות 0
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -71,30 +67,28 @@
 # {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ## צרי מחלקה שבה מתודות גם מחזירות ערכים וגם משנות מצב
 #
-# Create a class where methods return values AND modify state.
+# 1. הגדירי מחלקה בשם `Wallet` עם `__init__` שמקבלת:
+#    - `self`, `owner`, `initial_gold=0`
+#    שמרי כ-`self.owner` ו-`self.gold`
 #
-# Step 1: Define a class called `Wallet` with __init__ that takes:
-#         - self, owner, initial_gold=0
-#         Store as self.owner and self.gold
+# 2. הוסיפי מתודה `deposit` שמקבלת `amount`:
+#    - הוסיפי את `amount` ל-`self.gold`
+#    - החזירי את הסכום החדש
 #
-# Step 2: Add a method `deposit` that takes an amount:
-#         - Add amount to self.gold
-#         - Return the new total
+# 3. הוסיפי מתודה `withdraw` שמקבלת `amount`:
+#    - אם `amount > self.gold`, הדפיסי `"Not enough gold!"` והחזירי 0
+#    - אחרת, הפחיתי את `amount` מ-`self.gold` והחזירי את `amount`
 #
-# Step 3: Add a method `withdraw` that takes an amount:
-#         - If amount > self.gold, print "Not enough gold!" and return 0
-#         - Otherwise, subtract amount from self.gold and return amount
+# 4. הוסיפי מתודה `check_balance` שמחזירה את `self.gold`
 #
-# Step 4: Add a method `check_balance` that returns self.gold
-#
-# Step 5: Test the wallet:
-#         wallet = Wallet("{{hero}}", 50)
-#         print(f"Deposited, new balance: {wallet.deposit(30)}")  # 80
-#         print(f"Withdrew: {wallet.withdraw(20)}")  # 20
-#         print(f"Balance: {wallet.check_balance()}")  # 60
-#         wallet.withdraw(100)  # Should print "Not enough gold!"
+# 5. בדקי את הארנק:
+#    `wallet = Wallet("{{hero}}", 50)`
+#    `print(f"Deposited, new balance: {wallet.deposit(30)}")`  # 80
+#    `print(f"Withdrew: {wallet.withdraw(20)}")`  # 20
+#    `print(f"Balance: {wallet.check_balance()}")`  # 60
+#    `wallet.withdraw(100)`  # צריך להדפיס "Not enough gold!"
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

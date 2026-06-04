@@ -10,14 +10,14 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגילה בכמה חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: SETBACK - Analyze the Failed Code
+# ## חלק 1: נפילה — ניתוח הקוד הכושל
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# {{hero}} lost a coding challenge to {{villain}}!
-# {{villain}}'s validator found 3 bugs in {{hero}}'s submission.
-# Find and understand each bug.
+# {{hero}} הפסידה אתגר תכנות מול {{villain}}!
+# הבודק של {{villain}} מצא 3 באגים בהגשה של {{hero}}.
+# מצאי והבני כל באג.
 
 # %%
 # BUG 1: Score classifier
@@ -46,42 +46,38 @@ else:
     print(f"Bug 3 - {value} is in range [0, 100]: False")
 
 # %% [markdown]
-# ## This always prints True, even for value = 500!
+# ## זה תמיד מדפיס True, אפילו עבור value = 500!
 #
-# ✏️ YOUR ANALYSIS HERE ✏️
+# ## באג 1: מסווג ציונים
+# מה הבאג? _____________________________________
+# צפוי עבור score=85: _____ בפועל: _____
+# תיקון: שני `>` ל־___
 #
-# BUG 1: Score classifier
-# What's the bug? _____________________________________
-# Expected for score=85: _____ Actual: _____
-# Fix: Change > to ___
+# ## באג 2: בודק גישה
+# מה הבאג? _____________________________________
+# צפוי עבור age=18: _____ בפועל: _____
+# תיקון: שני `>` ל־___
 #
-# BUG 2: Access checker
-# What's the bug? _____________________________________
-# Expected for age=18: _____ Actual: _____
-# Fix: Change > to ___
-#
-# BUG 3: Range checker
-# What's the bug? _____________________________________
-# Why does 'or' not work? _____________________________
-# Fix: Change or to ___
+# ## באג 3: בודק טווח
+# מה הבאג? _____________________________________
+# למה `or` לא עובד כאן? _____________________________
+# תיקון: שני `or` ל־___
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: GROWTH - Build Better Conditional Logic
+# ## חלק 2: צמיחה — בני לוגיקה תנאית נכונה
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Practice writing correct conditional logic.
-# Complete each function to build your skills.
+# תרגלי כתיבת לוגיקה תנאית נכונה.
+# השלימי כל פונקציה כדי לחזק את הכישורים שלך.
 #
-# ✏️ YOUR CODE HERE ✏️
+# כתבי מסווג ציונים נכון.
+# A: 90 ומעלה, B: 80–89, C: 70–79, D: 60–69, F: מתחת ל־60
 #
-# Write a correct grade classifier.
-# A: 90+, B: 80-89, C: 70-79, D: 60-69, F: below 60
-#
-# Test with score = 75 (should get C)
+# בדיקה: score = 75 (אמורה לקבל C)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -91,12 +87,10 @@ score = 75
 pass
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# כתבי בודק גיל/הרשאה נכון.
+# מותר להיכנס אם: (age >= 18) OR (age >= 13 AND has_parent_permission)
 #
-# Write a correct age/permission checker.
-# Can enter if: (age >= 18) OR (age >= 13 AND has_parent_permission)
-#
-# Test with age=15, has_parent_permission=True (should be allowed)
+# בדיקה: age=15, has_parent_permission=True (אמורה להיות מורשית)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -107,12 +101,10 @@ has_parent_permission = True
 pass
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# כתבי בודק טווח נכון.
+# ערך נמצא בטווח אם: value >= min_val AND value <= max_val
 #
-# Write a correct range checker.
-# Value must be >= min_val AND <= max_val to be in range.
-#
-# Test with value=50, min_val=0, max_val=100 (should be in range)
+# בדיקה: value=50, min_val=0, max_val=100 (אמורה להיות בטווח)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -124,18 +116,16 @@ max_val = 100
 pass
 
 # %% [markdown]
-# PART 3: CONFRONTATION - Build a Complete Decision System
+# ## חלק 3: עימות — בני מערכת החלטות שלמה
 # {{CONTEXT_CONFRONTATION_INTRO}}
 # {{CONTEXT_CONFRONTATION_NARRATIVE}}
 #
-# Now build a complete decision system to defeat {{villain}}!
-# Create a game status evaluator that correctly handles all cases.
+# עכשיו בני מערכת החלטות שלמה כדי להביס את {{villain}}!
+# צרי מעריך סטטוס משחק שמטפל נכון בכל המקרים.
 #
-# ✏️ YOUR CODE HERE ✏️
+# בני מעריך סטטוס משחק שלם עבור {{school}}.
 #
-# Build a complete game status evaluator for {{school}}.
-#
-# Input variables:
+# משתני קלט:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -2,106 +2,96 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Using break to exit loops early
-# Difficulty: 2-3
+# נושא: שימוש ב-`break` כדי לצאת מלולאות מוקדם
+# רמת קושי: 2-3
 #
-# The 'break' statement immediately exits the current loop.
-# Use it when you've found what you're looking for or need to stop early.
+# הפקודה `break` יוצאת מיד מהלולאה הנוכחית.
+# השתמשי בה כשמצאת את מה שחיפשת, או כשצריך לעצור מוקדם.
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# Use break to exit a loop when a condition is met.
+# השתמשי ב-`break` כדי לצאת מלולאה כשמתקיים תנאי מסוים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Set result = None
-# Step 2: Loop through each number in numbers
-# Step 3: If the number is negative:
-#         - Set result to that number
-#         - Break out of the loop
-# Step 4: Return result
+# 1. הגדירי `result = None`
+# 2. עברי על כל מספר ב-`numbers`
+# 3. אם המספר שלילי:
+#    - הכניסי אותו ל-`result`
+#    - צאי מהלולאה עם `break`
+# 4. החזירי את `result`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# Use break with user input to create exit conditions.
+# השתמשי ב-`break` עם קלט מהמשתמש כדי ליצור תנאי יציאה.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create an empty list for names
-# Step 2: Start an infinite loop (while True)
-# Step 3: Ask for input
-# Step 4: If input is 'done', break
-# Step 5: Otherwise, add the name to the list
-# Step 6: After the loop, return the list
+# 1. צרי רשימה ריקה לשמות
+# 2. התחילי לולאה אינסופית (`while True`)
+# 3. בקשי קלט
+# 4. אם הקלט הוא `'done'`, צאי עם `break`
+# 5. אחרת, הוסיפי את השם לרשימה
+# 6. אחרי הלולאה, החזירי את הרשימה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# Use break in a search to stop once you find the target.
+# השתמשי ב-`break` בחיפוש כדי לעצור ברגע שמצאת את היעד.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Loop through inventory with index (use range(len(...)))
-# Step 2: Print f"Checking: {item}"
-# Step 3: If item equals target:
-#         - Print f"Found {target}!"
-#         - Return the index (using break or direct return)
-# Step 4: After the loop, print f"{target} not found."
-# Step 5: Return -1
+# 1. עברי על `inventory` עם אינדקס (השתמשי ב-`range(len(...))`)
+# 2. הדפיסי `f"Checking: {item}"`
+# 3. אם ה-`item` שווה ל-`target`:
+#    - הדפיסי `f"Found {target}!"`
+#    - החזירי את האינדקס (עם `break` או `return` ישיר)
+# 4. אחרי הלולאה, הדפיסי `f"{target} not found."`
+# 5. החזירי `-1`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# Use break with a counter limit to prevent infinite loops.
+# השתמשי ב-`break` עם מגבלת מונה כדי למנוע לולאות אינסופיות.
 
 # %%
 secret = "{{password}}"
 max_attempts = 5
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Set attempts = 0
-# Step 2: While attempts < max_attempts:
-#         - Increase attempts
-#         - Ask for a guess
-#         - If guess equals secret, print success and return True
-# Step 3: After the loop, print failure message
-# Step 4: Return False
+# 1. הגדירי `attempts = 0`
+# 2. כל עוד `attempts < max_attempts`:
+#    - הגדילי את `attempts`
+#    - בקשי ניחוש
+#    - אם הניחוש שווה ל-`secret`, הדפיסי הצלחה והחזירי `True`
+# 3. אחרי הלולאה, הדפיסי הודעת כישלון
+# 4. החזירי `False`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# Combine break with complex conditions.
+# שלבי `break` עם תנאים מורכבים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create an empty list for results
-# Step 2: Loop through each item in data
-# Step 3: If item is "ERROR", "", or None:
-#         - Print f"Error encountered! Stopping."
-#         - Break
-# Step 4: Process the item (convert to uppercase) and add to results
-#         - Print f"Processed: {processed_item}"
-# Step 5: Return results
+# 1. צרי רשימה ריקה לתוצאות
+# 2. עברי על כל `item` ב-`data`
+# 3. אם ה-`item` הוא `"ERROR"`, `""`, או `None`:
+#    - הדפיסי `f"Error encountered! Stopping."`
+#    - צאי עם `break`
+# 4. עבדי את ה-`item` (המירי לאותיות גדולות) והוסיפי לתוצאות
+#    - הדפיסי `f"Processed: {processed_item}"`
+# 5. החזירי את התוצאות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -1,18 +1,18 @@
 # %% [markdown]
-# {{CONTEXT_EVALUATION_INTRO}}
+# ## {{CONTEXT_EVALUATION_INTRO}}
 #
-# This is a multi-part exercise comparing different data structure approaches
-# for a character management system. Build, compare, and choose wisely!
+# זוהי תרגיל רב-חלקי שמשווה בין גישות שונות לאחסון נתוני דמויות.
+# בני, השווי, ובחרי בחוכמה!
 #
-# Programming concepts: dictionaries, nested data, data design trade-offs
+# מושגי תכנות: מילונים, נתונים מקוננים, עיצוב מבני נתונים
 #
-# PART 1: Evaluation - Compare Data Structures
+# חלק 1: הערכה — השוואת מבני נתונים
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# Two approaches exist for storing character data.
-# Which is better for different operations?
+# קיימות שתי גישות לאחסון נתוני דמויות.
+# איזו גישה עדיפה לפעולות שונות?
 #
-# ## Approach A: List of Dictionaries
+# ## גישה א׳: רשימה של מילונים
 
 # %%
 characters_list = [
@@ -28,7 +28,7 @@ for char in char_list:
 return None
 
 # %% [markdown]
-# ## Approach B: Dictionary of Dictionaries
+# ## גישה ב׳: מילון של מילונים
 
 # %%
 characters_dict = {
@@ -41,7 +41,6 @@ characters_dict = {
 return char_dict.get(name)
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -91,90 +90,73 @@ Better for adding: ___
 return analysis
 
 # %% [markdown]
-# PART 2: Growth - Build with Dictionary Approach
+# חלק 2: צמיחה — בניית מערכת עם גישת המילון
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Implement a complete character management system using dictionaries.
-#
-# ✏️ YOUR CODE HERE ✏️
+# מִמשי מערכת ניהול דמויות מלאה תוך שימוש במילונים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Check if name already exists.
-# If new, add with all attributes and return True.
+# בדקי אם השם כבר קיים.
+# אם חדש, הוסיפי עם כל המאפיינים והחזירי `True`.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Check if character exists.
-# If found, increase level by 1 and health by 10.
+# בדקי אם הדמות קיימת.
+# אם נמצאה, העלי את הרמה ב-1 ואת הבריאות ב-10.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Iterate through db.items() and collect matching names.
+# עברי על `db.items()` ואספי את השמות התואמים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Add Advanced Operations
+# חלק 3: צמיחה — הוספת פעולות מתקדמות
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Implement more complex operations that benefit from the dict structure.
+# מִמשי פעולות מורכבות יותר שמרוויחות מהמבנה של המילון.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Iterate and track the highest level seen.
+# עברי ועקבי אחרי הרמה הגבוהה ביותר שנראתה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# 1. ספרי דמויות וסכמי רמות לפי מחלקה
+# 2. חשבי ממוצעים
 #
-# Step 1: Count characters and sum levels by class
-# Step 2: Calculate averages
-#
-# Result format: {"warrior": {"count": 2, "avg_level": 6.0}, ...}
+# פורמט תוצאה: `{"warrior": {"count": 2, "avg_level": 6.0}, ...}`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Check both characters exist.
-# Check source has enough health.
-# Transfer the health.
+# בדקי שתי הדמויות קיימות.
+# בדקי שלמקור יש מספיק בריאות.
+# העבירי את הבריאות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Evaluation - Final Comparison
+# חלק 4: הערכה — השוואה סופית
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# Reflect on when each approach is best.
-#
-# ✏️ YOUR FINAL EVALUATION ✏️
+# חשבי מתי כל גישה עדיפה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -207,7 +189,7 @@ HOW I WOULD MITIGATE THAT DOWNSIDE:
 return evaluation
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

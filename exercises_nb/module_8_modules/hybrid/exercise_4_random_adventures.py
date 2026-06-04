@@ -1,142 +1,110 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# This is a multi-part exercise where you expand {{school}}'s game
-# system with advanced random features. You'll use choice(), shuffle(),
-# and sample() to create engaging game mechanics.
+# זוהי תרגילה רב-חלקית שבה את מרחיבה את מערכת המשחק של {{school}}
+# עם פיצ'רים של אקראיות מתקדמים. תשתמשי ב-`choice()`, ב-`shuffle()`,
+# וב-`sample()` כדי ליצור מכניקות משחק מעניינות.
 #
-# Programming concepts: random module, game mechanics, list manipulation
-# Difficulty: 2-3
+# מושגי תכנות: מודול `random`, מכניקות משחק, עבודה עם רשימות
+# רמת קושי: 2-3
 
 # %%
 import random
 
 # %% [markdown]
-# PART 1: Growth - Random Selection with choice()
+# ## חלק 1: צמיחה - בחירה אקראית עם `choice()`
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Use random.choice() to select random items from collections.
+# השתמשי ב-`random.choice()` כדי לבחור פריטים אקראיים מתוך אוספים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create lists of options:
-#         creatures = ["{{creature}}", "guardian", "wanderer", "spirit"]
-#         actions = ["approaches", "appears", "emerges", "awaits"]
-#         locations = ["{{location}}", "the path", "the shadows", "ahead"]
-#
-# Step 2: Use random.choice() to pick from each list
-#
-# Step 3: Build and return a sentence:
-#         f"A {creature} {action} from {location}!"
+# 1. צרי רשימות של אפשרויות:
+#    `creatures = ["{{creature}}", "guardian", "wanderer", "spirit"]`
+#    `actions = ["approaches", "appears", "emerges", "awaits"]`
+#    `locations = ["{{location}}", "the path", "the shadows", "ahead"]`
+# 2. השתמשי ב-`random.choice()` כדי לבחור מכל רשימה
+# 3. בני והחזירי משפט:
+#    `f"A {creature} {action} from {location}!"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create a weighted list:
-#         outcomes = ["success"] * 3 + ["partial"] * 2 + ["failure"] * 1
-#         This gives: 50% success, 33% partial, 17% failure
-#
-# Step 2: Use random.choice(outcomes)
-#
-# Step 3: Return the result
+# 1. צרי רשימה ממושקלת:
+#    `outcomes = ["success"] * 3 + ["partial"] * 2 + ["failure"] * 1`
+#    כך מתקבל: 50% הצלחה, 33% חלקי, 17% כישלון
+# 2. השתמשי ב-`random.choice(outcomes)`
+# 3. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create reward pools for each tier:
-#         common = ["gold coins", "health potion", "basic scroll"]
-#         rare = ["{{item}}", "enchanted gem", "silver key"]
-#         legendary = ["ancient artifact", "{{spell3}}", "master key"]
-#
-# Step 2: Select the right pool based on tier
-#
-# Step 3: Use random.choice() on that pool
-#
-# Step 4: Return the reward
+# 1. צרי מאגרי פרסים לכל דרגה:
+#    `common = ["gold coins", "health potion", "basic scroll"]`
+#    `rare = ["{{item}}", "enchanted gem", "silver key"]`
+#    `legendary = ["ancient artifact", "{{spell3}}", "master key"]`
+# 2. בחרי את המאגר המתאים לפי הדרגה
+# 3. השתמשי ב-`random.choice()` על המאגר שבחרת
+# 4. החזירי את הפרס
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Shuffling with shuffle()
+# ## חלק 2: צמיחה - ערבוב עם `shuffle()`
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Use random.shuffle() to randomize order for fair gameplay.
+# השתמשי ב-`random.shuffle()` כדי לערבב סדר לגיימפליי הוגן.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Make a copy: deck = items.copy() or list(items)
-#         (shuffle modifies in place, we don't want to change original)
-#
-# Step 2: Shuffle the copy: random.shuffle(deck)
-#
-# Step 3: Return the shuffled deck
+# 1. צרי עותק: `deck = items.copy()` או `list(items)`
+#    (הפונקציה `shuffle` משנה את הרשימה במקום - לא נרצה לשנות את המקור)
+# 2. ערבבי את העותק: `random.shuffle(deck)`
+# 3. החזירי את החפיסה המעורבבת
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use create_shuffled_deck to get random order
+# השתמשי ב-`create_shuffled_deck` כדי לקבל סדר אקראי
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Return a shuffled copy of challenges
+# החזירי עותק מעורבב של `challenges`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Sampling with sample()
+# ## חלק 3: צמיחה - דגימה עם `sample()`
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Use random.sample() for lottery-style selections.
+# השתמשי ב-`random.sample()` לבחירות בסגנון הגרלה.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Make sure count isn't larger than pool
-#         if count > len(pool):
-#             count = len(pool)
-#
-# Step 2: Use random.sample(pool, count)
-#
-# Step 3: Return the result
+# 1. ודאי שה-`count` לא גדול מגודל ה-`pool`:
+#    `if count > len(pool):`
+#    `    count = len(pool)`
+# 2. השתמשי ב-`random.sample(pool, count)`
+# 3. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use draw_items to select team members
+# השתמשי ב-`draw_items` כדי לבחור חברות צוות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create participant numbers: range(1, participant_count + 1)
-#
-# Step 2: Use random.sample() to pick winners
-#
-# Step 3: Sort the winners: sorted(winners)
-#
-# Step 4: Return the sorted list
+# 1. צרי מספרי משתתפות: `range(1, participant_count + 1)`
+# 2. השתמשי ב-`random.sample()` לבחירת הזוכות
+# 3. מיינ את הזוכות: `sorted(winners)`
+# 4. החזירי את הרשימה הממוינת
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

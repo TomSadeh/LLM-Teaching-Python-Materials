@@ -2,98 +2,91 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll explore advanced random module functions
-# beyond the basic randint() you already know. These are essential
-# for games, simulations, and any randomized features.
+# בתרגיל הזה תחקרי פונקציות מתקדמות של מודול `random`
+# מעבר ל-`randint()` שכבר מכירה. הן חיוניות
+# למשחקים, סימולציות וכל פיצ'ר אקראי שתרצי לבנות.
 #
-# Topic: Extended random module (choice, shuffle, sample)
-# Difficulty: 2
+# נושא: מודול random מורחב (`choice`, `shuffle`, `sample`)
+# רמת קושי: 2
 
 # %%
 import random
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# למדי את `random.choice()` — בחירת פריט אקראי מתוך רצף.
 #
-# Learn random.choice() - pick a random item from a sequence.
+# 1. צרי רשימת אפשרויות:
+#    `options = ["{{spell1}}", "{{spell2}}", "{{spell3}}", "{{spell4}}"]`
 #
-# Step 1: Create a list of options:
-#         options = ["{{spell1}}", "{{spell2}}", "{{spell3}}", "{{spell4}}"]
+# 2. השתמשי ב-`random.choice()` לבחור אחת:
+#    `selected = random.choice(options)`
 #
-# Step 2: Use random.choice() to pick one:
-#         selected = random.choice(options)
+# 3. הדפיסי: `"Selected: [selected]"`
 #
-# Step 3: Print: "Selected: [selected]"
+# 4. בצעי 5 בחירות אקראיות והדפיסי כל אחת
+#    השתמשי בלולאה: `for i in range(5):`
 #
-# Step 4: Make 5 random selections and print each one
-#         Use a for loop: for i in range(5):
-#
-# Note: choice() works with any sequence (list, string, tuple)
+# > רמז: `choice()` עובדת עם כל רצף — רשימה, מחרוזת, קבוצה (tuple)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# למדי את `random.shuffle()` — ערבוב סדר הפריטים ברשימה.
 #
-# Learn random.shuffle() - randomize the order of a list.
+# 1. צרי רשימה לערבוב:
+#    `items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`
 #
-# Step 1: Create a list to shuffle:
-#         items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# 2. הדפיסי את הרשימה המקורית:
+#    `print(f"Original: {items}")`
 #
-# Step 2: Print the original list:
-#         print(f"Original: {items}")
+# 3. ערבבי את הרשימה במקום (IN PLACE):
+#    `random.shuffle(items)`
 #
-# Step 3: Shuffle the list IN PLACE:
-#         random.shuffle(items)
-#         Note: shuffle() modifies the original list!
+# 4. הדפיסי את הרשימה המעורבבת:
+#    `print(f"Shuffled: {items}")`
 #
-# Step 4: Print the shuffled list:
-#         print(f"Shuffled: {items}")
+# 5. צרי וערבבי רשימת דמויות:
+#    `characters = ["{{hero}}", "{{heroine}}", "{{friend}}", "{{mentor}}"]`
+#    `random.shuffle(characters)`
+#    `print(f"Turn order: {characters}")`
 #
-# Step 5: Create and shuffle a list of characters:
-#         characters = ["{{hero}}", "{{heroine}}", "{{friend}}", "{{mentor}}"]
-#         random.shuffle(characters)
-#         print(f"Turn order: {characters}")
-#
-# Note: shuffle() returns None, it changes the list directly
+# > רמז: `shuffle()` מחזירה `None` — היא משנה את הרשימה המקורית ישירות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# למדי את `random.sample()` — בחירת מספר פריטים ייחודיים.
 #
-# Learn random.sample() - pick multiple unique items.
+# 1. צרי מאגר פריטים:
+#    `pool = ["{{item}}", "gold", "gem", "key", "scroll", "potion"]`
 #
-# Step 1: Create a pool of items:
-#         pool = ["{{item}}", "gold", "gem", "key", "scroll", "potion"]
+# 2. שלפי 3 פריטים ייחודיים (ללא חזרות):
+#    `rewards = random.sample(pool, 3)`
+#    `print(f"You found: {rewards}")`
 #
-# Step 2: Sample 3 unique items (no repeats):
-#         rewards = random.sample(pool, 3)
-#         print(f"You found: {rewards}")
+# 3. ההבדל בין `choice()` ל-`sample()`:
+#    - `choice()` בוחרת פריט אחד
+#    - `sample(list, n)` בוחרת n פריטים ייחודיים
+#    - `sample()` לא משנה את הרשימה המקורית
 #
-# Step 3: The difference from choice():
-#         - choice() picks 1 item
-#         - sample(list, n) picks n UNIQUE items
-#         - sample() does NOT modify the original list
+# 4. נסי לשלוף מתוך טווח:
+#    `lottery = random.sample(range(1, 50), 6)`
+#    `print(f"Lottery numbers: {sorted(lottery)}")`
 #
-# Step 4: Try sampling from a range:
-#         lottery = random.sample(range(1, 50), 6)
-#         print(f"Lottery numbers: {sorted(lottery)}")
-#
-# Step 5: What happens if you try sample(pool, 10)?
-#         (You can't sample more items than exist - it's an error!)
-#         Just print: "Can't sample 10 from a list of 6 items"
+# 5. מה יקרה אם תנסי `sample(pool, 10)`?
+#    (אי אפשר לשלוף יותר פריטים ממה שיש — זו שגיאה!)
+#    פשוט הדפיסי: `"Can't sample 10 from a list of 6 items"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -1,16 +1,16 @@
 # %% [markdown]
 # {{CONTEXT_FIX_STYLE_INTRO}}
 #
-# This is a multi-part exercise where you identify style problems,
-# fix them, and then reorganize code into a proper class structure.
+# זוהי תרגילה רב-שלבית שבה את מזהה בעיות סגנון,
+# מתקנת אותן, ואז מסדרת מחדש את הקוד למבנה מחלקה תקין.
 #
-# Programming concepts: OOP conventions, refactoring, code organization
+# מושגי תכנות: מוסכמות OOP, שיפוץ קוד, ארגון קוד
 #
-# PART 1: Evaluation - Identify What's Wrong
+# חלק 1: הערכה - מה לא בסדר כאן?
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Legacy code from {{school}}'s old system. It works, but has problems.
+# קוד ישן מהמערכת הישנה של {{school}}. הוא עובד, אבל יש בו בעיות.
 
 # %%
 class data:
@@ -36,77 +36,71 @@ class data:
         return s.N + ": " + str(s.v1) + "/" + str(s.v2) + "/" + str(s.v3)
 
 # %% [markdown]
-# ✏️ IDENTIFY THE STYLE ISSUES ✏️
+# רשמי את כל הבעיות בקוד למעלה:
 #
-# List all the problems with the code above:
-#
-# Class name issues:
+# בעיות בשם המחלקה:
 # 1.
 #
-# Parameter naming issues:
+# בעיות בשמות הפרמטרים:
 # 2.
 # 3.
 #
-# Attribute naming issues:
+# בעיות בשמות המשתנים (attributes):
 # 4.
 # 5.
 #
-# Method naming issues:
+# בעיות בשמות המתודות:
 # 6.
 # 7.
 #
-# Other issues:
-# 8. (hint: look at the 'self' parameter)
-# 9. (hint: string formatting)
+# בעיות נוספות:
+# 8. (> רמז: תסתכלי על הפרמטר `self`)
+# 9. (> רמז: עיצוב מחרוזות)
 #
-# What do you think this class actually represents?
-# (The attributes seem to be: name, some value capped at 100,
-#  some resource that gets consumed, and a counter)
+# לדעתך, מה המחלקה הזו מייצגת בעצם?
+# (נראה שה-attributes הם: שם, ערך כלשהו עד 100,
+#  משאב שמתכלה, ומונה)
 #
-# Your guess: _______________
+# הניחוש שלך: _______________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Improvement - Fix the Naming
+# חלק 2: שיפור - תיקון השמות
 # {{CONTEXT_STYLE_FIX_1}}
 #
-# Apply proper naming conventions to the code.
+# החלי מוסכמות שמות נכונות על הקוד.
 #
-# ✏️ FIX THE NAMING ✏️
+# כתבי מחדש את המחלקה עם מוסכמות נכונות:
 #
-# Rewrite the class with proper conventions:
+# נניח שזו דמות עם:
+# - שם (N)
+# - בריאות (v1) עד 100
+# - אנרגיה (v2) שמתכלה בפעולות
+# - מונה פעולות שהושלמו (v3)
 #
-# Assuming this is a character with:
-# - name (N)
-# - health (v1) capped at 100
-# - energy (v2) consumed by actions
-# - actions_completed counter (v3)
+# החלי את התיקונים הבאים:
+# 1. שם המחלקה: PascalCase, משמעותי (ActionTracker? Character?)
+# 2. `self`, לא `s`
+# 3. שמות פרמטרים ו-attributes תיאוריים
+# 4. שמות מתודות ב-snake_case
+# 5. שמות מתודות משמעותיים (`heal` במקום `ProcessData`, וכו')
+# 6. f-strings לעיצוב מחרוזות
 #
-# Apply these fixes:
-# - Class name: PascalCase, meaningful (ActionTracker? Character?)
-# - self, not s
-# - Descriptive parameter and attribute names
-# - snake_case method names
-# - Meaningful method names (heal instead of ProcessData, etc.)
-# - f-strings for formatting
-#
-# Write your fixed version:
+# כתבי את הגרסה המתוקנת שלך:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Reorganize Into Proper Structure
+# חלק 3: צמיחה - ארגון מחדש למבנה נכון
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Now refactor into a well-organized class with clear responsibilities.
+# עכשיו שפצי את הקוד למחלקה מסודרת עם אחריות ברורה.
 #
-# ✏️ REORGANIZE THE CODE ✏️
-#
-# Create a properly structured class:
+# צרי מחלקה עם מבנה תקין:
 #
 # class Character:
 #     """A character that can perform actions at {{school}}.
@@ -158,7 +152,7 @@ class data:
 #         # Your code here
 #         pass
 #
-# Test your reorganized class:
+# בדקי את המחלקה המסודרת שלך:
 #     char = Character("{{hero}}", 50, 30)
 #     print(char)
 #
@@ -173,7 +167,7 @@ class data:
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

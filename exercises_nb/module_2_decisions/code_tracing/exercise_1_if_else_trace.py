@@ -11,7 +11,7 @@
 #
 # ## {{TRACE_1_TITLE}}
 # {{CONTEXT_TRACE_1_NARRATIVE}}
-# Track which branch executes and how variables change.
+# עקבי אחרי איזה ענף מתבצע וכיצד המשתנים משתנים.
 
 # %%
 health = 30
@@ -24,11 +24,9 @@ else:
 print(f"Final health: {health}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_1}}
 #
-# | Step | health | boost_amount | Condition (health < 50) | Output |
+# | שלב | health | boost_amount | תנאי (health < 50) | פלט |
 # |------|--------|--------------|------------------------|--------|
 # | 1    | 30     | -            | -                      | -      |
 # | 2    | 30     | 50           | -                      | -      |
@@ -36,8 +34,8 @@ print(f"Final health: {health}")
 # | 4    | ___    | 50           | -                      | ___    |
 # | 5    | ___    | 50           | -                      | ___    |
 #
-# Which branch executed? (if / else): _______________
-# Final value of health: _______________
+# איזה ענף בוצע? (if / else): _______________
+# הערך הסופי של health: _______________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -45,7 +43,7 @@ print(f"Final health: {health}")
 # %% [markdown]
 # ## {{TRACE_2_TITLE}}
 # {{CONTEXT_TRACE_2_NARRATIVE}}
-# Track what happens when the condition is False.
+# עקבי אחרי מה קורה כשהתנאי הוא False.
 
 # %%
 score = 85
@@ -60,11 +58,9 @@ else:
 print(f"{{mentor}} records: {result}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_2}}
 #
-# | Step | score | passing | result | Condition (score < passing) | Output |
+# | שלב | score | passing | result | תנאי (score < passing) | פלט |
 # |------|-------|---------|--------|----------------------------|--------|
 # | 1    | 85    | -       | -      | -                          | -      |
 # | 2    | 85    | 60      | -      | -                          | -      |
@@ -73,8 +69,8 @@ print(f"{{mentor}} records: {result}")
 # | 5    | 85    | 60      | ____   | -                          | ___    |
 # | 6    | 85    | 60      | ____   | -                          | ___    |
 #
-# Which branch executed? (if / else): _______________
-# Why? _______________________________________________
+# איזה ענף בוצע? (if / else): _______________
+# למה? _______________________________________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -82,7 +78,7 @@ print(f"{{mentor}} records: {result}")
 # %% [markdown]
 # ## {{TRACE_3_TITLE}}
 # {{CONTEXT_TRACE_3_NARRATIVE}}
-# Trace a purchase decision at {{school}}.
+# עקבי אחרי החלטת הרכישה ב-{{school}}.
 
 # %%
 gold = 45
@@ -98,11 +94,9 @@ else:
 print(f"{{hero}} leaves with {gold} gold")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_3}}
 #
-# | Step | gold | item_cost | needed | Condition (gold >= item_cost) | Output |
+# | שלב | gold | item_cost | needed | תנאי (gold >= item_cost) | פלט |
 # |------|------|-----------|--------|------------------------------|--------|
 # | 1    | 45   | -         | -      | -                            | -      |
 # | 2    | 45   | 50        | -      | -                            | -      |
@@ -112,9 +106,9 @@ print(f"{{hero}} leaves with {gold} gold")
 # | 6    | 45   | 50        | ___    | -                            | ___    |
 # | 7    | ___  | 50        | ___    | -                            | ___    |
 #
-# Which branch executed? (if / else): _______________
-# Final value of gold: _______________
-# Was 'needed' ever assigned? _______________
+# איזה ענף בוצע? (if / else): _______________
+# הערך הסופי של gold: _______________
+# האם `needed` קיבל ערך בכלל? _______________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

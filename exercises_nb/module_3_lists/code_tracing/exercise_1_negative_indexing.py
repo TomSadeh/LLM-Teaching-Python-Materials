@@ -9,7 +9,7 @@
 # {{CONTEXT_CODE_TRACING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{TRACE_1_TITLE}}
+# ## {{TRACE_1_TITLE}}
 # {{CONTEXT_TRACE_1_NARRATIVE}}
 
 # %%
@@ -41,7 +41,7 @@ print(team[-4])
 pass
 
 # %% [markdown]
-# {{TRACE_2_TITLE}}
+# ## {{TRACE_2_TITLE}}
 # {{CONTEXT_TRACE_2_NARRATIVE}}
 
 # %%
@@ -71,7 +71,7 @@ print(f"Same? {first == last}")
 pass
 
 # %% [markdown]
-# {{TRACE_3_TITLE}}
+# ## {{TRACE_3_TITLE}}
 # {{CONTEXT_TRACE_3_NARRATIVE}}
 
 # %%

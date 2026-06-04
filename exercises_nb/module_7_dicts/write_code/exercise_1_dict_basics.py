@@ -2,26 +2,24 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn the fundamentals of dictionaries:
-# creating them, accessing values, and understanding key-value pairs.
+# בתרגיל הזה תלמדי את היסודות של מילונים:
+# יצירתם, גישה לערכים, והבנת זוגות מפתח-ערך.
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי מילון שמאחסן מידע על {{hero}}.
 #
-# Create a dictionary to store information about {{hero}}.
+# 1. צרי מילון בשם `profile` עם המפתחות והערכים הבאים:
+#    - "name" -> המחרוזת "{{hero}}"
+#    - "skill" -> המחרוזת "{{spell1}}"
+#    - "level" -> המספר השלם 1
 #
-# Step 1: Create a dictionary called `profile` with these keys and values:
-#         - "name" -> the string "{{hero}}"
-#         - "skill" -> the string "{{spell1}}"
-#         - "level" -> the integer 1
+# 2. הדפיסי את המילון כולו
 #
-# Step 2: Print the entire dictionary
+# 3. הדפיסי רק את הערך המשויך למפתח "name"
 #
-# Step 3: Print just the value associated with "name"
-#
-# Example output format:
+# דוגמה לפורמט הפלט:
 #   {'name': '...', 'skill': '...', 'level': 1}
 #   ...
 
@@ -29,48 +27,44 @@
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי מילון שמאחסן ניקוד עבור כמה דמויות.
 #
-# Create a dictionary to store scores for multiple characters.
+# 1. צרי מילון בשם `scores` עם:
+#    - "{{hero}}" -> 100
+#    - "{{heroine}}" -> 150
+#    - "{{friend}}" -> 75
 #
-# Step 1: Create a dictionary called `scores` with:
-#         - "{{hero}}" -> 100
-#         - "{{heroine}}" -> 150
-#         - "{{friend}}" -> 75
+# 2. הדפיסי את הניקוד של כל דמות בעזרת f-string
+#    פורמט: "[name] has [score] points"
 #
-# Step 2: Print each character's score using an f-string
-#         Format: "[name] has [score] points"
+# 3. חשבי והדפיסי את סכום כל הניקודים
 #
-# Step 3: Calculate and print the total of all scores
-#
-# Hint: Access values with scores["key_name"]
+# > רמז: גישה לערכים עם scores["key_name"]
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי מילון שמייצג את המאפיינים של {{item}}.
 #
-# Create a dictionary to represent {{item}} attributes.
+# 1. צרי מילון בשם `item_stats` עם:
+#    - "name" -> "{{item}}"
+#    - "power" -> 50
+#    - "durability" -> 100
+#    - "rarity" -> "uncommon"
 #
-# Step 1: Create a dictionary called `item_stats` with:
-#         - "name" -> "{{item}}"
-#         - "power" -> 50
-#         - "durability" -> 100
-#         - "rarity" -> "uncommon"
+# 2. בדקי אם הכוח גדול מ-30
+#    אם כן, הדפיסי: "[item name] is powerful!"
+#    אם לא, הדפיסי: "[item name] needs upgrading."
 #
-# Step 2: Check if the power is greater than 30
-#         If yes, print: "[item name] is powerful!"
-#         If no, print: "[item name] needs upgrading."
-#
-# Step 3: Print all the keys in the dictionary
-#         Hint: Use the .keys() method
+# 3. הדפיסי את כל המפתחות במילון
+# > רמז: השתמשי במתודה `.keys()`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

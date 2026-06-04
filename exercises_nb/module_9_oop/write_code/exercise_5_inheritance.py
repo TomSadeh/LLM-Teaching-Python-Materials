@@ -2,15 +2,15 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn inheritance - creating new classes that
-# extend existing ones. The child class inherits all attributes and methods
-# from the parent, and can add its own or override existing ones.
+# בתרגיל הזה תלמדי ירושה - יצירת מחלקות חדשות שמרחיבות מחלקות קיימות.
+# המחלקה הילדה יורשת את כל המשתנים והמתודות מהמחלקה ההורה,
+# ויכולה להוסיף משלה או לדרוס את הקיימות.
 #
 # {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
 #
-# Parent class (provided for you)
+# מחלקת הורה (מוכנה עבורך)
 
 # %%
 class Entity:
@@ -24,36 +24,34 @@ class Entity:
         return f"{self.name} (HP: {self.health})"
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# צרי מחלקה ילדה שיורשת מ-`Entity`.
 #
-# Create a child class that inherits from Entity.
-#
-# Step 1: Define a class called `Character` that inherits from Entity:
+# 1. הגדירי מחלקה בשם `Character` שיורשת מ-`Entity`:
 #         class Character(Entity):
 #
-# Step 2: In Character's __init__, call the parent's __init__:
+# 2. ב-`__init__` של `Character`, קראי ל-`__init__` של ההורה:
 #         def __init__(self, name, health, role):
 #             super().__init__(name, health)
 #             self.role = role
 #
-# Step 3: Add a method unique to Character:
+# 3. הוסיפי מתודה ייחודית ל-`Character`:
 #         def introduce(self):
 #             return f"I am {self.name}, a {self.role}."
 #
-# Step 4: Test inheritance:
+# 4. בדקי את הירושה:
 #         hero = Character("{{hero}}", 100, "{{ROLE_TITLE}}")
-#         print(hero.describe())  # Inherited from Entity!
-#         print(hero.introduce())  # Character's own method
+#         print(hero.describe())  # ירושה מ-Entity!
+#         print(hero.introduce())  # מתודה של Character
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
 #
-# Parent class (provided for you)
+# מחלקת הורה (מוכנה עבורך)
 
 # %%
 class Item:
@@ -67,100 +65,94 @@ class Item:
         return f"{self.name} (worth {self.value} gold)"
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# צרי שתי מחלקות ילדות שונות מאותה מחלקת הורה.
 #
-# Create two different child classes from the same parent.
-#
-# Step 1: Define `Weapon` that inherits from Item:
-#         Add a `damage` attribute in __init__ (after calling super)
-#         Add a method `attack_info(self)` that returns:
+# 1. הגדירי `Weapon` שיורשת מ-`Item`:
+#         הוסיפי משתנה `damage` ב-`__init__` (אחרי קריאה ל-`super`)
+#         הוסיפי מתודה `attack_info(self)` שמחזירה:
 #         "[name]: deals [damage] damage"
 #
-# Step 2: Define `Armor` that inherits from Item:
-#         Add a `defense` attribute in __init__
-#         Add a method `defense_info(self)` that returns:
+# 2. הגדירי `Armor` שיורשת מ-`Item`:
+#         הוסיפי משתנה `defense` ב-`__init__`
+#         הוסיפי מתודה `defense_info(self)` שמחזירה:
 #         "[name]: provides [defense] defense"
 #
-# Step 3: Create instances and test:
+# 3. צרי אובייקטים ובדקי:
 #         sword = Weapon("{{item}}", 150, 25)
-#         print(sword.get_info())  # Inherited
-#         print(sword.attack_info())  # Weapon-specific
+#         print(sword.get_info())  # ירושה
+#         print(sword.attack_info())  # ייחודי ל-Weapon
 #
 #         shield = Armor("{{spell1}}", 100, 15)
-#         print(shield.get_info())  # Inherited
-#         print(shield.defense_info())  # Armor-specific
+#         print(shield.get_info())  # ירושה
+#         print(shield.defense_info())  # ייחודי ל-Armor
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי היררכיית מחלקות עם שלושה רמות.
 #
-# Create a class hierarchy with three levels.
-#
-# Step 1: Define a base class `Being`:
+# 1. הגדירי מחלקת בסיס `Being`:
 #         __init__(self, name)
-#         Store self.name
+#         שמרי את self.name
 #
-# Step 2: Define `LivingBeing` that inherits from Being:
+# 2. הגדירי `LivingBeing` שיורשת מ-`Being`:
 #         __init__(self, name, health)
-#         Call super().__init__(name)
-#         Add self.health
-#         Add method is_alive(self) returning health > 0
+#         קראי ל-super().__init__(name)
+#         הוסיפי self.health
+#         הוסיפי מתודה is_alive(self) שמחזירה health > 0
 #
-# Step 3: Define `Combatant` that inherits from LivingBeing:
+# 3. הגדירי `Combatant` שיורשת מ-`LivingBeing`:
 #         __init__(self, name, health, power)
-#         Call super().__init__(name, health)
-#         Add self.power
-#         Add method battle_cry(self) that returns:
+#         קראי ל-super().__init__(name, health)
+#         הוסיפי self.power
+#         הוסיפי מתודה battle_cry(self) שמחזירה:
 #         "[name] with power [power] is ready!"
 #
-# Step 4: Test the hierarchy:
+# 4. בדקי את ההיררכיה:
 #         fighter = Combatant("{{hero}}", 100, 50)
-#         print(f"Name: {fighter.name}")  # From Being
-#         print(f"Alive: {fighter.is_alive()}")  # From LivingBeing
-#         print(fighter.battle_cry())  # From Combatant
+#         print(f"Name: {fighter.name}")  # מ-Being
+#         print(f"Alive: {fighter.is_alive()}")  # מ-LivingBeing
+#         print(fighter.battle_cry())  # מ-Combatant
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי תת-מחלקות מיוחדות עם יכולות ייחודיות.
 #
-# Create specialized subclasses with unique abilities.
-#
-# Step 1: Define a base class `Ability`:
+# 1. הגדירי מחלקת בסיס `Ability`:
 #         __init__(self, name, power_cost)
-#         Store both attributes
-#         Add method describe(self) returning:
+#         שמרי את שני המשתנים
+#         הוסיפי מתודה describe(self) שמחזירה:
 #         "[name] (costs [power_cost] energy)"
 #
-# Step 2: Define `AttackAbility` inheriting from Ability:
+# 2. הגדירי `AttackAbility` שיורשת מ-`Ability`:
 #         __init__(self, name, power_cost, damage)
-#         Call super and add self.damage
-#         Add method use(self, target) that:
-#             Prints "[name] deals [damage] damage to [target]!"
+#         קראי ל-`super` והוסיפי self.damage
+#         הוסיפי מתודה use(self, target) שמדפיסה:
+#             "[name] deals [damage] damage to [target]!"
 #
-# Step 3: Define `HealAbility` inheriting from Ability:
+# 3. הגדירי `HealAbility` שיורשת מ-`Ability`:
 #         __init__(self, name, power_cost, heal_amount)
-#         Call super and add self.heal_amount
-#         Add method use(self, target) that:
-#             Prints "[name] heals [target] for [heal_amount]!"
+#         קראי ל-`super` והוסיפי self.heal_amount
+#         הוסיפי מתודה use(self, target) שמדפיסה:
+#             "[name] heals [target] for [heal_amount]!"
 #
-# Step 4: Test your abilities:
+# 4. בדקי את היכולות שלך:
 #         fireball = AttackAbility("{{spell2}}", 30, 50)
-#         print(fireball.describe())  # Inherited
-#         fireball.use("{{villain}}")  # AttackAbility's method
+#         print(fireball.describe())  # ירושה
+#         fireball.use("{{villain}}")  # מתודה של AttackAbility
 #
 #         heal = HealAbility("{{spell1}}", 20, 35)
-#         print(heal.describe())  # Inherited
-#         heal.use("{{hero}}")  # HealAbility's method
+#         print(heal.describe())  # ירושה
+#         heal.use("{{hero}}")  # מתודה של HealAbility
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

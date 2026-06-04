@@ -12,7 +12,7 @@
 # {{APPROACH_1_NAME}}
 # {{CONTEXT_APPROACH_1_NARRATIVE}}
 #
-# Version A: Direct Assignment (Creates an Alias)
+# גרסה א׳: השמה ישירה (יוצרת כינוי)
 
 # %%
 backup = inventory  # This creates an ALIAS
@@ -37,7 +37,7 @@ print(f"  Same object? {inventory is backup}")
 # {{APPROACH_2_NAME}}
 # {{CONTEXT_APPROACH_2_NARRATIVE}}
 #
-# Version B: Slice Copy (Creates Independent Copy)
+# גרסה ב׳: העתקה עם פרוסה (יוצרת עותק עצמאי)
 
 # %%
 backup = inventory[:]  # This creates a COPY
@@ -62,14 +62,14 @@ print(f"  Same object? {inventory is backup}")
 # {{APPROACH_3_NAME}}
 # {{CONTEXT_APPROACH_3_NARRATIVE}}
 #
-# Version C: list() Constructor (Also Creates Copy)
+# גרסה ג׳: הבנאי `list()` (גם הוא יוצר עותק)
 
 # %%
 backup = list(inventory)  # This creates a COPY
 return backup
 
 # %% [markdown]
-# ## YOUR ANALYSIS
+# ## הניתוח שלך
 
 # %%
 # YOUR ANALYSIS
@@ -95,16 +95,16 @@ Most common mistake beginners make:
 return analysis
 
 # %% [markdown]
-# COMPARISON 2: Passing Lists to Functions
+# השוואה 2: העברת רשימות לפונקציות
 #
-# What happens when you pass a list to a function?
+# מה קורה כשמעבירים רשימה לפונקציה?
 
 # %%
 items.append("new item")
 items[0] = "changed"
 
 # %% [markdown]
-# ## No return needed - original is modified
+# ## אין צורך ב-`return` — המקור עצמו משתנה
 
 # %%
 result = items[:]  # Work on a copy
@@ -147,7 +147,7 @@ Which is more "functional" style?
 return analysis
 
 # %% [markdown]
-# ## COMPARISON 3: Building Up vs Replacing
+# ## השוואה 3: בנייה הדרגתית לעומת יצירה ישירה
 
 # %%
 items = []

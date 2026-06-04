@@ -9,10 +9,10 @@
 # {{CONTEXT_DECODE_ERROR_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Error 1: Missing Return Statement
+# ## שגיאה 1: חסר משפט `return`
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "exercise.py", line 8, in <module>
@@ -42,10 +42,10 @@ print(total)
 pass
 
 # %% [markdown]
-# Error 2: Using None in String Formatting
+# ## שגיאה 2: שימוש ב-`None` בעיצוב מחרוזת
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "exercise.py", line 7, in <module>
@@ -72,10 +72,10 @@ print(message)
 pass
 
 # %% [markdown]
-# Error 3: Calling Methods on None
+# ## שגיאה 3: קריאה לפונקציה על `None`
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "exercise.py", line 7, in <module>
@@ -103,10 +103,10 @@ print(upper_name)
 pass
 
 # %% [markdown]
-# Error 4: Using None in a Calculation
+# ## שגיאה 4: שימוש ב-`None` בחישוב מתמטי
 # {{CONTEXT_ERROR_4_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "exercise.py", line 9, in <module>
@@ -134,10 +134,10 @@ print(f"Final: {final_score}")
 pass
 
 # %% [markdown]
-# Error 5: Chaining Functions with None
+# ## שגיאה 5: שרשור פונקציות עם `None`
 # {{CONTEXT_ERROR_5_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "exercise.py", line 13, in <module>

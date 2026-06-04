@@ -2,16 +2,16 @@
 # {{CONTEXT_ERROR_HANDLING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Handling invalid game commands gracefully
-# Difficulty: 3-4
+# נושא: טיפול בפקודות משחק שגויות בצורה חיננית
+# רמת קושי: 3-4
 #
-# Games need robust command handling - players will type anything!
-# Make the game respond helpfully to invalid input.
+# משחקים חייבים לטפל בקלט בצורה חזקה — שחקנים יכולים לכתוב כל דבר!
+# גרמי למשחק להגיב בצורה מועילה לקלט לא חוקי.
 #
-# {{HANDLING_1_TITLE}}
+# ## {{HANDLING_1_TITLE}}
 # {{CONTEXT_HANDLING_1_NARRATIVE}}
 #
-# This movement system crashes on invalid directions.
+# מערכת התנועה הזאת קורסת כשמקבלת כיוון לא חוקי.
 
 # %%
 moves = {"north": (0, 1), "south": (0, -1), "east": (1, 0), "west": (-1, 0)}
@@ -19,23 +19,21 @@ dx, dy = moves[direction]  # KeyError if direction invalid!
 return dx, dy
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_1}}
 #
-# Step 1: Define moves dictionary
-# Step 2: Convert direction to lowercase
-# Step 3: If direction in moves, return the delta
-# Step 4: Otherwise, print error and return (0, 0)
+# 1. הגדירי מילון `moves` עם הכיוונים
+# 2. המירי את `direction` לאותיות קטנות
+# 3. אם הכיוון נמצא ב-`moves`, החזירי את הדלתא
+# 4. אחרת, הדפיסי הודעת שגיאה והחזירי `(0, 0)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_2_TITLE}}
+# ## {{HANDLING_2_TITLE}}
 # {{CONTEXT_HANDLING_2_NARRATIVE}}
 #
-# This attack command crashes if target doesn't exist.
+# פקודת ההתקפה הזאת קורסת אם היעד לא קיים.
 
 # %%
 for i, enemy in enumerate(enemies):
@@ -45,85 +43,77 @@ for i, enemy in enumerate(enemies):
 return False
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_2}}
 #
-# Step 1: Loop through enemies to find target
-# Step 2: If not found after loop, return not found message
-# Step 3: If found but hp <= 0, return already defeated message
-# Step 4: Apply damage
-# Step 5: If hp now <= 0, return defeated message
-# Step 6: Otherwise return hit message
+# 1. עברי על רשימת האויבים כדי למצוא את היעד
+# 2. אם לא נמצא בסוף הלולאה, החזירי הודעת "לא נמצא"
+# 3. אם נמצא אך `hp <= 0`, החזירי הודעת "כבר הובס"
+# 4. הורידי נזק
+# 5. אם `hp` עכשיו `<= 0`, החזירי הודעת "הובס"
+# 6. אחרת, החזירי הודעת פגיעה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_3_TITLE}}
+# ## {{HANDLING_3_TITLE}}
 # {{CONTEXT_HANDLING_3_NARRATIVE}}
 #
-# This inventory use command has multiple failure modes.
+# פקודת השימוש בחפץ הזאת יכולה להיכשל בכמה דרכים.
 
 # %%
 inventory.remove(item_name)  # ValueError if not present!
 return f"Used {item_name}"
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_3}}
 #
-# Step 1: Check if inventory is empty
-# Step 2: Check if item_name is in inventory
-# Step 3: If present, remove and return success
-# Step 4: Otherwise return appropriate error
+# 1. בדקי אם המלאי ריק
+# 2. בדקי אם `item_name` נמצא במלאי
+# 3. אם נמצא, הסירי אותו והחזירי הודעת הצלחה
+# 4. אחרת, החזירי הודעת שגיאה מתאימה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_4_TITLE}}
+# ## {{HANDLING_4_TITLE}}
 # {{CONTEXT_HANDLING_4_NARRATIVE}}
 #
-# This shop system has multiple ways to fail.
+# מערכת החנות הזאת יכולה להיכשל בכמה דרכים.
 
 # %%
 price = item_prices[item_name]
 return gold - price, item_name
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_4}}
 #
-# Step 1: Check if item_name in item_prices
-# Step 2: Get the price
-# Step 3: Check if player has enough gold
-# Step 4: If all good, return new gold and success message
+# 1. בדקי אם `item_name` נמצא ב-`item_prices`
+# 2. קבלי את המחיר
+# 3. בדקי אם לשחקן יש מספיק זהב
+# 4. אם הכל בסדר, החזירי את כמות הזהב החדשה והודעת הצלחה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_5_TITLE}}
+# ## {{HANDLING_5_TITLE}}
 # {{CONTEXT_HANDLING_5_NARRATIVE}}
 #
-# Build a complete command parser with validation.
-#
-# ✏️ ADD ERROR HANDLING ✏️
+# בני מנתח פקודות שלם עם בדיקות קלט.
 #
 # {{CONTEXT_HANDLING_HINT_5}}
 #
-# Step 1: Strip and lowercase the command
-# Step 2: If empty, return error
-# Step 3: Split into parts
-# Step 4: First part is the action
-# Step 5: Check if action is valid
-# Step 6: For commands needing args (move, attack, use):
-#         - Check args provided
-#         - For move, validate direction
-# Step 7: Return (action, args) or appropriate error
+# 1. נקי רווחים מהפקודה והמירי לאותיות קטנות
+# 2. אם הפקודה ריקה, החזירי שגיאה
+# 3. פצלי לחלקים
+# 4. החלק הראשון הוא הפעולה
+# 5. בדקי אם הפעולה חוקית
+# 6. לפקודות שדורשות ארגומנטים (`move`, `attack`, `use`):
+#    - בדקי שניתנו ארגומנטים
+#    - עבור `move`, אמתי שהכיוון חוקי
+# 7. החזירי `(action, args)` או הודעת שגיאה מתאימה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

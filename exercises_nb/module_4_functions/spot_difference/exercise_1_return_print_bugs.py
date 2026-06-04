@@ -9,10 +9,10 @@
 # {{CONTEXT_SPOT_DIFFERENCE_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Comparison 1: Basic Return vs Print
+# ## השוואה 1: `return` לעומת `print` — הבסיס
 # {{CONTEXT_COMPARISON_1_NARRATIVE}}
 #
-# These two functions look similar. Find the critical difference.
+# שתי הפונקציות האלה נראות דומות. מצאי את ההבדל הקריטי ביניהן.
 
 # %%
 def get_hero():
@@ -55,7 +55,7 @@ Why this matters:
 return explanation
 
 # %% [markdown]
-# Comparison 2: Using Result in Calculation
+# ## השוואה 2: שימוש בתוצאה לחישוב
 # {{CONTEXT_COMPARISON_2_NARRATIVE}}
 
 # %%
@@ -93,7 +93,7 @@ Why this matters:
 return explanation
 
 # %% [markdown]
-# Comparison 3: String Building
+# ## השוואה 3: בניית מחרוזת
 # {{CONTEXT_COMPARISON_3_NARRATIVE}}
 
 # %%
@@ -131,7 +131,7 @@ Why this matters:
 return explanation
 
 # %% [markdown]
-# Comparison 4: Conditional Return
+# ## השוואה 4: החזרה מותנית
 # {{CONTEXT_COMPARISON_4_NARRATIVE}}
 
 # %%
@@ -171,7 +171,7 @@ Why this matters:
 return explanation
 
 # %% [markdown]
-# Comparison 5: Function Chaining
+# ## השוואה 5: שרשור פונקציות
 # {{CONTEXT_COMPARISON_5_NARRATIVE}}
 
 # %%

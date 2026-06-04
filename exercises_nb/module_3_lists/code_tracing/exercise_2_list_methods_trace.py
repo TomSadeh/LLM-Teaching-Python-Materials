@@ -9,9 +9,9 @@
 # {{CONTEXT_CODE_TRACING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{TRACE_1_TITLE}}
+# ## {{TRACE_1_TITLE}}
 # {{CONTEXT_TRACE_1_NARRATIVE}}
-# Track how append() and pop() change the list.
+# עקבי אחרי הדרך שבה `append()` ו-`pop()` משנות את הרשימה.
 
 # %%
 inventory = ["{{item}}"]
@@ -46,9 +46,9 @@ print(f"After pop: {inventory}")
 pass
 
 # %% [markdown]
-# {{TRACE_2_TITLE}}
+# ## {{TRACE_2_TITLE}}
 # {{CONTEXT_TRACE_2_NARRATIVE}}
-# Track how insert() places items at specific positions.
+# עקבי אחרי הדרך שבה `insert()` מכניסה פריטים למיקומים מסוימים ברשימה.
 
 # %%
 team = ["{{hero}}", "{{mentor}}"]
@@ -78,9 +78,9 @@ print(f"After insert at 0: {team}")
 pass
 
 # %% [markdown]
-# {{TRACE_3_TITLE}}
+# ## {{TRACE_3_TITLE}}
 # {{CONTEXT_TRACE_3_NARRATIVE}}
-# Track how remove() deletes by VALUE (not index).
+# עקבי אחרי הדרך שבה `remove()` מוחקת לפי ערך (ולא לפי אינדקס).
 
 # %%
 abilities = ["{{spell1}}", "{{spell2}}", "{{spell1}}", "{{spell3}}"]
@@ -109,9 +109,9 @@ print(f"After remove: {abilities}")
 pass
 
 # %% [markdown]
-# {{TRACE_4_TITLE}}
+# ## {{TRACE_4_TITLE}}
 # {{CONTEXT_TRACE_4_NARRATIVE}}
-# Combine multiple methods in sequence.
+# שלבי מספר פעולות ברצף.
 
 # %%
 items = []

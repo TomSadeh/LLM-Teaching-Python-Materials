@@ -2,142 +2,122 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Using the random module
-# Difficulty: 2-3
+# נושא: שימוש במודול `random`
+# רמת קושי: 2-3
 #
-# The random module lets you generate random numbers and make random choices.
-# Essential for games with unpredictable elements!
+# המודול `random` מאפשר לך לייצר מספרים אקראיים ולבחור פריטים באקראי.
+# הכרחי למשחקים עם אלמנטים של הפתעה!
 
 # %%
 import random
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# random.randint(a, b) returns a random integer from a to b INCLUSIVE.
-# Unlike range(), both endpoints are included!
+# `random.randint(a, b)` מחזירה מספר שלם אקראי בין a ל-b כולל.
+# בניגוד ל-`range()`, שני הקצוות נכללים!
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use random.randint(1, num_sides) to get a number from 1 to num_sides
+# השתמשי ב-`random.randint(1, num_sides)` כדי לקבל מספר בין 1 ל-num_sides
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Initialize total = 0
-# Step 2: Loop num_dice times
-# Step 3: Add a random roll to total
-# Step 4: Return total
+# 1. אתחלי `total = 0`
+# 2. עברי בלולאה `num_dice` פעמים
+# 3. הוסיפי לזריקה אקראית ל-`total`
+# 4. החזירי את `total`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# random.choice(sequence) picks a random item from a list or string.
+# `random.choice(sequence)` בוחרת פריט אקראי מרשימה או מחרוזת.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use random.choice(items)
+# השתמשי ב-`random.choice(items)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create the adjectives list
-# Step 2: Create the nouns list
-# Step 3: Pick random adjective with random.choice()
-# Step 4: Pick random noun with random.choice()
-# Step 5: Return f"{adjective} {noun}"
+# 1. צרי את רשימת התארים (adjectives)
+# 2. צרי את רשימת השמות (nouns)
+# 3. בחרי תואר אקראי עם `random.choice()`
+# 4. בחרי שם אקראי עם `random.choice()`
+# 5. החזירי `f"{adjective} {noun}"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# random.random() returns a float from 0.0 to 1.0 (exclusive).
-# Useful for percentage-based chances.
+# `random.random()` מחזירה מספר עשרוני בין 0.0 ל-1.0 (לא כולל 1.0).
+# שימושי לחישוב סיכויים באחוזים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# If random.random() < probability, return True
-# Otherwise return False
+# אם `random.random() < probability`, החזירי `True`
+# אחרת החזירי `False`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use chance_event() to determine if successful
-# Print the appropriate message
-# Return "success" or "failure"
+# השתמשי ב-`chance_event()` כדי לבדוק אם הפעולה הצליחה
+# הדפיסי את ההודעה המתאימה
+# החזירי `"success"` או `"failure"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# Combine random functions to create game mechanics.
+# שלבי פונקציות `random` שונות כדי ליצור מכניקות משחק.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. קבלי מספר עשרוני אקראי עם `random.random()`
+# 2. עקבי אחר ההסתברות המצטברת
+# 3. עברי בלולאה על האפשרויות והמשקלים יחד
+#    - הוסיפי את המשקל למצטבר
+#    - אם הערך האקראי < המצטבר, החזירי את האפשרות הנוכחית
+# 4. החזירי את האפשרות האחרונה (ביטחון)
 #
-# Step 1: Get a random float with random.random()
-# Step 2: Track cumulative probability
-# Step 3: Loop through options and weights together
-#         - Add weight to cumulative
-#         - If random value < cumulative, return that option
-# Step 4: Return last option (safety fallback)
-#
-# Hint: Use zip(options, weights) to loop through both
+# > רמז: השתמשי ב-`zip(options, weights)` כדי לעבור על שניהם יחד
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Define rarities and weights
-# Step 2: Use weighted_random_choice to pick rarity
-# Step 3: Create item name based on rarity
-# Step 4: Return (item_name, rarity)
+# 1. הגדירי רשימת נדירויות (rarities) ומשקלים (weights)
+# 2. השתמשי ב-`weighted_random_choice` כדי לבחור נדירות
+# 3. צרי שם פריט על פי הנדירות שנבחרה
+# 4. החזירי `(item_name, rarity)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# Generate random numbers within ranges for game scenarios.
+# ייצרי מספרים אקראיים בטווחים שונים לתרחישי משחק.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Generate each base stat with random.randint()
-# Step 2: Calculate derived stats
-# Step 3: Return dictionary with all stats
+# 1. ייצרי כל סטטיסטיקה בסיסית עם `random.randint()`
+# 2. חשבי סטטיסטיקות נגזרות
+# 3. החזירי מילון עם כל הסטטיסטיקות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Calculate attacker's damage
-# Calculate defender's damage
-# Return both as a tuple
+# חשבי את נזק התוקף
+# חשבי את נזק המגן
+# החזירי את שניהם כ-tuple
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -16,12 +16,12 @@ import turtle
 # {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Draw two separate squares with a gap between them.
+# **מה אמור לקרות:**
+# לצייר שני ריבועים נפרדים עם רווח ביניהם.
 #
-# ACTUAL BEHAVIOR:
-# The squares are connected by a line! There should be no line
-# between them.
+# **מה קורה בפועל:**
+# הריבועים מחוברים בקו! אמור להיות אין קו
+# ביניהם.
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -44,13 +44,11 @@ for i in range(4):
     t.right(90)
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה גיליתי: ________________________________
+# > רמז: כדי לזוז בלי לצייר, צריך להרים את העט קודם!
+# > השתמשי ב-`t.penup()` לפני הזוז וב-`t.pendown()` אחריו.
 #
-# What I found: ________________________________
-# Hint: To move without drawing, you need to lift the pen first!
-# Use t.penup() before moving and t.pendown() after.
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -59,11 +57,11 @@ for i in range(4):
 # {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Calculate total = 10 + 20 + 30 + 40 = 100 and print it.
+# **מה אמור לקרות:**
+# לחשב total = 10 + 20 + 30 + 40 = 100 ולהדפיס אותו.
 #
-# ACTUAL BEHAVIOR:
-# The program prints 0 at the end! The sum is wrong.
+# **מה קורה בפועל:**
+# התוכנית מדפיסה 0 בסוף! הסכום שגוי.
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -76,13 +74,11 @@ for i in range(1, 5):
 print("Total distance:", total)
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה גיליתי: ________________________________
+# > רמז: התבנית הנכונה של המצבר היא: `total = total + distance`
+# > ולא: `total = 0 + distance` (שמאפסת לערך האחרון)
 #
-# What I found: ________________________________
-# Hint: The accumulator pattern should be: total = total + distance
-# Not: total = 0 + distance (which resets to the last value)
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -91,11 +87,11 @@ print("Total distance:", total)
 # {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Draw a star shape using 5 iterations with 144-degree turns.
+# **מה אמור לקרות:**
+# לצייר צורת כוכב עם 5 איטרציות ופניות של 144 מעלות.
 #
-# ACTUAL BEHAVIOR:
-# The program crashes with a NameError!
+# **מה קורה בפועל:**
+# התוכנית קורסת עם `NameError`!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -111,13 +107,11 @@ for i in range(5):
     turtle.right(144)  # Bug is here!
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה גיליתי: ________________________________
+# > רמז: יצרנו צב בשם `t`, אבל שורה אחת משתמשת ב-`turtle`
+# > במקום ב-`t`. שמות משתנים חייבים להיות עקביים!
 #
-# What I found: ________________________________
-# Hint: We created a turtle named 't', but one line uses 'turtle'
-# instead of 't'. Variable names must be consistent!
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -126,11 +120,11 @@ for i in range(5):
 # {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Draw a spiral with lines getting longer: 10, 20, 30, 40, 50.
+# **מה אמור לקרות:**
+# לצייר ספירלה עם קווים שמתארכים: 10, 20, 30, 40, 50.
 #
-# ACTUAL BEHAVIOR:
-# All lines are the same length! The spiral doesn't grow.
+# **מה קורה בפועל:**
+# כל הקווים באותו אורך! הספירלה לא גדלה.
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -147,13 +141,11 @@ for i in range(1, 6):
     t.right(90)
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה גיליתי: ________________________________
+# > רמז: האורך צריך להשתנות בהתאם ל-`i`.
+# > לספירלה גדלה: `length = i * 10`
 #
-# What I found: ________________________________
-# Hint: The length should change based on i.
-# For a growing spiral: length = i * 10
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -162,11 +154,11 @@ for i in range(1, 6):
 # {{CASE_5_TITLE}}
 # {{CONTEXT_CASE_5_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Draw 5 dashes separated by gaps.
+# **מה אמור לקרות:**
+# לצייר 5 מקפים עם רווחים ביניהם.
 #
-# ACTUAL BEHAVIOR:
-# After the first dash, nothing else is drawn!
+# **מה קורה בפועל:**
+# אחרי המקף הראשון, שום דבר לא מצטייר!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_5}}
 
@@ -183,14 +175,12 @@ for i in range(5):
     t.forward(15)   # Move gap
 
 # %% [markdown]
-# ## Bug: forgot to put pen back down!
+# ## שגיאה: שכחו לשים את העט בחזרה למטה!
 #
-# ✏️ FIX THE BUG ✏️
+# מה גיליתי: ________________________________
+# > רמז: אחרי הזזת הרווח, צריך `t.pendown()` כדי לצייר שוב!
 #
-# What I found: ________________________________
-# Hint: After moving the gap, you need t.pendown() to draw again!
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

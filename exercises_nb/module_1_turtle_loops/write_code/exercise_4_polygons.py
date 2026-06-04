@@ -13,109 +13,99 @@
 import turtle
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ציירי מחומש (5 צלעות) עבור {{hero}}.
 #
-# Draw a regular pentagon (5 sides) for {{hero}}.
+# 1. צרי צב חדש
+# 2. השתמשי בלולאה `for` עם `range(5)`
+# 3. בתוך הלולאה:
+#    - `t.forward(70)`
+#    - `t.right(72)`  # 360/5 = 72 מעלות
 #
-# Step 1: Create a turtle
-# Step 2: Use a for loop with range(5)
-# Step 3: Inside the loop:
-#         - t.forward(70)
-#         - t.right(72)  # 360/5 = 72 degrees
+# נוסחת המפתח: זווית חיצונית = 360 / מספר_הצלעות
+# מחומש: 360 / 5 = 72 מעלות
 #
-# Key formula: exterior angle = 360 / number_of_sides
-# Pentagon: 360 / 5 = 72 degrees
-#
-# Expected: A regular 5-sided shape.
+# פלט צפוי: צורה קבועה עם 5 צלעות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ציירי משושה (6 צלעות) ב{{school}}.
 #
-# Draw a regular hexagon (6 sides) at {{school}}.
+# 1. צרי צב חדש
+# 2. מקמי אותו ב-(100, 0) בעזרת `penup` / `goto` / `pendown`
+# 3. השתמשי בלולאה `for` עם `range(6)`
+# 4. בתוך הלולאה:
+#    - `forward(60)`
+#    - `right(60)`  # 360/6 = 60 מעלות
 #
-# Step 1: Create a turtle
-# Step 2: Position it at (100, 0) using penup/goto/pendown
-# Step 3: Use a for loop with range(6)
-# Step 4: Inside the loop:
-#         - forward(60)
-#         - right(60)  # 360/6 = 60 degrees
-#
-# Expected: A regular 6-sided shape.
+# פלט צפוי: צורה קבועה עם 6 צלעות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ציירי משמונה (8 צלעות) עבור {{creature}}.
 #
-# Draw a regular octagon (8 sides) for {{creature}}.
+# 1. צרי צב חדש
+# 2. מקמי אותו ב-(-100, 0)
+# 3. השתמשי בלולאה `for` עם `range(8)`
+# 4. בתוך הלולאה:
+#    - `forward(50)`
+#    - `right(45)`  # 360/8 = 45 מעלות
 #
-# Step 1: Create a turtle
-# Step 2: Position it at (-100, 0)
-# Step 3: Use a for loop with range(8)
-# Step 4: Inside the loop:
-#         - forward(50)
-#         - right(45)  # 360/8 = 45 degrees
-#
-# Expected: A regular 8-sided shape.
+# פלט צפוי: צורה קבועה עם 8 צלעות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ציירי עשרון (10 צלעות) ב{{location}}.
 #
-# Draw a regular decagon (10 sides) at {{location}}.
+# 1. צרי צב חדש
+# 2. מקמי אותו ב-(0, -150)
+# 3. השתמשי בלולאה `for` עם `range(10)`
+# 4. בתוך הלולאה:
+#    - `forward(40)`
+#    - `right(36)`  # 360/10 = 36 מעלות
 #
-# Step 1: Create a turtle
-# Step 2: Position it at (0, -150)
-# Step 3: Use a for loop with range(10)
-# Step 4: Inside the loop:
-#         - forward(40)
-#         - right(36)  # 360/10 = 36 degrees
-#
-# Expected: A regular 10-sided shape (almost a circle!).
+# פלט צפוי: צורה קבועה עם 10 צלעות (כמעט עיגול!).
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ציירי מספר מצולעים בשורה ב{{place}}.
+# ציירי בסדר: משולש, ריבוע, מחומש, משושה — משמאל לימין.
 #
-# Draw multiple polygons in a row at {{place}}.
-# Draw: triangle, square, pentagon, hexagon from left to right.
+# 1. צרי צב חדש והגדירי `t.speed(0)`
+# 2. התחילי מהמיקום (-250, 100)
+# 3. עבור כל צורה:
+#    - ציירי את המצולע בעזרת לולאה
+#    - הזזי ימינה למיקום הבא (`penup`, `forward 150`, `pendown`)
 #
-# Step 1: Create a turtle and set t.speed(0)
-# Step 2: Start at position (-250, 100)
-# Step 3: For each shape:
-#         - Draw the polygon using a loop
-#         - Move right to the next position (penup, forward 150, pendown)
+# הצורות לציור:
+#   משולש: 3 צלעות, פניות של 120 מעלות, `forward` 50
+#   ריבוע: 4 צלעות, פניות של 90 מעלות, `forward` 40
+#   מחומש: 5 צלעות, פניות של 72 מעלות, `forward` 35
+#   משושה: 6 צלעות, פניות של 60 מעלות, `forward` 30
 #
-# Shapes to draw:
-#   Triangle: 3 sides, 120 degree turns, 50 forward
-#   Square: 4 sides, 90 degree turns, 40 forward
-#   Pentagon: 5 sides, 72 degree turns, 35 forward
-#   Hexagon: 6 sides, 60 degree turns, 30 forward
-#
-# Hint: After drawing each shape, move right before starting the next.
+# > רמז: אחרי שציירת כל צורה, הזזי ימינה לפני שמתחילים את הבאה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

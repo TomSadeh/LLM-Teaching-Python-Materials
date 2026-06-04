@@ -5,30 +5,28 @@
 # Topic: Common file handling patterns
 # Difficulty: 2-3
 #
-# Complete these file handling functions by implementing the core logic.
-# The function signatures and docstrings are provided.
+# השלימי את הפונקציות הבאות לטיפול בקבצים — הוסיפי את הלוגיקה המרכזית.
+# חתימות הפונקציות ו-docstrings כבר מוכנות עבורך.
 #
-# {{FUNCTION_1_TITLE}}
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 #
-# Complete a function to read a file and return its contents.
+# השלימי פונקציה שקוראת קובץ ומחזירה את תוכנו.
 
 # %%
 # Started for you:
 content = ""
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_1}}
 #
-# Step 1: Try to open the file with 'with open()'
+# 1. נסי לפתוח את הקובץ עם `with open()`
 #
-# Step 2: Read the content with f.read()
+# 2. קראי את התוכן עם `f.read()`
 #
-# Step 3: Handle FileNotFoundError by returning empty string
+# 3. טפלי ב-`FileNotFoundError` על ידי החזרת מחרוזת ריקה
 #
-# Pattern:
+# תבנית:
 #   try:
 #       with open(filename, "r") as f:
 #           content = f.read()
@@ -43,27 +41,25 @@ content = ""
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_2_TITLE}}
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 #
-# Complete a function to write a list to a file.
+# השלימי פונקציה שכותבת רשימה לקובץ.
 
 # %%
 # Started for you:
 count = 0
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_2}}
 #
-# Step 1: Open file for writing
+# 1. פתחי את הקובץ לכתיבה
 #
-# Step 2: Loop through items and write each with newline
+# 2. עברי על הפריטים וכתבי כל אחד עם שורה חדשה
 #
-# Step 3: Count items written
+# 3. ספרי את הפריטים שנכתבו
 #
-# Step 4: Return the count
+# 4. החזירי את הספירה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -72,29 +68,27 @@ count = 0
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_3_TITLE}}
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 #
-# Complete a function to read a file into a list.
+# השלימי פונקציה שקוראת קובץ לתוך רשימה.
 
 # %%
 # Started for you:
 lines = []
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_3}}
 #
-# Step 1: Try to open the file
+# 1. נסי לפתוח את הקובץ
 #
-# Step 2: Read lines and strip whitespace:
+# 2. קראי שורות והסירי רווחים מיותרים:
 #         for line in f:
 #             lines.append(line.strip())
 #
-# Step 3: Handle FileNotFoundError
+# 3. טפלי ב-`FileNotFoundError`
 #
-# Step 4: Return lines
+# 4. החזירי את `lines`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -103,22 +97,20 @@ lines = []
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_4_TITLE}}
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 #
-# Complete a function to append to a file.
-#
-# ✏️ COMPLETE THIS FUNCTION ✏️
+# השלימי פונקציה שמוסיפה תוכן לסוף קובץ.
 #
 # {{CONTEXT_FUNCTION_HINT_4}}
 #
-# Step 1: Open file in append mode "a"
+# 1. פתחי את הקובץ במצב הוספה `"a"`
 #
-# Step 2: Write the text
+# 2. כתבי את הטקסט
 #
-# Step 3: Return True
+# 3. החזירי `True`
 #
-# Note: Append mode creates the file if it doesn't exist
+# > רמז: מצב הוספה יוצר את הקובץ אם הוא לא קיים
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -127,29 +119,27 @@ pass  # Replace with implementation
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_5_TITLE}}
+# ## {{FUNCTION_5_TITLE}}
 # {{CONTEXT_FUNCTION_5_NARRATIVE}}
 #
-# Complete a function to count lines in a file.
+# השלימי פונקציה שסופרת שורות בקובץ.
 
 # %%
 # Started for you:
 count = 0
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_5}}
 #
-# Step 1: Try to open the file
+# 1. נסי לפתוח את הקובץ
 #
-# Step 2: Count lines:
+# 2. ספרי שורות:
 #         for line in f:
 #             count += 1
 #
-# Step 3: Handle FileNotFoundError (return 0)
+# 3. טפלי ב-`FileNotFoundError` (החזירי 0)
 #
-# Step 4: Return count
+# 4. החזירי את `count`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -158,32 +148,30 @@ count = 0
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_6_TITLE}}
+# ## {{FUNCTION_6_TITLE}}
 # {{CONTEXT_FUNCTION_6_NARRATIVE}}
 #
-# Complete a function to search for text in a file.
+# השלימי פונקציה שמחפשת טקסט בקובץ.
 
 # %%
 # Started for you:
 matches = []
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
 # {{CONTEXT_FUNCTION_HINT_6}}
 #
-# Step 1: Try to open the file
+# 1. נסי לפתוח את הקובץ
 #
-# Step 2: Enumerate lines (starting from 1):
+# 2. עברי על השורות עם מספור (החל מ-1):
 #         for line_num, line in enumerate(f, 1):
 #
-# Step 3: Check if search_term is in line (case-insensitive):
+# 3. בדקי אם `search_term` מופיע בשורה (ללא רגישות לאותיות גדולות/קטנות):
 #         if search_term.lower() in line.lower():
 #             matches.append((line_num, line.strip()))
 #
-# Step 4: Handle FileNotFoundError
+# 4. טפלי ב-`FileNotFoundError`
 #
-# Step 5: Return matches
+# 5. החזירי את `matches`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

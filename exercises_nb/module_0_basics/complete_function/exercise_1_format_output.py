@@ -9,15 +9,13 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{FUNCTION_1_TITLE}}
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 #
-# ✏️ COMPLETE THIS FUNCTION ✏️
+# השתמשי ב-f-string כדי ליצור את ברכת ההצגה.
+# f-strings מאפשרות לך לשים משתנים בתוך סוגריים מסולסלים: `f"Hello, {name}!"`
 #
-# Use an f-string to create the greeting.
-# f-strings let you put variables inside curly braces: f"Hello, {name}!"
-#
-# Hint: The f goes BEFORE the opening quote.
+# > רמז: האות `f` באה לפני גרש הפתיחה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -26,29 +24,25 @@
 pass  # Replace with: return f"..."
 
 # %% [markdown]
-# {{FUNCTION_2_TITLE}}
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 #
-# ✏️ COMPLETE THIS FUNCTION ✏️
+# השתמשי ב-f-string עם כמה משתנים.
+# אפשר לשים כל משתנה בתוך `{סוגריים מסולסלים}`.
 #
-# Use an f-string with multiple variables.
-# You can put any variable inside {braces}.
-#
-# Hint: Numbers work inside f-strings too!
+# > רמז: מספרים עובדים בתוך f-strings בדיוק כמו טקסט!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{FUNCTION_3_TITLE}}
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 #
-# ✏️ COMPLETE THIS FUNCTION ✏️
+# אפשר לעשות חישובים ישירות בתוך הסוגריים המסולסלים של ה-f-string!
+# לדוגמה: `f"{a} + {b} = {a + b}"`
 #
-# You can do math INSIDE the f-string braces!
-# Example: f"{a} + {b} = {a + b}"
-#
-# Hint: The calculation happens when the f-string is created.
+# > רמז: החישוב מתבצע ברגע שה-f-string נוצרת.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

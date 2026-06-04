@@ -9,13 +9,13 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגילה בת מספר חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: DISCOVERY - Observe Unexpected Behavior
+# ## חלק 1: גילוי - נצפי בהתנהגות מפתיעה
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Something strange is happening with {{hero}}'s inventory.
-# Study this code and predict what it will print.
+# משהו מוזר קורה עם המלאי של {{hero}}.
+# למדי את הקוד הזה וחזי מה הוא ידפיס.
 
 # %%
 inventory = ["{{item}}", "potion", "key", "map"]
@@ -32,12 +32,12 @@ print(f"Step 2 - After remove: {inventory}")
 print(f"Step 3 - Saved copy: {saved}")
 
 # %% [markdown]
-# YOUR PREDICTION:
-# Step 1 - Start: _______________
-# Step 2 - After remove: _______________
-# Step 3 - Saved copy: _______________
+# ## הניחושים שלך:
+# 1. שלב 1 - התחלה: _______________
+# 2. שלב 2 - אחרי `remove`: _______________
+# 3. שלב 3 - העתק השמור: _______________
 #
-# SURPRISE: Did the "saved" inventory change too? Why?
+# הפתעה: האם גם המלאי ה"שמור" השתנה? למה?
 
 # %%
 # RECORD YOUR OBSERVATIONS
@@ -53,12 +53,12 @@ observations = {
 return observations
 
 # %% [markdown]
-# PART 2: INVESTIGATION - Trace to Find the Cause
+# ## חלק 2: חקירה - עקבי אחרי הקוד כדי למצוא את הסיבה
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Trace through this code step by step to understand WHY
-# both variables point to the same list.
+# עקבי אחרי הקוד הזה שלב אחרי שלב כדי להבין למה
+# שני המשתנים מצביעים על אותה רשימה.
 
 # %%
 original = ["A", "B", "C"]
@@ -91,12 +91,12 @@ print(f"Alias: {alias}")
 pass
 
 # %% [markdown]
-# PART 3: IMPROVEMENT - Fix the Bug
+# ## חלק 3: שיפור - תקני את הבאג
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Now fix the original mystery! {{hero}} wants to ACTUALLY
-# save a backup of the inventory before {{heroine}} removes items.
+# עכשיו תקני את התעלומה המקורית! {{hero}} רוצה לשמור
+# גיבוי אמיתי של המלאי לפני ש-{{heroine}} מסירה פריטים.
 
 # %%
 inventory = ["{{item}}", "potion", "key", "map"]

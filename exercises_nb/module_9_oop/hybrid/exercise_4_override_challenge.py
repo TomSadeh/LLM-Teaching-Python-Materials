@@ -1,17 +1,17 @@
 # %% [markdown]
 # {{CONTEXT_COMPARISON_INTRO}}
 #
-# This is a multi-part exercise where two {{school}} students solved
-# the same problem with different override strategies. Evaluate
-# their approaches, implement your own, and determine best practices.
+# זוהי תרגיל רב-חלקי שבו שתי תלמידות מ-{{school}} פתרו
+# את אותה בעיה עם אסטרטגיות override שונות. העריכי
+# את הגישות שלהן, מימשי גישה משלך, וקבעי מהן שיטות העבודה הטובות ביותר.
 #
-# Programming concepts: method overriding, super(), design choices
+# מושגי תכנות: דריסת מתודות (method overriding), `super()`, בחירות עיצוביות
 #
-# PART 1: Evaluation - Compare Base Class Implementations
+# ## חלק 1: הערכה - השוואת מימושי מחלקת בסיס
 # {{CONTEXT_COMPARISON_DECISION}}
 #
-# Two students created different base classes for damage calculation.
-# Both work, but which design is better?
+# שתי תלמידות יצרו מחלקות בסיס שונות לחישוב נזק.
+# שתיהן עובדות, אבל איזה עיצוב עדיף?
 
 # %%
 class DamageCalculatorA:
@@ -69,23 +69,23 @@ class EnhancedCalculatorB(DamageCalculatorB):
         return self.multiplier  # Just change the modifier
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
+# ## הניתוח שלך
 #
-# Test both implementations:
+# בדקי את שני המימושים:
 #     calc_a = EnhancedCalculatorA(100, 1.5)
 #     calc_b = EnhancedCalculatorB(100, 1.5)
 #     print(f"A: {calc_a.calculate_damage()}")  # Should be 150
 #     print(f"B: {calc_b.calculate_damage()}")  # Should be 150
 #
-# Both produce the same result, but which is better?
+# שתיהן מייצרות את אותה תוצאה, אבל איזו עדיפה?
 #
-# Analysis questions:
-# 1. Which approach is easier to extend further?
-# 2. If you wanted to add ANOTHER modifier (like a bonus), which is easier?
-# 3. Which follows "Open/Closed Principle" better? (Open for extension,
-#    closed for modification)
+# שאלות לניתוח:
+# 1. איזו גישה קל יותר להרחיב?
+# 2. אם רצית להוסיף עוד מחליש (כמו בונוס), באיזו גישה זה קל יותר?
+# 3. איזו גישה עוקבת טוב יותר אחרי "עיקרון פתוח/סגור"? (פתוח להרחבה,
+#    סגור לשינוי)
 #
-# Write your analysis:
+# כתבי את הניתוח שלך:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -107,11 +107,11 @@ When B's approach is appropriate:
 return analysis
 
 # %% [markdown]
-# PART 2: Growth - Implement Your Override
+# ## חלק 2: יצירה - מימשי Override משלך
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Using the base class design you prefer, create a new subclass.
+# בעזרת עיצוב מחלקת הבסיס שאת מעדיפה, צרי מחלקת משנה חדשה.
 
 # %%
 class BaseCombatant:
@@ -141,33 +141,33 @@ class BaseCombatant:
         return f"{self.name} - Power: {self.get_attack_power()}"
 
 # %% [markdown]
-# ✏️ CREATE A SPECIALIZED COMBATANT ✏️
+# ## צרי לוחמת מיוחדת
 #
-# Define `CriticalStriker` inheriting from BaseCombatant:
+# הגדירי `CriticalStriker` שיורשת מ-`BaseCombatant`:
 #
-# __init__(self, name, power, crit_chance):
-#     Call super().__init__
-#     Add self.crit_chance (0.0 to 1.0)
-#     Add self.last_hit_was_crit = False
+# 1. `__init__(self, name, power, crit_chance)`:
+#     קראי ל-`super().__init__`
+#     הוסיפי `self.crit_chance` (בין 0.0 ל-1.0)
+#     הוסיפי `self.last_hit_was_crit = False`
 #
-# Override calculate_buff_bonus(self):
-#     Get parent's buff bonus using super()
-#     If crit_chance > 0.5, add an extra 0.2 (crit builds benefit more)
-#     Return the total bonus
+# 2. דרסי את `calculate_buff_bonus(self)`:
+#     קבלי את בונוס הבאפים של ההורה בעזרת `super()`
+#     אם `crit_chance > 0.5`, הוסיפי עוד 0.2 (בנייות קריט מרוויחות יותר)
+#     החזירי את הסכום הכולל
 #
-# Add critical_strike(self):
-#     Import random if not done
-#     If random.random() < self.crit_chance:
-#         self.last_hit_was_crit = True
-#         Return self.get_attack_power() * 2  # Double damage!
-#     Else:
-#         self.last_hit_was_crit = False
-#         Return self.get_attack_power()
+# 3. הוסיפי `critical_strike(self)`:
+#     ייבאי `random` אם עוד לא עשית
+#     אם `random.random() < self.crit_chance`:
+#         `self.last_hit_was_crit = True`
+#         החזירי `self.get_attack_power() * 2`  # נזק כפול!
+#     אחרת:
+#         `self.last_hit_was_crit = False`
+#         החזירי `self.get_attack_power()`
 #
-# Override get_info(self):
-#     Extend parent's info to include crit chance
+# 4. דרסי את `get_info(self)`:
+#     הרחיבי את המידע של ההורה כך שיכלול את אחוז הקריט
 #
-# Test:
+# בדיקה:
 #     striker = CriticalStriker("{{hero}}", 50, 0.6)
 #     striker.add_buff("{{spell1}}")
 #     print(striker.get_info())
@@ -180,10 +180,10 @@ class BaseCombatant:
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Evaluation - Compare Override Strategies
+# ## חלק 3: הערכה - השוואת אסטרטגיות Override
 # {{CONTEXT_ANALYSIS_PROMPT}}
 #
-# Two ways to add healing to combatants - which is better?
+# שתי דרכים להוסיף ריפוי ללוחמות - איזו עדיפה?
 
 # %%
 class HealerTypeA(BaseCombatant):
@@ -220,15 +220,15 @@ class HealerTypeB(BaseCombatant):
         return amount
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
+# ## הניתוח שלך
 #
-# Consider these scenarios:
+# שקלי את התרחישים הבאים:
 #
-# Scenario 1: A system expects positive attack values
-# Scenario 2: You want to attack AND heal in the same turn
-# Scenario 3: Other code checks combatant.get_attack_power() for AI decisions
+# תרחיש 1: מערכת שמצפה לערכי תקיפה חיוביים
+# תרחיש 2: את רוצה לתקוף וגם לרפא באותה תור
+# תרחיש 3: קוד אחר בודק `combatant.get_attack_power()` להחלטות AI
 #
-# Write your analysis:
+# כתבי את הניתוח שלך:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -251,7 +251,7 @@ General principle this illustrates:
 return analysis
 
 # %% [markdown]
-# ## MAIN
+# ## הרצה ראשית
 
 # %%
 print("=" * 60)

@@ -1,157 +1,139 @@
 # %% [markdown]
 # {{CONTEXT_OWNERSHIP_INTRO}}
 #
-# This is your capstone project: Build Your Own Game!
-# Follow the guided steps to create a complete, polished game.
+# זהו פרויקט הסיום שלך: בני את המשחק שלך!
+# עקבי אחרי השלבים המודרכים כדי ליצור משחק שלם ומלוטש.
 #
-# Programming concepts: Everything from Module 5!
+# מושגי תכנות: כל מה שלמדנו במודול 5!
 
 # %%
 import random
 
 # %% [markdown]
-# PART 1: Design Your Game
+# ## חלק 1: עצבי את המשחק שלך
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Before coding, design your game!
+# לפני שמתחילים לכתוב קוד, עצבי את המשחק!
 #
-# Answer these questions (in comments or on paper):
-# 1. What is your game about? (theme, story)
-# 2. What does the player do? (actions, goals)
-# 3. How does the player win? (win condition)
-# 4. How does the player lose? (lose condition, or none?)
-# 5. What makes it fun? (randomness, choices, challenge)
+# ענּי על השאלות האלה (בהערות או על נייר):
+# 1. על מה המשחק שלך? (נושא, סיפור)
+# 2. מה השחקנית עושה? (פעולות, מטרות)
+# 3. איך השחקנית מנצחת? (תנאי ניצחון)
+# 4. איך השחקנית מפסידה? (תנאי הפסד, או שאין?)
+# 5. מה הופך אותו לכיף? (אקראיות, בחירות, אתגר)
 #
-# MY GAME DESIGN
-# --------------
-# Theme: ________________________________
-# Goal: ________________________________
-# Win condition: ________________________________
-# Lose condition: ________________________________
-# Core mechanic: ________________________________
+# עיצוב המשחק שלי
+# ----------------
+# נושא: ________________________________
+# מטרה: ________________________________
+# תנאי ניצחון: ________________________________
+# תנאי הפסד: ________________________________
+# המנגנון המרכזי: ________________________________
 #
-# Player actions:
+# פעולות השחקנית:
 # 1. ________________________________
 # 2. ________________________________
 # 3. ________________________________
 #
-# Game state to track:
+# מצב משחק לעקוב אחריו:
 # - ________________________________
 # - ________________________________
 # - ________________________________
 #
-# PART 2: Build the Core
+# ## חלק 2: בני את הבסיס
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Implement the basic game mechanics.
+# ממשי את מנגנוני המשחק הבסיסיים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Create and return your initial game state
+# צרי והחזירי את מצב המשחק ההתחלתי שלך
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Define your valid actions
-# Show menu
-# Get and validate input
-# Return the action
+# הגדירי את הפעולות האפשריות
+# הציגי תפריט
+# קבלי ואמתי את הקלט
+# החזירי את הפעולה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Handle each possible action
-# Update game_state appropriately
-# Return a description of what happened
+# טפלי בכל פעולה אפשרית
+# עדכני את `game_state` בהתאם
+# החזירי תיאור של מה שקרה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Add Win/Lose Conditions
+# ## חלק 3: הוסיפי תנאי ניצחון והפסד
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Define when the game ends.
-#
-# ✏️ YOUR CODE HERE ✏️
+# הגדירי מתי המשחק מסתיים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Make It Crash-Proof
+# ## חלק 4: הפכי את המשחק לעמיד לשגיאות
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Add validation and error handling throughout.
-#
-# ✏️ YOUR CODE HERE ✏️
+# הוסיפי בדיקת קלט וטיפול בשגיאות בכל המשחק.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 5: Add Polish
+# ## חלק 5: הוסיפי ליטוש
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Make your game feel complete!
+# גרמי למשחק שלך להרגיש שלם!
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Create an engaging introduction for your game
-# Use {{placeholders}} for theme-agnostic content!
+# צרי פתיחה מרתקת למשחק שלך
+# השתמשי ב-`{{placeholders}}` לתוכן שאינו תלוי נושא!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 6: The Complete Game
+# ## חלק 6: המשחק המלא
 # {{CONTEXT_TRIUMPH_COMPLETE}}
 #
-# Put it all together!
+# חברי הכול יחד!
 
 # %%
 while game_state.get("playing", True):
@@ -187,7 +169,7 @@ print("\nThanks for playing!")
 print(f"{{{{exclamation}}}} Until next time!")
 
 # %% [markdown]
-# ## MAIN
+# ## תוכנית ראשית
 
 # %%
 print("=" * 60)

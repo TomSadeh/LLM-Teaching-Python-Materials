@@ -9,20 +9,19 @@
 # {{CONTEXT_CODE_ORDERING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{ORDERING_1_TITLE}}
+# ## {{ORDERING_1_TITLE}}
 # {{CONTEXT_ORDERING_1_NARRATIVE}}
 #
-# SCRAMBLED LINES:
-#   print("Final score:", score)
-#   score = base + bonus
-#   bonus = 50
-#   base = 100
+# שורות מבולגנות:
+#   `print("Final score:", score)`
+#   `score = base + bonus`
+#   `bonus = 50`
+#   `base = 100`
 #
-# ✏️ REORDER THE LINES ✏️
-# Copy the lines above in the CORRECT order.
+# סדרי מחדש את השורות בסדר הנכון.
 #
-# Hint: You must create a variable before you can use it.
-# What values do you need before you can calculate score?
+# > רמז: חייבים ליצור משתנה לפני שמשתמשים בו.
+# > אילו ערכים את צריכה לפני שאפשר לחשב את `score`?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -31,56 +30,56 @@
 pass  # Delete this and add the correctly ordered lines
 
 # %% [markdown]
-# {{ORDERING_2_TITLE}}
+# ## {{ORDERING_2_TITLE}}
 # {{CONTEXT_ORDERING_2_NARRATIVE}}
 #
-# SCRAMBLED LINES:
-#   total = price * quantity
-#   print("{{hero}} pays:", total)
-#   quantity = 4
-#   price = 25
+# שורות מבולגנות:
+#   `total = price * quantity`
+#   `print("{{hero}} pays:", total)`
+#   `quantity = 4`
+#   `price = 25`
 #
-# ✏️ REORDER THE LINES ✏️
+# סדרי מחדש את השורות בסדר הנכון.
 #
-# Hint: Think about what values the total calculation needs.
-# price and quantity must exist before you multiply them.
+# > רמז: חשבי איזה ערכים החישוב של `total` צריך.
+# > `price` ו-`quantity` חייבים להתקיים לפני שאפשר להכפיל אותם.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ORDERING_3_TITLE}}
+# ## {{ORDERING_3_TITLE}}
 # {{CONTEXT_ORDERING_3_NARRATIVE}}
 #
-# SCRAMBLED LINES:
-#   print("{{hero}} has", leftover, "remaining")
-#   leftover = total - spent
-#   spent = 30
-#   print("{{hero}} starts with", total)
-#   total = 100
+# שורות מבולגנות:
+#   `print("{{hero}} has", leftover, "remaining")`
+#   `leftover = total - spent`
+#   `spent = 30`
+#   `print("{{hero}} starts with", total)`
+#   `total = 100`
 #
-# ✏️ REORDER THE LINES ✏️
+# סדרי מחדש את השורות בסדר הנכון.
 #
-# Hint: There are TWO print statements. Consider when each should appear
-# to tell the story in order: first the starting amount, then the result.
+# > רמז: יש פה שתי פקודות `print`. שימי לב מתי כל אחת צריכה להופיע
+# > כדי לספר את הסיפור בסדר: קודם הסכום ההתחלתי, ואז התוצאה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ORDERING_4_TITLE}}
+# ## {{ORDERING_4_TITLE}}
 # {{CONTEXT_ORDERING_4_NARRATIVE}}
 #
-# SCRAMBLED LINES:
-#   final = doubled ** 2
-#   print("Result:", final)
-#   start = 3
-#   doubled = start * 2
+# שורות מבולגנות:
+#   `final = doubled ** 2`
+#   `print("Result:", final)`
+#   `start = 3`
+#   `doubled = start * 2`
 #
-# ✏️ REORDER THE LINES ✏️
+# סדרי מחדש את השורות בסדר הנכון.
 #
-# Hint: Each calculation depends on the previous one.
-# start -> doubled -> final -> print
+# > רמז: כל חישוב תלוי בזה שלפניו.
+# > `start` ← `doubled` ← `final` ← `print`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

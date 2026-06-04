@@ -2,37 +2,31 @@
 # {{CONTEXT_BLANK_PAGE_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Design and implement a class hierarchy from scratch.
-# This requires planning parent-child relationships and using inheritance.
+# עצבי ומימשי היררכיית מחלקות מאפס.
+# זה דורש תכנון של קשרי הורה-ילד ושימוש בירושה.
 #
-# {{BLANK_1_TITLE}}
+# ## {{BLANK_1_TITLE}}
 # {{CONTEXT_BLANK_1_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{BLANK_2_TITLE}}
+# ## {{BLANK_2_TITLE}}
 # {{CONTEXT_BLANK_2_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{BLANK_3_TITLE}}
+# ## {{BLANK_3_TITLE}}
 # {{CONTEXT_BLANK_3_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## TESTS
+# ## בדיקות
 
 # %%
 print("Testing your implementations...\n")

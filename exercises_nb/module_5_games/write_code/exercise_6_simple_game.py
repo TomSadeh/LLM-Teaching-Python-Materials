@@ -2,105 +2,98 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Building a complete simple game
-# Difficulty: 4-5
+# נושא: בניית משחק שלם ופשוט
+# רמת קושי: 4-5
 #
-# Combine everything you've learned to build a complete,
-# playable game with loops, random, input validation, and state!
+# שלבי את כל מה שלמדת כדי לבנות משחק שלם שאפשר לשחק בו,
+# עם לולאות, `random`, בדיקת קלט ומצב!
 
 # %%
 import random
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# Build the core game mechanics.
+# בני את מנגנוני הליבה של המשחק.
+
+# %%
+# ✏️ כתבי את הקוד שלך כאן
+
+# %% [markdown]
 #
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+#
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-
-# %%
-# ✏️ כתבי את הקוד שלך כאן
-
-# %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# Build the combat system.
+# בני את מערכת הלחימה.
+
+# %%
+# ✏️ כתבי את הקוד שלך כאן
+
+# %% [markdown]
 #
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+#
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-
-# %%
-# ✏️ כתבי את הקוד שלך כאן
-
-# %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# Build player actions.
+# בני את פעולות השחקנית.
 
 # %%
 print(f"\n{{{{hero}}}} attacks {{{{villain}}}}!")
 return attack(player, enemy)
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# Print defending message
-# Return 3 (temporary defense bonus)
+# הדפיסי הודעת הגנה
+# החזירי 3 (בונוס הגנה זמני)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+#
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+#
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# Build the combat loop.
-#
-# ✏️ YOUR CODE HERE ✏️
+# בני את לולאת הלחימה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+#
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -113,23 +106,22 @@ print("=" * 50)
 defending = False
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 #
-# While both alive:
-#   1. Display status
-#   2. Run combat round, get new defending state
-#   3. Check if battle over
+# כל עוד שניהם בחיים:
+# 1. הצגי סטטוס
+# 2. הרצי סיבוב לחימה, קבלי את מצב ההגנה החדש
+# 3. בדקי אם הקרב הסתיים
 #
-# After loop: Announce winner, return result
+# אחרי הלולאה: הכריזי על המנצחת, החזירי תוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# Build the complete game.
+# בני את המשחק השלם.
 
 # %%
 print("=" * 50)

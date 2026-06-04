@@ -11,7 +11,7 @@
 #
 # ## {{TRACE_1_TITLE}}
 # {{CONTEXT_TRACE_1_NARRATIVE}}
-# The 'and' operator: BOTH conditions must be True.
+# האופרטור `and`: שני התנאים חייבים להיות `True`.
 
 # %%
 level = 10
@@ -22,20 +22,18 @@ else:
     print("{{hero}} cannot enter yet.")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_1}}
 #
-# | Condition | Check | Result |
+# | תנאי | בדיקה | תוצאה |
 # |-----------|-------|--------|
-# | level >= 5 | 10 >= 5 | _____ |
-# | gold >= 100 | 150 >= 100 | _____ |
-# | Combined (and) | _____ and _____ | _____ |
+# | `level >= 5` | `10 >= 5` | _____ |
+# | `gold >= 100` | `150 >= 100` | _____ |
+# | שילוב (`and`) | _____ `and` _____ | _____ |
 #
-# Which branch executes? _______________
-# What gets printed? _______________
+# איזה ענף מתבצע? _______________
+# מה מודפס? _______________
 #
-# Remember: 'and' means BOTH must be True!
+# זכרי: `and` אומר שהשניים חייבים להיות `True`!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -43,7 +41,7 @@ else:
 # %% [markdown]
 # ## {{TRACE_2_TITLE}}
 # {{CONTEXT_TRACE_2_NARRATIVE}}
-# The 'or' operator: AT LEAST ONE condition must be True.
+# האופרטור `or`: לפחות אחד מהתנאים חייב להיות `True`.
 
 # %%
 has_key = False
@@ -54,20 +52,18 @@ else:
     print("The door remains locked.")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_2}}
 #
-# | Condition | Value | Result |
+# | תנאי | ערך | תוצאה |
 # |-----------|-------|--------|
-# | has_key | False | False |
-# | has_password | True | True |
-# | Combined (or) | False or True | _____ |
+# | `has_key` | `False` | `False` |
+# | `has_password` | `True` | `True` |
+# | שילוב (`or`) | `False or True` | _____ |
 #
-# Which branch executes? _______________
-# What gets printed? _______________
+# איזה ענף מתבצע? _______________
+# מה מודפס? _______________
 #
-# Remember: 'or' means AT LEAST ONE must be True!
+# זכרי: `or` אומר שלפחות אחד חייב להיות `True`!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -75,7 +71,7 @@ else:
 # %% [markdown]
 # ## {{TRACE_3_TITLE}}
 # {{CONTEXT_TRACE_3_NARRATIVE}}
-# The 'not' operator: Flips True to False and False to True.
+# האופרטור `not`: הופך `True` ל-`False` ו-`False` ל-`True`.
 
 # %%
 is_raining = False
@@ -85,19 +81,17 @@ else:
     print("{{hero}} stays inside.")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_3}}
 #
-# | Variable | Value |
+# | משתנה | ערך |
 # |----------|-------|
-# | is_raining | False |
-# | not is_raining | _____ |
+# | `is_raining` | `False` |
+# | `not is_raining` | _____ |
 #
-# Which branch executes? _______________
-# What gets printed? _______________
+# איזה ענף מתבצע? _______________
+# מה מודפס? _______________
 #
-# Remember: 'not' flips the boolean value!
+# זכרי: `not` הופך את הערך הבוליאני!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -105,7 +99,7 @@ else:
 # %% [markdown]
 # ## {{TRACE_4_TITLE}}
 # {{CONTEXT_TRACE_4_NARRATIVE}}
-# Combining multiple operators.
+# שילוב של מספר אופרטורים יחד.
 
 # %%
 health = 80
@@ -120,30 +114,28 @@ else:
     print("{{hero}} must {{retreat_action}}!")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_4}}
 #
-# Check 1: health < 50 and has_item
-# | Condition | Check | Result |
+# בדיקה 1: `health < 50 and has_item`
+# | תנאי | בדיקה | תוצאה |
 # |-----------|-------|--------|
-# | health < 50 | 80 < 50 | _____ |
-# | has_item | True | True |
-# | Combined (and) | _____ and True | _____ |
+# | `health < 50` | `80 < 50` | _____ |
+# | `has_item` | `True` | `True` |
+# | שילוב (`and`) | _____ `and True` | _____ |
 #
-# First branch executes? _____
+# הענף הראשון מתבצע? _____
 #
-# Check 2: health >= 50 or not enemy_nearby
-# | Condition | Check | Result |
+# בדיקה 2: `health >= 50 or not enemy_nearby`
+# | תנאי | בדיקה | תוצאה |
 # |-----------|-------|--------|
-# | health >= 50 | 80 >= 50 | _____ |
-# | enemy_nearby | True | True |
-# | not enemy_nearby | not True | _____ |
-# | Combined (or) | _____ or _____ | _____ |
+# | `health >= 50` | `80 >= 50` | _____ |
+# | `enemy_nearby` | `True` | `True` |
+# | `not enemy_nearby` | `not True` | _____ |
+# | שילוב (`or`) | _____ `or` _____ | _____ |
 #
-# Second branch executes? _____
+# הענף השני מתבצע? _____
 #
-# What gets printed? _______________
+# מה מודפס? _______________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -151,7 +143,7 @@ else:
 # %% [markdown]
 # ## {{TRACE_5_TITLE}}
 # {{CONTEXT_TRACE_5_NARRATIVE}}
-# 'and' has higher precedence than 'or'.
+# ל-`and` יש עדיפות גבוהה יותר מ-`or`.
 
 # %%
 a = True
@@ -162,27 +154,25 @@ result = a or b and c
 print(f"Result: {result}")
 
 # %% [markdown]
-# Same as: a or (b and c)
-# NOT: (a or b) and c
-#
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# זה שווה ל: `a or (b and c)`
+# ולא ל: `(a or b) and c`
 #
 # {{CONTEXT_TRACE_HINT_5}}
 #
-# The expression: a or b and c
-# Values: True or False and True
+# הביטוי: `a or b and c`
+# ערכים: `True or False and True`
 #
-# Step 1: Evaluate 'and' first (higher precedence)
-# b and c = False and True = _____
+# 1. מחשבים את `and` קודם (עדיפות גבוהה יותר):
+# `b and c` = `False and True` = _____
 #
-# Step 2: Then evaluate 'or'
-# a or (result from step 1) = True or _____ = _____
+# 2. אחר כך מחשבים את `or`:
+# `a or (תוצאה משלב 1)` = `True or` _____ = _____
 #
-# Final result: _____
-# What gets printed? _______________
+# תוצאה סופית: _____
+# מה מודפס? _______________
 #
-# If it were (a or b) and c instead:
-# (True or False) and True = _____ and True = _____
+# אם היה כתוב `(a or b) and c`:
+# `(True or False) and True` = _____ `and True` = _____
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

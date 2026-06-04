@@ -11,7 +11,7 @@
 #
 # ## {{CHALLENGE_1_TITLE}}
 # {{CONTEXT_CHALLENGE_1_NARRATIVE}}
-# With if/else, exactly ONE branch executes.
+# עם `if/else`, בדיוק ענף אחד מתבצע.
 
 # %% locked
 age = 15
@@ -21,13 +21,13 @@ else:
     print("{{hero}} is still training")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# ## ניחוש הפלט
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
+# שורה 1: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_1}}
-# Hint: Is 15 >= 18? If no, the else branch runs instead.
+# > רמז: האם 15 >= 18? אם לא, הענף של `else` מתבצע במקום.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -35,7 +35,7 @@ else:
 # %% [markdown]
 # ## {{CHALLENGE_2_TITLE}}
 # {{CONTEXT_CHALLENGE_2_NARRATIVE}}
-# Watch what happens before and after the if/else.
+# שימי לב למה קורה לפני ואחרי ה-`if/else`.
 
 # %% locked
 score = 85
@@ -48,16 +48,16 @@ else:
 print("Result recorded.")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# ## ניחוש הפלט
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________
-# Line 3: _______________
-# Line 4: _______________
+# שורה 1: _______________
+# שורה 2: _______________
+# שורה 3: _______________
+# שורה 4: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_2}}
-# Hint: Code before if and after else always runs. Only ONE branch runs.
+# > רמז: קוד שנמצא לפני ה-`if` ואחרי ה-`else` תמיד מתבצע. רק ענף אחד מתבצע.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -65,7 +65,7 @@ print("Result recorded.")
 # %% [markdown]
 # ## {{CHALLENGE_3_TITLE}}
 # {{CONTEXT_CHALLENGE_3_NARRATIVE}}
-# The condition uses == to check equality.
+# התנאי משתמש ב-`==` כדי לבדוק שוויון.
 
 # %% locked
 password = "{{password}}"
@@ -76,13 +76,13 @@ else:
     print("Access denied!")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# ## ניחוש הפלט
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
+# שורה 1: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_3}}
-# Hint: Are "{{password}}" and "wrong" the same string?
+# > רמז: האם `"{{password}}"` ו-`"wrong"` הן אותה מחרוזת?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -90,7 +90,7 @@ else:
 # %% [markdown]
 # ## {{CHALLENGE_4_TITLE}}
 # {{CONTEXT_CHALLENGE_4_NARRATIVE}}
-# Variables are compared at the time the if runs.
+# המשתנים מושווים בזמן שה-`if` מתבצע.
 
 # %% locked
 gold = 100
@@ -103,14 +103,14 @@ else:
 print(f"Gold remaining: {gold}")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# ## ניחוש הפלט
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________
+# שורה 1: _______________
+# שורה 2: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_4}}
-# Hint: Is 100 >= 75? What is 100 - 75?
+# > רמז: האם 100 >= 75? כמה זה 100 - 75?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

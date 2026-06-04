@@ -2,91 +2,82 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Building robust input functions
-# Difficulty: 3
+# נושא: בניית פונקציות קלט חכמות
+# רמת קושי: 3
 #
-# Create reusable input functions that validate user input.
-# These can be used in any game or interactive program!
+# כתבי פונקציות קלט שאפשר להשתמש בהן שוב ושוב — בכל משחק או תוכנית אינטראקטיבית!
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# Build a function that gets an integer within a specified range.
+# כתבי פונקציה שמקבלת מספר שלם בטווח מסוים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Start while True loop
-# Step 2: Print prompt and get input
-# Step 3: Check if numeric using .lstrip('-').isdigit()
-#         If not, print "Please enter a number." and continue
-# Step 4: Convert to int
-# Step 5: Check if in range
-#         If not, print f"Must be between {min_val} and {max_val}." and continue
-# Step 6: Return valid integer
+# 1. התחילי לולאת `while True`
+# 2. הדפיסי את הטקסט וקבלי קלט מהמשתמש
+# 3. בדקי אם הקלט הוא מספר באמצעות `.lstrip('-').isdigit()`
+#    אם לא — הדפיסי `"Please enter a number."` והמשיכי
+# 4. המירי למספר שלם (`int`)
+# 5. בדקי אם המספר בטווח
+#    אם לא — הדפיסי `f"Must be between {min_val} and {max_val}."` והמשיכי
+# 6. החזירי את המספר התקין
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# Build a function that gets a choice from a list of options.
+# כתבי פונקציה שמקבלת בחירה מתוך רשימת אפשרויות.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Print prompt
-# Step 2: Print numbered list of options
-# Step 3: Start while True loop
-# Step 4: Get input (lowercase for comparison)
-# Step 5: Check if input is a valid number (1 to len(options))
-#         If so, return options[int(input) - 1]
-# Step 6: Check if input matches any option (case insensitive)
-#         If so, return the original option
-# Step 7: Print "Invalid choice. Try again."
+# 1. הדפיסי את הטקסט של הבחירה
+# 2. הדפיסי את רשימת האפשרויות עם מספרים
+# 3. התחילי לולאת `while True`
+# 4. קבלי קלט (המירי לאותיות קטנות להשוואה)
+# 5. בדקי אם הקלט הוא מספר תקין (בין 1 ל-`len(options)`)
+#    אם כן — החזירי את `options[int(input) - 1]`
+# 6. בדקי אם הקלט תואם אפשרות כלשהי (ללא רגישות לאותיות גדולות/קטנות)
+#    אם כן — החזירי את האפשרות המקורית
+# 7. הדפיסי `"Invalid choice. Try again."`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# Build a function that gets a yes/no answer with custom prompts.
+# כתבי פונקציה שמקבלת תשובת כן/לא עם טקסטים מותאמים אישית.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Start while True loop
-# Step 2: Print f"{question} ({yes_text}/{no_text}): " and get input
-# Step 3: Convert to lowercase and strip
-# Step 4: If matches yes_text or its first letter, return True
-# Step 5: If matches no_text or its first letter, return False
-# Step 6: Print f"Please enter {yes_text} or {no_text}."
+# 1. התחילי לולאת `while True`
+# 2. הדפיסי `f"{question} ({yes_text}/{no_text}): "` וקבלי קלט
+# 3. המירי לאותיות קטנות והסירי רווחים מיותרים
+# 4. אם הקלט תואם את `yes_text` או האות הראשונה שלו — החזירי `True`
+# 5. אם הקלט תואם את `no_text` או האות הראשונה שלו — החזירי `False`
+# 6. הדפיסי `f"Please enter {yes_text} or {no_text}."`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# Build a function that gets a non-empty string with validation.
+# כתבי פונקציה שמקבלת מחרוזת עם אימות מותאם אישית.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Start while True loop
-# Step 2: Print prompt and get input
-# Step 3: If validator_func(input) returns True, return input
-# Step 4: Otherwise print error_message
+# 1. התחילי לולאת `while True`
+# 2. הדפיסי את הטקסט וקבלי קלט
+# 3. אם `validator_func(input)` מחזיר `True` — החזירי את הקלט
+# 4. אחרת — הדפיסי את `error_message`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# Use your input functions to build a character creator.
+# השתמשי בפונקציות הקלט שלך כדי לבנות יוצרת דמויות.
 
 # %%
 print("=" * 40)
@@ -95,16 +86,14 @@ print("=" * 40)
 print()
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Get name using get_validated_string
-#         (validator: len >= 2, error: "Name must be at least 2 characters")
-# Step 2: Get character class using get_choice_from_list
-# Step 3: Get level using get_integer_in_range
-# Step 4: Display summary
-# Step 5: Confirm with get_yes_no
-# Step 6: If confirmed, return dict with name, class, level
-# Step 7: If not confirmed, return None
+# 1. קבלי שם באמצעות `get_validated_string`
+#    (אימות: אורך >= 2, שגיאה: `"Name must be at least 2 characters"`)
+# 2. קבלי מחלקת דמות באמצעות `get_choice_from_list`
+# 3. קבלי רמה באמצעות `get_integer_in_range`
+# 4. הציגי סיכום
+# 5. אשרי עם `get_yes_no`
+# 6. אם אושר — החזירי `dict` עם שם, מחלקה ורמה
+# 7. אם לא אושר — החזירי `None`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

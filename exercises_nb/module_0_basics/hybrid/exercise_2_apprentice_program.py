@@ -10,14 +10,14 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
-# You will study a complete program, practice with guidance, then build your own!
+# זו תרגיל מרובה-חלקים. השלימי כל חלק לפי הסדר.
+# תלמדי תוכנית שלמה, תתרגלי עם הנחיות, ואז תבני משלך!
 #
-# PART 1: DISCOVERY - Study the Master's Program
+# ## חלק 1: גילוי - לומדים את תוכנית המאסטר
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Study this complete character creator program.
-# Predict what it will do before running it.
+# למדי את תוכנית יצירת הדמות המלאה הזו.
+# נסי לנחש מה היא תעשה לפני שתריצי אותה.
 
 # %% locked
 # Character setup
@@ -41,95 +41,85 @@ print(f"Power Rating: {power}")
 print("=" * 30)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTIONS HERE ✏️
+# לפני שתריצי את התוכנית, נחשי:
 #
-# Before running master_program(), predict:
+# 1. כמה שורות יודפסו? ___
+# 2. מה יהיה ה-`Power Rating`? ___
+# 3. איזה סוג מרכאות התוכנית משתמשת בפלט? ___
 #
-# 1. How many lines will be printed? ___
-# 2. What will the Power Rating be? ___
-# 3. What type of quotes does the program use for output? ___
-#
-# Run the program to check your predictions!
+# הריצי את התוכנית כדי לבדוק את הניחושים שלך!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: GUIDANCE - Practice with Scaffolding
+# ## חלק 2: הנחיה - תרגול עם פיגומים
 # {{CONTEXT_GUIDANCE_INTRO}}
 # {{CONTEXT_GUIDANCE_NARRATIVE}}
 #
-# Complete these functions by filling in the missing parts.
+# השלימי את הפונקציות האלה על ידי מילוי החלקים החסרים.
 #
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
-# Use an f-string to create the header.
-# Pattern: "=== {name} the {title} ==="
+# השתמשי ב-f-string כדי ליצור את הכותרת.
+# תבנית: `"=== {name} the {title} ==="`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ COMPLETE THIS FUNCTION ✏️
-#
-# Use an f-string: f"{stat_name}: {stat_value}"
+# השתמשי ב-f-string: `f"{stat_name}: {stat_value}"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: GROWTH - Create Your Own
+# ## חלק 3: צמיחה - יוצרים משלך
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now create your own character creator from scratch!
+# עכשיו צרי תוכנית יצירת דמות משלך מאפס!
 #
-# ✏️ YOUR CODE HERE ✏️
+# דרישות:
+# 1. צרי לפחות 5 משתנים (שם, מחלקה, ו-3+ סטטיסטיקות)
+# 2. חשבי לפחות סטטיסטיקה נגזרת אחת (כמו `power = str + def`)
+# 3. השתמשי ב-f-strings לכל הפלט
+# 4. הדפיסי כותרת עם שם הדמות והמחלקה שלה
+# 5. הדפיסי את כל הסטטיסטיקות בצורה מסודרת
+# 6. הדפיסי קו מפריד בסוף
 #
-# Create your own character profile program!
+# דוגמה לפלט:
+# `=== Maya the {{ROLE_TITLE}} ===`
+# `Health: 120`
+# `Strength: 15`
+# `Defense: 12`
+# `Speed: 8`
+# `Total Power: 27`
+# `==============================`
 #
-# Requirements:
-# 1. Create at least 5 variables (name, class, and 3+ stats)
-# 2. Calculate at least one derived stat (like power = str + def)
-# 3. Use f-strings for all output
-# 4. Print a header with the character's name and class
-# 5. Print all stats in a formatted way
-# 6. Print a separator line at the end
-#
-# Example output:
-# === Maya the {{ROLE_TITLE}} ===
-# Health: 120
-# Strength: 15
-# Defense: 12
-# Speed: 8
-# Total Power: 27
-# ==============================
-#
-# Be creative! Add your own stats and style.
+# היי יצירתית! הוסיפי סטטיסטיקות וסגנון משלך.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ BONUS CHALLENGE ✏️
+# ## אתגר בונוס
 #
-# Make an INTERACTIVE version that asks the user for input!
+# צרי גרסה אינטראקטיבית שמבקשת קלט מהמשתמשת!
 #
-# Use input() to ask for:
-# - Character name
-# - Character class
-# - At least one stat value
+# השתמשי ב-`input()` כדי לשאול על:
+# - שם הדמות
+# - מחלקת הדמות
+# - לפחות ערך סטטיסטיקה אחד
 #
-# Then display the character sheet using f-strings.
+# ואז הציגי את דף הדמות באמצעות f-strings.
 #
-# Example interaction:
-# Enter character name: Luna
-# Enter character class: {{ROLE_TITLE}}
-# Enter power level: 25
+# דוגמה לאינטראקציה:
+# `Enter character name: Luna`
+# `Enter character class: {{ROLE_TITLE}}`
+# `Enter power level: 25`
 #
-# === Luna the {{ROLE_TITLE}} ===
-# Power Level: 25
-# (etc...)
+# `=== Luna the {{ROLE_TITLE}} ===`
+# `Power Level: 25`
+# `(etc...)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

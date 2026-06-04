@@ -9,7 +9,7 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{FUNCTION_1_TITLE}}
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
 # %%
@@ -27,7 +27,7 @@ count = 0
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_2_TITLE}}
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
 # %%
@@ -43,7 +43,7 @@ result = []
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_3_TITLE}}
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
 # %%
@@ -61,7 +61,7 @@ longest = strings[0]  # Start with first string
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_4_TITLE}}
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 
 # %%
@@ -75,7 +75,7 @@ pass  # Replace with implementation
 pass  # Replace with implementation
 
 # %% [markdown]
-# {{FUNCTION_5_TITLE}}
+# ## {{FUNCTION_5_TITLE}}
 # {{CONTEXT_FUNCTION_5_NARRATIVE}}
 
 # %%

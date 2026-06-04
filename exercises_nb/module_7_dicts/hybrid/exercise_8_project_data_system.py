@@ -1,15 +1,15 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is the capstone project for Module 7. You'll study a model system,
-# design your own structure, implement operations, and add a custom feature.
+# זהו פרויקט הסיום של מודול 7. תלמדי מערכת לדוגמה,
+# תעצבי מבנה משלך, תממשי פעולות, ותוסיפי פיצ'ר מיוחד משלך.
 #
-# Programming concepts: All dictionary concepts from Module 7
+# מושגי תכנות: כל מושגי המילונים ממודול 7
 #
-# PART 1: Discovery - Study the Model System
+# ## חלק 1: גילוי - לימוד המערכת לדוגמה
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Study this achievement system to understand how it works.
+# לימדי את מערכת ההישגים הזו כדי להבין איך היא עובדת.
 
 # %%
 MODEL_ACHIEVEMENTS = {
@@ -66,88 +66,75 @@ print(f"{{{{hero}}}} unlocked: {hero_unlocked}")
 print(f"{{{{hero}}}} points: {hero_points}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# מלאי את טבלת המעקב הזו:
 #
-# Trace the path to access each piece of data:
+# | נתון                    | נתיב הגישה                                     |
+# |-------------------------|------------------------------------------------|
+# | השם "Master"            | MODEL_ACHIEVEMENTS["achievements"]["master"]["name"] |
+# | נקודות ה-Collector      | MODEL_ACHIEVEMENTS[?][?][?]                   |
+# | הנקודות של {{heroine}}  | MODEL_ACHIEVEMENTS[?][?][?]                   |
+# | האם {{hero}} היא master? | "master" in MODEL_ACHIEVEMENTS[?][?][?]      |
 #
-# | Data                  | Access Path                                    |
-# |-----------------------|------------------------------------------------|
-# | "Master" name         | MODEL_ACHIEVEMENTS["achievements"]["master"]["name"] |
-# | Collector points      | MODEL_ACHIEVEMENTS[?][?][?]                   |
-# | {{heroine}}'s points  | MODEL_ACHIEVEMENTS[?][?][?]                   |
-# | Is {{hero}} a master? | "master" in MODEL_ACHIEVEMENTS[?][?][?]       |
-#
-# How many levels deep is the deepest access?
+# כמה רמות עמוק הגישה העמוקה ביותר?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Design Your Own Structure
+# ## חלק 2: צמיחה - עיצוב מבנה משלך
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Design and create your own data system using dictionaries.
+# עצבי וצרי מערכת נתונים משלך באמצעות מילונים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Design your own quests! Be creative with names and descriptions.
-# Use {{placeholders}} for thematic content.
+# עצבי קווסטים משלך! היי יצירתית עם שמות ותיאורים.
+# השתמשי ב-`{{placeholders}}` לתוכן ערכותי.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Implement Core Operations
+# ## חלק 3: צמיחה - מימוש פעולות בסיסיות
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Implement CRUD operations for your quest system.
-#
-# ✏️ YOUR CODE HERE ✏️
+# ממשי פעולות CRUD עבור מערכת הקווסטים שלך.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Ownership - Add Your Own Feature
+# ## חלק 4: בעלות - הוסיפי פיצ'ר משלך
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Design and implement a new feature of your own choice!
+# עצבי וממשי פיצ'ר חדש לפי בחירתך!
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Be creative! This is YOUR feature.
+# היי יצירתית! זה הפיצ'ר שלך.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

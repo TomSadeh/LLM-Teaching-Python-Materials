@@ -11,7 +11,7 @@
 #
 # ## {{CHALLENGE_1_TITLE}}
 # {{CONTEXT_CHALLENGE_1_NARRATIVE}}
-# The == operator checks if two values are equal.
+# האופרטור `==` בודק אם שני ערכים שווים זה לזה.
 
 # %% locked
 hero_level = 5
@@ -23,14 +23,13 @@ else:
 print(f"{{hero}} is level {hero_level}")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________
+# שורה 1: _______________
+# שורה 2: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_1}}
-# Hint: Is 5 == 5? (Yes, they are equal)
+# > רמז: האם 5 `==` 5? (כן, הם שווים)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -38,7 +37,7 @@ print(f"{{hero}} is level {hero_level}")
 # %% [markdown]
 # ## {{CHALLENGE_2_TITLE}}
 # {{CONTEXT_CHALLENGE_2_NARRATIVE}}
-# The != operator checks if two values are NOT equal.
+# האופרטור `!=` בודק אם שני ערכים אינם שווים זה לזה.
 
 # %% locked
 villain = "{{villain}}"
@@ -49,13 +48,12 @@ else:
     print(f"{{hero}} is confused.")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
+# שורה 1: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_2}}
-# Hint: Are "{{villain}}" and "{{friend}}" different? (!= means "not equal")
+# > רמז: האם `"{{villain}}"` ו-`"{{friend}}"` שונים זה מזה? (`!=` פירושו "לא שווה")
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -63,7 +61,7 @@ else:
 # %% [markdown]
 # ## {{CHALLENGE_3_TITLE}}
 # {{CONTEXT_CHALLENGE_3_NARRATIVE}}
-# Compare < (less than) vs <= (less than OR equal).
+# נשווה בין `<` (קטן מ-) לבין `<=` (קטן מ- או שווה ל-).
 
 # %% locked
 health = 50
@@ -75,16 +73,15 @@ if health <= danger_threshold:
     print("WARNING: Health at or below threshold")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________  (maybe?)
-# Line 3: _______________  (maybe?)
+# שורה 1: _______________
+# שורה 2: _______________  (אולי?)
+# שורה 3: _______________  (אולי?)
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_3}}
-# Hint: Is 50 < 50? (No, it's equal, not less)
-#       Is 50 <= 50? (Yes, it's equal so it counts)
+# > רמז: האם 50 `<` 50? (לא, הם שווים, לא קטן)
+# >       האם 50 `<=` 50? (כן, הם שווים אז זה נחשב)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -92,7 +89,7 @@ if health <= danger_threshold:
 # %% [markdown]
 # ## {{CHALLENGE_4_TITLE}}
 # {{CONTEXT_CHALLENGE_4_NARRATIVE}}
-# Compare > (greater than) vs >= (greater than OR equal).
+# נשווה בין `>` (גדול מ-) לבין `>=` (גדול מ- או שווה ל-).
 
 # %% locked
 score = 70
@@ -106,16 +103,15 @@ if score == passing:
     print("Exactly at the threshold")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________  (maybe?)
-# Line 3: _______________  (maybe?)
-# Line 4: _______________  (maybe?)
+# שורה 1: _______________
+# שורה 2: _______________  (אולי?)
+# שורה 3: _______________  (אולי?)
+# שורה 4: _______________  (אולי?)
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_4}}
-# Hint: Each if is checked independently. How many are True?
+# > רמז: כל `if` נבדק בנפרד. כמה מהם נכונים?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -123,7 +119,7 @@ if score == passing:
 # %% [markdown]
 # ## {{CHALLENGE_5_TITLE}}
 # {{CONTEXT_CHALLENGE_5_NARRATIVE}}
-# Multiple comparisons in sequence.
+# מספר השוואות ברצף.
 
 # %% locked
 temperature = 25
@@ -137,17 +133,16 @@ if temperature >= 30:
     print("Hot!")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________  (maybe?)
-# Line 2: _______________  (maybe?)
-# Line 3: _______________  (maybe?)
-# Line 4: _______________  (maybe?)
+# שורה 1: _______________  (אולי?)
+# שורה 2: _______________  (אולי?)
+# שורה 3: _______________  (אולי?)
+# שורה 4: _______________  (אולי?)
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_5}}
-# Hint: These are separate if statements (not if/elif).
-#       25 < 0? 25 < 15? 25 < 30? 25 >= 30?
+# > רמז: אלו משפטי `if` נפרדים (לא `if/elif`).
+# >       25 `<` 0? 25 `<` 15? 25 `<` 30? 25 `>=` 30?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

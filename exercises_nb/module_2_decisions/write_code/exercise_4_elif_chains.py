@@ -9,128 +9,117 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
-#
 # {{CONTEXT_STUDENT_TASK}}
 #
-# {{mentor}} assigns grades based on scores.
-# Use if/elif/else to determine the grade.
+# {{mentor}} מחלקת ציונים לפי תוצאות.
+# השתמשי ב-`if/elif/else` כדי לקבוע את הציון.
 #
-# Step 1: Create a variable called score with the value 78
-# Step 2: Write an if/elif/else chain:
-#         - if score >= 90: print "Grade: A"
-#         - elif score >= 80: print "Grade: B"
-#         - elif score >= 70: print "Grade: C"
-#         - else: print "Grade: F"
+# 1. צרי משתנה בשם `score` עם הערך `78`
+# 2. כתבי שרשרת `if/elif/else`:
+#    - אם `score >= 90`: הדפיסי `"Grade: A"`
+#    - אם `score >= 80`: הדפיסי `"Grade: B"`
+#    - אם `score >= 70`: הדפיסי `"Grade: C"`
+#    - אחרת: הדפיסי `"Grade: F"`
 #
-# Expected output when score is 78:
-#   Grade: C
+# פלט צפוי כאשר score הוא 78:
+#   `Grade: C`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
-#
 # {{CONTEXT_STUDENT_TASK}}
 #
-# Sort {{hero}} into a {{house}} based on their strongest trait.
-# Use a numeric trait value.
+# מיינו את {{hero}} ל-{{house}} לפי התכונה החזקה ביותר שלה.
 #
-# Step 1: Create a variable called trait with the value "courage"
-# Step 2: Write an if/elif/else chain:
-#         - if trait == "courage": print "{{hero}} joins the Warriors"
-#         - elif trait == "wisdom": print "{{hero}} joins the Scholars"
-#         - elif trait == "kindness": print "{{hero}} joins the Healers"
-#         - else: print "{{hero}} joins the Explorers"
+# 1. צרי משתנה בשם `trait` עם הערך `"courage"`
+# 2. כתבי שרשרת `if/elif/else`:
+#    - אם `trait == "courage"`: הדפיסי `"{{hero}} joins the Warriors"`
+#    - אם `trait == "wisdom"`: הדפיסי `"{{hero}} joins the Scholars"`
+#    - אם `trait == "kindness"`: הדפיסי `"{{hero}} joins the Healers"`
+#    - אחרת: הדפיסי `"{{hero}} joins the Explorers"`
 #
-# Expected output when trait is "courage":
-#   {{hero}} joins the Warriors
+# פלט צפוי כאשר trait הוא "courage":
+#   `{{hero}} joins the Warriors`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
-#
 # {{CONTEXT_STUDENT_TASK}}
 #
-# Determine {{hero}}'s rank based on their level.
-# Print their full status.
+# קבעי את הדרגה של {{hero}} לפי הרמה שלה.
+# הדפיסי את הסטטוס המלא שלה.
 #
-# Step 1: Create a variable called level with the value 15
-# Step 2: Create a variable called rank (will be assigned in the if/elif/else)
-# Step 3: Write an if/elif/else chain to assign rank:
-#         - if level >= 20: rank = "Master"
-#         - elif level >= 15: rank = "Expert"
-#         - elif level >= 10: rank = "Intermediate"
-#         - elif level >= 5: rank = "Apprentice"
-#         - else: rank = "Novice"
-# Step 4: Print f"{{hero}} - Level {level} - Rank: {rank}"
+# 1. צרי משתנה בשם `level` עם הערך `15`
+# 2. צרי משתנה בשם `rank` (יקבל ערך בתוך שרשרת ה-`if/elif/else`)
+# 3. כתבי שרשרת `if/elif/else` להגדרת `rank`:
+#    - אם `level >= 20`: `rank = "Master"`
+#    - אם `level >= 15`: `rank = "Expert"`
+#    - אם `level >= 10`: `rank = "Intermediate"`
+#    - אם `level >= 5`: `rank = "Apprentice"`
+#    - אחרת: `rank = "Novice"`
+# 4. הדפיסי `f"{{hero}} - Level {level} - Rank: {rank}"`
 #
-# Expected output when level is 15:
-#   {{hero}} - Level 15 - Rank: Expert
+# פלט צפוי כאשר level הוא 15:
+#   `{{hero}} - Level 15 - Rank: Expert`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
-#
 # {{CONTEXT_STUDENT_TASK}}
 #
-# Determine what {{hero}} can buy at the shop with their gold.
-# Use if/elif/else to find the best affordable item.
+# קבעי מה {{hero}} יכולה לקנות בחנות עם הזהב שלה.
+# השתמשי ב-`if/elif/else` כדי למצוא את הפריט הכי יקר שהיא יכולה להרשות לעצמה.
 #
-# Step 1: Create a variable called gold with the value 75
-# Step 2: Print f"{{hero}} has {gold} gold"
-# Step 3: Write an if/elif/else chain:
-#         - if gold >= 100: print "You can buy the {{spell3}} scroll!"
-#         - elif gold >= 50: print "You can buy the {{spell2}} scroll!"
-#         - elif gold >= 20: print "You can buy the {{spell1}} scroll!"
-#         - else: print "You can't afford any scrolls."
+# 1. צרי משתנה בשם `gold` עם הערך `75`
+# 2. הדפיסי `f"{{hero}} has {gold} gold"`
+# 3. כתבי שרשרת `if/elif/else`:
+#    - אם `gold >= 100`: הדפיסי `"You can buy the {{spell3}} scroll!"`
+#    - אם `gold >= 50`: הדפיסי `"You can buy the {{spell2}} scroll!"`
+#    - אם `gold >= 20`: הדפיסי `"You can buy the {{spell1}} scroll!"`
+#    - אחרת: הדפיסי `"You can't afford any scrolls."`
 #
-# Expected output when gold is 75:
-#   {{hero}} has 75 gold
-#   You can buy the {{spell2}} scroll!
+# פלט צפוי כאשר gold הוא 75:
+#   `{{hero}} has 75 gold`
+#   `You can buy the {{spell2}} scroll!`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
-#
-# ✏️ YOUR CODE HERE ✏️
 #
 # {{CONTEXT_STUDENT_TASK}}
 #
-# Create a weather response system for {{school}}.
-# Different temperatures mean different activities.
+# צרי מערכת תגובה למזג האוויר עבור {{school}}.
+# טמפרטורות שונות מובילות לפעילויות שונות.
 #
-# Step 1: Create a variable called temperature with the value 22
-# Step 2: Create a variable called activity (assigned in if/elif/else)
-# Step 3: Write an if/elif/else chain:
-#         - if temperature >= 30: activity = "indoor study"
-#         - elif temperature >= 20: activity = "outdoor training"
-#         - elif temperature >= 10: activity = "warm-up exercises"
-#         - else: activity = "rest by the fire"
-# Step 4: Print f"At {temperature} degrees, {{school}} recommends: {activity}"
+# 1. צרי משתנה בשם `temperature` עם הערך `22`
+# 2. צרי משתנה בשם `activity` (יקבל ערך בתוך שרשרת ה-`if/elif/else`)
+# 3. כתבי שרשרת `if/elif/else`:
+#    - אם `temperature >= 30`: `activity = "indoor study"`
+#    - אם `temperature >= 20`: `activity = "outdoor training"`
+#    - אם `temperature >= 10`: `activity = "warm-up exercises"`
+#    - אחרת: `activity = "rest by the fire"`
+# 4. הדפיסי `f"At {temperature} degrees, {{school}} recommends: {activity}"`
 #
-# Expected output when temperature is 22:
-#   At 22 degrees, {{school}} recommends: outdoor training
+# פלט צפוי כאשר temperature הוא 22:
+#   `At 22 degrees, {{school}} recommends: outdoor training`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

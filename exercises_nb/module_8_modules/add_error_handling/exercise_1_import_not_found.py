@@ -5,36 +5,34 @@
 # Topic: Handling ModuleNotFoundError
 # Difficulty: 3
 #
-# When importing modules, things can go wrong: the module might not exist,
-# be misspelled, or not be installed. Learn to handle these gracefully.
+# כשמייבאים מודולים, יכולות לקרות טעויות: המודול אולי לא קיים,
+# נכתב בצורה שגויה, או לא מותקן. נלמד לטפל בזה בצורה נאותה.
 #
-# {{HANDLING_1_TITLE}}
+# ## {{HANDLING_1_TITLE}}
 # {{CONTEXT_HANDLING_1_NARRATIVE}}
 #
-# This function crashes if the module doesn't exist.
+# הפונקציה הזו קורסת אם המודול לא קיים.
 
 # %%
 import nonexistent_module  # This will crash!
 return nonexistent_module.some_function()
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_1}}
 #
-# Step 1: Use try/except to catch ModuleNotFoundError
+# 1. השתמשי ב-`try/except` כדי לתפוס `ModuleNotFoundError`
 #
-# Step 2: Inside try:
-#         Use __import__(module_name) to dynamically import
-#         This is equivalent to: import module_name
+# 2. בתוך `try`:
+#    השתמשי ב-`__import__(module_name)` כדי לייבא באופן דינמי —
+#    זה שקול ל-`import module_name`
 #
-# Step 3: If successful, return the module
+# 3. אם הייבוא הצליח, החזירי את המודול
 #
-# Step 4: In except block:
-#         Print: f"Module '{module_name}' not found"
-#         Return None
+# 4. בבלוק `except`:
+#    הדפיסי: `f"Module '{module_name}' not found"`
+#    החזירי `None`
 #
-# Example:
+# דוגמה:
 #   try:
 #       module = __import__(module_name)
 #       return module
@@ -46,10 +44,10 @@ return nonexistent_module.some_function()
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_2_TITLE}}
+# ## {{HANDLING_2_TITLE}}
 # {{CONTEXT_HANDLING_2_NARRATIVE}}
 #
-# Sometimes you want to use optional features if available.
+# לפעמים רוצים להשתמש ביכולות אופציונליות אם הן זמינות.
 
 # %%
 import colorama  # Optional third-party module
@@ -57,17 +55,15 @@ colorama.init()
 return colorama.Fore.RED + "Error!" + colorama.Style.RESET_ALL
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_2}}
 #
-# Step 1: Try to import colorama
+# 1. נסי לייבא את `colorama`
 #
-# Step 2: If successful, use it to color the text
+# 2. אם הייבוא הצליח, השתמשי בו כדי לצבוע את הטקסט
 #
-# Step 3: If ModuleNotFoundError, just return the plain text
+# 3. אם קיבלת `ModuleNotFoundError`, פשוט החזירי את הטקסט הרגיל
 #
-# Pattern:
+# תבנית:
 #   try:
 #       import colorama
 #       colorama.init()
@@ -79,28 +75,26 @@ return colorama.Fore.RED + "Error!" + colorama.Style.RESET_ALL
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_3_TITLE}}
+# ## {{HANDLING_3_TITLE}}
 # {{CONTEXT_HANDLING_3_NARRATIVE}}
 #
-# Handle typos in module names gracefully.
+# טפלי בטעויות כתיב בשמות מודולים בצורה נאותה.
 
 # %%
 import maht  # Typo! Should be 'math'
 return maht.sqrt(16)
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_3}}
 #
-# Step 1: Try to import math and calculate sqrt
+# 1. נסי לייבא את `math` ולחשב `sqrt`
 #
-# Step 2: Handle ModuleNotFoundError (shouldn't happen with math,
-#         but demonstrates the pattern)
+# 2. טפלי ב-`ModuleNotFoundError` (לא אמור לקרות עם `math`,
+#    אבל זה מדגים את התבנית)
 #
-# Step 3: Handle ValueError for negative numbers
+# 3. טפלי ב-`ValueError` עבור מספרים שליליים
 #
-# Example:
+# דוגמה:
 #   try:
 #       import math
 #       return math.sqrt(value)
@@ -115,26 +109,24 @@ return maht.sqrt(16)
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_4_TITLE}}
+# ## {{HANDLING_4_TITLE}}
 # {{CONTEXT_HANDLING_4_NARRATIVE}}
 #
-# Create a flexible import function for {{school}}.
-#
-# ✏️ ADD ERROR HANDLING ✏️
+# צרי פונקציית ייבוא גמישה עבור {{school}}.
 #
 # {{CONTEXT_HANDLING_HINT_4}}
 #
-# Step 1: Loop through module_names
+# 1. עברי בלולאה על `module_names`
 #
-# Step 2: For each name, try to import it
+# 2. לכל שם, נסי לייבא אותו
 #
-# Step 3: If import succeeds, return the module immediately
+# 3. אם הייבוא הצליח, החזירי את המודול מיד
 #
-# Step 4: If import fails (ModuleNotFoundError), continue to next
+# 4. אם הייבוא נכשל (`ModuleNotFoundError`), המשיכי לבא
 #
-# Step 5: After the loop, return fallback_value
+# 5. אחרי הלולאה, החזירי את `fallback_value`
 #
-# Example:
+# דוגמה:
 #   for name in module_names:
 #       try:
 #           return __import__(name)

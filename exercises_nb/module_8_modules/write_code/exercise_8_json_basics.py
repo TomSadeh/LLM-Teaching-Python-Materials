@@ -2,27 +2,25 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to use the json module to save and load
-# structured data. JSON is perfect for storing dictionaries and lists -
-# it's like having a universal language for data.
+# בתרגיל הזה תלמדי להשתמש במודול `json` כדי לשמור ולטעון
+# נתונים מובנים. JSON מושלם לאחסון מילונים ורשימות -
+# זה כמו שפה אוניברסלית לנתונים.
 #
-# Topic: JSON module basics (dump, load, dumps, loads)
-# Difficulty: 3
+# נושא: יסודות מודול JSON (dump, load, dumps, loads)
+# רמת קושי: 3
 
 # %%
 import json
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# Learn to save Python data to JSON files.
+# למדי לשמור נתוני Python לקבצי JSON.
 #
-# ✏️ YOUR CODE HERE ✏️
+# שמרי מילון לקובץ JSON.
 #
-# Save a dictionary to a JSON file.
-#
-# Step 1: Create a character profile dictionary:
+# 1. צרי מילון פרופיל עבור הדמות:
 #         profile = {
 #             "name": "{{hero}}",
 #             "level": 5,
@@ -30,90 +28,84 @@ import json
 #             "stats": {"health": 100, "energy": 50}
 #         }
 #
-# Step 2: Save to JSON file using json.dump():
+# 2. שמרי לקובץ JSON באמצעות `json.dump()`:
 #         with open("profile.json", "w") as f:
 #             json.dump(profile, f)
 #
-# Step 3: Save with pretty formatting (indentation):
+# 3. שמרי עם עיצוב נאה (הזחה):
 #         with open("profile_pretty.json", "w") as f:
 #             json.dump(profile, f, indent=2)
 #
-# Step 4: Print confirmation message
+# 4. הדפיסי הודעת אישור
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# טעיני נתונים מקובץ JSON.
 #
-# Load data from a JSON file.
-#
-# Step 1: Load the profile you saved:
+# 1. טעיני את הפרופיל ששמרת:
 #         with open("profile.json", "r") as f:
 #             loaded_profile = json.load(f)
 #
-# Step 2: Print the loaded data:
+# 2. הדפיסי את הנתונים שנטענו:
 #         print(f"Loaded profile: {loaded_profile}")
 #         print(f"Name: {loaded_profile['name']}")
 #         print(f"Level: {loaded_profile['level']}")
 #
-# Step 3: Verify it's a real dictionary:
+# 3. ודאי שזה באמת מילון:
 #         print(f"Type: {type(loaded_profile)}")
 #
-# Note: JSON preserves the structure - dicts stay dicts!
+# > רמז: JSON שומרת על המבנה - מילונים נשארים מילונים!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# Learn to convert between JSON strings and Python objects.
+# למדי להמיר בין מחרוזות JSON לאובייקטי Python.
 #
-# ✏️ YOUR CODE HERE ✏️
+# המירי Python למחרוזת JSON (ובחזרה) באמצעות `dumps`/`loads`.
 #
-# Convert Python to JSON string (and back) using dumps/loads.
-#
-# Step 1: Create some data:
+# 1. צרי כמה נתונים:
 #         data = {
 #             "school": "{{school}}",
 #             "students": ["{{hero}}", "{{heroine}}", "{{friend}}"],
 #             "active": True
 #         }
 #
-# Step 2: Convert to JSON string (not file):
+# 2. המירי למחרוזת JSON (לא לקובץ):
 #         json_string = json.dumps(data)
 #         print(f"JSON string: {json_string}")
 #         print(f"Type: {type(json_string)}")  # It's a str!
 #
-# Step 3: Convert JSON string back to Python:
+# 3. המירי את מחרוזת ה-JSON חזרה ל-Python:
 #         restored = json.loads(json_string)
 #         print(f"Restored: {restored}")
 #         print(f"Type: {type(restored)}")  # It's a dict again!
 #
-# Note: dumps = dump to string, loads = load from string
+# > רמז: dumps = שמירה למחרוזת, loads = טעינה ממחרוזת
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# עבדי עם רשימות ב-JSON.
 #
-# Work with lists in JSON.
-#
-# Step 1: Create a list of records:
+# 1. צרי רשימת רשומות:
 #         records = [
 #             {"name": "{{hero}}", "score": 100},
 #             {"name": "{{heroine}}", "score": 150},
 #             {"name": "{{friend}}", "score": 75}
 #         ]
 #
-# Step 2: Save to JSON:
+# 2. שמרי ל-JSON:
 #         with open("records.json", "w") as f:
 #             json.dump(records, f, indent=2)
 #
-# Step 3: Load and iterate:
+# 3. טעיני ועברי על הפריטים:
 #         with open("records.json", "r") as f:
 #             loaded_records = json.load(f)
 #
@@ -124,16 +116,14 @@ import json
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# Learn JSON limitations and best practices.
+# למדי את מגבלות JSON ושיטות עבודה מומלצות.
 #
-# ✏️ YOUR CODE HERE ✏️
+# הביני מה JSON יכולה ולא יכולה לאחסן.
 #
-# Understand what JSON can and cannot store.
-#
-# Step 1: JSON SUPPORTS these Python types:
+# 1. JSON תומכת בסוגי Python האלה:
 #         supported = {
 #             "string": "hello",
 #             "number": 42,
@@ -143,31 +133,29 @@ import json
 #             "list": [1, 2, 3],
 #             "dict": {"nested": "value"}
 #         }
-#         Save this to "supported.json" and load it back.
+#         שמרי זאת בקובץ "supported.json" וטעיני אותו בחזרה.
 #
-# Step 2: JSON does NOT support these (directly):
-#         - Sets: {1, 2, 3} becomes [1, 2, 3] (list)
-#         - Tuples: (1, 2, 3) becomes [1, 2, 3] (list)
-#         - Custom objects: Need special handling
+# 2. JSON לא תומכת (ישירות) בסוגים האלה:
+#         - Sets: {1, 2, 3} הופך ל-[1, 2, 3] (רשימה)
+#         - Tuples: (1, 2, 3) הופך ל-[1, 2, 3] (רשימה)
+#         - אובייקטים מותאמים: דורשים טיפול מיוחד
 #
-# Step 3: Test with a set:
+# 3. בדקי עם set:
 #         data = {"items": {"a", "b", "c"}}  # This has a set!
 #         # json.dump(data, f)  # This would ERROR!
 #         # Convert set to list first:
 #         data["items"] = list(data["items"])
 #         # Now it works
 #
-# Step 4: Print what you learned
+# 4. הדפיסי מה למדת
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# צרי מערכת שמירה וטעינה שלמה עבור {{school}}.
 #
-# Create a complete save/load system for {{school}}.
-#
-# Step 1: Create a game state dictionary:
+# 1. צרי מילון מצב משחק:
 #         game_state = {
 #             "player": "{{hero}}",
 #             "level": 1,
@@ -181,18 +169,18 @@ import json
 #             "completed_quests": []
 #         }
 #
-# Step 2: Create a save function:
+# 2. צרי פונקציית שמירה:
 #         def save_game(state, filename):
 #             with open(filename, "w") as f:
 #                 json.dump(state, f, indent=2)
 #             print(f"Game saved to {filename}")
 #
-# Step 3: Create a load function:
+# 3. צרי פונקציית טעינה:
 #         def load_game(filename):
 #             with open(filename, "r") as f:
 #                 return json.load(f)
 #
-# Step 4: Test save and load
+# 4. בדקי שמירה וטעינה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

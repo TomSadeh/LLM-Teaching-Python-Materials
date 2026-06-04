@@ -9,9 +9,9 @@
 # {{CONTEXT_SPOT_DIFFERENCE_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{COMPARISON_1_TITLE}}
+# ## {{COMPARISON_1_TITLE}}
 # {{CONTEXT_COMPARISON_1_NARRATIVE}}
-# One version gets the last element correctly, one causes an error.
+# גרסה אחת מגיעה לאיבר האחרון בהצלחה, והשנייה גורמת לשגיאה.
 
 # %%
 items = ["{{item}}", "potion", "key"]
@@ -44,9 +44,9 @@ Why this matters:
 return explanation
 
 # %% [markdown]
-# {{COMPARISON_2_TITLE}}
+# ## {{COMPARISON_2_TITLE}}
 # {{CONTEXT_COMPARISON_2_NARRATIVE}}
-# One version accesses elements safely in a loop, one goes too far.
+# גרסה אחת ניגשת לאיברים בצורה בטוחה בלולאה, והשנייה הולכת רחוק מדי.
 
 # %%
 team = ["{{hero}}", "{{heroine}}", "{{friend}}"]
@@ -79,9 +79,9 @@ Why this matters:
 return explanation
 
 # %% [markdown]
-# {{COMPARISON_3_TITLE}}
+# ## {{COMPARISON_3_TITLE}}
 # {{CONTEXT_COMPARISON_3_NARRATIVE}}
-# Both access an element, but one modifies the list and one doesn't.
+# שתי הגרסאות ניגשות לאיבר, אבל אחת משנה את הרשימה והשנייה לא.
 
 # %%
 scores = [85, 92, 78]
@@ -116,9 +116,9 @@ Why this matters:
 return explanation
 
 # %% [markdown]
-# {{COMPARISON_4_TITLE}}
+# ## {{COMPARISON_4_TITLE}}
 # {{CONTEXT_COMPARISON_4_NARRATIVE}}
-# Two ways to get the last element - which is safer?
+# שתי דרכים להגיע לאיבר האחרון — איזו מהן בטוחה יותר?
 
 # %%
 inventory = ["{{item}}", "potion"]

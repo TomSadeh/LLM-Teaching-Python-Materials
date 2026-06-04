@@ -13,17 +13,15 @@
 import turtle
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי בלולאה כדי להדפיסי "Hello, {{school}}!" שלוש פעמים.
 #
-# Use a loop to print "Hello, {{school}}!" three times.
+# 1. כתבי: `for i in range(3):`
+# 2. בשורה הבאה, עם הזחה (indentation), כתבי: `print("Hello, {{school}}!")`
 #
-# Step 1: Write: for i in range(3):
-# Step 2: On the next line, INDENTED, write: print("Hello, {{school}}!")
-#
-# Expected output:
+# פלט צפוי:
 # Hello, {{school}}!
 # Hello, {{school}}!
 # Hello, {{school}}!
@@ -32,63 +30,57 @@ import turtle
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צייר ריבוע עבור {{hero}} בעזרת לולאה.
+# לריבוע יש 4 צלעות, עם פנייה של 90 מעלות בכל פינה.
 #
-# Draw a square for {{hero}} using a loop.
-# A square has 4 sides, each with a 90-degree turn.
+# 1. צרי צב בעזרת `t = turtle.Turtle()`
+# 2. כתבי לולאה שחוזרת 4 פעמים
+# 3. בתוך הלולאה (עם הזחה):
+#    - `t.forward(100)`
+#    - `t.right(90)`
 #
-# Step 1: Create a turtle with t = turtle.Turtle()
-# Step 2: Write a for loop that repeats 4 times
-# Step 3: Inside the loop (indented):
-#         - t.forward(100)
-#         - t.right(90)
-#
-# Hint: Each side is: move forward, then turn right.
+# > רמז: כל צלע היא: התקדמי קדימה, אחר כך פני ימינה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צייר משולש עבור {{creature}} בעזרת לולאה.
+# למשולש יש 3 צלעות עם פניות של 120 מעלות.
 #
-# Draw a triangle for {{creature}} using a loop.
-# A triangle has 3 sides with 120-degree turns.
+# 1. צרי צב
+# 2. כתבי לולאה שחוזרת 3 פעמים
+# 3. בתוך הלולאה:
+#    - התקדמי 80 יחידות קדימה
+#    - פני שמאלה 120 מעלות
 #
-# Step 1: Create a turtle
-# Step 2: Write a for loop that repeats 3 times
-# Step 3: Inside the loop:
-#         - Move forward 80 units
-#         - Turn left 120 degrees
-#
-# Hint: The exterior angle of a triangle is 120 degrees.
+# > רמז: הזווית החיצונית של משולש שווה צלעות היא 120 מעלות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי קו מקווקו ב-{{location}} על ידי חזרה על הפעולות:
+# שרטטי, הרימי את העט, התקדמי, הורידי את העט.
 #
-# Create a dashed line at {{location}} by repeating:
-# draw, lift pen, move, put pen down.
+# 1. צרי צב
+# 2. השתמשי בלולאה שחוזרת 5 פעמים
+# 3. בתוך הלולאה:
+#    - `t.forward(20)`      # שרטטי קו קצר
+#    - `t.penup()`          # הרימי את העט
+#    - `t.forward(10)`      # התקדמי בלי לצייר
+#    - `t.pendown()`        # הורידי את העט
 #
-# Step 1: Create a turtle
-# Step 2: Use a for loop that repeats 5 times
-# Step 3: Inside the loop:
-#         - t.forward(20)      # Draw a dash
-#         - t.penup()          # Lift the pen
-#         - t.forward(10)      # Move without drawing
-#         - t.pendown()        # Put pen back down
-#
-# Expected: A dashed line with 5 dashes and 4 gaps.
+# פלט צפוי: קו מקווקו עם 5 קווים ו-4 רווחים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

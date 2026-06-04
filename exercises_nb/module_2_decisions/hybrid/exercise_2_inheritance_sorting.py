@@ -10,13 +10,13 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגילה בת מספר חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: DISCOVERY - Understand the Inherited Code
+# ## חלק 1: גילוי - הבן את הקוד הקיים
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{mentor}} has left {{school}} and given {{hero}} their sorting system.
-# Study how it works before you can extend it.
+# {{mentor}} עזב את {{school}} והעביר ל-{{hero}} את מערכת המיון שלו.
+# למדי איך היא עובדת לפני שתוכלי להרחיב אותה.
 
 # %% locked
 # The old sorting system for {{school}}
@@ -43,80 +43,76 @@ print(f"{student} sorted into {house}")
 print(f"Dominant trait: {trait}")
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS HERE ✏️
+# למדי את `inherited_sorting_system` וענעי על השאלות הבאות:
 #
-# Study the inherited_sorting_system and answer these questions:
+# 1. לכמה בתים אפשר למיין תלמידים? ___
 #
-# 1. How many houses can students be sorted into? ___
+# 2. מה קורה אם `courage = 70`, `wisdom = 85`, `kindness = 60`?
+#    - `courage > wisdom`? (70 > 85) _____ (True/False)
+#    - `wisdom > courage`? (85 > 70) _____ (True/False)
+#    - `wisdom > kindness`? (85 > 60) _____ (True/False)
+#    - לאיזה בית? _____________________
 #
-# 2. What happens if courage = 70, wisdom = 85, kindness = 60?
-#    - courage > wisdom? (70 > 85) _____ (True/False)
-#    - wisdom > courage? (85 > 70) _____ (True/False)
-#    - wisdom > kindness? (85 > 60) _____ (True/False)
-#    - Which house? _____________________
+# 3. מה קורה אם שני מאפיינים שווים ומובילים?
+#    לדוגמה: `courage = 80`, `wisdom = 80`, `kindness = 60`
+#    - `courage > wisdom`? (80 > 80) _____ (True/False)
+#    - התנאי הראשון נכשל, בודקים `elif`...
+#    - `wisdom > courage`? (80 > 80) _____ (True/False)
+#    - גם ה-`elif` נכשל, אז... _____________________
 #
-# 3. What happens if two attributes are tied for highest?
-#    Example: courage = 80, wisdom = 80, kindness = 60
-#    - courage > wisdom? (80 > 80) _____ (True/False)
-#    - First condition fails, check elif...
-#    - wisdom > courage? (80 > 80) _____ (True/False)
-#    - elif fails too, so... _____________________
-#
-# 4. Is this fair? What if kindness is actually lowest but gets assigned?
+# 4. האם זה הוגן? מה קורה אם `kindness` היא בעצם הנמוכה ביותר אבל בכל זאת מוקצית?
 #    _____________________________________________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: OWNERSHIP - Add Your Own Feature
+# ## חלק 2: בעלות - הוסיפי תכונה משלך
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# {{hero}} wants to add a new house: "House of Adventurers" for students
-# whose highest trait is "bravery". Extend the system!
+# {{hero}} רוצה להוסיף בית חדש: `"House of Adventurers"` לתלמידים
+# שהתכונה הגבוהה ביותר שלהם היא `bravery`. הרחיבי את המערכת!
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי מערכת מיון משופרת עם ארבעה בתים:
+# - `House of Warriors` (כאשר `courage` הגבוה ביותר)
+# - `House of Scholars` (כאשר `wisdom` הגבוה ביותר)
+# - `House of Healers` (כאשר `kindness` הגבוה ביותר)
+# - `House of Adventurers` (כאשר `bravery` הגבוה ביותר) <-- חדש!
 #
-# Create an improved sorting system with FOUR houses:
-# - House of Warriors (courage is highest)
-# - House of Scholars (wisdom is highest)
-# - House of Healers (kindness is highest)
-# - House of Adventurers (bravery is highest) <-- NEW!
+# 1. צרי משתנים לתלמידת בדיקה:
+#    `student = "{{hero}}"`
+#    `courage = 60`
+#    `wisdom = 70`
+#    `kindness = 55`
+#    `bravery = 85`  <-- תכונה חדשה
 #
-# Step 1: Create variables for a test student:
-#         student = "{{hero}}"
-#         courage = 60
-#         wisdom = 70
-#         kindness = 55
-#         bravery = 85  <-- new trait
+# 2. כתבי `if`/`elif`/`elif`/`elif`/`else` כדי למצוא את הגבוה ביותר:
+#    (תצטרכי לבדוק 4 תנאים)
+#    - אם `bravery` הגבוה מכל 4: `"House of Adventurers"`
+#    - אחרת אם `courage` הגבוה: `"House of Warriors"`
+#    - אחרת אם `wisdom` הגבוה: `"House of Scholars"`
+#    - אחרת אם `kindness` הגבוה: `"House of Healers"`
+#    - אחרת: `"House of Balance"` (לשוויון או מקרי קצה)
 #
-# Step 2: Write if/elif/elif/elif/else to find the highest:
-#         (You'll need to check 4 conditions)
-#         - if bravery is highest of all 4: "House of Adventurers"
-#         - elif courage is highest: "House of Warriors"
-#         - elif wisdom is highest: "House of Scholars"
-#         - elif kindness is highest: "House of Healers"
-#         - else: "House of Balance" (for ties or edge cases)
+# 3. הדפיסי את התוצאה
 #
-# Step 3: Print the result
+# > רמז: כדי לבדוק אם `bravery` הגבוה מכל 4:
+# >       `if bravery > courage and bravery > wisdom and bravery > kindness:`
 #
-# Hint: To check if bravery is highest of all 4:
-#       if bravery > courage and bravery > wisdom and bravery > kindness:
-#
-# Expected output for the test values:
-#   {{hero}} sorted into House of Adventurers
+# פלט צפוי עבור ערכי הבדיקה:
+#   `{{hero}} sorted into House of Adventurers`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: INVESTIGATION - Find the Hidden Bug
+# ## חלק 3: חקירה - מצאי את הבאג הנסתר
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# {{hero}} discovers the original system has a bug that causes
-# unfair sorting in some cases. Find and understand it!
+# {{hero}} מגלה שבמערכת המקורית יש באג שגורם
+# למיון לא הוגן במקרים מסוימים. מצאי והביני אותו!
 
 # %%
 # What if ALL traits are equal?
@@ -138,57 +134,57 @@ print(f"Sorted into: {house}")
 print("Is this fair when all traits are equal?")
 
 # %% [markdown]
-# ✏️ TRACE THE BUG ✏️
+# עיקבי אחרי הבאג:
 #
-# When courage = 75, wisdom = 75, kindness = 75:
+# כאשר `courage = 75`, `wisdom = 75`, `kindness = 75`:
 #
-# Check 1: courage > wisdom AND courage > kindness
-#          75 > 75 = _____ AND 75 > 75 = _____
-#          Combined: _____ AND _____ = _____ (True/False)
-#          First branch executes? _____
+# בדיקה 1: `courage > wisdom AND courage > kindness`
+#           75 > 75 = _____ AND 75 > 75 = _____
+#           ביחד: _____ AND _____ = _____ (True/False)
+#           הענף הראשון מתבצע? _____
 #
-# Check 2: wisdom > courage AND wisdom > kindness
-#          75 > 75 = _____ AND 75 > 75 = _____
-#          Combined: _____ AND _____ = _____
-#          Second branch executes? _____
+# בדיקה 2: `wisdom > courage AND wisdom > kindness`
+#           75 > 75 = _____ AND 75 > 75 = _____
+#           ביחד: _____ AND _____ = _____
+#           הענף השני מתבצע? _____
 #
-# Since both conditions are False, what runs? _____
+# מכיוון ששני התנאים הם `False`, מה רץ? _____
 #
-# The bug: When all traits are equal, the student is assigned to
-# _____________________ even though kindness might not be their strength!
+# הבאג: כאשר כל התכונות שוות, התלמידה מוקצית ל-
+# _____________________ למרות ש-`kindness` לא בהכרח החוזק שלה!
 #
-# A better approach would be: _____________________________________
+# גישה טובה יותר תהיה: _____________________________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# תקני את הבאג:
 #
-# Create a fairer system that handles ties explicitly.
+# צרי מערכת הוגנת יותר שמטפלת בשוויון במפורש.
 #
-# Step 1: Create equal trait values:
-#         student = "{{friend}}"
-#         courage = 75
-#         wisdom = 75
-#         kindness = 75
+# 1. צרי ערכי תכונות שווים:
+#    `student = "{{friend}}"`
+#    `courage = 75`
+#    `wisdom = 75`
+#    `kindness = 75`
 #
-# Step 2: First check for a tie (all equal):
-#         if courage == wisdom and wisdom == kindness:
-#             print f"{student} has balanced traits!"
-#             print "Special placement: House of Balance"
+# 2. בדקי קודם שוויון (כל התכונות שוות):
+#    `if courage == wisdom and wisdom == kindness:`
+#        הדפיסי `f"{student} has balanced traits!"`
+#        הדפיסי `"Special placement: House of Balance"`
 #
-# Step 3: Otherwise, use the original logic with elif:
-#         elif courage > wisdom and courage > kindness:
-#             ... (Warriors)
-#         elif wisdom > courage and wisdom > kindness:
-#             ... (Scholars)
-#         else:
-#             ... (Healers)
+# 3. אחרת, השתמשי בלוגיקה המקורית עם `elif`:
+#    `elif courage > wisdom and courage > kindness:`
+#        ... (Warriors)
+#    `elif wisdom > courage and wisdom > kindness:`
+#        ... (Scholars)
+#    `else:`
+#        ... (Healers)
 #
-# Expected output when all traits are 75:
-#   {{friend}} has balanced traits!
-#   Special placement: House of Balance
+# פלט צפוי כאשר כל התכונות הן 75:
+#   `{{friend}} has balanced traits!`
+#   `Special placement: House of Balance`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

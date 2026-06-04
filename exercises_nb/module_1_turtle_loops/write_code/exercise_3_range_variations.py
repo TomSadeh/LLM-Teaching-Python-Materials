@@ -13,64 +13,58 @@
 import turtle
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# הדפיסי את המספרים 5 עד 9 עבור ספירת לאחור של {{hero}}.
 #
-# Print numbers 5 through 9 for {{hero}}'s countdown.
+# 1. השתמשי בלולאת `for` עם `range(5, 10)`
+# 2. הדפיסי כל מספר בתוך הלולאה
 #
-# Step 1: Use a for loop with range(5, 10)
-# Step 2: Print each number inside the loop
-#
-# Expected output:
+# פלט צפוי:
 # 5
 # 6
 # 7
 # 8
 # 9
 #
-# Hint: range(5, 10) gives 5, 6, 7, 8, 9 - it stops BEFORE 10.
+# > רמז: `range(5, 10)` נותנת 5, 6, 7, 8, 9 - היא עוצרת לפני 10.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# הדפיסי מספרים זוגיים מ-2 עד 10 עבור אימון {{creature}}.
 #
-# Print even numbers from 2 to 10 for {{creature}}'s training.
+# 1. השתמשי בלולאת `for` עם `range(2, 11, 2)`
+# 2. הדפיסי כל מספר
 #
-# Step 1: Use a for loop with range(2, 11, 2)
-# Step 2: Print each number
-#
-# Expected output:
+# פלט צפוי:
 # 2
 # 4
 # 6
 # 8
 # 10
 #
-# Hint: The step of 2 skips every other number.
-# We use 11 as stop because we WANT to include 10.
+# > רמז: הצעד 2 מדלג על כל מספר שני.
+# > משתמשים ב-11 כערך הסיום כי אנחנו רוצות לכלול את 10.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי ספירה לאחור מ-10 עד 1 עבור האתגר של {{hero}}.
 #
-# Create a countdown from 10 to 1 for {{hero}}'s challenge.
+# 1. השתמשי בלולאת `for` עם `range(10, 0, -1)`
+# 2. הדפיסי כל מספר
 #
-# Step 1: Use a for loop with range(10, 0, -1)
-# Step 2: Print each number
-#
-# Expected output:
+# פלט צפוי:
 # 10
 # 9
 # 8
@@ -82,52 +76,48 @@ import turtle
 # 2
 # 1
 #
-# Hint: A negative step (-1) counts backwards.
+# > רמז: צעד שלילי (-1) סופר לאחור.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ציירי סדרה של קווים עם אורכים גדלים ב-{{location}}.
+# כל קו צריך להיות באורך 20, 40, 60, 80 ו-100 יחידות.
 #
-# Draw a series of lines with increasing lengths at {{location}}.
-# Each line should be 20, 40, 60, 80, and 100 units long.
+# 1. צרי צב
+# 2. השתמשי בלולאת `for` עם `range(20, 101, 20)`
+# 3. בתוך הלולאה:
+#         - `t.forward(length)` כאשר `length` הוא משתנה הלולאה
+#         - `t.penup()`
+#         - `t.backward(length)`  # חזרה להתחלה
+#         - `t.right(90)`
+#         - `t.forward(15)`       # ירידה למטה
+#         - `t.left(90)`
+#         - `t.pendown()`
 #
-# Step 1: Create a turtle
-# Step 2: Use a for loop with range(20, 101, 20)
-# Step 3: Inside the loop:
-#         - t.forward(length) where length is the loop variable
-#         - t.penup()
-#         - t.backward(length)  # Return to start
-#         - t.right(90)
-#         - t.forward(15)       # Move down
-#         - t.left(90)
-#         - t.pendown()
-#
-# Expected: 5 horizontal lines of increasing length, stacked vertically.
+# צפוי: 5 קווים אופקיים באורכים גדלים, מסודרים אנכית.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ציירי כוכב ב-{{school}} על ידי ציור קווים בכל 144 מעלות.
+# כוכב עם 5 קצוות דורש פנייה של 144 מעלות אחרי כל קו.
 #
-# Draw a star pattern at {{school}} by drawing lines at every 144 degrees.
-# A 5-pointed star requires turning 144 degrees after each line.
+# 1. צרי צב
+# 2. השתמשי בלולאת `for` עם `range(5)` לציור 5 קווים
+# 3. בתוך הלולאה:
+#         - `t.forward(100)`
+#         - `t.right(144)`
 #
-# Step 1: Create a turtle
-# Step 2: Use a for loop with range(5) to draw 5 lines
-# Step 3: Inside the loop:
-#         - t.forward(100)
-#         - t.right(144)
-#
-# Expected: A 5-pointed star shape.
+# צפוי: צורת כוכב עם 5 קצוות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

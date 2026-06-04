@@ -2,7 +2,7 @@
 # {{CONTEXT_SIMPLIFY_CODE_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Replace long if/elif chains with elegant dictionary-based dispatch.
+# החליפי שרשראות ארוכות של `if`/`elif` בבדיקה חכמה באמצעות מילון.
 #
 # {{SIMPLIFY_1_TITLE}}
 # {{CONTEXT_SIMPLIFY_1_NARRATIVE}}
@@ -20,13 +20,11 @@ else:
     return 0
 
 # %% [markdown]
-# ✏️ SIMPLIFY THIS ✏️
-#
 # {{CONTEXT_SIMPLIFY_HINT_1}}
 #
-# Replace the if/elif chain with a dictionary lookup.
-# Use: powers = {"ability": value, ...}
-# Return: powers.get(ability_name, 0)
+# החליפי את שרשרת ה-`if`/`elif` בבדיקה במילון.
+# השתמשי ב: `powers = {"ability": value, ...}`
+# החזירי: `powers.get(ability_name, 0)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -49,11 +47,9 @@ else:
 return message
 
 # %% [markdown]
-# ✏️ SIMPLIFY THIS ✏️
-#
 # {{CONTEXT_SIMPLIFY_HINT_2}}
 #
-# Use a dictionary to map statuses to messages.
+# השתמשי במילון כדי לקשר בין סטטוסים להודעות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -76,13 +72,11 @@ else:
 return result
 
 # %% [markdown]
-# ✏️ SIMPLIFY THIS ✏️
-#
 # {{CONTEXT_SIMPLIFY_HINT_3}}
 #
-# This is trickier - each command does something different!
+# זה קצת יותר מסובך — כל פקודה עושה משהו שונה!
 #
-# Approach 1: Store the result of each operation
+# גישה 1: שמרי את התוצאה של כל פעולה
 #   operations = {
 #       "add": value + 10,
 #       "double": value * 2,
@@ -90,8 +84,7 @@ return result
 #   }
 #   return operations.get(command, value)
 #
-# Note: This calculates ALL operations even if not used.
-# For simple cases like this, it's fine.
+# > רמז: גישה זו מחשבת את כל הפעולות גם אם לא צריך אותן. לפריטים פשוטים כמו אלה — זה בסדר גמור.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -110,12 +103,10 @@ for item in items:
 return counts
 
 # %% [markdown]
-# ✏️ SIMPLIFY THIS ✏️
-#
 # {{CONTEXT_SIMPLIFY_HINT_4}}
 #
-# Replace the if/else with .get() pattern:
-# counts[item] = counts.get(item, 0) + 1
+# החליפי את ה-`if`/`else` בתבנית עם `.get()`:
+# `counts[item] = counts.get(item, 0) + 1`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -139,12 +130,10 @@ else:
 return int(base_damage * multiplier)
 
 # %% [markdown]
-# ✏️ SIMPLIFY THIS ✏️
-#
 # {{CONTEXT_SIMPLIFY_HINT_5}}
 #
-# Store multipliers in a dictionary.
-# Use .get() with default 1.0 for unknown types.
+# שמרי את המכפילים במילון.
+# השתמשי ב-`.get()` עם ברירת מחדל `1.0` עבור סוגים לא מוכרים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

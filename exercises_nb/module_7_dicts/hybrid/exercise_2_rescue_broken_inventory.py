@@ -1,18 +1,18 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is a multi-part exercise where you rescue a broken inventory system.
-# Diagnose the errors, trace the problem, and fix it properly.
+# זו תרגילה רב-חלקית שבה תצילי מערכת מלאי שבורה.
+# תאבחני את השגיאות, תעקבי אחרי הבעיה, ותתקני אותה כמו שצריך.
 #
-# Programming concepts: dictionaries, KeyError, .get(), safe access patterns
+# מושגי תכנות: מילונים, `KeyError`, `.get()`, דפוסי גישה בטוחה
 #
-# PART 1: The Setback - Diagnose the Crash
+# ## חלק 1: הכישלון - אבחון הקריסה
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# The inventory system is crashing! Read the error message
-# and understand what went wrong.
+# מערכת המלאי קורסת! קראי את הודעת השגיאה
+# והביני מה השתבש.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "inventory.py", line 15, in <module>
@@ -27,32 +27,30 @@ inventory[item_name] -= 1
 print(f"Used one {{{{item_name}}}}. Remaining: {inventory[item_name]}")
 
 # %% [markdown]
-# ✏️ DIAGNOSE THE ERROR ✏️
+# ענִי על השאלות הבאות בתגובות:
 #
-# Answer these questions in comments:
+# 1. איזה סוג שגיאה התרחשה?
+#    תשובה:
 #
-# 1. What type of error occurred?
-#    Answer:
+# 2. באיזה שורה התרחשה השגיאה?
+#    תשובה:
 #
-# 2. On which line did the error occur?
-#    Answer:
+# 3. למה השגיאה הזאת קרתה?
+#    תשובה:
 #
-# 3. Why did this error happen?
-#    Answer:
-#
-# 4. What item was the code trying to access?
-#    Answer:
+# 4. לאיזה פריט הקוד ניסה לגשת?
+#    תשובה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Investigation - Trace the Problem
+# ## חלק 2: חקירה - מעקב אחרי הבעיה
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Trace through a sequence of operations to see
-# where the inventory state goes wrong.
+# עקבי אחרי רצף הפעולות כדי לראות
+# היכן מצב המלאי משתבש.
 
 # %%
 inventory = {"{{item}}": 3, "{{spell1}}": 1}
@@ -67,62 +65,56 @@ inventory["{{spell1}}"] -= 1
 print(inventory)
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# השלימי את טבלת המעקב:
 #
-# | Step | inventory contents                 | Notes                |
-# |------|------------------------------------|----------------------|
-# | 0    | {"{{item}}": 3, "{{spell1}}": 1}   | Initial state        |
-# | 1    |                                    | After using {{item}} |
-# | 2    |                                    | After using {{spell1}}|
-# | 3    | ???                                | What if we tried {{spell2}}? |
+# | שלב | תוכן המלאי                          | הערות                           |
+# |-----|-------------------------------------|---------------------------------|
+# | 0   | {"{{item}}": 3, "{{spell1}}": 1}    | מצב התחלתי                      |
+# | 1   |                                     | אחרי שימוש ב-{{item}}           |
+# | 2   |                                     | אחרי שימוש ב-{{spell1}}         |
+# | 3   | ???                                 | מה יקרה אם ננסה {{spell2}}?     |
 #
-# Explain: Why would step 3 crash if uncommented?
+# הסבירי: למה שלב 3 יקרוס אם נבטל את ה-`#`?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Improvement - Fix with .get()
+# ## חלק 3: שיפור - תיקון עם `.get()`
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Rewrite the inventory system using .get() to make it robust.
+# כתבי מחדש את מערכת המלאי תוך שימוש ב-`.get()` כדי לגרום לה לעמוד בפני שגיאות.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. קבלי את הכמות הנוכחית באמצעות `.get(item_name, 0)`
 #
-# Step 1: Get current quantity using .get(item_name, 0)
+# 2. אם הכמות גדולה מ-0:
+#    - הפחיתי את המלאי ב-1
+#    - הדפיסי: `"Used one [item]. Remaining: [count]"`
+#    - החזירי `True`
 #
-# Step 2: If quantity > 0:
-#         - Decrement the inventory
-#         - Print: "Used one [item]. Remaining: [count]"
-#         - Return True
-#
-# Step 3: Otherwise:
-#         - Print: "[item] not available!"
-#         - Return False
+# 3. אחרת:
+#    - הדפיסי: `"[item] not available!"`
+#    - החזירי `False`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use the pattern: inventory[item] = inventory.get(item, 0) + quantity
-# Print: "Added [quantity] [item]. Total: [new_total]"
+# השתמשי בתבנית: `inventory[item] = inventory.get(item, 0) + quantity`
+# הדפיסי: `"Added [quantity] [item]. Total: [new_total]"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use .get() to safely return the quantity
+# השתמשי ב-`.get()` כדי להחזיר את הכמות בצורה בטוחה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## PART 4: Testing the Fixed System
+# ## חלק 4: בדיקת המערכת המתוקנת
 
 # %%
 print("=== Testing Fixed Inventory System ===")
@@ -158,7 +150,7 @@ print(f"{{{{item}}}}: {check_inventory(inventory, '{{item}}')}")
 print(f"{{{{spell2}}}}: {check_inventory(inventory, '{{spell2}}')}")
 
 # %% [markdown]
-# ## MAIN
+# ## תוכנית ראשית
 
 # %%
 print("=" * 60)

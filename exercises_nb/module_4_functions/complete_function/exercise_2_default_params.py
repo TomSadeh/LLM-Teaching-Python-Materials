@@ -9,7 +9,7 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Function 1: Single Default Parameter
+# ## פונקציה 1: פרמטר ברירת מחדל בודד
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
 # %%
@@ -23,7 +23,7 @@
 pass  # Replace with implementation
 
 # %% [markdown]
-# Function 2: Multiple Default Parameters
+# ## פונקציה 2: מספר פרמטרים עם ברירת מחדל
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
 # %%
@@ -36,7 +36,7 @@ pass  # Replace with implementation
 pass
 
 # %% [markdown]
-# Function 3: Required Before Optional
+# ## פונקציה 3: פרמטרים חובה לפני אופציונליים
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
 # %%
@@ -49,7 +49,7 @@ pass
 pass
 
 # %% [markdown]
-# Function 4: Default with Condition
+# ## פונקציה 4: ברירת מחדל עם תנאי
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 
 # %%
@@ -63,7 +63,7 @@ pass
 pass
 
 # %% [markdown]
-# Function 5: Flexible Formatting
+# ## פונקציה 5: עיצוב גמיש
 # {{CONTEXT_FUNCTION_5_NARRATIVE}}
 
 # %%

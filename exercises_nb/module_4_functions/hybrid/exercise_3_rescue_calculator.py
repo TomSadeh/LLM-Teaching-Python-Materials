@@ -9,25 +9,25 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגילה מרובת-חלקים. השלימי כל חלק לפי הסדר.
 #
-# {{mentor}} built a calculator for {{school}}, but it's completely broken!
-# Students are getting strange results and errors. You need to save the day.
+# {{mentor}} בנה מחשבון עבור {{school}}, אבל הוא שבור לגמרי!
+# התלמידות מקבלות תוצאות מוזרות ושגיאות. את צריכה להציל את המצב.
 #
-# PART 1: SETBACK - Understand the Errors
+# ## חלק 1: המכשול - הבן את השגיאות
 # {{CONTEXT_SETBACK_INTRO}}
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# The calculator is producing errors. Decode what went wrong.
+# המחשבון מייצר שגיאות. פענחי מה השתבש.
 #
-# ERROR MESSAGE 1:
+# הודעת שגיאה 1:
 # ----------------
 # Traceback (most recent call last):
 #   File "calculator.py", line 12, in <module>
 #     final = result * 2
 # TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
 #
-# The code that caused this:
+# הקוד שגרם לכך:
 #     def add(a, b):
 #         print(a + b)
 #
@@ -67,11 +67,11 @@ print(f"Stored result: {result2}")
 print(f"Type: {type(result2)}")
 
 # %% [markdown]
-# PART 2: INVESTIGATION - Find and Fix the Bugs
+# ## חלק 2: החקירה - מצאי ותקני את הבאגים
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Here's the broken calculator. Find all the bugs!
+# הנה המחשבון השבור. מצאי את כל הבאגים!
 
 # %%
 def add(a, b):
@@ -93,7 +93,7 @@ diff_result = subtract(10, 5)
 product = multiply(10, 5)
 
 # %% [markdown]
-# These will all fail because results are None!
+# כל אלה ייכשלו כי התוצאות הן `None`!
 # total = sum_result + diff_result + product
 
 # %%
@@ -137,12 +137,12 @@ if sum_result and diff_result and product and quotient:
     print(f"\nSum of results: {total}")
 
 # %% [markdown]
-# PART 3: IMPROVEMENT - Add Input Validation
+# ## חלק 3: השיפור - הוספת בדיקת קלט
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# The calculator works now, but it crashes on bad input.
-# Add validation to make it robust.
+# המחשבון עובד עכשיו, אבל הוא קורס על קלט שגוי.
+# הוסיפי בדיקות כדי להפוך אותו לעמיד יותר.
 
 # %%
 # CREATE AN IMPROVED CALCULATOR
@@ -195,7 +195,7 @@ else:
     print(f"10 / 0 = {result}")
 
 # %% [markdown]
-# ## FINAL CHALLENGE: Complete Calculator
+# ## אתגר סיום: המחשבון השלם
 
 # %%
 # CREATE THE FINAL CALCULATOR

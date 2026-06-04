@@ -9,7 +9,7 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Function 1: Return a Simple Value
+# ## פונקציה 1: החזרת ערך פשוט
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
 # %%
@@ -22,7 +22,7 @@
 pass  # Replace with implementation
 
 # %% [markdown]
-# Function 2: Return with Parameter
+# ## פונקציה 2: החזרת ערך עם פרמטר
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
 # %%
@@ -38,7 +38,7 @@ title = "Champion"
 pass
 
 # %% [markdown]
-# Function 3: Return a Calculation
+# ## פונקציה 3: החזרת תוצאת חישוב
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
 # %%
@@ -52,7 +52,7 @@ pass
 pass
 
 # %% [markdown]
-# Function 4: Return with Conditional
+# ## פונקציה 4: החזרת ערך עם תנאי
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 
 # %%
@@ -65,7 +65,7 @@ pass
 pass
 
 # %% [markdown]
-# Function 5: Using Returned Values
+# ## פונקציה 5: שימוש בערכים שמוחזרים
 # {{CONTEXT_FUNCTION_5_NARRATIVE}}
 
 # %%

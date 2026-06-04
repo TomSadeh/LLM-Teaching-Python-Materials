@@ -2,98 +2,87 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Using continue to skip iterations
-# Difficulty: 2-3
+# נושא: שימוש ב-`continue` לדילוג על איטרציות
+# רמת קושי: 2-3
 #
-# The 'continue' statement skips the rest of the current iteration
-# and moves to the next one. Use it to skip unwanted items.
+# הפקודה `continue` מדלגת על שאר הקוד באיטרציה הנוכחית
+# ועוברת ישירות לאיטרציה הבאה. השתמשי בה כדי לדלג על פריטים לא רצויים.
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# Use continue to skip items that don't match criteria.
+# השתמשי ב-`continue` כדי לדלג על פריטים שלא עומדים בקריטריון.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Loop through each number in numbers
-# Step 2: If number is less than or equal to 0, continue
-# Step 3: Print the number
+# 1. עברי על כל מספר ברשימה `numbers`
+# 2. אם המספר קטן מאפס או שווה לאפס, השתמשי ב-`continue`
+# 3. הדפיסי את המספר
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# Use continue to filter during processing.
+# השתמשי ב-`continue` כדי לסנן פריטים תוך כדי עיבוד.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create an empty result list
-# Step 2: Loop through each item
-# Step 3: If item is an empty string "", continue
-# Step 4: Convert to uppercase and add to result
-# Step 5: Return result
+# 1. צרי רשימת תוצאות ריקה
+# 2. עברי על כל פריט
+# 3. אם הפריט הוא מחרוזת ריקה `""`, השתמשי ב-`continue`
+# 4. המירי לאותיות גדולות והוסיפי לרשימת התוצאות
+# 5. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# Use continue with index-based loops.
+# השתמשי ב-`continue` בלולאות עם אינדקס.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create an empty result list
-# Step 2: Loop with index: for i in range(len(values))
-# Step 3: If i is odd (i % 2 != 0), continue
-# Step 4: Add values[i] to result
-# Step 5: Return result
+# 1. צרי רשימת תוצאות ריקה
+# 2. כתבי לולאה עם אינדקס: `for i in range(len(values))`
+# 3. אם `i` הוא אי-זוגי (`i % 2 != 0`), השתמשי ב-`continue`
+# 4. הוסיפי את `values[i]` לרשימת התוצאות
+# 5. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# Combine continue with while loops.
+# שלבי `continue` עם לולאות `while`.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. קבעי `total = 0`
+# 2. `while True`:
+#    - קבלי קלט מהמשתמשת
+#    - אם הקלט הוא `'done'`, צאי מהלולאה עם `break`
+#    - אם הקלט הוא מספר (`.isdigit()` או מספר שלילי), הוסיפי לסכום
+#    - אחרת: הדפיסי `"Invalid number, skipping."` והמשיכי עם `continue`
+# 3. החזירי את הסכום
 #
-# Step 1: Set total = 0
-# Step 2: While True:
-#         - Get input
-#         - If input is 'done', break
-#         - If input.isdigit() or (input.startswith('-') and input[1:].isdigit()):
-#           Add int(input) to total
-#         - Else: print "Invalid number, skipping." and continue
-# Step 3: Return total
-#
-# Note: Use .lstrip('-').isdigit() to check for negative numbers
+# > רמז: השתמשי ב-`.lstrip('-').isdigit()` כדי לבדוק אם מספר שלילי
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# Use continue with complex skip conditions.
+# השתמשי ב-`continue` עם תנאי דילוג מורכבים.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create an empty result list
-# Step 2: Loop through each item
-# Step 3: If item is in blocked_list:
-#         - Print f"Blocked: {item}"
-#         - Continue
-# Step 4: Process item (convert to lowercase) and add to result
-#         - Print f"Approved: {item}"
-# Step 5: Return result
+# 1. צרי רשימת תוצאות ריקה
+# 2. עברי על כל פריט
+# 3. אם הפריט נמצא ב-`blocked_list`:
+#    - הדפיסי `f"Blocked: {item}"`
+#    - המשיכי עם `continue`
+# 4. עבדי את הפריט (המירי לאותיות קטנות) והוסיפי לרשימה
+#    - הדפיסי `f"Approved: {item}"`
+# 5. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

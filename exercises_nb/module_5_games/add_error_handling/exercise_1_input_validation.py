@@ -2,19 +2,19 @@
 # {{CONTEXT_ERROR_HANDLING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Adding input validation loops
-# Difficulty: 3
+# נושא: הוספת לולאות אימות קלט
+# רמת קושי: 3
 #
-# Input validation ensures users provide valid data before proceeding.
-# Use while loops with string checking to validate input.
+# אימות קלט מבטיח שהמשתמשת מספקת נתונים תקינים לפני שממשיכים.
+# השתמשי בלולאות `while` עם בדיקות מחרוזת כדי לאמת את הקלט.
 #
-# NOTE: We use while loops and string methods (like .isdigit()) for validation,
-# not try/except blocks. This teaches the fundamental pattern of validation loops.
+# הערה: אנחנו משתמשות בלולאות `while` ובשיטות מחרוזת (כמו `.isdigit()`) לאימות,
+# ולא בבלוקים של `try/except`. כך לומדים את הדפוס הבסיסי של לולאות אימות.
 #
 # {{HANDLING_1_TITLE}}
 # {{CONTEXT_HANDLING_1_NARRATIVE}}
 #
-# This function accepts any input and crashes on invalid numbers.
+# הפונקציה הזו מקבלת כל קלט ומתרסקת כשמזינים מספרים לא תקינים.
 
 # %%
 user_input = input("Enter a number: ")
@@ -22,76 +22,70 @@ number = int(user_input)  # Crashes on "abc"!
 return number
 
 # %% [markdown]
-# ✏️ ADD VALIDATION LOOP ✏️
-#
 # {{CONTEXT_HANDLING_HINT_1}}
 #
-# Step 1: Start while True loop
-# Step 2: Get input
-# Step 3: Check if valid:
-#         - For positive: input.isdigit()
-#         - For negative: input.startswith('-') and input[1:].isdigit()
-# Step 4: If valid, convert and return
-# Step 5: If invalid, print error message (loop continues)
+# 1. התחילי לולאת `while True`
+# 2. קבלי קלט מהמשתמשת
+# 3. בדקי אם הקלט תקין:
+#    - למספר חיובי: `input.isdigit()`
+#    - למספר שלילי: `input.startswith('-')` ו-`input[1:].isdigit()`
+# 4. אם תקין, המירי והחזירי את הערך
+# 5. אם לא תקין, הדפיסי הודעת שגיאה (הלולאה תמשיך)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_2_TITLE}}
+# ## {{HANDLING_2_TITLE}}
 # {{CONTEXT_HANDLING_2_NARRATIVE}}
 #
-# This function accepts numbers outside the valid range.
+# הפונקציה הזו מקבלת מספרים מחוץ לטווח התקין.
 
 # %%
 score = int(input("Enter score (0-100): "))
 return score
 
 # %% [markdown]
-# ✏️ ADD VALIDATION LOOP ✏️
-#
 # {{CONTEXT_HANDLING_HINT_2}}
 #
-# Step 1: Start while True loop
-# Step 2: Get input
-# Step 3: Check if numeric (handle with .isdigit())
-#         If not, print "Please enter a number." and continue
-# Step 4: Convert to int
-# Step 5: Check if in range 0-100
-#         If not, print "Score must be between 0 and 100." and continue
-# Step 6: Return valid score
+# 1. התחילי לולאת `while True`
+# 2. קבלי קלט מהמשתמשת
+# 3. בדקי אם הקלט מספרי (השתמשי ב-`.isdigit()`)
+#    אם לא, הדפיסי `"Please enter a number."` והמשיכי
+# 4. המירי ל-`int`
+# 5. בדקי אם הערך נמצא בטווח 0-100
+#    אם לא, הדפיסי `"Score must be between 0 and 100."` והמשיכי
+# 6. החזירי את הציון התקין
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_3_TITLE}}
+# ## {{HANDLING_3_TITLE}}
 # {{CONTEXT_HANDLING_3_NARRATIVE}}
 #
-# This function accepts any text, even empty strings.
+# הפונקציה הזו מקבלת כל טקסט, אפילו מחרוזות ריקות.
 
 # %%
 name = input("Enter your name: ")
 return name
 
 # %% [markdown]
-# ✏️ ADD VALIDATION LOOP ✏️
-#
 # {{CONTEXT_HANDLING_HINT_3}}
 #
-# Step 1: Start while True loop
-# Step 2: Get input and strip whitespace
-# Step 3: If empty string, print "Name cannot be empty." and continue
-# Step 4: Return the stripped name
+# 1. התחילי לולאת `while True`
+# 2. קבלי קלט והסירי רווחים מיותרים (`.strip()`)
+# 3. אם המחרוזת ריקה, הדפיסי `"Name cannot be empty."` והמשיכי
+# 4. החזירי את השם לאחר ניקוי הרווחים
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_4_TITLE}}
+# ## {{HANDLING_4_TITLE}}
 # {{CONTEXT_HANDLING_4_NARRATIVE}}
 #
-# This function accepts any choice, not just valid options.
+# הפונקציה הזו מקבלת כל בחירה, לא רק אפשרויות תקינות.
 
 # %%
 print("Choose: (a) {{spell1}}, (b) {{spell2}}, (c) {{spell3}}")
@@ -99,40 +93,36 @@ choice = input("Your choice: ")
 return choice
 
 # %% [markdown]
-# ✏️ ADD VALIDATION LOOP ✏️
-#
 # {{CONTEXT_HANDLING_HINT_4}}
 #
-# Step 1: Define valid_choices = ['a', 'b', 'c']
-# Step 2: Print the menu
-# Step 3: Start while True loop
-# Step 4: Get input and convert to lowercase
-# Step 5: If choice in valid_choices, return it
-# Step 6: Otherwise print "Invalid choice. Please enter a, b, or c."
+# 1. הגדירי `valid_choices = ['a', 'b', 'c']`
+# 2. הדפיסי את התפריט
+# 3. התחילי לולאת `while True`
+# 4. קבלי קלט והמירי לאותיות קטנות
+# 5. אם הבחירה נמצאת ב-`valid_choices`, החזירי אותה
+# 6. אחרת הדפיסי `"Invalid choice. Please enter a, b, or c."`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_5_TITLE}}
+# ## {{HANDLING_5_TITLE}}
 # {{CONTEXT_HANDLING_5_NARRATIVE}}
 #
-# This yes/no function accepts any input.
+# הפונקציה הזו של אישור כן/לא מקבלת כל קלט שהוא.
 
 # %%
 response = input("Confirm? (yes/no): ")
 return response == "yes"
 
 # %% [markdown]
-# ✏️ ADD VALIDATION LOOP ✏️
-#
 # {{CONTEXT_HANDLING_HINT_5}}
 #
-# Step 1: Start while True loop
-# Step 2: Print prompt and get input (lowercase, stripped)
-# Step 3: If response is 'yes' or 'y', return True
-# Step 4: If response is 'no' or 'n', return False
-# Step 5: Otherwise print "Please enter yes or no."
+# 1. התחילי לולאת `while True`
+# 2. הדפיסי את ההנחיה וקבלי קלט (אותיות קטנות, ללא רווחים)
+# 3. אם התשובה היא `'yes'` או `'y'`, החזירי `True`
+# 4. אם התשובה היא `'no'` או `'n'`, החזירי `False`
+# 5. אחרת הדפיסי `"Please enter yes or no."`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

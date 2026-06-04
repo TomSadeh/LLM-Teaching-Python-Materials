@@ -1,18 +1,18 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise where you inherit a registry system,
-# understand how it works, extend it, and fix issues.
+# זוהי תרגילה רב-שלבית שבה את יורשת מערכת רישום קיימת,
+# מבינה איך היא עובדת, מרחיבה אותה ומתקנת בעיות.
 #
-# Programming concepts: dictionaries, key-value pairs, KeyError, .get()
+# מושגי תכנות: מילונים, זוגות מפתח-ערך, `KeyError`, `.get()`
 #
-# PART 1: Discovery - Understanding the Inherited Registry
+# חלק 1: גילוי - הבנת מערכת הרישום שירשת
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{mentor}} left behind this registry system. Before you can use it,
-# you need to understand how it works.
+# {{mentor}} השאיר מאחור את מערכת הרישום הזו. לפני שתוכלי להשתמש בה,
+# את צריכה להבין איך היא עובדת.
 #
-# Study the code below and trace through its execution.
+# למדי את הקוד שלמטה ועקבי אחר הרצת הביצוע שלו.
 
 # %%
 registry = {
@@ -26,67 +26,63 @@ power = ability_data["power"]
 print(f"{ability_name}: power {power}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# ## מלאי את טבלת המעקב
 #
-# Track the variables at each step.
+# עקבי אחר הערכים של המשתנים בכל שלב.
 #
-# | Step | ability_name | ability_data                  | power | Output |
-# |------|--------------|-------------------------------|-------|--------|
-# | 0    | -            | -                             | -     |        |
-# | 1    | "{{spell1}}" | -                             | -     |        |
-# | 2    |              |                               | -     |        |
-# | 3    |              |                               |       |        |
-# | 4    |              |                               |       |        |
+# | שלב | ability_name | ability_data                  | power | פלט |
+# |-----|--------------|-------------------------------|-------|-----|
+# | 0   | -            | -                             | -     |     |
+# | 1   | "{{spell1}}" | -                             | -     |     |
+# | 2   |              |                               | -     |     |
+# | 3   |              |                               |       |     |
+# | 4   |              |                               |       |     |
 #
-# Write your completed table as comments below:
+# כתבי את הטבלה המלאה שלך כהערות למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Ownership - Extending the Registry
+# חלק 2: בעלות - הרחבת מערכת הרישום
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Now make the registry your own by adding new entries and
-# a function to look up abilities.
+# עכשיו הפכי את מערכת הרישום לשלך על ידי הוספת ערכים חדשים
+# ופונקציה לחיפוש יכולות.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. צרי מילון עם 2 היכולות המקוריות:
+#    - `"{{spell1}}"`: power 10, type `"basic"`
+#    - `"{{spell2}}"`: power 25, type `"intermediate"`
 #
-# Step 1: Create a dictionary with the original 2 abilities:
-#         - "{{spell1}}": power 10, type "basic"
-#         - "{{spell2}}": power 25, type "intermediate"
+# 2. הוסיפי עוד 2 יכולות מעיצובך:
+#    - `"{{spell3}}"`: power 50, type `"advanced"`
+#    - `"{{spell4}}"`: power 15, type `"utility"`
 #
-# Step 2: Add 2 more abilities of your design:
-#         - "{{spell3}}": power 50, type "advanced"
-#         - "{{spell4}}": power 15, type "utility"
-#
-# Step 3: Return the registry
+# 3. החזירי את מערכת הרישום
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# 1. בדקי אם `ability_name` קיים במערכת הרישום
+#    > רמז: השתמשי ב-`if ability_name in registry:`
 #
-# Step 1: Check if ability_name exists in the registry
-#         Hint: Use `if ability_name in registry:`
+# 2. אם הוא קיים, הדפיסי: `"[name]: power [X], type [Y]"`
 #
-# Step 2: If it exists, print: "[name]: power [X], type [Y]"
-#
-# Step 3: If not found, print: "[name] not found in registry"
+# 3. אם לא נמצא, הדפיסי: `"[name] not found in registry"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Investigation - Debugging the Registry
+# חלק 3: חקירה - איתור באגים במערכת הרישום
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Someone reported bugs in this registry code. Find and fix them!
+# מישהו דיווח על באגים בקוד הרישום הזה. מצאי ותקני אותם!
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "registry.py", line 12, in <module>
@@ -104,16 +100,14 @@ for name in requested:
 return total_power
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
+# השגיאה התרחשה כי: _______________
 #
-# The error occurred because: _______________
+# תקני את הקוד כך שהוא:
+# 1. מוסיף power רק עבור יכולות שקיימות במערכת הרישום
+# 2. מדפיס אזהרה עבור יכולות שלא נמצאו
+# 3. מחזיר את סך ה-power של היכולות שנמצאו
 #
-# Fix the code so it:
-# 1. Only adds power for abilities that exist in the registry
-# 2. Prints a warning for abilities not found
-# 3. Returns the total power of found abilities
-#
-# Hint: Check if each name exists before accessing it
+# > רמז: בדקי אם כל שם קיים לפני שאת ניגשת אליו
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

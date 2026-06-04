@@ -20,19 +20,19 @@ for i in range(1, 4):
     print(f"After adding {i}: total = {total}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# מלאי את טבלת המעקב
 #
-# Track `i` and `total` through each iteration.
+# עקבי אחרי `i` ו-`total` בכל איטרציה.
 #
-# | Before/After | i | total (before) | total (after) | Output |
-# |--------------|---|----------------|---------------|--------|
-# | Start        | - | 0              | -             | -      |
-# | Iteration 1  |   |                |               |        |
-# | Iteration 2  |   |                |               |        |
-# | Iteration 3  |   |                |               |        |
+# | לפני/אחרי    | i | total (לפני) | total (אחרי) | פלט |
+# |--------------|---|--------------|--------------|-----|
+# | התחלה        | - | 0            | -            | -   |
+# | איטרציה 1    |   |              |              |     |
+# | איטרציה 2    |   |              |              |     |
+# | איטרציה 3    |   |              |              |     |
 #
-# Hint: total starts at 0. Each iteration, we add i to total.
-# range(1, 4) gives: 1, 2, 3
+# > רמז: `total` מתחיל ב-0. בכל איטרציה, מוסיפים את `i` ל-`total`.
+# > `range(1, 4)` נותן: 1, 2, 3
 #
 # {{CONTEXT_TRACE_HINT_1}}
 
@@ -52,19 +52,19 @@ for step in range(1, 5):
     print(f"Step {step}: moved {move}, total distance = {distance}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# מלאי את טבלת המעקב
 #
-# Track `step`, `move`, and `distance`.
+# עקבי אחרי `step`, `move` ו-`distance`.
 #
-# | Iteration | step | move (step*10) | distance (before) | distance (after) |
-# |-----------|------|----------------|-------------------|------------------|
-# | Start     | -    | -              | 0                 | -                |
-# | 1         |      |                |                   |                  |
-# | 2         |      |                |                   |                  |
-# | 3         |      |                |                   |                  |
-# | 4         |      |                |                   |                  |
+# | איטרציה   | step | move (step*10) | distance (לפני) | distance (אחרי) |
+# |-----------|------|----------------|-----------------|-----------------|
+# | התחלה     | -    | -              | 0               | -               |
+# | 1         |      |                |                 |                 |
+# | 2         |      |                |                 |                 |
+# | 3         |      |                |                 |                 |
+# | 4         |      |                |                 |                 |
 #
-# Hint: move is calculated each iteration, distance accumulates.
+# > רמז: `move` מחושב בכל איטרציה, ו-`distance` מצטבר לאורך כל הלולאה.
 #
 # {{CONTEXT_TRACE_HINT_2}}
 
@@ -84,20 +84,20 @@ for side in range(4):
     print(f"After side {side}: turned {total_angle} degrees total")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# מלאי את טבלת המעקב
 #
-# Track `side` and `total_angle`.
+# עקבי אחרי `side` ו-`total_angle`.
 #
-# | Iteration | side | turn | total_angle (before) | total_angle (after) |
-# |-----------|------|------|----------------------|---------------------|
-# | Start     | -    | -    | 0                    | -                   |
-# | 1         |      | 90   |                      |                     |
-# | 2         |      | 90   |                      |                     |
-# | 3         |      | 90   |                      |                     |
-# | 4         |      | 90   |                      |                     |
+# | איטרציה   | side | turn | total_angle (לפני) | total_angle (אחרי) |
+# |-----------|------|------|--------------------|--------------------|
+# | התחלה     | -    | -    | 0                  | -                  |
+# | 1         |      | 90   |                    |                    |
+# | 2         |      | 90   |                    |                    |
+# | 3         |      | 90   |                    |                    |
+# | 4         |      | 90   |                    |                    |
 #
-# Hint: Note that side starts at 0 (from range(4): 0, 1, 2, 3)
-# turn is always 90, total_angle grows by 90 each time.
+# > רמז: שימי לב ש-`side` מתחיל ב-0 (מ-`range(4)`: 0, 1, 2, 3).
+# > `turn` תמיד שווה ל-90, ו-`total_angle` גדל ב-90 בכל פעם.
 #
 # {{CONTEXT_TRACE_HINT_3}}
 
@@ -116,19 +116,19 @@ for count in range(1, 4):
     print(f"Message so far: '{message}'")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# מלאי את טבלת המעקב
 #
-# Track `count` and `message`.
+# עקבי אחרי `count` ו-`message`.
 #
-# | Iteration | count | message (before) | message (after) |
-# |-----------|-------|------------------|-----------------|
-# | Start     | -     | ""               | -               |
-# | 1         |       |                  |                 |
-# | 2         |       |                  |                 |
-# | 3         |       |                  |                 |
+# | איטרציה   | count | message (לפני) | message (אחרי) |
+# |-----------|-------|----------------|----------------|
+# | התחלה     | -     | `""`           | -              |
+# | 1         |       |                |                |
+# | 2         |       |                |                |
+# | 3         |       |                |                |
 #
-# Hint: Strings can be accumulated too!
-# Each iteration adds: str(count) + "! "
+# > רמז: גם מחרוזות יכולות להצטבר!
+# > בכל איטרציה מתווסף: `str(count) + "! "`
 #
 # {{CONTEXT_TRACE_HINT_4}}
 

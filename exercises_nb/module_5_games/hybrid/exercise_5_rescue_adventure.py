@@ -1,21 +1,21 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is a multi-part exercise rescuing a text adventure game.
-# Find bugs, debug navigation, add error handling, then extend it!
+# זוהי תרגיל בכמה חלקים שבו את מצילה משחק הרפתקאות טקסטואלי.
+# תמצאי באגים, תתקני ניווט, תוסיפי טיפול בשגיאות ואז תרחיבי את המשחק!
 #
-# Programming concepts: while loops, dictionaries (preview), command parsing, game state
+# מושגי תכנות: לולאות `while`, מילונים (הצצה ראשונה), פירוש פקודות, מצב משחק
 #
-# PART 1: The Broken Adventure
+# חלק 1: ההרפתקה השבורה
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# {{friend}}'s text adventure has critical bugs.
-# Players get stuck and the game crashes!
+# למשחק ההרפתקאות של {{friend}} יש באגים קריטיים.
+# שחקנים נתקעים והמשחק קורס!
 #
-# BUGS TO FIND: 3
+# באגים למציאה: 3
 #
 #
-# Game world (simplified - no dictionaries, use parallel lists)
+# עולם המשחק (מפושט — ללא מילונים, נשתמש ברשימות מקבילות)
 
 # %%
 ROOM_NAMES = ["entrance", "hallway", "treasure_room", "exit"]
@@ -29,7 +29,7 @@ ROOM_DESCRIPTIONS = [
 ]
 
 # %% [markdown]
-# ## Connections: index = from room, value = [north, south, east, west] or -1 if blocked
+# ## חיבורים: אינדקס = חדר המוצא, ערך = [צפון, דרום, מזרח, מערב] או 1- אם חסום
 
 # %%
 ROOM_CONNECTIONS = [
@@ -85,24 +85,24 @@ while current_room != 3:  # Exit is room 3
 print("\nThanks for playing!")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# תקני את הבאג!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ FIX THE BUGS ✏️
+# תקני את הבאגים!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Debug the Navigation
+# חלק 2: תיקון הניווט
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# The movement system has more subtle bugs.
-# Find and fix these navigation issues.
+# במערכת התנועה יש באגים עדינים יותר.
+# מצאי ותקני את בעיות הניווט האלה.
 
 # %%
 # BUG 1: No stripping of extra spaces
@@ -113,13 +113,13 @@ if len(parts) == 1:
 return None  # Fails on "go north"
 
 # %% [markdown]
-# ✏️ FIX THE BUGS ✏️
+# תקני את הבאגים!
 #
-# Step 1: Strip and lowercase
-# Step 2: Split into parts
-# Step 3: If one part and it's a direction, return it
-# Step 4: If two parts and first is "go", return second if valid
-# Step 5: Otherwise return None
+# 1. הסירי רווחים מיותרים והמירי לאותיות קטנות
+# 2. פצלי לחלקים
+# 3. אם יש חלק אחד והוא כיוון — החזירי אותו
+# 4. אם יש שני חלקים והראשון הוא `go` — החזירי את השני אם הוא כיוון תקין
+# 5. אחרת החזירי `None`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -133,60 +133,54 @@ if room_index == 2:  # Treasure room
 return has_treasure
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# תקני את הבאג!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Add Error Handling
+# חלק 3: הוספת טיפול בשגיאות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Make the adventure crash-proof!
-#
-# ✏️ ADD ERROR HANDLING ✏️
+# הפכי את ההרפתקה לעמידה בפני קריסות!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
+# הוסיפי טיפול בשגיאות!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# משתנים:
+# - `current_room` = חדר ההתחלה
+# - `has_treasure` = `False`
+# - `playing` = `True`
 #
-# Variables:
-# - current_room = starting_room
-# - has_treasure = False
-# - playing = True
-#
-# While playing:
-#   1. Show current room description
-#   2. Show commands: north/south/east/west/look/inventory/quit
-#   3. Get input
-#   4. Process command:
-#      - directions: move and show feedback
-#      - look: show description
-#      - inventory: show if has treasure
-#      - quit: set playing = False
-#   5. Check for treasure
-#   6. Check win condition (at exit with treasure)
+# כל עוד `playing` הוא `True`:
+# 1. הציגי את תיאור החדר הנוכחי
+# 2. הציגי את הפקודות: `north`/`south`/`east`/`west`/`look`/`inventory`/`quit`
+# 3. קבלי קלט
+# 4. עבדי על הפקודה:
+#    - כיוונים: הזזה והצגת משוב
+#    - `look`: הצגת תיאור
+#    - `inventory`: הצגה אם יש אוצר
+#    - `quit`: הגדירי `playing = False`
+# 5. בדקי אם נמצא אוצר
+# 6. בדקי תנאי ניצחון (בחדר היציאה עם האוצר)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Extend the Adventure
+# חלק 4: הרחבת ההרפתקה
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Add new features to make the adventure better!
-#
-# ✏️ YOUR CODE HERE ✏️
+# הוסיפי תכונות חדשות כדי לשפר את ההרפתקה!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -195,7 +189,7 @@ return has_treasure
 import random
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# כתבי את הקוד שלך כאן!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -213,25 +207,23 @@ print("Find the treasure and escape!")
 print()
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Game loop:
-# 1. Start in entrance (room 0)
-# 2. Track: current_room, has_treasure, score, hp
-# 3. Each room:
-#    - Check for enemy encounter
-#    - If enemy, run combat
-#    - If defeated, game over
-# 4. Movement and treasure collection
-# 5. Win: reach exit with treasure
-# 6. Track high scores
-# 7. Play again option
+# לולאת המשחק:
+# 1. התחילי בכניסה (חדר 0)
+# 2. עקבי אחרי: `current_room`, `has_treasure`, `score`, `hp`
+# 3. בכל חדר:
+#    - בדקי אם יש מפגש עם אויב
+#    - אם יש אויב — הפעילי קרב
+#    - אם הובסת — סיום משחק
+# 4. תנועה ואיסוף אוצר
+# 5. ניצחון: הגיעי ליציאה עם האוצר
+# 6. עקבי אחרי שיאים
+# 7. אפשרות לשחק שוב
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

@@ -1,7 +1,7 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# Build a text adventure game set at {{school}}.
+# בני משחק הרפתקאות טקסטואלי שמתרחש ב-{{school}}.
 #
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 
@@ -9,27 +9,25 @@
 import random
 
 # %% [markdown]
-# Project: Text Adventure
-# Build a text adventure where the player explores {{school}}.
+# ## פרויקט: משחק הרפתקאות טקסטואלי
+# בני משחק הרפתקאות שבו השחקנית חוקרת את {{school}}.
 #
-# Your game should:
-# - Track player state (name, health, inventory, location)
-# - Have multiple locations to explore
-# - Allow picking up and using items
-# - Include random events or encounters
-# - Have win and lose conditions
+# המשחק שלך צריך:
+# - לעקוב אחרי מצב השחקנית (שם, בריאות, חפצים, מיקום)
+# - לכלול כמה מיקומים שאפשר לחקור
+# - לאפשר לאסוף ולהשתמש בחפצים
+# - לכלול אירועים או מפגשים אקראיים
+# - לכלול תנאי ניצחון והפסד
 #
-# ✏️ YOUR CODE HERE ✏️
-# Design your own functions to accomplish the above goals.
-# Think about how to structure your game world and player actions.
+# עצבי פונקציות משלך כדי להשיג את המטרות האלה.
+# חשבי איך לבנות את עולם המשחק ואת פעולות השחקנית.
 
 # %%
 print("{{greeting}}")
 print("Welcome to the {{school}} Adventure!")
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-# Build your text adventure
+# בני את משחק ההרפתקאות שלך.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

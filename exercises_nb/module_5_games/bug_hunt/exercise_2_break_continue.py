@@ -2,22 +2,22 @@
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_MISSION}}
 #
-# Topic: Finding bugs with break and continue
-# Difficulty: 2-3
+# נושא: מציאת באגים עם `break` ו-`continue`
+# רמת קושי: 2-3
 #
-# break and continue are powerful but can cause subtle bugs
-# when placed incorrectly or when the logic is inverted.
+# `break` ו-`continue` הם כלים חזקים, אבל הם יכולים לגרום לבאגים עדינים
+# כשהם ממוקמים במקום הלא נכון או כשהלוגיקה הפוכה.
 #
-# {{CASE_1_TITLE}}
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# This search function should find an item and return its index.
+# פונקציית החיפוש הזו אמורה למצוא פריט ולהחזיר את האינדקס שלו.
 #
-# EXPECTED BEHAVIOR:
-# Return the index where target is found, or -1 if not found
+# התנהגות צפויה:
+# להחזיר את האינדקס שבו נמצא ה-`target`, או 1- אם לא נמצא
 #
-# ACTUAL BEHAVIOR:
-# Always returns -1, even when the item exists
+# התנהגות בפועל:
+# תמיד מחזירה 1-, אפילו כשהפריט קיים
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -30,26 +30,24 @@ while index < len(items):
 return -1  # BUG: Always returns -1, never returns the found index
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_2_TITLE}}
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# This function should skip negative numbers and sum the positives.
+# הפונקציה הזו אמורה לדלג על מספרים שליליים ולסכום את החיוביים.
 #
-# EXPECTED BEHAVIOR:
-# Sum only the positive numbers, skip negatives
+# התנהגות צפויה:
+# לסכום רק את המספרים החיוביים, ולדלג על השליליים
 #
-# ACTUAL BEHAVIOR:
-# Returns 0 because it breaks on the first negative
+# התנהגות בפועל:
+# מחזירה 0 כי היא מפסיקה בשלילי הראשון
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -62,26 +60,24 @@ for num in numbers:
 return total
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_3_TITLE}}
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# This collector should stop when the user enters 'quit'.
+# האוסף הזה אמור לעצור כשהמשתמשת מקלידה `'quit'`.
 #
-# EXPECTED BEHAVIOR:
-# Collect items until user types 'quit', then return the list
+# התנהגות צפויה:
+# לאסוף פריטים עד שהמשתמשת מקלידה `'quit'`, ואז להחזיר את הרשימה
 #
-# ACTUAL BEHAVIOR:
-# Never stops, keeps asking forever
+# התנהגות בפועל:
+# לא עוצר לעולם, ממשיך לשאול לנצח
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -95,26 +91,24 @@ while True:
 return items
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_4_TITLE}}
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# This validator should stop validating after finding one error.
+# הבודק הזה אמור לעצור לאחר מציאת שגיאה אחת.
 #
-# EXPECTED BEHAVIOR:
-# Check items until finding an invalid one, then stop
+# התנהגות צפויה:
+# לבדוק פריטים עד שמוצאים פריט לא תקין, ואז לעצור
 #
-# ACTUAL BEHAVIOR:
-# The break is inside the else, so it breaks on VALID items
+# התנהגות בפועל:
+# ה-`break` נמצא בתוך ה-`else`, אז הוא עוצר על פריטים תקינים
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -129,26 +123,24 @@ for item in items:
 return valid_items
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_5_TITLE}}
+# ## {{CASE_5_TITLE}}
 # {{CONTEXT_CASE_5_NARRATIVE}}
 #
-# This function should find the first item that matches a condition.
+# הפונקציה הזו אמורה למצוא את הפריט הראשון שעומד בתנאי.
 #
-# EXPECTED BEHAVIOR:
-# Return the first item longer than 5 characters
+# התנהגות צפויה:
+# להחזיר את הפריט הראשון שאורכו גדול מ-5 תווים
 #
-# ACTUAL BEHAVIOR:
-# Skips items that match! Returns wrong result.
+# התנהגות בפועל:
+# מדלגת על פריטים שמתאימים! מחזירה תוצאה שגויה.
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_5}}
 
@@ -160,11 +152,9 @@ for item in items:
 return None
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

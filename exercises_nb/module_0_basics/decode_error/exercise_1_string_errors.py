@@ -9,10 +9,10 @@
 # {{CONTEXT_DECODE_ERROR_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{ERROR_1_TITLE}}
+# ## {{ERROR_1_TITLE}}
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "program.py", line 3, in <module>
@@ -26,23 +26,20 @@ message = "Welcome to " + school_name + ", " + hero_name
 print(message)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
+# השגיאה קרתה כי: _______________
 #
-# The error occurred because: _______________
+# > רמז: שימי לב לסוג של `school_name`. האם אפשר לחבר (`+`) מחרוזת עם מספר ישירות?
 #
-# Hint: Look at what type school_name is. Can you concatenate (+)
-# a string with a number directly?
-#
-# Write the fixed code below:
+# כתבי את הקוד המתוקן כאן למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_2_TITLE}}
+# ## {{ERROR_2_TITLE}}
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 #   File "program.py", line 2
 #     greeting = "Hello, {{hero}}!
@@ -56,22 +53,20 @@ print(message)
 pass
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
+# השגיאה קרתה כי: _______________
 #
-# The error occurred because: _______________
+# > רמז: מחרוזות חייבות להיפתח ולהיסגר עם מרכאות — גם בהתחלה וגם בסוף.
 #
-# Hint: String literals need both an opening and closing quote.
-#
-# Write the fixed code below:
+# כתבי את הקוד המתוקן כאן למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_3_TITLE}}
+# ## {{ERROR_3_TITLE}}
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "program.py", line 3, in <module>
@@ -83,15 +78,13 @@ score = 100
 print("Score: " + score)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
+# השגיאה קרתה כי: _______________
 #
-# The error occurred because: _______________
+# > רמז: יש שתי דרכים לתקן את זה:
+# > 1. המירי את `score` למחרוזת בעזרת `str()`
+# > 2. השתמשי בפסיק במקום `+` בתוך `print()`
 #
-# Hint: There are two ways to fix this:
-# 1. Convert score to a string using str()
-# 2. Use a comma instead of + in print()
-#
-# Write the fixed code below (try both solutions!):
+# כתבי את הקוד המתוקן כאן למטה (נסי את שתי הפתרונות!):
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

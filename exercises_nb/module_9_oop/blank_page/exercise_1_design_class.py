@@ -2,31 +2,25 @@
 # {{CONTEXT_BLANK_PAGE_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Design and implement classes from scratch based on requirements.
-# No starter code is provided - you must design the structure yourself.
+# עליך לעצב ולממש קלאסים מאפס בהתאם לדרישות.
+# אין קוד התחלתי — את צריכה לתכנן את המבנה בעצמך.
 #
-# {{BLANK_1_TITLE}}
+# ## {{BLANK_1_TITLE}}
 # {{CONTEXT_BLANK_1_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{BLANK_2_TITLE}}
+# ## {{BLANK_2_TITLE}}
 # {{CONTEXT_BLANK_2_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{BLANK_3_TITLE}}
+# ## {{BLANK_3_TITLE}}
 # {{CONTEXT_BLANK_3_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

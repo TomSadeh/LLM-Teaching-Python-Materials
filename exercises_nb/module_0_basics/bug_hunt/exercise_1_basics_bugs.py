@@ -9,14 +9,14 @@
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_MISSION}}
 #
-# {{CASE_1_TITLE}}
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Should print "{{hero}} has 75 gold" (100 - 25 = 75)
+# התנהגות צפויה:
+# אמורה להדפיס `{{hero}} has 75 gold` (100 - 25 = 75)
 #
-# ACTUAL BEHAVIOR:
-# Prints "{{hero}} has 10025 gold" (concatenated as strings!)
+# התנהגות בפועל:
+# מדפיסה `{{hero}} has 10025 gold` (חיבור כמחרוזות!)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -27,26 +27,24 @@ remaining = gold - spent
 print("{{hero}} has", remaining, "gold")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
+# > רמז: שימי לב איך `gold` מוגדר. האם זה מספר או מחרוזת?
 #
-# Hint: Look at how gold is defined. Is it a number or a string?
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_2_TITLE}}
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Should print the hero's name stored in the variable
+# התנהגות צפויה:
+# אמורה להדפיס את שם הגיבורה השמור במשתנה
 #
-# ACTUAL BEHAVIOR:
-# Prints the word "hero_name" instead of the actual name
+# התנהגות בפועל:
+# מדפיסה את המילה `hero_name` במקום השם האמיתי
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -55,26 +53,24 @@ hero_name = "{{hero}}"
 print("Welcome,", "hero_name")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
+# > רמז: מתי שמים גרשיים סביב שם משתנה?
 #
-# Hint: When do you use quotes around a variable name?
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_3_TITLE}}
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Should calculate double the score: 50 * 2 = 100
+# התנהגות צפויה:
+# אמורה לחשב כפל הניקוד: 50 * 2 = 100
 #
-# ACTUAL BEHAVIOR:
-# The doubled variable is never used!
+# התנהגות בפועל:
+# המשתנה `doubled` לא נמצא בשימוש בכלל!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -84,26 +80,24 @@ doubled = score * 2
 print("Double score:", score)
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
+# > רמז: בדקי איזה משתנה מודפס בפועל.
 #
-# Hint: Check which variable is being printed.
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_4_TITLE}}
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Should greet {{hero}} at {{school}} on one line
+# התנהגות צפויה:
+# אמורה לברך את {{hero}} ב-{{school}} בשורה אחת
 #
-# ACTUAL BEHAVIOR:
-# Error: can only concatenate str (not "int") to str
+# התנהגות בפועל:
+# שגיאה: `can only concatenate str (not "int") to str`
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -114,14 +108,12 @@ message = name + " is level " + level + " at {{school}}"
 print(message)
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
+# > רמז: אי אפשר להשתמש ב-`+` כדי לחבר מחרוזת עם מספר ישירות.
+# > אפשר להמיר את המספר למחרוזת, או להשתמש בגישה אחרת.
 #
-# Hint: You can't use + to join a string with a number directly.
-# Either convert the number to a string, or use a different approach.
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

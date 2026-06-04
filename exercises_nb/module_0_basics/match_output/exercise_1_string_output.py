@@ -9,10 +9,10 @@
 # {{CONTEXT_MATCH_OUTPUT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{MATCH_SET_1_TITLE}}
+# ## {{MATCH_SET_1_TITLE}}
 # {{CONTEXT_MATCH_SET_1_NARRATIVE}}
 #
-# ## CODE SNIPPETS
+# ## קטעי קוד
 
 # %%
 name = "{{hero}}"
@@ -27,28 +27,26 @@ name = "{{hero}}"
 print("Hello" + name)
 
 # %% [markdown]
-# ## POSSIBLE OUTPUTS
+# ## פלטים אפשריים
 #
-# OUTPUT A:
+# פלט A:
 # ---------
 # Hello {{hero}}
 #
-# OUTPUT B:
+# פלט B:
 # ---------
 # Hello{{hero}}
 #
-# OUTPUT C:
+# פלט C:
 # ---------
 # Hello  {{hero}}
 #
-# ## YOUR ANSWERS
+# ## התשובות שלך
 #
-# ✏️ MATCH SNIPPETS TO OUTPUTS ✏️
+# כתבי את האות (A, B, או C) שמתאימה לכל קטע קוד.
 #
-# Write the letter (A, B, or C) that matches each snippet.
-#
-# Hint: The + operator joins strings exactly as they are.
-# The comma in print() adds a space between items.
+# > רמז: האופרטור `+` מחבר מחרוזות בדיוק כפי שהן.
+# > הפסיק בתוך `print()` מוסיף רווח בין הפריטים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -63,10 +61,10 @@ matches = {
 return matches
 
 # %% [markdown]
-# {{MATCH_SET_2_TITLE}}
+# ## {{MATCH_SET_2_TITLE}}
 # {{CONTEXT_MATCH_SET_2_NARRATIVE}}
 #
-# ## CODE SNIPPETS
+# ## קטעי קוד
 
 # %%
 item = "{{item}}"
@@ -84,26 +82,26 @@ count = 5
 print(item + " " + str(count))
 
 # %% [markdown]
-# ## POSSIBLE OUTPUTS
+# ## פלטים אפשריים
 #
-# OUTPUT D:
+# פלט D:
 # ---------
 # {{item}}5
 #
-# OUTPUT E:
+# פלט E:
 # ---------
 # {{item}} 5
 #
-# OUTPUT F:
+# פלט F:
 # ---------
 # {{item}}  5
 #
-# ## YOUR ANSWERS
+# ## התשובות שלך
 #
-# ✏️ MATCH SNIPPETS TO OUTPUTS ✏️
+# כתבי את האות (D, E, או F) שמתאימה לכל קטע קוד.
 #
-# Hint: When using + with strings and numbers, you must convert
-# the number to a string first using str().
+# > רמז: כשמשתמשים ב-`+` עם מחרוזות ומספרים, צריך להמיר
+# > את המספר למחרוזת תחילה באמצעות `str()`.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

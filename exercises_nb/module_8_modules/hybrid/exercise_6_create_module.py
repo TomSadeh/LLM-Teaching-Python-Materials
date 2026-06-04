@@ -1,31 +1,30 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise where you'll learn to create your own
-# Python modules. You'll understand module structure, build reusable
-# code, and learn the important __name__ == "__main__" pattern.
+# זוהי תרגילה מרובת חלקים שבה תלמדי ליצור מודולים משלך ב-Python.
+# תביני את מבנה המודול, תבני קוד שניתן לשימוש חוזר,
+# ותלמדי את הדפוס החשוב `__name__ == "__main__"`.
 #
-# Programming concepts: module creation, code organization, __name__ pattern
-# Difficulty: 3-4
+# מושגי תכנות: יצירת מודולים, ארגון קוד, דפוס `__name__`
+# רמת קושי: 3-4
 #
-# PART 1: Discovery - Understanding Module Structure
+# ## חלק 1: גילוי — הבנת מבנה המודול
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# A Python module is simply a .py file containing code.
-# When you import it, Python runs that file and makes its
-# contents available.
+# מודול Python הוא פשוט קובץ `.py` שמכיל קוד.
+# כאשר מייבאים אותו, Python מריץ את הקובץ ומאפשר גישה לתוכנו.
 #
-# MODULE ANATOMY (study this):
+# אנטומיה של מודול (כדאי ללמוד בעל פה):
 #
-# A typical module contains:
-# 1. Module docstring (what the module does)
-# 2. Imports (modules this module depends on)
-# 3. Constants (values that don't change)
-# 4. Functions (reusable code)
-# 5. Classes (later module - not yet!)
-# 6. Main block (code that runs only when executed directly)
+# מודול אופייני מכיל:
+# 1. docstring של המודול (מה המודול עושה)
+# 2. ייבואים (מודולים שהמודול הזה תלוי בהם)
+# 3. קבועים (ערכים שלא משתנים)
+# 4. פונקציות (קוד לשימוש חוזר)
+# 5. מחלקות (נלמד בהמשך — לא עכשיו!)
+# 6. בלוק ראשי (קוד שרץ רק כשמריצים את הקובץ ישירות)
 #
-# Example structure:
+# דוגמה למבנה:
 #     '''Module docstring'''
 #
 #     import math  # Imports
@@ -40,29 +39,27 @@
 #         # NOT when imported
 #         pass
 #
-# ✏️ YOUR CODE HERE ✏️
+# כתבי docstring שמסביר מה הופך מודול לטוב.
 #
-# Create a docstring explaining what makes a good module.
+# כתבי מחרוזת מרובת שורות שמסבירה:
+# 1. מהו מודול Python
+# 2. מה אפשר לשים במודול
+# 3. למה מודולים שימושיים
 #
-# Write a multi-line string explaining:
-# 1. What a Python module is
-# 2. What you can put in a module
-# 3. Why modules are useful
-#
-# Print your explanation
+# הדפיסי את ההסבר שלך
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Ownership - Create Your Own Module Functions
+# ## חלק 2: בעלות — צרי פונקציות מודול משלך
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Write functions that could be part of a reusable module.
-# These functions should be general-purpose and well-documented.
+# כתבי פונקציות שיכולות להיות חלק ממודול לשימוש חוזר.
+# הפונקציות צריכות להיות כלליות ומתועדות היטב.
 #
-# ## Module Constants
+# ## קבועי המודול
 
 # %%
 DEFAULT_GREETING = "Welcome to {{school}}!"
@@ -71,69 +68,61 @@ DEFAULT_GREETING = "Welcome to {{school}}!"
 VERSION = "1.0.0"
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# 1. צרי מחרוזת ברכה תוך שימוש בשם
+# 2. החזירי אותה
 #
-# Step 1: Create a greeting string using the name
-# Step 2: Return it
-#
-# Format: "Welcome to {{school}}, [name]!"
+# פורמט: `"Welcome to {{school}}, [name]!"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Formula: (base * multiplier) + bonus
+# נוסחה: `(base * multiplier) + bonus`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Return: "[label]: [value]"
+# החזירי: `"[label]: [value]"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - The __name__ == "__main__" Pattern
+# ## חלק 3: צמיחה — הדפוס `__name__ == "__main__"`
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# This pattern is CRUCIAL for making modules work correctly.
+# הדפוס הזה הוא קריטי לכך שמודולים יעבדו נכון.
 #
-# THE __name__ VARIABLE:
+# משתנה `__name__`:
 #
-# Python sets __name__ to:
-# - "__main__" when you run the file directly: python mymodule.py
-# - The module name when imported: import mymodule
+# Python מגדיר את `__name__` כך:
+# - `"__main__"` כאשר מריצים את הקובץ ישירות: `python mymodule.py`
+# - שם המודול כאשר מייבאים: `import mymodule`
 #
-# WHY THIS MATTERS:
+# למה זה חשוב:
 #
-# When you run:
+# כאשר מריצים:
 #     python mymodule.py
 #
-# Python sets __name__ = "__main__", and code in the
-# if __name__ == "__main__": block runs.
+# Python מגדיר `__name__ = "__main__"`, והקוד בתוך
+# הבלוק `if __name__ == "__main__":` רץ.
 #
-# When someone imports your module:
+# כאשר מישהו מייבא את המודול שלך:
 #     import mymodule
 #
-# Python sets __name__ = "mymodule", so the code in the
-# if __name__ == "__main__": block does NOT run.
+# Python מגדיר `__name__ = "mymodule"`, כך שהקוד בתוך
+# הבלוק `if __name__ == "__main__":` לא רץ.
 #
-# This lets you:
-# 1. Include test code that only runs when testing
-# 2. Provide a demo when run directly
-# 3. Keep imports clean (no side effects)
+# זה מאפשר לך:
+# 1. לכלול קוד בדיקות שרץ רק בזמן בדיקה
+# 2. לספק הדגמה כאשר מריצים ישירות
+# 3. לשמור על ייבואים נקיים (ללא תופעות לוואי)
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. הדפיסי את הערך של `__name__`
 #
-# Step 1: Print the value of __name__
-#
-# Step 2: Explain what it means:
+# 2. הסבירי מה המשמעות:
 #         if __name__ == "__main__":
 #             print("This file is being run directly")
 #         else:
@@ -143,36 +132,34 @@ VERSION = "1.0.0"
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Ownership - Using Your Module
+# ## חלק 4: בעלות — שימוש במודול שלך
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Demonstrate how your module would be used.
+# הדגימי איך המודול שלך ייראה בשימוש.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Print module info
+# 1. הדפיסי מידע על המודול:
 #         print(f"Module Version: {VERSION}")
 #         print(f"Default Greeting: {DEFAULT_GREETING}")
 #
-# Step 2: Demonstrate greet()
+# 2. הדגימי את `greet()`:
 #         print(greet("{{hero}}"))
 #         print(greet("{{heroine}}"))
 #
-# Step 3: Demonstrate calculate_score()
+# 3. הדגימי את `calculate_score()`:
 #         score1 = calculate_score(100)
 #         score2 = calculate_score(100, 1.5)
 #         score3 = calculate_score(100, 1.5, 25)
-#         Print each result
+#         הדפיסי כל תוצאה
 #
-# Step 4: Demonstrate format_result()
+# 4. הדגימי את `format_result()`:
 #         print(format_result(score3, "Final Score"))
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN BLOCK - Only runs when file is executed directly
+# ## בלוק ראשי — רץ רק כאשר הקובץ מורץ ישירות
 
 # %%
 print("=" * 60)
@@ -215,4 +202,4 @@ print("  4. Functions should be general and reusable")
 print("=" * 60)
 
 # %% [markdown]
-# ## This is the key pattern - study it!
+# ## זהו הדפוס המרכזי — כדאי ללמוד אותו!

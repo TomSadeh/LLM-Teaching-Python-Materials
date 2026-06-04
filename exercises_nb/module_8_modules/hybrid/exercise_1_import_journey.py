@@ -1,116 +1,110 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise where you'll master all import variations
-# by building a stat calculator for {{school}}.
+# זו תרגילה מרובת-חלקים שבה תשלטי בכל הדרכים לייבא מודולים,
+# תוך כדי בניית מחשבון סטטיסטיקות עבור {{school}}.
 #
-# Programming concepts: import syntax, dot notation, from import, aliases
-# Difficulty: 1-2
+# מושגי תכנות: תחביר ייבוא, כתיב נקודה, from import, כינויים
+# רמת קושי: 1-2
 #
-# PART 1: Guidance - Basic Import with Dot Notation
+# ## חלק 1: הכוונה - ייבוא בסיסי עם כתיב נקודה
 # {{CONTEXT_GUIDANCE_NARRATIVE}}
 #
-# Start by using the basic import syntax. This is the most
-# explicit way to use modules - you always see where things come from.
+# התחילי בשימוש בתחביר הייבוא הבסיסי. זו הדרך הכי
+# ברורה לשימוש במודולים - תמיד רואים מאיפה הדברים מגיעים.
 #
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי בתחביר ייבוא בסיסי כדי לגשת לפונקציות המתמטיות.
 #
-# Use basic import syntax to access math functions.
+# 1. יבאי את מודול ה-math בעזרת: `import math`
 #
-# Step 1: Import the math module using: import math
-#
-# Step 2: Create a character stat dictionary:
+# 2. צרי מילון סטטיסטיקות לדמות:
 #         stats = {
 #             "name": "{{hero}}",
 #             "base_power": 100,
 #             "multiplier": 1.5
 #         }
 #
-# Step 3: Calculate using dot notation:
-#         - power_root = math.sqrt(stats["base_power"])
-#         - rounded_mult = math.floor(stats["multiplier"])
+# 3. חשבי תוך שימוש בכתיב נקודה:
+#         - `power_root = math.sqrt(stats["base_power"])`
+#         - `rounded_mult = math.floor(stats["multiplier"])`
 #
-# Step 4: Print the results:
-#         "[name]'s power root: [power_root]"
-#         "Rounded multiplier: [rounded_mult]"
+# 4. הדפיסי את התוצאות:
+#         `"[name]'s power root: [power_root]"`
+#         `"Rounded multiplier: [rounded_mult]"`
 #
-# Note: With 'import math', always use math.function_name
+# > רמז: עם `import math`, תמיד השתמשי בצורה `math.שם_הפונקציה`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Refactor with from import
+# ## חלק 2: צמיחה - שדרוג עם from import
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now refactor to use direct imports. This makes code cleaner
-# when you use the same functions many times.
+# עכשיו שדרגי לשימוש בייבוא ישיר. זה הופך את הקוד לנקי יותר
+# כשמשתמשים באותן פונקציות הרבה פעמים.
 #
-# ✏️ YOUR CODE HERE ✏️
+# שדרגי לשימוש בתחביר `from...import`.
 #
-# Refactor to use from...import syntax.
+# 1. יבאי פונקציות ספציפיות:
+#         `from math import sqrt, floor, ceil, pow`
 #
-# Step 1: Import specific functions:
-#         from math import sqrt, floor, ceil, pow
-#
-# Step 2: Create stats for multiple characters:
+# 2. צרי סטטיסטיקות עבור מספר דמויות:
 #         hero_power = 144
 #         ally_power = 81
 #         mentor_power = 225
 #
-# Step 3: Calculate power levels (no math. prefix needed!):
+# 3. חשבי רמות כוח (בלי קידומת `math.`!):
 #         hero_level = sqrt(hero_power)
 #         ally_level = sqrt(ally_power)
 #         mentor_level = sqrt(mentor_power)
 #
-# Step 4: Calculate boosted power using pow():
+# 4. חשבי כוח מוגבר בעזרת `pow()`:
 #         boosted = pow(hero_level, 2)
 #
-# Step 5: Print all results:
-#         "{{hero}} level: [value]"
-#         "{{friend}} level: [value]"
-#         "{{mentor}} level: [value]"
-#         "Boosted power: [value]"
+# 5. הדפיסי את כל התוצאות:
+#         `"{{hero}} level: [value]"`
+#         `"{{friend}} level: [value]"`
+#         `"{{mentor}} level: [value]"`
+#         `"Boosted power: [value]"`
 #
-# Notice: Code is cleaner without math. prefix everywhere
+# > שימי לב: הקוד נקי יותר בלי קידומת `math.` בכל מקום
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Adding Aliases
+# ## חלק 3: צמיחה - שימוש בכינויים
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Learn when aliases are useful: avoiding name conflicts or
-# shortening long module names.
+# למדי מתי כינויים שימושיים: כדי למנוע התנגשות בין שמות,
+# או כדי לקצר שמות מודולים ארוכים.
 #
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי בכינויים לקוד נקי ונטול התנגשויות.
 #
-# Use aliases for cleaner, conflict-free code.
+# 1. מה קורה אם יש לנו פונקציית `sqrt` משלנו?
+#         ראשית, יבאי את math עם כינוי:
+#         `import math as m`
 #
-# Step 1: What if we have our own sqrt function?
-#         First, import math with an alias:
-#         import math as m
-#
-# Step 2: Create a local function that uses the module:
+# 2. צרי פונקציה מקומית שמשתמשת במודול:
 #         def calculate_stat(value):
 #             """Calculate a derived stat."""
 #             return m.floor(m.sqrt(value))
 #
-# Step 3: Test with several values:
+# 3. בדקי עם מספר ערכים:
 #         values = [100, 144, 200, 256]
 #         for value in values:
 #             result = calculate_stat(value)
 #             print(f"Stat from {value}: {result}")
 #
-# Step 4: Also try aliasing a specific function:
-#         from math import factorial as fact
-#         Print: "5! = [fact(5)]"
-#         Print: "7! = [fact(7)]"
+# 4. נסי גם לתת כינוי לפונקציה ספציפית:
+#         `from math import factorial as fact`
+#         הדפיסי: `"5! = [fact(5)]"`
+#         הדפיסי: `"7! = [fact(7)]"`
 #
-# Note: Common aliases: import numpy as np, import pandas as pd
+# > רמז: כינויים נפוצים: `import numpy as np`, `import pandas as pd`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -2,107 +2,99 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to iterate over dictionaries using
-# .keys(), .values(), and .items() methods.
+# בתרגיל הזה תלמדי לעבור על מילונים בעזרת המתודות
+# `.keys()`, `.values()` ו-`.items()`.
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# תרגלי מעבר על מפתחות המילון.
 #
-# Practice iterating over dictionary keys.
+# 1. צרי את מילון הרשימה הבא:
+#    roster = {
+#        "{{hero}}": "active",
+#        "{{heroine}}": "active",
+#        "{{mentor}}": "retired",
+#        "{{friend}}": "training"
+#    }
 #
-# Step 1: Create this roster dictionary:
-#         roster = {
-#             "{{hero}}": "active",
-#             "{{heroine}}": "active",
-#             "{{mentor}}": "retired",
-#             "{{friend}}": "training"
-#         }
+# 2. הדפיסי את כל השמות (המפתחות) ברשימה.
+#    השתמשי בלולאה: `for name in roster.keys():`
 #
-# Step 2: Print all the names (keys) in the roster
-#         Use: for name in roster.keys():
-#
-# Step 3: Count how many people are in the roster
-#         Hint: Use len(roster)
+# 3. ספרי כמה אנשים יש ברשימה.
+#    > רמז: השתמשי ב-`len(roster)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# תרגלי מעבר על ערכי המילון.
 #
-# Practice iterating over dictionary values.
+# 1. צרי את מילון הציונים הבא:
+#    scores = {
+#        "{{hero}}": 85,
+#        "{{heroine}}": 92,
+#        "{{friend}}": 78
+#    }
 #
-# Step 1: Create this scores dictionary:
-#         scores = {
-#             "{{hero}}": 85,
-#             "{{heroine}}": 92,
-#             "{{friend}}": 78
-#         }
+# 2. חשבי את סכום כל הציונים.
+#    השתמשי בלולאה: `for score in scores.values():`
 #
-# Step 2: Calculate the total of all scores
-#         Use a for loop: for score in scores.values():
+# 3. חשבי את הציון הממוצע.
 #
-# Step 3: Calculate the average score
+# 4. הדפיסי: `"Total: [total], Average: [average]"`
 #
-# Step 4: Print: "Total: [total], Average: [average]"
-#
-# Alternative: You could also use sum(scores.values())
+# אפשר גם להשתמש ב-`sum(scores.values())` ישירות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# תרגלי מעבר על זוגות מפתח-ערך עם `.items()`.
 #
-# Practice iterating over key-value pairs with .items()
+# 1. צרי את מילון המלאי הבא:
+#    inventory = {
+#        "{{item}}": 5,
+#        "{{spell1}}": 3,
+#        "{{spell2}}": 1
+#    }
 #
-# Step 1: Create this inventory dictionary:
-#         inventory = {
-#             "{{item}}": 5,
-#             "{{spell1}}": 3,
-#             "{{spell2}}": 1
-#         }
+# 2. הדפיסי כל פריט וכמות שלו בעזרת `.items()`.
+#    השתמשי בלולאה: `for item_name, quantity in inventory.items():`
+#    פורמט: `"[item_name]: [quantity]"`
 #
-# Step 2: Print each item and its quantity using .items()
-#         Use: for item_name, quantity in inventory.items():
-#         Format: "[item_name]: [quantity]"
-#
-# Step 3: Find and print the item with the highest quantity
-#         Hint: Track the max as you iterate
+# 3. מצאי והדפיסי את הפריט עם הכמות הגבוהה ביותר.
+#    > רמז: עקבי אחרי הערך המקסימלי במהלך הלולאה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי בלולאות כדי לסנן ולעבד נתוני מילון.
 #
-# Use iteration to filter and transform dictionary data.
+# 1. צרי את מילון הסטטוס הבא:
+#    status = {
+#        "{{hero}}": "healthy",
+#        "{{heroine}}": "{{harmful_status}}",
+#        "{{friend}}": "healthy",
+#        "{{mentor}}": "{{harmful_status}}"
+#    }
 #
-# Step 1: Create this status dictionary:
-#         status = {
-#             "{{hero}}": "healthy",
-#             "{{heroine}}": "{{harmful_status}}",
-#             "{{friend}}": "healthy",
-#             "{{mentor}}": "{{harmful_status}}"
-#         }
+# 2. צרי רשימה של כל הדמויות שהן `"healthy"`.
+#    השתמשי בלולאה עם `.items()` ובתנאי `if`.
 #
-# Step 2: Create a list of all characters who are "healthy"
-#         Use a for loop with .items() and an if statement
+# 3. הדפיסי: `"Healthy characters: [list]"`
 #
-# Step 3: Print: "Healthy characters: [list]"
-#
-# Step 4: Count how many characters are "{{harmful_status}}"
+# 4. ספרי כמה דמויות נמצאות במצב `"{{harmful_status}}"`.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

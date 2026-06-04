@@ -2,13 +2,13 @@
 # {{CONTEXT_DECODE_ERROR_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to understand and fix KeyError,
-# one of the most common errors when working with dictionaries.
+# בתרגיל הזה תלמדי להבין ולתקן `KeyError`,
+# אחת השגיאות הנפוצות ביותר כשעובדים עם מילונים.
 #
-# {{ERROR_1_TITLE}}
+# ## {{ERROR_1_TITLE}}
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "registry.py", line 8, in <module>
@@ -25,27 +25,25 @@ registry = {
 print(registry["{{spell3}}"])
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# First, explain what caused the error:
-# The error occurred because: _______________
+# קודם כל, הסבירי מה גרם לשגיאה:
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_1}}
 #
-# Fix option 1: Add the missing key to the dictionary
-# Fix option 2: Check if the key exists before accessing
-# Fix option 3: Use .get() method with a default value
+# 1. הוסיפי את המפתח החסר למילון
+# 2. בדקי אם המפתח קיים לפני הגישה אליו
+# 3. השתמשי במתודה `.get()` עם ערך ברירת מחדל
 #
-# Choose one approach and write the fixed code:
+# בחרי גישה אחת וכתבי את הקוד המתוקן:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_2_TITLE}}
+# ## {{ERROR_2_TITLE}}
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "scores.py", line 6, in <module>
@@ -62,26 +60,24 @@ player_name = "unknown_player"  # This name isn't in the dictionary
 print(f"Score: {scores[player_name]}")
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_2}}
 #
-# This is a common pattern: accessing a dictionary with user input.
-# The key might not exist! Write code that handles this gracefully.
+# זהו תבנית נפוצה: גישה למילון עם קלט ממשתמש —
+# המפתח עלול שלא להיות קיים! כתבי קוד שמטפל בזה בצורה נכונה.
 #
-# Hint: Use `in` to check if a key exists: if key in dictionary:
-#       Or use .get(key, default_value)
+# > רמז: השתמשי ב-`in` כדי לבדוק אם מפתח קיים: `if key in dictionary:`
+# >       או השתמשי ב-`.get(key, default_value)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{ERROR_3_TITLE}}
+# ## {{ERROR_3_TITLE}}
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "inventory.py", line 9, in <module>
@@ -100,17 +96,14 @@ for item in items_found:
 print(inventory)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_3}}
 #
-# This is the "counting pattern" - you need to handle
-# the first occurrence of each item specially.
+# זוהי "תבנית הספירה" — צריך לטפל בהופעה הראשונה של כל פריט בנפרד.
 #
-# Fix using .get(): inventory[item] = inventory.get(item, 0) + 1
-# This returns 0 if the key doesn't exist, then adds 1.
+# > רמז לתיקון עם `.get()`: `inventory[item] = inventory.get(item, 0) + 1`
+# > זה מחזיר 0 אם המפתח לא קיים, ואז מוסיף 1.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

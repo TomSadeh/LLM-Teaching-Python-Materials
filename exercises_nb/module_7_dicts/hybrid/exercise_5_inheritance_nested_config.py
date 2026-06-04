@@ -1,16 +1,16 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise where you inherit a nested configuration
-# system, understand its structure, extend it, and debug issues.
+# זוהי תרגיל רב-שלבי שבו את יורשת מערכת הגדרות מקוננת,
+# מבינה את המבנה שלה, מרחיבה אותה ומתקנת בעיות.
 #
-# Programming concepts: nested dictionaries, safe access, multi-level data
+# מושגי תכנות: מילונים מקוננים, גישה בטוחה, נתונים ברמות מרובות
 #
-# PART 1: Discovery - Understanding the Nested Config
+# חלק 1: גילוי - הבנת ה-Config המקונן
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{mentor}} left behind this configuration system.
-# Study the nested structure before making changes.
+# {{mentor}} השאירה מאחוריה את מערכת ההגדרות הזו.
+# למדי את המבנה המקונן לפני שתבצעי שינויים.
 
 # %%
 CONFIG = {
@@ -53,9 +53,9 @@ print(f"Background: {bg_color}")
 print(f"Music: {music_vol}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# השלימי את טבלת המעקב
 #
-# For each line, trace the path through the nested dictionaries.
+# עבור כל שורה, עקבי אחרי הנתיב דרך המילונים המקוננים.
 #
 # | Variable      | Path                           | Value        |
 # |---------------|--------------------------------|--------------|
@@ -64,64 +64,58 @@ print(f"Music: {music_vol}")
 # | bg_color      | CONFIG[?][?][?]                |              |
 # | music_vol     | CONFIG[?][?]                   |              |
 #
-# How many levels deep is each access?
-# - player_name: 2 levels
-# - player_health: ? levels
-# - bg_color: ? levels
-# - music_vol: ? levels
+# כמה רמות עמוק כל גישה?
+# - player_name: 2 רמות
+# - player_health: ? רמות
+# - bg_color: ? רמות
+# - music_vol: ? רמות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Ownership - Extending the Config
+# חלק 2: בעלות - הרחבת ה-Config
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Add new configuration sections and functions to access them safely.
+# הוסיפי קטעי הגדרות חדשים ופונקציות לגישה אליהם בצורה בטוחה.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. התחילי עם ה-config
+# 2. עבור כל מפתח ב-keys:
+#    - אם הערך הנוכחי הוא מילון ויש בו את המפתח, התקדמי פנימה
+#    - אחרת, החזירי `None`
+# 3. החזירי את הערך הסופי
 #
-# Step 1: Start with the config
-# Step 2: For each key in keys:
-#         - If current is a dict and has the key, go deeper
-#         - Otherwise, return None
-# Step 3: Return the final value
-#
-# Hint: Use a loop through keys, checking each step
+# > רמז: השתמשי בלולאה על המפתחות, ובדקי כל שלב
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# 1. עברי על כל המפתחות פרט לאחרון:
+#    - אם מפתח לא קיים, צרי מילון ריק
+#    - היכנסי למילון המקונן
+# 2. השתמשי במפתח האחרון כדי לקבוע את הערך
 #
-# Step 1: Navigate through all keys EXCEPT the last one
-#         - If a key doesn't exist, create an empty dict
-#         - Move into the nested dict
-# Step 2: Use the last key to set the value
-#
-# This is tricky! Work through it step by step.
+# זה מסובך קצת! עבדי על זה שלב אחר שלב.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Add the nested structure to config["controls"]
+# הוסיפי את המבנה המקונן ל-`config["controls"]`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Investigation - Debugging Nested Access
+# חלק 3: חקירה - איתור באגים בגישה מקוננת
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Find and fix bugs in this nested config code.
+# מצאי ותקני באגים בקוד ה-config המקונן הזה.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "config.py", line 5, in <module>
@@ -133,12 +127,10 @@ sensitivity = config["controls"]["mouse"]["sensitivity"]
 return sensitivity
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
+# השגיאה קרתה כי: _______________
 #
-# The error occurred because: _______________
-#
-# Use get_config_value or manual checking to safely access
-# the sensitivity, returning a default value if not found.
+# השתמשי ב-`get_config_value` או בבדיקה ידנית כדי לגשת ל-`sensitivity` בצורה בטוחה,
+# והחזירי ערך ברירת מחדל אם לא נמצא.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -147,18 +139,16 @@ return sensitivity
 config["player"]["stats"][stat_name] = new_value
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
+# מה אם `config["player"]` לא קיים?
+# מה אם `config["player"]["stats"]` לא קיים?
 #
-# What if config["player"] doesn't exist?
-# What if config["player"]["stats"] doesn't exist?
-#
-# Create a version that ensures the path exists before updating.
+# צרי גרסה שמוודאת שהנתיב קיים לפני העדכון.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

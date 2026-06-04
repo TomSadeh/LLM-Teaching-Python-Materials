@@ -9,13 +9,13 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זאת תרגיל בכמה חלקים. השלימי כל חלק לפי הסדר.
 #
-# {{mentor}} has retired and left behind a utility library. You've inherited
-# the code and must understand it, extend it, and fix any issues.
+# {{mentor}} פרש ממשרתו והשאיר מאחוריו ספריית כלים. ירשת
+# את הקוד ועליך להבין אותו, להרחיב אותו, ולתקן בעיות שנמצאות בו.
 #
-# THE INHERITED LIBRARY
-# This is the code you've inherited. Study it carefully.
+# ## הספרייה שירשת
+# זה הקוד שירשת. עייני בו בקפידה.
 
 # %%
 border = "=" * width
@@ -48,11 +48,11 @@ return "F"
 return f"{label}: {value}"
 
 # %% [markdown]
-# PART 1: DISCOVERY - Understand the Inherited Code
+# ## חלק 1: גילוי — הבנת הקוד שירשת
 # {{CONTEXT_DISCOVERY_INTRO}}
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Study the library functions above. Predict what they do.
+# עייני בפונקציות הספרייה שלמעלה. נסי לנחש מה כל אחת עושה.
 
 # %%
 print("Exploring the inherited library...\n")
@@ -86,19 +86,19 @@ for score in [95, 85, 75, 65, 55]:
 print()
 
 # %% [markdown]
-# YOUR OBSERVATIONS
+# ## התצפיות שלך
 #
-# Answer these questions:
-# 1. What does format_title do with the width parameter? _______________
-# 2. What does calculate_average return for an empty list? _______________
-# 3. What grade does a score of 89 get? _______________
+# ענני על השאלות האלה:
+# 1. מה עושה `format_title` עם הפרמטר `width`? _______________
+# 2. מה מחזירה `calculate_average` עבור רשימה ריקה? _______________
+# 3. איזו ציון מקבל ציון 89? _______________
 #
 #
-# PART 2: OWNERSHIP - Extend the Library
+# ## חלק 2: בעלות — הרחבת הספרייה
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Add your own functions to the library.
+# הוסיפי פונקציות משלך לספרייה.
 
 # %%
 # FUNCTION 1: format_header
@@ -198,11 +198,11 @@ card = create_report_card("{{hero}}", [85, 90, 78, 92, 88])
 print(card)
 
 # %% [markdown]
-# PART 3: INVESTIGATION - Find and Fix Issues
+# ## חלק 3: חקירה — מציאת ותיקון בעיות
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# There are some bugs and edge cases in the library. Find and fix them.
+# יש כמה באגים ומקרי קצה בספרייה. מצאי אותם ותקני אותם.
 
 # %%
 # ISSUE 1: create_profile_line doesn't use width parameter!

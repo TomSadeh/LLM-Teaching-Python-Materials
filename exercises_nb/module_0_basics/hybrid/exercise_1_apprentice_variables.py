@@ -10,13 +10,13 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגילה מרובת חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: DISCOVERY - Study the Master's Work
+# ## חלק 1: גילוי - לימדי מהמורה
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Study how {{hero}}'s mentor uses variables and strings.
-# Predict the output before running the code.
+# למדי כיצד המורה של {{hero}} משתמשת במשתנים ומחרוזות.
+# נסי לנחש את הפלט לפני שתריצי את הקוד.
 
 # %% locked
 title = "Apprentice"
@@ -36,88 +36,81 @@ description = "The " + item + " belongs to " + owner
 print(description)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTIONS HERE ✏️
+# כתבי בדיוק מה כל פונקציית master_code תדפיס.
 #
-# Write EXACTLY what each master_code function will print.
+# פלט master_code_1: _______________
+# פלט master_code_2: _______________
+# פלט master_code_3: _______________
 #
-# master_code_1 output: _______________
-# master_code_2 output: _______________
-# master_code_3 output: _______________
-#
-# Hint: Pay attention to spaces - where do they come from?
+# > רמז: שימי לב לרווחים - מאין הם מגיעים?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: GUIDANCE - Practice with Support
+# ## חלק 2: הכוונה - תרגול עם תמיכה
 # {{CONTEXT_GUIDANCE_INTRO}}
 # {{CONTEXT_GUIDANCE_NARRATIVE}}
 #
-# Now practice with some scaffolding to help you.
+# עכשיו תתרגלי עם קצת עזרה.
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# השלימי את החסר:
 #
-# Create and use variables like the master did.
+# צרי משתנים והשתמשי בהם כמו שהמורה עשתה.
 #
 # role = "Guardian"
 # hero = "{{hero}}"
 # title = role ___ " " ___ hero     # Fill in the operator to join strings
 # print(title)
 #
-# Hint: Use + to concatenate (join) strings.
+# > רמז: השתמשי ב-`+` כדי לחבר (לשרשר) מחרוזות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ FILL IN THE BLANKS ✏️
+# השלימי את החסר:
 #
-# Print multiple items with automatic spacing.
+# הדפיסי מספר פריטים עם רווח אוטומטי ביניהם.
 #
 # location = "{{school}}"
 # status = "training"
 # print(___,  "is now", ___)        # Fill in the variable names
 #
-# Hint: Print the location and status variables.
+# > רמז: הדפיסי את המשתנים `location` ו-`status`.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: GROWTH - Create Your Own
+# ## חלק 3: צמיחה - צרי בעצמך
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now create your own code using what you've learned!
+# עכשיו צרי קוד משלך עם מה שלמדת!
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי הצגת דמות.
 #
-# Create a character introduction.
+# 1. צרי משתנה `hero_name` עם הערך "{{hero}}"
+# 2. צרי משתנה `class_type` עם הערך "{{ROLE_TITLE}}"
+# 3. צרי משתנה `intro` שמשלב: hero_name + " the " + class_type
+# 4. הדפיסי את `intro`
 #
-# Step 1: Create a variable `hero_name` with value "{{hero}}"
-# Step 2: Create a variable `class_type` with value "{{ROLE_TITLE}}"
-# Step 3: Create a variable `intro` that combines:
-#         hero_name + " the " + class_type
-# Step 4: Print the intro
-#
-# Expected output: {{hero}} the {{ROLE_TITLE}}
+# פלט צפוי: {{hero}} the {{ROLE_TITLE}}
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# צרי דוח סטטוס עבור {{hero}}.
 #
-# Create a status report for {{hero}}.
+# 1. צרי `location` עם הערך "{{school}}"
+# 2. צרי `health` עם הערך 100 (מספר!)
+# 3. צרי `gold` עם הערך 50 (מספר!)
+# 4. הדפיסי עם פסיקים: "Location:", location
+# 5. הדפיסי עם פסיקים: "Health:", health, "Gold:", gold
 #
-# Step 1: Create `location` with value "{{school}}"
-# Step 2: Create `health` with value 100 (a number!)
-# Step 3: Create `gold` with value 50 (a number!)
-# Step 4: Print using commas: "Location:", location
-# Step 5: Print using commas: "Health:", health, "Gold:", gold
-#
-# Expected output:
+# פלט צפוי:
 # Location: {{school}}
 # Health: 100 Gold: 50
 

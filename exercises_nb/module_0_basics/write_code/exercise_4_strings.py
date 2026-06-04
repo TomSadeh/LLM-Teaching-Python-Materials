@@ -9,76 +9,67 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי הודעת ברוכה הבאה עבור {{school}}.
 #
-# Create a welcome message for {{school}}.
+# 1. צרי משתנה `school` עם הערך "{{school}}"
+# 2. צרי משתנה `message` שמחבר את "Welcome to " עם school
+#    השתמשי באופרטור +: message = "Welcome to " + school
+# 3. הדפיסי את ההודעה
 #
-# Step 1: Create a variable `school` with value "{{school}}"
-# Step 2: Create a variable `message` that combines "Welcome to " with school
-#         Use the + operator: message = "Welcome to " + school
-# Step 3: Print the message
-#
-# Expected output: Welcome to {{school}}
+# פלט צפוי: Welcome to {{school}}
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי ברכה עבור {{hero}} ב-{{school}}.
 #
-# Create a greeting for {{hero}} at {{school}}.
+# 1. צרי `hero` עם הערך "{{hero}}"
+# 2. צרי `location` עם הערך "{{school}}"
+# 3. הדפיסי עם פסיקים: print(hero, "is studying at", location)
 #
-# Step 1: Create `hero` with value "{{hero}}"
-# Step 2: Create `location` with value "{{school}}"
-# Step 3: Print using commas: print(hero, "is studying at", location)
+# > רמז: פסיקים בתוך `print()` מוסיפים רווחים אוטומטית בין הפריטים.
 #
-# Hint: Commas automatically add spaces between items.
-#
-# Expected output: {{hero}} is studying at {{school}}
+# פלט צפוי: {{hero}} is studying at {{school}}
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# בני תיאור של ה-{{item}} של {{hero}}.
 #
-# Build {{hero}}'s {{item}} description.
+# 1. צרי `item` עם הערך "{{item}}"
+# 2. צרי `color` עם הערך "golden"
+# 3. צרי `description` על ידי חיבור: "a " + color + " " + item
+# 4. הדפיסי: "{{hero}} found" ואחריו description
 #
-# Step 1: Create `item` with value "{{item}}"
-# Step 2: Create `color` with value "golden"
-# Step 3: Create `description` by combining: "a " + color + " " + item
-# Step 4: Print: "{{hero}} found" followed by description
-#
-# Expected output: {{hero}} found a golden {{item}}
+# פלט צפוי: {{hero}} found a golden {{item}}
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# ערבבי מחרוזות ומספרים בפלט.
 #
-# Mix strings and numbers in output.
+# 1. צרי `hero` עם הערך "{{hero}}"
+# 2. צרי `level` עם הערך 5 (מספר, בלי גרשיים!)
+# 3. הדפיסי עם פסיקים: print(hero, "reached level", level)
 #
-# Step 1: Create `hero` with value "{{hero}}"
-# Step 2: Create `level` with value 5 (a number, no quotes!)
-# Step 3: Print using commas: print(hero, "reached level", level)
+# > רמז: שימוש בפסיקים בתוך `print()` מטפל במספר אוטומטית — אין צורך להמיר אותו למחרוזת!
 #
-# Note: Using commas in print() handles the number automatically.
-# You don't need to convert it to a string!
-#
-# Expected output: {{hero}} reached level 5
+# פלט צפוי: {{hero}} reached level 5
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

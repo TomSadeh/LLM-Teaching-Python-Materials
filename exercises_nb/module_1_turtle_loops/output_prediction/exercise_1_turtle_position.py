@@ -24,15 +24,13 @@ t.forward(50)
 print(f"Final X position: {t.xcor()}")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# The turtle starts at position (0, 0) facing right (East).
-# After moving forward 100, it's at (100, 0).
-# After moving forward 50 more, where is it?
+# הצב מתחילה במיקום (0, 0) ופונה ימינה (מזרח).
+# אחרי `forward(100)`, היא נמצאת ב־(100, 0).
+# אחרי עוד `forward(50)`, איפה היא תהיה?
 #
 # Final X position: _______________
 #
-# Hint: forward() adds to the position in the direction the turtle faces.
-# The turtle starts facing right, so forward moves right (increases X).
+# > רמז: `forward()` מוסיפה למיקום בכיוון שהצב פונה אליו. הצב פונה ימינה, אז קדימה פירושו ימינה (X גדל).
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_1}}
 
@@ -51,15 +49,13 @@ t.backward(30)
 print(f"Final X position: {t.xcor()}")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Starting at (0, 0), facing right:
-# - forward(80) moves to X = ?
-# - backward(30) moves back, so X = ?
+# מתחילים ב־(0, 0), פונים ימינה:
+# - `forward(80)` מגיעה ל־X = ?
+# - `backward(30)` זוזה אחורה, אז X = ?
 #
 # Final X position: _______________
 #
-# Hint: backward() moves in the OPPOSITE direction the turtle faces,
-# but the turtle keeps facing the same way.
+# > רמז: `backward()` זזה בכיוון ההפוך מהכיוון שהצב פונה אליו, אבל הצב ממשיכה לפנות לאותו הכיוון.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_2}}
 
@@ -78,15 +74,13 @@ t.forward(60)
 print(f"Final Y position: {t.ycor()}")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# The turtle starts facing right (East).
-# right(90) turns it 90 degrees clockwise - now facing which direction?
-# Then forward(60) moves it 60 units in that direction.
+# הצב מתחילה ופונה ימינה (מזרח).
+# `right(90)` מסובבת אותה 90 מעלות בכיוון השעון — לאן היא פונה עכשיו?
+# אחר כך `forward(60)` מזיזה אותה 60 יחידות בכיוון הזה.
 #
 # Final Y position: _______________
 #
-# Hint: Turning right from East points you South.
-# In turtle graphics, South means Y decreases (negative Y direction).
+# > רמז: פנייה ימינה ממזרח מכוונת אותך דרומה. בגרפיקת הצב, דרום אומר ש־Y קטן (כיוון Y שלילי).
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_3}}
 
@@ -106,16 +100,14 @@ t.forward(50)
 print(f"Position: ({t.xcor()}, {t.ycor()})")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Starting at (0, 0), facing right (East):
-# - forward(50) moves to position (?, ?)
-# - left(90) turns 90 degrees counter-clockwise - now facing ?
-# - forward(50) moves to position (?, ?)
+# מתחילים ב־(0, 0), פונים ימינה (מזרח):
+# - `forward(50)` מגיעה למיקום (?, ?)
+# - `left(90)` מסובבת 90 מעלות נגד כיוון השעון — עכשיו פונים לאן?
+# - `forward(50)` מגיעה למיקום (?, ?)
 #
 # Position: (_____, _____)
 #
-# Hint: Turning left from East points you North.
-# North means Y increases (positive Y direction).
+# > רמז: פנייה שמאלה ממזרח מכוונת אותך צפונה. צפון אומר ש־Y גדל (כיוון Y חיובי).
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_4}}
 

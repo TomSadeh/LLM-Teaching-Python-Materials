@@ -12,11 +12,9 @@
 # ## {{EXERCISE_1_TITLE}}
 # {{CONTEXT_EXERCISE_1_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# צרי משתנה שישמור את השם של {{hero}}.
 #
-# Create a variable to store {{hero}}'s name.
-#
-# Hint: Use the = sign to assign a value to a variable.
+# > רמז: השתמשי בסימן `=` כדי להשים ערך בתוך משתנה.
 #
 # hero_name ___ "{{hero}}"     # Fill in the assignment operator
 # print(hero_name)
@@ -28,11 +26,9 @@
 # ## {{EXERCISE_2_TITLE}}
 # {{CONTEXT_EXERCISE_2_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# שמרי מידע על {{school}}.
 #
-# Store information about {{school}}.
-#
-# Hint: Variable names should be descriptive and use underscores.
+# > רמז: שמות משתנים צריכים להיות תיאוריים ולהשתמש בקו תחתון.
 #
 # school_name = "{{school}}"
 # ___ = 100                    # Number of students (choose a good variable name)
@@ -46,11 +42,9 @@
 # ## {{EXERCISE_3_TITLE}}
 # {{CONTEXT_EXERCISE_3_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# השתמשי במשתנים בתוך פקודות `print`.
 #
-# Use variables in print statements.
-#
-# Hint: Don't use quotes around variable names when printing them.
+# > רמז: אל תשימי מרכאות סביב שמות המשתנים כשאת מדפיסה אותם.
 #
 # item = "{{item}}"
 # owner = "{{hero}}"
@@ -64,11 +58,9 @@
 # ## {{EXERCISE_4_TITLE}}
 # {{CONTEXT_EXERCISE_4_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# שני את הערך של משתנה.
 #
-# Change a variable's value.
-#
-# Hint: You can assign a new value to an existing variable.
+# > רמז: אפשר להשים ערך חדש בתוך משתנה קיים.
 #
 # points = 0
 # print("Starting points:", points)

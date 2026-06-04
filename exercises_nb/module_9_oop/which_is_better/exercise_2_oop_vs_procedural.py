@@ -2,13 +2,13 @@
 # {{CONTEXT_COMPARISON_INTRO}}
 # {{CONTEXT_COMPARISON_DECISION}}
 #
-# The great debate: When should you use classes vs dictionaries and functions?
-# Both approaches can solve the same problems, but each has trade-offs.
+# הדיון הגדול: מתי כדאי להשתמש במחלקות לעומת מילונים ופונקציות?
+# שתי הגישות יכולות לפתור את אותן הבעיות, אבל לכל אחת יש יתרונות וחסרונות.
 #
 # {{APPROACH_1_NAME}}
 # {{CONTEXT_APPROACH_1_NARRATIVE}}
 #
-# Procedural approach using dictionaries and functions
+# גישה פרוצדורלית — שימוש במילונים ובפונקציות
 
 # %%
 return {
@@ -37,7 +37,7 @@ return f"{character['name']}: {character['health']}/{character['max_health']} HP
 # {{APPROACH_2_NAME}}
 # {{CONTEXT_APPROACH_2_NARRATIVE}}
 #
-# Object-Oriented approach using a class
+# גישה מונחית-עצמים — שימוש במחלקה
 
 # %%
 class CharacterOOP:
@@ -68,8 +68,6 @@ class CharacterOOP:
         return f"{self.name}: {self.health}/{self.max_health} HP"
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
-#
 # {{CONTEXT_ANALYSIS_PROMPT}}
 
 # %%
@@ -95,9 +93,9 @@ Which is easier to read?
 return analysis
 
 # %% [markdown]
-# COMPARISON 2: COMPLEX DATA
+# ## השוואה 2: נתונים מורכבים
 #
-# Procedural approach for inventory
+# גישה פרוצדורלית למלאי
 
 # %%
 return {
@@ -132,7 +130,7 @@ items_str = ", ".join(f"{k}: {v}" for k, v in inventory["items"].items())
 return f"{inventory['owner']}'s inventory ({items_str}) - {inventory['gold']} gold"
 
 # %% [markdown]
-# ## OOP approach for inventory
+# ## גישה מונחית-עצמים למלאי
 
 # %%
 class InventoryOOP:
@@ -172,7 +170,7 @@ class InventoryOOP:
         return f"{self.owner}'s inventory ({items_str}) - {self.gold} gold"
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
+# ניתוח שלך
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -199,23 +197,21 @@ What if we had 10 different functions/methods? Which scales better?
 return analysis
 
 # %% [markdown]
-# ## COMPARISON 3: TYPE CHECKING AND SAFETY
+# ## השוואה 3: בדיקת סוגים ובטיחות
 #
-# ✏️ YOUR ANALYSIS ✏️
-#
-# Consider this procedural code:
+# שימי לב לדוגמה הזו — מה קורה בגישה פרוצדורלית:
 #     char = create_character_proc("{{hero}}", 100, 20)
 #     inv = create_inventory_proc("{{hero}}", 10)
 #
-#     # Oops! Wrong function for wrong data
-#     take_damage_proc(inv, 50)  # This might crash or corrupt data!
+#     # אופס! קוראים לפונקציה הלא נכונה עם הנתונים הלא נכונים
+#     take_damage_proc(inv, 50)  # זה עלול לקרוס או לפגוע בנתונים!
 #
-# Now consider OOP:
+# ועכשיו בגישה מונחית-עצמים:
 #     char = CharacterOOP("{{hero}}", 100, 20)
 #     inv = InventoryOOP("{{hero}}", 10)
 #
-#     # Can't accidentally call wrong method
-#     # inv.take_damage(50)  # Error: InventoryOOP has no take_damage
+#     # לא ניתן לקרוא בטעות למתודה הלא נכונה
+#     # inv.take_damage(50)  # שגיאה: ל-InventoryOOP אין take_damage
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -238,9 +234,7 @@ This illustrates the OOP benefit of:
 return analysis
 
 # %% [markdown]
-# ## WHEN TO USE EACH
-#
-# ✏️ YOUR FINAL ANALYSIS ✏️
+# ## מתי להשתמש בכל גישה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

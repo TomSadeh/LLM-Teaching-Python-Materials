@@ -9,18 +9,18 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# This is a multi-part mini project. Complete each part in order.
+# זהו פרויקט מיני מרובה-חלקים. השלימי כל חלק לפי הסדר.
 #
-# You're building a complete Team Management System for {{school}} using
-# functions. This project ties together everything you've learned about
-# functions: definition, parameters, return values, and good design.
+# את בונה מערכת ניהול קבוצה שלמה עבור {{school}} בעזרת
+# פונקציות. הפרויקט הזה מחבר בין כל מה שלמדת על
+# פונקציות: הגדרה, פרמטרים, ערכי החזרה ועיצוב טוב.
 #
-# PART 1: DISCOVERY - Design Your Functions
+# ## חלק 1: גילוי - עצבי את הפונקציות שלך
 # {{CONTEXT_DISCOVERY_INTRO}}
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Before writing code, design your function signatures.
-# Think about what parameters each function needs and what it should return.
+# לפני שתתחילי לכתוב קוד, עצבי את חתימות הפונקציות שלך.
+# חשבי אילו פרמטרים כל פונקציה צריכה ומה היא צריכה להחזיר.
 
 # %%
 # YOUR DESIGN NOTES
@@ -64,11 +64,11 @@ print("2. What does each function produce?")
 print("3. What's a good default value for optional parameters?")
 
 # %% [markdown]
-# PART 2: GROWTH - Implement Core Functions
+# ## חלק 2: צמיחה - מימוש הפונקציות המרכזיות
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now implement the core functions for your team management system.
+# עכשיו מממשי את הפונקציות המרכזיות של מערכת ניהול הקבוצה שלך.
 
 # %%
 # FUNCTION 1: create_member
@@ -178,11 +178,11 @@ print(f"Found Unknown: {not_found}")
 return team  # Return for Part 3
 
 # %% [markdown]
-# PART 3: GROWTH - Build the Main Program
+# ## חלק 3: צמיחה - בניית התוכנית הראשית
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Use your functions to build the complete team management system.
+# השתמשי בפונקציות שלך כדי לבנות את מערכת ניהול הקבוצה השלמה.
 
 # %%
 # Copy or redefine your functions here
@@ -286,11 +286,11 @@ if summary:
 print_section("End of Program", "=")
 
 # %% [markdown]
-# PART 4: IMPROVEMENT - Polish and Document
+# ## חלק 4: שיפור - ליטוש ותיעוד
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Review your code and improve the quality.
+# עיברי על הקוד שלך ושפרי את האיכות שלו.
 
 # %%
 # CHECKLIST: Review your code against these standards
@@ -335,7 +335,7 @@ print("Part 4: Code Quality Review")
 print(checklist)
 
 # %% [markdown]
-# ## BONUS: Extend the System
+# ## בונוס: הרחבת המערכת
 
 # %%
 print("BONUS CHALLENGES:")

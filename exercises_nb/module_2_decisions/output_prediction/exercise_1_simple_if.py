@@ -11,7 +11,7 @@
 #
 # ## {{CHALLENGE_1_TITLE}}
 # {{CONTEXT_CHALLENGE_1_NARRATIVE}}
-# Does the code inside the if block execute?
+# האם הקוד שבתוך בלוק ה-`if` מתבצע?
 
 # %% locked
 power_level = 100
@@ -19,13 +19,12 @@ if power_level > 50:
     print("{{hero}} is strong enough!")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
+# שורה 1: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_1}}
-# Hint: Is 100 > 50? If yes, the print statement runs.
+# > רמז: האם 100 > 50? אם כן, פקודת ה-`print` מתבצעת.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -33,7 +32,7 @@ if power_level > 50:
 # %% [markdown]
 # ## {{CHALLENGE_2_TITLE}}
 # {{CONTEXT_CHALLENGE_2_NARRATIVE}}
-# Will anything be printed when the condition is False?
+# האם יודפס משהו כאשר התנאי הוא `False`?
 
 # %% locked
 score = 30
@@ -42,13 +41,12 @@ if score > 50:
 print("The test is complete.")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
+# שורה 1: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_2}}
-# Hint: Is 30 > 50? The code AFTER the if block always runs.
+# > רמז: האם 30 > 50? הקוד שאחרי בלוק ה-`if` תמיד מתבצע.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -56,7 +54,7 @@ print("The test is complete.")
 # %% [markdown]
 # ## {{CHALLENGE_3_TITLE}}
 # {{CONTEXT_CHALLENGE_3_NARRATIVE}}
-# Pay attention to what's inside vs outside the if block.
+# שימי לב מה נמצא בתוך בלוק ה-`if` ומה נמצא מחוצה לו.
 
 # %% locked
 points = 75
@@ -67,16 +65,15 @@ if points > 60:
 print("Training session ended.")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________
-# Line 3: _______________
-# Line 4: _______________
+# שורה 1: _______________
+# שורה 2: _______________
+# שורה 3: _______________
+# שורה 4: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_3}}
-# Hint: Count carefully - how many print statements are INSIDE the if?
+# > רמז: ספרי בזהירות — כמה פקודות `print` נמצאות בתוך ה-`if`?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -84,7 +81,7 @@ print("Training session ended.")
 # %% [markdown]
 # ## {{CHALLENGE_4_TITLE}}
 # {{CONTEXT_CHALLENGE_4_NARRATIVE}}
-# Variables can be compared to each other too.
+# אפשר גם להשוות משתנים אחד לשני.
 
 # %% locked
 hero_strength = 45
@@ -94,13 +91,12 @@ if hero_strength > required_strength:
 print(f"Strength: {hero_strength}/{required_strength}")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
+# שורה 1: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_4}}
-# Hint: Compare the two numbers - is 45 > 50?
+# > רמז: השווי בין שני המספרים — האם 45 > 50?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -18,9 +18,7 @@ for step in range(4):
     print(f"Step {step}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
-# Track the value of `step` in each iteration.
+# עקבי אחרי הערך של `step` בכל איטרציה.
 #
 # | Iteration | step | Output |
 # |-----------|------|--------|
@@ -29,8 +27,8 @@ for step in range(4):
 # | 3         |      |        |
 # | 4         |      |        |
 #
-# Hint: range(4) produces the values 0, 1, 2, 3.
-# Each iteration, `step` takes the next value.
+# > רמז: `range(4)` מייצר את הערכים 0, 1, 2, 3.
+# > בכל איטרציה, `step` מקבל את הערך הבא.
 #
 # {{CONTEXT_TRACE_HINT_1}}
 
@@ -48,9 +46,7 @@ for num in range(3, 0, -1):
 print("Launch!")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
-# Track the value of `num` in each iteration.
+# עקבי אחרי הערך של `num` בכל איטרציה.
 #
 # | Iteration | num | Output |
 # |-----------|-----|--------|
@@ -59,8 +55,8 @@ print("Launch!")
 # | 3         |     |        |
 # | After loop |  - | ????   |
 #
-# Hint: range(3, 0, -1) counts backwards: 3, 2, 1.
-# After the loop ends, the final print() runs.
+# > רמז: `range(3, 0, -1)` סופר לאחור: 3, 2, 1.
+# > אחרי שהלולאה מסתיימת, ה-`print()` האחרון רץ.
 #
 # {{CONTEXT_TRACE_HINT_2}}
 
@@ -78,9 +74,7 @@ for i in range(1, 4):
     print(f"Segment {i}: {length} units")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
-# Track BOTH `i` AND `length` in each iteration.
+# עקבי אחרי שני הערכים `i` וגם `length` בכל איטרציה.
 #
 # | Iteration | i | length (i * 10) | Output |
 # |-----------|---|-----------------|--------|
@@ -88,8 +82,8 @@ for i in range(1, 4):
 # | 2         |   |                 |        |
 # | 3         |   |                 |        |
 #
-# Hint: length is calculated INSIDE the loop, so it changes
-# based on the current value of i.
+# > רמז: `length` מחושב בתוך הלולאה, כך שהוא משתנה
+# > בהתאם לערך הנוכחי של `i`.
 #
 # {{CONTEXT_TRACE_HINT_3}}
 
@@ -107,10 +101,8 @@ for sides in range(3, 6):
     print(f"{sides} sides: turn {angle} degrees")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
-# Track `sides` and `angle` in each iteration.
-# Remember: // is integer division (no decimals).
+# עקבי אחרי `sides` ו-`angle` בכל איטרציה.
+# זכרי: `//` הוא חילוק שלם (ללא עשרונות).
 #
 # | Iteration | sides | angle (360 // sides) | Output |
 # |-----------|-------|----------------------|--------|
@@ -118,7 +110,7 @@ for sides in range(3, 6):
 # | 2         |       |                      |        |
 # | 3         |       |                      |        |
 #
-# Hint: 360 // 3 = 120, 360 // 4 = 90, 360 // 5 = 72
+# > רמז: `360 // 3 = 120`, `360 // 4 = 90`, `360 // 5 = 72`
 #
 # {{CONTEXT_TRACE_HINT_4}}
 

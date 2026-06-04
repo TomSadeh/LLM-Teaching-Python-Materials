@@ -1,133 +1,115 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# This is a multi-part exercise where you build a scheduling system
-# for {{school}} using the datetime module. {{mentor}} needs help
-# organizing events and deadlines.
+# זוהי תרגילה מרובת-חלקים שבה תבני מערכת לוח זמנים
+# עבור {{school}} באמצעות מודול `datetime`. {{mentor}} צריכה עזרה
+# בארגון אירועים ותאריכי יעד.
 #
-# Programming concepts: datetime module, date arithmetic, formatting
-# Difficulty: 2-3
+# מושגי תכנות: מודול `datetime`, חישובי תאריכים, עיצוב תאריכים
+# רמת קושי: 2-3
 
 # %%
 from datetime import date, datetime, timedelta
 
 # %% [markdown]
-# PART 1: Growth - Create and Format Dates
+# ## חלק 1: צמיחה - יצירה ועיצוב תאריכים
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Start by learning to create dates and format them nicely.
+# התחילי ללמוד ליצור תאריכים ולעצב אותם בצורה יפה.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create a date using: date(year, month, day)
-# Step 2: Return the date
+# 1. צרי תאריך באמצעות: `date(year, month, day)`
+# 2. החזירי את התאריך
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Check the style parameter
-# Step 2: If "long", use strftime("%B %d, %Y")
-# Step 3: If "short", use strftime("%m/%d/%y")
-# Step 4: If "iso", use strftime("%Y-%m-%d")
-# Step 5: Return the formatted string
+# 1. בדקי את הפרמטר `style`
+# 2. אם `"long"`, השתמשי ב-`strftime("%B %d, %Y")`
+# 3. אם `"short"`, השתמשי ב-`strftime("%m/%d/%y")`
+# 4. אם `"iso"`, השתמשי ב-`strftime("%Y-%m-%d")`
+# 5. החזירי את המחרוזת המעוצבת
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use strftime("%A") to get the full day name
+# השתמשי ב-`strftime("%A")` כדי לקבל את שם היום המלא
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Calculate Deadlines and Differences
+# ## חלק 2: צמיחה - חישוב תאריכי יעד והפרשים
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Learn to calculate future dates and time differences.
+# למדי לחשב תאריכים עתידיים והפרשי זמן.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create a timedelta: delta = timedelta(days=days_from_now)
-# Step 2: Add to start_date: deadline = start_date + delta
-# Step 3: Return the deadline
+# 1. צרי `timedelta`: `delta = timedelta(days=days_from_now)`
+# 2. הוסיפי ל-`start_date`: `deadline = start_date + delta`
+# 3. החזירי את תאריך היעד
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Subtract dates: difference = date2 - date1
-# Step 2: Get the days: difference.days
-# Step 3: Use abs() to get absolute value (in case date1 > date2)
-# Step 4: Return the result
+# 1. חסרי תאריכים: `difference = date2 - date1`
+# 2. קבלי את הימים: `difference.days`
+# 3. השתמשי ב-`abs()` לקבלת ערך מוחלט (במקרה ש-`date1 > date2`)
+# 4. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Get today: today = date.today()
-# Step 2: Calculate: (target_date - today).days
-# Step 3: Return the result
+# 1. קבלי את היום הנוכחי: `today = date.today()`
+# 2. חשבי: `(target_date - today).days`
+# 3. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Build Event Scheduler
+# ## חלק 3: צמיחה - בניית מתזמן אירועים
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Combine everything into a complete scheduling system.
+# שלבי את הכל למערכת תזמון שלמה.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. צרי מילון עם:
+#    - `"name"`: name
+#    - `"date"`: event_date
+#    - `"description"`: description
+#    - `"day_of_week"`: `get_day_of_week(event_date)`
+#    - `"formatted_date"`: `format_event_date(event_date, "long")`
+#    - `"days_away"`: `days_until(event_date)`
 #
-# Step 1: Create a dictionary with:
-#         - "name": name
-#         - "date": event_date
-#         - "description": description
-#         - "day_of_week": get_day_of_week(event_date)
-#         - "formatted_date": format_event_date(event_date, "long")
-#         - "days_away": days_until(event_date)
-#
-# Step 2: Return the dictionary
+# 2. החזירי את המילון
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Print the event in a nice format:
-# "[name]"
-# "  Date: [formatted_date] ([day_of_week])"
-# "  [days_away] days away"
-# "  Description: [description]" (if not empty)
+# הדפיסי את האירוע בפורמט יפה:
+# `"[name]"`
+# `"  Date: [formatted_date] ([day_of_week])"`
+# `"  [days_away] days away"`
+# `"  Description: [description]"` (רק אם לא ריק)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use sorted() with a key function:
-# sorted(events, key=lambda e: e["date"])
+# השתמשי ב-`sorted()` עם פונקציית מפתח:
+# `sorted(events, key=lambda e: e["date"])`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

@@ -18,17 +18,16 @@ for i in range(4):
     print(i)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# range(4) generates numbers starting from 0.
-# How many numbers? What are they?
+# `range(4)` מייצרת מספרים שמתחילים מ-0.
+# כמה מספרים? מה הם?
 #
-# Line 1: ___
-# Line 2: ___
-# Line 3: ___
-# Line 4: ___
+# שורה 1: ___
+# שורה 2: ___
+# שורה 3: ___
+# שורה 4: ___
 #
-# Hint: range(n) gives you n numbers: 0, 1, 2, ..., n-1
-# It STOPS before reaching n.
+# > רמז: `range(n)` נותנת לך n מספרים: 0, 1, 2, ..., n-1
+# > היא עוצרת לפני שמגיעים ל-n.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_1}}
 
@@ -45,16 +44,15 @@ for num in range(2, 6):
     print(num)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# range(2, 6) has TWO arguments: start and stop.
-# What number does it start at? What number does it stop before?
+# ל-`range(2, 6)` יש שני ארגומנטים: התחלה ועצירה.
+# באיזה מספר היא מתחילה? לפני איזה מספר היא עוצרת?
 #
-# Line 1: ___
-# Line 2: ___
-# Line 3: ___
-# Line 4: ___
+# שורה 1: ___
+# שורה 2: ___
+# שורה 3: ___
+# שורה 4: ___
 #
-# Hint: range(start, stop) gives numbers from start up to (but not including) stop.
+# > רמז: `range(start, stop)` נותנת מספרים החל מ-start ועד (לא כולל) stop.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_2}}
 
@@ -71,18 +69,17 @@ for level in range(1, 10, 2):
     print(level)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# range(1, 10, 2) has THREE arguments: start, stop, step.
-# It starts at 1, stops before 10, and steps by 2.
+# ל-`range(1, 10, 2)` יש שלושה ארגומנטים: התחלה, עצירה, וצעד.
+# היא מתחילה ב-1, עוצרת לפני 10, ומתקדמת בצעדים של 2.
 #
-# Line 1: ___
-# Line 2: ___
-# Line 3: ___
-# Line 4: ___
-# Line 5: ___
+# שורה 1: ___
+# שורה 2: ___
+# שורה 3: ___
+# שורה 4: ___
+# שורה 5: ___
 #
-# Hint: Step of 2 means skip every other number.
-# 1, 3, 5, 7, 9... until you reach 10.
+# > רמז: צעד של 2 אומר לדלג על כל מספר שני.
+# > 1, 3, 5, 7, 9... עד שמגיעים ל-10.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_3}}
 
@@ -99,18 +96,17 @@ for count in range(5, 0, -1):
     print(count)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# range(5, 0, -1) counts BACKWARDS!
-# Start at 5, stop before 0, step by -1.
+# `range(5, 0, -1)` סופרת אחורה!
+# מתחילה ב-5, עוצרת לפני 0, מתקדמת בצעד של 1-.
 #
-# Line 1: ___
-# Line 2: ___
-# Line 3: ___
-# Line 4: ___
-# Line 5: ___
+# שורה 1: ___
+# שורה 2: ___
+# שורה 3: ___
+# שורה 4: ___
+# שורה 5: ___
 #
-# Hint: A negative step goes backwards: 5, 4, 3, 2, 1
-# It stops BEFORE reaching 0.
+# > רמז: צעד שלילי הולך אחורה: 5, 4, 3, 2, 1
+# > היא עוצרת לפני שמגיעים ל-0.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_4}}
 
@@ -127,14 +123,13 @@ for power in range(10, 31, 10):
     print(power)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# range(10, 31, 10) starts at 10, stops before 31, steps by 10.
+# `range(10, 31, 10)` מתחילה ב-10, עוצרת לפני 31, מתקדמת בצעדים של 10.
 #
-# Line 1: ___
-# Line 2: ___
-# Line 3: ___
+# שורה 1: ___
+# שורה 2: ___
+# שורה 3: ___
 #
-# Hint: 10, 20, 30... but stop before 31, so we get all three.
+# > רמז: 10, 20, 30... אבל עוצרים לפני 31, ולכן מקבלים את שלושתם.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_5}}
 

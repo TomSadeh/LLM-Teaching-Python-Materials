@@ -19,17 +19,15 @@ z = 100
 print(x, "studies at", y, "with", z, "points")
 
 # %% [markdown]
-# ✏️ FIX THE STYLE ✏️
-#
 # {{CONTEXT_STYLE_FIX_1}}
 #
-# Rewrite the code above with proper style.
-# Changes to make:
-# - Rename x to something meaningful (like hero_name)
-# - Rename y to something meaningful (like school_name)
-# - Rename z to something meaningful (like points)
+# כתבי מחדש את הקוד למעלה עם סגנון נכון.
+# שינויים לביצוע:
+# 1. שנמי את `x` לשם משמעותי (כמו `hero_name`)
+# 2. שנמי את `y` לשם משמעותי (כמו `school_name`)
+# 3. שנמי את `z` לשם משמעותי (כמו `points`)
 #
-# The output should be exactly the same!
+# הפלט צריך להישאר בדיוק אותו דבר!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -46,15 +44,13 @@ d=a*b
 print("Sum:",c,"Product:",d)
 
 # %% [markdown]
-# ✏️ FIX THE STYLE ✏️
-#
 # {{CONTEXT_STYLE_FIX_2}}
 #
-# Changes to make:
-# - Add spaces around = signs
-# - Add spaces around + and * operators
-# - Add spaces after colons in the print statement
-# - Use meaningful variable names
+# שינויים לביצוע:
+# 1. הוסיפי רווחים מסביב לסימני `=`
+# 2. הוסיפי רווחים מסביב לאופרטורים `+` ו-`*`
+# 3. הוסיפי רווח אחרי הנקודתיים בתוך `print`
+# 4. השתמשי בשמות משתנים משמעותיים
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -74,14 +70,12 @@ print("HP:" + str(h))
 print("Gold:" + str(g))
 
 # %% [markdown]
-# ✏️ FIX THE STYLE ✏️
-#
 # {{CONTEXT_STYLE_FIX_3}}
 #
-# Changes to make:
-# - Use meaningful variable names (name, level, health, gold)
-# - Use f-strings instead of concatenation
-# - Add spaces after colons in output
+# שינויים לביצוע:
+# 1. השתמשי בשמות משתנים משמעותיים (`name`, `level`, `health`, `gold`)
+# 2. השתמשי ב-f-strings במקום חיבור מחרוזות
+# 3. הוסיפי רווח אחרי הנקודתיים בפלט
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

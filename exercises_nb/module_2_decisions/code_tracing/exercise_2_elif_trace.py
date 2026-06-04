@@ -11,7 +11,7 @@
 #
 # ## {{TRACE_1_TITLE}}
 # {{CONTEXT_TRACE_1_NARRATIVE}}
-# Only ONE branch executes in an if/elif/else chain.
+# רק ענף אחד מתבצע בשרשרת `if`/`elif`/`else`.
 
 # %%
 score = 85
@@ -26,22 +26,20 @@ else:
 print(f"{{hero}}'s grade: {grade}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_1}}
 #
-# | Condition | Check | Result |
-# |-----------|-------|--------|
+# | תנאי | בדיקה | תוצאה |
+# |------|-------|-------|
 # | score >= 90 | 85 >= 90 | _____ |
 # | score >= 80 | 85 >= 80 | _____ |
-# | score >= 70 | (skipped because above matched) | - |
-# | else | (skipped because above matched) | - |
+# | score >= 70 | (דולג כי ענף קודם התאים) | - |
+# | else | (דולג כי ענף קודם התאים) | - |
 #
-# Which branch executed? _______________
-# What is grade? _______________
-# What gets printed? _______________
+# איזה ענף בוצע? _______________
+# מה הערך של `grade`? _______________
+# מה מודפס? _______________
 #
-# Key insight: Once a condition is True, we skip all remaining branches!
+# > רמז: ברגע שתנאי אחד הוא `True`, כל הענפים הבאים נדלגים!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -49,7 +47,7 @@ print(f"{{hero}}'s grade: {grade}")
 # %% [markdown]
 # ## {{TRACE_2_TITLE}}
 # {{CONTEXT_TRACE_2_NARRATIVE}}
-# The order of conditions matters!
+# סדר התנאים חשוב!
 
 # %%
 temperature = 35
@@ -64,21 +62,19 @@ else:
 print(f"Weather at {{location}}: {status}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_2}}
 #
-# | Condition | Check | Result |
-# |-----------|-------|--------|
+# | תנאי | בדיקה | תוצאה |
+# |------|-------|-------|
 # | temperature >= 30 | 35 >= 30 | _____ |
-# | temperature >= 20 | (checked/skipped?) | _____ |
-# | temperature >= 10 | (checked/skipped?) | _____ |
-# | else | (checked/skipped?) | _____ |
+# | temperature >= 20 | (נבדק/נדלג?) | _____ |
+# | temperature >= 10 | (נבדק/נדלג?) | _____ |
+# | else | (נבדק/נדלג?) | _____ |
 #
-# What is status? _______________
-# What gets printed? _______________
+# מה הערך של `status`? _______________
+# מה מודפס? _______________
 #
-# Note: 35 is also >= 20 and >= 10, but we stop at first match!
+# > רמז: 35 הוא גם >= 20 וגם >= 10, אבל אנחנו עוצרות בהתאמה הראשונה!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -86,7 +82,7 @@ print(f"Weather at {{location}}: {status}")
 # %% [markdown]
 # ## {{TRACE_3_TITLE}}
 # {{CONTEXT_TRACE_3_NARRATIVE}}
-# Trace when none of the if/elif match (else runs).
+# עקבי אחרי הקוד כאשר אף `if`/`elif` לא מתאים (ו-`else` מתבצע).
 
 # %%
 level = 3
@@ -101,21 +97,19 @@ else:
 print(f"{{hero}}'s rank: {rank}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_3}}
 #
-# | Condition | Check | Result |
-# |-----------|-------|--------|
+# | תנאי | בדיקה | תוצאה |
+# |------|-------|-------|
 # | level == 10 | 3 == 10 | _____ |
 # | level == 7 | 3 == 7 | _____ |
 # | level == 5 | 3 == 5 | _____ |
-# | else | (all above were False) | executes |
+# | else | (כל התנאים מעל היו False) | מתבצע |
 #
-# What is rank? _______________
-# What gets printed? _______________
+# מה הערך של `rank`? _______________
+# מה מודפס? _______________
 #
-# Key insight: else only runs if ALL if/elif conditions are False.
+# > רמז: `else` מתבצע רק אם כל תנאי ה-`if`/`elif` הם `False`.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -123,7 +117,7 @@ print(f"{{hero}}'s rank: {rank}")
 # %% [markdown]
 # ## {{TRACE_4_TITLE}}
 # {{CONTEXT_TRACE_4_NARRATIVE}}
-# Trace with variables that change before the check.
+# עקבי אחרי הקוד עם משתנים שמשתנים לפני הבדיקה.
 
 # %%
 gold = 100
@@ -139,24 +133,22 @@ else:
 print(f"{{hero}} with {gold} gold: {tier}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_4}}
 #
-# | Step | gold | Action |
-# |------|------|--------|
-# | 1    | 100  | Initialize gold |
-# | 2    | ___  | Add 50 to gold |
+# | שלב | gold | פעולה |
+# |-----|------|-------|
+# | 1   | 100  | אתחול gold |
+# | 2   | ___  | הוספת 50 ל-gold |
 #
-# Now check conditions with gold = ___:
-# | Condition | Check | Result |
-# |-----------|-------|--------|
+# עכשיו בדקי את התנאים עם gold = ___:
+# | תנאי | בדיקה | תוצאה |
+# |------|-------|-------|
 # | gold >= 200 | ___ >= 200 | _____ |
 # | gold >= 100 | ___ >= 100 | _____ |
-# | (rest skipped?) | | |
+# | (השאר נדלגים?) | | |
 #
-# What is tier? _______________
-# What gets printed? _______________
+# מה הערך של `tier`? _______________
+# מה מודפס? _______________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

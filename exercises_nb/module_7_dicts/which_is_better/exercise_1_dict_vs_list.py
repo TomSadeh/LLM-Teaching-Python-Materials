@@ -2,15 +2,15 @@
 # {{CONTEXT_COMPARISON_INTRO}}
 # {{CONTEXT_COMPARISON_DECISION}}
 #
-# Compare dictionary-based and list-based approaches to solve
-# the same problem. When should you use each data structure?
+# נשווה בין גישה המבוססת על מילון לבין גישה המבוססת על רשימה כדי לפתור
+# את אותה בעיה. מתי כדאי להשתמש בכל מבנה נתונים?
 #
-# Comparison 1: Looking Up Data
+# השוואה 1: חיפוש מידע
 # {{CONTEXT_APPROACH_1_NARRATIVE}}
 #
-# We need to look up a character's score by their name.
+# אנחנו צריכות למצוא את הניקוד של דמות לפי שמה.
 #
-# ## {{APPROACH_1_NAME}}: List of Tuples
+# ## {{APPROACH_1_NAME}}: רשימת טאפלים
 
 # %%
 # Data stored as list of tuples
@@ -22,7 +22,7 @@ for name, score in data:
 return None  # Not found
 
 # %% [markdown]
-# ## {{APPROACH_2_NAME}}: Dictionary
+# ## {{APPROACH_2_NAME}}: מילון
 
 # %%
 # Data stored as dictionary
@@ -31,10 +31,8 @@ return None  # Not found
 return data.get(target_name, None)
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
-#
 # {{CONTEXT_ANALYSIS_PROMPT}}
-# Consider: {{CONTEXT_DECISION_GUIDANCE}}
+# שימי לב: {{CONTEXT_DECISION_GUIDANCE}}
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -56,16 +54,16 @@ Better choice: ??? (explain why)
 return analysis
 
 # %% [markdown]
-# Comparison 2: Counting Occurrences
+# השוואה 2: ספירת הופעות
 # {{CONTEXT_APPROACH_2_NARRATIVE}}
 #
-# Count how many times each item appears in a collection.
+# נספור כמה פעמים כל פריט מופיע באוסף.
 
 # %%
 items_found = ["{{item}}", "{{spell1}}", "{{item}}", "{{spell1}}", "{{item}}"]
 
 # %% [markdown]
-# ## Approach A: Using a List
+# ## גישה א׳: שימוש ברשימה
 
 # %%
 counts = []  # Will be like [["{{item}}", 3], ["{{spell1}}", 2]]
@@ -83,7 +81,7 @@ for item in items:
 return counts
 
 # %% [markdown]
-# ## Approach B: Using a Dictionary
+# ## גישה ב׳: שימוש במילון
 
 # %%
 counts = {}
@@ -94,9 +92,7 @@ for item in items:
 return counts
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
-#
-# Compare the two counting approaches.
+# השווי בין שתי גישות הספירה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -120,12 +116,12 @@ Better choice: ??? (explain why)
 return analysis
 
 # %% [markdown]
-# Comparison 3: Storing Character Data
+# השוואה 3: אחסון נתוני דמויות
 # {{CONTEXT_APPROACH_3_NARRATIVE}}
 #
-# Store multiple attributes for each character.
+# נאחסן מספר תכונות עבור כל דמות.
 #
-# ## Approach A: Parallel Lists
+# ## גישה א׳: רשימות מקבילות
 
 # %%
 names = ["{{hero}}", "{{heroine}}", "{{friend}}"]
@@ -140,7 +136,7 @@ hero_health = health[hero_index]
 return f"{{{{hero}}}}: level {hero_level}, health {hero_health}"
 
 # %% [markdown]
-# ## Approach B: Dictionary of Dictionaries
+# ## גישה ב׳: מילון של מילונים
 
 # %%
 characters = {
@@ -157,9 +153,7 @@ hero_health = hero_data["health"]
 return f"{{{{hero}}}}: level {hero_level}, health {hero_health}"
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
-#
-# Compare the two data organization approaches.
+# השווי בין שתי גישות ארגון הנתונים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -186,9 +180,9 @@ When might parallel lists actually be better?
 return analysis
 
 # %% [markdown]
-# ## Summary: When to Use Each
+# ## סיכום: מתי להשתמש בכל אחד
 #
-# ✏️ WRITE YOUR SUMMARY ✏️
+# כתבי את הסיכום שלך כאן.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

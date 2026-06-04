@@ -2,11 +2,10 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll practice using super() to call parent class
-# methods. Understanding super() is essential for properly initializing
-# subclasses and extending parent behavior.
+# בתרגיל הזה תתרגלי שימוש ב-`super()` כדי לקרוא למתודות של מחלקת האב.
+# הבנת `super()` חיונית כדי לאתחל תת-מחלקות כמו שצריך ולהרחיב את ההתנהגות של האב.
 #
-# {{FUNCTION_1_TITLE}}
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
 
 # %%
@@ -49,7 +48,7 @@ class AdvancedUnit(BaseUnit):
         pass
 
 # %% [markdown]
-# {{FUNCTION_2_TITLE}}
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
 
 # %%
@@ -95,7 +94,7 @@ class PlayerCharacter(BaseCharacter):
         pass
 
 # %% [markdown]
-# {{FUNCTION_3_TITLE}}
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
 
 # %%
@@ -143,7 +142,7 @@ class TamedCreature(BaseCreature):
         pass
 
 # %% [markdown]
-# {{FUNCTION_4_TITLE}}
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
 
 # %%

@@ -13,15 +13,15 @@
 import turtle
 
 # %% [markdown]
-# {{CASE_1_TITLE}}
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Draw a square (4 sides, each 90-degree turn).
-# The shape should close completely.
+# **התנהגות צפויה:**
+# לצייר ריבוע (4 צלעות, כל פנייה 90 מעלות).
+# הצורה אמורה להיסגר לגמרי.
 #
-# ACTUAL BEHAVIOR:
-# The turtle only draws 3 sides and doesn't close the square!
+# **מה שקורה בפועל:**
+# הצב מצייר רק 3 צלעות ולא סוגר את הריבוע!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -34,27 +34,25 @@ for i in range(3):  # Bug is here!
     t.right(90)
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
+# > רמז: כמה צלעות יש לריבוע?
 #
-# What I found: ________________________________
-# Hint: How many sides does a square have?
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_2_TITLE}}
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Draw an equilateral triangle (3 equal sides).
-# The shape should close completely.
+# **התנהגות צפויה:**
+# לצייר משולש שווה-צלעות (3 צלעות שוות).
+# הצורה אמורה להיסגר לגמרי.
 #
-# ACTUAL BEHAVIOR:
-# The turtle draws a shape but it doesn't close properly!
-# It looks more like a bent line than a triangle.
+# **מה שקורה בפועל:**
+# הצב מצייר צורה כלשהי אבל היא לא נסגרת כמו שצריך!
+# זה נראה יותר כמו קו מעוקל מאשר משולש.
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -70,27 +68,25 @@ for i in range(3):
     t.right(60)  # Bug is here!
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
+# > רמז: הזווית החיצונית של משולש היא 120 מעלות, לא 60.
+# > חשבי: 360 / 3 = ?
 #
-# What I found: ________________________________
-# Hint: The exterior angle of a triangle is 120 degrees, not 60.
-# Think: 360 / 3 = ?
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_3_TITLE}}
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Print numbers 1, 2, 3, 4, 5 (one per line).
+# **התנהגות צפויה:**
+# להדפיס את המספרים 1, 2, 3, 4, 5 (כל אחד בשורה נפרדת).
 #
-# ACTUAL BEHAVIOR:
-# Prints 0, 1, 2, 3, 4 instead!
-# The starting number is wrong.
+# **מה שקורה בפועל:**
+# מדפיס 0, 1, 2, 3, 4 במקום!
+# מספר ההתחלה שגוי.
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -100,26 +96,24 @@ for i in range(5):  # Bug is here!
     print(i)
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
+# > רמז: `range(5)` מתחיל מ-0, לא מ-1.
+# > כדי לקבל 1-5, השתמשי ב-`range(start, stop)`.
 #
-# What I found: ________________________________
-# Hint: range(5) starts at 0, not 1.
-# To get 1-5, use range(start, stop).
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_4_TITLE}}
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Draw a hexagon (6 sides) at {{location}}.
+# **התנהגות צפויה:**
+# לצייר משושה (6 צלעות) ב-{{location}}.
 #
-# ACTUAL BEHAVIOR:
-# The shape closes too early! It looks like a pentagon!
+# **מה שקורה בפועל:**
+# הצורה נסגרת מוקדם מדי! היא נראית כמו מחומש!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -134,13 +128,11 @@ for i in range(6):
     t.left(72)  # Bug is here!
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
+# > רמז: למשושה יש 6 צלעות, אז הזווית צריכה להיות 360/6 = 60.
+# > הקוד משתמש ב-72, שזו הזווית של מחומש (360/5).
 #
-# What I found: ________________________________
-# Hint: A hexagon has 6 sides, so the angle should be 360/6 = 60.
-# The code uses 72, which is the angle for a pentagon (360/5).
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -1,15 +1,15 @@
 # %% [markdown]
 # {{CONTEXT_EVALUATION_INTRO}}
 #
-# This is a multi-part exercise where you upgrade messy counting code
-# to use elegant dictionary patterns.
+# זו תרגיל מרובה חלקים שבו תשדרגי קוד ספירה מבולגן
+# לשימוש בתבניות מילון אלגנטיות.
 #
-# Programming concepts: counting pattern, .get(), dict iteration
+# מושגי תכנות: תבנית ספירה, `.get()`, איטרציה על מילון
 #
-# PART 1: Evaluation - Assess the Messy Code
+# חלק 1: הערכה - בחני את הקוד המבולגן
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# This counting code works but is messy. Analyze what's wrong.
+# קוד הספירה הזה עובד, אבל הוא מבולגן. נתחי מה הבעיה.
 
 # %%
 counts = []  # List of [item, count] pairs
@@ -32,9 +32,7 @@ for item in items:
 return counts
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
-#
-# Identify problems with the messy code:
+# זהי את הבעיות בקוד המבולגן:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -62,11 +60,11 @@ PROBLEMS WITH MESSY COUNTER:
 return analysis
 
 # %% [markdown]
-# PART 2: Discovery - Trace the Messy Code
+# חלק 2: גילוי - עקבי אחרי הקוד המבולגן
 # {{CONTEXT_DISCOVERY_INTRO}}
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# Trace through the messy code to understand exactly what it does.
+# עקבי אחרי הקוד המבולגן כדי להבין בדיוק מה הוא עושה.
 
 # %%
 items = ["a", "b", "a"]
@@ -87,71 +85,59 @@ for item in items:
 print(counts)
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# מלאי את טבלת המעקב:
 #
 # items = ["a", "b", "a"]
 #
-# | Outer | item | counts before      | found | counts after       |
+# | סיבוב | item | counts לפני        | found | counts אחרי        |
 # |-------|------|--------------------|-------|--------------------|
 # | 1     | "a"  | []                 |       |                    |
 # | 2     | "b"  |                    |       |                    |
 # | 3     | "a"  |                    |       |                    |
 #
-# Final result:
+# תוצאה סופית:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Improvement - Simplify with Dictionary
+# חלק 3: שיפור - פשטי עם מילון
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Rewrite the counter using a dictionary.
+# כתבי מחדש את הספירה תוך שימוש במילון.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. צרי מילון ריק: `counts = {}`
+# 2. עבור כל פריט ב-`items`: `counts[item] = counts.get(item, 0) + 1`
+# 3. החזירי את `counts`
 #
-# Step 1: Create an empty dictionary: counts = {}
-#
-# Step 2: For each item in items:
-#         counts[item] = counts.get(item, 0) + 1
-#
-# Step 3: Return counts
-#
-# This should be about 4 lines of code!
+# זה אמור להיות בערך 4 שורות קוד!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Use simple_counter to get counts dict
-#
-# Step 2: Print each item and count using .items()
-#
-# Step 3: Find and print the most common item
-#         Hint: Track max_count and max_item while iterating
-#
-# Step 4: Print the total (sum of all counts)
+# 1. השתמשי ב-`simple_counter` כדי לקבל את מילון הספירות
+# 2. הדפיסי כל פריט וספירה תוך שימוש ב-`.items()`
+# 3. מצאי והדפיסי את הפריט הנפוץ ביותר
+# > רמז: עקבי אחרי `max_count` ו-`max_item` בזמן האיטרציה
+# 4. הדפיסי את הסך הכולל (סכום כל הספירות)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Count all items
-# Step 2: Filter to those above threshold
-# Step 3: Return the list of items (not counts)
+# 1. ספרי את כל הפריטים
+# 2. סנני את אלו שמעל הסף
+# 3. החזירי את רשימת הפריטים (לא הספירות)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## PART 4: Comparison - Before and After
+# ## חלק 4: השוואה - לפני ואחרי
 #
-# ✏️ COMPARE THE APPROACHES ✏️
+# השווי בין שתי הגישות:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -181,7 +167,7 @@ WHAT I LEARNED:
 return comparison_text
 
 # %% [markdown]
-# ## MAIN
+# ## הרצה ראשית
 
 # %%
 print("=" * 60)

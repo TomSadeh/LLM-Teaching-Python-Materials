@@ -13,109 +13,99 @@
 import turtle
 
 # %% [markdown]
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# חשבי והדפיסי את הסכום של 1 + 2 + 3 + 4 + 5 עבור {{hero}}.
 #
-# Calculate and print the sum of 1 + 2 + 3 + 4 + 5 for {{hero}}.
+# 1. צרי משתנה בשם `total` והגדירי אותו ל-0
+# 2. השתמשי בלולאת `for` עם `range(1, 6)`
+# 3. בתוך הלולאה: `total = total + i` (כאשר `i` הוא משתנה הלולאה)
+# 4. אחרי הלולאה, הדפיסי `"Sum:", total`
 #
-# Step 1: Create a variable `total` and set it to 0
-# Step 2: Use a for loop with range(1, 6)
-# Step 3: Inside the loop: total = total + i (where i is loop variable)
-# Step 4: After the loop, print "Sum:", total
-#
-# Expected output: Sum: 15
+# פלט צפוי: `Sum: 15`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# הדפיסי לוח כפל של 3 ב-{{school}}.
 #
-# Print a multiplication table for 3 at {{school}}.
+# 1. השתמשי בלולאת `for` עם `range(1, 6)`
+# 2. בתוך הלולאה:
+#    - `result = 3 * i` (כאשר `i` הוא משתנה הלולאה)
+#    - `print(f"3 x {i} = {result}")`
 #
-# Step 1: Use a for loop with range(1, 6)
-# Step 2: Inside the loop:
-#         - result = 3 * i (where i is the loop variable)
-#         - print(f"3 x {i} = {result}")
-#
-# Expected output:
-# 3 x 1 = 3
-# 3 x 2 = 6
-# 3 x 3 = 9
-# 3 x 4 = 12
-# 3 x 5 = 15
+# פלט צפוי:
+# `3 x 1 = 3`
+# `3 x 2 = 6`
+# `3 x 3 = 9`
+# `3 x 4 = 12`
+# `3 x 5 = 15`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# שרטטי מדרגות גדלות עבור {{creature}}.
+# כל מדרגה גבוהה יותר מהקודמת.
 #
-# Draw a growing staircase for {{creature}}.
-# Each step is taller than the previous.
+# 1. צרי צב ומקמי אותו בנקודה `(-200, 100)`
+# 2. השתמשי בלולאת `for` עם `range(1, 8)`
+# 3. בתוך הלולאה:
+#    - `height = i * 15`  (גובה המדרגה גדל)
+#    - `t.forward(30)`    (החלק האופקי)
+#    - `t.right(90)`
+#    - `t.forward(height)`  (החלק האנכי - משתנה!)
+#    - `t.left(90)`
 #
-# Step 1: Create a turtle and position at (-200, 100)
-# Step 2: Use a for loop with range(1, 8)
-# Step 3: Inside the loop:
-#         - height = i * 15  (step height grows)
-#         - t.forward(30)    (horizontal part)
-#         - t.right(90)
-#         - t.forward(height)  (vertical part - varies!)
-#         - t.left(90)
-#
-# Expected: A staircase where each step is taller.
+# פלט צפוי: מדרגות שבהן כל שלב גבוה יותר מהקודם.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# שרטטי ספירלה ב-{{location}} שבה אורך הקו גדל.
 #
-# Draw a spiral at {{location}} where line length increases.
+# 1. צרי צב
+# 2. השתמשי בלולאת `for` עם `range(1, 25)`
+# 3. בתוך הלולאה:
+#    - `length = i * 5`  (האורך גדל בכל איטרציה)
+#    - `t.forward(length)`
+#    - `t.right(90)`
 #
-# Step 1: Create a turtle
-# Step 2: Use a for loop with range(1, 25)
-# Step 3: Inside the loop:
-#         - length = i * 5  (length grows each iteration)
-#         - t.forward(length)
-#         - t.right(90)
-#
-# Expected: A square spiral that grows outward.
+# פלט צפוי: ספירלה מרובעת שגדלה כלפי חוץ.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# עקבי והדפיסי את המרחק הכולל שעברת ב-{{place}}.
 #
-# Track and print total distance traveled at {{place}}.
+# 1. צרי צב ומקמי אותו בנקודה `(100, 0)`
+# 2. צרי משתנה `total_distance = 0`
+# 3. השתמשי בלולאת `for` עם `range(1, 6)`
+# 4. בתוך הלולאה:
+#    - `distance = i * 20`
+#    - `t.forward(distance)`
+#    - `total_distance = total_distance + distance`
+#    - `t.right(144)`  (דפוס כוכב)
+#    - `print(f"Moved {distance}, total: {total_distance}")`
 #
-# Step 1: Create a turtle and position at (100, 0)
-# Step 2: Create total_distance = 0
-# Step 3: Use a for loop with range(1, 6)
-# Step 4: Inside the loop:
-#         - distance = i * 20
-#         - t.forward(distance)
-#         - total_distance = total_distance + distance
-#         - t.right(144)  (star pattern)
-#         - print(f"Moved {distance}, total: {total_distance}")
-#
-# Expected: A star shape with increasing line lengths,
-# and a printed report of distances.
+# פלט צפוי: צורת כוכב עם קווים שגדלים בהדרגה,
+# ודוח מודפס של המרחקים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

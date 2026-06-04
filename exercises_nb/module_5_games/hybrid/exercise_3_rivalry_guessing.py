@@ -1,24 +1,24 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is a multi-part exercise following the journey to build a number guessing game.
-# Complete each part in order.
+# זוהי תרגיל מרובה-חלקים שעוקב אחרי המסע לבניית משחק ניחוש מספרים.
+# השלימי כל חלק לפי הסדר.
 #
-# Programming concepts: while loops, random, comparisons, input validation
+# מושגי תכנות: לולאות `while`, `random`, השוואות, אימות קלט
 
 # %%
 import random
 
 # %% [markdown]
-# PART 1: The Broken Game
+# ## PART 1: The Broken Game
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# {{hero}}'s first attempt at a guessing game had bugs.
-# {{villain}} found all the flaws and exploited them!
+# הניסיון הראשון של {{hero}} במשחק ניחוש היה מלא בבאגים.
+# {{villain}} מצא את כל הפגמים וניצל אותם!
 #
-# Find and fix the 3 bugs in the code below.
+# מצאי ותקני את 3 הבאגים בקוד שלמטה.
 #
-# BUGS TO FIND: 3
+# מספר באגים למציאה: 3
 
 # %%
 secret = random.randint(0, 9)  # BUG 1: Should be 1-10, not 0-9
@@ -49,81 +49,71 @@ print(f"Out of guesses! The number was {secret}")
 return False
 
 # %% [markdown]
-# ✏️ FIX THE BUGS ✏️
-#
-# What I found:
-# Bug 1: ________________________________
-# Bug 2: ________________________________
-# Bug 3: ________________________________
+# מה מצאתי:
+# באג 1: ________________________________
+# באג 2: ________________________________
+# באג 3: ________________________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Building Better
+# ## PART 2: Building Better
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now build a proper guessing game with these features:
-# - Configurable range (min to max)
-# - Unlimited guesses
-# - Track guess count
-# - Validate input is within range
+# עכשיו בני משחק ניחוש תקין עם התכונות הבאות:
+# - טווח שניתן להגדרה (מינימום עד מקסימום)
+# - ניחושים ללא הגבלה
+# - מעקב אחר מספר הניחושים
+# - אימות שהקלט נמצא בטווח
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Check if guess_str is a digit (use .lstrip('-').isdigit() for negatives)
-#         If not, return (False, "Not a number")
-# Step 2: Convert to integer
-# Step 3: Check if in range
-#         If not, return (False, f"Out of range ({min_val}-{max_val})")
-# Step 4: Return (True, integer_value)
+# 1. בדקי אם `guess_str` הוא מספר (השתמשי ב-`.lstrip('-').isdigit()` למספרים שליליים)
+#    אם לא, החזירי `(False, "Not a number")`
+# 2. המירי למספר שלם
+# 3. בדקי אם הוא בטווח
+#    אם לא, החזירי `(False, f"Out of range ({min_val}-{max_val})")`
+# 4. החזירי `(True, integer_value)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Compare guess to secret and return/print appropriate response
+# השווי את הניחוש ל-`secret` והחזירי/הדפיסי את התגובה המתאימה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Generate secret with random.randint(min_val, max_val)
-# Step 2: Initialize guess_count = 0
-# Step 3: Loop until guessed correctly:
-#         - Get input
-#         - Validate with validate_guess()
-#         - If invalid, print error and continue
-#         - Increment guess_count
-#         - Get hint with give_hint()
-#         - If correct, break
-# Step 4: Return guess_count
+# 1. צרי את ה-`secret` עם `random.randint(min_val, max_val)`
+# 2. אתחלי `guess_count = 0`
+# 3. לופי עד שניחשת נכון:
+#    - קבלי קלט
+#    - אמתי עם `validate_guess()`
+#    - אם לא תקין, הדפיסי שגיאה והמשיכי
+#    - הגדילי את `guess_count`
+#    - קבלי רמז עם `give_hint()`
+#    - אם נכון, צאי מהלולאה
+# 4. החזירי את `guess_count`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: The Championship
+# ## PART 3: The Championship
 # {{CONTEXT_CONFRONTATION_INTRO}}
 # {{CONTEXT_CONFRONTATION_NARRATIVE}}
 #
-# Build the complete championship guessing game:
-# - Best of 3 rounds
-# - Track wins for {{hero}} and {{villain}}
-# - {{villain}} guesses using a simple strategy
-# - Whoever guesses in fewer tries wins the round
+# בני את משחק הניחוש המלא לאליפות:
+# - מיטב מתוך 3 סיבובים
+# - עקבי אחר הניצחונות של {{hero}} ושל {{villain}}
+# - {{villain}} מנחש לפי אסטרטגיה פשוטה
+# - מי שמנחש בפחות ניסיונות מנצח בסיבוב
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Calculate middle = (min_val + max_val) // 2
-# Step 2: If middle < secret, new range is (middle + 1, max_val)
-# Step 3: If middle > secret, new range is (min_val, middle - 1)
-# Step 4: Return (middle, new_min, new_max)
+# 1. חשבי `middle = (min_val + max_val) // 2`
+# 2. אם `middle < secret` — הטווח החדש הוא `(middle + 1, max_val)`
+# 3. אם `middle > secret` — הטווח החדש הוא `(min_val, middle - 1)`
+# 4. החזירי `(middle, new_min, new_max)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -163,17 +153,15 @@ villain_wins = 0
 round_num = 0
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# כל עוד אף שחקן לא הגיע ל-2 ניצחונות:
+# 1. הגדילי את מספר הסיבוב
+# 2. הדפיסי כותרת סיבוב וניקוד נוכחי
+# 3. {{hero}} מנחשת (השתמשי ב-`play_guessing_round`)
+# 4. {{villain}} מנחש (השתמשי ב-`computer_play_round`)
+# 5. השווי את מספרי הניחושים, תני נקודה למנצח/ת
+# 6. הכריזי על מנצח/ת הסיבוב
 #
-# While neither player has 2 wins:
-#   1. Increment round number
-#   2. Print round header and current score
-#   3. {{hero}} guesses (use play_guessing_round)
-#   4. {{villain}} guesses (use computer_play_round)
-#   5. Compare guess counts, award point to winner
-#   6. Announce round winner
-#
-# After loop: Announce championship winner
+# אחרי הלולאה: הכריזי על אלופת האליפות
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

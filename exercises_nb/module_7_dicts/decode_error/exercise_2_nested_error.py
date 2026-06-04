@@ -2,13 +2,13 @@
 # {{CONTEXT_DECODE_ERROR_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to understand and fix errors
-# that occur when working with nested dictionaries.
+# בתרגיל הזה תלמדי להבין ולתקן שגיאות
+# שקורות כשעובדים עם מילונים מקוננים.
 #
 # {{ERROR_1_TITLE}}
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "config.py", line 8, in <module>
@@ -26,18 +26,16 @@ volume = settings["audio"]["volume"]
 print(f"Volume: {volume}")
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# First, explain what caused the error:
-# The error occurred because: _______________
+# קודם כל, הסבירי מה גרם לשגיאה:
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_1}}
 #
-# Option 1: Add the missing "audio" key to settings
-# Option 2: Check if "audio" exists before accessing
-# Option 3: Use .get() with a default value
+# 1. הוסיפי את המפתח החסר `"audio"` למילון `settings`
+# 2. בדקי אם `"audio"` קיים לפני הגישה אליו
+# 3. השתמשי ב-`.get()` עם ערך ברירת מחדל
 #
-# Write a version that handles missing nested keys gracefully:
+# כתבי גרסה שמטפלת בצורה נאותה במפתחות מקוננים חסרים:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -46,7 +44,7 @@ print(f"Volume: {volume}")
 # {{ERROR_2_TITLE}}
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "profile.py", line 7, in <module>
@@ -64,16 +62,14 @@ health = characters["{{hero}}"]["stats"]["health"]
 print(f"Health: {health}")
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_2}}
 #
-# The error message says "NoneType object is not subscriptable"
-# This means we tried to use ["stats"] on None.
+# הודעת השגיאה אומרת `"NoneType object is not subscriptable"`
+# כלומר ניסינו להשתמש ב-`["stats"]` על `None`.
 #
-# Fix by checking if the character data exists before accessing:
+# תקני על ידי בדיקה אם נתוני הדמות קיימים לפני הגישה אליהם:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -82,7 +78,7 @@ print(f"Health: {health}")
 # {{ERROR_3_TITLE}}
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "inventory.py", line 10, in <module>
@@ -102,16 +98,14 @@ player_data["inventory"]["{{item}}"] += 1
 print(player_data["inventory"])
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_3}}
 #
-# The nested dictionary exists (inventory), but the key
-# "{{item}}" doesn't exist within it.
+# המילון המקונן קיים (`inventory`), אבל המפתח
+# `"{{item}}"` לא קיים בתוכו.
 #
-# Use .get() on the inner dictionary:
+# השתמשי ב-`.get()` על המילון הפנימי:
 # player_data["inventory"]["{{item}}"] = player_data["inventory"].get("{{item}}", 0) + 1
 
 # %%
@@ -121,7 +115,7 @@ print(player_data["inventory"])
 # {{ERROR_4_TITLE}}
 # {{CONTEXT_ERROR_4_NARRATIVE}}
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "game.py", line 8, in <module>
@@ -138,17 +132,15 @@ abilities = {
 abilities["{{hero}}"]["{{spell1}}"]["power"] = 20
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_4}}
 #
-# {{hero}}'s abilities dict is empty - "{{spell1}}" doesn't exist.
-# We need to create the entire nested structure.
+# מילון היכולות של {{hero}} ריק - `"{{spell1}}"` לא קיים.
+# צריך ליצור את כל המבנה המקונן.
 #
-# One approach: Check and create each level
-# Another approach: Assign the whole nested dict at once
+# אפשרות אחת: לבדוק וליצור כל רמה בנפרד
+# אפשרות אחרת: להקצות את כל המילון המקונן בבת אחת
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

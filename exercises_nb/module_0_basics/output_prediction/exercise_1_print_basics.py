@@ -17,11 +17,10 @@ print("Hello, world!")
 print("Welcome to {{school}}")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________
+# שורה 1: _______________
+# שורה 2: _______________
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_1}}
 
@@ -37,14 +36,13 @@ print("{{hero}}", "is learning")
 print("Python" + " programming")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________
+# שורה 1: _______________
+# שורה 2: _______________
 #
-# Hint: Notice the difference between comma (,) and plus (+).
-# Comma adds a space between items, plus joins them directly.
+# > רמז: שימי לב להבדל בין פסיק (,) לבין פלוס (+).
+# > פסיק מוסיף רווח בין הפריטים, ואילו פלוס מחבר אותם ישירות.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_2}}
 
@@ -61,14 +59,12 @@ print(message)
 print("message")
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________
+# שורה 1: _______________
+# שורה 2: _______________
 #
-# Hint: Notice the difference between a variable name (no quotes)
-# and a string literal (with quotes).
+# > רמז: שימי לב להבדל בין שם משתנה (ללא מרכאות) לבין מחרוזת טקסט (עם מרכאות).
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_3}}
 

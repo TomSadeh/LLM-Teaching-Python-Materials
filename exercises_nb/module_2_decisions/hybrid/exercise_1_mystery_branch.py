@@ -10,13 +10,13 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגילה בכמה חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: DISCOVERY - Observe the Unexpected
+# ## חלק 1: גילוי - שימי לב למשהו לא צפוי
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{hero}} wrote some code at {{school}}, but it's behaving strangely!
-# Run each piece of code and notice what's wrong.
+# {{hero}} כתבה קוד ב-{{school}}, אבל הוא מתנהג בצורה מוזרה!
+# הריצי כל קטע קוד ושימי לב למה לא עובד כמו שצריך.
 
 # %%
 # {{hero}} wants to check if they have enough energy to train.
@@ -51,101 +51,101 @@ else:
     print("Access denied!")
 
 # %% [markdown]
-# ✏️ YOUR OBSERVATIONS HERE ✏️
+# ## התצפיות שלי
 #
 # mystery_code_1:
-#   Expected output: "{{hero}} is ready to train!"
-#   Actual output: ________________________________
-#   What's suspicious? ________________________________
+#   פלט צפוי: "{{hero}} is ready to train!"
+#   פלט בפועל: ________________________________
+#   מה מוזר? ________________________________
 #
 # mystery_code_2:
-#   Expected output: "{{hero}} passed!"
-#   Actual output: ________________________________
-#   What's suspicious? ________________________________
+#   פלט צפוי: "{{hero}} passed!"
+#   פלט בפועל: ________________________________
+#   מה מוזר? ________________________________
 #
 # mystery_code_3:
-#   Expected output: "Access granted to {{location}}!"
-#   Actual output: ________________________________
-#   What's suspicious? ________________________________
+#   פלט צפוי: "Access granted to {{location}}!"
+#   פלט בפועל: ________________________________
+#   מה מוזר? ________________________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: INVESTIGATION - Trace the Code
+# ## חלק 2: חקירה - עקבי אחרי הקוד
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Now trace through each mystery to find the exact cause.
+# עכשיו עקבי אחרי כל תעלומה כדי למצוא את הסיבה המדויקת.
 #
-# ✏️ TRACE THE CODE ✏️
+# ## עקבי אחרי הקוד
 #
-# mystery_code_1 uses: if energy > 75
+# mystery_code_1 משתמשת ב: `if energy > 75`
 #
 # energy = 75
-# Condition: 75 > 75 = _______ (True/False?)
+# תנאי: 75 > 75 = _______ (True או False?)
 #
-# The problem: > means "greater than" but 75 is NOT greater than 75.
+# הבעיה: `>` אומר "גדול מ-" אבל 75 אינו גדול מ-75.
 #
-# What operator should be used instead? _______ (hint: >=)
+# > רמז: באיזה אופרטור להשתמש במקום? _______ (רמז: `>=`)
 #
-# The bug: Using > when we need ___
+# הבאג: שימוש ב-`>` כשצריך ___
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ TRACE THE CODE ✏️
+# ## עקבי אחרי הקוד
 #
-# mystery_code_2 uses: if score > required
+# mystery_code_2 משתמשת ב: `if score > required`
 #
 # score = 60
 # required = 60
-# Condition: 60 > 60 = _______ (True/False?)
+# תנאי: 60 > 60 = _______ (True או False?)
 #
-# The problem: A score equal to required should count as passing.
+# הבעיה: ציון השווה ל-required אמור להיחשב כעובר.
 #
-# What operator should be used instead? _______ (hint: >=)
+# > רמז: באיזה אופרטור להשתמש במקום? _______ (רמז: `>=`)
 #
-# The bug: Using > when we need ___
+# הבאג: שימוש ב-`>` כשצריך ___
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ TRACE THE CODE ✏️
+# ## עקבי אחרי הקוד
 #
-# mystery_code_3 compares these strings:
+# mystery_code_3 משווה בין המחרוזות האלה:
 # secret = "{{password}}"
 # entered = "{{password}} "
 #
-# Are they equal? _______ (True/False?)
+# האם הן שוות? _______ (True או False?)
 #
-# Count the characters in each:
-# secret has ___ characters
-# entered has ___ characters (count carefully!)
+# ספרי את התווים בכל אחת:
+# ל-secret יש ___ תווים
+# ל-entered יש ___ תווים (ספרי בזהירות!)
 #
-# The bug: ________________________________
+# הבאג: ________________________________
 #
-# Lesson: Strings must match EXACTLY, including spaces!
+# לקח: מחרוזות חייבות להתאים בדיוק, כולל רווחים!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: IMPROVEMENT - Fix the Issues
+# ## חלק 3: שיפור - תקני את הבעיות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Now fix each bug you found!
+# עכשיו תקני כל באג שמצאת!
 #
-# ✏️ FIX THE BUG ✏️
+# ## תקני את הבאג
 #
-# Fix the energy check so 75 energy is considered "ready to train".
+# תקני את בדיקת האנרגיה כך ש-75 אנרגיה ייחשב כ-"מוכנה לאימון".
 #
-# What I found: Using > instead of >= makes 75 not pass the check
+# מה שמצאתי: שימוש ב-`>` במקום `>=` גורם ל-75 לא לעבור את הבדיקה
 #
-# Your fix:
+# התיקון שלי:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -155,13 +155,13 @@ energy = 75
 pass
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# ## תקני את הבאג
 #
-# Fix the exam check so a score equal to required counts as passing.
+# תקני את בדיקת המבחן כך שציון השווה ל-required ייחשב כעובר.
 #
-# What I found: Using > instead of >= means equal scores fail
+# מה שמצאתי: שימוש ב-`>` במקום `>=` גורם לציונים שווים להיכשל
 #
-# Your fix:
+# התיקון שלי:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -172,13 +172,13 @@ required = 60
 pass
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# ## תקני את הבאג
 #
-# Fix the password so it matches exactly (remove the extra space).
+# תקני את הסיסמה כך שתתאים בדיוק (הסירי את הרווח המיותר).
 #
-# What I found: The entered password had an extra space at the end
+# מה שמצאתי: הסיסמה שהוזנה הכילה רווח נוסף בסוף
 #
-# Your fix:
+# התיקון שלי:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

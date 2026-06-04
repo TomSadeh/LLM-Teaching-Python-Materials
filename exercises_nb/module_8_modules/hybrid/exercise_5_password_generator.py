@@ -1,11 +1,11 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# This is a multi-part exercise where {{hero}} builds secure password
-# and code generators using the string and random modules together.
+# זוהי תרגילה רב-שלבית שבה {{hero}} בונה מחוללי סיסמאות וקודים מאובטחים
+# תוך שימוש במודולים `string` ו-`random` יחד.
 #
-# Programming concepts: string module, random module, function design
-# Difficulty: 2-3
+# מושגי תכנות: מודול `string`, מודול `random`, עיצוב פונקציות
+# רמת קושי: 2-3
 
 # %%
 import string
@@ -14,30 +14,26 @@ import string
 import random
 
 # %% [markdown]
-# PART 1: Growth - Basic Code Generation
+# ## חלק 1: צמיחה - מחולל קודים בסיסי
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Learn to use string constants for character pools.
+# למדי להשתמש בקבועי `string` כמאגרי תווים.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. קבלי את ספרות המחרוזת: `string.digits = "0123456789"`
 #
-# Step 1: Get digit characters: string.digits = "0123456789"
-#
-# Step 2: Build the code using a loop:
+# 2. בני את הקוד בעזרת לולאה:
 #         code = ""
 #         for i in range(length):
 #             code = code + random.choice(string.digits)
 #
-# Step 3: Return the code
+# 3. החזירי את הקוד
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Select the right character set based on case:
+# 1. בחרי את קבוצת התווים המתאימה לפי `case`:
 #         if case == "upper":
 #             chars = string.ascii_uppercase
 #         elif case == "lower":
@@ -45,129 +41,117 @@ import random
 #         else:
 #             chars = string.ascii_letters
 #
-# Step 2: Build and return the code
+# 2. בני והחזירי את הקוד
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Combine character sets:
+# 1. שלבי קבוצות תווים:
 #         chars = string.ascii_letters + string.digits
 #
-# Step 2: Build and return the code
+# 2. בני והחזירי את הקוד
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Combining Modules for Passwords
+# ## חלק 2: צמיחה - שילוב מודולים ליצירת סיסמאות
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Create more sophisticated password generators.
+# צרי מחוללי סיסמאות מתוחכמים יותר.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Build character pool:
+# 1. בני מאגר תווים:
 #         chars = string.ascii_letters + string.digits
 #         if include_special:
 #             chars = chars + string.punctuation
 #
-# Step 2: Generate password using loop or sample
+# 2. צרי סיסמה בעזרת לולאה או `sample`
 #
-# Step 3: Return the password
+# 3. החזירי את הסיסמה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create a word list:
+# 1. צרי רשימת מילים:
 #         words = ["flame", "river", "stone", "cloud", "star",
 #                  "moon", "sun", "wind", "wave", "tree"]
 #
-# Step 2: Use random.sample() to pick words
+# 2. השתמשי ב-`random.sample()` לבחירת מילים
 #
-# Step 3: Join words with random digits between them:
+# 3. חברי את המילים עם ספרות אקראיות ביניהן:
 #         result = ""
 #         for i, word in enumerate(selected_words):
 #             result = result + word
 #             if i < len(selected_words) - 1:
 #                 result = result + random.choice(string.digits)
 #
-# Step 4: Return the result
+# 4. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# 1. צרי רשימת מילים גדולה יותר
 #
-# Step 1: Create a larger word list
+# 2. השתמשי ב-`random.sample()` לבחירת מילים
 #
-# Step 2: Use random.sample() to pick words
+# 3. חברי עם מפריד: `separator.join(selected_words)`
 #
-# Step 3: Join with separator: separator.join(selected_words)
-#
-# Step 4: Return the result
+# 4. החזירי את התוצאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Improvement - Validation and Security
+# ## חלק 3: שיפור - אימות ואבטחה
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Add validation to ensure passwords meet requirements.
+# הוסיפי אימות כדי לוודא שהסיסמאות עומדות בדרישות.
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. בדקי אורך >= 8
 #
-# Step 1: Check length >= 8
-#
-# Step 2: Check for uppercase (any char in string.ascii_uppercase)
+# 2. בדקי אם יש אות גדולה (כל תו ב-`string.ascii_uppercase`):
 #         has_upper = False
 #         for char in password:
 #             if char in string.ascii_uppercase:
 #                 has_upper = True
 #                 break
 #
-# Step 3: Similarly check for lowercase and digit
+# 3. בדקי בצורה דומה אם יש אות קטנה וספרה
 #
-# Step 4: Return appropriate tuple:
+# 4. החזירי tuple מתאים:
 #         (True, "Password meets all requirements")
 #         (False, "Password must be at least 8 characters")
-#         etc.
+#         וכן הלאה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Ensure minimum length
+# 1. וודאי אורך מינימלי:
 #         if length < 8:
 #             length = 8
 #
-# Step 2: Start with required characters:
+# 2. התחילי עם תווים חובה:
 #         password = [
 #             random.choice(string.ascii_uppercase),
 #             random.choice(string.ascii_lowercase),
 #             random.choice(string.digits),
 #         ]
 #
-# Step 3: Fill remaining with random chars:
+# 3. מלאי את השאר בתווים אקראיים:
 #         all_chars = string.ascii_letters + string.digits
 #         for i in range(length - 3):
 #             password.append(random.choice(all_chars))
 #
-# Step 4: Shuffle so required chars aren't always first:
+# 4. ערבבי כדי שתווי החובה לא יהיו תמיד ראשונים:
 #         random.shuffle(password)
 #
-# Step 5: Convert list to string and return:
+# 5. המירי רשימה למחרוזת והחזירי:
 #         return "".join(password)
 
 # %%

@@ -10,18 +10,18 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגיל רב-חלקי. השלימי כל חלק לפי הסדר.
 
 # %%
 import turtle
 
 # %% [markdown]
-# PART 1: DISCOVERY - Observe the Unexpected
+# ## חלק 1: גילוי - שימי לב למשהו לא צפוי
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{hero}} found some drawing code at {{school}}.
-# The code is supposed to draw a square, but something is wrong!
-# Study the output and notice the problem.
+# {{hero}} מצאה קצת קוד ציור ב-{{school}}.
+# הקוד אמור לצייר ריבוע, אבל משהו לא בסדר!
+# עיייני בפלט ושימי לב לבעיה.
 
 # %%
 # This should draw a square... but does it?
@@ -49,117 +49,117 @@ for i in range(1, 6):
     t.right(90)
 
 # %% [markdown]
-# ✏️ YOUR OBSERVATIONS HERE ✏️
+# ## התצפיות שלי
 #
 # mystery_code_1:
-#   Expected: A closed square
-#   Actual: ________________________________
-#   What seems wrong? ________________________________
+#   ציפינו: ריבוע סגור
+#   בפועל: ________________________________
+#   מה נראה שגוי? ________________________________
 #
 # mystery_code_2:
-#   Expected: Prints 1, 2, 3, 4, 5
-#   Actual: ________________________________
-#   What seems wrong? ________________________________
+#   ציפינו: מדפיס 1, 2, 3, 4, 5
+#   בפועל: ________________________________
+#   מה נראה שגוי? ________________________________
 #
 # mystery_code_3:
-#   Expected: Lines get longer (20, 40, 60, 80, 100)
-#   Actual: ________________________________
-#   What seems wrong? ________________________________
+#   ציפינו: קווים מתארכים (20, 40, 60, 80, 100)
+#   בפועל: ________________________________
+#   מה נראה שגוי? ________________________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: INVESTIGATION - Trace the Code
+# ## חלק 2: חקירה - עקבי אחרי הקוד
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Now trace through each mystery to understand exactly why
-# it behaves unexpectedly.
+# עכשיו עקבי אחרי כל תעלומה כדי להבין בדיוק למה
+# הקוד מתנהג בצורה לא צפויה.
 #
-# ✏️ TRACE THE CODE ✏️
+# ## עקבי אחרי הקוד
 #
-# mystery_code_1 uses right(80) instead of right(90).
+# mystery_code_1 משתמש ב-`right(80)` במקום `right(90)`.
 #
-# | Iteration | Angle turned so far |
-# |-----------|---------------------|
-# | 1         | 80                  |
-# | 2         |                     |
-# | 3         |                     |
-# | 4         |                     |
+# | איטרציה | סך הזווית שנפנתה |
+# |---------|-----------------|
+# | 1       | 80               |
+# | 2       |                  |
+# | 3       |                  |
+# | 4       |                  |
 #
-# Total angle: ___ degrees
-# For a closed shape: should be ___ degrees
+# סך הזווית: ___ מעלות
+# לצורה סגורה: צריך להיות ___ מעלות
 #
-# The bug: ________________________________
+# הבאג: ________________________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ TRACE THE CODE ✏️
+# ## עקבי אחרי הקוד
 #
-# range(5) produces: ___, ___, ___, ___, ___
-# But we wanted: 1, 2, 3, 4, 5
+# `range(5)` מייצר: ___, ___, ___, ___, ___
+# אבל רצינו: 1, 2, 3, 4, 5
 #
-# To get 1-5, we should use: range(___, ___)
+# כדי לקבל 1 עד 5, צריך להשתמש ב: `range(___, ___)`
 #
-# The bug: ________________________________
+# הבאג: ________________________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ TRACE THE CODE ✏️
+# ## עקבי אחרי הקוד
 #
-# | Iteration | i | length (should be) | length (actual) |
-# |-----------|---|-------------------|-----------------|
-# | 1         | 1 | 20                | 20              |
-# | 2         | 2 | 40                | 20              |
-# | 3         | 3 | 60                | 20              |
-# | 4         | 4 | 80                | 20              |
-# | 5         | 5 | 100               | 20              |
+# | איטרציה | i | אורך (כפי שצריך) | אורך (בפועל) |
+# |---------|---|-----------------|-------------|
+# | 1       | 1 | 20               | 20          |
+# | 2       | 2 | 40               | 20          |
+# | 3       | 3 | 60               | 20          |
+# | 4       | 4 | 80               | 20          |
+# | 5       | 5 | 100              | 20          |
 #
-# The code sets length = 20 directly, ignoring i.
-# It should be: length = i * ___
+# הקוד מגדיר `length = 20` ישירות, ומתעלם מ-`i`.
+# צריך להיות: `length = i * ___`
 #
-# The bug: ________________________________
+# הבאג: ________________________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: IMPROVEMENT - Fix the Issues
+# ## חלק 3: שיפור - תקני את הבעיות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Now that you understand the bugs, fix them!
+# עכשיו שהבנת את הבאגים, תקני אותם!
 #
-# ✏️ FIX THE BUG ✏️
+# ## תקני את הבאג
 #
-# Fix the angle so the square closes properly.
+# תקני את הזווית כך שהריבוע ייסגר כראוי.
 #
-# Your fix:
+# התיקון שלי:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# ## תקני את הבאג
 #
-# Fix the range so it counts 1 to 5.
+# תקני את ה-`range` כך שיספור מ-1 עד 5.
 #
-# Your fix:
+# התיקון שלי:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# ## תקני את הבאג
 #
-# Fix the length calculation so lines grow.
+# תקני את חישוב האורך כך שהקווים יתארכו.
 #
-# Your fix:
+# התיקון שלי:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

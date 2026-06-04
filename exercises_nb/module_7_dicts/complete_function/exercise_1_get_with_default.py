@@ -2,63 +2,55 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to use .get() for safe dictionary access.
-# The .get() method returns a default value when a key doesn't exist,
-# instead of raising a KeyError.
+# בתרגיל הזה תלמדי להשתמש ב-`.get()` לגישה בטוחה למילון.
+# המתודה `.get()` מחזירה ערך ברירת מחדל כשמפתח לא קיים,
+# במקום לזרוק `KeyError`.
 #
-# {{FUNCTION_1_TITLE}}
+# ## {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}
-#
-# ✏️ COMPLETE THIS FUNCTION ✏️
 #
 # {{CONTEXT_FUNCTION_HINT_1}}
 #
-# Use stats.get(stat_name, default_value)
-# The second argument is returned if the key doesn't exist.
+# > רמז: השתמשי ב-`stats.get(stat_name, default_value)` —
+# > הארגומנט השני מוחזר כאשר המפתח לא קיים.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{FUNCTION_2_TITLE}}
+# ## {{FUNCTION_2_TITLE}}
 # {{CONTEXT_FUNCTION_2_NARRATIVE}}
-#
-# ✏️ COMPLETE THIS FUNCTION ✏️
 #
 # {{CONTEXT_FUNCTION_HINT_2}}
 #
-# Use .get() to safely access the inventory.
+# > רמז: השתמשי ב-`.get()` לגישה בטוחה למלאי.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{FUNCTION_3_TITLE}}
+# ## {{FUNCTION_3_TITLE}}
 # {{CONTEXT_FUNCTION_3_NARRATIVE}}
-#
-# ✏️ COMPLETE THIS FUNCTION ✏️
 #
 # {{CONTEXT_FUNCTION_HINT_3}}
 #
-# Return the description or "Unknown ability" as default.
+# > רמז: החזירי את התיאור, או `"Unknown ability"` כברירת מחדל.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{FUNCTION_4_TITLE}}
+# ## {{FUNCTION_4_TITLE}}
 # {{CONTEXT_FUNCTION_4_NARRATIVE}}
-#
-# ✏️ COMPLETE THIS FUNCTION ✏️
 #
 # {{CONTEXT_FUNCTION_HINT_4}}
 #
-# Step 1: Get current quantity (default 0 if not in inventory)
-# Step 2: Add the new quantity
-# Step 3: Store back in inventory
-# Step 4: Return the new total
+# 1. קבלי את הכמות הנוכחית (ברירת מחדל 0 אם הפריט לא במלאי)
+# 2. הוסיפי את הכמות החדשה
+# 3. שמרי בחזרה במלאי
+# 4. החזירי את הסכום החדש
 #
-# Pattern: inventory[item] = inventory.get(item, 0) + quantity
+# > רמז: `inventory[item] = inventory.get(item, 0) + quantity`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

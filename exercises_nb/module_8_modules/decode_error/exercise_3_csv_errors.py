@@ -2,11 +2,10 @@
 # {{CONTEXT_DECODE_ERROR_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to understand and handle common CSV-related
-# errors and data issues.
+# בתרגיל הזה תלמדי להבין ולטפל בשגיאות נפוצות שקשורות לקבצי CSV.
 #
-# Topic: CSV error interpretation
-# Difficulty: 3
+# נושא: פענוח שגיאות CSV
+# רמת קושי: 3
 
 # %%
 import csv
@@ -15,9 +14,9 @@ import csv
 # {{ERROR_1_TITLE}}
 # {{CONTEXT_ERROR_1_NARRATIVE}}
 #
-# Trying to read a CSV file that doesn't exist.
+# מנסים לפתוח קובץ CSV שלא קיים.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "read_data.py", line 2, in <module>
@@ -31,14 +30,12 @@ with open("nonexistent_data.csv", "r") as f:
         print(row)
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# First, explain what caused the error:
-# The error occurred because: _______________
+# קודם כל, הסבירי מה גרם לשגיאה:
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_1}}
 #
-# Fix: Handle FileNotFoundError
+# תיקון: טיפול ב-`FileNotFoundError`
 #   try:
 #       with open("data.csv", "r") as f:
 #           reader = csv.reader(f)
@@ -55,9 +52,9 @@ with open("nonexistent_data.csv", "r") as f:
 # {{ERROR_2_TITLE}}
 # {{CONTEXT_ERROR_2_NARRATIVE}}
 #
-# Index error from assuming wrong number of columns.
+# שגיאת אינדקס כשמניחים שיש מספר עמודות שונה ממה שיש בפועל.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "parse_row.py", line 6, in <module>
@@ -80,15 +77,13 @@ with open("incomplete.csv", "r") as f:
         score = int(row[2])  # IndexError on incomplete row!
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_2}}
 #
-# A row had fewer columns than expected (missing data).
+# לשורה אחת היו פחות עמודות ממה שציפינו (נתונים חסרים).
 #
-# Fix: Check row length before accessing
+# תיקון: בדקי את אורך השורה לפני הגישה לאינדקס
 #   for row in reader:
 #       if len(row) >= 3:
 #           name = row[0]
@@ -104,9 +99,9 @@ with open("incomplete.csv", "r") as f:
 # {{ERROR_3_TITLE}}
 # {{CONTEXT_ERROR_3_NARRATIVE}}
 #
-# ValueError when converting CSV string to number.
+# שגיאת `ValueError` בהמרת מחרוזת מ-CSV למספר.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "parse_score.py", line 7, in <module>
@@ -127,15 +122,13 @@ with open("mixed_data.csv", "r") as f:
         score = int(row[2])  # ValueError on "N/A"!
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_3}}
 #
-# The CSV had "N/A" where a number was expected.
+# בקובץ ה-CSV היה הערך `N/A` במקום שציפינו למספר.
 #
-# Fix: Handle conversion errors
+# תיקון: טיפול בשגיאות המרה
 #   for row in reader:
 #       try:
 #           score = int(row[2])
@@ -150,9 +143,9 @@ with open("mixed_data.csv", "r") as f:
 # {{ERROR_4_TITLE}}
 # {{CONTEXT_ERROR_4_NARRATIVE}}
 #
-# KeyError when using DictReader with missing columns.
+# שגיאת `KeyError` כשמשתמשים ב-`DictReader` עם עמודה שלא קיימת.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "dict_reader.py", line 5, in <module>
@@ -170,23 +163,21 @@ with open("different_headers.csv", "r") as f:
         print(row["Score"])  # KeyError: column is "Points"!
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The error occurred because: _______________
+# השגיאה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_4}}
 #
-# The column header in the file doesn't match the expected key.
+# שם העמודה בקובץ לא תואם למפתח שציפינו אליו.
 #
-# Fix option 1: Use the correct column name
+# אפשרות תיקון 1: השתמשי בשם העמודה הנכון
 #   print(row["Points"])
 #
-# Fix option 2: Check available columns first
+# אפשרות תיקון 2: בדקי את העמודות הזמינות קודם
 #   with open("data.csv", "r") as f:
 #       reader = csv.DictReader(f)
 #       print(f"Available columns: {reader.fieldnames}")
 #
-# Fix option 3: Use .get() with default
+# אפשרות תיקון 3: השתמשי ב-`.get()` עם ברירת מחדל
 #   score = row.get("Score", row.get("Points", 0))
 
 # %%
@@ -196,11 +187,11 @@ with open("different_headers.csv", "r") as f:
 # {{ERROR_5_TITLE}}
 # {{CONTEXT_ERROR_5_NARRATIVE}}
 #
-# Extra blank lines in CSV causing empty rows.
+# שורות ריקות עודפות בקובץ CSV שגורמות לשגיאות.
 #
-# UNEXPECTED BEHAVIOR:
+# התנהגות לא צפויה:
 # -------------------
-# Reading CSV returns rows like:
+# קריאת ה-CSV מחזירה שורות כאלה:
 # ['{{hero}}', '5', '100']
 # []
 # ['{{heroine}}', '7', '150']
@@ -215,19 +206,17 @@ with open("data.csv", "r") as f:  # Missing newline=""
         name = row[0]  # Crashes on empty row!
 
 # %% [markdown]
-# ✏️ FIX THE CODE ✏️
-#
-# The problem occurred because: _______________
+# הבעיה קרתה כי: _______________
 #
 # {{CONTEXT_ERROR_HINT_5}}
 #
-# On Windows, opening CSV without newline="" can cause issues.
-# Or the file genuinely has blank lines.
+# בווינדוס, פתיחת קובץ CSV בלי `newline=""` עלולה לגרום לבעיות.
+# או שבקובץ עצמו יש שורות ריקות.
 #
-# Fix 1: Use newline="" when opening
+# תיקון 1: השתמשי ב-`newline=""` בפתיחת הקובץ
 #   with open("data.csv", "r", newline="") as f:
 #
-# Fix 2: Skip empty rows
+# תיקון 2: דלגי על שורות ריקות
 #   for row in reader:
 #       if row:  # Skip empty rows
 #           name = row[0]

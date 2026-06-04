@@ -9,12 +9,12 @@
 # {{CONTEXT_CODE_ORDERING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Challenge A: Basic Function Order
+# ## אתגר א': סדר בסיסי של פונקציה
 # {{CONTEXT_ORDERING_1_NARRATIVE}}
 #
-# Arrange these lines to create and call a function.
+# סדרי את השורות כדי ליצור ולקרוא לפונקציה.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   greet_visitor()
 #   print("Welcome to {{school}}!")
 #   def greet_visitor():
@@ -30,12 +30,12 @@
 pass  # Delete this and add the correctly ordered lines
 
 # %% [markdown]
-# Challenge B: Function with Parameter
+# ## אתגר ב': פונקציה עם פרמטר
 # {{CONTEXT_ORDERING_2_NARRATIVE}}
 #
-# Arrange these lines to create a function with a parameter.
+# סדרי את השורות כדי ליצור פונקציה עם פרמטר.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   print(f"Hello, {name}!")
 #   greet("{{hero}}")
 #   def greet(name):
@@ -51,12 +51,12 @@ pass  # Delete this and add the correctly ordered lines
 pass
 
 # %% [markdown]
-# Challenge C: Multiple Functions
+# ## אתגר ג': מספר פונקציות
 # {{CONTEXT_ORDERING_3_NARRATIVE}}
 #
-# Arrange these lines to define two functions and call them.
+# סדרי את השורות כדי להגדיר שתי פונקציות ולקרוא להן.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   show_header()
 #   def show_header():
 #   def show_footer():
@@ -73,12 +73,12 @@ pass
 pass
 
 # %% [markdown]
-# Challenge D: Function with Setup
+# ## אתגר ד': פונקציה עם הגדרת משתנה
 # {{CONTEXT_ORDERING_4_NARRATIVE}}
 #
-# Arrange these lines for a function that uses a variable.
+# סדרי את השורות לפונקציה שמשתמשת במשתנה.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   print(f"Status: {status}")
 #   display_status()
 #   status = "Active"
@@ -94,12 +94,12 @@ pass
 pass
 
 # %% [markdown]
-# Challenge E: Function Call with Arguments
+# ## אתגר ה': קריאה לפונקציה עם ארגומנטים
 # {{CONTEXT_ORDERING_5_NARRATIVE}}
 #
-# Arrange these lines to create and call a function with two parameters.
+# סדרי את השורות כדי ליצור ולקרוא לפונקציה עם שני פרמטרים.
 #
-# SCRAMBLED LINES:
+# השורות המפוזרות:
 #   introduce("{{hero}}", "{{school}}")
 #   def introduce(person, place):
 #   print(f"{person} attends {place}.")

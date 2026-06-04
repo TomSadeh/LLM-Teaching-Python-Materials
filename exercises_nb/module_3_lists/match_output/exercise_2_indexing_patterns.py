@@ -12,7 +12,7 @@
 # {{MATCH_SET_1_TITLE}}
 # {{CONTEXT_MATCH_SET_1_NARRATIVE}}
 #
-# ## CODE SNIPPETS
+# ## קטעי קוד
 
 # %%
 abilities = ["{{spell1}}", "{{spell2}}", "{{spell3}}"]
@@ -27,21 +27,21 @@ abilities = ["{{spell1}}", "{{spell2}}", "{{spell3}}"]
 print(abilities[2])
 
 # %% [markdown]
-# ## POSSIBLE OUTPUTS
+# ## פלטים אפשריים
 #
-# OUTPUT A:
+# פלט A:
 # ---------
 # {{spell2}}
 #
-# OUTPUT B:
+# פלט B:
 # ---------
 # {{spell1}}
 #
-# OUTPUT C:
+# פלט C:
 # ---------
 # {{spell3}}
 #
-# ## YOUR ANSWERS
+# ## התשובות שלך
 
 # %%
 # YOUR MATCHES HERE
@@ -63,7 +63,7 @@ return matches
 # {{MATCH_SET_2_TITLE}}
 # {{CONTEXT_MATCH_SET_2_NARRATIVE}}
 #
-# ## CODE SNIPPETS
+# ## קטעי קוד
 
 # %%
 team = ["{{hero}}", "{{heroine}}", "{{friend}}", "{{mentor}}"]
@@ -78,21 +78,21 @@ team = ["{{hero}}", "{{heroine}}", "{{friend}}", "{{mentor}}"]
 print(f"Last index: {len(team) - 1}")
 
 # %% [markdown]
-# ## POSSIBLE OUTPUTS
+# ## פלטים אפשריים
 #
-# OUTPUT D:
+# פלט D:
 # ---------
 # Leader: {{hero}}
 #
-# OUTPUT E:
+# פלט E:
 # ---------
 # Last index: 3
 #
-# OUTPUT F:
+# פלט F:
 # ---------
 # Count: 4
 #
-# ## YOUR ANSWERS
+# ## התשובות שלך
 
 # %%
 # YOUR MATCHES HERE
@@ -114,7 +114,7 @@ return matches
 # {{MATCH_SET_3_TITLE}}
 # {{CONTEXT_MATCH_SET_3_NARRATIVE}}
 #
-# ## CODE SNIPPETS
+# ## קטעי קוד
 
 # %%
 items = ["{{item}}", "potion"]
@@ -132,21 +132,21 @@ items[1] = first
 print(items)
 
 # %% [markdown]
-# ## POSSIBLE OUTPUTS
+# ## פלטים אפשריים
 #
-# OUTPUT G:
+# פלט G:
 # ---------
 # {{item}} potion
 #
-# OUTPUT H:
+# פלט H:
 # ---------
 # potion {{item}}
 #
-# OUTPUT I:
+# פלט I:
 # ---------
 # ['potion', '{{item}}']
 #
-# ## YOUR ANSWERS
+# ## התשובות שלך
 
 # %%
 # YOUR MATCHES HERE

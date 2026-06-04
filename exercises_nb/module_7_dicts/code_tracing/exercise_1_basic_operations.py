@@ -2,8 +2,8 @@
 # {{CONTEXT_CODE_TRACING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Trace through dictionary operations to understand how
-# dictionaries store and retrieve data.
+# עקבי אחרי פעולות על מילון כדי להבין כיצד
+# מילון שומר ומאחזר נתונים.
 #
 # ## {{TRACE_1_TITLE}}
 # {{CONTEXT_TRACE_1_NARRATIVE}}
@@ -17,23 +17,21 @@ print(profile["name"])
 print(profile["level"])
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_1}}
 #
-# Track the dictionary contents at each step.
-# Use {} to show an empty dictionary.
+# עקבי אחרי תוכן המילון בכל שלב.
+# השתמשי ב-`{}` כדי לסמן מילון ריק.
 #
-# | Step | profile (dict contents)        | Output (if any) |
-# |------|--------------------------------|-----------------|
-# | 0    | {}                             |                 |
-# | 1    | {"name": "{{hero}}"}           |                 |
-# | 2    |                                |                 |
-# | 3    |                                |                 |
-# | 4    |                                |                 |
-# | 5    |                                |                 |
+# | שלב | תוכן profile (המילון)          | פלט (אם יש) |
+# |-----|-------------------------------|-------------|
+# | 0   | {}                            |             |
+# | 1   | {"name": "{{hero}}"}          |             |
+# | 2   |                               |             |
+# | 3   |                               |             |
+# | 4   |                               |             |
+# | 5   |                               |             |
 #
-# Write your completed table as comments below:
+# כתבי את הטבלה המלאה שלך כהערות למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -50,21 +48,19 @@ total = inventory["{{item}}"] + inventory["{{spell1}}"]
 print(f"Total: {total}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_2}}
 #
-# Track both the dictionary and the total variable.
+# עקבי גם אחרי המילון וגם אחרי המשתנה `total`.
 #
-# | Step | inventory (dict contents)                | total | Output |
-# |------|------------------------------------------|-------|--------|
-# | 0    | {"{{item}}": 3, "{{spell1}}": 1}         | -     |        |
-# | 1    |                                          | -     |        |
-# | 2    |                                          | -     |        |
-# | 3    |                                          |       |        |
-# | 4    |                                          |       |        |
+# | שלב | תוכן inventory (המילון)                  | total | פלט |
+# |-----|------------------------------------------|-------|-----|
+# | 0   | {"{{item}}": 3, "{{spell1}}": 1}         | -     |     |
+# | 1   |                                          | -     |     |
+# | 2   |                                          | -     |     |
+# | 3   |                                          |       |     |
+# | 4   |                                          |       |     |
 #
-# Write your completed table as comments below:
+# כתבי את הטבלה המלאה שלך כהערות למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -85,22 +81,20 @@ print(f"Winner: {winner}")
 print(f"New score: {scores[winner]}")
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
-#
 # {{CONTEXT_TRACE_HINT_3}}
 #
-# Track scores dict, winner variable, and condition results.
+# עקבי אחרי המילון `scores`, המשתנה `winner`, ותוצאות התנאי.
 #
-# | Step | scores                              | winner | condition | Output |
-# |------|-------------------------------------|--------|-----------|--------|
-# | 0    | {"{{hero}}": 10, "{{heroine}}": 20} | ""     | -         |        |
-# | 1    |                                     |        | T/F?      |        |
-# | 2    |                                     |        |           |        |
-# | 3    |                                     |        |           |        |
-# | 4    |                                     |        |           |        |
-# | 5    |                                     |        |           |        |
+# | שלב | scores                              | winner | תנאי  | פלט |
+# |-----|-------------------------------------|--------|-------|-----|
+# | 0   | {"{{hero}}": 10, "{{heroine}}": 20} | ""     | -     |     |
+# | 1   |                                     |        | T/F?  |     |
+# | 2   |                                     |        |       |     |
+# | 3   |                                     |        |       |     |
+# | 4   |                                     |        |       |     |
+# | 5   |                                     |        |       |     |
 #
-# Write your completed table as comments below:
+# כתבי את הטבלה המלאה שלך כהערות למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

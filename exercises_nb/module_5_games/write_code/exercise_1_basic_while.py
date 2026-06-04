@@ -2,97 +2,87 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Basic while loops with counter variables
-# Difficulty: 1-2
+# נושא: לולאות `while` בסיסיות עם משתני מונה
+# רמת קושי: 1-2
 #
-# In this exercise, you'll learn the fundamental pattern of while loops:
-# setting up a counter, checking a condition, and updating the counter.
+# בתרגיל הזה תלמדי את התבנית הבסיסית של לולאות `while`:
+# הגדרת מונה, בדיקת תנאי ועדכון המונה.
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# A while loop repeats as long as its condition is True.
-# The pattern: initialize -> check condition -> do work -> update
+# לולאת `while` חוזרת כל עוד התנאי שלה הוא `True`.
+# התבנית: אתחול ← בדיקת תנאי ← עבודה ← עדכון
 #
-# ✏️ YOUR CODE HERE ✏️
+# 1. צרי משתנה בשם `count` שמתחיל ב-5
+# 2. כל עוד `count` גדול מ-0:
+#    - הדפיסי את ערך `count` הנוכחי
+#    - הקטיני את `count` ב-1
+# 3. אחרי הלולאה, הדפיסי את `"{{exclamation}}"`
 #
-# Step 1: Create a variable called 'count' starting at 5
-# Step 2: While count is greater than 0:
-#         - Print the current count
-#         - Decrease count by 1
-# Step 3: After the loop, print "{{exclamation}}"
-#
-# Hint: Don't forget to decrease count, or the loop never ends!
+# > רמז: אל תשכחי להקטין את `count`, אחרת הלולאה לעולם לא תסתיים!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# While loops are perfect for counting up to a target.
+# לולאות `while` מעולות לספירה עד ערך יעד.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create a variable called 'current' starting at 1
-# Step 2: While current is less than or equal to target:
-#         - Print current
-#         - Increase current by 1
+# 1. צרי משתנה בשם `current` שמתחיל ב-1
+# 2. כל עוד `current` קטן מ- או שווה ל-`target`:
+#    - הדפיסי את `current`
+#    - הגדילי את `current` ב-1
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# While loops can track totals as they iterate.
+# לולאות `while` יכולות לעקוב אחרי סכומים כשהן רצות.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Initialize total = 0, next_number = 1, count = 0
-# Step 2: While total + next_number <= limit:
-#         - Add next_number to total
-#         - Increase count by 1
-#         - Increase next_number by 1
-# Step 3: Return (total, count)
+# 1. אתחלי: `total = 0`, `next_number = 1`, `count = 0`
+# 2. כל עוד `total + next_number <= limit`:
+#    - הוסיפי את `next_number` ל-`total`
+#    - הגדילי את `count` ב-1
+#    - הגדילי את `next_number` ב-1
+# 3. החזירי `(total, count)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_4_TITLE}}
+# ## {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# While loops with multiple conditions using 'and' or 'or'.
+# לולאות `while` עם מספר תנאים בעזרת `and` או `or`.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Initialize items_left = items_to_process, iterations = 0
-# Step 2: While items_left > 0 AND iterations < max_iterations:
-#         - Decrease items_left by 1
-#         - Increase iterations by 1
-#         - Print f"Processed item. {items_left} remaining."
-# Step 3: Return (iterations, iterations)  # items processed = iterations
+# 1. אתחלי: `items_left = items_to_process`, `iterations = 0`
+# 2. כל עוד `items_left > 0` וגם `iterations < max_iterations`:
+#    - הקטיני את `items_left` ב-1
+#    - הגדילי את `iterations` ב-1
+#    - הדפיסי `f"Processed item. {items_left} remaining."`
+# 3. החזירי `(iterations, iterations)`  # פריטים שעובדו = iterations
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_5_TITLE}}
+# ## {{PHASE_5_TITLE}}
 # {{CONTEXT_PHASE_5}}
 #
-# Accumulating results in a list while looping.
+# איסוף תוצאות ברשימה תוך כדי ריצת הלולאה.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Step 1: Create an empty list called 'sequence'
-# Step 2: Set current = start
-# Step 3: While len(sequence) < length:
-#         - Append current to sequence
-#         - Multiply current by multiplier
-# Step 4: Return sequence
+# 1. צרי רשימה ריקה בשם `sequence`
+# 2. קבעי `current = start`
+# 3. כל עוד `len(sequence) < length`:
+#    - הוסיפי את `current` לרשימה `sequence`
+#    - הכפילי את `current` ב-`multiplier`
+# 4. החזירי את `sequence`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

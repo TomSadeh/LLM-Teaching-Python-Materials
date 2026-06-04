@@ -12,16 +12,16 @@
 # ## {{EXERCISE_1_TITLE}}
 # {{CONTEXT_EXERCISE_1_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# חשבי את סכום המספרים 1 עד 5 עבור {{hero}}.
 #
-# Calculate the sum of numbers 1 through 5 for {{hero}}.
+# > רמז: אתחלי את המצבר לערך 0 לפני הלולאה.
 #
-# Hint: Initialize the accumulator to 0 before the loop.
-#
-# total = ___                         # Start with zero
+# ```python
+# total = ___                         # התחילי מאפס
 # for num in range(1, 6):
-#     total = total ___ num           # Add each number
-# print("Sum:", total)                # Should print 15
+#     total = total ___ num           # הוסיפי כל מספר
+# print("Sum:", total)                # צריך להדפיס 15
+# ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -30,17 +30,17 @@
 # ## {{EXERCISE_2_TITLE}}
 # {{CONTEXT_EXERCISE_2_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# ספרי אחורה ועקבי אחר המרחק הכולל ב-{{school}}.
 #
-# Count down and track total distance at {{school}}.
+# > רמז: כל צעד מתווסף אל `total_distance`.
 #
-# Hint: Each step adds to total_distance.
-#
+# ```python
 # total_distance = 0
 # for step in range(1, 5):
 #     distance = step * 10
-#     total_distance = ___ + distance  # Add to accumulator
-# print("Total distance:", ___)        # Print the result
+#     total_distance = ___ + distance  # הוסיפי למצבר
+# print("Total distance:", ___)        # הדפיסי את התוצאה
+# ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -49,16 +49,16 @@
 # ## {{EXERCISE_3_TITLE}}
 # {{CONTEXT_EXERCISE_3_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# בני משפט על ידי הוספת מילים עבור {{creature}}.
 #
-# Build a message by adding words for {{creature}}.
+# > רמז: גם מחרוזות אפשר לצבור! התחילי עם מחרוזת ריקה `""`.
 #
-# Hint: Strings can be accumulated too! Start with empty string "".
-#
-# message = ___                        # Start with empty string
+# ```python
+# message = ___                        # התחילי עם מחרוזת ריקה
 # for i in range(3):
-#     message = message ___ "Go! "     # Add "Go! " each time
-# print(message)                       # Should print "Go! Go! Go! "
+#     message = message ___ "Go! "     # הוסיפי "Go! " בכל פעם
+# print(message)                       # צריך להדפיס "Go! Go! Go! "
+# ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -67,16 +67,16 @@
 # ## {{EXERCISE_4_TITLE}}
 # {{CONTEXT_EXERCISE_4_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# חשבי את סך הפניות לצייר ב-{{location}}.
+# כשמציירים צורה, עקבי אחר סך המעלות שפנית.
 #
-# Calculate total turning for drawing at {{location}}.
-# When drawing a shape, track total degrees turned.
-#
-# total_turns = ___                    # Initialize accumulator
+# ```python
+# total_turns = ___                    # אתחלי את המצבר
 # for side in range(4):
 #     turn_amount = 90
-#     total_turns = total_turns + ___  # Add turn amount
-# print("Total turned:", total_turns, "degrees")  # Should be 360
+#     total_turns = total_turns + ___  # הוסיפי את כמות הפנייה
+# print("Total turned:", total_turns, "degrees")  # צריך להיות 360
+# ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -85,16 +85,16 @@
 # ## {{EXERCISE_5_TITLE}}
 # {{CONTEXT_EXERCISE_5_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# חשבי את אורך הקו הכולל במסלול של {{hero}}.
+# הקווים גדלים: 10, 20, 30, 40, 50 יחידות.
 #
-# Calculate total line length for {{hero}}'s path.
-# Lines increase: 10, 20, 30, 40, 50 units.
-#
+# ```python
 # total_length = 0
-# ___ i in range(1, 6):               # Fill in loop keyword
-#     line_length = i ___ 10          # Calculate: i times 10
+# ___ i in range(1, 6):               # מלאי את מילת המפתח של הלולאה
+#     line_length = i ___ 10          # חשבי: i כפול 10
 #     total_length = total_length + line_length
-# print("Total length:", ___)         # Print the accumulator
+# print("Total length:", ___)         # הדפיסי את המצבר
+# ```
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

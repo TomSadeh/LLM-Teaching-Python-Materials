@@ -10,13 +10,13 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגיל בן מספר חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: DISCOVERY - Observe Confusing Behavior
+# ## חלק 1: גילוי - מה קורה פה?
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{hero}} found some access control code at {{school}}.
-# The code seems to allow the wrong people in!
+# {{hero}} מצאה קוד בקרת גישה ב-{{school}}.
+# הקוד נראה מכניס את האנשים הלא נכונים פנימה!
 
 # %%
 # Only VIP members with valid tickets should enter
@@ -53,107 +53,107 @@ else:
     print("{{hero}} cannot fight without weapons.")
 
 # %% [markdown]
-# ✏️ YOUR OBSERVATIONS HERE ✏️
+# **הרשמי את התצפיות שלך:**
 #
 # mystery_code_1:
-#   Expected: Non-VIP shouldn't enter even with ticket
-#   Actual: ________________________________
-#   Is the 'or' correct for "VIP members with valid tickets"? _____
+#   ציפינו: מי שאינה VIP לא אמורה להיכנס גם עם כרטיס
+#   בפועל: ________________________________
+#   האם `or` נכון עבור "חברות VIP עם כרטיס תקף"? _____
 #
 # mystery_code_2:
-#   Expected: Only raining (not cold) should allow going outside
-#   Actual: ________________________________
-#   What does "not is_raining and is_cold" actually check? ____________
+#   ציפינו: גשם בלבד (ללא קור) אמור לאפשר יציאה החוצה
+#   בפועל: ________________________________
+#   מה בודקת בעצם `not is_raining and is_cold`? ____________
 #
 # mystery_code_3:
-#   Expected: Backup without supplies shouldn't work
-#   Actual: ________________________________
-#   Does "has_primary or has_backup or has_supplies" match the requirement? _____
+#   ציפינו: גיבוי בלי ציוד לא אמור לעבוד
+#   בפועל: ________________________________
+#   האם `has_primary or has_backup or has_supplies` תואמת את הדרישה? _____
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: INVESTIGATION - Trace the Boolean Logic
+# ## חלק 2: חקירה - עקבי אחרי ההיגיון הבוליאני
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Trace through each mystery to understand the boolean expressions.
+# עקבי אחרי כל תעלומה כדי להבין את הביטויים הבוליאניים.
 #
-# ✏️ TRACE THE CODE ✏️
+# **עקבי אחרי הקוד:**
 #
-# Condition: is_vip or has_ticket
-# Values: False or True
+# תנאי: `is_vip or has_ticket`
+# ערכים: `False or True`
 #
-# False or True = _____ (True/False)
+# `False or True` = _____ (`True`/`False`)
 #
-# The issue: "VIP members with valid tickets" means BOTH are needed.
-# 'or' means EITHER one works.
+# הבעיה: "חברות VIP עם כרטיס תקף" פירושו שצריך את שניהם.
+# `or` פירושו שמספיק אחד מהם.
 #
-# The correct operator should be: _____
+# האופרטור הנכון צריך להיות: _____
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ TRACE THE CODE ✏️
+# **עקבי אחרי הקוד:**
 #
-# Condition: not is_raining and is_cold
-# Values: not True and False
+# תנאי: `not is_raining and is_cold`
+# ערכים: `not True and False`
 #
-# Step 1: not True = _____
-# Step 2: _____ and False = _____
+# 1. `not True` = _____
+# 2. `_____ and False` = _____
 #
-# This checks: "NOT raining AND cold"
-# But we wanted: "NOT (raining AND cold)"
+# זה בודק: "לא גשום וקר"
+# אבל רצינו: "לא (גשום וקר)"
 #
-# The difference:
-# - "not is_raining and is_cold" = outside if not raining BUT it's cold
-# - "not (is_raining and is_cold)" = outside unless BOTH raining AND cold
+# ההבדל:
+# - `not is_raining and is_cold` = יוצאים אם לא גשום, אבל קר
+# - `not (is_raining and is_cold)` = יוצאים אלא אם גשום וקר גם יחד
 #
-# Current logic goes outside when: _______________________
-# Correct logic should go outside when: _______________________
+# ההיגיון הנוכחי יוצא החוצה כש: _______________________
+# ההיגיון הנכון אמור לצאת החוצה כש: _______________________
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ TRACE THE CODE ✏️
+# **עקבי אחרי הקוד:**
 #
-# Condition: has_primary or has_backup or has_supplies
-# Values: False or True or False
+# תנאי: `has_primary or has_backup or has_supplies`
+# ערכים: `False or True or False`
 #
-# False or True = _____
-# _____ or False = _____
+# `False or True` = _____
+# `_____ or False` = _____
 #
-# This checks: "has ANY of these three items"
-# But we wanted: "has sword OR (has bow AND has arrows)"
+# זה בודק: "יש לפחות אחד משלושת הפריטים"
+# אבל רצינו: "יש נשק ראשי, או (נשק גיבוי וציוד)"
 #
-# Correct expression with parentheses:
-# has_primary or (has_backup and has_supplies)
+# הביטוי הנכון עם סוגריים:
+# `has_primary or (has_backup and has_supplies)`
 #
-# Let's verify: False or (True and False)
-# Step 1: True and False = _____
-# Step 2: False or _____ = _____
+# בואי נאמת: `False or (True and False)`
+# 1. `True and False` = _____
+# 2. `False or _____` = _____
 #
-# Now it correctly denies entry!
+# עכשיו הקוד מסרב נכון לאפשר כניסה!
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: IMPROVEMENT - Fix the Boolean Expressions
+# ## חלק 3: שיפור - תקני את הביטויים הבוליאניים
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Fix each buggy boolean expression!
+# תקני כל ביטוי בוליאני שגוי!
 #
-# ✏️ FIX THE BUG ✏️
+# **תקני את הבאג:**
 #
-# Requirement: VIP members with valid tickets (need BOTH)
-# Original (wrong): is_vip or has_ticket
+# דרישה: חברות VIP עם כרטיס תקף (צריך את שניהם)
+# המקורי (שגוי): `is_vip or has_ticket`
 #
-# Your fix:
+# התיקון שלך:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -166,13 +166,13 @@ has_ticket = True
 pass
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# **תקני את הבאג:**
 #
-# Requirement: Don't go outside if it's raining AND cold
-#              (either alone is fine)
-# Original (wrong): not is_raining and is_cold
+# דרישה: לא לצאת החוצה אם גשום וקר גם יחד
+#         (כל אחד בנפרד - בסדר גמור)
+# המקורי (שגוי): `not is_raining and is_cold`
 #
-# Your fix:
+# התיקון שלך:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -185,12 +185,12 @@ is_cold = False
 pass
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# **תקני את הבאג:**
 #
-# Requirement: Need primary OR (backup AND supplies)
-# Original (wrong): has_primary or has_backup or has_supplies
+# דרישה: צריך נשק ראשי, או (נשק גיבוי וציוד)
+# המקורי (שגוי): `has_primary or has_backup or has_supplies`
 #
-# Your fix:
+# התיקון שלך:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

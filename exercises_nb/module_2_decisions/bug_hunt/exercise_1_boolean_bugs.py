@@ -9,18 +9,18 @@
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_MISSION}}
 #
-# {{CASE_1_TITLE}}
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# {{hero}} wrote code to check if they can buy an item.
-# They need at least 100 gold AND at least 50 gems.
+# {{hero}} כתבה קוד שבודק אם אפשר לקנות פריט.
+# צריך לפחות 100 זהב **וגם** לפחות 50 אבני חן.
 #
-# EXPECTED BEHAVIOR:
-# With gold=150 and gems=30, should print "Cannot afford item"
-# (because gems is too low)
+# התנהגות צפויה:
+# עם `gold=150` ו-`gems=30`, צריך להדפיס `"Cannot afford item"`
+# (כי כמות אבני החן נמוכה מדי)
 #
-# ACTUAL BEHAVIOR:
-# It prints "Buying item!" even though gems is only 30
+# התנהגות בפועל:
+# מדפיס `"Buying item!"` למרות שיש רק 30 אבני חן
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -35,13 +35,11 @@ else:
     print("Cannot afford the {{item}}.")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: שימוש ב-`or` כשצריך `and`
+# הבאג: `or` אומר שמספיק שתנאי **אחד** יהיה נכון
+#       `and` אומר שה**שניים** חייבים להיות נכונים
 #
-# What I found: Using 'or' when 'and' is needed
-# The bug: 'or' means only ONE condition needs to be True
-#          'and' means BOTH conditions must be True
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -52,16 +50,16 @@ gems = 30
 pass
 
 # %% [markdown]
-# {{CASE_2_TITLE}}
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# {{hero}} wants to enter {{danger_location}} if there is NO {{obstacle}}.
+# {{hero}} רוצה להיכנס ל-{{danger_location}} רק אם **אין** {{obstacle}}.
 #
-# EXPECTED BEHAVIOR:
-# With danger_detected=True, should print "Too dangerous!"
+# התנהגות צפויה:
+# עם `danger_detected=True`, צריך להדפיס `"Too dangerous!"`
 #
-# ACTUAL BEHAVIOR:
-# It prints "Entering!" even when danger is detected
+# התנהגות בפועל:
+# מדפיס `"Entering!"` גם כשסכנה מזוהה
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -78,19 +76,17 @@ if not danger_detected == True:  # BUG: Operator precedence!
     print("Entering safely...")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: `not danger_detected == True` מבלבל
+# הבאג: `not` פועל על `danger_detected` קודם, ואז משווה ל-`True`
+#       `not True` הוא `False`, ואז `False == True` הוא `False`
+#       כלומר התנאי תמיד `False`!
 #
-# What I found: 'not danger_detected == True' is confusing
-# The bug: 'not' applies to 'danger_detected' first, then compares to True
-#          'not True' is False, then 'False == True' is False
-#          So the condition is always False!
+# דרכים טובות יותר לכתוב "אם danger_detected הוא False":
+# 1. `if not danger_detected:`
+# 2. `if danger_detected == False:`
+# 3. `if not (danger_detected == True):`  — עם סוגריים
 #
-# Better ways to write "if danger_detected is False":
-# Option 1: if not danger_detected:
-# Option 2: if danger_detected == False:
-# Option 3: if not (danger_detected == True):  # with parentheses
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -100,17 +96,17 @@ danger_detected = True
 pass
 
 # %% [markdown]
-# {{CASE_3_TITLE}}
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# {{mentor}} grades students: need score >= 60 OR extra_credit to pass.
+# {{mentor}} מדרגת תלמידות: צריך ציון >= 60 **או** `extra_credit` כדי לעבור.
 #
-# EXPECTED BEHAVIOR:
-# With score=55 and extra_credit=True, should print "Passed!"
-# (because extra_credit is True)
+# התנהגות צפויה:
+# עם `score=55` ו-`extra_credit=True`, צריך להדפיס `"Passed!"`
+# (כי `extra_credit` הוא `True`)
 #
-# ACTUAL BEHAVIOR:
-# It prints "Failed." even with extra credit
+# התנהגות בפועל:
+# מדפיס `"Failed."` גם עם קרדיט נוסף
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -124,13 +120,11 @@ else:
     print("{{hero}} failed.")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: שימוש ב-`and` כשצריך `or`
+# הבאג: `and` דורש שה**שני** תנאים יהיו `True`
+#       הדרישה אומרת ציון גבוה **או** קרדיט נוסף — מספיק אחד
 #
-# What I found: Using 'and' when 'or' is needed
-# The bug: 'and' requires BOTH conditions to be True
-#          The requirement says EITHER high score OR extra credit
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -141,17 +135,17 @@ extra_credit = True
 pass
 
 # %% [markdown]
-# {{CASE_4_TITLE}}
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# {{hero}} can rest if NOT {{busy_activity}} AND NOT {{harmful_status}}.
+# {{hero}} יכולה לנוח אם **לא** {{busy_activity}} **וגם לא** {{harmful_status}}.
 #
-# EXPECTED BEHAVIOR:
-# With is_busy=False and is_harmed=True, should print "Cannot rest"
-# (because harmed, even though not busy)
+# התנהגות צפויה:
+# עם `is_busy=False` ו-`is_harmed=True`, צריך להדפיס `"Cannot rest"`
+# (כי היא פצועה, למרות שלא עסוקה)
 #
-# ACTUAL BEHAVIOR:
-# It prints "Resting..." even when harmed
+# התנהגות בפועל:
+# מדפיס `"Resting..."` גם כשהיא פצועה
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -165,14 +159,12 @@ else:
     print("Cannot rest right now!")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: התנאי הפוך
+# הבאג: `not is_busy or is_harmed` אומר:
+#       "יכולה לנוח אם לא עסוקה **או** אם פצועה"
+#       אבל אנחנו רוצות: "יכולה לנוח אם לא עסוקה **וגם** לא פצועה"
 #
-# What I found: The condition is backwards
-# The bug: 'not is_busy or is_harmed' means:
-#          "can rest if NOT busy OR if harmed"
-#          But we want: "can rest if NOT busy AND NOT harmed"
-#
-# The fix (need both conditions for resting):
+# התיקון (צריך שני התנאים כדי לנוח):
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -9,16 +9,16 @@
 # %% [markdown]
 # {{CONTEXT_EVALUATION_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגילה בכמה חלקים. השלימי כל חלק לפי הסדר.
 #
-# You've inherited code with lots of repetition. Time to upgrade it using
-# functions to make it cleaner and more maintainable.
+# ירשת קוד עם הרבה חזרות. הגיע הזמן לשדרג אותו באמצעות
+# פונקציות כדי שיהיה נקי ויותר קל לתחזוקה.
 #
-# PART 1: EVALUATION - Compare Approaches
+# ## חלק 1: הערכה - השוואה בין גישות
 # {{CONTEXT_EVALUATION_INTRO}}
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# Compare these two ways of writing the same program.
+# השוואי בין שתי הדרכים הבאות לכתוב את אותה תוכנית.
 
 # %%
 # Greeting for hero
@@ -80,11 +80,11 @@ My verdict: _______________
 return analysis
 
 # %% [markdown]
-# PART 2: IMPROVEMENT - Refactor to Functions
+# ## חלק 2: שיפור - ארגון מחדש לפונקציות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Refactor the repetitive code below to use functions.
+# ארגני מחדש את הקוד החוזר שלמטה כך שישתמש בפונקציות.
 
 # %%
 # Report header
@@ -161,7 +161,7 @@ def print_section(title, items):
 pass
 
 # %% [markdown]
-# ## BONUS: Create Reusable Functions
+# ## בונוס: יצירת פונקציות לשימוש חוזר
 
 # %%
 # CREATE A SET OF REUSABLE UTILITY FUNCTIONS

@@ -16,11 +16,9 @@ import turtle
 # ## {{EXERCISE_1_TITLE}}
 # {{CONTEXT_EXERCISE_1_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# השלימי את לולאת ה-`for` כדי לחזור 4 פעמים עבור {{hero}}.
 #
-# Complete the for loop to repeat 4 times for {{hero}}.
-#
-# Hint: A for loop starts with the keyword "for".
+# > רמז: לולאת `for` מתחילה במילת המפתח `for`.
 #
 # ___ i in range(4):              # Fill in the loop keyword
 #     print("Step", i)
@@ -32,11 +30,9 @@ import turtle
 # ## {{EXERCISE_2_TITLE}}
 # {{CONTEXT_EXERCISE_2_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# השלימי את הלולאה כדי לעבור על טווח עבור {{creature}}.
 #
-# Complete the loop to iterate over a range for {{creature}}.
-#
-# Hint: The keyword "in" connects the variable to what we loop over.
+# > רמז: מילת המפתח `in` מחברת בין המשתנה לבין מה שעוברים עליו בלולאה.
 #
 # for step ___ range(3):          # Fill in the connecting keyword
 #     print("{{creature}} takes step", step)
@@ -48,12 +44,10 @@ import turtle
 # ## {{EXERCISE_3_TITLE}}
 # {{CONTEXT_EXERCISE_3_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# השלימי את הטווח כדי לחזור 5 פעמים ב-{{school}}.
 #
-# Complete the range to repeat 5 times at {{school}}.
-#
-# Hint: range(n) creates numbers from 0 to n-1.
-#       To repeat 5 times, what should n be?
+# > רמז: `range(n)` יוצרת מספרים מ-0 עד n-1.
+# > כדי לחזור 5 פעמים, מה צריך להיות n?
 #
 # for i in ___(5):                # Fill in the function name
 #     print("Repeat number", i)
@@ -65,11 +59,9 @@ import turtle
 # ## {{EXERCISE_4_TITLE}}
 # {{CONTEXT_EXERCISE_4_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# השלימי את הלולאה שמציירת ריבוע ב-{{location}}.
 #
-# Complete this loop that draws a square at {{location}}.
-#
-# Hint: A square has 4 sides, so we repeat 4 times.
+# > רמז: לריבוע יש 4 צלעות, אז חוזרים 4 פעמים.
 #
 # t = turtle.Turtle()
 # ___ side ___ range(___):        # Fill in: keyword, keyword, number
@@ -83,11 +75,9 @@ import turtle
 # ## {{EXERCISE_5_TITLE}}
 # {{CONTEXT_EXERCISE_5_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# השלימי את ההזחה של גוף הלולאה למסע של {{hero}}.
 #
-# Complete the loop body indentation for {{hero}}'s journey.
-#
-# Hint: Code inside a loop must be indented (4 spaces or 1 tab).
+# > רמז: קוד שנמצא בתוך לולאה חייב להיות מוזח (4 רווחים או טאב אחד).
 #
 # t = turtle.Turtle()
 # for i in range(3):

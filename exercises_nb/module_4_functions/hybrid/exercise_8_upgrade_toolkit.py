@@ -9,16 +9,16 @@
 # %% [markdown]
 # {{CONTEXT_EVALUATION_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגילה רב-חלקית. השלימי כל חלק לפי הסדר.
 #
-# You've found a massive, monolithic program. Time to upgrade it by breaking
-# it into a clean toolkit of reusable functions.
+# מצאת תוכנית ענקית ומסורבלת. הגיע הזמן לשדרג אותה על ידי פירוק שלה
+# לערכת כלים מסודרת של פונקציות לשימוש חוזר.
 #
-# PART 1: EVALUATION - The Monolithic Monster
+# ## חלק 1: הערכה - המפלצת המונוליתית
 # {{CONTEXT_EVALUATION_INTRO}}
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# Study this huge function. Can you identify the separate concerns?
+# למדי את הפונקציה הענקית הזאת. האם תוכלי לזהות את האחריויות השונות?
 
 # %%
 # Part A: Print header
@@ -110,11 +110,11 @@ What should be separate functions?
 return evaluation
 
 # %% [markdown]
-# PART 2: IMPROVEMENT - Break Into Functions
+# ## חלק 2: שיפור - פירוק לפונקציות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Create helper functions to replace the monolith.
+# צרי פונקציות עזר שיחליפו את המפלצת.
 
 # %%
 # HELPER 1: Print formatted header
@@ -189,11 +189,11 @@ return {
 }
 
 # %% [markdown]
-# PART 3: GROWTH - Build the Improved Processor
+# ## חלק 3: צמיחה - בניית המעבד המשופר
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Use your toolkit to build a clean, modular processor.
+# השתמשי בערכת הכלים שבנית כדי ליצור מעבד נקי ומודולרי.
 
 # %%
 # Create the toolkit functions (copy from Part 2 or define here)
@@ -255,7 +255,7 @@ print("- Functions can be reused elsewhere")
 print("- Easy to modify one aspect")
 
 # %% [markdown]
-# ## BONUS: Extend the Toolkit
+# ## בונוס: הרחבת ערכת הכלים
 
 # %%
 # BONUS 1: get_score_grade

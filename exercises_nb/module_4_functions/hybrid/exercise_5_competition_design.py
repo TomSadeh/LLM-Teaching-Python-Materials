@@ -9,18 +9,18 @@
 # %% [markdown]
 # {{CONTEXT_EVALUATION_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגיל רב-שלבי. השלימי כל חלק לפי הסדר.
 #
-# Two developers have submitted their code solutions. You'll evaluate both,
-# then build your own improved version.
+# שני מפתחים הגישו את הפתרונות שלהם. תעריכי את שניהם,
+# ואחר כך תבני גרסה משופרת משלך.
 #
-# PART 1: EVALUATION - Compare Two Designs
+# ## חלק 1: הערכה - השוואת שתי גישות
 # {{CONTEXT_EVALUATION_INTRO}}
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# Compare these two approaches to the same problem.
+# השוואי שתי גישות לאותה בעיה.
 #
-# PROBLEM: Create a system to display formatted profile cards.
+# הבעיה: צרי מערכת להצגת כרטיסי פרופיל מעוצבים.
 
 # %%
 def display_profile(name, role, level, location, status):
@@ -101,11 +101,11 @@ My verdict: _______________
 return evaluation
 
 # %% [markdown]
-# PART 2: GROWTH - Build Your Own Version
+# ## חלק 2: צמיחה - בני את הגרסה שלך
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now create your own improved version.
+# עכשיו צרי גרסה משופרת משלך.
 
 # %%
 # BUILD YOUR OWN PROFILE CARD SYSTEM
@@ -149,17 +149,15 @@ print("My Profile System:")
 print()
 
 # %% [markdown]
-# Create and display cards
-# YOUR CODE HERE
+# צרי והציגי כרטיסים
 #
-# Create at least 2 profile cards and display them
+# צרי לפחות 2 כרטיסי פרופיל והציגי אותם.
 #
-#
-# PART 3: EVALUATION - Reflect on Your Design
+# ## חלק 3: הערכה - הרהרי בעיצוב שלך
 # {{CONTEXT_EVALUATION_INTRO}}
 # {{CONTEXT_EVALUATION_NARRATIVE}}
 #
-# Compare your design to the original approaches.
+# השוואי את העיצוב שלך לגישות המקוריות.
 
 # %%
 # YOUR REFLECTION
@@ -192,7 +190,7 @@ MY DESIGN CHOICES:
 return reflection
 
 # %% [markdown]
-# ## BONUS: Extend Your System
+# ## בונוס: הרחיבי את המערכת שלך
 
 # %%
 # EXTEND YOUR SYSTEM

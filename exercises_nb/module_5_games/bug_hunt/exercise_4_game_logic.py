@@ -2,26 +2,26 @@
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_MISSION}}
 #
-# Topic: Finding bugs in game logic
-# Difficulty: 3-4
+# נושא: מציאת באגים בלוגיקת משחקים
+# רמת קושי: 3-4
 #
-# Game logic bugs are subtle - the code runs but the game doesn't work right.
-# These bugs involve game state, win conditions, and scoring.
+# באגים בלוגיקת משחקים הם עדינים - הקוד רץ אבל המשחק לא עובד כמו שצריך.
+# הבאגים האלה קשורים למצב המשחק, תנאי ניצחון וניקוד.
 
 # %%
 import random
 
 # %% [markdown]
-# {{CASE_1_TITLE}}
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# This game should end when a player reaches 10 points.
+# המשחק הזה אמור להסתיים כשמישהי מגיעה ל-10 נקודות.
 #
-# EXPECTED BEHAVIOR:
-# Game ends immediately when someone reaches 10 points
+# התנהגות צפויה:
+# המשחק מסתיים מיד כשמישהי מגיעה ל-10 נקודות
 #
-# ACTUAL BEHAVIOR:
-# Game always plays all 10 rounds, even after someone wins
+# התנהגות בפועל:
+# המשחק תמיד משחק את כל 10 הסיבובים, אפילו אחרי שמישהי ניצחה
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -51,26 +51,24 @@ else:
     print("Computer wins!")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_2_TITLE}}
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# This game should reset scores between rounds.
+# המשחק הזה אמור לאפס את הניקוד בין משחקים.
 #
-# EXPECTED BEHAVIOR:
-# Each new game starts with 0-0 score
+# התנהגות צפויה:
+# כל משחק חדש מתחיל עם ניקוד 0-0
 #
-# ACTUAL BEHAVIOR:
-# Scores carry over from previous games!
+# התנהגות בפועל:
+# הניקוד עובר ממשחק למשחק!
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -98,26 +96,24 @@ for round_num in range(1, 4):
 print(f"Final: {player_total}-{enemy_total}")
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix (don't use globals - use local variables):
+# התיקון (אל תשתמשי ב-globals - השתמשי במשתנים מקומיים):
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_3_TITLE}}
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# This turn-based game should alternate between players.
+# המשחק הזה מבוסס תורות ואמור להתחלף בין השחקניות.
 #
-# EXPECTED BEHAVIOR:
-# Player 1, Player 2, Player 1, Player 2, ...
+# התנהגות צפויה:
+# שחקנית 1, שחקנית 2, שחקנית 1, שחקנית 2, ...
 #
-# ACTUAL BEHAVIOR:
-# Player 1 goes twice, then alternates wrong
+# התנהגות בפועל:
+# שחקנית 1 משחקת פעמיים, ואז החלפת התורות מתבלבלת
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -136,26 +132,24 @@ while turns_taken < 6:
         current_player = 1
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_4_TITLE}}
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# This game should track high scores correctly.
+# המשחק הזה אמור לעקוב אחרי השיא בצורה נכונה.
 #
-# EXPECTED BEHAVIOR:
-# New high score only if current > previous high
+# התנהגות צפויה:
+# שיא חדש רק אם הניקוד הנוכחי גבוה מהשיא הקודם
 #
-# ACTUAL BEHAVIOR:
-# Always says "New high score!" even for lower scores
+# התנהגות בפועל:
+# תמיד מדפיס `New high score!` אפילו לניקוד נמוך יותר
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -170,26 +164,24 @@ print("New high score!")  # BUG: This runs unconditionally!
 return high_score
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{CASE_5_TITLE}}
+# ## {{CASE_5_TITLE}}
 # {{CONTEXT_CASE_5_NARRATIVE}}
 #
-# This game loop should handle the "play again" correctly.
+# לולאת המשחק הזו אמורה לטפל ב"שחקי שוב?" בצורה נכונה.
 #
-# EXPECTED BEHAVIOR:
-# Ask to play again after each game, quit on "no"
+# התנהגות צפויה:
+# לשאול "שחקי שוב?" אחרי כל משחק, ולצאת על "no"
 #
-# ACTUAL BEHAVIOR:
-# Only plays once, never asks to play again
+# התנהגות בפועל:
+# משחקת פעם אחת בלבד, ולעולם לא שואלת שוב
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_5}}
 
@@ -211,11 +203,9 @@ while playing:
     print("Thanks for playing!")  # This line is unreachable after "no"
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

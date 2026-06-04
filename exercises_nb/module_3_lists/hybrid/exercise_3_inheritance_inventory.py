@@ -9,13 +9,13 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגיל מרובה-חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: DISCOVERY - Understand the Inherited System
+# ## חלק 1: גילוי - הבני את המערכת שירשת
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{mentor}} left behind an inventory management system.
-# Study how it works before making any changes.
+# {{mentor}} השאיר מאחוריו מערכת לניהול מלאי.
+# למדי איך היא עובדת לפני שתשני בה משהו.
 
 # %%
 # The inventory stores items as a list
@@ -37,14 +37,14 @@ print(f"Primary item: {inventory[0]}")
 print(f"Latest addition: {inventory[-1]}")
 
 # %% [markdown]
-# YOUR TASK: Trace through the code and predict the output
+# המשימה שלך: עיברי על הקוד ונסי לנחש מה הפלט שלו
 #
-# Line 1: Full inventory: _______________
-# Line 2: Total items: _______________
-# Line 3: Essentials: _______________
-# Line 4: Valuables: _______________
-# Line 5: Primary item: _______________
-# Line 6: Latest addition: _______________
+# שורה 1: Full inventory: _______________
+# שורה 2: Total items: _______________
+# שורה 3: Essentials: _______________
+# שורה 4: Valuables: _______________
+# שורה 5: Primary item: _______________
+# שורה 6: Latest addition: _______________
 
 # %%
 # ANSWER THESE QUESTIONS
@@ -61,11 +61,11 @@ answers = {
 return answers
 
 # %% [markdown]
-# PART 2: OWNERSHIP - Add Your Own Features
+# ## חלק 2: בעלות - הוסיפי תכונות משלך
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# The old system is limited. Add new features to make it yours!
+# המערכת הישנה מוגבלת. הוסיפי תכונות חדשות והפכי אותה לשלך!
 
 # %%
 # YOUR CODE HERE
@@ -104,12 +104,12 @@ inventory = ["{{item}}", "potion", "key", "map", "coin", "gem"]
 pass
 
 # %% [markdown]
-# PART 3: INVESTIGATION - Find and Fix Hidden Issues
+# ## חלק 3: חקירה - מצאי ותקני בעיות נסתרות
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Some edge cases weren't handled properly in the old system.
-# Find and fix these bugs!
+# המערכת הישנה לא טיפלה כמו שצריך בכמה מקרי קצה.
+# מצאי ותקני את הבאגים האלה!
 
 # %%
 inventory = []  # Empty inventory!

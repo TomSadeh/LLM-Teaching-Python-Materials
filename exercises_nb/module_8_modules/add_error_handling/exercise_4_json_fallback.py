@@ -2,41 +2,39 @@
 # {{CONTEXT_ERROR_HANDLING_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Topic: Safe JSON loading with fallback defaults
-# Difficulty: 3-4
+# נושא: טעינת JSON בטוחה עם ערכי ברירת מחדל
+# רמת קושי: 3-4
 #
-# JSON files can have multiple issues: missing files, corrupt data,
-# wrong format. Learn to handle all these cases gracefully.
+# קבצי JSON יכולים להיות בעייתיים מסיבות שונות: קובץ חסר, נתונים פגומים,
+# או פורמט שגוי. נלמד לטפל בכל המקרים האלה בצורה נכונה.
 
 # %%
 import json
 
 # %% [markdown]
-# {{HANDLING_1_TITLE}}
+# ## {{HANDLING_1_TITLE}}
 # {{CONTEXT_HANDLING_1_NARRATIVE}}
 #
-# This function crashes if the JSON file is missing or corrupt.
+# הפונקציה הזו קורסת אם קובץ ה-JSON חסר או פגום.
 
 # %%
 with open("settings.json", "r") as f:
     return json.load(f)
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_1}}
 #
-# Step 1: Set default if None:
+# 1. קבעי ערך ברירת מחדל אם לא הועבר:
 #         if default is None:
 #             default = {}
 #
-# Step 2: Try to load JSON
+# 2. נסי לטעון את ה-JSON
 #
-# Step 3: Handle FileNotFoundError
+# 3. טפלי ב-`FileNotFoundError`
 #
-# Step 4: Handle json.JSONDecodeError
+# 4. טפלי ב-`json.JSONDecodeError`
 #
-# Pattern:
+# תבנית:
 #   try:
 #       with open(filename, "r") as f:
 #           return json.load(f)
@@ -50,10 +48,10 @@ with open("settings.json", "r") as f:
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_2_TITLE}}
+# ## {{HANDLING_2_TITLE}}
 # {{CONTEXT_HANDLING_2_NARRATIVE}}
 #
-# Load settings with schema validation.
+# טעיני הגדרות עם אימות סכמה.
 
 # %%
 with open("config.json", "r") as f:
@@ -61,30 +59,28 @@ with open("config.json", "r") as f:
 return config["required_key"]
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_2}}
 #
-# Step 1: Start with a copy of defaults
+# 1. התחילי עם עותק של ערכי ברירת המחדל:
 #         settings = defaults.copy()
 #
-# Step 2: Try to load the file
+# 2. נסי לטעון את הקובץ
 #
-# Step 3: If successful, update settings with loaded values
+# 3. אם הטעינה הצליחה, עדכני את ה-settings עם הנתונים שנטענו:
 #         settings.update(loaded_data)
 #
-# Step 4: Handle FileNotFoundError and JSONDecodeError
+# 4. טפלי ב-`FileNotFoundError` וב-`JSONDecodeError`
 #
-# Step 5: Return settings
+# 5. החזירי את ה-settings
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_3_TITLE}}
+# ## {{HANDLING_3_TITLE}}
 # {{CONTEXT_HANDLING_3_NARRATIVE}}
 #
-# Save JSON with backup of previous version.
+# שמרי JSON עם גיבוי של הגרסה הקודמת.
 
 # %%
 settings = {"key": "value"}
@@ -92,29 +88,27 @@ with open("settings.json", "w") as f:
     json.dump(settings, f)
 
 # %% [markdown]
-# ✏️ ADD ERROR HANDLING ✏️
-#
 # {{CONTEXT_HANDLING_HINT_3}}
 #
-# Step 1: If backup requested and file exists, rename it
+# 1. אם ביקשו גיבוי והקובץ קיים, שנמי את שמו:
 #         import os
 #         if backup and os.path.exists(filename):
 #             os.rename(filename, filename + ".backup")
 #
-# Step 2: Try to save new data
+# 2. נסי לשמור את הנתונים החדשים
 #
-# Step 3: Handle errors (e.g., PermissionError)
+# 3. טפלי בשגיאות (למשל `PermissionError`)
 #
-# Step 4: Return success status
+# 4. החזירי סטטוס הצלחה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{HANDLING_4_TITLE}}
+# ## {{HANDLING_4_TITLE}}
 # {{CONTEXT_HANDLING_4_NARRATIVE}}
 #
-# Complete settings manager for {{school}}.
+# מנהל הגדרות שלם עבור {{school}}.
 
 # %%
 class SettingsManager:

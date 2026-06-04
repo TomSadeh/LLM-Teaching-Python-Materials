@@ -1,148 +1,139 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# This is a multi-part exercise where you build a {{creature}} management
-# system using classes. You'll create creatures, display them, manage
-# collections, and implement interactions.
+# זוהי תרגילה מרובת-חלקים שבה תבני מערכת ניהול של {{creature}} באמצעות מחלקות.
+# תיצרי יצורים, תציגי אותם, תנהלי אוספים ותממשי אינטראקציות.
 #
-# Programming concepts: classes, __str__, object collections, interactions
+# מושגי תכנות: מחלקות, `__str__`, אוספי אובייקטים, אינטראקציות
 #
-# PART 1: Growth - Create the Base Creature Class
+# ## חלק 1: צמיחה - יצירת מחלקת הבסיס של יצור
 # {{CONTEXT_PHASE_1}}
 #
-# Start by creating a class to represent a single creature.
+# התחילי ביצירת מחלקה שמייצגת יצור יחיד.
 #
-# ✏️ CREATE THE CREATURE CLASS ✏️
+# הגדירי מחלקה בשם `Creature` עם:
 #
-# Define a class called `Creature` with:
+# `__init__(self, name, species, power, health)`:
+#     שמרי את כל הפרמטרים כתכונות של האובייקט
+#     כמו כן הגדירי `self.is_tamed = False`
 #
-# __init__(self, name, species, power, health):
-#     Store all as instance attributes
-#     Also set self.is_tamed = False
+# `tame(self)`:
+#     קבעי את `self.is_tamed` ל-`True`
+#     הדפיסי: `"[name] has been tamed!"`
 #
-# tame(self):
-#     Set self.is_tamed to True
-#     Print: "[name] has been tamed!"
-#
-# Test your class:
-#     creature = Creature("Fang", "{{creature}}", 45, 80)
-#     print(f"Name: {creature.name}")
-#     print(f"Species: {creature.species}")
-#     print(f"Tamed: {creature.is_tamed}")
-#     creature.tame()
-#     print(f"Tamed: {creature.is_tamed}")
+# בדיקה:
+#     `creature = Creature("Fang", "{{creature}}", 45, 80)`
+#     `print(f"Name: {creature.name}")`
+#     `print(f"Species: {creature.species}")`
+#     `print(f"Tamed: {creature.is_tamed}")`
+#     `creature.tame()`
+#     `print(f"Tamed: {creature.is_tamed}")`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Add String Representation
+# ## חלק 2: צמיחה - הוספת ייצוג טקסטואלי
 # {{CONTEXT_PHASE_2}}
 #
-# Add a __str__ method to display creature information nicely.
+# הוסיפי מתודת `__str__` כדי להציג את פרטי היצור בצורה יפה.
 #
-# ✏️ ENHANCE THE CREATURE CLASS WITH __str__ ✏️
+# העתיקי את מחלקת `Creature` מחלק 1 והוסיפי:
 #
-# Copy your Creature class from Part 1 and add:
+# `__str__(self)`:
+#     אם מאולף: `"[name] the [species] (Power: [power], HP: [health]) [TAMED]"`
+#     אם פרא: `"[name] the [species] (Power: [power], HP: [health]) [WILD]"`
 #
-# __str__(self):
-#     If tamed: "[name] the [species] (Power: [power], HP: [health]) [TAMED]"
-#     If wild: "[name] the [species] (Power: [power], HP: [health]) [WILD]"
+# בדיקה:
+#     `creature1 = Creature("Fang", "{{creature}}", 45, 80)`
+#     `print(creature1)`  # אמורה להציג [WILD]
 #
-# Test:
-#     creature1 = Creature("Fang", "{{creature}}", 45, 80)
-#     print(creature1)  # Should show [WILD]
-#
-#     creature1.tame()
-#     print(creature1)  # Should show [TAMED]
+#     `creature1.tame()`
+#     `print(creature1)`  # אמורה להציג [TAMED]
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Create a Collection Class
+# ## חלק 3: צמיחה - יצירת מחלקת אוסף
 # {{CONTEXT_PHASE_3}}
 #
-# Create a class to manage multiple creatures.
+# צרי מחלקה לניהול מספר יצורים.
 #
-# ✏️ CREATE THE COLLECTION CLASS ✏️
+# ראשית, שמרי את מחלקת `Creature` מחלק 2.
 #
-# First, keep your Creature class from Part 2.
+# לאחר מכן הגדירי מחלקה בשם `CreatureCollection` עם:
 #
-# Then define a class called `CreatureCollection` with:
+# `__init__(self, owner_name)`:
+#     `self.owner_name = owner_name`
+#     `self.creatures = []`  # רשימת אובייקטי Creature
 #
-# __init__(self, owner_name):
-#     self.owner_name = owner_name
-#     self.creatures = []  # List of Creature objects
+# `add_creature(self, creature)`:
+#     הוסיפי את היצור לרשימה `self.creatures`
+#     הדפיסי: `"[owner_name] added [creature.name] to collection!"`
 #
-# add_creature(self, creature):
-#     Append the creature to self.creatures
-#     Print: "[owner_name] added [creature.name] to collection!"
+# `list_creatures(self)`:
+#     הדפיסי: `"[owner_name]'s Creatures:"`
+#     עבור כל יצור ברשימה:
+#         הדפיסי את היצור (משתמש ב-`__str__`)
+#     אם אין יצורים: הדפיסי `"  (empty)"`
 #
-# list_creatures(self):
-#     Print: "[owner_name]'s Creatures:"
-#     For each creature in self.creatures:
-#         Print the creature (uses __str__)
-#     If no creatures: Print "  (empty)"
+# `count_tamed(self)`:
+#     החזירי את מספר היצורים שבהם `is_tamed` הוא `True`
 #
-# count_tamed(self):
-#     Return the count of creatures where is_tamed is True
-#
-# Test:
-#     collection = CreatureCollection("{{hero}}")
-#     collection.add_creature(Creature("Fang", "{{creature}}", 45, 80))
-#     collection.add_creature(Creature("Spark", "{{creature}}", 30, 60))
-#     collection.list_creatures()
-#     print(f"Tamed: {collection.count_tamed()}")
+# בדיקה:
+#     `collection = CreatureCollection("{{hero}}")`
+#     `collection.add_creature(Creature("Fang", "{{creature}}", 45, 80))`
+#     `collection.add_creature(Creature("Spark", "{{creature}}", 30, 60))`
+#     `collection.list_creatures()`
+#     `print(f"Tamed: {collection.count_tamed()}")`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Ownership - Add Creature Interaction
+# ## חלק 4: בעלות - הוספת אינטראקציה בין יצורים
 # {{CONTEXT_PHASE_4}}
 #
-# Add the ability for creatures to battle each other.
+# הוסיפי יכולת לקרבות בין יצורים.
 #
-# ✏️ ADD BATTLE INTERACTION ✏️
+# שדרגי את מחלקת `Creature` עם:
 #
-# Enhance your Creature class with:
+# `battle(self, other)`:
+#     - `other` הוא אובייקט `Creature` נוסף
+#     - השווי רמות כוח:
+#         אם `self.power > other.power`:
+#             הפחיתי מ-`other.health` את `(self.power - other.power)`
+#             החזירי את `self` (המנצחת)
+#         אחרת אם `other.power > self.power`:
+#             הפחיתי מ-`self.health` את `(other.power - self.power)`
+#             החזירי את `other` (המנצחת)
+#         אחרת:
+#             החזירי `None` (תיקו)
+#     - הדפיסי את תוצאת הקרב
 #
-# battle(self, other):
-#     - other is another Creature object
-#     - Compare power levels:
-#         If self.power > other.power:
-#             Reduce other.health by (self.power - other.power)
-#             Return self (the winner)
-#         Else if other.power > self.power:
-#             Reduce self.health by (other.power - self.power)
-#             Return other (the winner)
-#         Else:
-#             Return None (tie)
-#     - Print the battle result
+# הוסיפי ל-`CreatureCollection`:
 #
-# Add to CreatureCollection:
+# `find_strongest(self)`:
+#     החזירי את היצור עם הכוח הגבוה ביותר (או `None` אם האוסף ריק)
 #
-# find_strongest(self):
-#     Return the creature with highest power (or None if empty)
+# בדיקת קרבות:
+#     `creature1 = Creature("Fang", "{{creature}}", 45, 80)`
+#     `creature2 = Creature("Spark", "{{creature}}", 30, 60)`
 #
-# Test battles:
-#     creature1 = Creature("Fang", "{{creature}}", 45, 80)
-#     creature2 = Creature("Spark", "{{creature}}", 30, 60)
+#     `winner = creature1.battle(creature2)`
+#     `if winner:`
+#         `print(f"Winner: {winner.name}")`
 #
-#     winner = creature1.battle(creature2)
-#     if winner:
-#         print(f"Winner: {winner.name}")
+#     `print(f"After battle:")`
+#     `print(creature1)`
+#     `print(creature2)`
 #
-#     print(f"After battle:")
-#     print(creature1)
-#     print(creature2)
-#
-# Test find_strongest:
-#     collection = CreatureCollection("{{hero}}")
-#     # Add several creatures...
-#     strongest = collection.find_strongest()
-#     print(f"Strongest: {strongest.name if strongest else 'None'}")
+# בדיקת find_strongest:
+#     `collection = CreatureCollection("{{hero}}")`
+#     # הוסיפי מספר יצורים...
+#     `strongest = collection.find_strongest()`
+#     `print(f"Strongest: {strongest.name if strongest else 'None'}")`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

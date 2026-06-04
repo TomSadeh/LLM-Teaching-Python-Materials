@@ -1,7 +1,7 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# Build an interactive quiz game about {{school}}.
+# בני משחק חידונים אינטראקטיבי על {{school}}.
 #
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 
@@ -9,19 +9,18 @@
 import random
 
 # %% [markdown]
-# Project: Quiz Game
-# Build a quiz game with multiple choice questions.
+# ## פרויקט: משחק חידונים
+# בני משחק חידונים עם שאלות רב-ברירה.
 #
-# Your game should:
-# - Store questions with correct and wrong answers
-# - Display questions with shuffled answer choices
-# - Track the player's score
-# - Show results at the end
-# - Offer to play again
+# המשחק שלך צריך:
+# - לשמור שאלות עם תשובות נכונות ושגויות
+# - להציג שאלות עם אפשרויות תשובה בסדר אקראי
+# - לעקוב אחר הניקוד של השחקנית
+# - להציג את התוצאות בסוף
+# - להציע לשחק שוב
 #
-# ✏️ YOUR CODE HERE ✏️
-# Design your own functions to accomplish the above goals.
-# Think about how to structure your question data and game flow.
+# עצבי פונקציות משלך כדי להשיג את המטרות האלה.
+# חשבי כיצד לארגן את נתוני השאלות ואת זרימת המשחק.
 
 # %%
 print("{{greeting}}")
@@ -29,8 +28,7 @@ print("Welcome to the {{school}} Quiz!")
 print()
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-# Build your quiz game
+# בני את משחק החידונים שלך
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

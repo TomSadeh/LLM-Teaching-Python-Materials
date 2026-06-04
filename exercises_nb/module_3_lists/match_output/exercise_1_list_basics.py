@@ -12,7 +12,7 @@
 # {{MATCH_SET_1_TITLE}}
 # {{CONTEXT_MATCH_SET_1_NARRATIVE}}
 #
-# ## CODE SNIPPETS
+# ## קטעי קוד
 
 # %%
 inventory = ["{{item}}", "potion", "key"]
@@ -27,21 +27,21 @@ inventory = []
 print(inventory)
 
 # %% [markdown]
-# ## POSSIBLE OUTPUTS
+# ## פלטים אפשריים
 #
-# OUTPUT A:
+# פלט A:
 # ---------
 # []
 #
-# OUTPUT B:
+# פלט B:
 # ---------
 # ['{{item}}', 'potion', 'key']
 #
-# OUTPUT C:
+# פלט C:
 # ---------
 # 3
 #
-# ## YOUR ANSWERS
+# ## התשובות שלך
 
 # %%
 # YOUR MATCHES HERE
@@ -63,7 +63,7 @@ return matches
 # {{MATCH_SET_2_TITLE}}
 # {{CONTEXT_MATCH_SET_2_NARRATIVE}}
 #
-# ## CODE SNIPPETS
+# ## קטעי קוד
 
 # %%
 party = ["{{hero}}", "{{heroine}}"]
@@ -79,21 +79,21 @@ party = party + ["{{friend}}"]
 print(party)
 
 # %% [markdown]
-# ## POSSIBLE OUTPUTS
+# ## פלטים אפשריים
 #
-# OUTPUT D:
+# פלט D:
 # ---------
 # Party: ['{{hero}}', '{{heroine}}']
 #
-# OUTPUT E:
+# פלט E:
 # ---------
 # ['{{hero}}', '{{heroine}}', '{{friend}}']
 #
-# OUTPUT F:
+# פלט F:
 # ---------
 # Size: 2
 #
-# ## YOUR ANSWERS
+# ## התשובות שלך
 
 # %%
 # YOUR MATCHES HERE

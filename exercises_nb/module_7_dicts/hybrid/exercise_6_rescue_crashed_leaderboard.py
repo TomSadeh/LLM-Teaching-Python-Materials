@@ -1,18 +1,18 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is a multi-part exercise where you rescue a crashed leaderboard system.
-# The competition is tomorrow and the system must be fixed!
+# זוהי תרגילה מרובת חלקים שבה את מצילה מערכת לוח תוצאות שקרסה.
+# התחרות מחר ויש לתקן את המערכת!
 #
-# Programming concepts: dictionaries, CRUD operations, sorting, error handling
+# מושגי תכנות: מילונים, פעולות CRUD, מיון, טיפול בשגיאות
 #
-# PART 1: The Setback - Diagnose the Crash
+# חלק 1: המשבר - אבחני את הקריסה
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# The leaderboard crashed during last night's tournament!
-# Read the error and understand what went wrong.
+# לוח התוצאות קרס במהלך הטורניר אמש!
+# קראי את השגיאה והביני מה השתבש.
 #
-# ERROR MESSAGE:
+# הודעת השגיאה:
 # --------------
 # Traceback (most recent call last):
 #   File "leaderboard.py", line 23, in <module>
@@ -25,33 +25,33 @@
 leaderboard[player_name] += points
 
 # %% [markdown]
-# ✏️ DIAGNOSE THE ERROR ✏️
+# ## אבחני את השגיאה
 #
-# Answer these questions:
+# ענני על השאלות הבאות:
 #
-# 1. What type of error occurred?
-#    Answer:
+# 1. איזה סוג שגיאה קרה?
+#    תשובה:
 #
-# 2. Why did the error happen?
-#    Answer:
+# 2. למה קרתה השגיאה?
+#    תשובה:
 #
-# 3. What was the code trying to do?
-#    Answer:
+# 3. מה הקוד ניסה לעשות?
+#    תשובה:
 #
-# 4. What's the difference between updating an existing player
-#    and adding a new player?
-#    Answer:
+# 4. מה ההבדל בין עדכון שחקנת קיימת
+#    לבין הוספת שחקנת חדשה?
+#    תשובה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Investigation - Trace the Score Logic
+# ## חלק 2: חקירה - עקבי אחרי לוגיקת הניקוד
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_NARRATIVE}}
 #
-# Trace through the intended behavior to understand
-# how the leaderboard should work.
+# עקבי אחרי ההתנהגות המיועדת כדי להבין
+# כיצד לוח התוצאות אמור לעבוד.
 
 # %%
 leaderboard = {"{{hero}}": 100, "{{heroine}}": 150}
@@ -65,100 +65,86 @@ leaderboard["{{friend}}"] = leaderboard.get("{{friend}}", 0) + 75
 print(leaderboard)
 
 # %% [markdown]
-# ✏️ FILL IN THE TRACING TABLE ✏️
+# ## מלאי את טבלת המעקב
 #
-# | Step | Operation              | .get() returns | leaderboard after           |
+# | שלב | פעולה                  | `.get()` מחזיר | לוח התוצאות אחרי           |
 # |------|------------------------|----------------|----------------------------|
-# | 0    | Initial state          | -              | {"{{hero}}": 100, "{{heroine}}": 150} |
-# | 1    | Update {{hero}} +50    | 100            |                            |
-# | 2    | Add {{friend}} +75     |                |                            |
+# | 0    | מצב התחלתי             | -              | {"{{hero}}": 100, "{{heroine}}": 150} |
+# | 1    | עדכון {{hero}} +50     | 100            |                            |
+# | 2    | הוספת {{friend}} +75   |                |                            |
 #
-# What is printed?
+# מה מודפס?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Improvement - Rebuild the Leaderboard
+# ## חלק 3: שיפור - בני מחדש את לוח התוצאות
 # {{CONTEXT_IMPROVEMENT_INTRO}}
 # {{CONTEXT_IMPROVEMENT_NARRATIVE}}
 #
-# Build a robust leaderboard system from scratch.
-#
-# ✏️ YOUR CODE HERE ✏️
+# בני מערכת לוח תוצאות חזקה מאפס.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Check if player exists first.
-# If they exist, return False (don't overwrite).
-# If new, add them with initial_score and return True.
+# בדקי תחילה אם השחקנת קיימת.
+# אם היא קיימת, החזירי `False` (אל תדרסי).
+# אם היא חדשה, הוסיפי אותה עם `initial_score` והחזירי `True`.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Use .get() to safely handle new players.
+# השתמשי ב-`.get()` כדי לטפל בבטחה בשחקניות חדשות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# כתבי את הפונקציה הבאה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# 1. המירי את המילון לרשימת זוגות (שם, ניקוד) בעזרת `.items()`
+# 2. מיינו לפי ניקוד (רמז: השתמשי ב-`sorted()` עם פרמטר `key`)
+# 3. החזירי את `n` הראשונות
 #
-# Step 1: Convert to list of (name, score) tuples using .items()
-# Step 2: Sort by score (hint: use sorted() with key parameter)
-# Step 3: Return the top n
-#
-# Hint: sorted(items, key=lambda x: x[1], reverse=True)
+# > רמז: `sorted(items, key=lambda x: x[1], reverse=True)`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Get all players sorted by score
-# Print with ranking: "1. PlayerName: 150 points"
+# קבלי את כל השחקניות ממוינות לפי ניקוד
+# הדפיסי עם דירוג: `"1. PlayerName: 150 points"`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Growth - Add New Features
+# ## חלק 4: צמיחה - הוסיפי תכונות חדשות
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Add advanced features to the leaderboard.
+# הוסיפי תכונות מתקדמות ללוח התוצאות.
 #
-# ✏️ YOUR CODE HERE ✏️
-#
-# Sort all players by score, then find the player's position.
+# מיינו את כל השחקניות לפי ניקוד, ואז מצאי את מיקום השחקנית.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# כתבי את הפונקציה הבאה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-#
-# Keep all players but set scores to 0.
+# השאירי את כל השחקניות אבל אפסי את הניקוד שלהן ל-0.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

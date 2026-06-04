@@ -9,14 +9,14 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגיל מרובה-חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: GUIDANCE - Study Function Syntax
+# ## חלק 1: הנחיה – לומדים את תחביר הפונקציות
 # {{CONTEXT_GUIDANCE_INTRO}}
 # {{CONTEXT_GUIDANCE_NARRATIVE}}
 #
-# {{mentor}} demonstrates how functions work. Study these examples
-# and fill in the blanks.
+# {{mentor}} מדגים איך פונקציות עובדות. למדי את הדוגמאות
+# והשלימי את החסר.
 
 # %%
 print("Welcome to {{school}}!")
@@ -43,11 +43,11 @@ print("Functions group code together!")
 pass
 
 # %% [markdown]
-# PART 2: GUIDANCE - Practice with Scaffolding
+# ## חלק 2: הנחיה – תרגול עם מבנה מוכן
 # {{CONTEXT_GUIDANCE_INTRO}}
 # {{CONTEXT_GUIDANCE_NARRATIVE}}
 #
-# Complete the function following the provided structure.
+# השלימי את הפונקציה לפי המבנה שסופק לך.
 
 # %%
 # Started for you:
@@ -66,11 +66,11 @@ print("-" * 20)
 pass  # Replace with implementation
 
 # %% [markdown]
-# PART 3: GROWTH - Create Your Own
+# ## חלק 3: צמיחה – צרי בעצמך
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now create functions on your own.
+# עכשיו צרי פונקציות לבד.
 
 # %%
 # YOUR CODE HERE

@@ -1,22 +1,22 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is a multi-part exercise following {{hero}}'s journey from defeat to victory.
-# Complete each part in order.
+# זוהי תרגילה רב-חלקית שעוקבת אחרי המסע של {{hero}} מתבוסה לניצחון.
+# השלימי כל חלק לפי הסדר.
 #
-# Programming concepts: while loops, random, game state, conditionals
+# מושגי תכנות: לולאות `while`, `random`, מצב משחק, תנאים
 
 # %%
 import random
 
 # %% [markdown]
-# PART 1: The Defeat
+# ## חלק 1: התבוסה
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# {{hero}}'s code from the last match had bugs. That's why {{villain}} won.
-# Find and fix the 3 bugs so this never happens again.
+# הקוד של {{hero}} מהמשחק האחרון היה מלא בבאגים. בגלל זה {{villain}} ניצח.
+# מצאי ותקני את 3 הבאגים כדי שזה לא יקרה שוב.
 #
-# BUGS TO FIND: 3
+# באגים למציאה: 3
 
 # %%
 player_a_score = 0
@@ -59,28 +59,24 @@ else:
     print(f"{{{{hero}}}} wins!")
 
 # %% [markdown]
-# ## ✏️ FIX THE CODE BELOW ✏️
-#
-# ✏️ YOUR CODE HERE ✏️
+# ## תקני את הקוד למטה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Training
+# ## חלק 2: אימון
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# {{hero}} needs a new ability: the POWER MOVE.
+# {{hero}} צריכה יכולת חדשה: המהלך העוצמתי.
 #
-# A power move is high risk, high reward:
-# - 40% chance: CRITICAL SUCCESS (2 points!)
-# - 30% chance: Normal success (1 point)
-# - 30% chance: Fail (0 points)
+# מהלך עוצמתי הוא סיכון גבוה, תגמול גבוה:
+# - סיכוי של 40%: הצלחה קריטית (2 נקודות!)
+# - סיכוי של 30%: הצלחה רגילה (נקודה אחת)
+# - סיכוי של 30%: כישלון (0 נקודות)
 #
-# Implement the power move and a training loop to practice it.
-#
-# ✏️ YOUR CODE HERE ✏️
+# ממשי את המהלך העוצמתי ולולאת אימון לתרגל אותו.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -102,12 +98,11 @@ print("Commands: 'r' = regular move, 'p' = power move, 'q' = quit")
 print()
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-# Implement the training loop:
-# 1. Ask for input (r/p/q)
-# 2. Execute the chosen move
-# 3. Display result and running totals
-# 4. Continue until 'q'
+# ממשי את לולאת האימון:
+# 1. בקשי קלט מהמשתמשת (`r`/`p`/`q`)
+# 2. בצעי את המהלך שנבחר
+# 3. הציגי את התוצאה ואת הסכום השוטף
+# 4. המשיכי עד שמקישים `q`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -123,25 +118,23 @@ if attempts > 0:
     print(f"Average: {total_points / attempts:.2f} points per attempt")
 
 # %% [markdown]
-# PART 3: The Showdown
+# ## חלק 3: ההתמודדות
 # {{CONTEXT_CONFRONTATION_INTRO}}
 # {{CONTEXT_CONFRONTATION_NARRATIVE}}
 #
-# The rematch! Build the complete showdown:
-# - 5 rounds of competition
-# - {{hero}} can choose regular or power move each round
-# - {{villain}} always uses regular moves
-# - If tied after 5 rounds: sudden death until someone leads
+# המשחק החוזר! בני את ההתמודדות המלאה:
+# - 5 סיבובי תחרות
+# - {{hero}} יכולה לבחור מהלך רגיל או עוצמתי בכל סיבוב
+# - {{villain}} תמיד משתמש במהלכים רגילים
+# - אם תיקו אחרי 5 סיבובים: מוות פתאומי עד שמישהו מוביל
 #
-# Use everything you've learned. This is the final test.
-#
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי בכל מה שלמדת. זה המבחן הסופי.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+#
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -151,7 +144,7 @@ print(f"--- Round {round_num} ---")
 print(f"Score: {{{{hero}}}} {player_a_score} - {player_b_score} {{{{villain}}}}")
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+#
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -167,17 +160,16 @@ player_a_score = 0
 player_b_score = 0
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
-# 1. Main match: 5 rounds
-# 2. Check for winner
-# 3. If tied: sudden death
-# 4. Announce winner
+# 1. משחק ראשי: 5 סיבובים
+# 2. בדקי מי ניצחת
+# 3. אם תיקו: מוות פתאומי
+# 4. הכריזי על המנצחת
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

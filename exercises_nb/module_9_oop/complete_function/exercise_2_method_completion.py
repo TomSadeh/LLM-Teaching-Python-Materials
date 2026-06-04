@@ -2,8 +2,8 @@
 # {{CONTEXT_COMPLETE_FUNCTION_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll complete methods that operate on object state.
-# The class structure is provided - you write the method bodies.
+# בתרגיל הזה תשלימי מתודות שעובדות על מצב האובייקט.
+# מבנה המחלקה כבר נתון - את כותבת את גוף המתודות.
 #
 # {{FUNCTION_1_TITLE}}
 # {{CONTEXT_FUNCTION_1_NARRATIVE}}

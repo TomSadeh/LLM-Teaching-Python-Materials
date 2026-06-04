@@ -2,64 +2,52 @@
 # {{CONTEXT_BLANK_PAGE_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# Implement these functions based only on their docstrings.
-# This is the ultimate test of your dictionary skills!
+# ממשי את הפונקציות האלה לפי ה-docstring שלהן בלבד.
+# זה המבחן האולטימטיבי של כישורי המילונים שלך!
 #
-# {{BLANK_1_TITLE}}
+# ## {{BLANK_1_TITLE}}
 # {{CONTEXT_BLANK_1_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{BLANK_2_TITLE}}
+# ## {{BLANK_2_TITLE}}
 # {{CONTEXT_BLANK_2_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{BLANK_3_TITLE}}
+# ## {{BLANK_3_TITLE}}
 # {{CONTEXT_BLANK_3_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{BLANK_4_TITLE}}
+# ## {{BLANK_4_TITLE}}
 # {{CONTEXT_BLANK_4_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{BLANK_5_TITLE}}
+# ## {{BLANK_5_TITLE}}
 # {{CONTEXT_BLANK_5_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{BLANK_6_TITLE}}
+# ## {{BLANK_6_TITLE}}
 # {{CONTEXT_BLANK_6_NARRATIVE}}
-#
-# ✏️ YOUR CODE HERE ✏️
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## TESTS
+# ## בדיקות
 
 # %%
 print("Testing your implementations...\n")

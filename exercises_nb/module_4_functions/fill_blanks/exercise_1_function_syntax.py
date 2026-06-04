@@ -9,10 +9,10 @@
 # {{CONTEXT_FILL_BLANKS_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# ## Exercise A: Defining a Function
+# ## תרגיל א׳: הגדרת פונקציה
 # {{CONTEXT_EXERCISE_1_NARRATIVE}}
 #
-# Complete the function definition by filling in the blanks.
+# השלימי את הגדרת הפונקציה על ידי מילוי השורות החסרות.
 
 # %%
 # FILL IN THE BLANKS
@@ -29,10 +29,10 @@
 pass
 
 # %% [markdown]
-# ## Exercise B: Function Body Indentation
+# ## תרגיל ב׳: הזחה בגוף הפונקציה
 # {{CONTEXT_EXERCISE_2_NARRATIVE}}
 #
-# The function body must be indented inside the function.
+# גוף הפונקציה חייב להיות מוזח (indented) בתוך הפונקציה.
 
 # %%
 # FILL IN THE BLANKS
@@ -49,10 +49,10 @@ pass
 pass
 
 # %% [markdown]
-# ## Exercise C: Calling a Function
+# ## תרגיל ג׳: קריאה לפונקציה
 # {{CONTEXT_EXERCISE_3_NARRATIVE}}
 #
-# To run a function, you must call it with parentheses.
+# כדי להפעיל פונקציה, צריך לקרוא לה עם סוגריים.
 
 # %%
 # FILL IN THE BLANKS
@@ -69,10 +69,10 @@ pass
 pass
 
 # %% [markdown]
-# ## Exercise D: Multiple Functions
+# ## תרגיל ד׳: כמה פונקציות
 # {{CONTEXT_EXERCISE_4_NARRATIVE}}
 #
-# You can define and call multiple functions.
+# אפשר להגדיר ולקרוא למספר פונקציות.
 
 # %%
 # FILL IN THE BLANKS

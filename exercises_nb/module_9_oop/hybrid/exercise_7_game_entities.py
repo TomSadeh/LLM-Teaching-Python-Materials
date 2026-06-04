@@ -1,18 +1,16 @@
 # %% [markdown]
 # {{CONTEXT_PROJECT_INTRO}}
 #
-# This is a multi-part exercise where you build a complete game entity
-# hierarchy for {{school}}. You'll create base classes, player and enemy
-# subclasses, and implement combat interactions.
+# זוהי תרגילה מרובת-חלקים שבה תבני היררכיית ישויות משחק שלמה
+# עבור {{school}}. תיצרי מחלקות בסיס, תת-מחלקות לשחקן ולאויב,
+# ותממשי אינטראקציות לחימה.
 #
-# Programming concepts: inheritance, method overriding, polymorphism, composition
+# מושגי תכנות: ירושה, דריסת מתודות, פולימורפיזם, קומפוזיציה
 #
-# PART 1: Growth - Create the Base Entity Class
+# ## חלק 1: צמיחה - יצירת מחלקת הבסיס Entity
 # {{CONTEXT_PHASE_1}}
 #
-# Start with a solid foundation for all game entities.
-#
-# ✏️ CREATE THE BASE ENTITY CLASS ✏️
+# התחילי עם יסוד איתן לכל ישויות המשחק.
 #
 # class Entity:
 #     """Base class for all game entities."""
@@ -45,7 +43,7 @@
 #     def distance_to(self, other):
 #         """Calculate distance to another entity.
 #         Use: sqrt((x2-x1)^2 + (y2-y1)^2)
-#         Hint: import math, use math.sqrt
+#         > רמז: ייבאי את `math` והשתמשי ב-`math.sqrt`
 #         """
 #         pass
 #
@@ -57,7 +55,7 @@
 #         """Return string representation."""
 #         pass
 #
-# Test:
+# בדיקה:
 #     entity = Entity("{{hero}}", 100, (5, 5))
 #     print(entity)
 #     entity.take_damage(30)
@@ -69,12 +67,10 @@
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Create the Player Subclass
+# ## חלק 2: צמיחה - יצירת תת-מחלקת השחקן
 # {{CONTEXT_PHASE_2}}
 #
-# Create a player class with inventory and experience.
-#
-# ✏️ CREATE THE PLAYER CLASS ✏️
+# צרי מחלקת שחקן עם מלאי וניסיון.
 #
 # class Player(Entity):
 #     """A player-controlled entity."""
@@ -108,7 +104,7 @@
 #         """Override to include level and XP."""
 #         pass
 #
-# Test:
+# בדיקה:
 #     player = Player("{{hero}}", 100)
 #     player.pick_up_item("{{item}}")
 #     player.gain_experience(150)  # Should level up
@@ -119,12 +115,10 @@
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Create the Enemy Subclass
+# ## חלק 3: צמיחה - יצירת תת-מחלקת האויב
 # {{CONTEXT_PHASE_3}}
 #
-# Create enemy types with different behaviors.
-#
-# ✏️ CREATE THE ENEMY CLASS ✏️
+# צרי סוגי אויבים עם התנהגויות שונות.
 #
 # class Enemy(Entity):
 #     """An AI-controlled hostile entity."""
@@ -152,7 +146,7 @@
 #         # Print death message
 #         pass
 #
-# Test:
+# בדיקה:
 #     enemy = Enemy("{{creature}}", 50, (3, 3), 15, 25)
 #     player = Player("{{hero}}", 100, (5, 5))
 #     print(f"In range: {enemy.is_in_range(player)}")
@@ -163,12 +157,10 @@
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Growth - Implement Combat Interaction
+# ## חלק 4: צמיחה - מימוש מערכת לחימה
 # {{CONTEXT_PHASE_4}}
 #
-# Create a combat system that handles entity interactions.
-#
-# ✏️ CREATE THE COMBAT SYSTEM ✏️
+# צרי מערכת לחימה שמטפלת באינטראקציות בין ישויות.
 #
 # class CombatSystem:
 #     """Manages combat between entities."""
@@ -211,7 +203,7 @@
 #         """Return summary of all combatants."""
 #         pass
 #
-# Test combat:
+# בדיקת לחימה:
 #     combat = CombatSystem()
 #     player = Player("{{hero}}", 100, (0, 0))
 #     enemy1 = Enemy("{{creature}}", 30, (2, 2), 10, 20)
@@ -230,29 +222,27 @@
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 5: Ownership - Add Your Own Entity Type
+# ## חלק 5: בעלות - הוסיפי סוג ישות משלך
 # {{CONTEXT_MASTERY_INTRO}}
 # {{CONTEXT_MASTERY_NARRATIVE}}
 #
-# Design your own unique entity type that fits the hierarchy.
+# עצבי סוג ישות ייחודי משלך שמתאים להיררכיה.
 #
-# ✏️ CREATE YOUR OWN ENTITY TYPE ✏️
+# רעיונות:
+# - Boss(Enemy): כמה שלבים, התקפות מיוחדות
+# - Companion(Entity): עוקב אחרי השחקן, נותן חיזוקים
+# - NPC(Entity): אפשר לדבר איתו, נותן משימות
+# - Trap(Entity): עומד במקום, גורם נזק במגע
+# - Healer(Entity): משחזר בריאות לבעלי ברית בסביבה
 #
-# Ideas:
-# - Boss(Enemy): Multiple phases, special attacks
-# - Companion(Entity): Follows player, provides buffs
-# - NPC(Entity): Can be talked to, gives quests
-# - Trap(Entity): Stationary, damages on contact
-# - Healer(Entity): Restores health to nearby allies
+# דרישות:
+# - חייבת לרשת מ-`Entity` או מאחת מתת-המחלקות שלה
+# - חייבת להוסיף לפחות 2 תכונות חדשות
+# - חייבת להוסיף לפחות 2 מתודות חדשות
+# - חייבת לדרוס לפחות מתודה אחת מהמחלקה הורה
+# - חייבת לקיים אינטראקציה משמעותית עם ישויות אחרות
 #
-# Requirements:
-# - Must inherit from Entity or one of its subclasses
-# - Must add at least 2 new attributes
-# - Must add at least 2 new methods
-# - Must override at least 1 parent method
-# - Must interact meaningfully with other entities
-#
-# Demonstrate your entity in action with other entities.
+# הדגימי את הישות שלך בפעולה עם ישויות אחרות.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

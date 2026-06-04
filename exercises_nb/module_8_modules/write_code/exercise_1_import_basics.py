@@ -2,80 +2,64 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn how to import modules and access
-# their contents using dot notation. This is the foundation of
-# using Python's powerful standard library.
+# בתרגיל הזה תלמדי איך לייבא מודולים ולגשת לתוכנם
+# באמצעות סימון הנקודה. זוהי הבסיס לשימוש בספרייה
+# הסטנדרטית העוצמתית של Python.
 #
-# Topic: Basic import syntax and dot notation
-# Difficulty: 1
+# נושא: תחביר ייבוא בסיסי וסימון נקודה
+# רמת קושי: 1
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# למדי לייבא מודול ולהשתמש בפונקציות שלו.
 #
-# Learn to import a module and use its functions.
+# 1. יבאי את מודול `math` באמצעות: `import math`
+# 2. השתמשי ב-`math.sqrt()` כדי לחשב את השורש הריבועי של 144 — שמרי את התוצאה במשתנה בשם `root`
+# 3. הדפיסי: `"The square root of 144 is [result]"`
 #
-# Step 1: Import the math module using: import math
-#
-# Step 2: Use math.sqrt() to calculate the square root of 144
-#         Store the result in a variable called `root`
-#
-# Step 3: Print: "The square root of 144 is [result]"
-#
-# Hint: After importing, access functions with module_name.function_name
+# > רמז: אחרי הייבוא, גישה לפונקציות עם `module_name.function_name`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# השתמשי בקבועים של מודול (ערכים מיוחדים השמורים במודולים).
 #
-# Use module constants (special values stored in modules).
+# 1. יבאי את מודול `math` (אם עוד לא יובא למעלה)
+# 2. גשי ל-`math.pi` ושמרי אותו במשתנה בשם `pi_value`
+# 3. חשבי את שטח עיגול עם רדיוס 5 — הנוסחה: `area = pi * radius * radius`
+# 4. הדפיסי: `"A circle with radius 5 has area [result]"`
 #
-# Step 1: Import the math module (if not already imported above)
-#
-# Step 2: Access math.pi and store it in a variable called `pi_value`
-#
-# Step 3: Calculate the area of a circle with radius 5
-#         Formula: area = pi * radius * radius
-#
-# Step 4: Print: "A circle with radius 5 has area [result]"
-#
-# Hint: math.pi gives you the value of pi (3.14159...)
+# > רמז: `math.pi` נותן לך את ערך פאי (3.14159...)
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# שלבי מספר פונקציות מאותו מודול.
+# חשבי את רמת הכוח של {{hero}} באמצעות פעולות מתמטיות.
 #
-# Combine multiple functions from the same module.
-# Calculate {{hero}}'s power level using math operations.
+# 1. יבאי את מודול `math`
+# 2. צרי את המשתנים האלה:
+#    - `base_power = 64`
+#    - `multiplier = 2.7`
+# 3. חשבי:
+#    - `root_power = math.sqrt(base_power)`
+#    - `floor_multiplier = math.floor(multiplier)`
+#    - `ceiling_multiplier = math.ceil(multiplier)`
+# 4. הדפיסי כל ערך מחושב עם תיאור, לדוגמה:
+#    `"Square root of 64: [value]"`
+#    `"Floor of 2.7: [value]"`
+#    `"Ceiling of 2.7: [value]"`
 #
-# Step 1: Import the math module
-#
-# Step 2: Create these variables:
-#         - base_power = 64
-#         - multiplier = 2.7
-#
-# Step 3: Calculate:
-#         - root_power = math.sqrt(base_power)
-#         - floor_multiplier = math.floor(multiplier)
-#         - ceiling_multiplier = math.ceil(multiplier)
-#
-# Step 4: Print each calculated value with a description
-#         Example: "Square root of 64: [value]"
-#                  "Floor of 2.7: [value]"
-#                  "Ceiling of 2.7: [value]"
-#
-# Hint: floor() rounds down, ceil() rounds up
+# > רמז: `floor()` מעגל למטה, `ceil()` מעגל למעלה
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -1,16 +1,16 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise where {{hero}} discovers legacy code from
-# {{mentor}} and must understand, extend, and improve it through inheritance.
+# זוהי תרגילה מרובת-חלקים שבה {{hero}} מגלה קוד ישן שהותיר {{mentor}}
+# וצריכה להבין אותו, להרחיב אותו ולשפר אותו באמצעות ירושה.
 #
-# Programming concepts: inheritance, super(), method overriding, polymorphism
+# מושגי תכנות: ירושה, `super()`, דריסת מתודות, פולימורפיזם
 #
-# PART 1: Discovery - Understand the Parent Class
+# ## חלק 1: גילוי - הבנת מחלקת האב
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{mentor}} left behind this class. Before extending it, you need to
-# understand how it works. Study the code and complete the trace.
+# {{mentor}} השאיר מאחוריו את המחלקה הזו. לפני שתרחיבי אותה, את צריכה
+# להבין איך היא עובדת. עייני בקוד והשלימי את הניתוח.
 
 # %%
 class BaseEntity:
@@ -34,57 +34,54 @@ class BaseEntity:
         return f"{self.name} (Lv.{self.level}) - HP: {self.health}/{self.max_health}"
 
 # %% [markdown]
-# ✏️ TRACE THE EXECUTION ✏️
+# עקבי אחרי ביצוע הקוד הבא:
 #
-# Given this code:
 #     entity = BaseEntity("{{hero}}", 100, 5)
 #     entity.take_damage(30)
 #     entity.heal(15)
 #     entity.take_damage(100)
 #
-# Fill in the tracing table:
-# | Step | Operation       | self.health | Return Value |
-# |------|-----------------|-------------|--------------|
-# | 0    | __init__        |             |              |
-# | 1    | take_damage(30) |             |              |
-# | 2    | heal(15)        |             |              |
-# | 3    | take_damage(100)|             |              |
+# מלאי את טבלת המעקב:
+# | שלב | פעולה           | self.health | ערך מוחזר |
+# |-----|-----------------|-------------|-----------|
+# | 0   | __init__        |             |           |
+# | 1   | take_damage(30) |             |           |
+# | 2   | heal(15)        |             |           |
+# | 3   | take_damage(100)|             |           |
 #
-# Questions:
-# 1. Why does heal(15) not restore health to 100?
-# 2. What prevents health from going below 0?
+# שאלות:
+# 1. מדוע `heal(15)` לא משחזרת את הבריאות ל-100?
+# 2. מה מונע מהבריאות לרדת מתחת ל-0?
 #
-# Write your completed table and answers as comments below:
+# כתבי את הטבלה המלאה ואת התשובות כהערות למטה:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 2: Growth - Create First Subclass
+# ## חלק 2: צמיחה - יצירת מחלקת בת ראשונה
 # {{CONTEXT_OWNERSHIP_INTRO}}
 # {{CONTEXT_OWNERSHIP_NARRATIVE}}
 #
-# Create a specialized character class that inherits from BaseEntity.
+# צרי מחלקת דמות מתמחה שיורשת מ-`BaseEntity`.
 #
-# ✏️ CREATE THE WARRIOR SUBCLASS ✏️
+# הגדירי את `Warrior` שיורשת מ-`BaseEntity` עם:
 #
-# Define `Warrior` inheriting from BaseEntity with:
+# `__init__(self, name, health, level, strength)`:
+# 1. קראי ל-`super().__init__` עם `name`, `health`, `level`
+# 2. הוסיפי `self.strength`
 #
-# __init__(self, name, health, level, strength):
-#     Call super().__init__ with name, health, level
-#     Add self.strength
+# `attack(self, target)`:
+# 1. `target` הוא `BaseEntity` או מחלקת בת שלה
+# 2. גרמי נזק השווה ל-`self.strength` ל-`target`
+# 3. הדפיסי: `"[name] attacks [target.name] for [strength] damage!"`
+# 4. החזירי את הבריאות הנותרת של `target`
 #
-# attack(self, target):
-#     target is another BaseEntity or subclass
-#     Deal damage equal to self.strength to target
-#     Print: "[name] attacks [target.name] for [strength] damage!"
-#     Return the target's remaining health
+# `get_stats(self)`:
+# 1. דרסי כדי לכלול את `strength`
+# 2. קראי ל-`super().get_stats()` והוסיפי `" | STR: [strength]"`
 #
-# get_stats(self):
-#     Override to include strength:
-#     Call super().get_stats() and add " | STR: [strength]"
-#
-# Test:
+# בדיקה:
 #     warrior = Warrior("{{hero}}", 100, 5, 25)
 #     print(warrior.get_stats())
 #
@@ -96,39 +93,37 @@ class BaseEntity:
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 3: Growth - Create Second Subclass
+# ## חלק 3: צמיחה - יצירת מחלקת בת שנייה
 # {{CONTEXT_PHASE_3}}
 #
-# Create a different specialization with its own unique behavior.
+# צרי התמחות שונה עם התנהגות ייחודית משלה.
 #
-# ✏️ CREATE THE MAGE SUBCLASS ✏️
+# הגדירי את `Mage` שיורשת מ-`BaseEntity` עם:
 #
-# Define `Mage` inheriting from BaseEntity with:
+# `__init__(self, name, health, level, mana, spell_power)`:
+# 1. קראי ל-`super().__init__` עם `name`, `health`, `level`
+# 2. הוסיפי `self.mana` ו-`self.spell_power`
+# 3. קבעי `self.max_mana = mana`
 #
-# __init__(self, name, health, level, mana, spell_power):
-#     Call super().__init__ with name, health, level
-#     Add self.mana and self.spell_power
-#     Set self.max_mana = mana
+# `cast_spell(self, target, mana_cost=10)`:
+# 1. אם `self.mana < mana_cost`:
+#    הדפיסי: `"[name] has insufficient mana!"`
+#    החזירי 0
+# 2. אחרת:
+#    הפחיתי `mana_cost` מ-`self.mana`
+#    גרמי נזק של `self.spell_power` ל-`target`
+#    הדפיסי: `"[name] casts a spell on [target.name] for [spell_power] damage!"`
+#    החזירי את הנזק שנגרם
 #
-# cast_spell(self, target, mana_cost=10):
-#     If self.mana < mana_cost:
-#         Print: "[name] has insufficient mana!"
-#         Return 0
-#     Else:
-#         Reduce self.mana by mana_cost
-#         Deal self.spell_power damage to target
-#         Print: "[name] casts a spell on [target.name] for [spell_power] damage!"
-#         Return the damage dealt
+# `rest(self)`:
+# 1. שחזרי 20 מאנה (לא יותר מ-`max_mana`)
+# 2. הדפיסי: `"[name] rests and recovers mana. Mana: [current]/[max]"`
 #
-# rest(self):
-#     Restore 20 mana (not exceeding max_mana)
-#     Print: "[name] rests and recovers mana. Mana: [current]/[max]"
+# `get_stats(self)`:
+# 1. דרסי כדי לכלול מאנה
+# 2. קראי ל-`super().get_stats()` והוסיפי `" | MP: [mana]/[max_mana]"`
 #
-# get_stats(self):
-#     Override to include mana:
-#     Call super().get_stats() and add " | MP: [mana]/[max_mana]"
-#
-# Test:
+# בדיקה:
 #     mage = Mage("{{heroine}}", 60, 5, 50, 30)
 #     print(mage.get_stats())
 #
@@ -142,36 +137,34 @@ class BaseEntity:
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# PART 4: Ownership - Add Shared Functionality
+# ## חלק 4: בעלות - הוספת פונקציונליות משותפת
 # {{CONTEXT_MASTERY_INTRO}}
 # {{CONTEXT_MASTERY_NARRATIVE}}
 #
-# Create a party system that can work with any BaseEntity subclass.
+# צרי מערכת קבוצה שיכולה לעבוד עם כל מחלקת בת של `BaseEntity`.
 #
-# ✏️ CREATE THE PARTY CLASS ✏️
+# הגדירי את `Party` (לא יורשת מ-`BaseEntity`):
 #
-# Define `Party` (does NOT inherit from BaseEntity):
+# `__init__(self, name)`:
+# 1. `self.name = name`
+# 2. `self.members = []`  (רשימת אובייקטי `BaseEntity`)
 #
-# __init__(self, name):
-#     self.name = name
-#     self.members = []  # List of BaseEntity objects
+# `add_member(self, entity)`:
+# 1. הוסיפי את `entity` ל-`members`
+# 2. הדפיסי: `"[entity.name] joined [party name]!"`
 #
-# add_member(self, entity):
-#     Append entity to members
-#     Print: "[entity.name] joined [party name]!"
+# `list_members(self)`:
+# 1. הדפיסי את שם הקבוצה ואת הסטטיסטיקות של כל חברה
+# 2. השתמשי במתודת `get_stats()` של כל חברה
 #
-# list_members(self):
-#     Print party name and all member stats
-#     Use each member's get_stats() method
+# `total_health(self)`:
+# 1. החזירי את סכום הבריאות הנוכחית של כל החברות
 #
-# total_health(self):
-#     Return sum of all members' current health
+# `heal_all(self, amount)`:
+# 1. קראי ל-`heal(amount)` על כל חברה
+# 2. הדפיסי: `"Party healed for [amount]!"`
 #
-# heal_all(self, amount):
-#     Call heal(amount) on each member
-#     Print: "Party healed for [amount]!"
-#
-# Test with mixed party:
+# בדיקה עם קבוצה מעורבת:
 #     party = Party("{{group}}")
 #
 #     warrior = Warrior("{{hero}}", 100, 5, 25)
@@ -182,9 +175,9 @@ class BaseEntity:
 #     party.add_member(mage)
 #     party.add_member(ally)
 #
-#     party.list_members()  # Each shows their specialized stats!
+#     party.list_members()  # כל אחת מציגה את הסטטיסטיקות המיוחדות שלה!
 #
-#     # Simulate damage
+#     # הדמיית נזק
 #     warrior.take_damage(30)
 #     mage.take_damage(20)
 #
@@ -196,7 +189,7 @@ class BaseEntity:
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# ## MAIN
+# ## ראשי
 
 # %%
 print("=" * 60)

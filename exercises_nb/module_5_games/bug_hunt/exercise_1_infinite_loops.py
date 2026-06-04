@@ -2,22 +2,22 @@
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_MISSION}}
 #
-# Topic: Finding infinite loop bugs
-# Difficulty: 1-2
+# נושא: מציאת באגים של לולאות אינסופיות
+# רמת קושי: 1-2
 #
-# Infinite loops are one of the most common bugs when learning while loops.
-# In this exercise, you'll find and fix loops that never end.
+# לולאות אינסופיות הן אחד הבאגים הנפוצים ביותר כשלומדים לולאות `while`.
+# בתרגיל הזה תמצאי ותתקני לולאות שלא נגמרות.
 #
 # {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# {{hero}} wrote this code to count items, but it runs forever!
+# {{hero}} כתבה את הקוד הזה כדי לספור פריטים, אבל הוא רץ לנצח!
 #
-# EXPECTED BEHAVIOR:
-# Print numbers 1 through 5, then stop
+# התנהגות צפויה:
+# הדפסת המספרים 1 עד 5, ואז עצירה
 #
-# ACTUAL BEHAVIOR:
-# Prints 1 forever without stopping
+# מה שקורה בפועל:
+# מדפיסה 1 לנצח, בלי לעצור
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -27,13 +27,11 @@ while count <= 5:
     print(count)
 
 # %% [markdown]
-# ## The counter never changes! Loop runs forever.
+# ## המונה לא משתנה! הלולאה רצה לנצח.
 #
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -42,13 +40,13 @@ while count <= 5:
 # {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# This countdown should go from 5 to 1, but something's wrong.
+# הספירה לאחור הזו אמורה ללכת מ-5 עד 1, אבל משהו השתבש.
 #
-# EXPECTED BEHAVIOR:
-# Print 5, 4, 3, 2, 1, "Done!"
+# התנהגות צפויה:
+# הדפסת 5, 4, 3, 2, 1, `"Done!"`
 #
-# ACTUAL BEHAVIOR:
-# Counts the wrong direction and never reaches 0
+# מה שקורה בפועל:
+# סופרת בכיוון הלא נכון ולא מגיעה לעולם ל-0
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -59,11 +57,9 @@ while num > 0:
     num += 1  # Oops! Going the wrong way!
 
 # %% [markdown]
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -72,13 +68,13 @@ while num > 0:
 # {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# This loop should process a list, but it never terminates.
+# הלולאה הזו אמורה לעבד רשימה, אבל היא לא מסתיימת.
 #
-# EXPECTED BEHAVIOR:
-# Process each item and stop when list is empty
+# התנהגות צפויה:
+# עיבוד כל פריט ועצירה כשהרשימה מתרוקנת
 #
-# ACTUAL BEHAVIOR:
-# The list never gets shorter
+# מה שקורה בפועל:
+# הרשימה לא מתקצרת אף פעם
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -89,13 +85,11 @@ while index < len(items):
     print(f"Processing: {items[index]}")
 
 # %% [markdown]
-# ## Forgot to move to next item!
+# ## שכחנו לעבור לפריט הבא!
 #
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -104,13 +98,13 @@ while index < len(items):
 # {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# This accumulator should add up numbers, but it loops forever.
+# המצבר הזה אמור לחבר מספרים, אבל הוא לולא לנצח.
 #
-# EXPECTED BEHAVIOR:
-# Add numbers until total exceeds 20, then stop
+# התנהגות צפויה:
+# הוספת מספרים עד שהסכום עולה על 20, ואז עצירה
 #
-# ACTUAL BEHAVIOR:
-# Total never changes, condition never becomes False
+# מה שקורה בפועל:
+# הסכום לא משתנה, התנאי לא הופך ל-`False` אף פעם
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -121,13 +115,11 @@ while total < 20:
     print(f"Adding {amount}, total would be {total + amount}")
 
 # %% [markdown]
-# ## total + amount doesn't save the result!
+# ## `total + amount` לא שומר את התוצאה!
 #
-# ✏️ FIX THE BUG ✏️
+# מה מצאתי: ________________________________
 #
-# What I found: ________________________________
-#
-# The fix:
+# התיקון:
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

@@ -9,13 +9,13 @@
 # %% [markdown]
 # {{CONTEXT_DISCOVERY_INTRO}}
 #
-# This is a multi-part exercise. Complete each part in order.
+# זוהי תרגיל מרובה-חלקים. השלימי כל חלק לפי הסדר.
 #
-# PART 1: DISCOVERY - Study How Lists Work
+# ## חלק 1: גילוי - לומדים איך רשימות עובדות
 # {{CONTEXT_DISCOVERY_NARRATIVE}}
 #
-# {{mentor}} demonstrates list operations. Predict the output
-# BEFORE running the code.
+# {{mentor}} מדגים פעולות על רשימות. נסי לנחש את הפלט
+# לפני שאת מריצה את הקוד.
 
 # %%
 inventory = ["{{item}}", "potion", "map", "key"]
@@ -24,10 +24,10 @@ print(f"First: {inventory[0]}")
 print(f"Total: {len(inventory)}")
 
 # %% [markdown]
-# YOUR PREDICTION for study_example_1:
-# Line 1: Items: _______________
-# Line 2: First: _______________
-# Line 3: Total: _______________
+# הניחוש שלך עבור study_example_1:
+# שורה 1: Items: _______________
+# שורה 2: First: _______________
+# שורה 3: Total: _______________
 
 # %%
 team = ["{{hero}}", "{{heroine}}"]
@@ -36,9 +36,9 @@ print(f"Team: {team}")
 print(f"Size: {len(team)}")
 
 # %% [markdown]
-# YOUR PREDICTION for study_example_2:
-# Line 1: Team: _______________
-# Line 2: Size: _______________
+# הניחוש שלך עבור study_example_2:
+# שורה 1: Team: _______________
+# שורה 2: Size: _______________
 
 # %%
 # YOUR MATCHES HERE
@@ -54,11 +54,11 @@ results = {
 return results
 
 # %% [markdown]
-# PART 2: GUIDANCE - Practice with Scaffolding
+# ## חלק 2: הדרכה - תרגול עם פיגומים
 # {{CONTEXT_GUIDANCE_INTRO}}
 # {{CONTEXT_GUIDANCE_NARRATIVE}}
 #
-# Complete the function following the provided structure.
+# השלימי את הפונקציה לפי המבנה שסופק לך.
 
 # %%
 # Started for you:
@@ -75,11 +75,11 @@ first_member = members[0]
 pass  # Replace with implementation
 
 # %% [markdown]
-# PART 3: GROWTH - Create Your Own
+# ## חלק 3: צמיחה - צרי בעצמך
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Now create list operations on your own.
+# עכשיו צרי פעולות על רשימות בעצמך.
 
 # %%
 # YOUR CODE HERE

@@ -2,15 +2,15 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to override methods - replacing or extending
-# parent class behavior in child classes. Overriding allows subclasses to
-# provide specialized implementations while maintaining the same interface.
+# בתרגיל הזה תלמדי לדרוס (override) מתודות — להחליף או להרחיב
+# את ההתנהגות של מחלקת-אב בתוך מחלקת-ילד. דריסה מאפשרת למחלקות-ילד
+# לספק מימושים מיוחדים תוך שמירה על אותו ממשק.
 #
 # {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
 #
-# Parent class (provided for you)
+# מחלקת-האב (מסופקת עבורך)
 
 # %%
 class Character:
@@ -29,25 +29,23 @@ class Character:
         return f"{self.name} (HP: {self.health})"
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# צרי מחלקת-ילד שדורסת מתודה.
 #
-# Create a subclass that OVERRIDES a method.
+# 1. הגדירי `Warrior` שיורשת מ-`Character`:
+#    `class Warrior(Character):`
 #
-# Step 1: Define `Warrior` that inherits from Character:
-#         class Warrior(Character):
+# 2. ב-`__init__`, קראי ל-`super()` והוסיפי את המשתנה `self.strength`
 #
-# Step 2: In __init__, call super() and add self.strength attribute
+# 3. דרסי את `get_attack_power` כדי להחזיר את `strength` במקום `10`:
+#    `def get_attack_power(self):`
+#        `return self.strength`
 #
-# Step 3: Override get_attack_power to return strength instead of 10:
-#         def get_attack_power(self):
-#             return self.strength
+# 4. בדקי שהדריסה עובדת:
+#    `base = Character("Guard", 50)`
+#    `print(f"Character attack: {base.get_attack_power()}")`  # 10
 #
-# Step 4: Test that the override works:
-#         base = Character("Guard", 50)
-#         print(f"Character attack: {base.get_attack_power()}")  # 10
-#
-#         warrior = Warrior("{{hero}}", 100, 25)
-#         print(f"Warrior attack: {warrior.get_attack_power()}")  # 25
+#    `warrior = Warrior("{{hero}}", 100, 25)`
+#    `print(f"Warrior attack: {warrior.get_attack_power()}")`  # 25
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -57,7 +55,7 @@ class Character:
 # {{CONTEXT_PHASE_2}}
 #
 #
-# Parent class (provided for you)
+# מחלקת-האב (מסופקת עבורך)
 
 # %%
 class Entity:
@@ -73,26 +71,24 @@ class Entity:
         return "..."
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# צרי כמה מחלקות-ילד שדורסות את אותה מתודה בצורות שונות.
 #
-# Create multiple subclasses that override the same method differently.
+# 1. הגדירי `Hero` שיורשת מ-`Entity`:
+#    דרסי את `make_sound()` כך שתחזיר `"[name] says: For justice!"`
+#    דרסי את `__str__` כך שתחזיר `"[name] the Hero"`
 #
-# Step 1: Define `Hero` that inherits from Entity:
-#         Override make_sound() to return "[name] says: For justice!"
-#         Override __str__ to return "[name] the Hero"
+# 2. הגדירי `Creature` שיורשת מ-`Entity`:
+#    דרסי את `make_sound()` כך שתחזיר `"[name] growls menacingly!"`
+#    דרסי את `__str__` כך שתחזיר `"[name] the Creature"`
 #
-# Step 2: Define `Creature` that inherits from Entity:
-#         Override make_sound() to return "[name] growls menacingly!"
-#         Override __str__ to return "[name] the Creature"
+# 3. בדקי פולימורפיזם — התנהגות שונה, אותו שם מתודה:
+#    `hero = Hero("{{hero}}")`
+#    `creature = Creature("{{creature}}")`
 #
-# Step 3: Test polymorphism - different behavior, same method name:
-#         hero = Hero("{{hero}}")
-#         creature = Creature("{{creature}}")
-#
-#         entities = [hero, creature]
-#         for entity in entities:
-#             print(entity)  # Uses __str__
-#             print(f"  Sound: {entity.make_sound()}")
+#    `entities = [hero, creature]`
+#    `for entity in entities:`
+#        `print(entity)`  # משתמש ב-`__str__`
+#        `print(f"  Sound: {entity.make_sound()}")`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -102,7 +98,7 @@ class Entity:
 # {{CONTEXT_PHASE_3}}
 #
 #
-# Parent class (provided for you)
+# מחלקת-האב (מסופקת עבורך)
 
 # %%
 class BaseCalculator:
@@ -119,31 +115,29 @@ class BaseCalculator:
         return f"Base: {self.base_value}"
 
 # %% [markdown]
-# ✏️ YOUR CODE HERE ✏️
+# דרסי מתודה והרחיבי אותה בעזרת `super()`.
 #
-# Override a method and EXTEND it using super().
+# 1. הגדירי `BonusCalculator` שיורשת מ-`BaseCalculator`:
+#    הוסיפי משתנה `bonus` ב-`__init__`
 #
-# Step 1: Define `BonusCalculator` inheriting from BaseCalculator:
-#         Add a bonus attribute in __init__
+# 2. דרסי את `calculate()` כך שתוסיף את ה-bonus לערך הבסיס:
+#    `def calculate(self):`
+#        `base = super().calculate()`  # קבלי את תוצאת האב
+#        `return base + self.bonus`    # הוסיפי אליה
 #
-# Step 2: Override calculate() to ADD the bonus to the base value:
-#         def calculate(self):
-#             base = super().calculate()  # Get parent's result
-#             return base + self.bonus    # Add to it
+# 3. דרסי את `describe_calculation()` כדי להרחיב את התיאור:
+#    `def describe_calculation(self):`
+#        `parent_desc = super().describe_calculation()`
+#        `return f"{parent_desc} + Bonus: {self.bonus}"`
 #
-# Step 3: Override describe_calculation() to extend the description:
-#         def describe_calculation(self):
-#             parent_desc = super().describe_calculation()
-#             return f"{parent_desc} + Bonus: {self.bonus}"
+# 4. בדקי את ההרחבה:
+#    `basic = BaseCalculator(100)`
+#    `print(f"Basic: {basic.calculate()}")`  # 100
+#    `print(basic.describe_calculation())`
 #
-# Step 4: Test the extension:
-#         basic = BaseCalculator(100)
-#         print(f"Basic: {basic.calculate()}")  # 100
-#         print(basic.describe_calculation())
-#
-#         with_bonus = BonusCalculator(100, 25)
-#         print(f"With bonus: {with_bonus.calculate()}")  # 125
-#         print(with_bonus.describe_calculation())
+#    `with_bonus = BonusCalculator(100, 25)`
+#    `print(f"With bonus: {with_bonus.calculate()}")`  # 125
+#    `print(with_bonus.describe_calculation())`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -152,36 +146,34 @@ class BaseCalculator:
 # {{PHASE_4_TITLE}}
 # {{CONTEXT_PHASE_4}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# צרי היררכיה עם התנהגות מיוחדת בכל רמה.
 #
-# Create a hierarchy with specialized behavior at each level.
+# 1. הגדירי מחלקת-בסיס `Unit`:
+#    `__init__(self, name)`
+#    מתודה `get_info()` שמחזירה רק את השם
+#    מתודה `get_power()` שמחזירה `0`
 #
-# Step 1: Define base class `Unit`:
-#         __init__(self, name)
-#         Method get_info() returning just the name
-#         Method get_power() returning 0
+# 2. הגדירי `CombatUnit` שיורשת מ-`Unit`:
+#    `__init__(self, name, attack)`
+#    דרסי את `get_power()` כך שתחזיר `self.attack`
+#    דרסי את `get_info()` כך שתחזיר:
+#        `super().get_info() + f" (ATK: {self.attack})"`
 #
-# Step 2: Define `CombatUnit` inheriting from Unit:
-#         __init__(self, name, attack)
-#         Override get_power() to return self.attack
-#         Override get_info() to return:
-#             super().get_info() + f" (ATK: {self.attack})"
+# 3. הגדירי `EliteUnit` שיורשת מ-`CombatUnit`:
+#    `__init__(self, name, attack, special_power)`
+#    דרסי את `get_power()` כך שתחזיר `attack + special_power`
+#    דרסי את `get_info()` כך שתחזיר:
+#        `super().get_info() + f" [ELITE +{self.special_power}]"`
 #
-# Step 3: Define `EliteUnit` inheriting from CombatUnit:
-#         __init__(self, name, attack, special_power)
-#         Override get_power() to return attack + special_power
-#         Override get_info() to return:
-#             super().get_info() + f" [ELITE +{self.special_power}]"
+# 4. בדקי את ההיררכיה:
+#    `basic = Unit("Recruit")`
+#    `print(f"{basic.get_info()} - Power: {basic.get_power()}")`
 #
-# Step 4: Test the hierarchy:
-#         basic = Unit("Recruit")
-#         print(f"{basic.get_info()} - Power: {basic.get_power()}")
+#    `combat = CombatUnit("Soldier", 15)`
+#    `print(f"{combat.get_info()} - Power: {combat.get_power()}")`
 #
-#         combat = CombatUnit("Soldier", 15)
-#         print(f"{combat.get_info()} - Power: {combat.get_power()}")
-#
-#         elite = EliteUnit("{{hero}}", 20, 10)
-#         print(f"{elite.get_info()} - Power: {elite.get_power()}")
+#    `elite = EliteUnit("{{hero}}", 20, 10)`
+#    `print(f"{elite.get_info()} - Power: {elite.get_power()}")`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

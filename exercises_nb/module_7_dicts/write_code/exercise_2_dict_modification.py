@@ -2,83 +2,77 @@
 # {{CONTEXT_PROJECT_INTRO}}
 # {{CONTEXT_LEARNING_OBJECTIVE}}
 #
-# In this exercise, you'll learn to modify dictionaries:
-# adding new entries, updating existing values, and deleting entries.
+# בתרגיל הזה תלמדי לשנות מילונים:
+# להוסיף ערכים חדשים, לעדכן ערכים קיימים ולמחוק ערכים.
 #
-# {{PHASE_1_TITLE}}
+# ## {{PHASE_1_TITLE}}
 # {{CONTEXT_PHASE_1}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# למדי להוסיף ולעדכן ערכים במילון.
 #
-# Learn to add and update dictionary entries.
+# 1. צרי מילון ריק בשם `stats`
 #
-# Step 1: Create an empty dictionary called `stats`
-#
-# Step 2: Add these entries one by one:
+# 2. הוסיפי את הערכים האלה אחד אחד:
 #         stats["name"] = "{{hero}}"
 #         stats["health"] = 100
 #         stats["strength"] = 10
 #
-# Step 3: Print the dictionary
+# 3. הדפיסי את המילון
 #
-# Step 4: Update the health to 150 (use the same key)
+# 4. עדכני את ה-health ל-150 (השתמשי באותו מפתח)
 #
-# Step 5: Print the dictionary again to see the change
+# 5. הדפיסי את המילון שוב כדי לראות את השינוי
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_2_TITLE}}
+# ## {{PHASE_2_TITLE}}
 # {{CONTEXT_PHASE_2}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# תרגלי הגדלה והקטנה של ערכים במילון.
 #
-# Practice incrementing and decrementing dictionary values.
-#
-# Step 1: Create this inventory dictionary:
+# 1. צרי את מילון המלאי הזה:
 #         inventory = {"{{item}}": 5, "{{spell1}}": 3, "{{spell2}}": 1}
 #
-# Step 2: Add 2 more of "{{item}}" (increment the value)
-#         Hint: inventory["{{item}}"] = inventory["{{item}}"] + 2
+# 2. הוסיפי עוד 2 יחידות של "{{item}}" (הגדילי את הערך)
+# > רמז: inventory["{{item}}"] = inventory["{{item}}"] + 2
 #
-# Step 3: Use 1 "{{spell1}}" (decrement the value)
+# 3. השתמשי ב-1 יחידה של "{{spell1}}" (הקטיני את הערך)
 #
-# Step 4: Add a new item "{{spell3}}" with quantity 1
+# 4. הוסיפי פריט חדש "{{spell3}}" עם כמות 1
 #
-# Step 5: Print the final inventory
+# 5. הדפיסי את המלאי הסופי
 #
-# Step 6: Print the total number of items
-#         Hint: Use sum() with inventory.values()
+# 6. הדפיסי את סך כל הפריטים
+# > רמז: השתמשי ב-`sum()` עם `inventory.values()`
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
 
 # %% [markdown]
-# {{PHASE_3_TITLE}}
+# ## {{PHASE_3_TITLE}}
 # {{CONTEXT_PHASE_3}}
 #
-# ✏️ YOUR CODE HERE ✏️
+# תרגלי מחיקת ערכים ממילונים.
 #
-# Practice removing entries from dictionaries.
-#
-# Step 1: Create this registry dictionary:
+# 1. צרי את מילון הרישום הזה:
 #         registry = {
 #             "active": ["{{hero}}", "{{heroine}}"],
 #             "retired": ["{{mentor}}"],
 #             "temporary": ["visitor"]
 #         }
 #
-# Step 2: Print all the keys before modification
+# 2. הדפיסי את כל המפתחות לפני השינוי
 #
-# Step 3: Remove the "temporary" key using: del registry["temporary"]
+# 3. מחקי את המפתח "temporary" באמצעות: del registry["temporary"]
 #
-# Step 4: Print all the keys after modification
+# 4. הדפיסי את כל המפתחות אחרי השינוי
 #
-# Step 5: Add {{friend}} to the "active" list
-#         Hint: registry["active"].append("{{friend}}")
+# 5. הוסיפי את {{friend}} לרשימה "active"
+# > רמז: registry["active"].append("{{friend}}")
 #
-# Step 6: Print the final registry
+# 6. הדפיסי את הרישום הסופי
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

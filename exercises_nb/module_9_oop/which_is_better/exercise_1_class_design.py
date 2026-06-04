@@ -2,14 +2,14 @@
 # {{CONTEXT_COMPARISON_INTRO}}
 # {{CONTEXT_COMPARISON_DECISION}}
 #
-# In this exercise, you'll analyze different class design approaches.
-# Both versions work correctly, but they have different trade-offs.
-# Evaluate which is better for different situations.
+# בתרגיל הזה תנתחי גישות שונות לעיצוב מחלקות.
+# שתי הגרסאות עובדות נכון, אבל לכל אחת יתרונות וחסרונות שונים.
+# העריכי איזו גישה עדיפה למצבים שונים.
 #
 # {{APPROACH_1_NAME}}
 # {{CONTEXT_APPROACH_1_NARRATIVE}}
 #
-# Design A: One class does everything
+# עיצוב A: מחלקה אחת שעושה הכול
 
 # %%
 class CharacterAllInOneA:
@@ -49,7 +49,7 @@ class CharacterAllInOneA:
 # {{APPROACH_2_NAME}}
 # {{CONTEXT_APPROACH_2_NARRATIVE}}
 #
-# Design B: Specialized classes through inheritance
+# עיצוב B: מחלקות מתמחות דרך ירושה
 
 # %%
 class CharacterBaseB:
@@ -100,10 +100,8 @@ class MageB(CharacterBaseB):
         return 0
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
-#
 # {{CONTEXT_ANALYSIS_PROMPT}}
-# Consider: {{CONTEXT_DECISION_GUIDANCE}}
+# שימי לב: {{CONTEXT_DECISION_GUIDANCE}}
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -133,10 +131,9 @@ strength AND magic), which would be easier to extend?
 return analysis
 
 # %% [markdown]
-# COMPARISON 2: ATTRIBUTE STORAGE
+# ## השוואה 2: שמירת מאפיינים
 #
-#
-# Design C: Direct attributes
+# עיצוב C: מאפיינים ישירים
 
 # %%
 class InventoryDirectC:
@@ -162,7 +159,7 @@ class InventoryDirectC:
         return 0
 
 # %% [markdown]
-# ## Design D: Using a dictionary
+# ## עיצוב D: שימוש במילון
 
 # %%
 class InventoryDictD:
@@ -179,9 +176,7 @@ class InventoryDictD:
         return self.items.get(name, 0)
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
-#
-# Both designs store the same data. Which is better?
+# שני העיצובים שומרים את אותם הנתונים. איזה עדיף?
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן
@@ -204,10 +199,9 @@ The main lesson here is:
 return analysis
 
 # %% [markdown]
-# COMPARISON 3: METHOD PLACEMENT
+# ## השוואה 3: מיקום מתודות
 #
-#
-# Design E: Methods that operate ON the object
+# עיצוב E: מתודות שפועלות על האובייקט עצמו
 
 # %%
 class BattleCharacterE:
@@ -227,7 +221,7 @@ class BattleCharacterE:
         self.health -= amount
 
 # %% [markdown]
-# ## Design F: External functions
+# ## עיצוב F: פונקציות חיצוניות
 
 # %%
 class BattleCharacterF:
@@ -245,9 +239,7 @@ target.health -= attacker.power
 character.health -= amount
 
 # %% [markdown]
-# ✏️ YOUR ANALYSIS ✏️
-#
-# Same functionality, but methods are inside vs outside the class.
+# אותה פונקציונליות, אבל המתודות בתוך המחלקה מול מחוצה לה.
 
 # %%
 # ✏️ כתבי את הקוד שלך כאן

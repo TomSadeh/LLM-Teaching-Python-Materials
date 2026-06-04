@@ -9,15 +9,15 @@
 # {{CONTEXT_INVESTIGATION_INTRO}}
 # {{CONTEXT_INVESTIGATION_MISSION}}
 #
-# {{CASE_1_TITLE}}
+# ## {{CASE_1_TITLE}}
 # {{CONTEXT_CASE_1_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Build a team roster and print it.
-# Expected output: ['{{hero}}', '{{heroine}}', '{{friend}}']
+# **התנהגות צפויה:**
+# בניית רשימת קבוצה והדפסתה.
+# פלט צפוי: `['{{hero}}', '{{heroine}}', '{{friend}}']`
 #
-# ACTUAL BEHAVIOR:
-# Prints: None
+# **התנהגות בפועל:**
+# מדפיס: `None`
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_1}}
 
@@ -41,15 +41,15 @@ print(team)
 pass
 
 # %% [markdown]
-# {{CASE_2_TITLE}}
+# ## {{CASE_2_TITLE}}
 # {{CONTEXT_CASE_2_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Remove the item "potion" from the inventory.
-# Expected output: After: ['{{item}}', 'key']
+# **התנהגות צפויה:**
+# הסרת הפריט `"potion"` מהמלאי.
+# פלט צפוי: `After: ['{{item}}', 'key']`
 #
-# ACTUAL BEHAVIOR:
-# ValueError: list.remove(x): x not in list
+# **התנהגות בפועל:**
+# `ValueError: list.remove(x): x not in list`
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_2}}
 
@@ -72,18 +72,18 @@ print(f"After: {inventory}")
 pass
 
 # %% [markdown]
-# {{CASE_3_TITLE}}
+# ## {{CASE_3_TITLE}}
 # {{CONTEXT_CASE_3_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Pop the last item and print what was removed.
-# Expected output:
-#   Removed: {{spell3}}
-#   Remaining: ['{{spell1}}', '{{spell2}}']
+# **התנהגות צפויה:**
+# שליפת הפריט האחרון מהרשימה והדפסת מה שהוסר.
+# פלט צפוי:
+#   `Removed: {{spell3}}`
+#   `Remaining: ['{{spell1}}', '{{spell2}}']`
 #
-# ACTUAL BEHAVIOR:
-#   Removed: ['{{spell1}}', '{{spell2}}']
-#   Remaining: {{spell3}}
+# **התנהגות בפועל:**
+#   `Removed: ['{{spell1}}', '{{spell2}}']`
+#   `Remaining: {{spell3}}`
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_3}}
 
@@ -107,15 +107,15 @@ print(f"Remaining: {abilities}")
 pass
 
 # %% [markdown]
-# {{CASE_4_TITLE}}
+# ## {{CASE_4_TITLE}}
 # {{CONTEXT_CASE_4_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Insert "{{mentor}}" at position 1 (second position).
-# Expected output: ['{{hero}}', '{{mentor}}', '{{heroine}}', '{{friend}}']
+# **התנהגות צפויה:**
+# הוספת `"{{mentor}}"` במיקום 1 (המיקום השני).
+# פלט צפוי: `['{{hero}}', '{{mentor}}', '{{heroine}}', '{{friend}}']`
 #
-# ACTUAL BEHAVIOR:
-# Prints: None
+# **התנהגות בפועל:**
+# מדפיס: `None`
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_4}}
 
@@ -137,15 +137,15 @@ print(team)
 pass
 
 # %% [markdown]
-# {{CASE_5_TITLE}}
+# ## {{CASE_5_TITLE}}
 # {{CONTEXT_CASE_5_NARRATIVE}}
 #
-# EXPECTED BEHAVIOR:
-# Remove all occurrences of "coin" from the items.
-# Expected output: ['{{item}}', 'key']
+# **התנהגות צפויה:**
+# הסרת כל המופעים של `"coin"` מהרשימה.
+# פלט צפוי: `['{{item}}', 'key']`
 #
-# ACTUAL BEHAVIOR:
-# Output: ['{{item}}', 'coin', 'key']  (one coin remains!)
+# **התנהגות בפועל:**
+# פלט: `['{{item}}', 'coin', 'key']`  (מטבע אחד נשאר!)
 #
 # {{CONTEXT_INVESTIGATION_PROMPT_5}}
 

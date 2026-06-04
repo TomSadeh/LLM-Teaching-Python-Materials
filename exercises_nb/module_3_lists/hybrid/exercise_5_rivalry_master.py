@@ -9,13 +9,13 @@
 # %% [markdown]
 # {{CONTEXT_SETBACK_INTRO}}
 #
-# This is the final challenge for Module 3. Complete each part in order.
+# זהו האתגר הסופי של מודול 3. השלימי את כל החלק לפי הסדר.
 #
-# PART 1: SETBACK - Analyze Failed Code
+# ## חלק 1: נסיגה - ניתוח קוד שבור
 # {{CONTEXT_SETBACK_NARRATIVE}}
 #
-# {{villain}} has sabotaged {{hero}}'s list management system.
-# Multiple bugs are causing the system to fail. Find and understand them.
+# {{villain}} חיבל במערכת ניהול הרשימות של {{hero}}.
+# מספר באגים גורמים למערכת לכשול. מצאי והבני אותם.
 
 # %%
 print("=== Broken Inventory Manager ===")
@@ -65,11 +65,11 @@ bug_analysis = {
 return bug_analysis
 
 # %% [markdown]
-# PART 2: GROWTH - Build Core Skills
+# ## חלק 2: צמיחה - בניית מיומנויות בסיסיות
 # {{CONTEXT_GROWTH_INTRO}}
 # {{CONTEXT_GROWTH_NARRATIVE}}
 #
-# Practice the fundamental operations before the final challenge.
+# תרגלי את הפעולות הבסיסיות לפני האתגר הסופי.
 
 # %%
 # YOUR CODE HERE
@@ -126,11 +126,11 @@ pass
 pass
 
 # %% [markdown]
-# PART 3: CONFRONTATION - The Ultimate List Challenge
+# ## חלק 3: עימות - אתגר הרשימות האולטימטיבי
 # {{CONTEXT_CONFRONTATION_INTRO}}
 # {{CONTEXT_CONFRONTATION_NARRATIVE}}
 #
-# Build a complete party management system using all list skills.
+# בני מערכת ניהול חבורה שלמה תוך שימוש בכל מיומנויות הרשימות.
 
 # %%
 # YOUR CODE HERE
@@ -180,7 +180,7 @@ pass
 pass
 
 # %% [markdown]
-# ## VERIFICATION - Test Your System
+# ## אימות - בדיקת המערכת שלך
 
 # %%
 print("=" * 60)

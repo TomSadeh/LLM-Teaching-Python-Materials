@@ -19,12 +19,11 @@ remaining = gold - spent
 print(remaining)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Output: _______________
+# פלט: _______________
 #
-# Hint: Subtraction works just like in math.
+# > רמז: חיסור עובד בדיוק כמו במתמטיקה.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_1}}
 
@@ -42,12 +41,11 @@ total = items * price
 print("Total cost:", total)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Output: _______________
+# פלט: _______________
 #
-# Hint: The * symbol means multiplication.
+# > רמז: הסימן `*` אומר כפל.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_2}}
 
@@ -67,14 +65,13 @@ print("Each person gets:", each_gets)
 print("Leftover:", leftover)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Line 1: _______________
-# Line 2: _______________
+# שורה 1: _______________
+# שורה 2: _______________
 #
-# Hint: // gives the whole number part of division.
-# % gives the remainder after division.
+# > רמז: `//` נותן את החלק השלם של החלוקה.
+# > `%` נותן את השארית אחרי החלוקה.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_3}}
 
@@ -91,13 +88,12 @@ power = base ** 3
 print(power)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Output: _______________
+# פלט: _______________
 #
-# Hint: ** means exponentiation (power).
-# 2 ** 3 means 2 * 2 * 2
+# > רמז: `**` אומר חזקה (העלאה בחזקה).
+# > `2 ** 3` פירושו `2 * 2 * 2`
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_4}}
 
@@ -113,13 +109,12 @@ result = 2 + 3 * 4
 print(result)
 
 # %% [markdown]
-# ✏️ YOUR PREDICTION HERE ✏️
-# Write EXACTLY what you think will be printed above.
+# כתבי בדיוק מה לדעתך יודפס למעלה.
 #
-# Output: _______________
+# פלט: _______________
 #
-# Hint: Python follows math order of operations.
-# Multiplication happens before addition.
+# > רמז: Python פועל לפי סדר הפעולות המתמטי.
+# > כפל מתבצע לפני חיבור.
 #
 # {{CONTEXT_PREDICTION_GUIDANCE_5}}
 

@@ -12,11 +12,9 @@
 # ## {{EXERCISE_1_TITLE}}
 # {{CONTEXT_EXERCISE_1_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# קבלי את השם של {{hero}} מהמשתמשת.
 #
-# Get {{hero}}'s name from the user.
-#
-# Hint: Use the input() function to get text from the user.
+# > רמז: השתמשי בפונקציה `input()` כדי לקבל טקסט מהמשתמשת.
 #
 # name = ___("What is your name? ")    # Fill in the function name
 # print("Hello,", name)
@@ -28,11 +26,9 @@
 # ## {{EXERCISE_2_TITLE}}
 # {{CONTEXT_EXERCISE_2_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# קבלי את הגיל של {{hero}} ושמרי אותו כמספר.
 #
-# Get {{hero}}'s age and store it as a number.
-#
-# Hint: input() always returns a string. Use int() to convert to a number.
+# > רמז: `input()` תמיד מחזירה מחרוזת. השתמשי ב-`int()` כדי להמיר למספר.
 #
 # age_text = input("How old are you? ")
 # age = ___(age_text)                  # Convert string to integer
@@ -45,11 +41,9 @@
 # ## {{EXERCISE_3_TITLE}}
 # {{CONTEXT_EXERCISE_3_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# קבלי את המחיר של {{item}} וחשבי את הסכום הכולל.
 #
-# Get the price of a {{item}} and calculate the total.
-#
-# Hint: You can wrap input() directly with int().
+# > רמז: אפשר לעטוף את `input()` ישירות בתוך `int()`.
 #
 # price = ___(input("Enter the price: "))    # Convert input directly
 # quantity = 3
@@ -63,11 +57,9 @@
 # ## {{EXERCISE_4_TITLE}}
 # {{CONTEXT_EXERCISE_4_NARRATIVE}}
 #
-# ✏️ FILL IN THE BLANKS ✏️
+# צרי ברכת ברוכה הבאה אישית ל-{{school}}.
 #
-# Create a personalized welcome for {{school}}.
-#
-# Hint: Combine input() with string concatenation.
+# > רמז: שלבי בין `input()` לבין חיבור מחרוזות.
 #
 # name = input("Enter your name: ")
 # print("Welcome to {{school}}, " ___ name ___ "!")    # Join strings
